@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{580B1B80-D8FD-4876-A885-CBB042A73152}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Duplicata.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\rechdico\src\rechdico.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\impcfgdup\src\impcfgdup.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Duplicata">
+        <MSBuild Projects="Duplicata.dproj"/>
+    </Target>
+    <Target Name="Duplicata:Clean">
+        <MSBuild Projects="Duplicata.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Duplicata:Make">
+        <MSBuild Projects="Duplicata.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rechdico">
+        <MSBuild Projects="..\rechdico\src\rechdico.dproj"/>
+    </Target>
+    <Target Name="rechdico:Clean">
+        <MSBuild Projects="..\rechdico\src\rechdico.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rechdico:Make">
+        <MSBuild Projects="..\rechdico\src\rechdico.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="impcfgdup">
+        <MSBuild Projects="..\impcfgdup\src\impcfgdup.dproj"/>
+    </Target>
+    <Target Name="impcfgdup:Clean">
+        <MSBuild Projects="..\impcfgdup\src\impcfgdup.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="impcfgdup:Make">
+        <MSBuild Projects="..\impcfgdup\src\impcfgdup.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Duplicata;rechdico;impcfgdup"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Duplicata:Clean;rechdico:Clean;impcfgdup:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Duplicata:Make;rechdico:Make;impcfgdup:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

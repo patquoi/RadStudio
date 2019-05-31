@@ -1,0 +1,94 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'OdissimoT'
+  ClientHeight = 608
+  ClientWidth = 476
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StatusBar: TStatusBar
+    Position.Y = 586.000000000000000000
+    ShowSizeGrip = False
+    Size.Width = 476.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object StatusLabel: TLabel
+      Align = Client
+      Size.Width = 476.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object Edit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 0
+    MaxLength = 15
+    FilterChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ?'
+    TextSettings.Font.Family = 'Courier New'
+    TextSettings.Font.Size = 32.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 303.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Style, FontColor]
+    CharCase = ecUpperCase
+  end
+  object ButtonTirage: TButton
+    Tag = 1
+    Anchors = [akTop, akRight]
+    Position.X = 321.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Tirage'
+    OnClick = ButtonFiltreOuTirageClick
+  end
+  object ButtonFiltre: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 321.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Filtre'
+    OnClick = ButtonFiltreOuTirageClick
+  end
+  object ButtonAnagrammes: TButton
+    StaysPressed = True
+    Anchors = [akTop, akRight]
+    IsPressed = True
+    Position.X = 382.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 86.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Anagrammes'
+  end
+  object ListBox: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 460.000000000000000000
+    Size.Height = 509.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Columns = 5
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Sorted = True
+    Viewport.Width = 456.000000000000000000
+    Viewport.Height = 505.000000000000000000
+  end
+end

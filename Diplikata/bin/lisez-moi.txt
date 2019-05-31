@@ -1,0 +1,769 @@
+INFORMATIONS IMPORTANTES - DIPLIKATA
+____________________________________
+
+
+LICENCE
+
+Diplikata est soumis à la Licence Publique Générale version 2.
+Veuillez vous rapporter aux fichiers license.txt et licence.txt.
+
+INSTALLATION SOUS WINDOWS VISTA ET WINDOWS 7 
+
+Veuillez vous connecter à l'adresse suivante et suivre les instructions :
+http://patquoi.fr/windowsvista.html
+http://patquoi.fr/windows7.html
+
+CONFIGURATION REQUISE
+
+L'application nécessite environ 32 Mo de mémoire RAM.
+La résolution graphique minimale doit être de 800x600x256 couleurs.
+Cependant, une résolution de 1024x768 est fortement recommandée.
+
+CONTENU
+
+Diplikata est fourni :
+ - avec un dictionnaire en créole Haïtien comme référence,
+ - avec l'archive compressée des sources du programme (Diplikata.zip).
+
+DESINSTALLATION
+
+Vous avez deux manières de désinstaller Diplikata :
+ - Soit en allant dans le panneau de configuration de Windows puis en 
+   choisissant Ajout/Suppression de programmes et pour finir, en double 
+   cliquant sur Diplikata
+ - Soit en allant dans le menu Démarrer | Programmes | Ihsv | Diplikata | 
+   Désinstallation (chemin par défaut)
+Tous les fichiers générés entre l'installation et la désinstallation 
+NE SONT PAS SUPPRIMES (fichier de configuration et de paramètres, parties
+sauvegardées, fichiers HTML...)
+  
+LES FICHIERS HTML NE SE CREES PAS OU NE S'AFFICHENT PAS (FICHIERS NON TROUVES)
+
+Si vous utilisez Windows Vista ou Windows 7 et que votre navigateur ne trouve 
+pas la feuille de match détaillée, la liste des parties jouées ou le tableau 
+des records alors allez sur l'une des pages suivantes selon votre système et
+suivez les instructions :
+http://patquoi.fr/windowsvista.html
+http://patquoi.fr/windows7.html
+
+AIDE
+
+Une aide HTML est disponible. Vous avez plusieurs manières d'y accéder :
+ - Si Diplikata est lancé, appuyez sur F1 ou choisissez la rubrique ? | Aide du
+   menu principal ;
+ - Choisissez la rubrique Aide du menu Diplikata dans le menu Démarrer de 
+   Windows (le chemin par défaut est Démarrer | Programmes | Ihsv | Diplikata),
+ - Ouvrez le fichier index.html dans le dossier Ihsv\Diplikata\html (chemin par 
+   défaut) du dossier Windows "Program Files". Autrement dit, le fichier 
+   index.html est situé dans le dossier html depuis l'endroit où se situe le 
+   programme Diplikata.exe.
+
+SOURCES
+
+Les sources du programme sont dans l'archive Diplikata.zip.
+La compilation nécessite toute version de Delphi 2005 ou supérieure. 
+La version de Delphi 2005 Personnel est gratuite (www.developpez.com).
+La version de Diplikata 1.7 équivaut à la version 1.6.9 de Duplicata avec les
+adaptations signalées par les tags "vKA" (vèsyon Kreyòl Ayisyen)
+
+FICHIERS HTML GENERES 
+
+Les fichiers HTML "Feuille de match détaillée", "Liste des parties jouées" et
+"Liste des records" utilisent des fichiers images de type bitmap situés dans 
+le sous-dossier "bin/html" du dossier d'installation de Diplikata. Si vous 
+désinstallez Diplikata et que vous souhaitez conserver les fichiers HTML, ces
+images ne seront pas accessibles. Pour avoir les images dans les pages HTML, 
+procédez comme suit :
+ - Si Diplikata a été désinstallé, réinstallez-le ;
+ - Copiez les onze fichiers d'extension bmp (image bitmap) dans le même 
+   dossier que celui des fichiers à conserver ;
+ - Dans les fichiers HTML, recherchez et supprimez toutes les occurrences du
+   type "file:///[...]/Diplikata/bin/html/" (sans les guillemets). Par défaut,
+   il s'agit de "file:///C://Program%20Files//Ihsv//Diplikata/bin/html/".
+
+REMERCIEMENTS
+
+Je remercie ici Richard Georges Boulin qui est à l'origine de cette version
+avec qui j'ai collaboré pour obtenir les informations du jeu créole haïtien
+et un dictionnaire complet des mots en créole haïtien.
+   
+HISTORIQUE DES VERSIONS
+
+Version 1.7.3 - 29/03/2015
+ - Dans une partie de type Joker, un joker n'est plus ajouté à un tirage qui 
+   vient d'être proposé (Ctrl+R), ça provoquait un message d'erreur en boucle.
+ - Dans les défis, "mot de 15 lettres" est remplacé par "mot de 15 jetons".
+ - La prise en compte d'un défi "mot de 15 jetons" provoquait une erreur. 
+   
+Version 1.7.2 - 19/02/2015
+ - Les positions indiquées dans la page HTML de toutes les solutions d'un coup
+   sont celles du 1er jeton du mot et non plus celles du 1er jeton placé
+   contrairement aux feuilles de match.
+
+Version 1.7.1 - 09/02/2015
+ - Enrichissement de Gwodiko.
+ 
+Version 1.7 - 12/01/2015
+ - Première version de Diplikata à partir de la version 1.6.9 de Duplicata.
+ - L'adaptation de cette version en créole haïtien a consisté principalement à
+   prendre en compte la spécificité des jetons à doubles lettres (An,Ch,Ui...)
+ 
+Les versions antérieures concernent Duplicata :
+ 
+Version 1.6.9 - 20/01/2012
+ - Suite à une demande, l'option "Placer la proposition automatiquement" a été
+   ajoutée : elle permet de poser automatiquement la proposition au lieu d'un 
+   des tops. Le double-clic sur un top ou l'appui sur OK entraîne le placement
+   de la proposition. Pour faire un autre placement, il faut choisir Echap, la
+   croix rouge (Alt+F4) ou le bouton Annuler.
+ - Mise à jour de l'aide HTML.  
+ 
+Version 1.6.8 - 27/12/2011
+ - Une erreur s'est glissée dans le chargement du dictionnaire concernant
+   le dernier mot : ZOOTECHNICIENNE. Ce mot n'était pas utilisable.
+ - Le top 15 (liste des mots de 15 lettres par ordre de score) a été mis à
+   jour à partir de l'ODS6.
+   
+Version 1.6.7 - 26/12/2011
+ - Mise à jour du dictionnaire : ODS6.
+ 
+Version 1.6.6 - 07/08/2011
+ - Lorsque les propositions invalides étaient sanctionnées, que l'on avait
+   posé un seul jeton et qu'au moins un des mots formés était invalide alors
+   le score était maintenu !
+ - Les nouveaux jetons tirés sont en souligné dans le tirage au niveau des
+   feuilles de match (et non plus en italique).
+ - Aide HTML mise à jour avec quelques corrections diverses.
+
+Version 1.6.5 - 18/12/2010
+ - La feuille de match est plus étroite : les cumuls ne sont plus affichés à
+   la fin de la ligne mais dans la barre de statut (pour le dernier tour). 
+   Les informations restent néanmoins consultables sur la feuille de match 
+   détaillée en HTML. Aide HTML mise à jour.
+ - La version de fichier de sauvegarde n'était pas modifiée lorsqu'une 
+   nouvelle partie était demandée après le chargement d'une partie créée avec
+   une version antérieure de Duplicata.
+ - Une option a été ajoutée : La possibilité d'enregistrer automatiquement les
+   paramètres en quittant. Cochée par défaut. Raccourci Maj+Ctrl+A. Option
+   enregistrée dans les paramètres. Aide HTML mise à jour.
+   
+Version 1.6.4 - 29/11/2010
+ - Dans la feuille de match détaillée, le rang moyen pouvait être zéro dans
+   certains cas.
+ - L'association des parties avec le programme s'effectue dans l'installation
+   et non plus lors du lancement du programme.
+    
+Version 1.6.3 - 21/11/2010
+ Nouveauté : Lorsqu'un top est trouvé par un joueur...
+ - Dans la feuille de match RTF et HTML, un astérisque précède le score
+   de la proposition.
+ - Le rapport Score/Top (% ou /20) est affiché en bleu ciel.
+ - Si la partie a été créée avec une version antérieure à la version 1.6.3,
+   l'astérisque n'est affichée que dans la feuille de match détaillée (HTML).
+ Correction en mode démonstration...
+ - La feuille de match détaillée affichait un temps, un cumul et un temps 
+   moyen de réflexion. Ils ont été remplacés par '-'.
+ - Les rapports Score/Top affichaient 0 en rouge. Ils ont été masqués.
+     
+Version 1.6.2 - 09/10/2010
+ Liste des records
+ - La légende était incomplète.
+ Divers
+ - La légende du niveau de difficulté a été mis sur 4 lignes pour éviter que
+   les tableaux de légende ne prennent toute la largeur de la page. Cela 
+   concerne les pages HTML générées (feuille de match détaillée, records et 
+   parties jouées) ainsi que l'aide HTML.
+   
+Version 1.6.1 - 30/09/2010
+ Records
+ - La réinitialisation des records était faite au niveau du fichier mais pas
+   en mémoire.
+   
+Version 1.6 - 26/09/2010
+ Lettres chères
+ - Un générateur de liste de mots avec lettres chères a été ajouté dans le
+   menu Actions (Aide HTML mise à jour).
+ - les lettres chères ont été colorisées pour mieux les repérer : 
+     · rouge foncé pour les lettres à 10 points (K, W, X, Y et Z)
+     · violet pour les lettres à 8 points (J, Q).
+   Dans les parties Joker, si ces lettres ont été échangés avec un joker, 
+   elles apparaissent en vert (indicateur prioritaire). Aide HTML mise à jour.
+ Définitions de mots   
+ - Il est possible de rechercher la définition d'un mot dans le menu Actions
+   ou en utilisant la combinaison Maj+Ctrl+D lors de la présentation de la ou
+   les solutions ou bien lors de la proposition de la pose. La recherche est
+   lancée sur Internet. Quatre sites sont proposés : Wiktionnnaire, CNRTL, 
+   Reverso et Larousse. Aide HTML mise à jour.
+ - D'autres sources de définitions peuvent être ajoutées en utilisant le
+   bouton Personnaliser.
+ Temps de calcul des solutions
+ - Le temps de calcul des solutions est maintenant montré lors de l'affichage
+   du ou des tops, sur la feuille de match détaillée (+ cumul + Nb.sol./s) et
+   sur la liste des parties jouées (Nb.sol./s et moyennes par type de partie).
+ - Les records de temps de calcul et nombre de solutions par seconde ont été
+   ajoutés (Min/Max, Tour/Partie).
+  
+ Corrections diverses  
+ - Lorsque plusieurs mots ne sont pas valables selon l'ODS5, le message est 
+   plus court : la phrase "n'est pas valable selon l'ODS5" n'est pas répétée.
+   Aide HTML mise à jour.
+ - Lorsque l'on posait un seul jeton et que la direction choisie n'était pas
+   celle du mot principal, la feuille de match affichait le jeton posé à la
+   place du mot principal.  
+   
+Version 1.5.9 - 25/08/2010
+ - Les nouveaux records de tour pour un type de partie donné qui ne sont pas
+   des nouveaux records tout type de partie confondu, ne sont plus affichés
+   comme "nouveaux records" (Aide HTML mise à jour).
+   
+Version 1.5.8 - 10/08/2010
+ - Les records de tour affichés dans le tableau ne concernaient que les 
+   parties standard. Cependant, les records de tours des parties non standard
+   (Joker) étaient bien enregistrés. Les records de tour affichés sont dès à
+   présent tout type de partie confondu. Afin de reconnaître le type de partie
+   le texte du record de tour est coloré dans le cas d'un record de partie non
+   standard : vert pour les parties joker (Aide HTML mise à jour). 
+  
+Version 1.5.7 - 09/08/2010
+ Records par type de partie 
+ - Les records de parties non standard (Joker) sont pris en compte séparément
+   en ce qui concerne le niveau Partie. Au niveau Tour, les records restent
+   communs avec les parties de type standard (Aide mise à jour).
+ - Une colonne supplémentaire apparaît après chaque colonne Partie dans la
+   page HTML générée des records, il s'agit des records de parties Joker : 
+   la colonne apparaît en vert pour bien distinguer les types de partie
+   (Aide mise à jour).
+ Aide HTML
+ - Deux feuilles de match (temps réel et détaillée) ont été ajoutées dans la
+   rubrique "Parties joker".
+ Divers
+ - En vue de tests, la taille de police était affichée en bas à gauche dans la
+   barre de statut lorsque l'on modifiait la taille du chevalet ou du plateau
+   de jeu.
+   
+Version 1.5.6 - 08/08/2010
+ Types de partie (Nouveauté)
+ - Ajout d'un sous-menu "Type de partie" dans le menu "Options" dans lequel
+   seront intégrés des règles propres à certains types de partie.
+ - Ajout du choix d'un temps de réflexion (Normal, Semi-Rapide et Blitz) 
+   respectivement de 3, 2 et 1' dans le sous-menu "Type de partie" avec les
+   raccourcis clavier respectifs Ctrl+3, Ctrl+2 et Ctrl+1 (Aide mise à jour).
+ - Les types de partie "Standard" (Ctrl+zéro) et "Joker" (Ctrl+K) ont été 
+   ajoutés au menu. 
+ - Les records de partie ne concernent que les parties standard.
+ Parties Joker
+ - Le type de partie Joker consiste à tirer toujours au moins un joker si
+   encore disponible dans le sac à chaque tour. Lorsque celui-ci est placé sur
+   le plateau de jeu, il est remis dans le sac et remplacé par la lettre 
+   correspondante si elle disponible dans le sac, sinon le joker est laissé 
+   sur le plateau de jeu (Aide mise à jour). Une fois la substitution
+   effectuée, la lettre reprend pleinement sa valeur dans le score des mots à 
+   venir. 
+ - Les lettres placées qui ont remplacé un joker apparaissent en vert sur le 
+   plateau de jeu ainsi que dans les feuilles de match (Aide mise à jour). 
+ Liste des parties jouées
+ - Il y a une ligne de moyennes par type de partie (Standard et Joker).
+ - Les noms de parties sont colorés pour les types de partie non standard
+   (vert pour les parties joker).
+ - La moyenne du niveau de difficulté était mal calculée, elle a été corrigée. 
+ Diverses corrections
+ - La valeur des jetons est affichée un peu plus à gauche pour certaines
+   résolutions.
+ - Lorsqu'un record au niveau tour ou au niveau partie est affiché, il est
+   écrit "tour" ou "partie" au lieu de "de tour" ou "de partie".
+ - Un contrôle du tirage est effectué au chargement de partie, changement
+   de tirage et proposition de tirage. Ce contrôle vérifie que le tirage n'est
+   pas corrompu : chacun des 102 jetons doit être représenté une et une seule 
+   fois, soit dans le sac, soit sur le chevalet, soit sur le plateau de jeu.
+   Apparemment, il y a des situations (assez rares) dans lesquelles le tirage 
+   est corrompu. En attendant de les localiser, un message apparaît lorsque le
+   tirage est corrompu. Si corruption il y a, le problème est corrigé : un 
+   message indique où se trouve le jeton corrompu (plateau, chevalet ou sac).
+   
+Version 1.5.5 - 19/06/2010
+ - Ajout dans les options du paramétrage de la... "qualité des solutions de la
+   liste pour le choix de la pose" (Ctrl+Q). Auparavant la liste ne présentait
+   que les tops. À présent, il est possible de présenter une qualité précise
+   de solutions à poser en fonction du score ou du rang de la solution, au 
+   choix. Le paramétrage est pris en compte dans la sauvegarde des paramètres
+   (Ctrl+Y).
+ - La liste de laquelle il faut choisir une solution à placer indique la 
+   qualité et le type de celle-ci (Score/Top ou Rang) en en-tête. Le score du
+   joueur ainsi que le top ont été ajoutés dans la barre de statut. Idem pour
+   le message de la solution unique.
+ - Le raccourci de la rubrique Partie > Quitter (Ctrl+Q) a été supprimé pour
+   le réserver au nouveau paramétrage (Options > Qualité...)  
+ - La légende de la feuille de match détaillée a été corrigée.
+ 
+Version 1.5.4 - 10/06/2010
+ - Le mot de quinze lettres le plus difficile à placer à ce jour apparaît en
+   gras dans le tableau des défis des mots de quinze lettres.
+ - Après vérification de la validation W3C HTML 4.01 des fichiers HTML générés
+   par Duplicata : correction d'une erreur de balise dans le fichier Records.
+  
+Version 1.5.3 - 24/05/2010 (Duplicata a 3 ans !)
+ - Les records de tours ne sont pas enregistrés lors d'un tour où le tirage a
+   été proposé. Cela empêche notamment les records de taille de mot entre
+   autres d'être enregistrés lorsqu'un défi de mots de quinze lettres est en
+   cours (voir Aide en HTML). Les records de parties ne sont pas enregistrés 
+   si au moins une pose a été porposé lors d'un tour. L'information étant 
+   enregistrée dans les fichiers de parties, ceci a pour conséquence le 
+   changement de version de ceux-ci. Les parties enregistrées avec une version
+   comprise entre la version 1.5 et 1.5.2 (incluses) qui seront sauvegardées 
+   avec une version 1.5.3, seront du format de la version 1.5.3.
+ - Une rubrique a été ajoutée dans le menu "?" : "Informations internes" 
+   (Maj+F1). Cela permet de connaître, au niveau de la partie et au niveau de
+   Duplicata, la version du format de fichier et le numéro de partie associé 
+   (pour la détection de changement de nom de partie dans la gestion des 
+   records).
+ - Lorsqu'une partie créée avec une version de Duplicata antérieure à la 
+   version 1.5 était ouverte, elle récupérait le numéro de la dernière partie
+   jouée.
+ - les défis "Former un mot de 15 lettres avec le moins de jetons possible" 
+   sont gérés automatiquement. Un message informe que le défi a été relevé
+   (nouveau) ou battu (modifié) avec les données du défi. Les informations
+   sont stockées comme les records et la liste des défis relevés ou battus
+   est accessible au menu "Affichage" (page HTML mise à jour automatiquement).
+ - Les lignes du fichier "top15.txt" ont été numérotées pour avoir le numéro
+   du défi correspondant au mot de quinze lettres.
+ - Une rubrique a été ajoutée dans le menu Options : "Rétablir les paramètres 
+   enregistrés" (Maj+Ctrl+Y). Ceci permet d'éviter de redémarrer Duplicata 
+   pour avoir le paramétrage enregistré si l'on a changé des paramètres ou 
+   rétabli les paramètres par défaut (Ctrl+Z). Aide HTML mise à jour.
+ - Lorsque l'on choisissait de réinitialiser les options par défaut et que la 
+   feuille de match était visible, celle-ci n'était pas repositionnée à droite
+   du plateau de jeu.
+ - Lorsque le coup était une pose d'un seul jeton hors top (proposition d'une
+   pose) et que la direction choisie n'était pas celle d'un mot mais du jeton
+   posé, la direction n'était pas changée sur les feuilles de match.
+   
+Version 1.5.2 - 17/05/2010
+ - La fenêtre de la feuille de match prend toute la largeur du côté droit du
+   plateau de jeu au côté droit de l'écran jusqu'aux limites de la taille 
+   maximale de la feuille de match.
+ - L'entrée du dernier mot du dico (ZOOTECHNICIENN~E, corrigée dans la version
+   1.5) était également erronée dans le dictionnaire de recherche 
+   (Tirage 'CCEEHIINNNOOTZ' ou il manquait un E). Le mot est donc jouable par 
+   l'ordinateur le cas échéant (voir la nouvelle rubrique de l'aide HTML qui
+   s'appelle "Idée de défi" dans laquelle il y a la preuve de la pose de ce
+   mot de quinze lettres).
+ - On peut tester un placement en cliquant droit sur la case cible du plateau
+   de jeu au lieu de gauche ou '#' au clavier au lieu de '+' avant de saisir 
+   les coordonnées puis la direction (Aide HTML mise à jour).
+ - L'annulation du choix au clavier des coordonnées de la case cible d'une 
+   pose avec la touche '+' ne fonctionnait pas. Elle fonctionne maintenant
+   avec également la touche '#', les deux pouvant annuler n'importe quelle 
+   saisie au clavier, pose définitive ou test.
+ - L'accès à l'aide HTML par la touche F1 a été rendue accessible lorsqu'une
+   fenêtre modale est active (recherche de mots, proposition d'un tirage, 
+   situation des jetons et boîte "À propos").
+ Proposition Pose
+ - Un bouton "Afficher ma proposition" a été ajoutée dans la boîte de dialogue
+   de proposition d'une pose autre qu'un top. Ce bouton est accessible que si
+   aucun jeton n'a été encore sélectionné (partie gauche "Pose" vide). Ce 
+   bouton permet d'afficher les jetons à poser, les coordonnées de la case et
+   la direction de la proposition que le joueur a faite juste avant. Pour
+   confirmer le choix de la proposition du joueur, il faut appuyer sur le 
+   bouton "Placer".
+ - Le choix du joker n'est plus la touche "Espace" mais la combinaison Ctrl+J.
+ - Il était possible d'appuyer sur le bouton "Ok" même si aucun jeton n'était
+   choisi. À présent, il est grisé comme le bouton "Effacer".
+ - À l'appui du bouton "Placer", si un joker est à poser, la lettre du joker 
+   est demandée. En cas de mot invalide et appui à nouveau sur "Placer", la 
+   lettre du joker n'était pas redemandée la deuxième fois mais la troisième 
+   fois.
+ - Le raccourci clavier du choix de la ligne n'était pas actif (Alt+L).
+ - Les raccourcis clavier de la proposition d'une pose ont été ajoutés dans le 
+   tableau des raccourcis clavier de l'aide HTML.
+ Aide HTML
+ - Le tableau des raccourcis clavier a été légèrement revu avec la fusion des 
+   cellules de la colonne Menu/Fenêtre.
+ - Les rubriques "Raccourcis clavier", "Fréquences des lettres" et 
+   "Terminologie" ont été regroupés dans une rubrique "Annexes" à laquelle a
+   été ajoutée une rubrique "Idée de défi" (voir ci-dessus).
+ - La rubrique "Suivi d'une partie" a été renommée "Proposition d'une solution
+   autre qu'un top".
+   
+Version 1.5.1 - 13/05/2010
+ Divers
+ - Un message apparaît lorsque l'on tente d'ouvrir un fichier qui n'est pas
+   un fichier de partie Duplicata.  Ceci pouvait altérer l'intégrité du jeu
+   a posteriori. Conséquence : Il n'est plus possible d'ouvrir une partie 
+   générée avec une version de Duplicata antérieure à la version 1.4 
+   (message affiché). 
+ - Lorsqu'un fichier n'a pas pu être ouvert (fichier incorrect ou mauvaise 
+   version), il n'y a plus de message "Il n'y a plus de jeton. Partie 
+   terminée."
+ - Le niveau de difficulté moyen est maintenant pondéré avec le score Top.
+   Le cumul du nombre de solutions pondéré par le score top est stocké au
+   niveau de la liste des parties jouées mais pas au niveau de la partie 
+   (recalculé à l'ouverture). Le niveau de difficulté d'une partie jouée est
+   donc également pondéré. Le niveau de difficulté moyen toutes parties jouées
+   confondues est également pondéré mais peut être calculé avec des niveaux de
+   difficulté moyen de parties jouées avec des versions de Duplicata 1.5 (non
+   pondéré) : un astérisque après le nombre moyen de solutions indique les 
+   parties dont le niveau de difficulté est pondéré par le score top (Aide 
+   HTML mise à jour avec une explication détaillée du niveau de difficulté 
+   dans le paragraphe "Terminologie").
+ - La fenêtre de la situation des jetons peut être fermée avec le même
+   raccourci que pour la faire apparaître : Ctrl+I.
+ - Lorsque plusieurs solutions sont proposées, la touche Echap permet de
+   poser une autre proposition (comme lorsque l'on clique sur la croix rouge
+   en haut à droite). D'autre part, seule la touche Entrée permet de 
+   sélectionner une des solutions top de la liste (Aide HTML mise à jour).
+ - Le focus restait sur la dernière lettre utilisée par le dernier joker.
+   La touche Entrée pouvait donc choisir la lettre utilisée lors de la pose du
+   dernier joker. La touche Entrée est désormais inopérante. La touche Echap 
+   reste associée à la touche Annuler.
+ - L'association des fichiers d'extension .dup (parties de Duplicata) est 
+   réalisée au lancement de Duplicata mais aussi maintenant par le programme
+   d'installation (insduplicata.exe).
+ Records
+ - Le record de nombre de solutions moyen avec bonus 50 a une information 
+   complémentaire : le nombre total de solutions avec bonus 50 sur le nombre
+   de tour de la partie (Aide HTML mise à jour).
+ - Le record de score au niveau de la partie (proposition et top) a une 
+   info complémentaire : le score moyen par tour (Aide HTML mise à jour).
+ - Les records de score (proposition + top) ont une info complémentaire :
+   le mot principal posé (avec les jetons posés soulignés et les bonus en
+   couleurs) ainsi que la position et la direction : horizontale si commence
+   par une lettre et verticale si commence par un chiffre (Aide HTML mise à
+   jour).
+ - Les records max des tops au tour (Taille de mot et score) n'étaient pas 
+   pris en compte lorsque la solution posée était manuelle (non choisie 
+   parmi les tops). Le record de taille de mot n'est pris en compte que si
+   la pose manuelle a un score top. Par contre le record de score top est pris
+   en compte même si la pose n'a pas un score top mais dans ce cas aucune 
+   information complémentaire de pose n'est fournie (info "pas de top posé").
+ - Une note a été ajoutée au sujet les records de type Minimum. Le renvoi à 
+   une note en bas de tableau précise que les valeurs nulles sont exclues 
+   des records.
+ - La fenêtre surgissante des nouveaux records pouvait être masquée à 
+   l'apparition d'une boîte de dialogue ou du rafraîchissement du plateau de
+   jeu.
+ Aide HTML
+ - Ajout de la manière, entièrement au clavier, de choisir la case et la 
+   direction du mot principal d'une proposition. 
+ - Le chapitre "Préparer et jouer son coup" a été détaillé au niveau du menu.
+ - Les renvois vers les définitions de termes sont plus précis.
+ - Ajout de l'astuce consistant à garder la feuille de match détaillée dans le
+   navigateur grâce à l'option "Générer automatiquement la Feuille de Match 
+   HTML" et le rafraîchissement du navigateur.
+ 
+Version 1.5 - 29/04/2010
+ Nouveautés diverses
+ - Les décomptes de jetons dans le sac, sur le chevalet et sur le plateau de
+   jeu, ont été ajoutés dans la légende de la boîte de dialogue de la 
+   situation des jetons (aide HTML mise à jour).
+ - Les actions sont notifiées dans la barre de statut (très utile lorsqu'une
+   action est effectuée avec un raccourci clavier). 
+ - Lorsque le format de partie sauvegardée sera modifié, un message avertira
+   que la version de la partie tentée d'être ouverte a été créée avec une
+   version ultérieure à la version courante.
+ - Une demande de confirmation a été ajoutée lorsque l'on demande de changer
+   le tirage (Ctrl+H) par précaution.
+ - Un clignotement a été ajouté à la case sélectionnée pour le placement 
+   d'une proposition (entourée d'un cadre blanc).
+ - Le temps de réflexion qui s'écoule en bas à droite du plateau de jeu est
+   indiqué en vert sauf lorsque le temps imparti est écoulé, le temps écoulé
+   après le temps imparti est alors indiqué en rouge (Aide HTML mise à jour).
+ - Une option a été ajoutée : l'enregistrement automatique après chaque coup.
+   L'option est cochée par défaut et n'est effective que si la partie a été 
+   enregistrée au moins une fois manuellement. Raccourci clavier : Ctrl+A
+   (Aide HTML mise à jour).
+ - Une partie terminée peut à présent être enregistrée. La proposition 
+   d'enregistrer la partie a lieu UNIQUEMENT lors du message de fin de partie.
+   L'enregistrement manuel n'est pas possible et l'enregistrement automatique
+   n'a pas lieu. S'il n'y a plus de jeton à l'enregistrement, un message de 
+   fin de partie apparaîtra alors au chargement. Dans le cas contraire, la 
+   partie pourra toujours être chargée et poursuivie (Aide HTML mise à jour).
+ - Une gestion des records a été ajoutée. Tout nouveau record est affiché en
+   avant-plan sauf en mode démo : Score, nombre de bonus à 50, taille de mot
+   formé, niveau de difficulté, rang, nombre de solutions, nombre de solutions
+   avec bonus, rapport Score/Top et nombre de tops trouvés).
+ - Une option a été ajoutée : la réinitialisation des records avec comme
+   raccourci clavier Maj+Ctrl+Z (Aide HTML mise à jour).
+ - Un affichage a été ajouté : La liste des records (HTML) avec le raccourci
+   Ctrl+C (Aide HTML mise à jour).
+ - Une option d'affichage a été ajoutée (activée par défaut) : la possibilité
+   de voir ou non les records battus en temps réels (Ctrl+X).
+ - Une statistique a été ajoutée à la feuille de match détaillée : le nombre
+   de solutions avec bonus 50 (parmi toutes les solutions trouvées). Au 1er 
+   tour, le nombre et divisé par 2 à cause des directions horizontale et 
+   verticale qui ont chacune les mêmes solutions. Le record (max) au niveau
+   Tour et au niveau Partie a été ajouté. La liste des parties jouées a une
+   colonne supplémentaire : Nombre moyen de solutions avec bonus (Aide HTML
+   mise à jour).
+ - Lors du choix de la pose de l'une des meilleures solutions (tops), la liste
+   est triée par ordre de préférence selon la règle Duplicate :
+     1. Prendre la solution utilisant le moins de jokers
+     2. SI le chevalet contient moins de 7 jetons ALORS
+          Prendre la solution plaçant tous les jetons du chevalet 
+        SINON
+          Prendre la solution utilisant le moins de jetons
+     3. Prendre la solution dont la valeur placée est la plus faible (total de
+        la valeur des jetons à placer).
+   La position selon cette règle est indiquée en tête de ligne. 
+   En cas d'égalité, le tri s'effectue sur alphabétiquement sur le mot formé.
+ Corrections diverses
+ - Le texte d'aide au choix du top à voir ou placer pouvait être tronqué quand
+   la boîte de dialogue était rétrécie en largeur ; La ligne de statistiques
+   dans la barre de statut concernant votre proposition a été raccourcie car
+   elle pouvait être tronquée sur le côté droit.
+ - Les statistiques de la proposition (nombre de solutions, rang...) avaient 
+   disparu du message donnant l'unique solution qui rapporte le plus grand 
+   nombre de points. Le message a été légèrement revu.
+ - Un changement de tirage était demandé alors que le tirage était insuffisant
+   (pas assez de voyelles ou de consonnes) ET qu'il restait moins de 7 jetons
+   dans le sac (ce qui obligeait à répondre Non). Le message a été remplacé 
+   par un message demandant si vous souhaitez continuer malgré le tirage 
+   insuffisant.
+ - Le dernier mot du dictionnaire avait la dernière lettre tronquée
+   (ZOOTECHNICIENN~E).
+ - Lorsque l'on place un seul jeton et que l'on choisit la direction
+   (horizontalement ou verticalement) vers laquelle il n'y a aucun mot
+   formé, la direction est changée afin de pouvoir obtenir un mot principal
+   (pour les feuilles de match) et non une seule lettre.
+ - Les raccourcis clavier des rubriques du menu Options ne sont plus imposés
+   et sont laissés à la gestion automatique des raccourcis clavier de Windows.
+ - Les rubriques du menu Affichage ont été réorganisées : La situation des 
+   jetons a été remontée et les stats HTML ont été mises ensemble (Aide HTML
+   mise à jour).
+ - Le mélange des jetons est interrompu à l'affichage de la situation des 
+   jetons (affichage hors partie).
+ - En cours de partie, le temps de réflexion continue à être affiché en temps
+   réel pendant l'affichage des boîtes de dialogue et des fenêtres.
+ - Les boîtes de dialogue "Ouvrir" et "Enregistrer sous" n'ont plus de filtre
+   "Tous fichiers (*.*)".
+ Feuille de match
+ - La fenêtre est maintenant avec du texte blanc sur fond 
+   noir pour des soucis de contraste avec les couleurs de bonus. 
+   Le fichier RTF associé reste, lui, inchangé : noir sur fond blanc 
+   (Aide HTML mise à jour).
+ - Dans le cas où partie est chargée (Ctrl+O) ou sauvegardée (Ctrl+E) ou que 
+   la feuille de match détaillée HTML est générée et affichée (Ctrl+D), la
+   feuille de match est masquée puis réaffichée pour éviter le scintillement.
+ Aide (HTML)
+ - Enrichissement de l'aide avec une rubrique "Terminologie" (définitions de 
+   termes informatiques et de jeu) et une rubrique "Fréquence des lettres"
+   (répartition des lettres dans le dictionnaire ODS5).
+ - Quelques images de l'aide ont été mises à jour.
+ - Le sommaire passe de 1 à 2 niveaux de détail.
+ Feuille de match détaillée (HTML)
+ - Les rapports (% ou notes /20) ont été colorisés. Les nuances de couleurs 
+   sont en fonction de la performance : rouge=très faible, orange=faible,
+   jaune=moyen et vert=bonne (Aide HTML mise à jour). 
+ - Les calculs de rangs moyens pouvaient être négatifs sur la feuille de match
+   détaillée. Pour corriger une feuille de match erronée, il suffit de rouvrir
+   la partie sauvegardée puis de regénérer la feuille de match HTML (Ctrl+D).
+ - Les colonnes "Temps" et "Rang sur Solutions" ont été permutées dans les
+   moyennes du tableau de le feuille de match détaillées HTML.
+ - Des intitulés de colonnes ont été raccourcis pour réduire la largeur du
+   tableau.
+ Liste des parties jouées (HTML)
+ - Le format d'affichage des rapports défini dans les options est appliqué à
+   la page des parties jouées.
+ - Les rapports (% ou notes /20) ont été colorisés comme pour la feuille de 
+   match détaillée.
+ - Le niveau de difficulté a été ajouté comme pour la feuille de match 
+   détaillée (Aide HFML mise à jour).
+ - La date et l'heure auxquelles s'est terminée la partie ont été ajoutées
+   (Aide HTML mise à jour).
+
+Version 1.4.10 - 13/03/2010
+ - Le raccourci clavier du joker dans la boîte de dialogue de la proposition à
+   placer est le point d'interrogation et non plus la touche espace réservée
+   au bouton Annuler (seul bouton ayant le focus lors de la saisie de la 
+   proposition)
+ - Lorsqu'une proposition contenait un joker puis que le choix de la pose 
+   contenait également un joker, ce dernier prenait automatiquement la lettre
+   choisie précédemment.
+   
+Version 1.4.9 - 28/02/2010
+ - Une liste des parties jouées est alimentée à chaque fin de partie :
+     -> La liste est consultable dans le menu Affichage (Ctrl+U),
+     -> La liste peut être vidée dans le menu Options (Ctrl+V).
+     -> La page HTML contenant la liste des parties jouées s'appelle 
+        Parties.html et se trouve dans le dossier contenant le programme.
+     -> L'aide HTML modifiée.
+ - Il est possible de continuer une partie même lorsque le tirage est 
+   insuffisant en fin de partie. La question est posée.
+   
+Version 1.4.8 - 20/01/2010
+ - La fenêtre de la feuille de match est plus sombre pour mieux rendre lisible
+   les parties de mots avec bonus.
+ - Un clic sur la boîte à Propos et elle se ferme !
+ - En-tête de la feuille de match légèrement revue (3 niveaux côté stats).
+ - Le nombre de solutions distinctes a été ajouté sur la page HTML 
+   des solutions.
+ - Le rang moyen (ancien mode de calcul) a été retiré dans l'affichage des
+   meilleures solutions.
+
+Version 1.4.7 - 10/01/2010
+ - Quelques corrections dans la nouvelle recherche de mots :
+    * La touche Echap permet de fermer la fenêtre de recherche de mots.
+    * Le caret n'était pas toujours dans le champ de recherche.
+ - Quelques corrections dans la feuille de match détaillée :
+    * Ajout du nombre moyen de solutions 
+    * Changement de calcul du rang moyen pour prendre en compte le "poids" du
+      nombre de solutions.
+   
+Version 1.4.6 - 30/12/2009
+ - La recherche de mots ne crée plus de fichiers de recherche. Le résultat 
+   s'affiche directement dans la boîte de dialogue. Il est néanmoins possible
+   de copier la liste dans le presse-papier par un clic droit sur la liste.
+ - Les ouvertures de fichiers HTML générés par Duplicata est effectué par url.
+   
+Version 1.4.5 - 13/12/2009
+ - Un message d'erreur pouvait apparaître et bloquer la partie pendant la 
+   recherche de la meilleure solution dans le cas où le chevalet contenait 
+   moins de sept jetons.
+ 
+Version 1.4.4 - 25/11/2009
+ - Des marqueurs ont été ajoutés sur les cases pour montrer le bonus de ces
+   voisines lorsque celles-ci sont occupées.
+ - Après une proposition avec joker invalide non sanctionnée, la proposition
+   suivante ne réclamait pas de lettre pour le joker.
+ - Si un jeton était posé dans le coin inférieur droit, il pouvait rester 
+   jaune comme pour les propositions au cours de la partie. 
+   
+Version 1.4.3 - 12/09/2009
+ - Lorsque l'on plaçait un seul jeton, les solutions horizontales et 
+   verticales pouvaient être considérées comme deux solutions quelques fois.
+ - Lorsqu'un joueur posait un joker et que la lettre attribuée a été choisie 
+   et que la solution finalement posée contenait un joker, on demandait à 
+   nouveau la lettre du joker de proposition du joueur.
+   
+Version 1.4.2 - 02/09/2009
+ - La rubrique Partie | Quitter a été rajoutée même si Alt+F4 ou la croix 
+   rouge en haut à droite du plateau de jeu permet de quitter Duplicata...
+ - Une erreur critique pouvait survenir lors de la recherche de solutions.  
+   
+Version 1.4.1 - 31/08/2009
+ - Ajout de commandes au clavier pour manipuler le chevalet (de l'arrangement
+   des jetons à la pose sur le plateau de jeu).
+ - La touche Entrée au moment de la sélection de la lettre pour un joker 
+   choisissait la lettre A. À présent, la touche Entrée n'a aucun effet.
+ - Les jokers sont mis en valeur dans la liste des solutions lors du choix
+   de la meilleure solution à placer, ainsi que dans la page HTML des 
+   solutions triées.
+ - Des solutions étaient oubliées. Dans le cas où un mot a au moins une 
+   lettre en deux exemplaires et que le tirage a cette lettre et un joker.
+   Par exemple, avec le tirage AABBbO (b est un joker utilisé pour un B),
+   on peut faire bAOBAB, BAObaB et BAOBAb. Une seule solution était proposée 
+   or le score pouvait changer entre les solutions possibles !
+ - Aide en ligne mise à jour avec en plus une explication détaillée du journal
+   des solutions.
+   
+Version 1.4 - 07/06/2009
+ - Couleur lettre compte triple (bleu foncé) éclaircie.
+ - Sur la feuille de match, les scores du joueur sont en gras (tour+partie).
+ - Possibilité de poser n'importe quelle solution valide en dehors de l'une 
+   des meilleures solutions (suivi d'une partie).
+ - En conséquence de la possibilité ci-dessus : ajout de la notion de score
+   du coup joué et score de la partie jouée (cumul du score des coups joués)
+   au niveau des feuilles de matches (fenêtre comme HTML).
+ - Le format de fichier de partie a changé. La compatibilité est assurée.
+   Cependant, tout fichier enregistré avec une version antérieure à la 1.4
+   gardera son format à cause de la feuille de match RTF dont le format a
+   aussi changé. La feuille de match HTML sera elle générée au niveau format.
+ - Les dimensions du plateau de jeu s'adaptent automatiquement suivant la
+   résolution de l'écran si les dimensions n'ont pas été sauvegardées.
+   Sinon, pour obtenir ces dimensions, restaurez les paramètres par défaut
+   ou supprimez les 4 lignes en dessous de la section [Dimensions] dans le 
+   fichier DUPLICATA.INI puis redémarrez Duplicata.
+ - Le chevalet comme la feuille de match s'adaptent automatiquement s'ils
+   étaient amenés à dépasser l'écran sur la droite.
+ - La page HTML des solutions pouvait ne pas s'afficher lorsque l'option était
+   demandée.
+ - Le résultat de la recherche de mots pouvait ne pas s'afficher.   
+ - Mise à jour de l'aide en ligne : lisez-la pour faire connaissance avec les
+   nouveautés !  
+ 
+Version 1.3.9 - 29/05/2009
+ - Les coordonnées ont été ajoutées autour du plateau de jeu.
+ - Certains fichiers générés pouvaient ne pas être affichés automatiquement.
+  
+Version 1.3.8 - 10/01/2009
+ - Le tirage affiché dans la page des solutions n'était pas correct lorsqu'il
+   y avait moins de sept jetons dans le tirage (points d'interrogation).
+ - Aide HTML retirée de l'archive compressée des sources (économie de place !)
+    
+Version 1.3.7 - 01/01/2009
+ - Correction dans la page des solutions : les critères de tri se répétaient
+   dans certains cas.
+ - Enrichissement de l'aide HTML (critères de tri de la liste des solutions).
+ 
+Version 1.3.6 - 28/12/2008
+ - Ajout de l'option d'affichage de la liste de toutes les solutions. 
+   Si l'option est activée, une page html est générée et affichée après chaque
+   tour. Le fichier du tour précédent est écrasé. Pour la sauvegarder, il faut
+   enregistrer sous un autre nom depuis le navigateur. 
+   Cette option n'est pas activée par défaut.
+ - Aide HTML mise à jour.
+   
+Version 1.3.5 - 25/12/2008
+ - La barre de statut a été "nettoyée" au lancement.
+ - L'aide html était incomplète concernant certaines rubriques (situation des
+   jetons et proposition de tirage).
+ - Ajout d'une option de génération automatique de la feuille de match HTML
+   après chaque coup dans le cas où la partie a déjà été sauvegardée.
+ - Aide HTML mise à jour.
+ - Raccourcis clavier ajoutés à la fin de l'aide HTML.
+
+Version 1.3.4 - 23/08/2008
+Lorsqu'une partie se termine (message partie terminée) :
+ - Il n'est plus possible d'enregistrer la partie,
+ - Il n'y a plus de confirmation de type "Une partie est en cours, êtes-vous
+   sûr(e) de...".
+  
+Version 1.3.3 - 12/08/2008
+ - Le chargement de l'option du format d'affichage note (/20) ne s'appliquait
+   pas lorsque l'on demandait la feuille de match, il fallait recliquer sur la
+   rubrique du menu même si celle-ci "pointait" bien sur le format note (/20).
+ - Doublon de raccourcis : Enregistrer les paramètres c'est Ctrl+Y et non plus
+   Maj+Ctrl+E qui était réservé à la commande Partie | Enregistrer sous...
+   
+Version 1.3.2 - 11/08/2008
+ - Correction dans le texte de la feuille de match
+ - Ajout de la possibilité de réinitialiser et d'enregistrer les paramètres
+ - Mise à jour de l'aide en HTML
+ 
+Version 1.3.1 - 01/01/2008
+ - ODS 5ème édition (2008)
+ 
+Version 1.3 - 26/11/2007
+ - Compatibilité Windows Vista
+
+Version 1.2 - 04/07/2007
+ - Ajout d'un outil de suivi des jetons : ordre de tirage et répartition des 
+   jetons (sac, chevalet et plateau). La nouvelle rubrique s'appelle Affichage|
+   Situation des jetons (Ctrl+I).
+ - L'annonce du temps imparti pouvait survenir pendant la détermination d'un 
+   joker.  
+ - Ajouts et corrections dans l'aide en ligne.
+   
+Version 1.1.1 - 26/06/2007
+ - Aide HTML créée et accessible en appuyant sur F1 ou en choisissant ?|Aide
+   au menu principal.
+   
+Version 1.1 - 16/06/2007
+ - Le mélange de jetons se poursuivait lorsque l'on commençait une nouvelle 
+   partie et qu'aucune partie n'était en cours. Cela entraînait la possibilité
+   de rejouer un jeton déjà placé.
+
+Version 1.0.1 - 25/05/2007
+ - Mise en conformité HTML 4.01 de la feuille de match détaillée en HTML.
+ - La recherche de mot a été déplacée du menu Outils (supprimé) au menu Actions.
+ - La retaille du plateau a été "renforcée" dans les plus petites dimensions.
+
+Version 1.0 - 24/05/2007 : Première version
+
+FREQUENCE DES LETTRES
+
+Les statistiques de fréquence des lettres ont été déplacées dans l'aide HTML
+avec en plus des statistiques sur les initiales et les finales.
+
+______________________________________
+
+Dernière mise à jour le 29 mars 2015.

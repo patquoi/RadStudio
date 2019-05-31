@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A92A9CC5-92DA-4734-96D9-9F607BE0571E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="WordKillers.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="WordKillers">
+        <MSBuild Projects="WordKillers.dproj"/>
+    </Target>
+    <Target Name="WordKillers:Clean">
+        <MSBuild Projects="WordKillers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WordKillers:Make">
+        <MSBuild Projects="WordKillers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="WordKillers"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="WordKillers:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="WordKillers:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

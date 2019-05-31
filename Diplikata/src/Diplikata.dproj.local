@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/10 10:06:20.000.237,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.807,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\propose_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.323,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\fdmatch_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.214,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\base.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.573,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\patience_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.370,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\langue.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.994,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\solutions_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.947,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\situationjetons_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.713,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\propos_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.432,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\listemots_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.229,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\cststr.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.619,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\prmpose_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.666,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\prmsrcdef_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.276,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\definition_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.510,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\main_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.885,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\saisietirage_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.541,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\nvrecord_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.838,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\rechdico_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:49.000.354,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\joker_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:50.000.072,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\tirage_f.pas</Transaction>
+    <Transaction>2019/05/10 10:06:50.000.025,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\statspartie_f.pas</Transaction>
+    <Transaction>2019/05/10 10:13:53.000.096,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Project1.dproj=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\src\Diplikata.dproj</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="base.pas"/>
+    <File Path="cststr.pas"/>
+    <File Path="definition_f.pas"/>
+    <File Path="definition_f.dfm"/>
+    <File Path="fdmatch_f.pas"/>
+    <File Path="fdmatch_f.dfm"/>
+    <File Path="joker_f.pas"/>
+    <File Path="joker_f.dfm"/>
+    <File Path="langue.pas"/>
+    <File Path="listemots_f.pas"/>
+    <File Path="listemots_f.dfm"/>
+    <File Path="main_f.pas"/>
+    <File Path="main_f.dfm"/>
+    <File Path="nvrecord_f.pas"/>
+    <File Path="nvrecord_f.dfm"/>
+    <File Path="patience_f.pas"/>
+    <File Path="patience_f.dfm"/>
+    <File Path="prmpose_f.pas"/>
+    <File Path="prmpose_f.dfm"/>
+    <File Path="prmsrcdef_f.pas"/>
+    <File Path="prmsrcdef_f.dfm"/>
+    <File Path="propose_f.pas"/>
+    <File Path="propose_f.dfm"/>
+    <File Path="propos_f.pas"/>
+    <File Path="propos_f.dfm"/>
+    <File Path="rechdico_f.pas"/>
+    <File Path="rechdico_f.dfm"/>
+    <File Path="saisietirage_f.pas"/>
+    <File Path="saisietirage_f.dfm"/>
+    <File Path="situationjetons_f.pas"/>
+    <File Path="situationjetons_f.dfm"/>
+    <File Path="solutions_f.pas"/>
+    <File Path="solutions_f.dfm"/>
+    <File Path="statspartie_f.pas"/>
+    <File Path="statspartie_f.dfm"/>
+    <File Path="tirage_f.pas"/>
+    <File Path="tirage_f.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

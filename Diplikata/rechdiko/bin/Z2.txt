@@ -1,0 +1,54 @@
+﻿Tirages de 2 lettres de AA à TUi - Page 1/1
+
+AA:	AA	BO:	BO	GOn:	GOn	OY:	YO
+AB:	BA	BOn:	BOn	GOu:	GOu	OZ:	ZO
+ACh:	ACh	ChE:	ChE	IJ:	JI	TUi:	UiT
+	ChA	ChEn:	ChEn	IK:	KI		
+AD:	DA	ChI:	ChI	IL:	IL		
+AF:	FA	ChO:	ChO		LI		
+AG:	AG	ChOu:	ChOu	IM:	IM		
+	GA	DE:	DE		MI		
+AH:	HA		ED	IN:	NI		
+AJ:	JA	DI:	DI	IP:	PI		
+AK:	AK	DO:	DO	IR:	RI		
+	KA	DOn:	DOn	IS:	SI		
+AL:	AL	DOu:	DOu	IT:	TI		
+	LA	EF:	FE	IW:	WI		
+AM:	MA	EG:	GE	IY:	YI		
+AN:	AN	EJ:	JE	JOn:	JOn		
+	NA	EK:	KE	JOu:	JOu		
+AnB:	AnB	EL:	LE	KO:	KO		
+	BAn	EM:	ME	KOu:	KOu		
+AnCh:	ChAn	EN:	EN	KUi:	KUi		
+AnD:	DAn		NE	LO:	LO		
+AnG:	AnG	EnF:	FEn	LOu:	LOu		
+ANg:	ANg	EnG:	GEn	MO:	MO		
+AnG:	GAn	EnH:	HEn	MOu:	MOu		
+AnJ:	AnJ	EnJ:	JEn	NO:	NO		
+	JAn	EnM:	EnM	NOn:	NOn		
+AnK:	KAn		MEn	NOu:	NOu		
+AnL:	LAn	EnN:	NEn		OuN		
+AnN:	NAn	EnP:	PEn	NUi:	NUi		
+AnP:	PAn	EnR:	REn	OnP:	POn		
+AnR:	RAn	EnS:	SEn	OnS:	OnS		
+AnS:	SAn	EnT:	TEn		SOn		
+AnT:	AnT	EnV:	VEn	OnT:	TOn		
+	TAn	EnZ:	ZEn	OnW:	WOn		
+AnV:	VAn	EP:	PE	OnY:	YOn		
+AnY:	YAn	ER:	RE	OnZ:	OnZ		
+AnZ:	ZAn	ES:	SE	OP:	PO		
+AP:	AP	ET:	TE	OS:	SO		
+	PA	EV:	EV	OT:	OT		
+AR:	RA		VE		TO		
+AS:	SA	EW:	WE	OuP:	OuP		
+AT:	TA	EY:	YE		POu		
+AV:	VA	EZ:	ZE	OuS:	SOu		
+AW:	WA	FI:	FI	OuT:	OuT		
+AY:	AY	FO:	FO		TOu		
+	YA		OF	OuW:	WOu		
+AZ:	ZA	FOn:	FOn	OuY:	OuY		
+BE:	BE	FOu:	FOu	OuZ:	ZOu		
+BEn:	BEn	GI:	GI	OV:	VO		
+BI:	BI	GO:	OG	OW:	WO		
+
+

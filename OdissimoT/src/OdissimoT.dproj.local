@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/08/06 17:39:22.000.942,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/08/13 18:41:40.000.444,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/08/13 18:43:02.000.695,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\main_f.pas=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/08/13 18:43:02.000.695,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\main_f.fmx=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.fmx</Transaction>
+    <Transaction>2018/08/13 18:43:14.000.388,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\OdissimoT.dproj=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Project1.dproj</Transaction>
+    <Transaction>2018/08/13 19:06:17.000.112,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\dico.pas</Transaction>
+    <Transaction>2018/08/13 19:31:39.000.765,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\tirages.pas</Transaction>
+    <Transaction>2018/08/13 19:54:35.000.426,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\Unit1.pas</Transaction>
+    <Transaction>2018/08/13 19:54:48.000.284,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\anagrammes.pas=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\OdissimoT\src\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone" Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

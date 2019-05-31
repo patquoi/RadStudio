@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{51A8F7C1-CCCB-4E4A-84DC-2F5D80EB87F2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="iAspic.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="iAspic">
+        <MSBuild Projects="iAspic.dproj"/>
+    </Target>
+    <Target Name="iAspic:Clean">
+        <MSBuild Projects="iAspic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="iAspic:Make">
+        <MSBuild Projects="iAspic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="iAspic"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="iAspic:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="iAspic:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

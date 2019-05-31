@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A94F233C-8FC8-4317-96C4-77D32EBEBF8E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Diplikata.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Diplikata">
+        <MSBuild Projects="Diplikata.dproj"/>
+    </Target>
+    <Target Name="Diplikata:Clean">
+        <MSBuild Projects="Diplikata.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Diplikata:Make">
+        <MSBuild Projects="Diplikata.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Diplikata"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Diplikata:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Diplikata:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,5 @@
+? = Questions
+> = Améliorations ou corrections à faire
+! = À poursuivre (modifications commencées)
+
+! Traduction de tous les "captions"

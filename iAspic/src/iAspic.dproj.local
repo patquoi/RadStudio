@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/05/24 13:14:33.000.503,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/05/24 13:16:04.000.661,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\main_f.dfm=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.dfm</Transaction>
+    <Transaction>2018/05/24 13:16:04.000.661,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\main_f.pas=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/05/24 13:16:15.000.113,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\iAspic.dproj=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Project1.dproj</Transaction>
+    <Transaction>2018/05/24 16:09:44.000.565,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Unit1.pas</Transaction>
+    <Transaction>2018/05/24 16:17:24.000.976,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\couleurs_f.dfm=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Unit1.dfm</Transaction>
+    <Transaction>2018/05/24 16:17:24.000.976,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\couleurs_f.pas=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Unit1.pas</Transaction>
+    <Transaction>2018/05/24 18:22:30.000.053,=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Unit1.pas</Transaction>
+    <Transaction>2018/05/24 18:22:50.000.067,C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Base.pas=C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\iAspic\src\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,17 @@
+1. Supprimer src.zip et le dossier caché dans src
+2. Recréer src.zip
+3. Supprimer du zip les fichiers suivants :
+    - lcpdb.bdsproj.local
+    - lcpdb.bdsgroup.local
+    - lcpdb.identcache
+    - lcpdb.dsk
+    - lcpdb.~dsk
+    - Thumbs.db
+    - pspbrowse.jbf
+    - history\*.*
+4. Lancer ins\lcpdb.iss
+5. Changer les versions AppVerName (L10) et VersionInfoVersion (L29)
+6. Vérifier qu'il ne manque pas de nouveaux fichiers à ajouter au projet iss.
+7. Désinstaller la version précédente
+8. Enregistrer, Compiler & Tester
+9. Lancer cpcompil.bat

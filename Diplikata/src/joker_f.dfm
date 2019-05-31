@@ -1,0 +1,354 @@
+object FormJoker: TFormJoker
+  Left = 0
+  Top = 0
+  ActiveControl = Panel
+  Caption = 'Attribuer un jeton au joker '#39'?'#39
+  ClientHeight = 177
+  ClientWidth = 281
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel: TPanel
+    Left = 0
+    Top = 0
+    Width = 281
+    Height = 33
+    Align = alTop
+    BevelEdges = []
+    BevelOuter = bvNone
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = True
+    ParentFont = False
+    TabOrder = 27
+  end
+  object Button1: TButton
+    Tag = 1
+    Left = 16
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&A'
+    TabOrder = 0
+    OnClick = ButtonLettreClick
+  end
+  object Button2: TButton
+    Tag = 1
+    Left = 48
+    Top = 40
+    Width = 25
+    Height = 25
+    Hint = '@'
+    Caption = 'An'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    OnClick = ButtonLettreClick
+  end
+  object Button3: TButton
+    Tag = 1
+    Left = 80
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&B'
+    TabOrder = 2
+    OnClick = ButtonLettreClick
+  end
+  object Button4: TButton
+    Tag = 1
+    Left = 112
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&Ch'
+    TabOrder = 3
+    OnClick = ButtonLettreClick
+  end
+  object Button5: TButton
+    Tag = 1
+    Left = 144
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&D'
+    TabOrder = 4
+    OnClick = ButtonLettreClick
+  end
+  object Button6: TButton
+    Tag = 1
+    Left = 176
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&E'
+    TabOrder = 5
+    OnClick = ButtonLettreClick
+  end
+  object Button7: TButton
+    Tag = 1
+    Left = 208
+    Top = 40
+    Width = 25
+    Height = 25
+    Hint = '&'
+    Caption = 'En'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    OnClick = ButtonLettreClick
+  end
+  object Button8: TButton
+    Tag = 1
+    Left = 240
+    Top = 40
+    Width = 25
+    Height = 25
+    Caption = '&F'
+    TabOrder = 7
+    OnClick = ButtonLettreClick
+  end
+  object Button9: TButton
+    Tag = 1
+    Left = 16
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&G'
+    TabOrder = 8
+    OnClick = ButtonLettreClick
+  end
+  object Button10: TButton
+    Tag = 1
+    Left = 48
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&H'
+    TabOrder = 9
+    OnClick = ButtonLettreClick
+  end
+  object Button11: TButton
+    Tag = 1
+    Left = 80
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&I'
+    TabOrder = 10
+    OnClick = ButtonLettreClick
+  end
+  object Button12: TButton
+    Tag = 1
+    Left = 112
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&J'
+    TabOrder = 11
+    OnClick = ButtonLettreClick
+  end
+  object Button13: TButton
+    Tag = 1
+    Left = 144
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&K'
+    TabOrder = 12
+    OnClick = ButtonLettreClick
+  end
+  object Button14: TButton
+    Tag = 1
+    Left = 176
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&L'
+    TabOrder = 13
+    OnClick = ButtonLettreClick
+  end
+  object Button15: TButton
+    Tag = 1
+    Left = 208
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&M'
+    TabOrder = 14
+    OnClick = ButtonLettreClick
+  end
+  object Button16: TButton
+    Tag = 1
+    Left = 240
+    Top = 72
+    Width = 25
+    Height = 25
+    Caption = '&N'
+    TabOrder = 15
+    OnClick = ButtonLettreClick
+  end
+  object Button17: TButton
+    Tag = 1
+    Left = 16
+    Top = 104
+    Width = 25
+    Height = 25
+    Hint = '$'
+    Caption = 'Ng'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+    OnClick = ButtonLettreClick
+  end
+  object Button18: TButton
+    Tag = 1
+    Left = 48
+    Top = 104
+    Width = 25
+    Height = 25
+    Caption = '&O'
+    TabOrder = 17
+    OnClick = ButtonLettreClick
+  end
+  object Button19: TButton
+    Tag = 1
+    Left = 80
+    Top = 104
+    Width = 25
+    Height = 25
+    Hint = #176
+    Caption = 'On'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    OnClick = ButtonLettreClick
+  end
+  object Button20: TButton
+    Tag = 1
+    Left = 112
+    Top = 104
+    Width = 25
+    Height = 25
+    Hint = #249
+    Caption = 'Ou'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 19
+    OnClick = ButtonLettreClick
+  end
+  object Button21: TButton
+    Tag = 1
+    Left = 144
+    Top = 104
+    Width = 25
+    Height = 25
+    Caption = '&P'
+    TabOrder = 20
+    OnClick = ButtonLettreClick
+  end
+  object Button22: TButton
+    Tag = 1
+    Left = 176
+    Top = 104
+    Width = 25
+    Height = 25
+    Caption = '&R'
+    TabOrder = 21
+    OnClick = ButtonLettreClick
+  end
+  object Button23: TButton
+    Tag = 1
+    Left = 208
+    Top = 104
+    Width = 25
+    Height = 25
+    Caption = '&S'
+    TabOrder = 22
+    OnClick = ButtonLettreClick
+  end
+  object Button24: TButton
+    Tag = 1
+    Left = 240
+    Top = 104
+    Width = 25
+    Height = 25
+    Caption = '&T'
+    TabOrder = 23
+    OnClick = ButtonLettreClick
+  end
+  object Button25: TButton
+    Tag = 1
+    Left = 15
+    Top = 136
+    Width = 25
+    Height = 25
+    Caption = '&Ui'
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 24
+    OnClick = ButtonLettreClick
+  end
+  object Button26: TButton
+    Tag = 1
+    Left = 47
+    Top = 136
+    Width = 25
+    Height = 25
+    Caption = '&V'
+    TabOrder = 25
+    OnClick = ButtonLettreClick
+  end
+  object ButtonAnnuler: TButton
+    Left = 176
+    Top = 136
+    Width = 89
+    Height = 25
+    Cancel = True
+    Caption = 'Annuler'
+    TabOrder = 26
+    OnClick = ButtonAnnulerClick
+  end
+  object Button27: TButton
+    Left = 80
+    Top = 136
+    Width = 25
+    Height = 25
+    Caption = '&W'
+    TabOrder = 28
+    OnClick = ButtonLettreClick
+  end
+  object Button28: TButton
+    Left = 112
+    Top = 136
+    Width = 25
+    Height = 25
+    Caption = '&Y'
+    TabOrder = 29
+    OnClick = ButtonLettreClick
+  end
+  object Button29: TButton
+    Left = 144
+    Top = 136
+    Width = 25
+    Height = 25
+    Caption = '&Z'
+    TabOrder = 30
+    OnClick = ButtonLettreClick
+  end
+end
