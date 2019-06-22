@@ -88,6 +88,11 @@ procédez comme suit :
 
 HISTORIQUE DES VERSIONS
 
+Version 1.8.9 - 22/06/2019
+ - Les lettres correspondant à des jokers lors d'une recherche de mots (par
+   tirage uniquement) ont été mis en minuscule dans le résultat.
+ - Mise à jour de l'aide en ligne.
+
 Version 1.8.8 - 30/05/2019
  - Le paramétrage des sources de définitions de mots n'était pas modifiable.
  - les bulles d'information apparaissent dans les fichiers HTML générés.
@@ -827,4 +832,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 30 mai 2019.
+Dernière mise à jour le 22 juin 2019.

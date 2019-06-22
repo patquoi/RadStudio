@@ -299,7 +299,7 @@ Edit.SetFocus
 end;
 //----------------------------------------------------------------------------
 procedure TFormRechercheMots.Recherche(stTirage : String); // v1.8.2 : plus de paramètre ModeRecherche
-var i,
+var i, j, // v1.8.9 (+j)
     iTirageRecherche,
     Pourcentage,
     Taille            : Integer;
@@ -316,6 +316,9 @@ if iTirageRecherche>-1 then
     begin
     Inc(NbMotsTrouves);
     stAnagramme:=p.Dico.stMotDico(Taille, Anagrammes.iDico[i]);
+    // v1.8.9 : on met en minuscule les lettres de jokers
+    for j := 1 to NbJokers do
+      Inc(stAnagramme[PosJoker[j]], 32);
     // WriteLn(f, Format('%s ', [stAnagramme])); // v1.4.6
     if slDelta7.IndexOf(stAnagramme)>-1 then Memo.Lines.Add('*'+stAnagramme) // v1.8
     else Memo.Lines.Add(stAnagramme) // v1.4.6

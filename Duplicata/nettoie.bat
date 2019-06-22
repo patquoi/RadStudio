@@ -4,6 +4,7 @@ del /S *.identcache
 del /S *.dcu
 del /S *.rsm
 del /S *.dsk
+del /S *.bak
 rd /S /Q src\__history
 rd /S /Q src\__recovery
 rd /S /Q rechdico\src\__history
