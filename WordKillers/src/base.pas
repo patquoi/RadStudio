@@ -1669,19 +1669,7 @@ function TPartie.TirageAcceptable : Boolean;
 var i : Integer;
     n : array [TGenreLettre] of Integer;
 begin
-for i:=Ord(Low(TGenreLettre)) to Ord(High(TGenreLettre)) do
-  n[TGenreLettre(i)]:=0;
-for i:=Low(TOrdreJetonTirage) to High(TOrdreJetonTirage)do
-  if t[i]>0 then
-    Inc(n[GenreLettreJeton(t[i])]);
-if ProchainJetonATirer>High(TOrdreJetonSac) then // Reliquat
-  Result:=(n[glIndefini]>0) or
-          (Min(n[glConsonne],n[glVoyelle])>0)
-else // Il reste des jetons dans le sac
-  if Tour<16 then
-    Result:=(n[glIndefini]+Min(n[glConsonne],n[glVoyelle])>=2)
-  else
-    Result:=(n[glIndefini]+Min(n[glConsonne],n[glVoyelle])>=1)
+Result:=True; // vWK : Pas de règle de nombre minimum de voyelles/consonnes
 end;
 //---------------------------------------------------------------------------
 function TPartie.NbJetonsPoses : Integer; // v1.5.3
@@ -3011,11 +2999,22 @@ if NumeroJokerTire[1] then
   begin
   NumeroJoker[1]:=1;
   if NumeroJokerTire[2] then
-    NumeroJoker[2]:=2
+    begin
+    NumeroJoker[2]:=2;
+    if NumeroJokerTire[3] then // vWK
+      NumeroJoker[3]:=3;
+    end
   end
 else
   if NumeroJokerTire[2] then
+    begin
     NumeroJoker[1]:=2;
+    if NumeroJokerTire[3] then // vWK
+      NumeroJoker[2]:=3;
+    end
+  else // vWK
+    if NumeroJokerTire[3] then // vWK
+      NumeroJoker[1]:=3;
 // Début de la recherche
 Journalise(AvecSautDeLigne, '--------------------------------------------------------------------------------');
 Journalise(AvecSautDeLigne, Format('%s=>%s', [Self.stTirage[Tour], stTirage]));
