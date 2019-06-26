@@ -1,54 +1,54 @@
 ﻿Tirages de 2 lettres de AA à TUi - Page 1/1
 
-AA:	AA	BO:	BO	GOn:	GOn	OY:	YO
-AB:	BA	BOn:	BOn	GOu:	GOu	OZ:	ZO
-ACh:	ACh	ChE:	ChE	IJ:	JI	TUi:	UiT
-	ChA	ChEn:	ChEn	IK:	KI		
-AD:	DA	ChI:	ChI	IL:	IL		
-AF:	FA	ChO:	ChO		LI		
-AG:	AG	ChOu:	ChOu	IM:	IM		
-	GA	DE:	DE		MI		
-AH:	HA		ED	IN:	NI		
-AJ:	JA	DI:	DI	IP:	PI		
-AK:	AK	DO:	DO	IR:	RI		
-	KA	DOn:	DOn	IS:	SI		
-AL:	AL	DOu:	DOu	IT:	TI		
-	LA	EF:	FE	IW:	WI		
-AM:	MA	EG:	GE	IY:	YI		
-AN:	AN	EJ:	JE	JOn:	JOn		
-	NA	EK:	KE	JOu:	JOu		
-AnB:	AnB	EL:	LE	KO:	KO		
-	BAn	EM:	ME	KOu:	KOu		
-AnCh:	ChAn	EN:	EN	KUi:	KUi		
-AnD:	DAn		NE	LO:	LO		
-AnG:	AnG	EnF:	FEn	LOu:	LOu		
-ANg:	ANg	EnG:	GEn	MO:	MO		
-AnG:	GAn	EnH:	HEn	MOu:	MOu		
-AnJ:	AnJ	EnJ:	JEn	NO:	NO		
-	JAn	EnM:	EnM	NOn:	NOn		
-AnK:	KAn		MEn	NOu:	NOu		
-AnL:	LAn	EnN:	NEn		OuN		
-AnN:	NAn	EnP:	PEn	NUi:	NUi		
-AnP:	PAn	EnR:	REn	OnP:	POn		
-AnR:	RAn	EnS:	SEn	OnS:	OnS		
-AnS:	SAn	EnT:	TEn		SOn		
-AnT:	AnT	EnV:	VEn	OnT:	TOn		
-	TAn	EnZ:	ZEn	OnW:	WOn		
-AnV:	VAn	EP:	PE	OnY:	YOn		
-AnY:	YAn	ER:	RE	OnZ:	OnZ		
-AnZ:	ZAn	ES:	SE	OP:	PO		
-AP:	AP	ET:	TE	OS:	SO		
-	PA	EV:	EV	OT:	OT		
-AR:	RA		VE		TO		
-AS:	SA	EW:	WE	OuP:	OuP		
-AT:	TA	EY:	YE		POu		
-AV:	VA	EZ:	ZE	OuS:	SOu		
-AW:	WA	FI:	FI	OuT:	OuT		
-AY:	AY	FO:	FO		TOu		
-	YA		OF	OuW:	WOu		
-AZ:	ZA	FOn:	FOn	OuY:	OuY		
-BE:	BE	FOu:	FOu	OuZ:	ZOu		
-BEn:	BEn	GI:	GI	OV:	VO		
-BI:	BI	GO:	OG	OW:	WO		
+AA:	AA	BI:	BI	GI:	GI	OV:	VO
+AB:	BA	BO:	BO	GO:	OG	OW:	WO
+ACh:	ACh	BOn:	BOn	GOn:	GOn	OY:	YO
+	ChA	ChE:	ChE	GOu:	GOu	OZ:	ZO
+AD:	DA	ChEn:	ChEn	IJ:	JI	TUi:	UiT
+AF:	FA	ChI:	ChI	IK:	KI		
+AG:	AG	ChO:	ChO	IL:	IL		
+	GA	ChOu:	ChOu		LI		
+AH:	HA	DE:	DE	IM:	IM		
+AJ:	JA		ED		MI		
+AK:	AK	DI:	DI	IN:	NI		
+	KA	DO:	DO	IP:	PI		
+AL:	AL	DOn:	DOn	IR:	RI		
+	LA	DOu:	DOu	IS:	SI		
+AM:	MA	EF:	FE	IT:	TI		
+AN:	AN	EG:	GE	IW:	WI		
+	NA	EJ:	JE	IY:	YI		
+AnB:	AnB	EK:	KE	JOn:	JOn		
+	BAn	EL:	LE	JOu:	JOu		
+AnCh:	ChAn	EM:	ME	KO:	KO		
+AnD:	DAn	EN:	EN	KOu:	KOu		
+AnG:	AnG		NE	KUi:	KUi		
+ANg:	ANg	EnF:	FEn	LO:	LO		
+AnG:	GAn	EnG:	GEn	LOu:	LOu		
+AnH:	HAn	EnH:	HEn	MO:	MO		
+AnJ:	AnJ	EnJ:	JEn	MOu:	MOu		
+	JAn	EnM:	EnM	NO:	NO		
+AnK:	KAn		MEn	NOn:	NOn		
+AnL:	LAn	EnN:	NEn	NOu:	NOu		
+AnN:	NAn	EnP:	PEn		OuN		
+AnP:	PAn	EnR:	REn	NUi:	NUi		
+AnR:	RAn	EnS:	SEn	OnP:	POn		
+AnS:	SAn	EnT:	TEn	OnS:	OnS		
+AnT:	AnT	EnV:	VEn		SOn		
+	TAn	EnZ:	ZEn	OnT:	TOn		
+AnV:	VAn	EP:	PE	OnW:	WOn		
+AnY:	YAn	ER:	RE	OnY:	YOn		
+AnZ:	ZAn	ES:	SE	OnZ:	OnZ		
+AP:	AP	ET:	TE	OP:	PO		
+	PA	EV:	EV	OS:	SO		
+AR:	RA		VE	OT:	OT		
+AS:	SA	EW:	WE		TO		
+AT:	TA	EY:	EY	OuP:	OuP		
+AV:	VA		YE		POu		
+AW:	WA	EZ:	ZE	OuS:	SOu		
+AY:	AY	FI:	FI	OuT:	OuT		
+	YA	FO:	FO		TOu		
+AZ:	ZA		OF	OuW:	WOu		
+BE:	BE	FOn:	FOn	OuY:	OuY		
+BEn:	BEn	FOu:	FOu	OuZ:	ZOu		
 
 

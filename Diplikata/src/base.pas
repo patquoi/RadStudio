@@ -15,7 +15,7 @@ const NbCasesCote         =  15;
       NbLettresMinMot     =   2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       BonusScrabble       = 50;
       NbMaxJokers         = 2;
@@ -419,7 +419,7 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
       Dir90 : array [TDirection]          of TDirection    = (dIndefinie, dVerticale, dHorizontale);
 
       // Constantes pour le dictionnaire
-      nbl : array [TNbLettres] of Integer            = (306,2589,8020,15540,18270,19124,14736,9576,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (310,2589,8020,15540,18276,19159,14784,9594,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
 
       stNomFichierDico                                = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                                = 'R23456789ABCDEF'; // ODS

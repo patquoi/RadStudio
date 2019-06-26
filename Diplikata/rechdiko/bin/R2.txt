@@ -55,7 +55,8 @@ ET: TE
 EV: EV
     VE
 EW: WE
-EY: YE
+EY: EY
+    YE
 EZ: ZE
 EÇ: ÇE
 FI: FI
@@ -71,6 +72,7 @@ GÂ: ÂG
 GÊ: GÊ
 GÔ: GÔ
 GÛ: GÛ
+HÂ: HÂ
 HÊ: HÊ
 IJ: JI
 IK: KI

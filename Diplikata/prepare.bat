@@ -2,7 +2,7 @@
 move bin\Diplikata.ini ..
 move bin\*.html ..
 del bin\listemots.txt
-del dcu\*.dcu
+del /S dcu\*.dcu
 rd /S /Q src\__history
 del /S .\*.~dsk
 del /S .\*.dsk

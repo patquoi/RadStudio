@@ -81,6 +81,7 @@ AGZ: GAZ
 AGÂ: ÂGA
 AGÑ: GAÑ
 AGÔ: AGÔ
+AHN: HAN
 AHP: HAP
 AIJ: AJI
 AIK: AKI
@@ -208,7 +209,6 @@ AVÊ: AVÊ
 AWY: WAY
 AWZ: ZWA
 AWÔ: AWÔ
-AYY: YAY
 AYÇ: ÇAY
 BBI: BIB
 BDI: BID
