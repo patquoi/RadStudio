@@ -1501,6 +1501,13 @@ TaillePolice,
 TailleLettre : Integer;
 TailleOk     : Boolean;
 begin
+if WindowState = wsMinimized then // v1.8.10
+  begin
+  with FormTirage do
+    if Visible then WindowState:=wsMinimized;
+  with FormFeuilleMatch do
+    if Visible then WindowState:=wsMinimized;
+  end;
 TaillePlateau:=0; // v1.4.3 : Evite l'avertissement à cause du try
 if not Visible or
    RafraichissementEnCours then Exit; // Redimensionnement en cours

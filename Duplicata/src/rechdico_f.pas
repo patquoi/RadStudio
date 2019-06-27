@@ -31,6 +31,7 @@ type
     NbJokers : Integer;
     PosJoker : array [TPositionCritere] of TPositionCritere;
     slDelta7 : TStringList; // v1.8
+    procedure LettresJokersEnMinuscules(var stAnagramme : String; const stTirage : String); // v1.8.10
     procedure Recherche(stTirage : String); // v1.8.2 : plus de paramètre ModeRecherche
   public
     { Déclarations publiques }
@@ -142,6 +143,7 @@ try
         begin
         // WriteLn(f, Format('%s ', [p.Dico.stMotDico(Length(stTirage), IndexMot)])); // v1.4.6
         stMot:=p.Dico.stMotDico(Length(stTirage), IndexMot);
+        LettresJokersEnMinuscules(stMot, Edit.Text); // v1.8.10 : on met en minuscules les lettres de jokers
         if slDelta7.IndexOf(stMot)>-1 then Memo.Lines.Add('*'+stMot) // v1.8
         else Memo.Lines.Add(stMot); // v1.4.6
         Inc(NbMotsTrouves);
@@ -298,8 +300,36 @@ begin
 Edit.SetFocus
 end;
 //----------------------------------------------------------------------------
+procedure TFormRechercheMots.LettresJokersEnMinuscules(var stAnagramme : String; const stTirage : String); // v1.8.10
+type TDrapeauxJokers = array [1..NbLettresMaxMot] of Boolean;
+var i, j, Taille    : Integer;
+    AnaTrv, TirTrv  : TDrapeauxJokers;
+begin
+// 1. On initialise les drapeaux
+for i := 1 to NbLettresMaxMot do
+  begin
+  AnaTrv[i]:=False;
+  TirTrv[i]:=False;
+  end;
+Taille:=length(stTirage);
+// 2. On scanne les lettres de l'anagramme par rapport au tirage
+for i := 1 to Taille do
+  for j:= 1 to Taille do
+    if not AnaTrv[i] and
+       not TirTrv[j] and
+       (stAnagramme[i] = stTirage[j]) then
+      begin
+      AnaTrv[i]:=True;
+      TirTrv[j]:=True;
+      end;
+// 3. On met en minuscule les lettres de jokers
+for i := 1 to Taille do
+  if not AnaTrv[i] then
+    Inc(stAnagramme[i], 32); // En minuscules
+end;
+//----------------------------------------------------------------------------
 procedure TFormRechercheMots.Recherche(stTirage : String); // v1.8.2 : plus de paramètre ModeRecherche
-var i, j, // v1.8.9 (+j)
+var i,
     iTirageRecherche,
     Pourcentage,
     Taille            : Integer;
@@ -316,9 +346,8 @@ if iTirageRecherche>-1 then
     begin
     Inc(NbMotsTrouves);
     stAnagramme:=p.Dico.stMotDico(Taille, Anagrammes.iDico[i]);
-    // v1.8.9 : on met en minuscule les lettres de jokers
-    for j := 1 to NbJokers do
-      Inc(stAnagramme[PosJoker[j]], 32);
+    // v1.8.10: on met en minuscules les lettres de jokers (par procédure car v1.8.9 erronée)
+    LettresJokersEnMinuscules(stAnagramme, Edit.Text);
     // WriteLn(f, Format('%s ', [stAnagramme])); // v1.4.6
     if slDelta7.IndexOf(stAnagramme)>-1 then Memo.Lines.Add('*'+stAnagramme) // v1.8
     else Memo.Lines.Add(stAnagramme) // v1.4.6

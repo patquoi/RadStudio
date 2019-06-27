@@ -88,6 +88,15 @@ procédez comme suit :
 
 HISTORIQUE DES VERSIONS
 
+Version 1.8.10 - 27/06/2019
+ - Les lettres en minuscules dans le résultat de recherche de mots ne 
+   correspondaient pas aux jokers !
+ - Les lettres de jokers sont en minuscules également pour une recherche par
+   filtre.
+ - Mise à jour de l'aide en ligne.
+ - Quand on minimise le plateau de jeu, le tirage et la feuille de match sont
+   également minimisés.
+
 Version 1.8.9 - 22/06/2019
  - Les lettres correspondant à des jokers lors d'une recherche de mots (par
    tirage uniquement) ont été mis en minuscule dans le résultat.
@@ -832,4 +841,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 22 juin 2019.
+Dernière mise à jour le 27 juin 2019.
