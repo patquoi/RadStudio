@@ -968,23 +968,45 @@ Result:=n;
 end{function};
 //---------------------------------------------------------------------------
 function stJetonsEnLettres(stJetons : String) : String; // KA : Convertisseur de Tirage de jetons en lettres (Â=>An, Ê=>En, etc.)
-var i, j : Integer;
-var stLettres : String;
+var i, j        : Integer;
+    stLettres   : String;
+    LettreJoker : Boolean; // v1.7.4 : indique lettre de joker pour mettre entre crochets
 begin
 stLettres:='';
+// v1.7.4 : on met les lettres de jokers entre parenthèses (lettres en minucules dans stJetons)
 for i:=1 to length(stJetons) do
   if stJetons[i]='?' then
     stLettres:=stLettres+stJetons[i]
   else
     for j:=1 to NbLettresAlphabet+1 do
-      if (stJetons[i]=stLettreJeton[TTypeJeton(j)]) then
+      begin
+      Dec(stJetons[i], 32);
+      if stJetons[i] = stLettreJeton[TTypeJeton(j)] then // v1.7.4 : C'est une lettre de joker, on remet en majuscule
+        LettreJoker:=True
+      else
+        begin
+        Inc(stJetons[i], 32);
+        LettreJoker:=False
+        end;
+      if stJetons[i] = stLettreJeton[TTypeJeton(j)] then
         begin
         if EstDoubleLettre[TTypeJeton(j)] then
-          stLettres:=stLettres+stAffichageJeton[TTypeJeton(j)]
+          begin
+          if LettreJoker then // v1.7.4
+            stLettres:=stLettres+'('+stAffichageJeton[TTypeJeton(j)]+')'
+          else
+            stLettres:=stLettres+stAffichageJeton[TTypeJeton(j)]
+          end
         else
-          stLettres:=stLettres+stJetons[i];
+          begin
+          if LettreJoker then // v1.7.4
+            stLettres:=stLettres+'('+stJetons[i]+')'
+          else
+            stLettres:=stLettres+stJetons[i];
+          end;
         break
-        end;
+        end
+      end;
 Result:=stLettres;
 end;
 //---------------------------------------------------------------------------
@@ -3528,7 +3550,7 @@ case Cible of
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
               else
-                Result:=stProposition[i];
+                Result:=stLettresDoubles(stProposition[i]); // v1.7.4 : oubli stLettresDoubles ?
   csMachine:for i:=1 to Length(stSolution[Tour]) do
               if FormFeuilleMatch.FormatLettreMotPrincipal(Tour, csMachine,
                                                            i, stLettre[1],
@@ -3543,7 +3565,7 @@ case Cible of
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
               else
-                Result:=stSolution[i]
+                Result:=stLettresDoubles(stSolution[i])  // v1.7.4 : oubli stLettresDoubles ?
 end{case of}
 end;
 //---------------------------------------------------------------------------
@@ -3656,7 +3678,7 @@ try
         stHTMLTirage:=stHTMLTirage+stHTMLStyleEtCouleurAppliques(stLettresDoubles(stLettre), '', Style) // vKA : transforme les lettres accentuées en lettres doubles : stLettreDouble(stLettre) au lieu de stLettre
         end
       else
-        stHTMLTirage:=stTirage[i];
+        stHTMLTirage:=stLettresDoubles(stTirage[i]); // v1.7.4 : Oubli stLettresDoubles ?
 
     // v1.5 : Niveau de Difficulté. Formule : NbNiveauxDifficulte-(NbNiveauxDifficulte/2)*log10(min(100,1+100*(NbSol>=50%)/NbSol)).
     CalculeNiveauDifficulte(NbSolSupEgalMoitieTop[i], NbSol[i], stLibAltDiffTir, stURLBmpTir);

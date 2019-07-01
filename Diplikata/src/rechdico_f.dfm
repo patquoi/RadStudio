@@ -96,9 +96,9 @@ object FormRechercheMots: TFormRechercheMots
   end
   object Memo: TMemo
     Left = 0
-    Top = 67
+    Top = 71
     Width = 534
-    Height = 352
+    Height = 348
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
     Font.Charset = ANSI_CHARSET
