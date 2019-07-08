@@ -1,5 +1,6 @@
 del /S *.~*
 del /S *.dproj.local
+del /S *.groupproj.local
 del /S *.identcache
 del /S *.dcu
 del /S *.rsm
