@@ -125,8 +125,8 @@
         <UWP_DelphiLogo44>Duplicata44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>Duplicata150.png</UWP_DelphiLogo150>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_Build>1</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.8.11.1;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.11;Comments=</VerInfo_Keys>
+        <VerInfo_Build>2</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.8.11.2;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.11;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <Icon_MainIcon>Duplicata_Icon.ico</Icon_MainIcon>

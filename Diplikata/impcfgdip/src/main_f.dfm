@@ -49,7 +49,7 @@ object FormMain: TFormMain
   object Label2: TLabel
     Left = 46
     Top = 69
-    Width = 498
+    Width = 488
     Height = 42
     Caption = 'Configuration Diplikata inexistante'
   end
@@ -98,7 +98,7 @@ object FormMain: TFormMain
   object LabelParametres: TLabel
     Left = 116
     Top = 242
-    Width = 221
+    Width = 216
     Height = 26
     Caption = 'Param'#232'tres (Diplikata.ini)'
     Font.Charset = ANSI_CHARSET
@@ -120,7 +120,7 @@ object FormMain: TFormMain
   object LabelFeuilleMatch: TLabel
     Left = 116
     Top = 274
-    Width = 447
+    Width = 442
     Height = 26
     Caption = 'Feuille de match d'#233'taill'#233'e anonyme (Diplikata.html)'
     Font.Charset = ANSI_CHARSET

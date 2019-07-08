@@ -95,7 +95,7 @@ const stFiltreFMatch      = 'Diplikata.html';
       stFiltreDefis       = 'Defis1M15L.html';
       stFiltreDossiers    = '*.*';
 
-const stNomFichierAVoir : array [1..5] of String = (stFiltreDupIni, stFiltreFMatch, stFiltreParties, stFiltreRecords, stFiltreDefis);
+const stNomFichierAVoir : array [1..5] of String = (stFiltreDupIni, stFiltreFMatch, stFiltreRecords, stFiltreParties, stFiltreDefis);
 //---------------------------------------------------------------------------
 
 var stLecteurCourant,

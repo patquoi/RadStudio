@@ -89,9 +89,11 @@ procédez comme suit :
 HISTORIQUE DES VERSIONS
 
 Version 1.8.11 - 08/07/2019
- - L'affichage de la proposition et de la solution posée pouvait être erronée
+ - L'affichage de la proposition et de la solution posée pouvait être erroné
    dans la feuille de match détaillée.
- - Légères améliorations dans la génération de la feuille de match détaillée.
+ - L'outil d'importation de configuration affichait une erreur d'impossibilité
+   de déplacer/copier le fichier Parties.html et ne traitait pas le fichier
+   Records.html.
 
 Version 1.8.10 - 27/06/2019
  - Les lettres en minuscules dans le résultat de recherche de mots ne 
