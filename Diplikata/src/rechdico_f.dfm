@@ -4,12 +4,12 @@ object FormRechercheMots: TFormRechercheMots
   ActiveControl = Edit
   BorderIcons = [biSystemMenu]
   Caption = 'Recherche de mots'
-  ClientHeight = 438
-  ClientWidth = 534
+  ClientHeight = 432
+  ClientWidth = 584
   Color = clBtnFace
-  Constraints.MaxWidth = 550
+  Constraints.MaxWidth = 600
   Constraints.MinHeight = 125
-  Constraints.MinWidth = 550
+  Constraints.MinWidth = 600
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -24,17 +24,18 @@ object FormRechercheMots: TFormRechercheMots
   OnKeyPress = FormKeyPress
   OnShow = FormShow
   DesignSize = (
-    534
-    438)
+    584
+    432)
   PixelsPerInch = 96
   TextHeight = 13
   object LabelInfosJokers: TLabel
     Left = 184
     Top = 40
-    Width = 207
+    Width = 257
     Height = 13
     Anchors = [akLeft, akTop, akRight]
     Caption = 'Joker : '#171' ? '#187' remplace n'#39'importe quel jeton.'
+    ExplicitWidth = 207
   end
   object LabelDoublesLettres: TLabel
     Left = 184
@@ -59,7 +60,7 @@ object FormRechercheMots: TFormRechercheMots
     OnClick = RadioGroupOrdreClick
   end
   object Edit: TEdit
-    Left = 194
+    Left = 244
     Top = 13
     Width = 267
     Height = 22
@@ -73,9 +74,10 @@ object FormRechercheMots: TFormRechercheMots
     ParentFont = False
     TabOrder = 1
     OnKeyPress = EditKeyPress
+    ExplicitLeft = 194
   end
   object ButtonRechercher: TButton
-    Left = 468
+    Left = 518
     Top = 13
     Width = 65
     Height = 23
@@ -84,23 +86,27 @@ object FormRechercheMots: TFormRechercheMots
     Default = True
     TabOrder = 2
     OnClick = ButtonRechercherClick
+    ExplicitLeft = 468
   end
   object StatusBar: TStatusBar
     Left = 0
-    Top = 419
-    Width = 534
-    Height = 19
+    Top = 409
+    Width = 584
+    Height = 23
+    Anchors = [akLeft, akTop, akRight]
     Panels = <>
     SimplePanel = True
     SizeGrip = False
+    ExplicitTop = 419
+    ExplicitWidth = 534
+    ExplicitHeight = 19
   end
   object Memo: TMemo
     Left = 0
-    Top = 71
-    Width = 534
-    Height = 348
-    Align = alBottom
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Top = 75
+    Width = 584
+    Height = 334
+    Anchors = [akLeft, akTop, akBottom]
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -110,5 +116,6 @@ object FormRechercheMots: TFormRechercheMots
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 4
+    ExplicitHeight = 344
   end
 end

@@ -7,15 +7,11 @@ LICENCE
 Diplikata est soumis à la Licence Publique Générale version 2.
 Veuillez vous rapporter aux fichiers license.txt et licence.txt.
 
-INSTALLATION SOUS WINDOWS VISTA ET WINDOWS 7 
-
-Veuillez vous connecter à l'adresse suivante et suivre les instructions :
-http://patquoi.fr/windowsvista.html
-http://patquoi.fr/windows7.html
-
 CONFIGURATION REQUISE
 
-L'application nécessite environ 32 Mo de mémoire RAM.
+L'application nécessite environ 32 Mo de mémoire RAM en version 32 bits
+                     et environ 64 Mo de mémoire RAM en version 64 bits.
+L'installation nécessite environ 20 Mo d'espace disque.
 La résolution graphique minimale doit être de 800x600x256 couleurs.
 Cependant, une résolution de 1024x768 est fortement recommandée.
 
@@ -31,40 +27,34 @@ Vous avez deux manières de désinstaller Diplikata :
  - Soit en allant dans le panneau de configuration de Windows puis en 
    choisissant Ajout/Suppression de programmes et pour finir, en double 
    cliquant sur Diplikata
- - Soit en allant dans le menu Démarrer | Programmes | Ihsv | Diplikata | 
+ - Soit en allant dans le menu Programmes | Patquoi.fr | Diplikata | 
    Désinstallation (chemin par défaut)
 Tous les fichiers générés entre l'installation et la désinstallation 
 NE SONT PAS SUPPRIMES (fichier de configuration et de paramètres, parties
 sauvegardées, fichiers HTML...)
   
-LES FICHIERS HTML NE SE CREES PAS OU NE S'AFFICHENT PAS (FICHIERS NON TROUVES)
+IMPORTATION DE LA CONFIGURATION D'UNE VERSION ANTERIEURE
 
-Si vous utilisez Windows Vista ou Windows 7 et que votre navigateur ne trouve 
-pas la feuille de match détaillée, la liste des parties jouées ou le tableau 
-des records alors allez sur l'une des pages suivantes selon votre système et
-suivez les instructions :
-http://patquoi.fr/windowsvista.html
-http://patquoi.fr/windows7.html
-
+À la fin de l'installation, vous pourrez importer la configuration d'une
+version antérieure à la version 1.7.4 (version 32 bits). Assurez-vous que 
+la case "Importer une configuration déjà existante" est cochée.
+  
 AIDE
 
 Une aide HTML est disponible. Vous avez plusieurs manières d'y accéder :
  - Si Diplikata est lancé, appuyez sur F1 ou choisissez la rubrique ? | Aide du
    menu principal ;
  - Choisissez la rubrique Aide du menu Diplikata dans le menu Démarrer de 
-   Windows (le chemin par défaut est Démarrer | Programmes | Ihsv | Diplikata),
- - Ouvrez le fichier index.html dans le dossier Ihsv\Diplikata\html (chemin par 
-   défaut) du dossier Windows "Program Files". Autrement dit, le fichier 
-   index.html est situé dans le dossier html depuis l'endroit où se situe le 
-   programme Diplikata.exe.
+   Windows (le chemin par défaut est Programmes | Patquoi.fr | Diplikata),
+ - Ouvrez le fichier index.html dans le dossier Patquoi.fr\Diplikata\html 
+   (chemin par défaut) du dossier Windows "Program Files". Autrement dit, le 
+   fichier index.html est situé dans le dossier html depuis l'endroit où se 
+   situe le programme Diplikata.exe.
 
 SOURCES
 
 Les sources du programme sont dans l'archive Diplikata.zip.
-La compilation nécessite toute version de Delphi 2005 ou supérieure. 
-La version de Delphi 2005 Personnel est gratuite (www.developpez.com).
-La version de Diplikata 1.7 équivaut à la version 1.6.9 de Duplicata avec les
-adaptations signalées par les tags "vKA" (vèsyon Kreyòl Ayisyen)
+La compilation nécessite RadStudio 10 minimum (version Community gratuite).
 
 FICHIERS HTML GENERES 
 
@@ -79,7 +69,7 @@ procédez comme suit :
    dossier que celui des fichiers à conserver ;
  - Dans les fichiers HTML, recherchez et supprimez toutes les occurrences du
    type "file:///[...]/Diplikata/bin/html/" (sans les guillemets). Par défaut,
-   il s'agit de "file:///C://Program%20Files//Ihsv//Diplikata/bin/html/".
+   il s'agit de "file:///C:/Program%20Files/Patquoi.fr/Diplikata/bin/html/".
 
 REMERCIEMENTS
 
@@ -88,6 +78,32 @@ avec qui j'ai collaboré pour obtenir les informations du jeu créole haïtien
 et un dictionnaire complet des mots en créole haïtien.
    
 HISTORIQUE DES VERSIONS
+
+Version 1.7.4 - 08/07/2019
+Support de Windows 7 et plus et des systèmes 64 bits
+ - L'installation détecte si le système est 64 bits et installe la version 
+   qui convient (32 ou 64 bits).
+ - L'alignement (32/64 bits) est indiqué dans l'A propos sous la version ainsi
+   que dans les informations internes après la version.
+ - Sur les versions de Windows 7 ou plus, les données modifiables sont dans
+   %LocalAppData%\Patquoi.fr\Diplikata.
+Autres corrections
+ - L'affichage sur la feuille de match détaillée du niveau de difficulté des 
+   coups a été revu. Les étoiles apparaissent avec une plus grande résolution.
+ - À l'affichage de la feuille de match, la taille s'adapte automatiquement :
+    - à la largeur du tirage
+    - à la hauteur du plateau de jeu.
+ - Quand on change la taille du plateau, le tirage est repositionnée
+ - Quand on change la taille du tirage, la feuille de match est repositionnée
+   et retaillée.
+ - La feuille de match détaillée (HTML) pouvait afficher des informations mal
+   formatées au niveau des tirages, solutions, propositions.
+ - Glisser un jeton en dehors du chevalet par la gauche provoquait une erreur.
+ - les bulles d'information apparaissent dans les fichiers HTML générés.
+ - Les lettres correspondant à des jokers lors d'une recherche de mots ont 
+   été mis entre parenthèses dans le résultat.
+ - Quand on minimise le plateau de jeu, le tirage et la feuille de match sont
+   également minimisés.
 
 Version 1.7.3 - 29/03/2015
  - Dans une partie de type Joker, un joker n'est plus ajouté à un tirage qui 
@@ -766,4 +782,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 29 mars 2015.
+Dernière mise à jour le 8 juillet 2019.

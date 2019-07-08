@@ -47,9 +47,9 @@ Une aide HTML est disponible. Vous avez plusieurs manières d'y accéder :
  - Choisissez la rubrique Aide du menu Duplicata dans le menu Démarrer de 
    Windows (le chemin par défaut est Programmes | Patquoi.fr | Duplicata),
  - Ouvrez le fichier index.html dans le dossier Patquoi.fr\Duplicata\html 
-   (chemin par défaut) du dossier Windows "Program Files". Autrement dit, le fichier 
-   index.html est situé dans le dossier html depuis l'endroit où se situe le 
-   programme Duplicata.exe.
+   (chemin par défaut) du dossier Windows "Program Files". Autrement dit, le 
+   fichier index.html est situé dans le dossier html depuis l'endroit où se 
+   situe le programme Duplicata.exe.
 
 SOURCES
 
@@ -87,6 +87,11 @@ procédez comme suit :
    il s'agit de "file:///C:/Program%20Files/Patquoi.fr/Duplicata/html/".
 
 HISTORIQUE DES VERSIONS
+
+Version 1.8.11 - 08/07/2019
+ - L'affichage de la proposition et de la solution posée pouvait être erronée
+   dans la feuille de match détaillée.
+ - Légères améliorations dans la génération de la feuille de match détaillée.
 
 Version 1.8.10 - 27/06/2019
  - Les lettres en minuscules dans le résultat de recherche de mots ne 
@@ -841,4 +846,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 27 juin 2019.
+Dernière mise à jour le 8 juillet 2019.

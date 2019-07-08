@@ -152,9 +152,8 @@ try
         begin
         // WriteLn(f, Format('%s ', [p.Dico.stMotDico(Length(stTirage), IndexMot)])); // v1.4.6
         stMot:=p.Dico.stMotDico(Length(stTirage), IndexMot); // v1.7.4 : on stocke dans stMot pour utiliser LettresJokersEnMinuscules après
-        LettresJokersEnMinuscules(stMot, Edit.Text); // v1.4.7: on met en minuscules les lettres de jokers
-        stJetonsEnLettres(stMot);
-        Memo.Lines.Add(stMot); // v1.4.6. vKA : stJetonsEnLettres
+        LettresJokersEnMinuscules(stMot, stLettresEnJetons(Edit.Text)); // v1.4.7: on met en minuscules les lettres de jokers
+        Memo.Lines.Add(stJetonsEnLettres(stMot)); // v1.4.6. vKA : stJetonsEnLettres
         Inc(NbMotsTrouves);
         with FormPatience do
           begin

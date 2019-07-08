@@ -6,6 +6,9 @@
         <Projects Include="Diplikata.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\impcfgdip\src\impcfgdip.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="Diplikata:Make">
         <MSBuild Projects="Diplikata.dproj" Targets="Make"/>
     </Target>
+    <Target Name="impcfgdip">
+        <MSBuild Projects="..\impcfgdip\src\impcfgdip.dproj"/>
+    </Target>
+    <Target Name="impcfgdip:Clean">
+        <MSBuild Projects="..\impcfgdip\src\impcfgdip.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="impcfgdip:Make">
+        <MSBuild Projects="..\impcfgdip\src\impcfgdip.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Diplikata"/>
+        <CallTarget Targets="Diplikata;impcfgdip"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Diplikata:Clean"/>
+        <CallTarget Targets="Diplikata:Clean;impcfgdip:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Diplikata:Make"/>
+        <CallTarget Targets="Diplikata:Make;impcfgdip:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

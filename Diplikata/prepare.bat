@@ -1,28 +1,35 @@
 @echo off
-move bin\Diplikata.ini ..
-move bin\*.html ..
-del bin\listemots.txt
-del /S dcu\*.dcu
+
+del dcu\*.dcu
 rd /S /Q src\__history
-del /S .\*.~dsk
-del /S .\*.dsk
-del /S .\*.local
-del /S .\*.identcache
-attrib -S -H Thumbs.db /S
-del /S .\Thumbs.db
+rd /S /Q src\__recovery
+rd /S /Q rechdiko\src\__history
+rd /S /Q rechdiko\src\__recovery
+rd /S /Q impcfgdip\src\__history
+rd /S /Q impcfgdip\src\__recovery
+rd /S /Q gwodiko\src\__history
+rd /S /Q gwodiko\src\__recovery
+del /S *.~*
+del /S *.dproj.local
+del /S *.identcache
+del /S *.dcu
+del /S *.rsm
+del /S *.dsk
+
 del ..\Diplikata.zip
 del install\Output\ins*.exe
+del bin\Diplikata.ini
+del bin\*.html
 del bin\Trace.txt
 del bin\*.log
+del bin\*.rsm
 cls
-"c:\program files\Winzip\Winzip32.exe" -a -p ..\Diplikata.zip bin\licen?e.txt bin\lisez-moi.txt 
-"c:\program files\Winzip\Winzip32.exe" -a -p ..\Diplikata.zip install\*.* rechdiko\src\*.* gwodiko\*.* gwodiko\src\*.* src\*.*
+"C:\Program Files\7-Zip\7z.exe" a ..\Diplikata.zip bin\licen?e.txt bin\lisez-moi.txt 
+"C:\Program Files\7-Zip\7z.exe" a -r ..\Diplikata.zip install\*.* rechdiko\src\*.* gwodiko\*.* gwodiko\src\*.* src\*.*
 echo Compiler et tester l'installation...
-"C:\Program Files\Inno Setup 5\Compil32.exe" C:\Borland\Delphi2005\Diplikata\install\Diplikata.iss
+"C:\Program Files (x86)\Inno Setup 5\Compil32.exe" "C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Diplikata\install\insdiplikata.iss"
 del ..\Diplikata.zip
-move ..\Diplikata.ini bin
-move ..\*.html bin
-"c:\program files\Winzip\Winzip32.exe" -a -p -r ..\Diplikata.zip
+"C:\Program Files\7-Zip\7z.exe" a -r ..\Diplikata.zip
 cls
 echo Renommer ../Diplikata.zip en DiplikataNNN.zip selon la version courante...
 pause

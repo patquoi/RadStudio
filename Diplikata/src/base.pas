@@ -3550,7 +3550,7 @@ case Cible of
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
               else
-                Result:=stLettresDoubles(stProposition[i]); // v1.7.4 : oubli stLettresDoubles ?
+                Result:=stLettresDoubles(stProposition[Tour]); // v1.7.4 : oubli stLettresDoubles et Tour à la place de i !
   csMachine:for i:=1 to Length(stSolution[Tour]) do
               if FormFeuilleMatch.FormatLettreMotPrincipal(Tour, csMachine,
                                                            i, stLettre[1],
@@ -3565,7 +3565,7 @@ case Cible of
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
               else
-                Result:=stLettresDoubles(stSolution[i])  // v1.7.4 : oubli stLettresDoubles ?
+                Result:=stLettresDoubles(stSolution[Tour])  // v1.7.4 : oubli stLettresDoubles et Tour à la place de i !
 end{case of}
 end;
 //---------------------------------------------------------------------------

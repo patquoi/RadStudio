@@ -3308,8 +3308,11 @@ case Cible of
                 Result:=Result+stHTMLStyleEtCouleurAppliques(stLettre,
                                                              IfThen(SubstitutJoker,stCodeHTMLSubstitutJoker,stCodeHTMLBonus[Bonus]), // v1.5.6 : SubstitutJoker
                                                              Style)
-              else
-                Result:=stProposition[i];
+              else // v1.8.11 : Tour au lieu de i
+                begin
+                Result:=stProposition[Tour];
+                break
+                end;
   csMachine:for i:=1 to Length(stSolution[Tour]) do
               if FormFeuilleMatch.FormatLettreMotPrincipal(Tour, csMachine,
                                                            i, stLettre[1],
@@ -3318,8 +3321,11 @@ case Cible of
                 Result:=Result+stHTMLStyleEtCouleurAppliques(stLettre,
                                                              IfThen(SubstitutJoker,stCodeHTMLSubstitutJoker,stCodeHTMLBonus[Bonus]), // v1.5.6 : SubstitutJoker
                                                              Style)
-              else
-                Result:=stSolution[i]
+              else // v1.8.11 : Tour au lieu de i
+                begin
+                Result:=stSolution[Tour];
+                break
+                end;
 end{case of}
 end;
 //---------------------------------------------------------------------------
@@ -3431,8 +3437,11 @@ try
         if Style=[fsItalic] then Style:=[fsUnderline];
         stHTMLTirage:=stHTMLTirage+stHTMLStyleEtCouleurAppliques(stLettre, '', Style)
         end
-      else
+      else // v1.8.11 : ajout break
+        begin
         stHTMLTirage:=stTirage[i];
+        break
+        end;
 
     // v1.5 : Niveau de Difficulté. Formule : NbNiveauxDifficulte-(NbNiveauxDifficulte/2)*log10(min(100,1+100*(NbSol>=50%)/NbSol)).
     CalculeNiveauDifficulte(NbSolSupEgalMoitieTop[i], NbSol[i], stLibAltDiffTir, stURLBmpTir);

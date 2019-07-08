@@ -434,8 +434,8 @@ var RetoursChariots, // v1.7.4
     PosDeb, // v1.7.4
     iDebutLigne     : Integer;
 begin
-iDebutLigne:=AnsiPos(Format(Copy(stFormatLigne, 1, 5), [Tour]), // v1.6.5. vKA : AnsiPos au lieu de Pos
-                     RichEdit.Lines.Text);
+PosDeb:=Pos(Format(Copy(stFormatLigne, 1, 5), [Tour]), // v1.7.4 (PosDeb au lieu de iDebutLigne et Pos au lieu de AnsiPos)
+            RichEdit.Lines.Text);
 RetoursChariots:=NbRetoursChariots(0, PosDeb); // v1.7.4
 iDebutLigne:=PosDeb-RetoursChariots-1; // v1.7.4 (PosDeb, RetoursChariots)
 if iDebutLigne>0 then
@@ -466,8 +466,8 @@ var RetoursChariots, // v1.7.4
     PosDeb, // v1.7.4
     iDebutLigne : Integer;
 begin
-iDebutLigne:=AnsiPos(Format(Copy(stFormatLigne, 1, 5), [Tour]), // vKA : AnsiPos au lieu de Pos
-                     RichEdit.Lines.Text);
+PosDeb:=Pos(Format(Copy(stFormatLigne, 1, 5), [Tour]), // v1.7.4 (PosDeb au lieu de iDebutLigne et Pos au lieu de AnsiPos)
+            RichEdit.Lines.Text);
 RetoursChariots:=NbRetoursChariots(0, PosDeb); // v1.7.4
 iDebutLigne:=PosDeb-RetoursChariots-1; // v1.7.4 (PosDeb, RetoursChariots)
 if iDebutLigne>0 then
