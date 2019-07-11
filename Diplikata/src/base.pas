@@ -3549,8 +3549,11 @@ case Cible of
                                                                            stCodeHTMLPoseJoker,
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
-              else
-                Result:=stLettresDoubles(stProposition[Tour]); // v1.7.4 : oubli stLettresDoubles et Tour à la place de i !
+              else // v1.7.4' : oubli stLettresDoubles + Tour à la place de i + break
+                begin
+                Result:=stLettresDoubles(stProposition[Tour]);
+                break
+                end;
   csMachine:for i:=1 to Length(stSolution[Tour]) do
               if FormFeuilleMatch.FormatLettreMotPrincipal(Tour, csMachine,
                                                            i, stLettre[1],
@@ -3564,8 +3567,11 @@ case Cible of
                                                                            stCodeHTMLPoseJoker,
                                                                            stCodeHTMLBonus[Bonus])),
                                                              Style)
-              else
-                Result:=stLettresDoubles(stSolution[Tour])  // v1.7.4 : oubli stLettresDoubles et Tour à la place de i !
+              else // v1.7.4' : oubli stLettresDoubles + Tour à la place de i + break
+                begin
+                Result:=stLettresDoubles(stSolution[Tour]);
+                break
+                end;
 end{case of}
 end;
 //---------------------------------------------------------------------------
@@ -3677,8 +3683,11 @@ try
         if Style=[fsItalic] then Style:=[fsUnderline];
         stHTMLTirage:=stHTMLTirage+stHTMLStyleEtCouleurAppliques(stLettresDoubles(stLettre), '', Style) // vKA : transforme les lettres accentuées en lettres doubles : stLettreDouble(stLettre) au lieu de stLettre
         end
-      else
-        stHTMLTirage:=stLettresDoubles(stTirage[i]); // v1.7.4 : Oubli stLettresDoubles ?
+      else // v1.7.4' : Oubli stLettresDoubles + break
+        begin
+        stHTMLTirage:=stLettresDoubles(stTirage[i]);
+        break
+        end;
 
     // v1.5 : Niveau de Difficulté. Formule : NbNiveauxDifficulte-(NbNiveauxDifficulte/2)*log10(min(100,1+100*(NbSol>=50%)/NbSol)).
     CalculeNiveauDifficulte(NbSolSupEgalMoitieTop[i], NbSol[i], stLibAltDiffTir, stURLBmpTir);
