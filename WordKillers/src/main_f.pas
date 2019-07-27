@@ -303,7 +303,7 @@ type
 //---------------------------------------------------------------------------
 var
   FormMain: TFormMain;
-  stTitrePlateau                : String = 'Word  Killer'; // v1.1 (const -> var) Pour changer l'initiale selon s'il y a mélange ou non
+  stTitrePlateau                : String = 'Word  Killers'; // v1.1 (const -> var) Pour changer l'initiale selon s'il y a mélange ou non
 //---------------------------------------------------------------------------
 const
   CouleurBonus                  : array [TBonus] of TColor = ( clSilver,   clBlue, clLime, clMaroon, $000080FF, clFuchsia);
