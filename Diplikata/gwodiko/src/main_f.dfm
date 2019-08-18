@@ -1,9 +1,9 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
-  Width = 648
-  Height = 748
   Caption = 'Kregwodiko'
+  ClientHeight = 709
+  ClientWidth = 632
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,15 +16,16 @@ object FormMain: TFormMain
   object Splitter: TSplitter
     Left = 0
     Top = 313
-    Width = 640
+    Width = 632
     Height = 4
     Cursor = crVSplit
     Align = alTop
+    ExplicitWidth = 640
   end
   object Memo1: TMemo
     Left = 0
     Top = 0
-    Width = 640
+    Width = 632
     Height = 313
     Align = alTop
     Lines.Strings = (
@@ -35,16 +36,16 @@ object FormMain: TFormMain
   object Memo2: TMemo
     Left = 0
     Top = 317
-    Width = 640
-    Height = 353
+    Width = 632
+    Height = 348
     Align = alClient
     ScrollBars = ssVertical
     TabOrder = 1
   end
   object Panel1: TPanel
     Left = 0
-    Top = 670
-    Width = 640
+    Top = 665
+    Width = 632
     Height = 44
     Align = alBottom
     TabOrder = 2

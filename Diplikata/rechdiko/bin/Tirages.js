@@ -1,4 +1,4 @@
-﻿const tirages = [[
+const tirages = [[
 'AA',
 'AB',
 'AD',
@@ -2687,6 +2687,7 @@
 'AALNV',
 'AALNÇ',
 'AALOS',
+'AALPV',
 'AALPW',
 'AALRT',
 'AALST',
@@ -10366,6 +10367,7 @@
 'EIIMSTY',
 'EIINOWZ',
 'EIINRTT',
+'EIIRSTZ',
 'EIIRTVY',
 'EIJKLOO',
 'EIJKNOS',
@@ -10818,6 +10820,7 @@
 'AABEPRSY',
 'AABFNRWZ',
 'AABGHNNR',
+'AABGIRYZ',
 'AABIJNST',
 'AABIKKLS',
 'AABIKNRY',
@@ -12217,6 +12220,7 @@
 'EFIIMSTY',
 'EFIINSYZ',
 'EFIKKNOS',
+'EFIKLNOT',
 'EFIKMNNO',
 'EFIKNORR',
 'EFILMSÂÇ',

@@ -3,7 +3,7 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 
  1. Ouvrir le fichier Gwodikovilsen.txt
  2. Rajouter les mots dans l'ordre alphabétique (attention aux accents, exemple brèn pour distinguer les sons on/en/in)
- 3. Lancer KreGwodiko depuis Delphi 2005 et coller le contenu du fichier ci-dessus dans le mémo et appuyer sur "Analyser"
+ 3. Lancer KreGwodiko depuis Delphi et coller le contenu du fichier ci-dessus dans le mémo et appuyer sur "Analyser"
  4. Si OK, appuyer sur "Enrichir" puis copier-coller le résultat dans le fichier "Gwodikoenrichi.txt".
  5. Appuyer sur "Générer" puis copier-coller les infos depuis la ligne "Création du fichier final..." dans le fichier enfogwodikovilsen.txt
  6. Corriger les différences dans les deux lignes de code de déclaration (NbLettresDico et nbl)

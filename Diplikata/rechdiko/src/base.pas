@@ -15,7 +15,7 @@ const NbCasesCote         =  15;
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       stVersionDico       = 'KA0'; // vKA
       BonusScrabble       = 50;
@@ -26,7 +26,7 @@ const NbCasesCote         =  15;
       stNomFichierIni   = 'Duplicata.ini';
       stSectionSac      = 'Sac';
       stJoker           = '?';
-      stSuffixeRang : array [0..1] of String = ('er', 'ème');
+      stSuffixeRang : array [0..1] of AnsiString = ('er', 'ème'); // RX (Ansi)
       ModeAutomatique   = True;
       ModeManuel        = False;
 //----------------------------------------------------------------------------
@@ -69,49 +69,49 @@ type  TBonus = (bAucun,
       TDico = class
       private
         Index : array [TNbLettres] of Integer;
-        Dico  : array [TIndexDico] of Char;
+        Dico  : array [TIndexDico] of AnsiChar; // RX (Ansi)
       public
         ChargementDicoOk : Boolean;
         constructor Cree;
         destructor  Detruit;
-        function Existe(const stMot : String) : Boolean;
-        function stMotDico(const TailleMot, IndexDico : Integer) : String;
-        function IndexProchainMot(const IndexDebut : Integer; const stFiltre : String) : Integer;
+        function Existe(const stMot : AnsiString) : Boolean; // RX (Ansi)
+        function stMotDico(const TailleMot, IndexDico : Integer) : AnsiString; // RX (Ansi)
+        function IndexProchainMot(const IndexDebut : Integer; const stFiltre : AnsiString) : Integer; // RX (Ansi)
       end{class TDico};
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer            = (310,2589,8020,15540,18276,19159,14784,9594,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (310,2592,8020,15545,18276,19166,14800,9594,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
 
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
       stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon le Gwodiko.'#13;
-      stDirection : array[TDirection] of String      = ('', 'Horizontalement',
+      stDirection : array[TDirection] of AnsiString  = ('', 'Horizontalement', // RX (Ansi)
                                                             'Verticalement');
       stFrmFichierIntrouvable   =  'Le fichier %s est introuvable !';
       stErreurInattendue        = 'Erreur inattendue';
       Proposition     : Boolean = True;
       CoupJoue        : Boolean = False;
       MaxFormatRapport: array [TFormatRapport] of Integer = (100, 20);
-      stFormatRapport : array [TFormatRapport] of String = ('%', '/20');
+      stFormatRapport : array [TFormatRapport] of AnsiString = ('%', '/20'); // RX (Ansi)
 //---------------------------------------------------------------------------
-function stTirageTrie(const stTirage : String) : String;
+function stTirageTrie(const stTirage : AnsiString) : AnsiString; // RX (Ansi)
 //---------------------------------------------------------------------------
 implementation
 //---------------------------------------------------------------------------
 uses
-  SysUtils, Math, IniFiles, StdCtrls, ShellApi, patience_f;
+  AnsiStrings, SysUtils, Math, IniFiles, StdCtrls, ShellApi, patience_f; // RX (Ansi)
 //---------------------------------------------------------------------------
 const stAutreChoix    = #13#13'Cliquez sur une autre case départ ou changez la sélection des jetons.';
       stFrmSolution   = '%s : %s en %s';
       stCoordonneesIndefinies = ' - ';
-      stLibreOccupee  : array [0..1] of String = ('Occupée', 'Libre');
+      stLibreOccupee  : array [0..1] of AnsiString = ('Occupée', 'Libre'); // RX (Ansi)
       AvecSautDeLigne : Boolean = True;
       SansSautDeLigne : Boolean = False;
 //---------------------------------------------------------------------------
-function stTirageTrie(const stTirage : String) : String;
+function stTirageTrie(const stTirage : AnsiString) : AnsiString; // RX (Ansi)
 var i, j : Integer;
-    ResultI : Char;
+    ResultI : AnsiChar; // RX (Ansi)
 begin
 Result:=stTirage;
 for i:=1 to Length(stTirage)-1 do
@@ -126,8 +126,8 @@ end;
 //-------------------------------------------------------------------------
 constructor TDico.Cree;
 var i : Integer;
-    c : Char;
-    F : File of Char;
+    c : AnsiChar; // RX (Ansi)
+    F : File of AnsiChar; // RX (Ansi)
 begin
 ChargementDicoOk:=False;
 if not FileExists(ExtractFilePath(ParamStr(0))+stNomFichierDico) then
@@ -154,7 +154,7 @@ try
   for i:=0 to NbLettresDico-1 do
     begin
     Read(f, c);
-    Dico[i]:=c;
+    Dico[i]:=c; // RX (Ansi)
     if i mod 100 = 0 then
     with FormPatience do
       begin
@@ -174,7 +174,7 @@ destructor TDico.Detruit;
 begin
 end;
 //---------------------------------------------------------------------------
-function TDico.stMotDico(const TailleMot, IndexDico : Integer) : String;
+function TDico.stMotDico(const TailleMot, IndexDico : Integer) : AnsiString; // RX (Ansi)
 var i : Integer;
 begin
 Result:='';
@@ -185,7 +185,7 @@ for i:=0 to TailleMot-1 do
   end
 end;
 //---------------------------------------------------------------------------
-function TDico.Existe(const stMot : String) : Boolean;
+function TDico.Existe(const stMot : AnsiString) : Boolean; // RX (Ansi)
 var Taille, Comp, iInf, iSup, iMil : Integer;
 begin
 Result:=True; // Optimiste
@@ -210,7 +210,7 @@ while (Comp<>0) and (iSup>iInf) do
 Result:=Comp=0;
 end;
 //---------------------------------------------------------------------------
-function TDico.IndexProchainMot(const IndexDebut : Integer; const stFiltre : String) : Integer;
+function TDico.IndexProchainMot(const IndexDebut : Integer; const stFiltre : AnsiString) : Integer; // RX (Ansi)
 var i, j, Taille : Integer;
 begin
 Taille:=Length(stFiltre);

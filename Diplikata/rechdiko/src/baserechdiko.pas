@@ -19,14 +19,14 @@ type
   //-------------------------------------------------------------------------
   TRechTirage = class
   public
-    stTirage : String;
+    stTirage : AnsiString; // RX (Ansi)
     Anagrammes : TAnagrammes;
     Svt : TRechTirage;
-    constructor Cree(const stTirage : String; const Anagrammes : TAnagrammes; const Svt : TRechTirage);
+    constructor Cree(const stTirage : AnsiString; const Anagrammes : TAnagrammes; const Svt : TRechTirage); // RX (Ansi)
     destructor Detruit;
     function NbAnagrammes : Integer;
     function Nombre : Integer;
-    procedure Ajoute(const stTirage : String; const iDico : Integer);
+    procedure Ajoute(const stTirage : AnsiString; const iDico : Integer); // RX (Ansi)
     procedure Sauve;
   end{class TTirage};
   //-------------------------------------------------------------------------
@@ -37,7 +37,7 @@ type
     tfa, tft : TextFile; // 20180722 : Pour app Javascrip
     constructor Cree;
     destructor Detruit;
-    procedure Ajoute(const NbLettres : TNbLettres; const stTirage : String; const iDico : Integer);
+    procedure Ajoute(const NbLettres : TNbLettres; const stTirage : AnsiString; const iDico : Integer); // RX (Ansi)
     procedure Remplit;
     procedure CreeFichierRechDiko(const NbLettres : TNbLettres);
     procedure Sauve;
@@ -94,7 +94,7 @@ if Svt<>Nil then
   Svt.Sauve
 end;
 //---------------------------------------------------------------------------
-constructor TRechTirage.Cree(const stTirage : String; const Anagrammes : TAnagrammes; const Svt : TRechTirage);
+constructor TRechTirage.Cree(const stTirage : AnsiString; const Anagrammes : TAnagrammes; const Svt : TRechTirage); // RX (Ansi)
 begin
 Self.stTirage:=stTirage;
 Self.Anagrammes:=Anagrammes;
@@ -125,7 +125,7 @@ else
   Result:=Anagrammes.Nombre;
 end;
 //---------------------------------------------------------------------------
-procedure TRechTirage.Ajoute(const stTirage : String; const iDico : Integer);
+procedure TRechTirage.Ajoute(const stTirage : AnsiString; const iDico : Integer); // RX (Ansi)
 var NvSvt : TRechTirage;
 begin
 if Self.stTirage=stTirage then
@@ -150,19 +150,19 @@ end;
 //---------------------------------------------------------------------------
 procedure TRechTirage.Sauve;
 var i : Integer;
-    n : Char;
+    n : AnsiChar; // RX (Ansi)
 begin
 for i:=1 to Length(stTirage) do
   BlockWrite(f, stTirage[i], sizeOf(stTirage[i]));
 if Anagrammes<>Nil then
   begin
-  n:=Char(Anagrammes.Nombre);
+  n:=AnsiChar(Anagrammes.Nombre); // RX (Ansi)
   BlockWrite(f, n, SizeOf(n));
   Anagrammes.Sauve
   end
 else
   begin
-  n:=Char(0);
+  n:=AnsiChar(0); // RX (Ansi)
   BlockWrite(f, n, SizeOf(n));
   end;
 if Svt<>Nil then
@@ -194,7 +194,7 @@ for i:=Low(TNbLettres) to High(TNbLettres) do
     NbLettres[i].Detruit
 end;
 //---------------------------------------------------------------------------
-procedure TRechDiko.Ajoute(const NbLettres : TNbLettres; const stTirage : String; const iDico : Integer);
+procedure TRechDiko.Ajoute(const NbLettres : TNbLettres; const stTirage : AnsiString; const iDico : Integer); // RX (Ansi)
 begin
 if Self.NbLettres[NbLettres]=Nil then
   Self.NbLettres[NbLettres]:=TRechTirage.Cree(stTirage, TAnagrammes.Cree(iDico, Nil), Nil)
@@ -204,11 +204,11 @@ end;
 //---------------------------------------------------------------------------
 procedure TRechDiko.Remplit;
 var i, j : Integer;
-    stMot, stTirage : String;
+    stMot, stTirage : AnsiString; // RX (Ansi)
   //-------------------------------------------------------------------------
-  function stTirageMot(const stMot : String) : String;
+  function stTirageMot(const stMot : AnsiString) : AnsiString; // RX (Ansi)
   var k, l : Integer;
-      ResultK : Char;
+      ResultK : AnsiChar; // RX (Ansi)
   begin
   Result:=stMot;
   for k:=1 to Length(stMot)-1 do
@@ -262,22 +262,22 @@ with FormPatience do
 end;
 //---------------------------------------------------------------------------
 procedure TRechDiko.CreeFichierRechDiko(const NbLettres : TNbLettres);
-const stSuffixe    : array [TNbLettres] of String = ('R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'R9', 'RA', 'RB', 'RC', 'RD', 'RE', 'RF');
-      stSfxComp    : array [TNbLettres] of String = ('Z2', 'Z3', 'Z4', 'Z5', 'Z6', 'Z7', 'Z8', 'Z9', 'ZA', 'ZB', 'ZC', 'ZD', 'ZE', 'ZF');
-      stTirageVide : array [TNbLettres] of String = ('    ',
-                                                     '     ',
-                                                     '      ',
-                                                     '       ',
-                                                     '        ',
-                                                     '         ',
-                                                     '          ',
-                                                     '           ',
-                                                     '            ',
-                                                     '             ',
-                                                     '              ',
-                                                     '               ',
-                                                     '                ',
-                                                     '                 ');
+const stSuffixe    : array [TNbLettres] of AnsiString = ('R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'R9', 'RA', 'RB', 'RC', 'RD', 'RE', 'RF'); // RX (Ansi)
+      stSfxComp    : array [TNbLettres] of AnsiString = ('Z2', 'Z3', 'Z4', 'Z5', 'Z6', 'Z7', 'Z8', 'Z9', 'ZA', 'ZB', 'ZC', 'ZD', 'ZE', 'ZF'); // RX (Ansi)
+      stTirageVide : array [TNbLettres] of AnsiString = ('    ',
+                                                         '     ',
+                                                         '      ',
+                                                         '       ',
+                                                         '        ',
+                                                         '         ',
+                                                         '          ',
+                                                         '           ',
+                                                         '            ',
+                                                         '             ',
+                                                         '              ',
+                                                         '               ',
+                                                         '                ',
+                                                         '                 ');
       NbColonnes : array[TNbLettres] of Integer = (4,5,3,3,3,2,2,2,2,2,2,2,1,1);
 
 var i,
@@ -288,12 +288,12 @@ var i,
     t : TRechTirage;
     a : TAnagrammes;
     stMot,
-    stDeb, stFin : String;
+    stDeb, stFin : AnsiString; // RX (Ansi)
     sl : TStringList;
 
-function DecompresseLettres(const stTirage, stMot : String) : String;
+function DecompresseLettres(const stTirage, stMot : AnsiString) : AnsiString; // RX (Ansi)
 var i,j : Integer;
-    stTirMot : String;
+    stTirMot : AnsiString;
 begin
 stTirMot:='';
 for i:=1 to Length(stTirage) do
@@ -331,9 +331,9 @@ for i:=1 to Length(stMot) do
 Result:=stTirMot;
 end;
 
-procedure EcritTirageEtMot(const stTirMot, stTirMotPrc : String; const Retour : Boolean);
+procedure EcritTirageEtMot(const stTirMot, stTirMotPrc : AnsiString; const Retour : Boolean); // RX (Ansi)
 var p : Integer;
-    stAEcrire, stTir, stMot, stTirPrc : String;
+    stAEcrire, stTir, stMot, stTirPrc : AnsiString; // RX (Ansi)
 begin
 p:=AnsiPos(':',stTirMot);
 stTir:=copy(stTirMot,1,p-1);

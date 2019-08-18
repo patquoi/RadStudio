@@ -9,6 +9,12 @@
         <Projects Include="..\impcfgdip\src\impcfgdip.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\gwodiko\src\Kregwodiko.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\rechdiko\src\rechdiko.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +41,32 @@
     <Target Name="impcfgdip:Make">
         <MSBuild Projects="..\impcfgdip\src\impcfgdip.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Kregwodiko">
+        <MSBuild Projects="..\gwodiko\src\Kregwodiko.dproj"/>
+    </Target>
+    <Target Name="Kregwodiko:Clean">
+        <MSBuild Projects="..\gwodiko\src\Kregwodiko.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Kregwodiko:Make">
+        <MSBuild Projects="..\gwodiko\src\Kregwodiko.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rechdiko">
+        <MSBuild Projects="..\rechdiko\src\rechdiko.dproj"/>
+    </Target>
+    <Target Name="rechdiko:Clean">
+        <MSBuild Projects="..\rechdiko\src\rechdiko.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rechdiko:Make">
+        <MSBuild Projects="..\rechdiko\src\rechdiko.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Diplikata;impcfgdip"/>
+        <CallTarget Targets="Diplikata;impcfgdip;Kregwodiko;rechdiko"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Diplikata:Clean;impcfgdip:Clean"/>
+        <CallTarget Targets="Diplikata:Clean;impcfgdip:Clean;Kregwodiko:Clean;rechdiko:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Diplikata:Make;impcfgdip:Make"/>
+        <CallTarget Targets="Diplikata:Make;impcfgdip:Make;Kregwodiko:Make;rechdiko:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

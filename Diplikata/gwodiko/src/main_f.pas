@@ -360,7 +360,7 @@ Memo2.Lines.Add('Enrichissement du fichier terminé.');
 
 // E. Création d'un diko Kreyol<->Diplikata avec toutes les formations possible d'un mot avec des jetons
 Memo2.Lines.Add('Création du dictionnaire Version Kreyol<->Version Diplikata...');
-AssignFile(fPDF, 'C:\Borland\Delphi2005\Diplikata\gwodiko\Ofisyeldiksyone.txt');
+AssignFile(fPDF, ExtractFilePath(Application.ExeName)+'..\Ofisyeldiksyone.txt');
 try
   slPDF.Sort;
   Rewrite(fPDF);
@@ -464,7 +464,7 @@ Memo2.Lines.Add(Format('Taille max : %d.', [TailleMax]));
 
 // E. On créée le fichier final avec une ligne par taille de mots (les mots sont concaténés les uns derrière les autres)
 Memo2.Lines.Add('Création du fichier final...');
-AssignFile(F, 'C:\Borland\Delphi2005\Diplikata\gwodiko\Gwodikovilsen');
+AssignFile(F, ExtractFilePath(Application.ExeName)+'..\Gwodikovilsen');
 Rewrite(F);
 n:=0;
 For i:=2 to TailleMax do
@@ -528,11 +528,11 @@ begin  //
 sl := TStringList.Create;
 sl.Sorted:=True;
 Memo2.Lines.Add('Création du fichier Dico.js...');
-AssignFile(tf, 'C:\Borland\Delphi2005\Diplikata\gwodiko\Dico.js');
+AssignFile(tf, ExtractFilePath(Application.ExeName)+'..\Dico.js');
 ReWrite(tf);
 Write(tf, 'const dico = [[');
 sl.Clear;
-sl.LoadFromFile('C:\Borland\Delphi2005\Diplikata\gwodiko\gwodikovilsenenrichi.txt');
+sl.LoadFromFile(ExtractFilePath(Application.ExeName)+'..\gwodikovilsenenrichi.txt');
 dl:=0;
 try
   for l:=2 to 15 do
@@ -553,11 +553,11 @@ finally
   Memo2.Lines.Add('Fin de création du fichier Dico.js.');
 end;
 Memo2.Lines.Add('Création du fichier Diko.js...');
-AssignFile(tf, 'C:\Borland\Delphi2005\Diplikata\gwodiko\Diko.js');
+AssignFile(tf, ExtractFilePath(Application.ExeName)+'..\Diko.js');
 ReWrite(tf);
 WriteLn(tf, 'const diko = [[');
 sl.Clear;
-sl.LoadFromFile('C:\Borland\Delphi2005\Diplikata\gwodiko\gwodikovilsen.txt');
+sl.LoadFromFile(ExtractFilePath(Application.ExeName)+'..\gwodikovilsen.txt');
 dl:=0;
 try
   for l:=2 to 15 do

@@ -144,7 +144,8 @@ AMO: AMO
 AMS: MAS
      SAM
 AMW: MWA
-AMY: YAM
+AMY: MAY
+     YAM
 AMZ: ZAM
 AMÇ: ÇAM
      MAÇ

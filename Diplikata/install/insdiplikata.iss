@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Diplikata"
-#define MyAppVersion "1.7.4.5"
+#define MyAppVersion "1.7.4.8"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
                                  
