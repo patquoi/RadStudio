@@ -166,7 +166,7 @@ procedure TFormSaisieTirage.ButtonOKClick(Sender: TObject);
 var i : Integer;
 begin
 // On en profite pour affecter une seule fois stTirage (à cause des vides et des jokers)
-p.stTirage[p.Tour]:=stTirageVide;
+p.stTirage[p.Tour]:=''; // v1.7.5 : '' au lieu de stTirageVide car on cumule les lettres;
 if TiragePropose then
   p.TiragePropose[p.Tour]:=True; // v1.5.3
 // v1.7.3 : On n'ajoute pas de joker après changement du tirage

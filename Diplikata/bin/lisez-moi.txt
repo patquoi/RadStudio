@@ -79,6 +79,10 @@ et un dictionnaire complet des mots en créole haïtien.
    
 HISTORIQUE DES VERSIONS
 
+Version 1.7.5 - 25/08/2019
+Une erreur survenait durant la recherche des solutions après avoir proposé un
+tirage et placé un mot.
+
 Version 1.7.4 - 08/07/2019
 Support de Windows 7 et plus et des systèmes 64 bits
  - L'installation détecte si le système est 64 bits et installe la version 
@@ -782,4 +786,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 8 juillet 2019.
+Dernière mise à jour le 25 août 2019.
