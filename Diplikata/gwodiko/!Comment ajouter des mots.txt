@@ -26,4 +26,4 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 15. Convertir les fichiers rechdiko\bin\Anagrammes.js+Tirages.js et gwodiko\dico.js et diko.js en UTF8 pour les apps mobiles
 16. Double-cliquer sur Gwodiko\CopyJS.bat => Dossier partagé VMWare
 17. Générer Insdiplikata.exe
-18. Copier sur MaPage les pdf et insdiplikata et modififier index.html
+18. Copier sur MaPage les pdf et insdiplikata et modifier index.html

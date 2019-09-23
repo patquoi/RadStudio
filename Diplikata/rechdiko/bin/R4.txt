@@ -1427,6 +1427,7 @@ ENTÔ: ÔNET
 ENVÂ: ÂVEN
       NEVÂ
 ENVÊ: NEVÊ
+ENWÇ: WENÇ
 ENYÇ: ÇYEN
 EOPP: POPE
 EOPR: PORE
@@ -1977,6 +1978,7 @@ PTÂÊ: PÂTÊ
       TÊPÂ
 PTÂÔ: TÂPÔ
 PTÂÛ: PÛTÂ
+PTÇÎ: TÇÎP
 PZÂÛ: PÂZÛ
 PÂÇÛ: ÇÂPÛ
 PÇÊÊ: PÊÇÊ

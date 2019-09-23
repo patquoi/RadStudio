@@ -15,7 +15,7 @@ const NbCasesCote         =  15;
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       stVersionDico       = 'KA0'; // vKA
       BonusScrabble       = 50;
@@ -81,7 +81,7 @@ type  TBonus = (bAucun,
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer            = (310,2592,8020,15545,18276,19166,14800,9594,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (310,2607,8028,15565,18324,19166,14832,9603,6190,3641,2112,1092,448,120); // vKA : Référence du gwodiko
 
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS

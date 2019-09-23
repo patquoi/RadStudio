@@ -639,6 +639,7 @@ JMÂ: JÂM
 JNO: JON
 JNÊ: JÊN
 JNÔ: JÔN
+JOT: TOJ
 JSÊ: SÊJ
 JSÔ: SÔJ
 JSÛ: JÛS
@@ -695,6 +696,7 @@ KÇÛ: ÇÛK
      KÛÇ
 LLÎ: LÎL
 LMO: LOM
+     MOL
 LMÂ: LÂM
 LMÛ: MÛL
 LNO: LON
@@ -704,6 +706,7 @@ LOT: LOT
      TOL
 LOV: VOL
 LOW: WOL
+LOY: YOL
 LOÑ: LOÑ
 LPÂ: LÂP
      PLÂ
@@ -803,6 +806,7 @@ OTZ: ZOT
 OTÂ: ÂTO
      OTÂ
 OTÇ: ÇOT
+     TOÇ
 OTÛ: OTÛ
 OVÇ: ÇOV
 OWY: WOY
@@ -860,5 +864,6 @@ TÇÛ: ÇÛT
 VÂÂ: ÂVÂ
 VÂÊ: ÂVÊ
 WYÛ: WÛY
+WÇÊ: WÊÇ
 WÇÛ: WÛÇ
 YÇÊ: ÇYÊ
