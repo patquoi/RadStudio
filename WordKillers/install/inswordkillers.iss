@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "WordKillers"
-#define MyAppVersion "1.3"
+#define MyAppVersion "1.4"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
 
@@ -61,7 +61,7 @@ Filename: "{app}\WordKillers.exe"; Description: "Lancer l'application"; Flags: p
 [Files]
 Source: "Uninstall.ico"; DestDir: "{app}"
 Source: "..\..\WordKillers.zip"; DestDir: "{app}"
-Source: "..\bin\delta7.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\delta8.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\WordKillers.64.exe"; DestDir: "{app}"; DestName: "WordKillers.exe"; Check: Is64BitInstallMode; Flags: ignoreversion
 Source: "..\bin\WordKillers.32.exe"; DestDir: "{app}"; DestName: "WordKillers.exe"; Check: not Is64BitInstallMode; Flags: solidbreak ignoreversion
 Source: "..\bin\L23456789ABCDEF"; DestDir: "{app}"; Flags: solidbreak ignoreversion
