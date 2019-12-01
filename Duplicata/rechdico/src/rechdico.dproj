@@ -70,6 +70,7 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <UWP_DelphiLogo44>Rechdico44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>Rechdico150.png</UWP_DelphiLogo150>
+        <DCC_MaxStackSize>16777216</DCC_MaxStackSize>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>

@@ -14,7 +14,8 @@ const NbCasesCote         =  15;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     =   2;
       NbLettresMaxMot     = NbCasesCote;
-      NbLettresDico       = 3942506; // v1.8.1 (ODS7 corrigé)
+      NbLettresDico       = 4031818; // v1.9   (ODS8)
+                         // 3942506; // v1.8.1 (ODS7 corrigé)
                          // 3942512; // v1.8   (ODS7)
                          // 3867567; // v1.6.7 (ODS6)
                          // 3791166; // v1.3.1 (ODS5)
@@ -405,14 +406,15 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
       Dir90 : array [TDirection]          of TDirection    = (dIndefinie, dVerticale, dHorizontale);
 
       // Constantes pour le dictionnaire
-      nbl : array [TNbLettres] of Integer             = (160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565); // v1.8.1 (ODS7 corrigé)
+      nbl : array [TNbLettres] of Integer             = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // v1.9   (ODS8)
+                                                      //(160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565); // v1.8.1 (ODS7 corrigé)
                                                       //(160,1863,10256,39115,106086,221718,377272,525897,615870,621104,543972,417651,284998,176550); // v1.8   (ODS7)
                                                       //(160,1830,10036,38225,103908,217490,370632,517203,604870,609796,533616,409383,278488,171930); // v1.6.7 (ODS6)
                                                       //(154,1767, 9764,37415,102210,214431,365136,509157,595260,598862,522204,398970,269906,165930); // v1.3.1 (ODS5)
       Puiss26 : array [0..4]              of Integer  = (1,26,676,17576,456976);
       stNomFichierDico                                = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                                = 'R23456789ABCDEF'; // ODS
-      stVersionDico                                   = 'ODS7'; // modifié v1.8 (créé v1.5.3)
+      stVersionDico                                   = 'ODS8'; // modifié v1.9 (8) // modifié v1.8 (7) // créé v1.5.3
       stMsgMotNonValable                              : array [Boolean] of String = ('Le mot %s n''est pas valable selon l'''+stVersionDico+'.', // v1.5.3 : ajout stVersionDico.
                                                                                      'Les mots %s ne sont pas valables selon l'''+stVersionDico+'.'); // v1.3.1, v1.6 : tableau
       stDirection       : array[TDirection] of String = ('', 'Horizontalement',
@@ -1082,8 +1084,9 @@ try
         Panel.Repaint;
         end
     end;
-    //Dico[NbLettresDico-2]:='N'; // v1.8 : les deux dernières lettres ne sont pas stockées dans le fichier // v1.6.8, index erroné : -2 au lieu de -1 ! // v1.6.7 (ODS6): le N final a disparu... v1.8.1 suite à corrections dans le dico
-    Dico[NbLettresDico-1]:='E'; // v1.8 : les deux dernières lettres ne sont pas stockées dans le fichier // v1.6.7 (ODS6): le E final a disparu...
+    Dico[NbLettresDico-3]:='N'; // v1.9 : les TROIS dernières lettres ne sont pas stockées dans le fichier
+    Dico[NbLettresDico-2]:='N'; // v1.9 : les TROIS dernières lettres ne sont pas stockées dans le fichier
+    Dico[NbLettresDico-1]:='E'; // v1.9 : les TROIS dernières lettres ne sont pas stockées dans le fichier
     Rech:=TRecherche.Cree;
     ChargementDicoOk:=(Rech<>nil) and Rech.ChargementDicoOk;
 finally

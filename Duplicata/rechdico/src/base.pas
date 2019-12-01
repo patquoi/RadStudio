@@ -14,8 +14,8 @@ const NbCasesCote         =  15;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
-      NbLettresDico       = 3942506; // 3942512 // 3867567 // 3791166 // 3688194 
-	  stVersionDico       = 'ODS7'; // 'ODS6' // 'ODS5' // 'ODS4'
+      NbLettresDico       = 4031818; // 3942506; // 3942512 // 3867567 // 3791166 // 3688194
+	    stVersionDico       = 'ODS8'; // 'ODS7' // 'ODS6' // 'ODS5' // 'ODS4'
       BonusScrabble       = 50;
       NbMaxJokers         = 2;
       MinutesReflexion    = 3;
@@ -81,13 +81,15 @@ const // Constantes pour le dictionnaire
       nbl : array [TNbLettres] of Integer          //= (150,1713,9456,36385,99732,209972,357312,497781,581490,583286,506724,385658,259700,158835);
                                                    //= (154,1767,9764,37415,102210,214431,365136,509157,595260,598862,522204,398970,269906,165930);
                                                    //= (160,1830,10036,38225,103908,217490,370632,517203,604870,609796,533616,409383,278488,171930);
-                                                   //= (160,1863,10256,39115,106086,221718,377272,525897,615870,621104,543972,417651,284998,176550); 
-												     = (160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565); // v1.8.1 (ODS7 corrigé)
+                                                   //= (160,1863,10256,39115,106086,221718,377272,525897,615870,621104,543972,417651,284998,176550);
+												                           //= (160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565);
+                                                     = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // ODS8
+
 
       Puiss26 : array [0..4]              of Integer = (1,26,676,17576,456976);
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
-      stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon l''ODS7.'#13;
+      stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon l''ODS8.'#13;
       stDirection : array[TDirection] of String      = ('', 'Horizontalement',
                                                             'Verticalement');
       stFrmFichierIntrouvable   =  'Le fichier %s est introuvable !';
@@ -143,7 +145,7 @@ try
   with FormPatience do
     begin
     Panel.Caption:='Chargement du dictionnaire de mots en cours. Veuillez patienter SVP...';
-    Gauge.MaxValue:=(NbLettresDico div 5)-1; // ODS7
+    Gauge.MaxValue:=(NbLettresDico div 5)-1;
     Gauge.MinValue:=0;
     Gauge.Progress:=Gauge.MinValue;
     Show;
@@ -153,7 +155,7 @@ try
   Index[Low(TNbLettres)]:=0;
   for i:=Low(TNbLettres)+1 to High(TNbLettres) do
     Index[i]:=Index[i-1]+nbl[i-1];
-  for i:=0 to (NbLettresDico div 5)-1 do // ODS7
+  for i:=0 to (NbLettresDico div 5)-1 do
     begin
     for j:=0 to 2 do Read(f, c[j]); // 3 octets = 5 lettres
     x:=Ord(c[0])+256*Ord(c[1])+65536*Ord(c[2]);
@@ -163,7 +165,7 @@ try
       x:=x mod Puiss26[j];
       end;
     if ((i=(NbLettresDico div 5)-1) or
-        (i mod (NbLettresDico div 500)=0)) then // ODS7
+        (i mod (NbLettresDico div 500)=0)) then
       with FormPatience do
         begin
         Gauge.Progress:=i;
@@ -171,8 +173,12 @@ try
         Panel.Repaint;
         end
     end;
-  //Dico[NbLettresDico-2]:='N'; // v1.8.1 suite à corrections dans le dico
-    Dico[NbLettresDico-1]:='E';
+    Dico[NbLettresDico-3]:='N'; // ODS8 (3 lettres non stockées);
+    Dico[NbLettresDico-2]:='N'; // ODS8 (3 lettres non stockées);
+    Dico[NbLettresDico-1]:='E'; // ODS8 (3 lettres non stockées);
+    for i:=NbLettresMinMot to NbLettresMaxMot do
+      MessageBox(0, pChar('les mots de '+IntToStr(i)+' lettres vont de "'+stMotDico(i, 0)+'" jusqu''à "'+stMotDico(i, (nbl[i] div i)-1)+'"'), 'Vérification', 0);
+
     ChargementDicoOk:=True;
 finally
   CloseFile(F);

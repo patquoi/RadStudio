@@ -12,6 +12,9 @@
         <Projects Include="..\impcfgdup\src\impcfgdup.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\ods8\src\ods8.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="impcfgdup:Make">
         <MSBuild Projects="..\impcfgdup\src\impcfgdup.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ods8">
+        <MSBuild Projects="..\ods8\src\ods8.dproj"/>
+    </Target>
+    <Target Name="ods8:Clean">
+        <MSBuild Projects="..\ods8\src\ods8.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ods8:Make">
+        <MSBuild Projects="..\ods8\src\ods8.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Duplicata;rechdico;impcfgdup"/>
+        <CallTarget Targets="Duplicata;rechdico;impcfgdup;ods8"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Duplicata:Clean;rechdico:Clean;impcfgdup:Clean"/>
+        <CallTarget Targets="Duplicata:Clean;rechdico:Clean;impcfgdup:Clean;ods8:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Duplicata:Make;rechdico:Make;impcfgdup:Make"/>
+        <CallTarget Targets="Duplicata:Make;rechdico:Make;impcfgdup:Make;ods8:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

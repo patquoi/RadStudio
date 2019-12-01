@@ -55,6 +55,7 @@ IM: MI
 IN: IN
     NI
 IP: PI
+IQ: QI
 IR: RI
 IS: SI
 IX: XI

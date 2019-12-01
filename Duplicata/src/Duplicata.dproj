@@ -6,7 +6,7 @@
         <MainSource>Duplicata.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -71,11 +71,10 @@
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>Duplicata</SanitizedProjectName>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_MinorVer>8</VerInfo_MinorVer>
-        <VerInfo_Release>11</VerInfo_Release>
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1036</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.8.11.0;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.11;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.0.0;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_DcuOutput>..\dcu\$(Platform)\$(Config)</DCC_DcuOutput>
@@ -125,16 +124,16 @@
         <UWP_DelphiLogo44>Duplicata44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>Duplicata150.png</UWP_DelphiLogo150>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_Build>3</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.8.11.3;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.11;Comments=</VerInfo_Keys>
+        <VerInfo_Build>4</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.0.4;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <Icon_MainIcon>Duplicata_Icon.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>Duplicata44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>Duplicata150.png</UWP_DelphiLogo150>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_Build>2</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.8.11.2;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.11;Comments=</VerInfo_Keys>
+        <VerInfo_Build>3</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.0.3;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>

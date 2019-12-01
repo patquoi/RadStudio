@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Duplicata"
-#define MyAppVersion "1.8.11.1"
+#define MyAppVersion "1.9.0.3"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
 
@@ -62,7 +62,7 @@ Filename: "{app}\Duplicata.exe"; Description: "Lancer l'application"; Flags: pos
 [Files]
 Source: "Uninstall.ico"; DestDir: "{app}"
 Source: "..\..\Duplicata.zip"; DestDir: "{app}"
-Source: "..\bin\delta7.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\delta8.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\Duplicata.64.exe"; DestDir: "{app}"; DestName: "Duplicata.exe"; Check: Is64BitInstallMode; Flags: ignoreversion
 Source: "..\bin\Duplicata.32.exe"; DestDir: "{app}"; DestName: "Duplicata.exe"; Check: not Is64BitInstallMode; Flags: solidbreak ignoreversion
 Source: "..\bin\L23456789ABCDEF"; DestDir: "{app}"; Flags: solidbreak ignoreversion

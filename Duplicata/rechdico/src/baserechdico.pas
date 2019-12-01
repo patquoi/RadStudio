@@ -19,14 +19,14 @@ type
   //-------------------------------------------------------------------------
   TRechTirage = class
   public
-    stTirage : String;
+    stTirage : AnsiString; // RX (AnsiString)
     Anagrammes : TAnagrammes;
     Svt : TRechTirage;
-    constructor Cree(const stTirage : String; const Anagrammes : TAnagrammes; const Svt : TRechTirage);
+    constructor Cree(const stTirage : AnsiString; const Anagrammes : TAnagrammes; const Svt : TRechTirage); // RX (AnsiString)
     destructor Detruit;
     function NbAnagrammes : Integer;
     function Nombre : Integer;
-    procedure Ajoute(const stTirage : String; const iDico : Integer);
+    procedure Ajoute(const stTirage : AnsiString; const iDico : Integer); // RX (AnsiString)
     procedure Sauve;
   end{class TTirage};
   //-------------------------------------------------------------------------
@@ -93,7 +93,7 @@ if Svt<>Nil then
   Svt.Sauve
 end;
 //---------------------------------------------------------------------------
-constructor TRechTirage.Cree(const stTirage : String; const Anagrammes : TAnagrammes; const Svt : TRechTirage);
+constructor TRechTirage.Cree(const stTirage : AnsiString; const Anagrammes : TAnagrammes; const Svt : TRechTirage); // RX (AnsiString)
 begin
 Self.stTirage:=stTirage;
 Self.Anagrammes:=Anagrammes;
@@ -124,7 +124,7 @@ else
   Result:=Anagrammes.Nombre;
 end;
 //---------------------------------------------------------------------------
-procedure TRechTirage.Ajoute(const stTirage : String; const iDico : Integer);
+procedure TRechTirage.Ajoute(const stTirage : AnsiString; const iDico : Integer); // RX (AnsiString)
 var NvSvt : TRechTirage;
 begin
 if Self.stTirage=stTirage then
@@ -149,19 +149,19 @@ end;
 //---------------------------------------------------------------------------
 procedure TRechTirage.Sauve;
 var i : Integer;
-    n : Char;
+    n : AnsiChar; // RX (AnsiChar)
 begin
 for i:=1 to Length(stTirage) do
   BlockWrite(f, stTirage[i], sizeOf(stTirage[i]));
 if Anagrammes<>Nil then
   begin
-  n:=Char(Anagrammes.Nombre);
+  n:=AnsiChar(Anagrammes.Nombre); // RX (au lieu de Char)
   BlockWrite(f, n, SizeOf(n));
   Anagrammes.Sauve
   end
 else
   begin
-  n:=Char(0);
+  n:=#0; // RX (au lieu de Char)
   BlockWrite(f, n, SizeOf(n));
   end;
 if Svt<>Nil then
@@ -175,7 +175,7 @@ Dico:=TDico.Cree;
 for i:=Low(TNbLettres) to High(TNbLettres) do
   NbLettres[i]:=Nil;
 Remplit;
-AssignFile(f, ExtractFilePath(ParamStr(0))+'R23456789ABCDEF');
+AssignFile(f, ExtractFilePath(ParamStr(0))+stNomFichierRech);
 try
   Rewrite(f, 1);
   Sauve;

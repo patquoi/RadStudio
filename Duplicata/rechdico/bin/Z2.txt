@@ -7,30 +7,30 @@ AD:	DA	IM:	MI
 AF:	FA	IN:	IN														
 AH:	AH		NI														
 	HA	IP:	PI														
-AI:	AI	IR:	RI														
-AK:	KA	IS:	SI														
-AL:	LA	IX:	XI														
-AM:	MA	LU:	LU														
-AN:	AN	MO:	OM														
-	NA	MU:	MU														
-AR:	RA	NO:	NO														
-AS:	AS		ON														
-	SA	NU:	NU														
-AT:	TA		UN														
-AU:	AU	OR:	OR														
-AV:	VA	OS:	OS														
-AY:	AY	OT:	TO														
-BE:	BE	OU:	OU														
-BI:	BI	PU:	PU														
-BU:	BU	RU:	RU														
-CE:	CE	SU:	SU														
-CI:	CI		US														
-CO:	OC	SV:	VS														
-DE:	DE	TU:	TU														
-DO:	DO		UT														
-DU:	DU	UV:	VU														
-	UD	UW:	WU														
-EH:	EH																
+AI:	AI	IQ:	QI														
+AK:	KA	IR:	RI														
+AL:	LA	IS:	SI														
+AM:	MA	IX:	XI														
+AN:	AN	LU:	LU														
+	NA	MO:	OM														
+AR:	RA	MU:	MU														
+AS:	AS	NO:	NO														
+	SA		ON														
+AT:	TA	NU:	NU														
+AU:	AU		UN														
+AV:	VA	OR:	OR														
+AY:	AY	OS:	OS														
+BE:	BE	OT:	TO														
+BI:	BI	OU:	OU														
+BU:	BU	PU:	PU														
+CE:	CE	RU:	RU														
+CI:	CI	SU:	SU														
+CO:	OC		US														
+DE:	DE	SV:	VS														
+DO:	DO	TU:	TU														
+DU:	DU		UT														
+	UD	UV:	VU														
+EH:	EH	UW:	WU														
 	HE																
 EJ:	JE																
 EL:	LE																

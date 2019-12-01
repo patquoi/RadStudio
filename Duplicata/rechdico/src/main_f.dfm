@@ -1,9 +1,9 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
-  Width = 347
-  Height = 442
   Caption = 'Dictionnaire de recherche'
+  ClientHeight = 403
+  ClientWidth = 331
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,15 +18,15 @@ object FormMain: TFormMain
   object Memo: TMemo
     Left = 0
     Top = 0
-    Width = 339
-    Height = 389
+    Width = 331
+    Height = 384
     Align = alClient
     TabOrder = 0
   end
   object StatusBar: TStatusBar
     Left = 0
-    Top = 389
-    Width = 339
+    Top = 384
+    Width = 331
     Height = 19
     Panels = <>
   end

@@ -8,29 +8,29 @@ AS	OS
 AU	OU																
 AY	PI																
 BA	PU																
-BE	RA																
-BI	RE																
-BU	RI																
-CA	RU																
-CE	SA																
-CI	SE																
-DA	SI																
-DE	SU																
-DO	TA																
-DU	TE																
-EH	TO																
-EN	TU																
-ES	UD																
-ET	UN																
-EU	US																
-EX	UT																
-FA	VA																
-FI	VE																
-GO	VS																
-HA	VU																
-HE	WU																
-HI	XI																
-HO																	
+BE	QI																
+BI	RA																
+BU	RE																
+CA	RI																
+CE	RU																
+CI	SA																
+DA	SE																
+DE	SI																
+DO	SU																
+DU	TA																
+EH	TE																
+EN	TO																
+ES	TU																
+ET	UD																
+EU	UN																
+EX	US																
+FA	UT																
+FI	VA																
+GO	VE																
+HA	VS																
+HE	VU																
+HI	WU																
+HO	XI																
 IF																	
 IL																	
 IN																	
