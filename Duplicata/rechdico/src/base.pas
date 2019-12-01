@@ -5,58 +5,14 @@ interface
 uses Classes, Graphics, Windows;
 //----------------------------------------------------------------------------
 const NbCasesCote         =  15;
-      PositionRelativeMin = -14;
-      PositionCaseDepart  =  0;
-      PositionRelativeMax =  14;
-      NbLettresAlphabet   =  26;
-      NbJetonsSac         = 102;
-      NbMaxJetonsTirage   =   7;
-      NbMaxPlacesChevalet =  10;
+
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
       NbLettresDico       = 4031818; // 3942506; // 3942512 // 3867567 // 3791166 // 3688194
 	    stVersionDico       = 'ODS8'; // 'ODS7' // 'ODS6' // 'ODS5' // 'ODS4'
-      BonusScrabble       = 50;
-      NbMaxJokers         = 2;
-      MinutesReflexion    = 3;
-      VersionFichier      = $1000;
-
-      stNomFichierIni   = 'Duplicata.ini';
-      stSectionSac      = 'Sac';
-      stJoker           = '?';
-      stSuffixeRang : array [0..1] of String = ('er', 'ème');
-      ModeAutomatique   = True;
-      ModeManuel        = False;
 //----------------------------------------------------------------------------
-type  TBonus = (bAucun,
-                bLettreCompteDouble, bLettreCompteTriple,
-                bMotCompteDouble, bMotCompteTriple);
-      TCoordonnee = 0..NbCasesCote-1;
-      TTypeJeton = (tjIndefini,
-                    tjJoker, tjA, tjB, tjC, tjD, tjE, tjF, tjG, tjH,
-                    tjI,     tjJ, tjK, tjL, tjM, tjN, tjO, tjP, tjQ,
-                    tjR,     tjS, tjT, tjU, tjV, tjW, tjX, tjY, tjZ);
-      TGenreLettre=(glIndefini, glConsonne, glVoyelle);
-      TNumeroJetonSac      = 0..NbJetonsSac; // 0 = pas de jeton
-      TOrdreJetonSac       = 1..NbJetonsSac; // Ordre de tirage des jetons dans le sac
-      TNumeroJetonTirage   = 0..NbMaxJetonsTirage; // 0 = pas de jeton
-      TOrdreJetonTirage    = 1..NbMaxJetonsTirage; // Ordre de tirage des jetons dans le jeu courant
-      TOrdreJetonChevalet  = 1..NbMaxPlacesChevalet; // Place des jetons sur le chevalet
-      TNumeroJetonChevalet = 0..NbMaxPlacesChevalet; // 0 = pas de jeton
-      TChevalet            = array [TOrdreJetonChevalet] of TNumeroJetonSac;
-      TDirection           = (dIndefinie, dHorizontale, dVerticale);
-      TTour                = 1..NbJetonsSac;
-      TNbLettres           = NbLettresMinMot..NbLettresMaxMot;
+type  TNbLettres           = NbLettresMinMot..NbLettresMaxMot;
       TIndexDico           = 0..NbLettresDico-1;
-      TNumeroJoker         = 0..NbMaxJokers;
-      TOrdreJoker          = 1..NbMaxJokers; // Correspond aussi à TNumeroSac pour les jokers
-      TPositionRelative    = PositionRelativeMin..PositionRelativeMax;
-      TJoker               = array [TOrdreJoker] of TNumeroJoker;
-      TLettreJoker         = array [TOrdreJoker] of TTypeJeton;
-      TPlateau             = array [TCoordonnee, TCoordonnee] of TNumeroJetonSac;
-      TSac                 = array [TOrdreJetonSac] of TOrdreJetonSac;
-      TTirage              = array [TOrdreJetonTirage] of TNumeroJetonSac;
-      TFormatRapport       = (frPourcentage, frNoteSur20);
      //-----------------------------------------------------------------------
       TAnagrammes = class(TObject)
       public
@@ -78,26 +34,12 @@ type  TBonus = (bAucun,
       end{class TDico};
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
-      nbl : array [TNbLettres] of Integer          //= (150,1713,9456,36385,99732,209972,357312,497781,581490,583286,506724,385658,259700,158835);
-                                                   //= (154,1767,9764,37415,102210,214431,365136,509157,595260,598862,522204,398970,269906,165930);
-                                                   //= (160,1830,10036,38225,103908,217490,370632,517203,604870,609796,533616,409383,278488,171930);
-                                                   //= (160,1863,10256,39115,106086,221718,377272,525897,615870,621104,543972,417651,284998,176550);
-												                           //= (160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565);
-                                                     = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // ODS8
-
-
+      nbl : array [TNbLettres] of Integer            = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // ODS8
       Puiss26 : array [0..4]              of Integer = (1,26,676,17576,456976);
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
-      stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon l''ODS8.'#13;
-      stDirection : array[TDirection] of String      = ('', 'Horizontalement',
-                                                            'Verticalement');
       stFrmFichierIntrouvable   =  'Le fichier %s est introuvable !';
       stErreurInattendue        = 'Erreur inattendue';
-      Proposition     : Boolean = True;
-      CoupJoue        : Boolean = False;
-      MaxFormatRapport: array [TFormatRapport] of Integer = (100, 20);
-      stFormatRapport : array [TFormatRapport] of String = ('%', '/20');
 //---------------------------------------------------------------------------
 function stTirageTrie(const stTirage : String) : String;
 //---------------------------------------------------------------------------
@@ -105,13 +47,6 @@ implementation
 //---------------------------------------------------------------------------
 uses
   SysUtils, Math, IniFiles, StdCtrls, ShellApi, patience_f;
-//---------------------------------------------------------------------------
-const stAutreChoix    = #13#13'Cliquez sur une autre case départ ou changez la sélection des jetons.';
-      stFrmSolution   = '%s : %s en %s';
-      stCoordonneesIndefinies = ' - ';
-      stLibreOccupee  : array [0..1] of String = ('Occupée', 'Libre');
-      AvecSautDeLigne : Boolean = True;
-      SansSautDeLigne : Boolean = False;
 //---------------------------------------------------------------------------
 function stTirageTrie(const stTirage : String) : String;
 var i, j : Integer;
@@ -176,9 +111,8 @@ try
     Dico[NbLettresDico-3]:='N'; // ODS8 (3 lettres non stockées);
     Dico[NbLettresDico-2]:='N'; // ODS8 (3 lettres non stockées);
     Dico[NbLettresDico-1]:='E'; // ODS8 (3 lettres non stockées);
-    for i:=NbLettresMinMot to NbLettresMaxMot do
-      MessageBox(0, pChar('les mots de '+IntToStr(i)+' lettres vont de "'+stMotDico(i, 0)+'" jusqu''à "'+stMotDico(i, (nbl[i] div i)-1)+'"'), 'Vérification', 0);
-
+ (* for i:=NbLettresMinMot to NbLettresMaxMot do
+      MessageBox(0, pChar('les mots de '+IntToStr(i)+' lettres vont de "'+stMotDico(i, 0)+'" jusqu''à "'+stMotDico(i, (nbl[i] div i)-1)+'"'), 'Vérification', 0); *)
     ChargementDicoOk:=True;
 finally
   CloseFile(F);

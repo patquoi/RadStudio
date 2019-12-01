@@ -275,7 +275,8 @@ var i,
     a : TAnagrammes;
     stMot,
     stDeb, stFin : String;
-    sl : TStringList;
+    sl,
+    slDelta : TStringList; // ODS8
 
 procedure EcritTirageEtMot(const stTirMot, stTirMotPrc : String; const Retour : Boolean);
 var p : Integer;
@@ -284,6 +285,8 @@ begin
 p:=AnsiPos(':',stTirMot);
 stTir:=copy(stTirMot,1,p-1);
 stMot:=copy(stTirMot,p+1,Length(stTirMot)-p);
+if slDelta.IndexOf(stMot)>-1 then // ODS8 : on ajoute un astérisque à côté des nouveaux mots
+  stMot:=stMot+'*';
 stTirPrc:=copy(stTirMotPrc,1,AnsiPos(':',stTirMotPrc)-1);
 if stTirPrc=stTir then
   stAEcrire:=#9+stMot
@@ -295,7 +298,12 @@ else
   Write(f, stAEcrire);
 end;
 
-begin{TRehDico.CreeFichierRechDico}
+begin{TRechDico.CreeFichierRechDico}
+
+// ODS8 : on ajoute un astérisque à côté des nouveaux mots
+slDelta:=TStringList.Create;
+slDelta.LoadFromFile(ExtractFilePath(ParamStr(0))+'delta8.txt');
+
 sl:=TStringList.Create;
 sl.Sorted:=True; // Tri en temps réel plus rapide
 // 1. Fichier R*.txt avec 1 anagramme par ligne
@@ -382,13 +390,16 @@ try
         i:=(p-1)*(nl*nc)+(c-1)*nl+(l-1);
         if i<nbl[NbLettres] div NbLettres then
           begin
+          stMot:=Dico.stMotDico(NbLettres, i);
+          if slDelta.IndexOf(stMot)>-1 then // ODS8 : on ajoute un astérisque à côté des nouveaux mots
+            stMot:=stMot+'*';
           if i=0 then
-            Write(f, Dico.stMotDico(NbLettres, i))
+            Write(f, stMot)
           else
             if c=nc then
-              WriteLn(f, Dico.stMotDico(NbLettres, i))
+              WriteLn(f, stMot)
             else
-              Write(f, Dico.stMotDico(NbLettres, i))
+              Write(f, stMot)
           end
         else
           if c=nc then
