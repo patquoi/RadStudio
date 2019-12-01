@@ -7,7 +7,7 @@ AD:	DA	IM:	MI
 AF:	FA	IN:	IN														
 AH:	AH		NI														
 	HA	IP:	PI														
-AI:	AI	IQ:	QI														
+AI:	AI	IQ:	QI*														
 AK:	KA	IR:	RI														
 AL:	LA	IS:	SI														
 AM:	MA	IX:	XI														
