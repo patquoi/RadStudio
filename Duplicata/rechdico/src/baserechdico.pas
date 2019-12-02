@@ -34,6 +34,8 @@ type
   public
     Dico : TDico;
     NbLettres : array [TNbLettres] of TRechTirage;
+    stTiragesMax : String;
+    tfa, tft : TextFile;
     constructor Cree;
     destructor Detruit;
     procedure Ajoute(const NbLettres : TNbLettres; const stTirage : String; const iDico : Integer);
@@ -222,6 +224,12 @@ var i, j : Integer;
   //-------------------------------------------------------------------------
 begin
 FormPatience:=TFormPatience.Create(Nil);
+AssignFile(tfa, ExtractFilePath(ParamStr(0))+'Anagrammes.js');
+ReWrite(tfa);
+WriteLn(tfa, 'const anagrammes = [[');
+AssignFile(tft, ExtractFilePath(ParamStr(0))+'Tirages.js');
+ReWrite(tft);
+WriteLn(tft, 'const tirages = [[');
 with FormPatience do
   try
     Show;
@@ -242,6 +250,10 @@ with FormPatience do
       CreeFichierRechDico(i);
       end{for};
   finally
+    WriteLn(tft, ']]');
+    WriteLn(tfa, ']]');
+    CloseFile(tft);
+    CloseFile(tfa);
     FormPatience.Release;
   end{try}
 end;
@@ -266,7 +278,7 @@ const stSuffixe    : array [TNbLettres] of String = ('R2', 'R3', 'R4', 'R5', 'R6
                                                      '                 ');
       NbColonnes : array[TNbLettres] of Integer = (9,7,6,5,4,4,3,3,3,3,2,2,2,2);
 
-var i,
+var i,na,
     c,nc,
     l,nl,
     p,np : Integer;
@@ -308,22 +320,43 @@ sl:=TStringList.Create;
 sl.Sorted:=True; // Tri en temps réel plus rapide
 // 1. Fichier R*.txt avec 1 anagramme par ligne
 AssignFile(f, ExtractFilePath(ParamStr(0))+stSuffixe[NbLettres]+'.txt');
+if NbLettres>2 then
+  begin
+  WriteLn(tfa, ']],[');
+  WriteLn(tft, '],[');
+  end;
 try
   Rewrite(f);
   t:=Self.NbLettres[NbLettres];
   repeat
     a:=t.Anagrammes;
+    na:=0;
     repeat
       if a=t.Anagrammes then
-        Write(f, t.stTirage, ': ')
+        begin
+        Write(f, t.stTirage, ': ');
+        Write(tft, Format('''%s''', [t.stTirage]));
+        Write(tfa, '[');
+        end
       else
         Write(f, stTirageVide[NbLettres]);
       stMot:=Dico.stMotDico(NbLettres, a.iDico);
       sl.Add(t.stTirage+':'+stMot);
       WriteLn(f, stMot);
-      a:=a.Svt
+      Write(tfa, Format('%d', [a.iDico]));
+      a:=a.Svt;
+      Inc(na);
+      if a<>Nil then
+        Write(tfa, ',');
     until a=Nil;
-    t:=t.Svt
+    if na=20 then
+      stTiragesMax:=stTiragesMax+' '+t.stTirage;
+    t:=t.Svt;
+    if t<>Nil then
+      begin
+      WriteLn(tft, ',');
+      WriteLn(tfa, '],');
+      end
   until t=Nil;
 finally
   CloseFile(f);

@@ -320,10 +320,10 @@ end{try};
 end;
 
 procedure TFormMain.ButtonImporterClick(Sender: TObject);
-var l, k, i       : Integer;
+var i,j,k,l,dtm   : Integer;
     stMot,
     stNomFichier  : String;
-    F             : Textfile;
+    F, FD         : Textfile;
     sl7, sl8      : TStringList;
 begin
 try
@@ -437,6 +437,29 @@ try
   AfficheInfo('Nombre total de mots retirés : '+IntToStr(MemoDM.Lines.Count));
   AfficheInfo('Sauvegarde de la liste des mots retirés...');
   MemoDM.Lines.SaveToFile(ExtractFilePath(ParamStr(0))+'Mots retirés.txt');
+
+  AssignFile(FD, ExtractFilePath(ParamStr(0))+'Delta.js');
+  ReWrite(FD);
+  WriteLn(FD, 'const delta = [[');
+  dtm:=0;
+  for i:=NbLettresMinMot to NbLettresMaxMot do
+    for j:=0 to sl8.Count-1 do
+      if (Length(sl8.Strings[j])=i) and
+         (sl7.IndexOf(sl8.Strings[j])=-1) then
+        begin
+        if dtm=i then
+          WriteLn(FD, ',')
+        else
+          begin
+          if dtm>0 then
+            WriteLn(FD, '],[');
+          dtm:=i;
+          end;
+        Write(FD, ''''+sl8.Strings[j]+'''');
+        end;
+  WriteLn(FD, ']];');
+  CloseFile(FD);
+
 finally
   sl7.Destroy;
   sl8.Destroy;

@@ -26,6 +26,7 @@ type  TNbLettres           = NbLettresMinMot..NbLettresMaxMot;
         Dico  : array [TIndexDico] of Char;
       public
         ChargementDicoOk : Boolean;
+        tfd: TextFile;
         constructor Cree;
         destructor  Detruit;
         function Existe(const stMot : String) : Boolean;
@@ -111,8 +112,21 @@ try
     Dico[NbLettresDico-3]:='N'; // ODS8 (3 lettres non stockées);
     Dico[NbLettresDico-2]:='N'; // ODS8 (3 lettres non stockées);
     Dico[NbLettresDico-1]:='E'; // ODS8 (3 lettres non stockées);
- (* for i:=NbLettresMinMot to NbLettresMaxMot do
-      MessageBox(0, pChar('les mots de '+IntToStr(i)+' lettres vont de "'+stMotDico(i, 0)+'" jusqu''à "'+stMotDico(i, (nbl[i] div i)-1)+'"'), 'Vérification', 0); *)
+
+    AssignFile(tfd, ExtractFilePath(ParamStr(0))+'Dico.js');
+    ReWrite(tfd);
+    WriteLn(tfd, 'const dico = [[');
+    for i:=NbLettresMinMot to NbLettresMaxMot do
+      for j:=0 to (nbl[i] div i)-1 do
+        if j<(nbl[i] div i)-1 then
+          WriteLn(tfd, ''''+stMotDico(i, j)+''',')
+        else
+          if i<NbLettresMaxMot then
+            WriteLn(tfd, ''''+stMotDico(i, j)+'''],[')
+          else  
+            WriteLn(tfd, ''''+stMotDico(i, j)+''']];');
+    CloseFile(tfd);        
+
     ChargementDicoOk:=True;
 finally
   CloseFile(F);
