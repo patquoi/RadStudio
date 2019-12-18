@@ -27,3 +27,5 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 16. Double-cliquer sur Gwodiko\CopyJS.bat => Dossier partagé VMWare
 17. Générer Insdiplikata.exe
 18. Copier sur MaPage les pdf et insdiplikata et modifier index.html
+19. Sauvegarder Diplikata xxxx (Rio).zip sur Lacie
+20. Mettre à jour gitHub.com

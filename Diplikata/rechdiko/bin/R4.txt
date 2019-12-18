@@ -202,6 +202,7 @@ AEFS: EFAS
 AEFZ: ZAFE
 AEFÇ: FAÇE
 AEGG: GAGE
+AEGK: KAGE
 AEGL: EGAL
       GALE
       LAGE
@@ -1428,6 +1429,7 @@ ENVÂ: ÂVEN
       NEVÂ
 ENVÊ: NEVÊ
 ENWÇ: WENÇ
+ENYZ: NYEZ
 ENYÇ: ÇYEN
 EOPP: POPE
 EOPR: PORE
@@ -1515,6 +1517,7 @@ ETWÂ: WETÂ
 ETWÇ: ÇWET
 ETWÔ: WÔTE
 ETYÛ: TÛYE
+ETZÊ: TEZÊ
 ETÂÇ: ÇÂTE
 ETÇÊ: ÇÊTE
 ETÇÛ: ÇÛTE
@@ -1552,6 +1555,7 @@ FIOÇ: ÇOFI
 FIRZ: FRIZ
 FIRÛ: FÛRI
 FISW: SWIF
+FIWÑ: FWIÑ
 FIÇÔ: ÇIFÔ
 FJOÔ: FOJÔ
 FKLÂ: FLÂK
@@ -1777,6 +1781,7 @@ ITYÔ: TIYÔ
 ITZÛ: ZÛTI
 IVVÂ: VIVÂ
 IWZÑ: ZWIÑ
+IWZÛ: WÛZI
 IYÇÔ: ÇIYÔ
 JJÛÛ: JÛJÛ
 JKOO: JOKO

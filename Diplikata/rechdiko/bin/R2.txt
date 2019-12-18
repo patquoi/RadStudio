@@ -66,7 +66,8 @@ FÊ: FÊ
 FÔ: FÔ
 FÛ: FÛ
 GI: GI
-GO: OG
+GO: GO
+    OG
 GÂ: ÂG
     GÂ
 GÊ: GÊ
