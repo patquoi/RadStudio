@@ -13,14 +13,14 @@ abandonen	ABAnDONEn		ABOMINASYON
 abapri	ABAPRI		ABOnDAn
 abat	ABAT	abondans	ABONDAnS
 abdenwel	ABDENWEL		ABOnDAnS
-abdom√®n	ABDOMEN		ABONDANS
+abdomËn	ABDOMEN		ABONDANS
 abe	ABE		ABOnDANS
 abese	ABESE	abone	ABONE
 abi	ABI	abonen	ABONEN
 abil	ABIL		ABONEn
 abilite	ABILITE	abonmache	ABOnMAChE
 abim	ABIM		ABONMAChE
-abiman	ABIMAN	ab√≤nman	ABONMAn
+abiman	ABIMAN	abÚnman	ABONMAn
 	ABIMAn		ABONMAN
 abime	ABIME	abonotcho	ABONOTChO
 abimen	ABIMEn	aboudja	ABOuDJA
@@ -202,7 +202,7 @@ ajitate	AJITATE	akodiye	AKODIYE
 ajite	AJITE	akolad	AKOLAD
 ajou	AJOu	akolit	AKOLIT
 ajoune	AJOuNE	akomode	AKOMODE
-ajoupa	AJOuPA	ak√≤n	AKON
+ajoupa	AJOuPA	akÚn	AKON
 ajoute	AJOuTE	akondisyon	AKONDISYON
 ak	AK		AKOnDISYOn
 akable	AKABLE		AKONDISYOn
@@ -368,7 +368,7 @@ amedisali	AMEDISALI		AMWENSKE
 amelyorasyon	AMELYORASYON	an	AN
 	AMELYORASYOn	anachi	ANAChI
 amelyore	AMELYORE	anachis	ANAChIS
-am√®n	AMEN	anafaz	ANAFAZ
+amËn	AMEN	anafaz	ANAFAZ
 amerendyen	AMERENDYEN	anakawit	ANAKAWIT
 	AMEREnDYEN	anakawona	ANAKAWONA
 	AMEREnDYEn	anakayit	ANAKAYIT
@@ -487,7 +487,7 @@ anchante	AnChAnTE		AnDENMON
 andenmon - anfen
 
 	ANDENMON	anetwale	ANETWALE
-and√®nye	ANDENYE	aneyanti	ANEYANTI
+andËnye	ANDENYE	aneyanti	ANEYANTI
 	AnDENYE	anfale	AnFALE
 andetay	AnDETAY		ANFALE
 	ANDETAY	anfanmi	ANFAnMI
@@ -551,7 +551,7 @@ anflamasyon	ANFLAMASYON		AnGLE
 anfle	ANFLE		AnGLIKAN
 	AnFLE		ANGLIKAn
 anflech	AnFLECh		AnGLIKAn
-	ANFLECh	anglof√≤n	ANGLOFON
+	ANFLECh	anglofÚn	ANGLOFON
 anfom	AnFOM		AnGLOFON
 	ANFOM	anglouti	ANGLOuTI
 anfondre	AnFONDRE		AnGLOuTI
@@ -831,7 +831,7 @@ anteman	ANTEMAN	antotye	AnTOTYE
 	AnTEMAN		ANTOTYE
 	ANTEMAn	antou	ANTOu
 	AnTEMAn		AnTOu
-ant√®n	AnTEN	antouka	ANTOuKA
+antËn	AnTEN	antouka	ANTOuKA
 	ANTEN		AnTOuKA
 antere	ANTERE	antouraj	ANTOuRAJ
 	AnTERE		AnTOuRAJ
@@ -845,11 +845,11 @@ antichok	ANTIChOK		ANTRAnP
 	AnTIChOK		AnTRANP
 antidot	ANTIDOT	antrav	AnTRAV
 	AnTIDOT		ANTRAV
-antig√≤n	AnTIGON	antrave	ANTRAVE
+antigÚn	AnTIGON	antrave	ANTRAVE
 	ANTIGON		AnTRAVE
 antijel	AnTIJEL	antre	AnTRE
 	ANTIJEL		ANTRE
-antij√®n	AnTIJEN	antrede	ANTREDE
+antijËn	AnTIJEN	antrede	ANTREDE
 	ANTIJEN		AnTREDE
 antik	AnTIK	antrene	ANTRENE
 	ANTIK		AnTRENE
@@ -877,7 +877,7 @@ antretan	ANTRETAN		ANZIM
 	AnTRETAn	ap	AP
 	ANTRETAn	apa	APA
 	AnTRETAN	apantay	APANTAY
-antw√†n	AnTWAN		APAnTAY
+antw‡n	AnTWAN		APAnTAY
 	ANTWAN	apante	APANTE
 antyoutyout	AnTYOuTYOuT		APAnTE
 	ANTYOuTYOuT	aparan	APARAN
@@ -966,7 +966,7 @@ aran	ARAN	ase	ASE
 	ARAn	aseksye	ASEKSYE
 aranbarik	ARAnBARIK	aseptab	ASEPTAB
 	ARANBARIK	asepte	ASEPTE
-aranjman	ARANJMAn	aset√≤n	ASETON
+aranjman	ARANJMAn	asetÚn	ASETON
 	ARAnJMAN	asetseze	ASETSEZE
 	ARAnJMAn	asezon	ASEZON
 	ARANJMAN		ASEZOn
@@ -1068,7 +1068,7 @@ avanjou	AVAnJOu	avote	AVOTE
 avanpos	AVANPOS		AVOTMAN
 	AVAnPOS	avril	AVRIL
 avans	AVANS	avwa	AVWA
-	AVAnS	avw√†n	AVWAN
+	AVAnS	avw‡n	AVWAN
 avanse	AVAnSE	avwe	AVWE
 	AVANSE	avyate	AVYATE
 avansman	AVANSMAN	avyon	AVYON
@@ -1155,7 +1155,7 @@ balansin	BALANSIN	banboula	BANBOuLA
 balanswa	BALANSWA	banda	BANDA
 	BALAnSWA		BAnDA
 bale	BALE	bandaj	BAnDAJ
-bal√®n	BALEN		BANDAJ
+balËn	BALEN		BANDAJ
 balenn	BALEnN	bande	BANDE
 	BALENN		BAnDE
 balerina	BALERINA	bandi	BANDI
@@ -1242,7 +1242,7 @@ batay	BATAY	befchenn	BEFChEnN
 batem	BATEM		BEFChENN
 bega - bidon
 
-bega	BEGA	berej√®n	BEREJEN
+bega	BEGA	berejËn	BEREJEN
 bege	BEGE	bes	BES
 begle	BEGLE	bese	BESE
 begmann	BEGMAnN	beso	BESO
@@ -1251,7 +1251,7 @@ begoun	BEGOuN	betay	BETAY
 begwe	BEGWE	betchay	BETChAY
 bej	BEJ	betiz	BETIZ
 bek	BEK	betize	BETIZE
-bek√†n	BEKAN	beton	BETON
+bek‡n	BEKAN	beton	BETON
 bekanbol	BEKAnBOL		BETOn
 	BEKANBOL	betonay	BETONAY
 bekasin	BEKASIN	betonnen	BETONNEN
@@ -1301,7 +1301,7 @@ bidonvil	BIDONVIL	bistouri	BISTOuRI
 	BIDOnVIL	bisuit	BISUiT
 bife	BIFE	biswit	BISWIT
 bifet	BIFET	bit	BIT
-biftek	BIFTEK	bit√†n	BITAN
+biftek	BIFTEK	bit‡n	BITAN
 bigay	BIGAY	bitasyon	BITASYON
 bigo	BIGO		BITASYOn
 bigot	BIGOT	bite	BITE
@@ -1595,7 +1595,7 @@ briz	BRIZ		BYEN
 brizfe	BRIZFE	byenfete	BYEnFETE
 bwa	BWA		BYENFETE
 bwachat	BWAChAT	byenfezans	BYENFEZANS
-bwadch√®n	BWADChEN		BYEnFEZANS
+bwadchËn	BWADChEN		BYEnFEZANS
 bwadenn	BWADENN		BYEnFEZAnS
 	BWADEnN		BYENFEZAnS
 bwadom	BWADOM	byennelve	BYEnNELVE
@@ -1680,8 +1680,8 @@ chantonnen - chevon
 	ChAnTONNEn	chehkobanza	ChEHKOBAnZA
 chantye	ChANTYE		ChEHKOBANZA
 	ChAnTYE	chek	ChEK
-ch√†nw√†n	ChANWAN	chelbe	ChELBE
-chany	ChANY	chel√®n	ChELEN
+ch‡nw‡n	ChANWAN	chelbe	ChELBE
+chany	ChANY	chelËn	ChELEN
 chap	ChAP	chema	ChEMA
 chapant	ChAPANT	chemen	ChEMEn
 	ChAPAnT		ChEMEN
@@ -1809,7 +1809,7 @@ damou	DAMOu		DANTISYOn
 damye	DAMYE		DAnTISYOn
 dan	DAN		DANTISYON
 	DAn	dantrit	DANTRIT
-d√†ne	DANE		DAnTRIT
+d‡ne	DANE		DAnTRIT
 danfans	DANFANS	danwezo	DANWEZO
 	DAnFAnS	dap	DAP
 	DAnFANS	dapiyanp	DAPIYANP
@@ -1946,7 +1946,7 @@ dekadans - delaskazas
 
 	DEKADANS		DEKONPOZE
 dekafeyine	DEKAFEYINE	dekonpozisyon	DEKOnPOZISYON
-dekag√≤n	DEKAGON		DEKONPOZISYOn
+dekagÚn	DEKAGON		DEKONPOZISYOn
 dekalaj	DEKALAJ		DEKOnPOZISYOn
 dekale	DEKALE		DEKONPOZISYON
 dekalke	DEKALKE	dekonstonbre	DEKONSTOnBRE
@@ -2097,7 +2097,7 @@ depaman	DEPAMAn	deploge	DEPLOGE
 	DEPAMAN	deplotonnen	DEPLOTOnNEN
 depan	DEPAn		DEPLOTONNEn
 	DEPAN		DEPLOTOnNEn
-dep√†ne	DEPANE		DEPLOTONNEN
+dep‡ne	DEPANE		DEPLOTONNEN
 depann	DEPAnN	deploye	DEPLOYE
 	DEPANN	deplozay	DEPLOZAY
 depannen	DEPAnNEn	depo	DEPO
@@ -2108,7 +2108,7 @@ depotchire - desizyonbilize
 
 depotchire	DEPOTChIRE	desale	DESALE
 depote	DEPOTE	desalin	DESALIN
-depotwa	DEPOTWA	desaliny√®n	DESALINYEN
+depotwa	DEPOTWA	desalinyËn	DESALINYEN
 depouyman	DEPOuYMAn	desam	DESAM
 	DEPOuYMAN	desan	DESAN
 depoze	DEPOZE		DESAn
@@ -2389,7 +2389,7 @@ distenksyon	DISTEnKSYON	dizan	DIZAn
 	DISTEnKSYOn		DIZAN
 	DISTENKSYOn	dize	DIZE
 	DISTENKSYON	dizel	DIZEL
-distilasyon	DISTILASYON	diz√®n	DIZEN
+distilasyon	DISTILASYON	dizËn	DIZEN
 	DISTILASYOn	dizet	DIZET
 distilate	DISTILATE	dizon	DIZOn
 distile	DISTILE		DIZON
@@ -2444,7 +2444,7 @@ djok	DJOK	domaj	DOMAJ
 djoke	DJOKE	domaje	DOMAJE
 djol	DJOL	domajman	DOMAJMAn
 djole	DJOLE		DOMAJMAN
-djololo	DJOLOLO	dom√®n	DOMEN
+djololo	DJOLOLO	domËn	DOMEN
 djolpave	DJOLPAVE	domeng	DOMENG
 djolsot	DJOLSOT		DOMEnG
 djondjon	DJOnDJON		DOMENg
@@ -2495,7 +2495,7 @@ donte	DOnTE	douyon	DOuYON
 dony	DONY	douz	DOuZ
 dore	DORE	douzan	DOuZAN
 doret	DORET		DOuZAn
-dorisme	DORISME	douz√®n	DOuZEN
+dorisme	DORISME	douzËn	DOuZEN
 dosa	DOSA	douzyem	DOuZYEM
 dosenvil	DOSEnVIL	doz	DOZ
 	DOSENVIL	dozado	DOZADO
@@ -2585,7 +2585,7 @@ dyaspora	DYASPORA	echwe	EChWE
 dyatom	DYATOM	ed	ED
 dyayi	DYAYI	ede	EDE
 dyaz	DYAZ	edem	EDEM
-dyazdej√®n	DYAZDEJEN	eden	EDEn
+dyazdejËn	DYAZDEJEN	eden	EDEn
 dye	DYE		EDEN
 dyedone	DYEDONE	edifis	EDIFIS
 dyet	DYET	edifye	EDIFYE
@@ -2628,7 +2628,7 @@ egoyin	EGOYIN	ekilibre	EKILIBRE
 egoyis	EGOYIS	ekimenik	EKIMENIK
 egui	EGUi	ekip	EKIP
 egwi	EGWI	ekipay	EKIPAY
-egzag√≤n	EGZAGON	ekipe	EKIPE
+egzagÚn	EGZAGON	ekipe	EKIPE
 egzaktitid	EGZAKTITID	ekipman	EKIPMAn
 egzamen	EGZAMEn		EKIPMAN
 	EGZAMEN	ekirey	EKIREY
@@ -2668,8 +2668,8 @@ ekose	EKOSE		EKSTEMINASYOn
 ekosistem	EKOSISTEM	ekstemine	EKSTEMINE
 ekou	EKOu	eksteminen	EKSTEMINEN
 ekoulman	EKOuLMAN		EKSTEMINEn
-	EKOuLMAn	ekst√®n	EKSTEN
-ekoute	EKOuTE	ekst√®na	EKSTENA
+	EKOuLMAn	ekstËn	EKSTEN
+ekoute	EKOuTE	ekstËna	EKSTENA
 ekran	EKRAn	eksterye	EKSTERYE
 	EKRAN	ekstra	EKSTRA
 ekri	EKRI	ekstraodine	EKSTRAODINE
@@ -2685,7 +2685,7 @@ eksepsyon	EKSEPSYON	ekwatoryen	EKWATORYEN
 	EKSEPSYOn		EKWATORYEn
 eksepte	EKSEPTE	ekwilateral	EKWILATERAL
 eksetera	EKSETERA	ekwou	EKWOu
-eksitan	EKSITAN	ekzag√≤n	EKZAGON
+eksitan	EKSITAN	ekzagÚn	EKZAGON
 	EKSITAn	ekzajerasyon	EKZAJERASYON
 eksitasyon	EKSITASYON		EKZAJERASYOn
 	EKSITASYOn	ekzajere	EKZAJERE
@@ -3030,7 +3030,7 @@ entelijans	ENTELIJANS		ENVAZYOn
 	EnTELIJAnS		EnVAZYON
 	ENTELIJAnS	enves	ENVES
 	EnTELIJANS		EnVES
-ent√®n	EnTEN	envesti	ENVESTI
+entËn	EnTEN	envesti	ENVESTI
 	ENTEN		EnVESTI
 entene	EnTENE	envestige	ENVESTIGE
 	ENTENE		EnVESTIGE
@@ -3162,7 +3162,7 @@ estonmake	ESTONMAKE	etoudisman	ETOuDISMAn
 	ESTOnMAKE		ETOuDISMAN
 estrabojet	ESTRABOJET	etoufman	ETOuFMAn
 estrateji	ESTRATEJI		ETOuFMAN
-estwoj√®n	ESTWOJEN	etranj	ETRAnJ
+estwojËn	ESTWOJEN	etranj	ETRAnJ
 estwok	ESTWOK		ETRANJ
 estwopye	ESTWOPYE	etranje	ETRANJE
 estyem	ESTYEM		ETRAnJE
@@ -3175,7 +3175,7 @@ etamin	ETAMIN	etwat	ETWAT
 etan	ETAn	etyo	ETYO
 	ETAN	etyopyen	ETYOPYEN
 etandi	ETAnDI		ETYOPYEn
-	ETANDI	etzy√®n	ETZYEN
+	ETANDI	etzyËn	ETZYEN
 etandone	ETAnDONE	ev	EV
 	ETANDONE	evaliyasyon	EVALIYASYON
 etandot	ETAnDOT		EVALIYASYOn
@@ -3287,17 +3287,17 @@ febles	FEBLES	fennen	FENNEN
 febli	FEBLI		FEnNEn
 fedatifis	FEDATIFIS		FEnNEN
 fedkan	FEDKAn		FENNEn
-	FEDKAN	fenom√®n	FENOMEN
+	FEDKAN	fenomËn	FENOMEN
 fefe	FEFE	fent	FENT
 fefoje	FEFOJE		FEnT
 fek	FEK	fente	FENTE
 fekal	FEKAL		FEnTE
-f√®nwa - fizyoterapi
+fËnwa - fizyoterapi
 
-f√®nwa	FENWA	file	FILE
-f√®nwe	FENWE	filfe	FILFE
+fËnwa	FENWA	file	FILE
+fËnwe	FENWE	filfe	FILFE
 fenyan	FENYAN	filo	FILO
-	FENYAn	filoj√®n	FILOJEN
+	FENYAn	filojËn	FILOJEN
 feray	FERAY	filozof	FILOZOF
 feraye	FERAYE	filozofi	FILOZOFI
 fere	FERE	filt	FILT
@@ -3485,7 +3485,7 @@ franketyen	FRAnKETYEN		FREKANSITE
 	FRANKETYEN	frekantasyon	FREKANTASYOn
 	FRANKETYEn		FREKAnTASYOn
 	FRAnKETYEn		FREKAnTASYON
-frankof√≤n	FRAnKOFON		FREKANTASYON
+frankofÚn	FRAnKOFON		FREKANTASYON
 	FRANKOFON	frekante	FREKAnTE
 franmason	FRAnMASON		FREKANTE
 	FRANMASOn	frel	FREL
@@ -3651,7 +3651,7 @@ gentan	GENTAn	glasi	GLASI
 	GEnTAN	glasye	GLASYE
 genyen	GENYEN	glayel	GLAYEL
 gep	GEP	gle	GLE
-geradi	GERADI	glikoj√®n	GLIKOJEN
+geradi	GERADI	glikojËn	GLIKOJEN
 geri	GERI	glikoz	GLIKOZ
 gerise	GERISE	glisad	GLISAD
 gerit	GERIT	glisan	GLISAN
@@ -3704,7 +3704,7 @@ gon	GOn	gouvenant	GOuVENAnT
 	GON		GOuVENANT
 gonad	GONAD	gouvenay	GOuVENAY
 gonayivyen	GONAYIVYEN	gouvenen	GOuVENEN
-	GONAYIVYEn	gouv√®nman	GOuVENMAN
+	GONAYIVYEn	gouvËnman	GOuVENMAN
 gonbo	GONBO		GOuVENMAn
 	GOnBO	gouyad	GOuYAD
 gondole	GONDOLE	gouyav	GOuYAV
@@ -3784,7 +3784,7 @@ grenadin	GRENADIN	gridap	GRIDAP
 grenadya	GRENADYA	grif	GRIF
 grengole	GREnGOLE	grife	GRIFE
 	GRENGOLE	grifin	GRIFIN
-grenn	GREnN	grif√≤n	GRIFON
+grenn	GREnN	grifÚn	GRIFON
 	GRENN	grifonn	GRIFOnN
 grenna	GREnNA		GRIFONN
 	GRENNA	grifonnen	GRIFOnNEN
@@ -3820,7 +3820,7 @@ grennpwomennen	GRENNPWOMEnNEN		GRIZONEn
 	GRENNPWOMENNEN	gwadloupeyen	GWADLOuPEYEn
 	GRENNPWOMEnNEn		GWADLOuPEYEN
 	GREnNPWOMENNEn	gwakanagarik	GWAKANAGARIK
-grenouy	GRENOuY	gw√†n	GWAN
+grenouy	GRENOuY	gw‡n	GWAN
 grenpe	GRENPE	gwano	GWANO
 	GREnPE	gwaryoneks	GWARYONEKS
 grenye	GRENYE	gwat	GWAT
@@ -3860,13 +3860,13 @@ gwoupman	GWOuPMAn	idolatri	IDOLATRI
 gwouyad	GWOuYAD	idravyon	IDRAVYOn
 gwouye	GWOuYE		IDRAVYON
 gwovant	GWOVAnT	idwoelektrik	IDWOELEKTRIK
-	GWOVANT	idwoj√®n	IDWOJEN
+	GWOVANT	idwojËn	IDWOJEN
 gyonnen	GYONNEN	idwolik	IDWOLIK
 	GYOnNEN	idwomet	IDWOMET
 	GYONNEn	idwosfe	IDWOSFE
 	GYOnNEn	idyom	IDYOM
 ha	HA	igreg	IGREG
-had	HAD	igw√†n	IGWAN
+had	HAD	igw‡n	IGWAN
 han	HAn	igwann	IGWANN
 	HAN		IGWAnN
 hanch	HAnCh	igwe	IGWE
@@ -3874,7 +3874,7 @@ hanch	HAnCh	igwe	IGWE
 hanm	HAnM		IJAN
 	HANM	ijans	IJAnS
 haoussa	HAOuSSA		IJANS
-hap	HAP	ijy√®n	IJYEN
+hap	HAP	ijyËn	IJYEN
 hele	HELE	ijyenik	IJYENIK
 hen	HEN	ijyenn	IJYENN
 	HEn		IJYEnN
@@ -3898,7 +3898,7 @@ ilizyon	ILIZYON	inoganik	INOGANIK
 	ILIZYOn	inogirasyon	INOGIRASYOn
 ilse	ILSE		INOGIRASYON
 iltimatom	ILTIMATOM	inogire	INOGIRE
-iltra	ILTRA	in√≤n	INON
+iltra	ILTRA	inÚn	INON
 im	IM	inondasyon	INOnDASYOn
 imaj	IMAJ		INONDASYOn
 imajinasyon	IMAJINASYON		INOnDASYON
@@ -4031,7 +4031,7 @@ japonez	JAPONEZ	jeni	JENI
 japwouv	JAPWOuV	jenifleksyon	JENIFLEKSYOn
 jare	JARE		JENIFLEKSYON
 jaret	JARET	jenital	JENITAL
-jasmen	JASMEn	j√®njan	JENJAn
+jasmen	JASMEn	jËnjan	JENJAn
 	JASMEN		JENJAN
 jasmendenwi	JASMENDENWI	jenjanbret	JEnJANBRET
 	JASMEnDENWI		JEnJAnBRET
@@ -4121,7 +4121,7 @@ jolye	JOLYE	jwez	JWEZ
 jon	JOn	jwi	JWI
 	JON	jwif	JWIF
 jonas	JONAS	jwiferan	JWIFERAN
-j√≤ndef	JONDEF		JWIFERAn
+jÚndef	JONDEF		JWIFERAn
 jongle	JOnGLE	jwisans	JWISANS
 	JONGLE		JWISAnS
 joni	JONI	jwise	JWISE
@@ -4130,7 +4130,7 @@ jonjol	JONJOL	ka	KA
 	JOnJOL	kab	KAB
 jonn	JOnN	kaba	KABA
 	JONN	kabann	KABAnN
-j√≤nze	JONZE		KABANN
+jÚnze	JONZE		KABANN
 jou	JOu	kabare	KABARE
 joubabye	JOuBABYE	kabasik	KABASIK
 jouda	JOuDA	kabes	KABES
@@ -4140,7 +4140,7 @@ joujou	JOuJOu	kabine	KABINE
 jouk	JOuK	kabirate	KABIRATE
 jouke	JOuKE	kabo	KABO
 jouktan	JOuKTAn	kaboch	KABOCh
-	JOuKTAN	kab√≤n	KABON
+	JOuKTAN	kabÚn	KABON
 joul	JOuL	kabose	KABOSE
 jouman	JOuMAN	kabotaj	KABOTAJ
 	JOuMAn	kaboulaw	KABOuLAW
@@ -4208,7 +4208,7 @@ kakaye	KAKAYE	kalson	KALSON
 kaki	KAKI		KALSOn
 kako	KAKO	kalsyom	KALSYOM
 kakofoni	KAKOFONI	kalte	KALTE
-kak√≤n	KAKON	kalve	KALVE
+kakÚn	KAKON	kalve	KALVE
 kaktis	KAKTIS	kalven	KALVEN
 kalven - kannivo
 
@@ -4266,7 +4266,7 @@ kanje	KAnJE	kannivo	KANNIVO
 	KANJE		KAnNIVO
 kanno - karapat
 
-kanno	KANNO	kapit√®n	KAPITEN
+kanno	KANNO	kapitËn	KAPITEN
 	KAnNO	kapitenn	KAPITENN
 kannot	KAnNOT		KAPITEnN
 	KANNOT	kapitile	KAPITILE
@@ -4304,7 +4304,7 @@ kanton	KANTOn	karaf	KARAF
 	KAnTON	karako	KARAKO
 	KAnTOn	karakte	KARAKTE
 	KANTON	karakteristik	KARAKTERISTIK
-k√†nva	KANVA	karamel	KARAMEL
+k‡nva	KANVA	karamel	KARAMEL
 kanyank	KANYANK	karang	KARANg
 kanzo	KANZO		KARAnG
 	KAnZO		KARANG
@@ -4372,9 +4372,9 @@ kataplas	KATAPLAS	kawotchou	KAWOTChOu
 katapoli	KATAPOLI	kawotchoumann	KAWOTChOuMANN
 katarat	KATARAT		KAWOTChOuMAnN
 katastwof	KATASTWOF	kawote	KAWOTE
-kawot√®n - kibod
+kawotËn - kibod
 
-kawot√®n	KAWOTEN	kenkay	KENKAY
+kawotËn	KAWOTEN	kenkay	KENKAY
 kawotid	KAWOTID		KEnKAY
 kay	KAY	kenkayri	KENKAYRI
 kaya	KAYA		KEnKAYRI
@@ -4389,8 +4389,8 @@ kayimit	KAYIMIT		KENP
 kazak	KAZAK	kente	KEnTE
 kazanye	KAZANYE		KENTE
 kaze	KAZE	kenz	KENZ
-kaz√®n	KAZEN		KEnZ
-kazimi	KAZIMI	kenz√®n	KENZEN
+kazËn	KAZEN		KEnZ
+kazimi	KAZIMI	kenzËn	KENZEN
 kazimodo	KAZIMODO		KEnZEN
 kazino	KAZINO	kenzyem	KENZYEM
 kazo	KAZO		KEnZYEM
@@ -4569,7 +4569,7 @@ komande	KOMAnDE	komod	KOMOD
 	KOMANDE	komokoy	KOMOKOY
 komandman	KOMANDMAN	komokyel	KOMOKYEL
 	KOMAnDMAn	komsi	KOMSI
-	KOMANDMAn	k√≤n	KON
+	KOMANDMAn	kÚn	KON
 	KOMAnDMAN	konba	KONBA
 komanman	KOMANMAN		KOnBA
 	KOMAnMAn	konbat	KOnBAT
@@ -4629,7 +4629,7 @@ kondon	KOnDON		KOnFISKE
 kondui	KONDUi		KONFIZYOn
 	KOnDUi		KOnFIZYON
 konduit	KONDUiT		KONFIZYON
-	KOnDUiT	k√≤nfleks	KONFLEKS
+	KOnDUiT	kÚnfleks	KONFLEKS
 kone	KONE	konfli	KONFLI
 koneksyon	KONEKSYON		KOnFLI
 konen	KONEN	konfo	KONFO
@@ -4899,7 +4899,7 @@ konyen	KONYEn	koteks	KOTEKS
 	KONYEN	kotibanama	KOTIBANAMA
 konze	KONZE	kotizasyon	KOTIZASYON
 	KOnZE		KOTIZASYOn
-kopelo	KOPELO	kotiz√≤n	KOTIZON
+kopelo	KOPELO	kotizÚn	KOTIZON
 kopen	KOPEN	koton	KOTOn
 	KOPEn		KOTON
 kopi	KOPI	kotri	KOTRI
@@ -4942,7 +4942,7 @@ koumanman	KOuMAnMAn	kouve	KOuVE
 koumanse	KOuMAnSE	kouvri	KOuVRI
 	KOuMANSE	kouwa	KOuWA
 koumbit	KOuMBIT	kouwe	KOuWE
-kounan	KOuNAN	kouw√≤n	KOuWON
+kounan	KOuNAN	kouwÚn	KOuWON
 	KOuNAn	kouyan	KOuYAN
 kounou	KOuNOu		KOuYAn
 kounouk	KOuNOuK	kouzen	KOuZEN
@@ -5013,7 +5013,7 @@ kreson	KRESOn	krizo	KRIZO
 kret	KRET	kui	KUi
 kreten	KRETEN	kuipe	KUiPE
 	KRETEn	kuis	KUiS
-kret√≤n	KRETON	kuit	KUiT
+kretÚn	KRETON	kuit	KUiT
 kretyen	KRETYEn	kuiv	KUiV
 	KRETYEN	kuizin	KUiZIN
 kretyenvivan	KRETYENVIVAn	kuizinye	KUiZINYE
@@ -5084,7 +5084,7 @@ lademann	LADEMANN	lajeng	LAJENG
 	LADEMAnN		LAJEnG
 ladennye	LADEnNYE		LAJENg
 	LADENNYE	lajes	LAJES
-ladesaliny√®n	LADESALINYEN	laji	LAJI
+ladesalinyËn	LADESALINYEN	laji	LAJI
 ladesant	LADESAnT	lajistis	LAJISTIS
 	LADESANT	lajonis	LAJONIS
 ladouyet	LADOuYET	lajounen	LAJOuNEN
@@ -5196,7 +5196,7 @@ lantiy	LAnTIY	laseg	LASEG
 	LANTIY	lasel	LASEL
 lantman	LANTMAN	lasent	LASENT
 	LAnTMAn		LASEnT
-	LANTMAn	lasents√®n	LASENTSEN
+	LANTMAn	lasentsËn	LASENTSEN
 	LAnTMAN		LASEnTSEN
 lantouraj	LANTOuRAJ	laset	LASET
 	LAnTOuRAJ	lasi	LASI
@@ -5229,7 +5229,7 @@ lapye	LAPYE		LATEnG
 laraj	LARAJ		LATENg
 larak	LARAK	lateras	LATERAS
 larat	LARAT	latere	LATERE
-lar√®n	LAREN	latitid	LATITID
+larËn	LAREN	latitid	LATITID
 larenks	LARENKS	latonm	LATONM
 	LAREnKS		LATOnM
 larezonnen	LAREZONNEN	latoti	LATOTI
@@ -5287,7 +5287,7 @@ laye	LAYE		LEMOnN
 layens	LAYENS	lemouch	LEMOuCh
 	LAYEnS	lemwan	LEMWAN
 layite	LAYITE		LEMWAn
-layo	LAYO	l√®n	LEN
+layo	LAYO	lËn	LEN
 laza	LAZA	lendeks	LEnDEKS
 le	LE		LENDEKS
 lendependans - li
@@ -5357,7 +5357,7 @@ ligaman	LIGAMAN	lizaj	LIZAJ
 	LIGAMAn	lizib	LIZIB
 ligonde	LIGONDE	lizin	LIZIN
 	LIGOnDE	lizre	LIZRE
-lijy√®n	LIJYEN	lizye	LIZYE
+lijyËn	LIJYEN	lizye	LIZYE
 like	LIKE	lo	LO
 likid	LIKID	lobedyans	LOBEDYAnS
 lim	LIM		LOBEDYANS
@@ -5383,7 +5383,7 @@ listre	LISTRE	lolo	LOLO
 listwa	LISTWA	loloj	LOLOJ
 lit	LIT	loloy	LOLOY
 litani	LITANI	lom	LOM
-lite	LITE	l√≤n	LON
+lite	LITE	lÚn	LON
 liten	LITEn	lonbraj	LOnBRAJ
 	LITEN		LONBRAJ
 literati	LITERATI	lonbray	LOnBRAY
@@ -5461,7 +5461,7 @@ madan	MADAN	make	MAKE
 madanm	MADANM	makiyaj	MAKIYAJ
 	MADAnM	makiye	MAKIYE
 made	MADE	maklouklou	MAKLOuKLOu
-madede	MADEDE	mak√≤n	MAKON
+madede	MADEDE	makÚn	MAKON
 mader	MADER	makonel	MAKONEL
 madi	MADI	makonnen	MAKOnNEn
 madichon	MADIChOn		MAKOnNEN
@@ -5498,7 +5498,7 @@ majistra	MAJISTRA		MALChAnS
 majisyen	MAJISYEN	maldjok	MALDJOK
 	MAJISYEn	maldyok	MALDYOK
 majo	MAJO	male	MALE
-majol√®n	MAJOLEN	malediksyon	MALEDIKSYOn
+majolËn	MAJOLEN	malediksyon	MALEDIKSYOn
 majorite	MAJORITE		MALEDIKSYON
 mak	MAK	malefik	MALEFIK
 makak	MAKAK	malefis	MALEFIS
@@ -5512,7 +5512,7 @@ maleng - mangousa
 malere	MALERE		MANBA
 malerez	MALEREZ	manbo	MAnBO
 malet	MALET		MANBO
-maleyab	MALEYAB	manbr√†n	MAnBRAN
+maleyab	MALEYAB	manbr‡n	MAnBRAN
 malfekte	MALFEKTE		MANBRAN
 malfezan	MALFEZAN	manbre	MAnBRE
 	MALFEZAn		MANBRE
@@ -5702,7 +5702,7 @@ medsen	MEDSEN	menaje	MENAJE
 medsin	MEDSIN		MENDEL
 medsiyen	MEDSIYEN	mendev	MEnDEV
 	MEDSIYEn		MENDEV
-medy√†n	MEDYAN	menenj	MENENJ
+medy‡n	MEDYAN	menenj	MENENJ
 medyok	MEDYOK	menenjit	MENENJIT
 medyom	MEDYOM	mengi	MEnGI
 mefyan	MEFYAn		MENGI
@@ -5734,7 +5734,7 @@ mereng	MEREnG		MIDOnNEN
 	MERENg		MIDONNEn
 	MERENG	migrasyon	MIGRASYOn
 meri	MERI		MIGRASYON
-meriken	MERIKEN	migr√®n	MIGREN
+meriken	MERIKEN	migrËn	MIGREN
 	MERIKEn	mikalaw	MIKALAW
 merilan	MERILAn	mikis	MIKIS
 	MERILAN	mikwob	MIKWOB
@@ -5751,7 +5751,7 @@ metakap	METAKAP		MILISYEN
 metal	METAL	milite	MILITE
 metalik	METALIK	militon	MILITOn
 metamofoz	METAMOFOZ		MILITON
-met√†n	METAN	milpat	MILPAT
+met‡n	METAN	milpat	MILPAT
 metdam	METDAM	milpye	MILPYE
 mete	METE	miltiplikasyon	MILTIPLIKASYOn
 metelis	METELIS		MILTIPLIKASYON
@@ -5784,7 +5784,7 @@ miraj	MIRAJ	mode	MODE
 mirak	MIRAK	model	MODEL
 miray	MIRAY	modelage	MODELAGE
 mirvil	MIRVIL	modem	MODEM
-mis	MIS	mod√®n	MODEN
+mis	MIS	modËn	MODEN
 miskad	MISKAD	moderasyon	MODERASYON
 miskaden	MISKADEN		MODERASYOn
 	MISKADEn	moderate	MODERATE
@@ -5805,7 +5805,7 @@ mitasyon	MITASYOn	molokoy	MOLOKOY
 	MITASYON	mololo	MOLOLO
 mitin	MITIN	moman	MOMAN
 miting	MITINg		MOMAn
-	MITING	m√≤n	MON
+	MITING	mÚn	MON
 mitokondri	MITOKONDRI	monachi	MONAChI
 	MITOKOnDRI	monaste	MONASTE
 mitoz	MITOZ	monben	MONBEN
@@ -5895,7 +5895,7 @@ mozole	MOZOLE		NANDOMI
 msye	MSYE	nanfi	NAnFI
 mwa	MWA		NANFI
 mwal	MWAL	nanlandmen	NAnLANDMEn
-mw√†n	MWAN		NANLANDMEn
+mw‡n	MWAN		NANLANDMEn
 mwason	MWASOn		NAnLAnDMEN
 	MWASON		NANLAnDMEN
 mwatye	MWATYE		NANLANDMEN
@@ -5924,7 +5924,7 @@ myo	MYO	nap	NAP
 myop	MYOP	napkin	NAPKIN
 na	NA	napwon	NAPWOn
 nadmarinad	NADMARINAD		NAPWON
-naftal√®n	NAFTALEN	nas	NAS
+naftalËn	NAFTALEN	nas	NAS
 naj	NAJ	nasyon	NASYOn
 naje	NAJE		NASYON
 najwa	NAJWA	nasyonal	NASYONAL
@@ -5949,9 +5949,9 @@ navigasyon	NAVIGASYOn		NETWON
 navigate	NAVIGATE		NEVAN
 navige	NAVIGE	neve	NEVE
 nayif	NAYIF	neven	NEVEN
-nayil√≤n	NAYILON		NEVEn
+nayilÚn	NAYILON		NEVEn
 naykleb	NAYKLEB	nevyem	NEVYEM
-nayklib	NAYKLIB	new√≤n	NEWON
+nayklib	NAYKLIB	newÚn	NEWON
 ne	NE	neye	NEYE
 nechel	NEChEL	ngangan	NGAnGAn
 nef	NEF		NGANGAn
@@ -5976,7 +5976,7 @@ neko	NEKO		NITRISYOn
 nekta	NEKTA	nitritif	NITRITIF
 nektarin	NEKTARIN	nitriyan	NITRIYAn
 nemoni	NEMONI		NITRIYAN
-nemou	NEMOu	nitwoj√®n	NITWOJEN
+nemou	NEMOu	nitwojËn	NITWOJEN
 nen	NEn	nivo	NIVO
 	NEN	no	NO
 nenenn	NENENN	nob	NOB
@@ -5992,9 +5992,9 @@ nesans	NESANS		NOMALYEN
 	NESAnS	nomil	NOMIL
 nesese	NESESE	non	NOn
 nesesite	NESESITE		NON
-nonag√≤n - ogisten
+nonagÚn - ogisten
 
-nonag√≤n	NONAGON	obeyisan	OBEYISAn
+nonagÚn	NONAGON	obeyisan	OBEYISAn
 nonbrit	NOnBRIT		OBEYISAN
 	NONBRIT	obezite	OBEZITE
 nonk	NONK	obit	OBIT
@@ -6038,7 +6038,7 @@ nwayo	NWAYO	ofisye	OFISYE
 nwel	NWEL	ofisyel	OFISYEL
 nyaj	NYAJ	ofri	OFRI
 nye	NYE	og	OG
-nyes	NYES	og√†n	OGAN
+nyes	NYES	og‡n	OGAN
 nyez	NYEZ	oganel	OGANEL
 nyouwann	NYOuWAnN	oganis	OGANIS
 	NYOuWANN	oganize	OGANIZE
@@ -6072,9 +6072,9 @@ okouran	OKOuRAN		ONZ
 	OKOuRAn	onze	OnZE
 oksidasyon	OKSIDASYON		ONZE
 	OKSIDASYOn	onzyem	OnZYEM
-oksij√®n	OKSIJEN		ONZYEM
+oksijËn	OKSIJEN		ONZYEM
 oksijene	OKSIJENE	opa	OPA
-oktag√≤n	OKTAGON	opak	OPAK
+oktagÚn	OKTAGON	opak	OPAK
 oktayed	OKTAYED	opale	OPALE
 oktob	OKTOB	operasyon	OPERASYOn
 ola	OLA		OPERASYON
@@ -6094,7 +6094,7 @@ omaj	OMAJ	opresyon	OPRESYOn
 omeli	OMELI		OPRESYON
 omnivo	OMNIVO	opsyon	OPSYOn
 omo	OMO		OPSYON
-om√≤n	OMON	optik	OPTIK
+omÚn	OMON	optik	OPTIK
 omoplat	OMOPLAT	optimis	OPTIMIS
 omwen	OMWEn	optometris	OPTOMETRIS
 	OMWEN	opyom	OPYOM
@@ -6119,7 +6119,7 @@ orezon	OREZON	otoklav	OTOKLAV
 orife	ORIFE	otomatikman	OTOMATIKMAN
 orijin	ORIJIN		OTOMATIKMAn
 orikile	ORIKILE	otomobil	OTOMOBIL
-orizontal	ORIZONTAL	ot√≤nn	OTONN
+orizontal	ORIZONTAL	otÚnn	OTONN
 	ORIZOnTAL	otonom	OTONOM
 oryan	ORYAN	otonomi	OTONOMI
 	ORYAn	otopedi	OTOPEDI
@@ -6208,7 +6208,7 @@ padone	PADONE	palto	PALTO
 padonnen	PADONNEN	palwa	PALWA
 	PADOnNEn	pami	PAMI
 	PADOnNEN	pan	PAn
-pan - papap
+pan - paparamo
 
 	PAN	pans	PANS
 panameyen	PANAMEYEn		PAnS
@@ -6258,18 +6258,18 @@ pannkot	PANNKOT	panzouyis	PANZOuYIS
 	PAnNKOT		PAnZOuYIS
 panno	PAnNO	pap	PAP
 	PANNO	papa	PAPA
-panpan	PAnPAN	papadap	PAPADAP
-	PANPAN	papadok	PAPADOK
-	PANPAn	papalwa	PAPALWA
-	PAnPAn	papap	PAPAP
-paparamo - patwon
+panpan	PAnPAN	papadok	PAPADOK
+	PANPAN	papalwa	PAPALWA
+	PANPAn	papap	PAPAP
+	PAnPAn	paparamo	PAPARAMO
+papay - patwon
 
-paparamo	PAPARAMO	pase	PASE
-papay	PAPAY	pasifik	PASIFIK
-papiy	PAPIY	pasifikman	PASIFIKMAN
-papiyon	PAPIYON		PASIFIKMAn
-	PAPIYOn	pasifye	PASIFYE
-papot	PAPOT	pasipala	PASIPALA
+papay	PAPAY	pase	PASE
+papiy	PAPIY	pasifik	PASIFIK
+papiyon	PAPIYON	pasifikman	PASIFIKMAN
+	PAPIYOn		PASIFIKMAn
+papot	PAPOT	pasifye	PASIFYE
+pappadap	PAPPADAP	pasipala	PASIPALA
 papye	PAPYE	paske	PASKE
 papzaka	PAPZAKA	paspo	PASPO
 parabol	PARABOL	paspouki	PASPOuKI
@@ -6308,7 +6308,7 @@ parey	PAREY	patisipe	PATISIPE
 pari	PARI	patisri	PATISRI
 parizo	PARIZO	patizan	PATIZAN
 paryaj	PARYAJ		PATIZAn
-paryay	PARYAY	patoj√®n	PATOJEN
+paryay	PARYAY	patojËn	PATOJEN
 parye	PARYE	patou	PATOu
 pas	PAS	patripoch	PATRIPOCh
 pasab	PASAB	patriyot	PATRIYOT
@@ -6415,12 +6415,12 @@ pense	PENSE	pesimis	PESIMIS
 penset	PENSET		PESISTAn
 	PEnSET	pesiste	PESISTE
 penso	PEnSO	pesmeke	PESMEKE
-	PENSO	pes√≤n	PESON
+	PENSO	pesÚn	PESON
 pent	PEnT	pesonaj	PESONAJ
 	PENT	pesonalite	PESONALITE
 pentad	PEnTAD	pesonel	PESONEL
 	PENTAD	pesonn	PESONN
-pentag√≤n	PENTAGON		PESOnN
+pentagÚn	PENTAGON		PESOnN
 	PEnTAGON	pesonnaj	PESONNAJ
 penti	PEnTI		PESOnNAJ
 	PENTI	pesonnay	PESONNAY
@@ -6429,7 +6429,7 @@ pesonnay - pip
 	PESOnNAY	pichpich	PIChPICh
 pespektiv	PESPEKTIV	pide	PIDE
 pestisid	PESTISID	pidetwal	PIDETWAL
-pesy√®n	PESYEN	pifo	PIFO
+pesyËn	PESYEN	pifo	PIFO
 pet	PET	piga	PIGA
 peta	PETA	pigman	PIGMAn
 petado	PETADO		PIGMAN
@@ -6563,7 +6563,7 @@ plenn	PLENN	poban	POBAn
 	PLEnN		POBAN
 plent	PLEnT	poblem	POBLEM
 	PLENT	poch	POCh
-plenyado	PLENYADO	poch√®n	POChEN
+plenyado	PLENYADO	pochËn	POChEN
 plenyen	PLENYEN	pochri	POChRI
 plerezi	PLEREZI	podnui	PODNUi
 pletil	PLETIL	podyab	PODYAB
@@ -6578,11 +6578,11 @@ plimen	PLIMEN	pol	POL
 	PLIMEn	pole	POLE
 plimje	PLIMJE	polemik	POLEMIK
 plimo	PLIMO	polemis	POLEMIS
-plipplip	PLIPPLIP	pol√®n	POLEN
+plipplip	PLIPPLIP	polËn	POLEN
 plis	PLIS	poli	POLI
 plise	PLISE	poligam	POLIGAM
 pliske	PLISKE	poliglot	POLIGLOT
-plit	PLIT	polig√≤n	POLIGON
+plit	PLIT	poligÚn	POLIGON
 pliton	PLITON	polikopye	POLIKOPYE
 	PLITOn	polinizasyon	POLINIZASYON
 pliye	PLIYE		POLINIZASYOn
@@ -6612,7 +6612,7 @@ pomad	POMAD	popilasyon	POPILASYOn
 pomdete	POMDETE		POPILASYON
 pomerak	POMERAK	popile	POPILE
 pon	POn	popilis	POPILIS
-	PON	popk√≤n	POPKON
+	PON	popkÚn	POPKON
 ponch	PONCh	poplin	POPLIN
 	POnCh	popouri	POPOuRI
 pongongon	POnGOnGOn	popye	POPYE
@@ -6757,7 +6757,7 @@ priz	PRIZ	pwobab	PWOBAB
 prizon	PRIZON	pwobabilite	PWOBABILITE
 	PRIZOn	pwoblem	PWOBLEM
 prizonye	PRIZONYE	pwoche	PWOChE
-pwa	PWA	pwoch√®n	PWOChEN
+pwa	PWA	pwochËn	PWOChEN
 pwal	PWAL	pwodig	PWODIG
 pwasenkant	PWASEnKANT	pwodiksyon	PWODIKSYON
 	PWASENKAnT		PWODIKSYOn
@@ -7194,7 +7194,7 @@ sakrilej	SAKRILEJ		SANBLAn
 sakristen	SAKRISTEN		SAnBLAN
 	SAKRISTEn	sanble	SANBLE
 sakristi	SAKRISTI		SAnBLE
-saksof√≤n	SAKSOFON	sandal	SAnDAL
+saksofÚn	SAKSOFON	sandal	SAnDAL
 sal	SAL		SANDAL
 salad	SALAD	sandes	SAnDES
 salamanje	SALAMANJE		SANDES
@@ -7277,7 +7277,7 @@ santans	SANTANS		SAVAnN
 	SAnTANS		SAVEn
 sante	SAnTE	savon	SAVOn
 	SANTE		SAVON
-sant√®n	SANTEN	savonnen	SAVONNEN
+santËn	SANTEN	savonnen	SAVONNEN
 	SAnTEN		SAVONNEn
 santi	SANTI		SAVOnNEn
 	SAnTI		SAVOnNEN
@@ -7304,7 +7304,7 @@ segonde	SEGOnDE		SEMANTE
 	SEGONDE	semantik	SEMAnTIK
 segonn	SEGONN		SEMANTIK
 	SEGOnN	semel	SEMEL
-sejan	SEJAN	sem√®n	SEMEN
+sejan	SEJAN	semËn	SEMEN
 	SEJAn	semes	SEMES
 sejousi	SEJOuSI	semestriyel	SEMESTRIYEL
 sek	SEK	semi	SEMI
@@ -7390,7 +7390,7 @@ senti	SENTI	sevel	SEVEL
 	SEnTI	severite	SEVERITE
 sentiwon	SEnTIWOn	sevi	SEVI
 	SENTIWOn	sevis	SEVIS
-	SEnTIWON	sevisdijy√®n	SEVISDIJYEN
+	SEnTIWON	sevisdijyËn	SEVISDIJYEN
 	SENTIWON	sevite	SEVITE
 sentod	SEnTOD	sevo	SEVO
 	SENTOD	sevre	SEVRE
@@ -7418,7 +7418,7 @@ sezonnen	SEZONNEn		SIKOnSTAnS
 sezonye	SEZONYE	sikse	SIKSE
 sezyem	SEZYEM	siksto	SIKSTO
 si	SI	sikui	SIKUi
-sibalt√®n	SIBALTEN	sikyatri	SIKYATRI
+sibaltËn	SIBALTEN	sikyatri	SIKYATRI
 sibi	SIBI	sila	SILA
 sibit	SIBIT	silabe	SILABE
 sibtil	SIBTIL	silema	SILEMA
@@ -7447,7 +7447,7 @@ sikilasyon	SIKILASYON	simko	SIMKO
 	SIKILASYOn	simon	SIMON
 sikile	SIKILE		SIMOn
 siklis	SIKLIS	sinakwa	SINAKWA
-sikl√≤n	SIKLON	sinema	SINEMA
+siklÚn	SIKLON	sinema	SINEMA
 siko	SIKO	singo	SINGO
 sikoloji	SIKOLOJI	sinik	SINIK
 sinistre - sobtye
@@ -7455,7 +7455,7 @@ sinistre - sobtye
 sinistre	SINISTRE	site	SITE
 sinizit	SINIZIT	sitelman	SITELMAN
 sinngo	SINNGO		SITELMAn
-sinonim	SINONIM	sit√®n	SITEN
+sinonim	SINONIM	sitËn	SITEN
 sipe	SIPE	sitirans	SITIRAnS
 sipefisi	SIPEFISI		SITIRANS
 siperye	SIPERYE	sitire	SITIRE
@@ -7615,7 +7615,7 @@ swente	SWENTE	takte	TAKTE
 talan - tanzantan
 
 	TALAn		TAnP
-talat√†n	TALATAN	tanpe	TANPE
+talat‡n	TALATAN	tanpe	TANPE
 tale	TALE		TAnPE
 talon	TALOn	tanperaman	TANPERAMAN
 	TALON		TAnPERAMAn
@@ -7645,7 +7645,7 @@ tandres	TAnDRES		TAnPOnNEn
 	TANDRES		TANPOnNEn
 tanga	TAnGA	tanpri	TAnPRI
 	TANGA		TANPRI
-tange	TAnGE	t√†nri	TANRI
+tange	TAnGE	t‡nri	TANRI
 	TANGE	tansyomet	TAnSYOMET
 tank	TANK		TANSYOMET
 	TAnK	tansyon	TANSYON
@@ -7685,7 +7685,7 @@ taptap	TAPTAP	teknoloji	TEKNOLOJI
 tas	TAS	tektek	TEKTEK
 taso	TASO	tel	TEL
 tata	TATA	teledyol	TELEDYOL
-tatawel	TATAWEL	telef√≤n	TELEFON
+tatawel	TATAWEL	telefÚn	TELEFON
 tate	TATE	telefone	TELEFONE
 taton	TATOn	telegram	TELEGRAM
 	TATON	telele	TELELE
@@ -7760,7 +7760,7 @@ teyat	TEYAT	tiraye	TIRAYE
 teyatral	TEYATRAL	tire	TIRE
 teyodo	TEYODO	tiredkont	TIREDKONT
 teyorem	TEYOREM		TIREDKOnT
-tezen	TEZEn	tir√®n	TIREN
+tezen	TEZEn	tirËn	TIREN
 	TEZEN	tisi	TISI
 ti	TI	tisourit	TISOuRIT
 tib	TIB	tit	TIT
@@ -7846,7 +7846,7 @@ toutotou	TOuTOTOu	transvesal	TRAnSVESAL
 toutou	TOuTOu		TRANSVESAL
 toutouni	TOuTOuNI	trant	TRANT
 toutous	TOuTOuS		TRAnT
-toutrel	TOuTREL	trant√®n	TRANTEN
+toutrel	TOuTREL	trantËn	TRANTEN
 touye	TOuYE		TRAnTEN
 towo	TOWO	trantyem	TRANTYEM
 towobann	TOWOBANN		TRAnTYEM
@@ -7897,7 +7897,7 @@ trese	TRESE	two	TWO
 tret	TRET	twok	TWOK
 trete	TRETE	twoke	TWOKE
 tretman	TRETMAN	twoket	TWOKET
-	TRETMAn	tw√≤n	TWON
+	TRETMAn	twÚn	TWON
 trez	TREZ	twonpe	TWOnPE
 trezo	TREZO		TWONPE
 trezyem	TREZYEM	twonpet	TWOnPET
@@ -8015,7 +8015,7 @@ veble	VEBLE	vetikal	VETIKAL
 vedrin	VEDRIN	vetive	VETIVE
 vegle	VEGLE	vev	VEV
 vegoy	VEGOY	veve	VEVE
-vejete	VEJETE	vev√®n	VEVEN
+vejete	VEJETE	vevËn	VEVEN
 vekse	VEKSE	vevenn	VEVENN
 vekte	VEKTE		VEVEnN
 vel	VEL	vey	VEY
@@ -8041,7 +8041,7 @@ vensan	VEnSAN	vijinite	VIJINITE
 	VENSAN	vike	VIKE
 	VEnSAn	viking	VIKING
 	VENSAn		VIKINg
-vent√®n	VEnTEN	viks	VIKS
+ventËn	VEnTEN	viks	VIKS
 	VENTEN	viktim	VIKTIM
 ventyem	VEnTYEM	vikto	VIKTO
 viktwa - volonte
@@ -8265,7 +8265,7 @@ yod - zenglen
 yod	YOD		ZAnNO
 yode	YODE	zanpoud	ZANPOuD
 yoga	YOGA		ZAnPOuD
-yog√†n	YOGAN	zanpoul	ZAnPOuL
+yog‡n	YOGAN	zanpoul	ZAnPOuL
 yogann	YOGAnN		ZANPOuL
 	YOGANN	zanset	ZANSET
 yogout	YOGOuT		ZAnSET
@@ -8337,7 +8337,7 @@ zepeng	ZEPENG	zok	ZOK
 zepenglet	ZEPENGLET	zom	ZOM
 	ZEPEnGLET	zomangay	ZOMAnGAY
 zepi	ZEPI		ZOMANGAY
-zepina	ZEPINA	z√≤n	ZON
+zepina	ZEPINA	zÚn	ZON
 zepis	ZEPIS	zonay	ZONAY
 zepol	ZEPOL	zonbi	ZONBI
 zepolet	ZEPOLET		ZOnBI
@@ -8347,7 +8347,7 @@ zes	ZES		ZONBIFIKASYOn
 zesel	ZESEL		ZOnBIFIKASYOn
 zespwa	ZESPWA	zonbifye	ZOnBIFYE
 zetok	ZETOK		ZONBIFYE
-zetr√®n	ZETREN	zong	ZONG
+zetrËn	ZETREN	zong	ZONG
 zetrenn	ZETRENN		ZOnG
 	ZETREnN		ZONg
 zetriye	ZETRIYE	zongle	ZOnGLE
@@ -8367,7 +8367,7 @@ zikap	ZIKAP		ZOnZONNYEN
 zikos	ZIKOS		ZONZOnNYEN
 zile	ZILE		ZOnZOnNYEN
 zilem	ZILEM		ZONZONNYEn
-zilof√≤n	ZILOFON	zoranj	ZORANJ
+zilofÚn	ZILOFON	zoranj	ZORANJ
 zoranj - zye
 
 	ZORAnJ		
