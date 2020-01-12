@@ -44,9 +44,9 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 [Icons]
 Name: "{group}\WordKillers"; Filename: "{app}\WordKillers.exe"; IconFilename: "{app}\WordKillers.exe"; Comment: "Permet de jouer seul une partie Duplicate"; IconIndex: 0; Flags: createonlyiffileexists useapppaths
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\Uninstall.ico"; Comment: "Désinstalle WordKillers"; IconIndex: 0
-Name: "{group}\Aide"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de WordKillers"
-Name: "{group}\Lisez-Moi"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
-Name: "{group}\Sources"; Filename: "{app}\WordKillers.zip"; Comment: "Code source de WordKillers"
+Name: "{group}\Aide de WordKillers"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de WordKillers"
+Name: "{group}\Lisez-Moi (WordKillers)"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
+Name: "{group}\Sources de WordKillers"; Filename: "{app}\WordKillers.zip"; Comment: "Code source de WordKillers"
 
 [Registry]
 Root: HKCR; SubKey: ".wkp"; ValueType: string; ValueData: "Word Killers";

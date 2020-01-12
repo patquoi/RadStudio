@@ -44,9 +44,9 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 [Icons]
 Name: "{group}\Duplicata"; Filename: "{app}\Duplicata.exe"; IconFilename: "{app}\Duplicata.exe"; Comment: "Permet de jouer seul une partie Duplicate"; IconIndex: 0; Flags: createonlyiffileexists useapppaths
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\Uninstall.ico"; Comment: "Désinstalle Duplicata"; IconIndex: 0
-Name: "{group}\Aide"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de Duplicata"
-Name: "{group}\Lisez-Moi"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
-Name: "{group}\Sources"; Filename: "{app}\Duplicata.zip"; Comment: "Code source de Duplicata"
+Name: "{group}\Aide de Duplicata"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de Duplicata"
+Name: "{group}\Lisez-Moi (Duplicata)"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
+Name: "{group}\Sources de Duplicata"; Filename: "{app}\Duplicata.zip"; Comment: "Code source de Duplicata"
 
 [Registry]
 Root: HKCR; SubKey: ".dup"; ValueType: string; ValueData: "Duplicata";
