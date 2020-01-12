@@ -2,8 +2,8 @@ Création du fichier final...
  > Il y a 156 mots de 2 lettres soit 312 lettres.
  > Il y a 869 mots de 3 lettres soit 2607 lettres.
  > Il y a 2012 mots de 4 lettres soit 8048 lettres.
- > Il y a 3117 mots de 5 lettres soit 15585 lettres.
- > Il y a 3062 mots de 6 lettres soit 18372 lettres.
+ > Il y a 3119 mots de 5 lettres soit 15595 lettres.
+ > Il y a 3063 mots de 6 lettres soit 18378 lettres.
  > Il y a 2746 mots de 7 lettres soit 19222 lettres.
  > Il y a 1858 mots de 8 lettres soit 14864 lettres.
  > Il y a 1068 mots de 9 lettres soit 9612 lettres.
@@ -13,10 +13,10 @@ Création du fichier final...
  > Il y a 84 mots de 13 lettres soit 1092 lettres.
  > Il y a 32 mots de 14 lettres soit 448 lettres.
  > Il y a 8 mots de 15 lettres soit 120 lettres.
- > Le fichier contient 102237 lettres.
+ > Le fichier contient 102253 lettres.
 Traitement du fichier terminé.
       
 Déclarations
 
-NbLettresDico       = 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
-   nbl : array [TNbLettres] of Integer            = (312,2607,8048,15585,18372,19222,14864,9612,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko
+NbLettresDico       = 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+   nbl : array [TNbLettres] of Integer            = (312,2607,8048,15595,18378,19222,14864,9612,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko

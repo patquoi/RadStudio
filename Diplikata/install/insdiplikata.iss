@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Diplikata"
-#define MyAppVersion "1.7.5.4"
+#define MyAppVersion "1.7.5.5"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
                                  
@@ -44,9 +44,9 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 [Icons]
 Name: "{group}\Diplikata"; Filename: "{app}\Diplikata.exe"; IconFilename: "{app}\Diplikata.exe"; Comment: "Permet de jouer seul une partie Duplicate"; IconIndex: 0; Flags: createonlyiffileexists useapppaths
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\Uninstall.ico"; Comment: "Désinstalle Diplikata"; IconIndex: 0
-Name: "{group}\Aide"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de Diplikata"
-Name: "{group}\Lisez-Moi"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
-Name: "{group}\Sources"; Filename: "{app}\Diplikata.zip"; Comment: "Code source de Diplikata"
+Name: "{group}\Aide de Diplikata"; Filename: "{app}\html\index.html"; WorkingDir: "{app}\html"; Comment: "Aide en ligne de Diplikata"
+Name: "{group}\Lisez-Moi (Diplikata)"; Filename: "{app}\lisez-moi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
+Name: "{group}\Sources de Diplikata"; Filename: "{app}\Diplikata.zip"; Comment: "Code source de Diplikata"
 
 [Registry]
 Root: HKCR; SubKey: ".dip"; ValueType: string; ValueData: "Diplikata";

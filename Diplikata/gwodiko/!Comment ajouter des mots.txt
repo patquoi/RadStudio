@@ -23,9 +23,10 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
      - retailler automatiquement les colonnes
 	 - changer l'en-tête (nombre d'entrées = lignes des fichiers gwodikovilsen{enrichi}.txt)
 	 - exporter en PDF
+14b.Copier les fichiers ods et pdf générés respectivement dans gwodiko/bin et rechdiko/bin 
 15. Convertir les fichiers rechdiko\bin\Anagrammes.js+Tirages.js et gwodiko\dico.js et diko.js en UTF8 pour les apps mobiles
 16. Double-cliquer sur Gwodiko\CopyJS.bat => Dossier partagé VMWare
-17. Générer Insdiplikata.exe
+17. Générer Insdiplikata.exe en double-cilquant sur Nettoie.bat puis Prépare.bat sans oublier d'incrémenter la version (MyAppVersion) correspondant aux exécutables
 18. Copier sur MaPage les pdf et insdiplikata et modifier index.html
 19. Sauvegarder Diplikata xxxx (Rio).zip et générer www.zip pour copie sur Lacie
 20. Mettre à jour gitHub.com
