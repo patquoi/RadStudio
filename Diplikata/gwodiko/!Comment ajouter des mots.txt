@@ -7,7 +7,7 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
  4. Si OK, appuyer sur "Enrichir" puis copier-coller le résultat dans le fichier "Gwodikoenrichi.txt".
  5. Appuyer sur "Générer" puis copier-coller les infos depuis la ligne "Création du fichier final..." dans le fichier enfogwodikovilsen.txt
  6. Corriger les différences dans les deux lignes de code de déclaration (NbLettresDico et nbl)
- 6b.Appuyer sur Générer JS
+ 6b.Appuyer sur Générer D7.JS
  7. Appuyer sur "Calculer stats" et mettre à jour le fichier statsfrq.txt en remplaçant les lettres Â/Ç/Ê/Î/Ñ/Ô/Û par An/Ch/En/Ui/Ng/On/Ou 
  8. Double cliquer sur copy2rechdiko.bat
  9. Modifier le code de Diplikata et Rechdiko avec les deux nouvelles déclarations modifiées ci-dessus.
