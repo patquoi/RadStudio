@@ -305,6 +305,7 @@ for i:=1 to Length(stTirage) do
     'Ñ': stTirMot:=stTirMot+'Ng';
     'Ô': stTirMot:=stTirMot+'On';
     'Û': stTirMot:=stTirMot+'Ou';
+    'Ü': stTirMot:=stTirMot+'Oun'; // v1.1 : Ajout du jeton "Oun" = Ü
   else
     stTirMot:=stTirMot+stTirage[i];
   end;
@@ -313,8 +314,17 @@ for i:=1 to Length(stTirage) do
 for i:=2 to Length(stTirMot) do
   if stTirMot[i]>'Z' then
     for j:=1 to i-2 do
-      if (stTirMot[j]<='Z') and (stTirMot[i-1]<stTirMot[j]) then
-        stTirMot:=copy(stTirMot,1,j-1)+stTirMot[i-1]+stTirMot[i]+copy(stTirMot,j,i-j-1)+copy(stTirMot,i+1,Length(stTirMot)-i);
+      begin
+      if (stTirMot[j]<='Z') and
+         (stTirMot[i-1]<stTirMot[j]) then
+        begin
+        if (i=Length(stTirMot)) or (stTirMot[i+1]<='Z') then // v1.1 : Cas général (jeton à deux lettres)
+          stTirMot:=copy(stTirMot,1,j-1)+stTirMot[i-1]+stTirMot[i]+copy(stTirMot,j,i-j-1)+copy(stTirMot,i+1,Length(stTirMot)-i)
+        else // v1.1 : Cas nouveau jeton à 3 lettres (Oun)
+          stTirMot:=copy(stTirMot,1,j-1)+stTirMot[i-1]+stTirMot[i]+stTirMot[i+1]+copy(stTirMot,j,i-j-1)+copy(stTirMot,i+2,Length(stTirMot)-i-1)
+        end;
+      end;
+
 stTirMot:=stTirMot+':';
 for i:=1 to Length(stMot) do
   case stMot[i] of
@@ -325,6 +335,7 @@ for i:=1 to Length(stMot) do
     'Ñ': stTirMot:=stTirMot+'Ng';
     'Ô': stTirMot:=stTirMot+'On';
     'Û': stTirMot:=stTirMot+'Ou';
+    'Ü': stTirMot:=stTirMot+'Oun'; // v1.1 : Ajout du jeton "Oun" = Ü
   else
     stTirMot:=stTirMot+stMot[i];
   end;
@@ -416,7 +427,7 @@ try
       stFin:=copy(sl[(p-1)*(nl*nc)+(nc-1)*nl+(nl-1)],1,AnsiPos(':',sl[(p-1)*(nl*nc)+(nc-1)*nl+(nl-1)])-1)
     else
       stFin:=copy(sl[sl.Count-1],1,AnsiPos(':',sl[sl.Count-1])-1);
-    WriteLn(f, 'Tirages de '+IntToStr(Ord(NbLettres))+' lettres de '+stDeb+' à '+stFin+' - Page '+IntToStr(p)+'/'+IntToStr(np));
+    WriteLn(f, 'Tirages de '+IntToStr(Ord(NbLettres))+' jetons de '+stDeb+' à '+stFin+' - Page '+IntToStr(p)+'/'+IntToStr(np)); // v1.1 : "jetons" au lieu de "lettres"
     WriteLn(f, '');
     for l:=1 to nl do
       for c:=1 to nc do

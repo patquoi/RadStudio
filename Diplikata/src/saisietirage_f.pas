@@ -40,6 +40,7 @@ type
     Button27: TButton;
     Button28: TButton;
     Button29: TButton;
+    Button30: TButton;
     ButtonOK: TButton;
     LabelInformation: TLabel;
     procedure ButtonOKClick(Sender: TObject);
@@ -134,7 +135,10 @@ case Key of // vKA
                                          1,
                                          Taille-1-
                                            IfThen((LabelNouveauTirage.Caption[Taille]>='a') and // vKA : on retranche 1 si le dernier jeton est une lettre double
-                                                  (LabelNouveauTirage.Caption[Taille]<='z'),1,0));
+                                                  (LabelNouveauTirage.Caption[Taille]<='z'),1,0)-
+                                           IfThen((Taille>1) and // v1.8KA : on retranche (encore) 1 si l'on a à faire au nouveau jeton à 3 lettres "Oun"
+                                                  (LabelNouveauTirage.Caption[Taille-1]>='a') and
+                                                  (LabelNouveauTirage.Caption[Taille-1]<='z'),1,0));
         RafraichitAccesBoutons
         end
       end;
@@ -143,6 +147,7 @@ case Key of // vKA
   '$':if Button17.Enabled then ButtonJetonClick(Button17); // vKA : $ => Ng
   '°':if Button19.Enabled then ButtonJetonClick(Button19); // vKA : ° => On
   'ù':if Button20.Enabled then ButtonJetonClick(Button20); // vKA : ù => Ou
+  '#':if Button21.Enabled then ButtonJetonClick(Button21); // v1.8KA : nouveau jeton ü => Oun
   end{case of}
 end;
 //----------------------------------------------------------------------------

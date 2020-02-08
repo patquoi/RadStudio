@@ -8,14 +8,14 @@ const NbCasesCote         =  15;
       PositionRelativeMin = -14;
       PositionCaseDepart  =   0;
       PositionRelativeMax =  14;
-      NbLettresAlphabet   =  29; // vKA
-      NbJetonsSac         = 103; // vKA
+      NbLettresAlphabet   =  30; // v1.8KA +1 jeton Oun // vKA
+      NbJetonsSac         = 102; // v1.8KA +1 jeton (+1 Oun -1 J -1 D) // vKA
       NbMaxJetonsTirage   =   7;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     =   2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       BonusScrabble       = 50;
       NbMaxJokers         = 2;
@@ -33,7 +33,7 @@ const NbCasesCote         =  15;
       // v1.6.5 : Pour la feuille de match plus étroite
       // v1.6.6 : Pas de changement dans la structure de fichier mais un chgt d'affichage de fdm. La version est changée pour éviter le mélange.
       // /!\ NE PAS OUBLIER d'ajouter la nouvelle version dans le test de TPartie.Charge !!!
-      VersionFichierCrt   = $166;
+      VersionFichierCrt   = $180; // v1.8KA avec ajout un jeton Oun - version précédente : $166;
       stNomFichierIni     = 'Diplikata.ini';
       stSectionSac        = 'Sac';
       stJoker             = '?';
@@ -47,9 +47,9 @@ type  TBonus = (bAucun,
                 bMotCompteDouble, bMotCompteTriple);
       TCoordonnee = 0..NbCasesCote-1;
       TTypeJeton = (tjIndefini, // vKA
-                    tjJoker, tjA, tjAn, tjB, tjCh, tjD, tjE, tjEn, tjF, tjG,
-                    tjH,     tjI, tjJ, tjK, tjL, tjM, tjN, tjNg, tjO, tjOn,
-                    tjOu,    tjP, tjR, tjS, tjT, tjUi, tjV, tjW, tjY, tjZ);
+                    tjJoker, tjA, tjAn, tjB, tjCh, tjD,  tjE, tjEn, tjF, tjG,
+                    tjH,     tjI, tjJ,  tjK, tjL,  tjM,  tjN, tjNg, tjO, tjOn,
+                    tjOu,  tjOun, tjP, tjR,  tjS, tjT,  tjUi, tjV, tjW,  tjY, tjZ); // v1.8KA : ajout du jeton "Oun"
       TGenreLettre=(glIndefini, glConsonne, glVoyelle);
       TNumeroJetonSac           = 0..NbJetonsSac; // 0 = pas de jeton
       TOrdreJetonSac            = 1..NbJetonsSac; // Ordre de tirage des jetons dans le sac
@@ -78,7 +78,7 @@ type  TBonus = (bAucun,
       TSubstitutJoker           = array [TOrdreJetonSac] of Boolean; // v1.5.6
       TFormatRapport            = (frPourcentage, frNoteSur20);
       TTypeProposition          = (tpRecherche, tpProposition, tpPose); // v1.4 : dernier argument de MotsFormesValables
-      TLettreJetonPlace         = 'A'..'û'; // v1.4.3 // vKA : il faut ajouter les lettres accentuées des lettres doubles ('û' au lieu de 'z')
+      TLettreJetonPlace         = 'A'..'ü'; // v1.8KA - ajout du jeton Oun = ü // v1.4.3 // vKA : il faut ajouter les lettres accentuées des lettres doubles ('û' au lieu de 'z')
       TDifficulteTirage         = (dtIndefinie=-1,
                                    dt0Etoile=0,
                                    dtDemiEtoile=1,
@@ -369,21 +369,25 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
          (bMotCompteTriple   , bAucun             , bAucun             , bLettreCompteDouble, bAucun             , bAucun             , bAucun             , bMotCompteTriple   , bAucun             , bAucun             , bAucun             , bLettreCompteDouble, bAucun             , bAucun             , bMotCompteTriple   ));
 
       // début vKA
-      ValeurJeton   : array [TTypeJeton]   of Integer   = (0,0,1,4,3,3,2,1,4,4,3,10,1,2,3,1,2,1,10,1,4,3,3,3,1,1,10,4,2,2,2);
+      ValeurJeton   : array [TTypeJeton]   of Integer   = (0,0,1,4,3,3,2,1,4,4,3,10,1,2,3,1,2,1,10,1,4,3,10,3,1,1,1,10,4,2,2,2); // v1.8KA R vaut 1 point au lieu de 3 et ajout du jeton Oun à 1 exemplaire
       stLettreJeton : array [TTypeJeton] of String      = (''#0'', // v1.4.5 : au lieu de '' permettant d'obtenir une chaîne à un seul caractère #0 et empêchant un message d'erreur.
                                                            ' ','A','Â','B','Ç','D','E','Ê','F','G',
                                                            'H','I','J','K','L','M','N','Ñ','O','Ô',
-                                                           'Û','P','R','S','T','Î','V','W','Y','Z');
+                                                           'Û','Ü','P','R','S','T','Î','V','W','Y','Z'); // v1.8KA, ajout du jeton "Oun" = Ü
       EstDoubleLettre : array [TTypeJeton] of Boolean   = (false,
-                                                           false,false, true,false, true,false,false,true,false,false,
-                                                           false,false,false,false,false,false,false,true,false, true,
-                                                            true,false,false,false,false, true,false,false,false,false);
-      stAffichageJeton : array [TTypeJeton] of String   = (''#0'', // vKA : affichage réel sur les jetons (de 1 à 2 lettres)
-                                                           ' ','A','An','B','Ch','D','E','En','F','G',
-                                                           'H','I','J','K','L','M','N','Ng','O','On',
-                                                           'Ou','P','R','S','T','Ui','V','W','Y','Z');
+                                                           false,false, true,false, true,false,false, true,false,false,
+                                                           false,false,false,false,false,false,false, true,false, true,
+                                                            true, true,false,false,false,false, true,false,false,false,false); // v1.8KA, ajout du jeton "Oun" = Ü
+      EstTripleLettre : array [TTypeJeton] of Boolean   = (false, // v1.8KA, ajout deEstTripleLettre pour lasituation desjetons (jeton "Oun" = Ü)
+                                                           false,false,false,false,false,false,false,false,false,false,
+                                                           false,false,false,false,false,false,false,false,false,false,
+                                                           false, true,false,false,false,false,false,false,false,false,false);
+      stAffichageJeton : array [TTypeJeton] of String   = (''#0'', // vKA : affichage réel sur les jetons (de 1 à 2 lettres) // v1.8KA de 1 à 3 LETTRES
+                                                           ' ', 'A',  'An','B','Ch','D','E', 'En','F','G',
+                                                           'H', 'I',  'J', 'K','L', 'M','N', 'Ng','O','On',
+                                                           'Ou','Oun','P', 'R','S', 'T','Ui','V', 'W','Y','Z'); // v1.8KA, ajout du jeton "Oun" = Ü
 
-      // 7 Double lettres : Â=An, Ç=Ch, Ê=En, Ñ=Ng, Ô=On, Û=Ou, Î=Ui. vKA
+      // v1.8KA Ajout du jeton Oun = Ü - 8 Doubles lettres : Â=An, Ç=Ch, Ê=En, Ñ=Ng, Ô=On, Û=Ou, Ü=Oun, Î=Ui.
       // fin vKA
 
       stTirageVide            = '       ';
@@ -392,17 +396,17 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
       stHTMLRecordNonAttribue = '<i>-</i>';    // v1.5
       stHTMLRecordAucun       = '<i>Aucun record</i>'; // v1.5
       TypeJeton : array [TNumeroJetonSac]    of TTypeJeton = (tjIndefini, tjJoker, tjJoker,  // vKA
-                                                               tjA,  tjA,  tjA,  tjA,  tjA, tjA, tjA, tjA, tjA, tjAn, tjAn,  tjB, tjB, tjCh, tjCh,  tjD,  tjD,
-                                                               tjD,  tjE,  tjE,  tjE,  tjE, tjE, tjE, tjE, tjE,  tjE,  tjE,  tjE, tjE,  tjE,  tjE, tjEn, tjEn,
-                                                               tjF,  tjF,  tjG,  tjG,  tjH, tjI, tjI, tjI, tjI,  tjI,  tjJ,  tjJ, tjJ,  tjK,  tjK,  tjK,  tjK,
-                                                               tjL,  tjL,  tjL,  tjL,  tjL, tjM, tjM, tjN, tjN,  tjN,  tjN, tjNg, tjO,  tjO,  tjO,  tjO,  tjO,
-                                                              tjOn, tjOn, tjOu, tjOu, tjOu, tjP, tjP, tjR, tjR,  tjR,  tjR,  tjS, tjS,  tjS,  tjS,  tjT,  tjT,
-                                                               tjT,  tjT,  tjT, tjUi,  tjV, tjV, tjW, tjW, tjW,  tjW,  tjY,  tjY, tjY,  tjZ,  tjZ,  tjZ);
+                                                               tjA,  tjA,  tjA,  tjA,   tjA, tjA, tjA, tjA, tjA, tjAn, tjAn, tjB, tjB, tjCh, tjCh,  tjD,  tjD,
+                                                               tjE,  tjE,  tjE,   tjE, tjE, tjE, tjE, tjE,  tjE,  tjE, tjE, tjE,  tjE,  tjE, tjEn, tjEn, // v1.8KA : Un "D" de moins
+                                                               tjF,  tjF,  tjG,  tjG,   tjH, tjI, tjI, tjI, tjI,  tjI,  tjJ, tjJ, tjK,  tjK,  tjK,  tjK,  tjL, // v1.8KA : Un "J" de moins
+                                                               tjL,  tjL,  tjL,  tjL,   tjM, tjM, tjN, tjN, tjN,  tjN, tjNg, tjO, tjO,  tjO,  tjO,  tjO, tjOn,
+                                                              tjOn, tjOu, tjOu, tjOu, tjOun, tjP, tjP, tjR, tjR,  tjR,  tjR, tjS, tjS,  tjS,  tjS,  tjT,  tjT, // v1.8KA : Ajout du nouveau jeton "Oun"
+                                                               tjT,  tjT,  tjT, tjUi,   tjV, tjV, tjW, tjW, tjW,  tjW,  tjY, tjY, tjY,  tjZ,  tjZ,  tjZ);
 
-      GenreJeton : array [TTypeJeton]      of TGenreLettre = (glIndefini, glIndefini, // vKA
-                                                              glVoyelle,  glVoyelle,  glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle,  glConsonne, glConsonne, glConsonne,
-                                                              glVoyelle,  glConsonne, glConsonne, glConsonne, glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle,  glVoyelle,
-                                                              glConsonne, glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle, glConsonne, glVoyelle,  glConsonne); // vKA : attention, le W est une voyelle !
+      GenreJeton : array [TTypeJeton]      of TGenreLettre = (glIndefini, // vKA
+                                                              glIndefini, glVoyelle,  glVoyelle,  glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle,  glConsonne, glConsonne,
+                                                              glConsonne, glVoyelle,  glConsonne, glConsonne, glConsonne, glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle,
+                                                              glVoyelle,  glVoyelle,  glConsonne, glConsonne, glConsonne, glConsonne, glVoyelle,  glVoyelle,  glConsonne, glVoyelle,  glConsonne); // v1.8KA : ajout de Oun (voyelle) // vKA : attention, le W est une voyelle !
 
       dx : array [TDirection]             of Integer       = ( 0, 1, 0);
       dy : array [TDirection]             of Integer       = ( 0, 0, 1);
@@ -420,7 +424,7 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
 
       // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer            = (312,2607,8048,15595,18390,19229,14864,9612,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (320,2643,8164,15695,18516,19250,14880,9630,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko
       stNomFichierDico                                = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                                = 'R23456789ABCDEF'; // ODS
       stVersionDico                                   = 'Gwodiko'; // vKA (créé v1.5.3)
@@ -1012,23 +1016,29 @@ end;
 //---------------------------------------------------------------------------
 function stLettresEnJetons(stLettres : String) : String; // KA : Convertisseur de Tirage de lettres en jetons (An=>Â, En=>Ê, etc.)
 var i, j, l  : Integer;
-var stJetons : String;
+var stJetons,
+    stJeton  : String;
+
 begin
 stJetons:='';
 l:=length(stLettres);
 for i:=1 to l do
+  begin
+  stJeton:=Copy(stLettres,i,1+ // On compare deux lettres si la lettre qui suit est en minuscule (Jeton à double lettre)
+                      Ord((i<l) and (stLettres[i+1]>='a'))+
+                      Ord((i+1<l) and // v1.8KA : cas du nouveau jeton à triple lettres "Oun" = Ü
+                          (stLettres[i+1]>='a') and
+                          (stLettres[i+2]>='a')));
   if stLettres[i]='?' then
     stJetons:=stJetons+stJoker
   else
     for j:=2 to NbLettresAlphabet+1 do
-      if Copy(stLettres,i,1+ // On compare deux lettres si la lettre qui suit est en minuscule (Jeton à double lettre)
-                          Ord(((i<l) and
-                               (stLettres[i+1]>='a') and
-                               (stLettres[i+1]>='a'))))=stAffichageJeton[TTypeJeton(j)] then
+      if stJeton=stAffichageJeton[TTypeJeton(j)] then
         begin
         stJetons:=stJetons+stLettreJeton[TTypeJeton(j)];
         break
         end;
+  end;
 Result:=stJetons;
 end;
 //---------------------------------------------------------------------------
@@ -1043,9 +1053,11 @@ for i:=1 to Length(stLettres) do
     break
     end
   else
-    if (stLettres[i]='n') and ((i>1) and (stLettres[i-1]<>'A') and (stLettres[i-1]<>'E') and (stLettres[i-1]<>'O')) then
+    if (stLettres[i]='n') and
+       (i>1) and (stLettres[i-1]<>'A') and (stLettres[i-1]<>'E') and (stLettres[i-1]<>'O') and
+       (i>2) and ((stLettres[i-2]<>'O') or (stLettres[i-1]<>'u')) then // v1.8KA : nouveau jeton "Oun" = Ü
       begin
-      Result:='Tout caractère "n" doit suivre un "A" (An), un "E" (En) ou un "O" (On).';
+      Result:='Tout caractère "n" doit suivre un "A" (An), un "E" (En) ou un "O" (On) ou un "Ou" (Oun).'; // v1.8KA : nouveau jeton "Oun" = Ü
       break
       end
     else
@@ -1100,6 +1112,7 @@ for i:=1 to l do
     'Ñ': stLettresLD:=stLettresLD+'Ng';
     'Ô': stLettresLD:=stLettresLD+'On';
     'Û': stLettresLD:=stLettresLD+'Ou';
+    'Ü': stLettresLD:=stLettresLD+'Oun'; // v1.8KA : nouveau jeton "Oun" = Ü
     'Î': stLettresLD:=stLettresLD+'Ui';
     'a'..'z': stLettresLD:=stLettresLD+Format('(%s)', [UpperCase(stLettres[i])]);
     'â': stLettresLD:=stLettresLD+'(An)';
@@ -1108,6 +1121,7 @@ for i:=1 to l do
     'ñ': stLettresLD:=stLettresLD+'(Ng)';
     'ô': stLettresLD:=stLettresLD+'(On)';
     'û': stLettresLD:=stLettresLD+'(Ou)';
+    'ü': stLettresLD:=stLettresLD+'(Oun)'; // v1.8KA : nouveau jeton "Oun" = Ü
     'î': stLettresLD:=stLettresLD+'(Ui)';
     else stLettresLD:=stLettresLD+stLettres[i];
   end{case of};
@@ -1129,6 +1143,7 @@ for i:=1 to l do
     'Ñ': stLHTMLLettresLD:=stLHTMLLettresLD+'Ng';
     'Ô': stLHTMLLettresLD:=stLHTMLLettresLD+'On';
     'Û': stLHTMLLettresLD:=stLHTMLLettresLD+'Ou';
+    'Ü': stLHTMLLettresLD:=stLHTMLLettresLD+'Oun'; // v1.8KA : nouveau jeton "Oun" = Ü
     'Î': stLHTMLLettresLD:=stLHTMLLettresLD+'Ui';
     'a'..'z': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, UpperCase(stLettres[i])]);
     'â': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'An']);
@@ -1137,6 +1152,7 @@ for i:=1 to l do
     'ñ': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'Ng']);
     'ô': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'On']);
     'û': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'Ou']);
+    'ü': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'Oun']); // v1.8KA : nouveau jeton "Oun" = Ü
     'î': stLHTMLLettresLD:=stLHTMLLettresLD+Format(stHTMLJoker, [stCodeHTMLPoseJoker, 'Ui']);
     else stLHTMLLettresLD:=stLHTMLLettresLD+stLettres[i];
   end{case of};
@@ -1378,13 +1394,18 @@ Result:=(ProchainJetonATirer>NbJetonsSac-NbMaxJetonsTirage+1);
 end;
 //---------------------------------------------------------------------------
 procedure TPartie.ChargeOrdreSac;
-var i : Integer;
+var i, p103 : Integer;
     IniFile : TIniFile;
 begin
 for i:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
   s[i]:=i; // On met les jetons dans le sac dans l'ordre (une seule fois) mais ils seront mélangés par la suite
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni); // v1.7.4 : stRepLocalAppData remplace ExtractFilePath(ParamStr(0))
+
 try
+  // v1.8KA: si l'entrée 103 existedans la section [Sac], on supprime la section !
+  p103:=IniFile.ReadInteger(stSectionSac, '103', 0);
+  if p103>0 then
+    IniFile.EraseSection(stSectionSac);
   for i:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
     s[i]:=IniFile.ReadInteger(stSectionSac, IntToStr(i), i)
 finally
@@ -2351,7 +2372,6 @@ AssignFile(f, stNomFichier);
 try
   Rewrite(f, 1);
   // v1.5.3 : On monte la version 1.5 en 1.5.3 car on enregistre la donnée 1.5.3 TiragePropose[TTour]
-  if VersionFichier=$150 then VersionFichier:=$153;
   BlockWrite(f, VersionFichier, SizeOf(VersionFichier));
   for i:=Low(TCoordonnee) to High(TCoordonnee) do
     for j:=Low(TCoordonnee) to High(TCoordonnee) do
@@ -2365,31 +2385,24 @@ try
     BlockWrite(f, t[i], SizeOf(t[i]));
   for i:=Low(TOrdreJoker) to High(TOrdreJoker) do
     BlockWrite(f, LettreJoker[i], SizeOf(LettreJoker[i]));
-  if VersionFichier>=$156 then // v1.5.6
-    for i:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
-      BlockWrite(f, SubstitutJoker[i], SizeOf(SubstitutJoker[i]));
+  for i:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
+    BlockWrite(f, SubstitutJoker[i], SizeOf(SubstitutJoker[i]));
   for i:=Low(TTour) to High(TTour) do
     begin
     BlockWrite(f, Score[i], SizeOf(Score[i]));
     BlockWrite(f, Cumul[i], SizeOf(Cumul[i]));
     BlockWrite(f, ScoreTop[i], SizeOf(ScoreTop[i]));
     BlockWrite(f, CumulTop[i], SizeOf(CumulTop[i]));
-    if VersionFichier>=$140 then  // v1.4. On poursuit la version antérieure à la v1.4 à cause de la feuille de match RTF enregistrée séparément (version antérieure à 1.4)
-      begin
-      BlockWrite(f, ScorePartie[i], SizeOf(ScorePartie[i]));
-      BlockWrite(f, CumulPartie[i], SizeOf(CumulPartie[i]));
-      end;
+    BlockWrite(f, ScorePartie[i], SizeOf(ScorePartie[i]));
+    BlockWrite(f, CumulPartie[i], SizeOf(CumulPartie[i]));
     BlockWrite(f, PosPrp[i], SizeOf(PosPrp[i]));
     BlockWrite(f, NbSol[i], SizeOf(NbSol[i]));
     BlockWrite(f, CumulPosPrp[i], SizeOf(CumulPosPrp[i]));
     BlockWrite(f, CumulNbSol[i], SizeOf(CumulNbSol[i]));
-    if VersionFichier>=$150 then // v1.5. Ces stats ne peuvent pas être recalculées après chargement (restent à zéro)
-      begin
-      BlockWrite(f, NbSolSupEgalMoitieTop[i], SizeOf(NbSolSupEgalMoitieTop[i])); // v1.5
-      BlockWrite(f, AncCumNbSolSEMT, SizeOf(AncCumNbSolSEMT));                   // v1.5.1 : on enregistre rien au format entier 32 bits (valeur recalculée au chargement)
-      BlockWrite(f, NbSolBonus50[i], SizeOf(NbSolBonus50[i]));                   // v1.5
-      BlockWrite(f, CumulNbSolBonus50[i], SizeOf(CumulNbSolBonus50[i]));         // v1.5
-      end;
+    BlockWrite(f, NbSolSupEgalMoitieTop[i], SizeOf(NbSolSupEgalMoitieTop[i])); // v1.5
+    BlockWrite(f, AncCumNbSolSEMT, SizeOf(AncCumNbSolSEMT));                   // v1.5.1 : on enregistre rien au format entier 32 bits (valeur recalculée au chargement)
+    BlockWrite(f, NbSolBonus50[i], SizeOf(NbSolBonus50[i]));                   // v1.5
+    BlockWrite(f, CumulNbSolBonus50[i], SizeOf(CumulNbSolBonus50[i]));         // v1.5
     BlockWrite(f, xPrp[i], SizeOf(xPrp[i]));
     BlockWrite(f, yPrp[i], SizeOf(yPrp[i]));
     BlockWrite(f, dPrp[i], SizeOf(dPrp[i]));
@@ -2398,15 +2411,11 @@ try
     BlockWrite(f, dSol[i], SizeOf(dSol[i]));
     BlockWrite(f, BonusScrabblePrp[i], SizeOf(BonusScrabblePrp[i]));
     BlockWrite(f, BonusScrabbleSol[i], SizeOf(BonusScrabbleSol[i]));
-    if VersionFichier>=$150 then // On enregistre que pour les versions >= v1.5
-      BlockWrite(f, TiragePropose[i], SizeOf(TiragePropose[i])); //v1.5.3
+    BlockWrite(f, TiragePropose[i], SizeOf(TiragePropose[i])); //v1.5.3
     BlockWrite(f, Temps[i], SizeOf(Temps[i]));
     BlockWrite(f, CumulTemps[i], SizeOf(CumulTemps[i]));
-    if VersionFichier>=$160 then // On enregistre que pour les versions >= v1.6
-      begin
-      BlockWrite(f, TpsCalculSol[i], SizeOf(TpsCalculSol[i]));
-      BlockWrite(f, CumulTpsCalculSol[i], SizeOf(CumulTpsCalculSol[i]))
-      end;
+    BlockWrite(f, TpsCalculSol[i], SizeOf(TpsCalculSol[i]));
+    BlockWrite(f, CumulTpsCalculSol[i], SizeOf(CumulTpsCalculSol[i]));
     k:=Length(stProposition[i]);
     BlockWrite(f, k, SizeOf(k));
     for j:=1 to k do
@@ -2420,11 +2429,8 @@ try
     for j:=1 to k do
       BlockWrite(f, stTirage[i,j], SizeOf(stTirage[i,j]));
     end;
-  if VersionFichier>=$156 then // v1.5.6
-    begin
-    BlockWrite(f, TypePartie, SizeOf(TypePartie));
-    BlockWrite(f, TempsReflexion, SizeOf(TempsReflexion));
-    end;
+  BlockWrite(f, TypePartie, SizeOf(TypePartie));
+  BlockWrite(f, TempsReflexion, SizeOf(TempsReflexion));
   BlockWrite(f, ScoreMax, SizeOf(ScoreMax));
   BlockWrite(f, NbMaxSol, SizeOf(NbMaxSol));
   BlockWrite(f, Tour, SizeOf(Tour));
@@ -2440,8 +2446,7 @@ try
   BlockWrite(f, Fin, SizeOf(Fin));
   BlockWrite(f, xPopup, SizeOf(xPopup));
   BlockWrite(f, yPopup, SizeOf(yPopup));
-  if VersionFichier>=$150 then // v1.5. N° absolu de partie pour les records. Pas de numéro pour les versions antérieure à la v1.5 (inutiles car nom de partie défini)
-    BlockWrite(f, NumeroPartie, SizeOf(NumeroPartie));
+  BlockWrite(f, NumeroPartie, SizeOf(NumeroPartie));
   Result:=True;
 finally
   CloseFile(f);
@@ -2464,19 +2469,11 @@ AssignFile(f, stNomFichier);
 try
   Reset(f, 1);
   BlockRead(f, VersionFichier, SizeOf(VersionFichier));
+
   // ATTENTION : ajouter TOUTES les versions de fichiers ici
-  if (VersionFichier<>$140) and
-     (VersionFichier<>$150) and
-     (VersionFichier<>$153) and
-     (VersionFichier<>$156) and
-     (VersionFichier<>$160) and
-     (VersionFichier<>$163) and
-     (VersionFichier<>$165) and
-     (VersionFichier<>$166) then // v1.6.6
+  if (VersionFichier<>$180) then // v1.8KA : ajout d'un nouveau jeton, parties antérieures incompatibles
     begin
-    // v1.5.1 : On ne prend plus les fichiers de version antérieure à la version 1.4
-    // VersionFichier:=$100; // v1.4 : oubli de stocker $100 à l'origine
-    stMessage:='Ce n''est pas un fichier de partie Diplikata ou le fichier a été généré avec une version de Diplikata antérieure à la version 1.4.';
+    stMessage:='Ce n''est pas un fichier de partie Diplikata ou le fichier a été généré avec une version de Diplikata antérieure à la version 1.8.';
     Exit
     end;
   if VersionFichier>VersionFichierCrt then // v1.5

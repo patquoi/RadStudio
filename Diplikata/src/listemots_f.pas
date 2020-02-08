@@ -20,10 +20,11 @@ type
     RadioGroupEn: TRadioGroup;
     RadioGroupOn: TRadioGroup;
     RadioGroupF: TRadioGroup;
+    RadioGroupV: TRadioGroup;
     RadioGroupH: TRadioGroup;
     RadioGroupNg: TRadioGroup;
+    RadioGroupOun: TRadioGroup; // v1.8KA : ajout du jeton "Oun"
     RadioGroupUi: TRadioGroup;
-    RadioGroupV: TRadioGroup;
     Bevel2: TBevel;
     RadioButton2: TRadioButton;
     RadioGroup4: TRadioGroup;
@@ -56,12 +57,12 @@ uses System.StrUtils, Winapi.ShellApi, base, patience_f;
 {$R *.dfm}
 //---------------------------------------------------------------------------
 type
-  TLettreChere   = (lchIndefinie, lchAn, lchEn, lchF, lchH, lchNg, lchOn, lchUi, lchV);
+  TLettreChere   = (lchIndefinie, lchAn, lchEn, lchF, lchH, lchNg, lchOn, lchOun, lchUi, lchV); // v1.8KA : Ajout du nouveau jeton "Oun"
   TValeurChere   = (vchIndefinie, vch4Pts, vch10Pts);
   TTypeRecherche = (trLettre, trValeur);
 //---------------------------------------------------------------------------
 const
-  ValeurChere    : array [TLettreChere] of TValeurChere = (vchIndefinie, vch4Pts, vch4Pts, vch4Pts, vch10Pts, vch10Pts, vch4Pts, vch10Pts, vch4Pts);
+  ValeurChere    : array [TLettreChere] of TValeurChere = (vchIndefinie, vch4Pts, vch4Pts, vch4Pts, vch10Pts, vch10Pts, vch4Pts, vch10Pts, vch10Pts, vch4Pts); // v1.8KA : Ajout du nouveau jeton "Oun"
   // vKA : Ci-dessous on n'inclut pas les lettres chères doubles (Ng et Ui) traitées à la main 
   LettreChere    : array ['A'..'Z'] of TLettreChere = (lchIndefinie, lchIndefinie, lchIndefinie, lchIndefinie, lchIndefinie,
                                                        lchF, lchIndefinie,
@@ -80,6 +81,7 @@ RadioGroupF.ItemIndex:=0;
 RadioGroupH.ItemIndex:=0;
 RadioGroupNg.ItemIndex:=0;
 RadioGroupOn.ItemIndex:=0;
+RadioGroupOun.ItemIndex:=0; // v1.8KA : Ajout du nouveau jeton "Oun"
 RadioGroupUi.ItemIndex:=0;
 RadioGroupV.ItemIndex:=0;
 RadioGroup4.ItemIndex:=0;
@@ -90,6 +92,7 @@ RadioGroupF.Enabled:=False;
 RadioGroupH.Enabled:=False;
 RadioGroupNg.Enabled:=False;
 RadioGroupOn.Enabled:=False;
+RadioGroupOun.Enabled:=False; // v1.8KA : Ajout du nouveau jeton "Oun"
 RadioGroupUi.Enabled:=False;
 RadioGroupV.Enabled:=False;
 RadioGroup4.Enabled:=False;
@@ -154,6 +157,7 @@ try
   RechLch[lchH]:=RadioGroupH.ItemIndex;
   RechLch[lchNg]:=RadioGroupNg.ItemIndex;
   RechLch[lchOn]:=RadioGroupOn.ItemIndex;
+  RechLch[lchOun]:=RadioGroupOun.ItemIndex; // v1.8KA : Ajout du nouveau jeton "Oun"
   RechLch[lchUi]:=RadioGroupUi.ItemIndex;
   RechLch[lchV]:=RadioGroupV.ItemIndex;
   RechVch[vch4pts]:=RadioGroup4.ItemIndex;
@@ -179,6 +183,7 @@ try
           'Ê': lch:=lchEn;
           'Ñ': lch:=lchNg;
           'Ô': lch:=lchOn;
+          'Ü': lch:=lchOun; // v1.8KA : Ajout du nouveau jeton "Oun"
           'Î': lch:=lchUi;
           else lch:=lchIndefinie
           end; // fin vKA
@@ -290,6 +295,7 @@ case RadioButton.Tag of
      //--------------------
      RadioGroupH.ItemIndex:=0;
      RadioGroupNg.ItemIndex:=0;
+     RadioGroupOun.ItemIndex:=0; // v1.8KA : Ajout du nouveau jeton "Oun"
      RadioGroupUi.ItemIndex:=0
      end
   end;
@@ -300,6 +306,7 @@ RadioGroupF.Enabled:=(RadioButton.Tag=1);
 RadioGroupV.Enabled:=(RadioButton.Tag=1);
 RadioGroupH.Enabled:=(RadioButton.Tag=1);
 RadioGroupNg.Enabled:=(RadioButton.Tag=1);
+RadioGroupOun.Enabled:=(RadioButton.Tag=1); // v1.8KA : Ajout du nouveau jeton "Oun"
 RadioGroupUi.Enabled:=(RadioButton.Tag=1);
 RadioGroup4.Enabled:=(RadioButton.Tag=2);
 RadioGroup10.Enabled:=(RadioButton.Tag=2);
@@ -325,6 +332,7 @@ ButtonGenerer.Enabled:=(RadioGroup4.ItemIndex+
                         //--------------------
                         RadioGroupH.ItemIndex+
                         RadioGroupNg.ItemIndex+
+                        RadioGroupOun.ItemIndex+ // v1.8KA : Ajout du nouveau jeton "Oun"
                         RadioGroupUi.ItemIndex > 0);
 
 end;
@@ -346,6 +354,8 @@ if RadioGroupH.ItemIndex>0 then
   LabelResume.Caption:=LabelResume.Caption+IfThen(LabelResume.Caption='', '', ' + ')+IntToStr(RadioGroupH.ItemIndex)+' H';
 if RadioGroupNg.ItemIndex>0 then
   LabelResume.Caption:=LabelResume.Caption+IfThen(LabelResume.Caption='', '', ' + ')+IntToStr(RadioGroupNg.ItemIndex)+' Ng';
+if RadioGroupOun.ItemIndex>0 then // v1.8KA : Ajout du nouveau jeton "Oun"
+  LabelResume.Caption:=LabelResume.Caption+IfThen(LabelResume.Caption='', '', ' + ')+IntToStr(RadioGroupOun.ItemIndex)+' Oun';
 if RadioGroupUi.ItemIndex>0 then
   LabelResume.Caption:=LabelResume.Caption+IfThen(LabelResume.Caption='', '', ' + ')+IntToStr(RadioGroupUi.ItemIndex)+' Ui';
 

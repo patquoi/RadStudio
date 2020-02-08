@@ -289,6 +289,7 @@ DEZ: ZED
 DEÂ: ÂDE
 DEÊ: EDÊ
 DEÑ: DEÑ
+DEÜ: ÜDE
 DGI: DIG
      GID
 DGÊ: DÊG
@@ -497,6 +498,7 @@ FIT: TIF
 FIV: VIF
 FIW: FWI
 FIÇ: ÇIF
+FIÜ: FÜI
 FJO: FOJ
      JOF
 FKO: FOK
@@ -515,6 +517,8 @@ FOS: FOS
      SOF
 FOT: FOT
 FOÇ: ÇOF
+FOÜ: FÜO
+     ÜFO
 FRÂ: FRÂ
 FRÊ: FRÊ
 FSÎ: SÎF
@@ -528,6 +532,7 @@ FWÔ: FWÔ
 FYÛ: FÛY
 FÂÊ: ÂFÊ
 FÇÛ: FÛÇ
+FÊÜ: FÜÊ
 GGÂ: GÂG
 GIL: LIG
 GIR: GRI
@@ -556,6 +561,7 @@ GTÊ: TÊG
 GTÛ: GÛT
 GZÔ: ZÔG
 GÂÛ: ÛGÂ
+GÂÜ: ÜGÂ
 HMÂ: HÂM
 HNÛ: HÛN
 HYÛ: HÛY
@@ -622,9 +628,11 @@ ISV: SIV
      VIS
 ISY: SIY
 ISÛ: ÛSI
+ISÜ: ÜSI
 ITT: TIT
 ITV: VIT
 ITÇ: ÇIT
+ITÜ: TÜI
 IVV: VIV
 IVÂ: ÂVI
 IZÑ: ZIÑ
@@ -648,6 +656,7 @@ JTÊ: JÊT
 JWÊ: JWÊ
 JWÛ: WÛJ
 JZÂ: ZÂJ
+JÊÜ: JÜÊ
 KKO: KOK
 KLO: KLO
      KOL
@@ -692,8 +701,10 @@ KZÊ: KÊZ
      ZÊK
 KÂÂ: ÂKÂ
 KÂÇ: ÇÂK
+KÂÜ: KÜÂ
 KÇÛ: ÇÛK
      KÛÇ
+KÛÜ: KÜÛ
 LLÎ: LÎL
 LMO: LOM
      MOL
@@ -861,6 +872,7 @@ TÂÎ: ÎTÂ
 TÂÛ: ÂTÛ
 TÇÛ: ÇÛT
      TÛÇ
+TÊÜ: TÜÊ
 VÂÂ: ÂVÂ
 VÂÊ: ÂVÊ
 WYÛ: WÛY

@@ -31,7 +31,7 @@ type
 //---------------------------------------------------------------------------
 const // vKA
   stNomSrcDef : array [TSourceDefinitions] of String = ( 'Haïti-Référence');
-  stFrmURLSrcDef : array [TSourceDefinitions] of String = ( 'http://www.haiti-reference.com/creole/diction/display.php?action=search&word=%s');
+  stFrmURLSrcDef : array [TSourceDefinitions] of String = ( 'http://www.haiti-reference.com/pages/creole/diction/display.php?action=search&word=%s'); // v1.8KA : URL modifiée (+/pages)
 
 //---------------------------------------------------------------------------
 var

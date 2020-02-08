@@ -50,8 +50,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
@@ -134,6 +132,7 @@ type
     LabelSacO: TLabel;
     LabelSacOn: TLabel;
     LabelSacOu: TLabel;
+    LabelSacOun: TLabel; // v1.8KA : nouveau jeton "Oun"
     LabelSacP: TLabel;
     LabelSacR: TLabel;
     LabelSacS: TLabel;
@@ -164,6 +163,7 @@ type
     LabelChvO: TLabel;
     LabelChvOn: TLabel;
     LabelChvOu: TLabel;
+    LabelChvOun: TLabel; // v1.8KA : nouveau jeton "Oun"
     LabelChvP: TLabel;
     LabelChvR: TLabel;
     LabelChvS: TLabel;
@@ -194,6 +194,7 @@ type
     LabelPltO: TLabel;
     LabelPltOn: TLabel;
     LabelPltOu: TLabel;
+    LabelPltOun: TLabel; // v1.8KA : nouveau jeton "Oun"
     LabelPltP: TLabel;
     LabelPltR: TLabel;
     LabelPltS: TLabel;
@@ -207,6 +208,9 @@ type
     LabelConsonnes: TLabel;
     PopupMenu: TPopupMenu;
     MenuItemFermer: TMenuItem;
+    LabelOun: TLabel;
+    Label6: TLabel;
+    Label63: TLabel;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure MenuItemFermerClick(Sender: TObject);
     procedure FormHide(Sender: TObject);
@@ -232,8 +236,9 @@ const PrefixeLabel     : array [TSituationJeton] of String = ('Label', 'LabelSac
 procedure TFormSituationJetons.FormShow(Sender: TObject);
 const stFormatDecompteJetons = '%s %d';
 var i, j, k, v, o, r             : Integer; // v1.5 : on compte les jetons (Verts/Oranges/Rouges)
-    l, dl                        : Integer; // vKA : on compte les lettres (l) et non les jetons (i,j,k) pour peindre les jetons du sac
+    l, dl, tl                    : Integer; // vKA : on compte les lettres (l) et non les jetons (i,j,k) pour peindre les jetons du sac. v1.8KA +tl
     MelangeEnCoursAvantAffichage : Boolean; // v1.5 : on stoppe le mélange de jetons le cas échéant (hors partie)
+    stLabelName                  : String; // v1.8KA pour débogage
   function stContenu(const NumeroJeton : TOrdreJetonSac) : String;
   begin // On suppose que NumeroJeton>0
   if TypeJeton[NumeroJeton]=tjJoker then
@@ -242,7 +247,8 @@ var i, j, k, v, o, r             : Integer; // v1.5 : on compte les jetons (Vert
     Result:=p.stLettreLD(NumeroJeton) // vKA
   end;
 begin
-with FormMAin do
+
+with FormMain do
   if ReflexionEnCours then
     begin
     TimerEnabled:=TimerReflexion.Enabled;
@@ -270,17 +276,18 @@ with RichEditOrdreTirageJetons do
         for k:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
           begin
           dl:=Ord(EstDoubleLettre[TypeJeton[p.s[k]]]); // vKA : attention aux doubles lettres...
-          Inc(l, 1+dl); // vKA : on compte les lettres (l) et non les jetons (k) pour peindre les jetons du sac
+          tl:=Ord(EstTripleLettre[TypeJeton[p.s[k]]]); // v1.8KA : et aux triples lettres (nouveau jeton Oun)...
+          Inc(l, 1+dl+tl); // vKA : on compte les lettres (l) et non les jetons (k) pour peindre les jetons du sac. v1.8KA +tl
           if p.s[k]=p.c[i,j] then
             begin
-            SelStart:=l-dl-1; // vKA : on compte les lettres (l) et non les jetons (k) pour peindre les jetons du sac
+            SelStart:=l-dl-tl-1; // vKA : on compte les lettres (l) et non les jetons (k) pour peindre les jetons du sac. v1.8KA +tl
             with Self.FindComponent(PrefixeLabel[sjPlateau]+stContenu(p.c[i,j])) as TLabel do
               Caption:=IntToStr(StrToInt(Caption)+1);
             (Self.FindComponent(PrefixeLabel[sjIndefinie]+stContenu(p.c[i,j])) as TLabel).Color:=CouleurSituation[sjPlateau];
             Break
             end
           end;
-        SelLength:=1+dl; // vKA : attention aux doubles lettres...
+        SelLength:=1+dl+tl; // vKA : attention aux doubles lettres... v1.8KA ... et triples lettres !
         SelAttributes.Color:=CouleurSituation[sjPlateau]
         end;
   // 2. On peint les jetons du chevalet en orange
@@ -291,32 +298,36 @@ with RichEditOrdreTirageJetons do
       for j:=Low(TOrdreJetonSac) to High(TOrdreJetonSac) do
         begin
         dl:=Ord(EstDoubleLettre[TypeJeton[p.s[j]]]); // vKA : attention aux doubles lettres...
-        Inc(l, 1+dl); // vKA : on compte les lettres (l) et non les jetons (j) pour peindre les jetons du chevalet
+        tl:=Ord(EstTripleLettre[TypeJeton[p.s[k]]]); // v1.8KA : et aux triples lettres (nouveau jeton Oun)...
+        Inc(l, 1+dl+tl); // vKA : on compte les lettres (l) et non les jetons (j) pour peindre les jetons du chevalet. v1.8KA +tl
         if p.s[j]=p.t[i] then
           begin
           Inc(o); // v1.5 : on compte les jetons (Verts/Oranges/Rouges)
-          SelStart:=l-dl-1;  // vKA : on compte les lettres (l) et non les jetons (j) pour peindre les jetons du chevalet
+          SelStart:=l-dl-tl-1;  // vKA : on compte les lettres (l) et non les jetons (j) pour peindre les jetons du chevalet. v1.8KA +tl
           with Self.FindComponent(PrefixeLabel[sjChevalet]+stContenu(p.t[i])) as TLabel do
             Caption:=IntToStr(StrToInt(Caption)+1);
           (Self.FindComponent(PrefixeLabel[sjIndefinie]+stContenu(p.t[i])) as TLabel).Color:=CouleurSituation[sjChevalet];
           break
           end
         end;
-      SelLength:=1+dl; // vKA : attention aux doubles lettres...
+      SelLength:=1+dl+tl; // vKA : attention aux doubles lettres... v1.8KA ... et triples lettres !
       SelAttributes.Color:=CouleurSituation[sjChevalet]
       end;
   // 4. On peint les jetons du sac en vert
   l:=0; // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac
   for i:=Low(TOrdreJetonSac) to p.ProchainJetonATirer-1 do
-    Inc(l, 1+Ord(EstDoubleLettre[TypeJeton[p.s[i]]])); // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac
+    Inc(l, 1+Ord(EstDoubleLettre[TypeJeton[p.s[i]]])   // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac.
+            +Ord(EstTripleLettre[TypeJeton[p.s[i]]])); // v1.8KA +EstTripleLettre
   SelStart:=l; // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac
   for i:=p.ProchainJetonATirer to High(TOrdreJetonSac) do
     begin
-    Inc(l, 1+Ord(EstDoubleLettre[TypeJeton[p.s[i]]])); // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac
+    Inc(l, 1+Ord(EstDoubleLettre[TypeJeton[p.s[i]]])   // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac.
+            +Ord(EstTripleLettre[TypeJeton[p.s[i]]])); // v1.8KA +EstTripleLettre
     Inc(v); // v1.5 : on compte les jetons (Verts/Oranges/Rouges)
     with Self.FindComponent(PrefixeLabel[sjSac]+stContenu(p.s[i])) as TLabel do
       Caption:=IntToStr(StrToInt(Caption)+1);
-    (Self.FindComponent(PrefixeLabel[sjIndefinie]+stContenu(p.s[i])) as TLabel).Color:=CouleurSituation[sjSac];
+    stLabelName:=PrefixeLabel[sjIndefinie]+stContenu(p.s[i]); // v1.8KA pour débogage
+    (Self.FindComponent(stLabelName) as TLabel).Color:=CouleurSituation[sjSac];
     end;
   SelLength:=l; // vKA : on compte les lettres (l) et non les jetons (i) pour peindre les jetons du sac
   SelAttributes.Color:=CouleurSituation[sjSac];

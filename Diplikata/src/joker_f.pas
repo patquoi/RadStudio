@@ -29,7 +29,7 @@ type
     Button18: TButton;
     Button19: TButton;
     Button20: TButton;
-    Button21: TButton;
+    Button21: TButton; // v1.8KA : Ajout du jeton "Oun"
     Button22: TButton;
     Button23: TButton;
     Button24: TButton;
@@ -38,6 +38,7 @@ type
     Button27: TButton;
     Button28: TButton;
     Button29: TButton;
+    Button30: TButton;
     ButtonAnnuler: TButton;
     procedure ButtonAnnulerClick(Sender: TObject);
     procedure ButtonLettreClick(Sender: TObject);
@@ -106,6 +107,7 @@ case Key of
   '$':if Button17.Enabled then ButtonLettreClick(Button17); // vKA : $ => Ng
   '°':if Button19.Enabled then ButtonLettreClick(Button19); // vKA : ° => On
   'ù':if Button25.Enabled then ButtonLettreClick(Button25); // vKA : ù => Ou
+  '#':if Button21.Enabled then ButtonLettreClick(Button21); // v1.8KA : # => Oun (nouveau jeton)
   end{case of}
 end;
 //---------------------------------------------------------------------------

@@ -29,27 +29,26 @@ object FormRechercheMots: TFormRechercheMots
   PixelsPerInch = 96
   TextHeight = 13
   object LabelInfosJokers: TLabel
-    Left = 184
+    Left = 182
     Top = 40
-    Width = 257
+    Width = 207
     Height = 13
     Anchors = [akLeft, akTop, akRight]
     Caption = 'Joker : '#171' ? '#187' remplace n'#39'importe quel jeton.'
-    ExplicitWidth = 207
   end
   object LabelDoublesLettres: TLabel
-    Left = 184
+    Left = 182
     Top = 56
-    Width = 351
+    Width = 381
     Height = 13
     Caption = 
-      'Doubles lettres : '#171' An '#187', '#171' Ch '#187', '#171' En '#187', '#171' Ng '#187', '#171' On '#187', '#171' Ou '#187 +
-      ' et '#171' Ui '#187'.'
+      'Multi-lettres : '#171' An '#187', '#171' Ch '#187', '#171' En '#187', '#171' Ng '#187', '#171' On '#187', '#171' Ou '#187', ' +
+      #171' Oun '#187' et '#171' Ui '#187'.'
   end
   object RadioGroupOrdre: TRadioGroup
     Left = 8
     Top = 8
-    Width = 169
+    Width = 164
     Height = 57
     Caption = ' Le crit'#232're ci-contre est un... '
     ItemIndex = 1
@@ -74,7 +73,6 @@ object FormRechercheMots: TFormRechercheMots
     ParentFont = False
     TabOrder = 1
     OnKeyPress = EditKeyPress
-    ExplicitLeft = 194
   end
   object ButtonRechercher: TButton
     Left = 518
@@ -86,7 +84,6 @@ object FormRechercheMots: TFormRechercheMots
     Default = True
     TabOrder = 2
     OnClick = ButtonRechercherClick
-    ExplicitLeft = 468
   end
   object StatusBar: TStatusBar
     Left = 0
@@ -97,9 +94,6 @@ object FormRechercheMots: TFormRechercheMots
     Panels = <>
     SimplePanel = True
     SizeGrip = False
-    ExplicitTop = 419
-    ExplicitWidth = 534
-    ExplicitHeight = 19
   end
   object Memo: TMemo
     Left = 0
@@ -116,6 +110,5 @@ object FormRechercheMots: TFormRechercheMots
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 4
-    ExplicitHeight = 344
   end
 end

@@ -8,14 +8,14 @@ const NbCasesCote         =  15;
       PositionRelativeMin = -14;
       PositionCaseDepart  =  0;
       PositionRelativeMax =  14;
-      NbLettresAlphabet   =  29; // vKA
-      NbJetonsSac         = 103; // vKA
+      NbLettresAlphabet   =  30; // v1.8KA +1 jeton Oun // vKA
+      NbJetonsSac         = 102; // v1.8KA +1 jeton (+1 Oun -1 J -1 D) // vKA
       NbMaxJetonsTirage   =   7;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       stVersionDico       = 'KA0'; // vKA
       BonusScrabble       = 50;
@@ -35,9 +35,9 @@ type  TBonus = (bAucun,
                 bMotCompteDouble, bMotCompteTriple);
       TCoordonnee = 0..NbCasesCote-1;
       TTypeJeton = (tjIndefini, // vKA
-                    tjJoker, tjA, tjAn, tjB, tjCh, tjD, tjE, tjEn, tjF, tjG,
-                    tjH,     tjI, tjJ, tjK, tjL, tjM, tjN, tjNg, tjO, tjOn,
-                    tjOu,    tjP, tjR, tjS, tjT, tjUi, tjV, tjW, tjY, tjZ);
+                    tjJoker, tjA, tjAn, tjB, tjCh, tjD,  tjE, tjEn, tjF, tjG,
+                    tjH,     tjI, tjJ,  tjK, tjL,  tjM,  tjN, tjNg, tjO, tjOn,
+                    tjOu,  tjOun, tjP, tjR,  tjS, tjT,  tjUi, tjV, tjW,  tjY, tjZ); // v1.8KA : ajout du jeton "Oun"
       TGenreLettre=(glIndefini, glConsonne, glVoyelle);
       TNumeroJetonSac      = 0..NbJetonsSac; // 0 = pas de jeton
       TOrdreJetonSac       = 1..NbJetonsSac; // Ordre de tirage des jetons dans le sac
@@ -81,7 +81,7 @@ type  TBonus = (bAucun,
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer            = (312,2607,8048,15595,18390,19229,14864,9612,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (320,2643,8164,15695,18516,19250,14880,9630,6190,3641,2124,1092,448,120); // vKA : Référence du gwodiko
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
       stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon le Gwodiko.'#13;

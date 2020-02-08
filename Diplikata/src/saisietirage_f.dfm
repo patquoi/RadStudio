@@ -4,8 +4,8 @@ object FormSaisieTirage: TFormSaisieTirage
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'Proposition de tirage'
-  ClientHeight = 192
-  ClientWidth = 281
+  ClientHeight = 175
+  ClientWidth = 300
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -26,7 +26,7 @@ object FormSaisieTirage: TFormSaisieTirage
   object LabelReliquat: TLabel
     Left = 0
     Top = 0
-    Width = 141
+    Width = 150
     Height = 17
     Hint = 'Reliquat (en gris - non modifiable)'
     Alignment = taRightJustify
@@ -44,9 +44,9 @@ object FormSaisieTirage: TFormSaisieTirage
     ShowHint = True
   end
   object LabelNouveauTirage: TLabel
-    Left = 140
+    Left = 150
     Top = 0
-    Width = 141
+    Width = 150
     Height = 17
     Hint = 'Nouveau tirage (en blanc)'
     AutoSize = False
@@ -63,10 +63,10 @@ object FormSaisieTirage: TFormSaisieTirage
     ShowHint = True
   end
   object LabelInformation: TLabel
-    Left = 16
+    Left = 0
     Top = 152
-    Width = 249
-    Height = 25
+    Width = 300
+    Height = 17
     Alignment = taCenter
     AutoSize = False
     Caption = 'Utilisez la touche Retour Arri'#232're pour effacer le dernier jeton.'
@@ -80,7 +80,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button1: TButton
     Tag = 2
-    Left = 16
+    Left = 24
     Top = 24
     Width = 25
     Height = 25
@@ -90,7 +90,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button2: TButton
     Tag = 3
-    Left = 48
+    Left = 56
     Top = 24
     Width = 25
     Height = 25
@@ -103,7 +103,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button3: TButton
     Tag = 4
-    Left = 80
+    Left = 88
     Top = 24
     Width = 25
     Height = 25
@@ -113,7 +113,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button4: TButton
     Tag = 5
-    Left = 112
+    Left = 120
     Top = 24
     Width = 25
     Height = 25
@@ -123,7 +123,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button5: TButton
     Tag = 6
-    Left = 144
+    Left = 152
     Top = 24
     Width = 25
     Height = 25
@@ -133,7 +133,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button6: TButton
     Tag = 7
-    Left = 176
+    Left = 184
     Top = 24
     Width = 25
     Height = 25
@@ -143,7 +143,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button7: TButton
     Tag = 8
-    Left = 208
+    Left = 216
     Top = 24
     Width = 25
     Height = 25
@@ -156,7 +156,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button8: TButton
     Tag = 9
-    Left = 240
+    Left = 248
     Top = 24
     Width = 25
     Height = 25
@@ -166,7 +166,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button9: TButton
     Tag = 10
-    Left = 16
+    Left = 24
     Top = 56
     Width = 25
     Height = 25
@@ -176,7 +176,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button10: TButton
     Tag = 11
-    Left = 48
+    Left = 56
     Top = 56
     Width = 25
     Height = 25
@@ -186,7 +186,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button11: TButton
     Tag = 12
-    Left = 80
+    Left = 88
     Top = 56
     Width = 25
     Height = 25
@@ -196,7 +196,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button12: TButton
     Tag = 13
-    Left = 112
+    Left = 120
     Top = 56
     Width = 25
     Height = 25
@@ -206,7 +206,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button13: TButton
     Tag = 14
-    Left = 144
+    Left = 152
     Top = 56
     Width = 25
     Height = 25
@@ -216,7 +216,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button14: TButton
     Tag = 15
-    Left = 176
+    Left = 184
     Top = 56
     Width = 25
     Height = 25
@@ -226,7 +226,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button15: TButton
     Tag = 16
-    Left = 208
+    Left = 216
     Top = 56
     Width = 25
     Height = 25
@@ -236,7 +236,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button16: TButton
     Tag = 17
-    Left = 240
+    Left = 248
     Top = 56
     Width = 25
     Height = 25
@@ -246,7 +246,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button17: TButton
     Tag = 18
-    Left = 16
+    Left = 24
     Top = 88
     Width = 25
     Height = 25
@@ -259,7 +259,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button18: TButton
     Tag = 19
-    Left = 48
+    Left = 56
     Top = 88
     Width = 25
     Height = 25
@@ -269,7 +269,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button19: TButton
     Tag = 20
-    Left = 80
+    Left = 88
     Top = 88
     Width = 25
     Height = 25
@@ -282,7 +282,7 @@ object FormSaisieTirage: TFormSaisieTirage
   end
   object Button20: TButton
     Tag = 21
-    Left = 112
+    Left = 120
     Top = 88
     Width = 25
     Height = 25
@@ -293,115 +293,128 @@ object FormSaisieTirage: TFormSaisieTirage
     TabOrder = 19
     OnClick = ButtonJetonClick
   end
-  object Button21: TButton
-    Tag = 22
-    Left = 144
+  object Button22: TButton
+    Tag = 23
+    Left = 184
     Top = 88
     Width = 25
     Height = 25
     Caption = '&P'
-    TabOrder = 20
-    OnClick = ButtonJetonClick
-  end
-  object Button22: TButton
-    Tag = 23
-    Left = 176
-    Top = 88
-    Width = 25
-    Height = 25
-    Caption = '&R'
     TabOrder = 21
     OnClick = ButtonJetonClick
   end
   object Button23: TButton
     Tag = 24
-    Left = 208
-    Top = 88
+    Left = 217
+    Top = 87
     Width = 25
     Height = 25
-    Caption = '&S'
+    Caption = '&R'
     TabOrder = 22
     OnClick = ButtonJetonClick
   end
   object Button24: TButton
     Tag = 25
-    Left = 240
+    Left = 248
     Top = 88
     Width = 25
     Height = 25
-    Caption = '&T'
+    Caption = '&S'
     TabOrder = 23
     OnClick = ButtonJetonClick
   end
   object Button25: TButton
     Tag = 26
-    Left = 16
+    Left = 24
     Top = 120
     Width = 25
     Height = 25
-    Caption = '&Ui'
+    Caption = '&T'
     TabOrder = 24
     OnClick = ButtonJetonClick
   end
   object Button26: TButton
     Tag = 27
-    Left = 48
+    Left = 56
     Top = 120
     Width = 25
     Height = 25
-    Caption = '&V'
+    Caption = '&Ui'
     TabOrder = 25
     OnClick = ButtonJetonClick
   end
   object Button27: TButton
     Tag = 28
-    Left = 80
-    Top = 120
+    Left = 89
+    Top = 119
     Width = 25
     Height = 25
-    Caption = '&W'
-    TabOrder = 28
+    Caption = '&V'
+    TabOrder = 26
     OnClick = ButtonJetonClick
   end
   object Button28: TButton
     Tag = 29
-    Left = 112
+    Left = 120
     Top = 120
     Width = 25
     Height = 25
-    Caption = '&Y'
+    Caption = '&W'
     TabOrder = 29
     OnClick = ButtonJetonClick
   end
   object Button29: TButton
     Tag = 30
-    Left = 144
+    Left = 152
+    Top = 120
+    Width = 25
+    Height = 25
+    Caption = '&Y'
+    TabOrder = 30
+    OnClick = ButtonJetonClick
+  end
+  object Button30: TButton
+    Tag = 31
+    Left = 184
     Top = 120
     Width = 25
     Height = 25
     Caption = '&Z'
-    TabOrder = 30
+    TabOrder = 31
     OnClick = ButtonJetonClick
   end
   object Button0: TButton
     Tag = 1
-    Left = 176
+    Left = 216
     Top = 120
     Width = 25
     Height = 25
     Caption = '&?'
-    TabOrder = 26
+    TabOrder = 27
     OnClick = ButtonJetonClick
   end
   object ButtonOK: TButton
-    Left = 207
+    Left = 248
     Top = 120
-    Width = 58
+    Width = 25
     Height = 26
     Caption = 'OK'
     Default = True
     ModalResult = 1
-    TabOrder = 27
+    TabOrder = 28
     OnClick = ButtonOKClick
+  end
+  object Button21: TButton
+    Tag = 22
+    Left = 152
+    Top = 88
+    Width = 25
+    Height = 25
+    Hint = #249
+    Caption = 'Oun'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 20
+    OnClick = ButtonJetonClick
   end
 end

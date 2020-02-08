@@ -111,11 +111,11 @@ var Trv : Boolean;
     stDeb, stFin, stSuiteMot : String;
     fPDF : TextFile;
     slPDF : TStringList; // Pour Liste de mots en PDF VersionDico:VersionJetons
-type TDoubleLettre     = (dlAn=1, dlCh, dlEn, dlNg, dlOn, dlOu, dlUi);
-const NbDoublesLettres = 7;
-const stDL       : Array [TDoubleLettre] of String = ('AN','CH','EN','NG','ON','OU','UI');
-      stSL       : Array [TDoubleLettre] of String = ('Â', 'Ç', 'Ê', 'Ñ', 'Ô', 'Û' , 'Î');
-      stVoyelles = 'AEIOUWYÂÊÎÔÛÀÈÒ'; // Lettres normales (A~Y) + lettres doubles des jetons (Â~Û) et lettres invalidant la double lettre potentielle (À~Ò)
+type TDoubleLettre     = (dlAn=1, dlCh, dlEn, dlNg, dlOn, dlOu, dlOun, dlUi); // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+const NbDoublesLettres = 8; // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+const stDL       : Array [TDoubleLettre] of String = ('AN','CH','EN','NG','ON','OU','ÛN','UI'); // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+      stSL       : Array [TDoubleLettre] of String = ('Â', 'Ç', 'Ê', 'Ñ', 'Ô', 'Û' ,'Ü',  'Î');  // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+      stVoyelles = 'AEIOUWYÂÊÎÔÛÜÀÈÒ'; // Lettres normales (A~Y) + lettres doubles des jetons (Â~Û) et lettres invalidant la double lettre potentielle (À~Ò) // v1.1 : Ajout du nouveau jeton "Oun" = Ü
       Puiss2 : Array [0..7] of Integer = (1,2,4,8,16,32,64,128);
 
 procedure Trie;
@@ -143,6 +143,7 @@ for i:=1 to Length(stMotAccents) do
     'Ñ': stMotJetons:=stMotJetons+'Ng';
     'Ô': stMotJetons:=stMotJetons+'On';
     'Û': stMotJetons:=stMotJetons+'Ou';
+    'Ü': stMotJetons:=stMotJetons+'Oun'; // v1.1 : Ajout du nouveau jeton "Oun" = Ü
     // Lettres à accents
     'À': stMotJetons:=stMotJetons+'A';
     'È': stMotJetons:=stMotJetons+'E';
@@ -168,6 +169,7 @@ for i:=1 to Length(stMotAccents) do
     'Ñ': stMotDecompresse:=stMotDecompresse+'ng';
     'Ô': stMotDecompresse:=stMotDecompresse+'on';
     'Û': stMotDecompresse:=stMotDecompresse+'ou';
+    'Ü': stMotDecompresse:=stMotDecompresse+'oun'; // v1.1 : Ajout du nouveau jeton "Oun" = Ü
     // Lettres à accents
     'À': stMotDecompresse:=stMotDecompresse+'à';
     'È': stMotDecompresse:=stMotDecompresse+'è';
@@ -281,7 +283,7 @@ for i:=0 to nMots do
   // A1. On remplace C et U
   RemplaceChOuUi(i);
 
-Memo2.Lines.Add('Ajout des combinaisons AN,CH,EN,NG,ON,OU,UI...');
+Memo2.Lines.Add('Ajout des combinaisons AN,CH,EN,NG,ON,ÛN...');
 // B. Pour chaque mot...
 for i:=0 to nMots do
   begin
@@ -404,9 +406,9 @@ procedure TFormMain.ButtonGenererClick(Sender: TObject);
 var i, j, k, l, n, TailleMax : Integer;
     F : TextFile;
 
-const NbDoublesLettres = 7;
-const stDL   : Array [1..NbDoublesLettres] of String = ('AN','CH','EN','NG','ON','OU','UI');
-      stSL   : Array [1..NbDoublesLettres] of String = ('Â', 'Ç', 'Ê', 'Ñ', 'Ô', 'Û' , 'Î');
+const NbDoublesLettres = 8; // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+const stDL   : Array [1..NbDoublesLettres] of String = ('AN','CH','EN','NG','ON','OU','ÛN','UI'); // v1.1 : Ajout du nouveau jeton "Oun" = Ü
+      stSL   : Array [1..NbDoublesLettres] of String = ('Â', 'Ç', 'Ê', 'Ñ', 'Ô', 'Û' ,'Ü',  'Î'); // v1.1 : Ajout du nouveau jeton "Oun" = Ü
       Puiss2 : Array [0..7] of Integer = (1,2,4,8,16,32,64,128);
 procedure Trie;
 var sl : TStringList;
@@ -448,7 +450,7 @@ for i:=0 to Memo1.Lines.Count-1 do
   l:=Length(Memo1.Lines[i]);
   for j:=1 to l do
     case Memo1.Lines[i][j] of
-      'A'..'Z','Â','Ç','Ê','Ñ','Ô','Û','Î': begin
+      'A'..'Z','Â','Ç','Ê','Ñ','Ô','Û','Ü','Î': begin  // v1.1 : Ajout du nouveau jeton "Oun" = Ü
                                             end
     else
       Memo2.Lines.Add(' /!\ le Mot "'+Memo1.Lines[i]+'" possède un caractère interdit /!\');
@@ -484,7 +486,7 @@ Memo2.Lines.Add('Traitement du fichier terminé.');
 end;
 
 procedure TFormMain.ButtonCalculerClick(Sender: TObject);
-const OrdMin = 65; OrdMax = 219;
+const OrdMin = 65; OrdMax = 220; // v1.1 : "Oun" = Ü = 220 !
 var n : Array [OrdMin..OrdMax] of Integer;
     p : Array [OrdMin..OrdMax] of Integer;
     i, j, l, nl, pMax : Integer;

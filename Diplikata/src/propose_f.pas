@@ -29,6 +29,7 @@ type
     ActionP: TAction;
     ActionOn: TAction;
     ActionOu: TAction;
+    ActionOun: TAction; // v1.8KA : ajout du nouveau jeton "Oun"
     ActionR: TAction;
     ActionS: TAction;
     ActionT: TAction;
@@ -95,6 +96,7 @@ type
     ButtonP: TButton;
     ButtonOn: TButton;
     ButtonOu: TButton;
+    ButtonOun: TButton; // v1.8KA : ajout du nouveau jeton "Oun"
     ButtonR: TButton;
     ButtonS: TButton;
     ButtonT: TButton;
@@ -165,17 +167,27 @@ uses main_f, tirage_f, definition_f, langue;
 const stPrefixeAction ='Action'; // vKA
 //---------------------------------------------------------------------------
 procedure TFormPropositionPose.ActionEffacerExecute(Sender: TObject);
-var DrnCar : Char;    // vKA
+var DrnCar,
+    AvtDrnCar : Char; // v1.8KA : nouveau jeton "Oun"
     l      : Integer; // vKA
-    DblLtr : Boolean;
+    DblLtr,
+    TrpLtr : Boolean; // v1.8KA : nouveau jeton "Oun"
 begin
 l:=Length(LabelPose.Caption); // vKA
 if l=0 then Exit; // vKA
+
 DrnCar:=LabelPose.Caption[l];
 DblLtr:=(DrnCar>='a') and (DrnCar<='z');  // vKA
+
+if l>1 then // v1.8KA : nouveau jeton "Oun"
+  begin
+  AvtDrnCar:=LabelPose.Caption[l-1];
+  TrpLtr:=DblLtr and (AvtDrnCar>='a') and (AvtDrnCar<='z');
+  end;
+
 LabelReliquat.Caption:=Copy(LabelPose.Caption,
-                            l-Ord(DblLtr),  // On prend deux lettres si la dernière est une minuscule (double lettre)
-                            1+Ord(DblLtr))+ // On prend deux lettres si la dernière est une minuscule (double lettre)
+                            l-Ord(DblLtr)-Ord(TrpLtr),  // On prend 2 lettres si la dernière est une minuscule (double lettre). v1.8KA... et 3 si triple lettre (nouveau jeton "Oun")
+                            1+Ord(DblLtr)+Ord(TrpLtr))+ // On prend 2 lettres si la dernière est une minuscule (double lettre). v1.8KA... et 3 si triple lettre (nouveau jeton "Oun")
                        LabelReliquat.Caption;
 LabelPose.Caption:=copy(LabelPose.Caption, 1, l-1-Ord(DblLtr));
 Dec(Fin);
@@ -205,7 +217,7 @@ stAction:=(Sender as TAction).Name;
 if stAction='ActionJoker' then
   stLettre:=' '
 else
-  stLettre:=Copy(stAction,7,2); // vKA
+  stLettre:=Copy(stAction,7,3); // vKA. v1.8KA cas du nouveau jeton à trois lettres : au lieu de (Copy(stAction,7,2)
 // 1. On ajoute le jeton à la pose
 LabelPose.Caption:=LabelPose.Caption+stLettre;
 // 2. On retire le jeton du reliquat
@@ -319,6 +331,7 @@ case Key of
   '$':if ButtonNg.Enabled then ActionLettreExecute(ActionNg); // vKA : $ => Ng
   '°':if ButtonOn.Enabled then ActionLettreExecute(ActionOn); // vKA : ° => On
   'ù':if ButtonOu.Enabled then ActionLettreExecute(ActionOu); // vKA : ù => Ou
+  '#':if ButtonOun.Enabled then ActionLettreExecute(ActionOun); // v1.8KA : nouveau jeton ü => Oun
   end{case of}
 end;
 //---------------------------------------------------------------------------
@@ -440,7 +453,10 @@ for i:=1 to Length(LabelReliquat.Caption) do
   if (LabelReliquat.Caption[i]>='A') and (LabelReliquat.Caption[i]<='Z') then // vKA : On exclut les lettres en minuscules traitées ci-dessous
     begin
     if (Length(LabelReliquat.Caption)>i) and (LabelReliquat.Caption[i+1]>='a') and (LabelReliquat.Caption[i+1]<='z') then // vKA : On traite les doubles lettres ici
-      stNomAction:=stPrefixeAction+LabelReliquat.Caption[i]+LabelReliquat.Caption[i+1]
+      if (Length(LabelReliquat.Caption)>i+1) and (LabelReliquat.Caption[i+2]>='a') and (LabelReliquat.Caption[i+2]<='z') then // v1.8KA : On traite les TRIPLES lettres ici (nouverau jeton "Oun")
+        stNomAction:=stPrefixeAction+LabelReliquat.Caption[i]+LabelReliquat.Caption[i+1]+LabelReliquat.Caption[i+2]
+      else
+        stNomAction:=stPrefixeAction+LabelReliquat.Caption[i]+LabelReliquat.Caption[i+1]
     else
       stNomAction:=stPrefixeAction+LabelReliquat.Caption[i];
     (FindComponent(stNomAction) as TAction).Enabled:=True
@@ -505,7 +521,7 @@ var i : Integer;
 begin
 StatusBar.SimpleText:='Chevalet : '; //IntToStr(Fin)+':';
 For i:=Low(TOrdreJetonChevalet) to High(TOrdreJetonChevalet) do
- StatusBar.SimpleText:=StatusBar.SimpleText+p.stLettre(Chevalet[i]);
+ StatusBar.SimpleText:=StatusBar.SimpleText+stJetonsEnLettres(p.stLettre(Chevalet[i])); // v1.8KA : on affiche le jeton et non la vesion abrégée
 end;
 //---------------------------------------------------------------------------
 end.

@@ -62,6 +62,7 @@ ABDY: DYAB
 ABDÂ: BÂDA
 ABDÔ: BÔDA
 ABDÛ: BÛDA
+ABDÜ: BÜDA
 ABEG: BEGA
 ABEJ: BAJE
 ABEL: ALBE
@@ -77,6 +78,7 @@ ABEZ: BAZE
 ABFÔ: BAFÔ
 ABGI: BAGI
 ABGL: BLAG
+ABGÜ: GÜBA
 ABIK: BIKA
 ABIL: ABIL
 ABIM: ABIM
@@ -150,6 +152,7 @@ ADEY: ADYE
 ADFO: ADOF
       FADO
 ADFÊ: FADÊ
+ADFÜ: FÜDA
 ADGO: GADO
 ADGR: GRAD
 ADIJ: JIDA
@@ -222,6 +225,7 @@ AEJS: SAJE
 AEJZ: JAZE
 AEJÇ: ÇAJE
       JAÇE
+AEJÜ: AJÜE
 AEKL: AKLE
       KALE
 AEKM: MAKE
@@ -380,6 +384,7 @@ AGNR: GRAN
 AGNS: SANG
 AGNW: GWAN
 AGNÛ: ÛGAN
+AGNÜ: ÜGAN
 AGOT: GATO
 AGOW: AGWO
 AGOY: YOGA
@@ -457,6 +462,7 @@ AJLN: LANJ
 AJLP: PLAJ
 AJLÂ: LAJÂ
 AJLÛ: JALÛ
+AJLÜ: JÜAL
 AJMN: JANM
 AJMO: MAJO
       OMAJ
@@ -495,6 +501,7 @@ AKNÂ: ÂKAN
       ANKÂ
       KÂNA
 AKNÇ: ÇANK
+AKNÜ: KÜAN
 AKOP: KAPO
       OPAK
       PAKO
@@ -665,6 +672,7 @@ ASTÊ: SATÊ
 ASVÂ: AVÂS
 ASVÊ: SAVÊ
 ASVÔ: SAVÔ
+ASWÜ: SÜWA
 ATTÔ: TATÔ
 ATVÂ: VÂTA
 ATYÂ: ÂTAY
@@ -682,6 +690,7 @@ BBOÊ: BÊBO
 BBÂÊ: BÂBÊ
 BBÂÛ: BÂBÛ
 BBÔÔ: BÔBÔ
+BBÛÜ: BÛBÜ
 BDEO: BODE
 BDEÂ: BÂDE
 BDEÔ: BÔDE
@@ -707,6 +716,7 @@ BEET: TEBE
 BEFI: BIFE
 BEFR: BREF
 BEGO: GOBE
+BEGÜ: BEGÜ
 BEIJ: BIJE
 BEIK: BEKI
       KEBI
@@ -804,6 +814,7 @@ BLOO: LOBO
 BLZÛ: BLÛZ
 BLÂÇ: BLÂÇ
 BLÔÛ: BÛLÔ
+BLÛÜ: LÜBÛ
 BMNO: BONM
 BMOÂ: MÂBO
 BMÊÔ: MÔBÊ
@@ -849,6 +860,7 @@ DEFI: DEFI
       DIFE
 DEFO: DEFO
 DEFÊ: DEFÊ
+DEFÜ: FÜDE
 DEGI: DEGI
       DIGE
       GIDE
@@ -991,6 +1003,7 @@ DOOY: ODYO
 DOSÛ: DOSÛ
 DOTÂ: DOTÂ
 DOVÛ: VODÛ
+DOVÜ: VODÜ
 DPÂÂ: PÂDÂ
 DPÂÛ: ÂPÛD
 DPÊÛ: PÊDÛ
@@ -1103,6 +1116,7 @@ EFNN: NENF
 EFNR: FREN
 EFNT: FENT
 EFNÂ: ÂFEN
+EFNÜ: FÜEN
 EFOR: FORE
 EFOV: OFEV
 EFOÇ: ÇOFE
@@ -1117,6 +1131,7 @@ EFTÛ: TÛFE
 EFVY: FYEV
 EFYÛ: FÛYE
 EFZÂ: FEZÂ
+EFZÜ: FÜEZ
 EFÂÇ: ÂÇEF
 EFÇÛ: FÛÇE
 EGIM: GIME
@@ -1250,6 +1265,7 @@ EJNT: JENT
 EJNW: JWEN
 EJNÂ: JENÂ
 EJNÛ: JENÛ
+EJNÜ: JÜEN
 EJOP: POJE
 EJPY: PYEJ
 EJPÔ: EPÔJ
@@ -1328,6 +1344,7 @@ EKVÛ: KÛVE
 EKWÛ: EKWÛ
       KÛWE
 EKYÊ: ÊKYE
+EKYÜ: KÜYE
 EKZÔ: KÔZE
 EKÇÛ: KÛÇE
 ELMO: LEMO
@@ -1425,6 +1442,7 @@ ENTÊ: ÊTEN
       ETÊN
 ENTÔ: ÔNET
       TÔNE
+ENTÜ: TÜEN
 ENVÂ: ÂVEN
       NEVÂ
 ENVÊ: NEVÊ
@@ -1528,6 +1546,7 @@ EWYÛ: WÛYE
 EWZÛ: WÛZE
 FFÊÊ: FÊFÊ
 FFÛÛ: FÛFÛ
+FFÛÜ: FÛFÜ
 FGII: FIGI
 FGIR: GRIF
 FIIN: FINI
@@ -1580,11 +1599,13 @@ FOOT: FOTO
 FORÂ: RÂFO
 FOWÛ: FÛWO
 FYZÛ: FYÛZ
+FÂÊÜ: ÂFÜÊ
 FÇÔÛ: FÛÇÔ
 GGOO: GOGO
 GGOW: GWOG
 GGÂÂ: GÂGÂ
 GGÂÊ: GÊGÂ
+GHÂÜ: HÜGÂ
 GIJO: JIGO
 GIJR: GRIJ
 GIMÊ: MÊGI
@@ -1625,6 +1646,7 @@ GRTÊ: TRÊG
 GRÂÂ: ÂGRÂ
 GRÂÊ: ÂGRÊ
 GTÂÊ: GÊTÂ
+HISÜ: HÜSI
 IIJR: JIRI
 IIKN: INIK
 IIKP: PIKI
@@ -1723,6 +1745,7 @@ IMSÔ: SIMÔ
 IMTÂ: MÂTI
       MITÂ
 IMTÊ: ÊTIM
+IMTÜ: TIMÜ
 IMVÔ: VÔMI
 IMZÂ: ÂZIM
       ZÂMI
@@ -1802,6 +1825,8 @@ KKOÔ: KOKÔ
 KKÊÊ: KÊKÊ
 KKÔÛ: KÔKÛ
 KKÛÛ: KÛKÛ
+KKÛÜ: KÛKÜ
+      KÜÛK
 KLOO: KOLO
       LOKO
 KLOP: PLOK
@@ -1853,6 +1878,7 @@ KWÛÛ: WÛKÛ
 KYÂÛ: KÛYÂ
 KYÛÛ: ÛYKÛ
 KZÊÛ: KÛZÊ
+KÇÛÜ: ÇÛKÜ
 LLOO: LOLO
 LMOÂ: LÂMO
 LMÂÂ: LÂMÂ
@@ -1968,6 +1994,7 @@ OTVÂ: VOTÂ
 OTVÛ: VOTÛ
 OTÂÇ: ÂTOÇ
 OTÇÔ: TOÇÔ
+OYYÜ: YOYÜ
 PPÂÂ: PÂPÂ
 PPÂÊ: PÊPÂ
 PPÔÔ: PÔPÔ
@@ -2006,7 +2033,9 @@ TTÔÔ: TÔTÔ
 TTÛÛ: TÛTÛ
 VVÔÔ: VÔVÔ
 VVÛÛ: VÛVÛ
+VVÜÜ: VÜVÜ
 VZÂÛ: VÛZÂ
 WÂÂÇ: ÂÇWÂ
 ZZÔÔ: ZÔZÔ
+ZZÛÜ: ZÛZÜ
 ÇÇÛÛ: ÇÛÇÛ

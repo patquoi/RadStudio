@@ -10,7 +10,7 @@ object FormSituationJetons: TFormSituationJetons
   Constraints.MaxWidth = 447
   Constraints.MinWidth = 447
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clWhite
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
@@ -36,33 +36,34 @@ object FormSituationJetons: TFormSituationJetons
     Caption = ' Ordre de tirage des jetons '
     Enabled = False
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clSilver
+    Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     DesignSize = (
       425
       57)
     object RichEditOrdreTirageJetons: TRichEdit
-      Left = 8
+      Left = 3
       Top = 16
-      Width = 409
+      Width = 419
       Height = 28
       Anchors = [akLeft, akTop, akRight]
       BevelInner = bvNone
       BevelOuter = bvNone
       BorderStyle = bsNone
-      Color = clBlack
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
       Font.Height = -11
       Font.Name = 'Courier New'
       Font.Style = []
       Lines.Strings = (
-        'AAAAAAAAAAnAnBBChChDDDEEEEEEEEEEEEEEEnEnFFGGHIIIIIJJJKKKKL'
-        'LLLLMMNNNNNgOOOOOOnOnOuOuOuPPRRRRSSSSTTTTTUiVVWWWWYYYZZZ??')
+        'AAAAAAAAAAnAnBBChChDDEEEEEEEEEEEEEEEnEnFFGGHIIIIIJJKKKKLLL'
+        'LLMMNNNNNgOOOOOOnOnOuOuOuOunPPRRRRSSSSTTTTTUiVVWWWWYYYZZZ??')
+      ParentColor = True
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
@@ -76,10 +77,11 @@ object FormSituationJetons: TFormSituationJetons
     Height = 57
     Caption = ' L'#233'gende '
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clSilver
+    Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     object LabelLegende1: TLabel
@@ -186,10 +188,11 @@ object FormSituationJetons: TFormSituationJetons
     Height = 209
     Caption = ' Situation par type de jeton '
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clSilver
+    Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object LabelA: TLabel
@@ -636,7 +639,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object LabelOu: TLabel
       Left = 304
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taCenter
@@ -682,22 +685,6 @@ object FormSituationJetons: TFormSituationJetons
       Width = 53
       Height = 13
       Caption = 'R'#233'partition'
-    end
-    object Label5: TLabel
-      Left = 344
-      Top = 24
-      Width = 53
-      Height = 13
-      Caption = 'R'#233'partition'
-    end
-    object Label6: TLabel
-      Left = 320
-      Top = 24
-      Width = 17
-      Height = 13
-      Alignment = taRightJustify
-      AutoSize = False
-      Caption = 'Pts'
     end
     object Label12: TLabel
       Left = 32
@@ -1051,7 +1038,7 @@ object FormSituationJetons: TFormSituationJetons
       Height = 13
       Alignment = taRightJustify
       AutoSize = False
-      Caption = '3'
+      Caption = '1'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clYellow
       Font.Height = -11
@@ -1091,7 +1078,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object Label35: TLabel
       Left = 320
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taRightJustify
@@ -1201,7 +1188,7 @@ object FormSituationJetons: TFormSituationJetons
       Height = 13
       Alignment = taRightJustify
       AutoSize = False
-      Caption = '3'
+      Caption = '2'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -11
@@ -1321,7 +1308,7 @@ object FormSituationJetons: TFormSituationJetons
       Height = 13
       Alignment = taRightJustify
       AutoSize = False
-      Caption = '3'
+      Caption = '2'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -11
@@ -1376,7 +1363,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object Label54: TLabel
       Left = 336
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taRightJustify
@@ -2412,7 +2399,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object LabelChvOu: TLabel
       Left = 368
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taRightJustify
@@ -2429,7 +2416,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object LabelPltOu: TLabel
       Left = 384
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taRightJustify
@@ -2871,7 +2858,7 @@ object FormSituationJetons: TFormSituationJetons
     end
     object LabelSacOu: TLabel
       Left = 352
-      Top = 40
+      Top = 24
       Width = 17
       Height = 13
       Alignment = taRightJustify
@@ -3180,10 +3167,108 @@ object FormSituationJetons: TFormSituationJetons
       ParentColor = False
       ParentFont = False
     end
+    object LabelOun: TLabel
+      Left = 304
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Oun'
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clAqua
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 320
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '10'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clAqua
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label63: TLabel
+      Left = 336
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LabelSacOun: TLabel
+      Left = 352
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+      Color = clGreen
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelChvOun: TLabel
+      Left = 368
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+      Color = 33023
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelPltOun: TLabel
+      Left = 384
+      Top = 40
+      Width = 17
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+      Color = clRed
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
   end
   object PopupMenu: TPopupMenu
-    Left = 8
-    Top = 8
+    Left = 72
+    Top = 65520
     object MenuItemFermer: TMenuItem
       Caption = 'Fermer'
       ShortCut = 16457

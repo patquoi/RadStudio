@@ -71,6 +71,11 @@ procédez comme suit :
    type "file:///[...]/Diplikata/bin/html/" (sans les guillemets). Par défaut,
    il s'agit de "file:///C:/Program%20Files/Patquoi.fr/Diplikata/bin/html/".
 
+COMPATIBILITE DES VERSIONS DE FICHIERS DE PARTIE
+
+Toute partie enregistrée avec une version antérieure à la version 1.8 ne peut
+être ouverte depuis une version 1.8 ou ultérieure de Diplikata.
+
 REMERCIEMENTS
 
 Je remercie ici Richard Georges Boulin qui est à l'origine de cette version
@@ -79,6 +84,24 @@ et un dictionnaire complet des mots en créole haïtien.
    
 HISTORIQUE DES VERSIONS
 
+Version 1.8 - 08/02/2020
+Nouvelle distribution de jetons
+ - Un nouveau jeton a été ajouté : "Oun" (Ü) valant 10 points et en un seul
+   exemplaire,  
+ - Le jeton R vaut maintenant un point (au lieu de trois),
+ - Les jetons J et D sont en deux exemplaires (au lieu de trois).
+ - Au total on a donc 102 jetons (au lieu de 103).
+ - L'aide en ligne a été modifiée et les statistiques de fréquence des lettres
+   ont été mises à jour.
+ - Le raccourci clavier pour le jeton "Oun" est "#" dans le choix du joker, 
+   la proposition d'un tirage et la proposition de pose.
+Proposition de pose
+ - Dans l'affichage de la barre de statut du contenu du chevalet est en mode
+   jetons et non abrégée (1 caractère/jeton).
+Définitions de mot
+ - Le dernier mot trouvé/proposé était affiché avec jetons entre parenthèses.
+ - l'URL du site de référence Haïti a été modifiée.
+ 
 Version 1.7.5 - 25/08/2019
 Une erreur survenait durant la recherche des solutions après avoir proposé un
 tirage et placé un mot.
@@ -786,4 +809,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 25 août 2019.
+Dernière mise à jour le 8 février 2020.

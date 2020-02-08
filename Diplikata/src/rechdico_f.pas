@@ -64,7 +64,7 @@ var i, Taille,
     IndexMot,
     Pourcentage,
     i1,i2,i3,
-    i4,i5,i6,i7   : Integer; // vKA : iN remplace LettreJokerN pour parcourir les 29 lettres et non les 26 lettres de 'A' à 'Z'
+    i4,i5,i6,i7   : Integer; // vKA : iN remplace LettreJokerN pour parcourir les 30 lettres et non les 26 lettres de 'A' à 'Z'
     stMessage,
     stTirage,
     stMot         : String; // v1.7.4

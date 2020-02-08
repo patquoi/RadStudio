@@ -174,7 +174,7 @@ object FormListeMots: TFormListeMots
     Left = 392
     Top = 80
     Width = 185
-    Height = 81
+    Height = 65
     Caption = ' H '
     Enabled = False
     ItemIndex = 0
@@ -182,14 +182,14 @@ object FormListeMots: TFormListeMots
       'Aucun H'
       'Un seul H'
       'Deux H (n'#233'cessitant 1 joker)')
-    TabOrder = 7
+    TabOrder = 8
     OnClick = RadioGroupClick
   end
   object RadioGroupNg: TRadioGroup
-    Left = 392
-    Top = 168
+    Left = 391
+    Top = 144
     Width = 185
-    Height = 81
+    Height = 65
     Caption = ' Ng '
     Enabled = False
     ItemIndex = 0
@@ -197,14 +197,14 @@ object FormListeMots: TFormListeMots
       'Aucun Ng'
       'Un seul Ng'
       'Deux Ng (n'#233'cessitant 1 joker)')
-    TabOrder = 8
+    TabOrder = 9
     OnClick = RadioGroupClick
   end
   object RadioGroupUi: TRadioGroup
     Left = 392
-    Top = 256
+    Top = 272
     Width = 185
-    Height = 81
+    Height = 65
     Caption = ' Ui '
     Enabled = False
     ItemIndex = 0
@@ -212,7 +212,7 @@ object FormListeMots: TFormListeMots
       'Aucun Ui'
       'Un seul Ui'
       'Deux Ui (n'#233'cessitant 1 joker)')
-    TabOrder = 9
+    TabOrder = 11
     OnClick = RadioGroupClick
   end
   object RadioGroupV: TRadioGroup
@@ -228,7 +228,7 @@ object FormListeMots: TFormListeMots
       'Un seul V'
       'Deux V'
       'Trois V (n'#233'cessitant 1 joker)')
-    TabOrder = 6
+    TabOrder = 7
     OnClick = RadioGroupClick
   end
   object RadioGroup4: TRadioGroup
@@ -246,7 +246,7 @@ object FormListeMots: TFormListeMots
       'Trois lettres '#224' 4 points'
       'Quatre lettres '#224' 4 points'
       'Cinq lettres '#224' 4 points')
-    TabOrder = 11
+    TabOrder = 13
     OnClick = RadioGroupClick
   end
   object RadioButton1: TRadioButton
@@ -266,7 +266,7 @@ object FormListeMots: TFormListeMots
     Width = 169
     Height = 17
     Caption = 'Un nombre exact de &valeurs :'
-    TabOrder = 10
+    TabOrder = 12
     OnClick = RadioButtonClick
   end
   object RadioGroup10: TRadioGroup
@@ -283,7 +283,7 @@ object FormListeMots: TFormListeMots
       'Deux lettres '#224' 10 pts'
       'Trois lettres '#224' 10 pts'
       'Quatre lettres '#224' 10 pts')
-    TabOrder = 12
+    TabOrder = 14
     OnClick = RadioGroupClick
   end
   object ButtonGenerer: TButton
@@ -294,7 +294,7 @@ object FormListeMots: TFormListeMots
     Caption = '&G'#233'n'#233'rer'
     Default = True
     Enabled = False
-    TabOrder = 14
+    TabOrder = 16
     OnClick = ButtonGenererClick
   end
   object ButtonAnnuler: TButton
@@ -305,7 +305,7 @@ object FormListeMots: TFormListeMots
     Cancel = True
     Caption = 'Annuler'
     ModalResult = 2
-    TabOrder = 15
+    TabOrder = 17
   end
   object ButtonReinitialiser: TButton
     Left = 16
@@ -313,7 +313,7 @@ object FormListeMots: TFormListeMots
     Width = 65
     Height = 25
     Caption = '&R'#233'initialiser'
-    TabOrder = 13
+    TabOrder = 15
     OnClick = ButtonReinitialiserClick
   end
   object GroupBoxRq: TGroupBox
@@ -322,7 +322,7 @@ object FormListeMots: TFormListeMots
     Width = 321
     Height = 57
     Caption = ' Remarque '
-    TabOrder = 16
+    TabOrder = 18
     object Label4: TLabel
       Left = 11
       Top = 18
@@ -354,7 +354,22 @@ object FormListeMots: TFormListeMots
       'Un seul F'
       'Deux F'
       'Trois F (n'#233'cessitant 1 joker)')
-    TabOrder = 17
+    TabOrder = 6
+    OnClick = RadioGroupClick
+  end
+  object RadioGroupOun: TRadioGroup
+    Left = 391
+    Top = 208
+    Width = 185
+    Height = 65
+    Caption = ' Oun '
+    Enabled = False
+    ItemIndex = 0
+    Items.Strings = (
+      'Aucun Oun'
+      'Un seul Oun'
+      'Deux Oun (n'#233'cessitant 1 joker)')
+    TabOrder = 10
     OnClick = RadioGroupClick
   end
 end

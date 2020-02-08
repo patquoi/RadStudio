@@ -302,61 +302,61 @@ object FormPropositionPose: TFormPropositionPose
     TabStop = False
   end
   object ButtonP: TButton
-    Left = 168
-    Top = 100
-    Width = 16
+    Left = 12
+    Top = 116
+    Width = 12
     Height = 16
     Action = ActionP
     TabOrder = 21
     TabStop = False
   end
   object ButtonR: TButton
-    Left = 184
-    Top = 100
-    Width = 16
+    Left = 24
+    Top = 116
+    Width = 14
     Height = 16
     Action = ActionR
     TabOrder = 22
     TabStop = False
   end
   object ButtonS: TButton
-    Left = 12
+    Left = 38
     Top = 116
-    Width = 16
+    Width = 12
     Height = 16
     Action = ActionS
     TabOrder = 23
     TabStop = False
   end
   object ButtonT: TButton
-    Left = 28
+    Left = 50
     Top = 116
-    Width = 16
+    Width = 12
     Height = 16
     Action = ActionT
     TabOrder = 24
     TabStop = False
   end
   object ButtonUi: TButton
-    Left = 44
+    Left = 62
     Top = 116
-    Width = 20
+    Width = 17
     Height = 16
     Action = ActionUi
     TabOrder = 25
     TabStop = False
   end
   object ButtonV: TButton
-    Left = 64
+    Left = 79
     Top = 116
-    Width = 16
+    Width = 12
     Height = 16
     Action = ActionV
     TabOrder = 36
     TabStop = False
   end
   object ButtonW: TButton
-    Left = 80
+    Left = 91
     Top = 116
     Width = 16
     Height = 16
@@ -365,27 +365,27 @@ object FormPropositionPose: TFormPropositionPose
     TabStop = False
   end
   object ButtonY: TButton
-    Left = 96
+    Left = 107
     Top = 116
-    Width = 16
+    Width = 12
     Height = 16
     Action = ActionY
     TabOrder = 38
     TabStop = False
   end
   object ButtonZ: TButton
-    Left = 112
+    Left = 119
     Top = 116
-    Width = 16
+    Width = 12
     Height = 16
     Action = ActionZ
     TabOrder = 26
     TabStop = False
   end
   object ButtonJoker: TButton
-    Left = 128
+    Left = 131
     Top = 116
-    Width = 16
+    Width = 11
     Height = 16
     Action = ActionJoker
     Caption = '&?'
@@ -395,16 +395,16 @@ object FormPropositionPose: TFormPropositionPose
   object ButtonFin: TButton
     Left = 183
     Top = 116
-    Width = 17
+    Width = 18
     Height = 16
     Action = ActionFin
     TabOrder = 29
     TabStop = False
   end
   object ButtonEffacer: TButton
-    Left = 144
+    Left = 142
     Top = 116
-    Width = 39
+    Width = 41
     Height = 16
     Action = ActionEffacer
     TabOrder = 28
@@ -499,6 +499,17 @@ object FormPropositionPose: TFormPropositionPose
     Caption = 'Annuler'
     ModalResult = 2
     TabOrder = 34
+  end
+  object ButtonOun: TButton
+    Left = 168
+    Top = 100
+    Width = 32
+    Height = 16
+    Action = ActionOun
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 39
+    TabStop = False
   end
   object ActionList: TActionList
     Top = 65512
@@ -614,6 +625,11 @@ object FormPropositionPose: TFormPropositionPose
     object ActionOu: TAction
       Category = 'SaisiePose'
       Caption = 'Ou'
+      OnExecute = ActionLettreExecute
+    end
+    object ActionOun: TAction
+      Category = 'SaisiePose'
+      Caption = 'Oun'
       OnExecute = ActionLettreExecute
     end
     object ActionP: TAction

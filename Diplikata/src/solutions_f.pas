@@ -119,7 +119,8 @@ with ListBox.Items.Objects[DernierChoix] as TSolution do
   FormMain.PoseProposition(x, y, d, Chevalet, Debut, Fin);
   end;
 if FormDefinitionMot<>nil then // v1.6 : propose le mot pour la recherche de définition (Maj+Ctrl+D)
-  FormDefinitionMot.EditMot.Text:=stLettresDoubles(AnsilowerCase((FormSolutions.ListBox.Items.Objects[DernierChoix] as TSolution).stMot)); // vKA : Affichage des lettres doubles : ajout de stLettresDoubles(...) et utilisation d'AnsiLowerCase au lieu de LowerCase pour les lettres accentuées
+  // vKA : Affichage des lettres doubles : ajout de stLettresDoubles(...) et utilisation d'AnsiLowerCase au lieu de LowerCase pour les lettres accentuées
+  FormDefinitionMot.EditMot.Text:=AnsilowerCase(stLettresDoubles((FormSolutions.ListBox.Items.Objects[DernierChoix] as TSolution).stMot)); // v1.8KA on inverse l'ordre de AnsiLowerCase et stLettresDoubles sinon on a des parenthèses !!!
 end;
 //---------------------------------------------------------------------------
 function TFormSolutions.ChoisitSolution(const slSolutions : TStringList) : TTypePose; // v1.4 (TTypePose)
@@ -197,7 +198,8 @@ if slSolutions.Count=1 then // v1.4 : On a déplacé ici le cas solution unique po
   begin // Si une seule solution, pas besoin d'afficher, le choix est fait !
   ListBox.ItemIndex:=0;
   if FormDefinitionMot<>nil then // v1.6 : propose le mot pour la recherche de définition (Maj+Ctrl+D)
-    FormDefinitionMot.EditMot.Text:=stLettresDoubles(AnsiLowerCase((FormSolutions.ListBox.Items.Objects[FormSolutions.ListBox.ItemIndex] as TSolution).stMot)); // vKA : Affichage des lettres doubles : ajout de stLettresDoubles(...) et utilisation d'AnsiLowerCase au lieu de LowerCase pour les lettres accentuées
+    // vKA : Affichage des lettres doubles : ajout de stLettresDoubles(...) et utilisation d'AnsiLowerCase au lieu de LowerCase pour les lettres accentuées
+    FormDefinitionMot.EditMot.Text:=AnsiLowerCase(stLettresDoubles((FormSolutions.ListBox.Items.Objects[FormSolutions.ListBox.ItemIndex] as TSolution).stMot)); // v1.8KA on inverse l'ordre de AnsiLowerCase et stLettresDoubles sinon on a des parenthèses !!!
   with ListBox.Items.Objects[FormSolutions.ListBox.ItemIndex] as TSolution, FormMain do
     begin // On la présente avant de la mettre en place
     ChargeLettresJoker(p.LettreJoker);
