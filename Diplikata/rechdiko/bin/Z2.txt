@@ -1,29 +1,28 @@
 Tirages de 2 jetons de AA à TUi - Page 1/1
 
-AA:	AA	BI:	BI	FOu:	FOu	OuT:	OuT
-AB:	BA	BO:	BO	GI:	GI		TOu
-ACh:	ACh	BOn:	BOn	GO:	GO	OuW:	WOu
-	ChA	ChE:	ChE		OG	OuY:	OuY
-AD:	DA	ChEn:	ChEn	GOn:	GOn	OuZ:	ZOu
-AF:	FA	ChI:	ChI	GOu:	GOu	OV:	VO
-AG:	AG	ChO:	ChO	HOun:	HOun	OW:	WO
-	GA	ChOu:	ChOu	IJ:	JI	OY:	YO
-AH:	HA	ChOun:	ChOun	IK:	KI	OZ:	ZO
-AJ:	JA	DE:	DE	IL:	IL	TUi:	UiT
-AK:	AK		ED		LI		
-	KA	DI:	DI	IM:	IM		
-AL:	AL	DO:	DO		MI		
-	LA	DOn:	DOn	IN:	NI		
-AM:	MA	DOu:	DOu	IP:	PI		
-AN:	AN	EF:	FE	IR:	RI		
-	NA	EG:	GE	IS:	SI		
-AnB:	AnB	EJ:	JE	IT:	TI		
-	BAn	EK:	KE	IW:	WI		
-AnCh:	ChAn	EL:	LE	IY:	YI		
-AnD:	DAn	EM:	ME	JOn:	JOn		
-AnG:	AnG	EN:	EN	JOu:	JOu		
-ANg:	ANg		NE	KO:	KO		
-AnG:	GAn	EnF:	FEn	KOu:	KOu		
+AA:	AA	BO:	BO	GI:	GI		TOu
+AB:	BA	BOn:	BOn	GO:	GO	OuW:	WOu
+ACh:	ACh	ChE:	ChE		OG	OuY:	OuY
+	ChA	ChEn:	ChEn	GOn:	GOn	OuZ:	ZOu
+AD:	DA	ChI:	ChI	GOu:	GOu	OV:	VO
+AF:	FA	ChO:	ChO	HOun:	HOun	OW:	WO
+AG:	AG	ChOu:	ChOu	IJ:	JI	OY:	YO
+	GA	ChOun:	ChOun	IK:	KI	OZ:	ZO
+AH:	HA	DE:	DE	IL:	IL	TUi:	UiT
+AJ:	JA		ED		LI		
+AK:	AK	DI:	DI	IM:	IM		
+	KA	DO:	DO		MI		
+AL:	AL	DOn:	DOn	IN:	NI		
+	LA	DOu:	DOu	IP:	PI		
+AM:	MA	EF:	FE	IR:	RI		
+AN:	AN	EG:	GE	IS:	SI		
+	NA	EJ:	JE	IT:	TI		
+AnB:	AnB	EK:	KE	IW:	WI		
+	BAn	EL:	LE	IY:	YI		
+AnCh:	ChAn	EM:	ME	JOn:	JOn		
+AnD:	DAn	EN:	EN	JOu:	JOu		
+AnG:	AnG		NE	KO:	KO		
+	GAn	EnF:	FEn	KOu:	KOu		
 AnH:	HAn	EnG:	GEn	KUi:	KUi		
 AnJ:	AnJ	EnH:	HEn	LO:	LO		
 	JAn	EnJ:	JEn	LOu:	LOu		
@@ -50,5 +49,6 @@ AY:	AY	EZ:	ZE		TO
 AZ:	ZA	FO:	FO	OuP:	OuP		
 BE:	BE		OF		POu		
 BEn:	BEn	FOn:	FOn	OuS:	SOu		
+BI:	BI	FOu:	FOu	OuT:	OuT		
 
 

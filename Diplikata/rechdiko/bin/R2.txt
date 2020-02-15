@@ -25,7 +25,6 @@ AY: AY
 AZ: ZA
 AÇ: AÇ
     ÇA
-AÑ: AÑ
 BE: BE
 BI: BI
 BO: BO

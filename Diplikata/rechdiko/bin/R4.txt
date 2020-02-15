@@ -225,7 +225,6 @@ AEJS: SAJE
 AEJZ: JAZE
 AEJÇ: ÇAJE
       JAÇE
-AEJÜ: AJÜE
 AEKL: AKLE
       KALE
 AEKM: MAKE
@@ -462,7 +461,6 @@ AJLN: LANJ
 AJLP: PLAJ
 AJLÂ: LAJÂ
 AJLÛ: JALÛ
-AJLÜ: JÜAL
 AJMN: JANM
 AJMO: MAJO
       OMAJ
@@ -501,7 +499,6 @@ AKNÂ: ÂKAN
       ANKÂ
       KÂNA
 AKNÇ: ÇANK
-AKNÜ: KÜAN
 AKOP: KAPO
       OPAK
       PAKO
@@ -672,7 +669,6 @@ ASTÊ: SATÊ
 ASVÂ: AVÂS
 ASVÊ: SAVÊ
 ASVÔ: SAVÔ
-ASWÜ: SÜWA
 ATTÔ: TATÔ
 ATVÂ: VÂTA
 ATYÂ: ÂTAY
@@ -1116,7 +1112,6 @@ EFNN: NENF
 EFNR: FREN
 EFNT: FENT
 EFNÂ: ÂFEN
-EFNÜ: FÜEN
 EFOR: FORE
 EFOV: OFEV
 EFOÇ: ÇOFE
@@ -1131,7 +1126,6 @@ EFTÛ: TÛFE
 EFVY: FYEV
 EFYÛ: FÛYE
 EFZÂ: FEZÂ
-EFZÜ: FÜEZ
 EFÂÇ: ÂÇEF
 EFÇÛ: FÛÇE
 EGIM: GIME
@@ -1265,7 +1259,6 @@ EJNT: JENT
 EJNW: JWEN
 EJNÂ: JENÂ
 EJNÛ: JENÛ
-EJNÜ: JÜEN
 EJOP: POJE
 EJPY: PYEJ
 EJPÔ: EPÔJ
@@ -1344,7 +1337,6 @@ EKVÛ: KÛVE
 EKWÛ: EKWÛ
       KÛWE
 EKYÊ: ÊKYE
-EKYÜ: KÜYE
 EKZÔ: KÔZE
 EKÇÛ: KÛÇE
 ELMO: LEMO
@@ -1442,7 +1434,6 @@ ENTÊ: ÊTEN
       ETÊN
 ENTÔ: ÔNET
       TÔNE
-ENTÜ: TÜEN
 ENVÂ: ÂVEN
       NEVÂ
 ENVÊ: NEVÊ
@@ -1509,7 +1500,6 @@ ERTT: TRET
 ERTZ: TREZ
 ERTÂ: ÂTRE
 ERTÊ: TERÊ
-ERTÑ: TREÑ
 ERYÔ: REYÔ
 ERZÊ: REZÊ
 ERZÔ: REZÔ
@@ -1599,7 +1589,6 @@ FOOT: FOTO
 FORÂ: RÂFO
 FOWÛ: FÛWO
 FYZÛ: FYÛZ
-FÂÊÜ: ÂFÜÊ
 FÇÔÛ: FÛÇÔ
 GGOO: GOGO
 GGOW: GWOG
@@ -1826,7 +1815,6 @@ KKÊÊ: KÊKÊ
 KKÔÛ: KÔKÛ
 KKÛÛ: KÛKÛ
 KKÛÜ: KÛKÜ
-      KÜÛK
 KLOO: KOLO
       LOKO
 KLOP: PLOK

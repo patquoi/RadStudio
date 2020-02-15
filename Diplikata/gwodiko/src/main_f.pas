@@ -258,13 +258,16 @@ var p : Integer;
 begin
 p:=AnsiPos(stDL[iDL], stFinMot);
 case iDL of
-  dlAn,dlEn,dlOn: if (Length(stFinMot)=p+1) or
+  dlAn,dlEn,   // Règle jetons An, En, On : doit être suivis d'une consonne
+  dlOn, dlOun: // v1.3: Oun aussi
+                  if (Length(stFinMot)=p+1) or
                      (AnsiPos(copy(stFinMot,p+2,1),stVoyelles)=0) then
                      Result:=True
                   else
                      Result:=False;
+  // Règle jeton Ng : jeton final + précédé d'une voyelle
   dlNg:           if (p=Length(stFinMot)-1) and
-                     (AnsiPos(Copy(stMot,Length(stMot)-2,1),stVoyelles)>0) then
+                     (AnsiPos(Copy(stMot,Length(stMot)-2,1),'I')>0) then // v1.3 : précédé d'un "I" et non plus simplement une voyelle
                      Result:=True
                   else
                      Result:=False;

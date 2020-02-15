@@ -79,7 +79,6 @@ AGR: GRA
 AGV: VAG
 AGZ: GAZ
 AGÂ: ÂGA
-AGÑ: GAÑ
 AGÔ: AGÔ
 AHN: HAN
 AHP: HAP
@@ -138,7 +137,6 @@ ALY: LAY
 ALÇ: ÇAL
      LAÇ
 ALÊ: ALÊ
-ALÑ: LAÑ
 AMO: AMO
      OMA
 AMS: MAS
@@ -193,7 +191,6 @@ ASW: SWA
 ASY: YAS
 ASÂ: ASÂ
 ASÇ: ÇAS
-ASÑ: SAÑ
 ASÔ: ASÔ
 ATW: TAW
      TWA
@@ -288,7 +285,6 @@ DEY: DEY
 DEZ: ZED
 DEÂ: ÂDE
 DEÊ: EDÊ
-DEÑ: DEÑ
 DEÜ: ÜDE
 DGI: DIG
      GID
@@ -376,7 +372,6 @@ EJO: OJE
 EJS: JES
 EJW: JWE
 EJÊ: EJÊ
-EJÑ: JEÑ
 EKK: KEK
 EKL: KLE
 EKO: EKO
@@ -450,7 +445,6 @@ EPZ: PEZ
 EPÂ: ÂPE
 EPÇ: PEÇ
 EPÊ: ÊPE
-EPÑ: PEÑ
 ERS: RES
 ERT: TRE
 ERV: REV
@@ -472,7 +466,6 @@ ETÂ: ÂTE
      ETÂ
 ETÎ: ETÎ
      ÎTE
-ETÑ: TEÑ
 EVV: VEV
 EVW: VWE
 EVY: VEY
@@ -498,7 +491,6 @@ FIT: TIF
 FIV: VIF
 FIW: FWI
 FIÇ: ÇIF
-FIÜ: FÜI
 FJO: FOJ
      JOF
 FKO: FOK
@@ -517,8 +509,7 @@ FOS: FOS
      SOF
 FOT: FOT
 FOÇ: ÇOF
-FOÜ: FÜO
-     ÜFO
+FOÜ: ÜFO
 FRÂ: FRÂ
 FRÊ: FRÊ
 FSÎ: SÎF
@@ -532,7 +523,6 @@ FWÔ: FWÔ
 FYÛ: FÛY
 FÂÊ: ÂFÊ
 FÇÛ: FÛÇ
-FÊÜ: FÜÊ
 GGÂ: GÂG
 GIL: LIG
 GIR: GRI
@@ -632,7 +622,6 @@ ISÜ: ÜSI
 ITT: TIT
 ITV: VIT
 ITÇ: ÇIT
-ITÜ: TÜI
 IVV: VIV
 IVÂ: ÂVI
 IZÑ: ZIÑ
@@ -656,7 +645,6 @@ JTÊ: JÊT
 JWÊ: JWÊ
 JWÛ: WÛJ
 JZÂ: ZÂJ
-JÊÜ: JÜÊ
 KKO: KOK
 KLO: KLO
      KOL
@@ -681,7 +669,6 @@ KOZ: KOZ
      ZOK
 KOÂ: ÂKO
 KOÇ: ÇOK
-KOÑ: KOÑ
 KPÊ: KÊP
 KPÛ: KÛP
 KRÂ: KRÂ
@@ -701,10 +688,8 @@ KZÊ: KÊZ
      ZÊK
 KÂÂ: ÂKÂ
 KÂÇ: ÇÂK
-KÂÜ: KÜÂ
 KÇÛ: ÇÛK
      KÛÇ
-KÛÜ: KÜÛ
 LLÎ: LÎL
 LMO: LOM
      MOL
@@ -718,7 +703,6 @@ LOT: LOT
 LOV: VOL
 LOW: WOL
 LOY: YOL
-LOÑ: LOÑ
 LPÂ: LÂP
      PLÂ
 LPÊ: PLÊ
@@ -823,7 +807,6 @@ OVÇ: ÇOV
 OWY: WOY
 OWZ: WOZ
 OWÇ: WOÇ
-OZÑ: ZOÑ
 OÂÇ: OÇÂ
 PPÔ: PÔP
 PRÂ: PRÂ
@@ -872,7 +855,6 @@ TÂÎ: ÎTÂ
 TÂÛ: ÂTÛ
 TÇÛ: ÇÛT
      TÛÇ
-TÊÜ: TÜÊ
 VÂÂ: ÂVÂ
 VÂÊ: ÂVÊ
 WYÛ: WÛY
