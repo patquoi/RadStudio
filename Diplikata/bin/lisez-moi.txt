@@ -88,7 +88,8 @@ Version 1.8.1 - 15/02/2020
 Règles d'utilisation des jetons "Oun" et "Ng"
  - Le jeton "Oun" ne peut pas être utilisé s'il est suivi d'une voyelle
    (c’est-à-dire A, An, E, En, I, O, On, Ou, Oun, Ui, W, Y) 
- - Le jeton "Ng" doit être précédé par un "I" et non n'importe quelle voyelle.
+ - Le jeton "Ng" doit être précédé par un "I" et non n'importe quelle voyelle
+ - Aide en ligne modifiée : statistiques des fréquences mises à jour.
  
 Version 1.8 - 08/02/2020
 Nouvelle distribution de jetons
