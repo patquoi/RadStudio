@@ -77,7 +77,7 @@ object FormMain: TFormMain
       OnClick = ButtonGenererClick
     end
     object ButtonCalculer: TButton
-      Left = 348
+      Left = 350
       Top = 4
       Width = 89
       Height = 37

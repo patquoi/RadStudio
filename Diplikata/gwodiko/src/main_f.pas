@@ -528,7 +528,7 @@ procedure TFormMain.ButtonGenererJSClick(Sender: TObject);
 var i, l, dl : Integer;
     sl : TStringList;
     tf : TextFile;
-begin  //
+begin //
 // Pour les jeux de lettres en Javascript...
 sl := TStringList.Create;
 sl.Sorted:=True;
