@@ -71,11 +71,6 @@ Source: "..\bin\license.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\lisez-moi.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\R23456789ABCDEF"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\impcfgdup\bin\impcfgdup.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\install\cfg0\Duplicata.ini"; DestDir: "{userappdata}\Patquoi.fr\Duplicata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Duplicata.html"; DestDir: "{userappdata}\Patquoi.fr\Duplicata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Parties.html"; DestDir: "{userappdata}\Patquoi.fr\Duplicata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Records.html"; DestDir: "{userappdata}\Patquoi.fr\Duplicata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Defis1M15L.html"; DestDir: "{userappdata}\Patquoi.fr\Duplicata"; Flags: uninsneveruninstall onlyifdoesntexist
 Source: "..\bin\html\0.bmp"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "..\bin\html\0.png"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "..\bin\html\1.bmp"; DestDir: "{app}\html"; Flags: ignoreversion
