@@ -229,11 +229,6 @@ uses StdCtrls, // Pour TLabel
 //-----------------------------------------------------------------------------
 procedure TFormTableau.AfficheIconeBarreStatut;
 begin
-with StatusBar.Canvas do // On efface l'icône précédente (v1.0.3)
-  begin
-  Brush.Color:=StatusBar.Color;
-  FillRect(Rect(2,3,18,19));
-  end;
 FormMain.VirtualImageListArbre.Draw(StatusBar.Canvas, 2, 3, IndexImage[IconeMessage]);
 end;
 //-----------------------------------------------------------------------------

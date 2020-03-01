@@ -105,28 +105,28 @@ object FormPaveNumerique: TFormPaveNumerique
       Wrap = True
       OnClick = ToolButtonClick
     end
-    object ToolButton0: TToolButton
+    object ToolButton999: TToolButton
       Left = 0
+      Top = 192
+      ImageIndex = 15
+      OnClick = ToolButtonClick
+    end
+    object ToolButton0: TToolButton
+      Left = 64
       Top = 192
       ImageIndex = 0
       OnClick = ToolButtonClick
     end
     object ToolButton10: TToolButton
-      Left = 64
+      Left = 128
       Top = 192
       ImageIndex = 10
       OnClick = ToolButtonClick
     end
     object ToolButton100: TToolButton
-      Left = 128
-      Top = 192
-      ImageIndex = 14
-      OnClick = ToolButtonClick
-    end
-    object ToolButton999: TToolButton
       Left = 192
       Top = 192
-      ImageIndex = 15
+      ImageIndex = 14
       OnClick = ToolButtonClick
     end
   end
