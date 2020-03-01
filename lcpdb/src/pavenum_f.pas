@@ -75,6 +75,7 @@ type
     ToolButton10: TToolButton;
     ToolButton100: TToolButton;
     ToolButton999: TToolButton;
+    VirtualImageListDisabled: TVirtualImageList;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure ControleExemplairesPlaque(const ToolButton : TToolButton; const ElementPlaque : TElementPlaque);    procedure ToolButtonClick(Sender: TObject);
     procedure FormHide(Sender: TObject);
@@ -125,12 +126,13 @@ for i:=ep1 to ep100 do // On grise ou non les boutons plaques suivant les limita
   (FindComponent(stToolButton+stValeurElementPlaque[i]) as TToolButton).Enabled:=True
  else
   (FindComponent(stToolButton+stValeurElementPlaque[i]) as TToolButton).Enabled:=(NbExemplairesPlaque[i]<NbMaxExemplairesPlaque[i]);
-ToolButton0.Visible:=(TypeNombreSaisi=tnsCompte);
-ToolButton10.Visible:=(TypeNombreSaisi=tnsPlaque);
-ToolButton25.Visible:=(TypeNombreSaisi=tnsPlaque);
-ToolButton50.Visible:=(TypeNombreSaisi=tnsPlaque);
-ToolButton75.Visible:=(TypeNombreSaisi=tnsPlaque);
-ToolButton100.Visible:=(TypeNombreSaisi=tnsPlaque);
+// v1.3 : On ne rend pas invisible sinon les boutons se réorganisent (AutoWrap car ToolBar.Wrapable)
+ToolButton0.Enabled:=(TypeNombreSaisi=tnsCompte);
+ToolButton10.Enabled:=(TypeNombreSaisi=tnsPlaque);
+ToolButton25.Enabled:=(TypeNombreSaisi=tnsPlaque);
+ToolButton50.Enabled:=(TypeNombreSaisi=tnsPlaque);
+ToolButton75.Enabled:=(TypeNombreSaisi=tnsPlaque);
+ToolButton100.Enabled:=(TypeNombreSaisi=tnsPlaque);
 end;
 //-----------------------------------------------------------------------------
 procedure TFormPaveNumerique.FormShow(Sender: TObject);
@@ -170,7 +172,7 @@ var NumeroBouton   : Integer;
     stValeurPlaque : String;
 begin
 if DerniereSaisie=spnRien then FormMain.EffacePlaquesEtCompte;
-NumeroBouton:=StrToInt(copy((Sender as TToolButton).Name,12, Length((Sender as TToolButton).Name)-11));
+NumeroBouton:=StrToInt(copy((Sender as TToolButton).Name,11, Length((Sender as TToolButton).Name)-10)); // v1.3 ToolButton au lieu de SpeedButton
 case NumeroBouton of
   0:   if DerniereSaisie<spnPlaque6 then
          Exit // Zéro non utilisable pour les plaques
