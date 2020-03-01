@@ -1,0 +1,20 @@
+program lcpdb;
+
+uses
+  Vcl.Forms,
+  main_f in 'main_f.pas' {FormMain},
+  IA in 'IA.pas',
+  tableau_f in 'tableau_f.pas' {FormTableau},
+  pavenum_f in 'pavenum_f.pas' {FormPaveNumerique},
+  propos_f in 'propos_f.pas' {FormAPropos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Le Compte Pour De Bon';
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormMain, FormMain);
+  Application.CreateForm(TFormTableau, FormTableau);
+  Application.Run;
+end.

@@ -1,0 +1,42 @@
+A FAIRE DANS LE COMPTE POUR DE BON
+==================================
+
+---------------------------------------------------------------
+! VOIR EN PRIORITE LES COMMENTAIRES "// A FAIRE" DANS LE CODE !
+---------------------------------------------------------------
+
+
+/!\ BUG DELPHI : Vérifier les nouvelles boucles for i:=a to b que b>=a si i de type x..y /!\
+
+
+SAISIE
+ ! Entrée à la place d'un opérateur bloque la saisie après l'opérande
+ ! Il y a eu un message "'' n'est pas une valeur entière correcte" aux
+   allentours de la fin d'un calcul et aux allentours de la fin du décompte
+   du temps.
+
+DIVERS
+ - Afficher les MenuItem.Hint dans le StatusBar de FormMain.
+
+OPTIMISATIONS
+ * Voir si l'on ne peut optimiser la vitesse en ne prenant pas le même
+   opérande plusieurs fois de suite au même niveau.
+
+SAISIE SANS ERREUR AUTORISEE
+ ? Bloquer tout de suite la saisie
+
+STATISTIQUES
+ > Mettre en gras ce qui a changé en dernier. Mettre éventuellement les infos
+   du dernier calcul.
+ * Penser à ne pas comptabiliser les comptes dont les solutions ont été 
+   cherchées par l'ordinateur AVANT
+ * Penser à ne pas autoriser de lancer plus d'une instance du programme (pour
+   le fichier de stats)
+
+_______________________________________________________________________________
+Code À FAIRE :
+ ! Important à faire ou corriger (bogue)
+ ? Question à se poser
+ > Poursuivre
+ * Penser à faire
+ @ Déjà Fait

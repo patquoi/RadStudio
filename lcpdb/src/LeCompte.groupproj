@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6517C5E7-4250-4082-B3DE-9DCADD4CA40C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="lcpdb.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\impcfgcpt\src\impcfgcpt.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="lcpdb">
+        <MSBuild Projects="lcpdb.dproj"/>
+    </Target>
+    <Target Name="lcpdb:Clean">
+        <MSBuild Projects="lcpdb.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lcpdb:Make">
+        <MSBuild Projects="lcpdb.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="impcfgcpt">
+        <MSBuild Projects="..\impcfgcpt\src\impcfgcpt.dproj"/>
+    </Target>
+    <Target Name="impcfgcpt:Clean">
+        <MSBuild Projects="..\impcfgcpt\src\impcfgcpt.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="impcfgcpt:Make">
+        <MSBuild Projects="..\impcfgcpt\src\impcfgcpt.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="lcpdb;impcfgcpt"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="lcpdb:Clean;impcfgcpt:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="lcpdb:Make;impcfgcpt:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
