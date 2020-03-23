@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Diplikata"
-#define MyAppVersion "1.8.1.1"
+#define MyAppVersion "1.8.1.2"
 #define MyAppPublisher "Patquoi.fr"
-#define MyAppURL "http://patquoi.fr"
+#define MyAppURL "http://patquoi.fr/#diplikata"
                                  
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -36,7 +36,6 @@ Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 VersionInfoVersion={#MyAppVersion}
-PrivilegesRequired=poweruser
 
 [Languages]
 Name: "french"; MessagesFile: "compiler:Languages\French.isl"
@@ -70,11 +69,6 @@ Source: "..\bin\licence.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\license.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\lisez-moi.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\impcfgdip\bin\impcfgdip.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\install\cfg0\Diplikata.ini"; DestDir: "{userappdata}\Patquoi.fr\Diplikata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Diplikata.html"; DestDir: "{userappdata}\Patquoi.fr\Diplikata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Parties.html"; DestDir: "{userappdata}\Patquoi.fr\Diplikata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Records.html"; DestDir: "{userappdata}\Patquoi.fr\Diplikata"; Flags: uninsneveruninstall onlyifdoesntexist
-Source: "..\install\cfg0\Defis1M15L.html"; DestDir: "{userappdata}\Patquoi.fr\Diplikata"; Flags: uninsneveruninstall onlyifdoesntexist
 Source: "..\bin\html\actions.gif"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "..\bin\html\chevalet.jpg"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "..\bin\html\contigus.gif"; DestDir: "{app}\html"; Flags: ignoreversion

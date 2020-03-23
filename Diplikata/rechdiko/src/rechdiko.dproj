@@ -3,7 +3,7 @@
         <ProjectGuid>{199EB2DD-AB93-4E0A-8DD8-C8C919A7CF4C}</ProjectGuid>
         <MainSource>rechdiko.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

@@ -3,7 +3,7 @@
         <ProjectGuid>{6AF4D021-3070-4B22-836C-C1ECE8D84FA1}</ProjectGuid>
         <MainSource>Kregwodiko.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
