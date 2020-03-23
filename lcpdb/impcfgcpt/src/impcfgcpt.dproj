@@ -3,7 +3,7 @@
         <ProjectGuid>{3319D16A-29CB-4DE4-A2B6-B4B2BB132448}</ProjectGuid>
         <MainSource>impcfgcpt.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
