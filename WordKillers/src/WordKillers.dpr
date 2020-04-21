@@ -20,13 +20,16 @@ uses
   situationjetons_f in 'situationjetons_f.pas' {FormSituationJetons},
   solutions_f in 'solutions_f.pas' {FormSolutions},
   statspartie_f in 'statspartie_f.pas' {FormStatsPartie},
-  tirage_f in 'tirage_f.pas' {FormTirage};
+  tirage_f in 'tirage_f.pas' {FormTirage},
+  Vcl.Themes {v1.5DM},
+  Vcl.Styles {v1.5DM};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := 'Word Killers';
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormTirage, FormTirage);
   Application.CreateForm(TFormFeuilleMatch, FormFeuilleMatch);

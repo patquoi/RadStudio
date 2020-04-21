@@ -173,6 +173,9 @@ type
     OpenDialog: TOpenDialog;
     SaveDialog: TSaveDialog;
     StatusBar: TStatusBar;
+    ActionAffichageModeSombre: TAction;
+    MenuItemSeparator3: TMenuItem;
+    Modesombre1: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -234,6 +237,7 @@ type
     procedure ActionTestPlacementHorizontalExecute(Sender: TObject);
     procedure ActionTestPlacementVerticalExecute(Sender: TObject);
     procedure ActionVideExecute(Sender: TObject);
+    procedure ActionAffichageModeSombreExecute(Sender: TObject);
   private
     TaillePlateau,
     TaillePolice,
@@ -258,6 +262,8 @@ type
     FTypePartie             : TTypePartie; // v1.5.6
     FTempsReflexion         : TTempsReflexion; // v1.5.6
     TopChrono, FinChrono    : TDateTime;
+    slThemes                : TStringList; // v1.5DM
+    DefaultTheme            : Integer; // v1.5DM
     function ModeDemonstration : Boolean;
     procedure ChangeStatutMelange(const NvStatutMelange : Boolean); // v1.1
     procedure ChangeModeDemonstration(const NvModeDemonstration : Boolean);
@@ -331,7 +337,7 @@ const
 //---------------------------------------------------------------------------
 implementation
 //---------------------------------------------------------------------------
-uses System.Math, System.StrUtils, System.IniFiles, System.UITypes, Winapi.ShellApi,
+uses System.Math, System.StrUtils, System.IniFiles, System.UITypes, Winapi.ShellApi, Vcl.Themes, // v1.5DM
   cststr, tirage_f, listemots_f, saisietirage_f, definition_f, rechdico_f, fdmatch_f,
   statspartie_f, situationjetons_f, propos_f, prmpose_f, solutions_f, propose_f;
 //---------------------------------------------------------------------------
@@ -558,6 +564,16 @@ d15l.GenereListeDefis(stRepLocalAppData+ // stRepLocalAppData remplace ExtractFi
                       stNomFichierDefi1M15L,
                       Affiche);
 NotifieAction(aanAffichageDefi1M15LCAC, Affiche)
+end;
+//---------------------------------------------------------------------------
+procedure TFormMain.ActionAffichageModeSombreExecute(Sender: TObject); // v1.5DM
+var StyleName : String;
+begin
+if ActionAffichageModeSombre.Checked then
+  StyleName := slThemes.Strings[1-DefaultTheme]
+else
+  StyleName := slThemes.Strings[DefaultTheme];
+TStyleManager.SetStyle(StyleName);
 end;
 //---------------------------------------------------------------------------
 procedure TFormMain.ActionAffichagePartiesJoueesExecute(Sender: TObject);
@@ -1385,6 +1401,7 @@ CanClose:=not PartieModifiee or MelangeEnCours or // v1.3.4 : Pas de confirmatio
 end;
 //---------------------------------------------------------------------------
 procedure TFormMain.FormCreate(Sender: TObject);
+var StyleName: string; // v1.5DM
 begin
 StatusBar.Panels.Items[Ord(ibsMessage)].Text:=''; // v1.3.5
 ChargeOptions; // v1.3.2
@@ -1410,13 +1427,24 @@ MelangeEnCours:=True; // v1.1
 EmpecheTempsImparti:=False; // v1.5
 TestPlacementEnCours:=False; // v1.5.2
 PlacementPropositionAuto:=False; // v1.6.9
+
+// v1.5DM
+slThemes := TStringList.Create;
+for StyleName in TStyleManager.StyleNames do
+  slThemes.Add(StyleName);
+DefaultTheme := slThemes.IndexOf(TStyleManager.ActiveStyle.Name);
+
 end;
 //---------------------------------------------------------------------------
 procedure TFormMain.FormDestroy(Sender: TObject);
 begin
 MelangeEnCours:=False; // v1.1
 DestructionEnCours:=True;
-p.Detruit
+p.Detruit;
+
+// v1.5DM
+slThemes.Free;
+
 end;
 //---------------------------------------------------------------------------
 procedure TFormMain.FormKeyPress(Sender: TObject; var Key: Char);

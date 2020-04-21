@@ -241,6 +241,15 @@ object FormMain: TFormMain
         AutoCheck = True
         GroupIndex = 1
       end
+      object MenuItemSeparator3: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object Modesombre1: TMenuItem
+        Action = ActionAffichageModeSombre
+        AutoCheck = True
+        GroupIndex = 1
+      end
     end
     object MenuItemInfos: TMenuItem
       Caption = '&?'
@@ -648,6 +657,12 @@ object FormMain: TFormMain
       Hint = 'Teste le placement vertical des jetons s'#233'lectionn'#233's'
       ImageIndex = 1
       OnExecute = ActionPlacementExecute
+    end
+    object ActionAffichageModeSombre: TAction
+      Category = 'Affichage'
+      AutoCheck = True
+      Caption = 'Mode sombre'
+      OnExecute = ActionAffichageModeSombreExecute
     end
   end
   object ImageListActions: TImageList
