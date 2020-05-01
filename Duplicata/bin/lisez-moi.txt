@@ -88,8 +88,11 @@ procédez comme suit :
 
 HISTORIQUE DES VERSIONS
 
+Version 1.9.1 - 01/05/2020
+ - Icône en haute définition.
+
 Version 1.9 - 01/12/2019
-   Le dictionnaire de référence est l'ODS8 (8661 mots ajoutés et 6 retirés).
+ - Le dictionnaire de référence est l'ODS8 (8661 mots ajoutés et 6 retirés).
 
 Version 1.8.11 - 08/07/2019
  - L'affichage de la proposition et de la solution posée pouvait être erroné
@@ -851,4 +854,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 1er décembre 2019.
+Dernière mise à jour le 1er mai 2020.
