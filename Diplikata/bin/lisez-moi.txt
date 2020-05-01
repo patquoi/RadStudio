@@ -84,6 +84,9 @@ et un dictionnaire complet des mots en créole haïtien.
    
 HISTORIQUE DES VERSIONS
 
+Version 1.8.2 - 01/05/2020
+ - Icône en haute définition.
+
 Version 1.8.1 - 15/02/2020
 Règles d'utilisation des jetons "Oun" et "Ng"
  - Le jeton "Oun" ne peut pas être utilisé s'il est suivi d'une voyelle
@@ -816,4 +819,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 15 février 2020.
+Dernière mise à jour le 1er mai 2020.
