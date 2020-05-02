@@ -72,6 +72,9 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.3.1 - 02/05/2020] 
+ - Icône en haute résolution
+
 [Version 1.3 - 29/02/2020] Version 32 et 64 bits
 Ajout dans l'À propos :
  - Affichage en jaune de l'alignement (32/64 bits)
@@ -224,4 +227,4 @@ INFORMATIONS SUR INTERNET
 mailto:lcpdb@patquoi.fr
 http://patquoi.fr/#jm
  
-Dernière mise à jour le 1er mars 2020.
+Dernière mise à jour le 2 mai 2020.
