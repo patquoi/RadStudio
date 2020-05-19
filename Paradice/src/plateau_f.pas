@@ -55,6 +55,7 @@ type
     MenuItemPartieReprise: TMenuItem;
     MenuItemPartieAbandon: TMenuItem;
     TimerClignotement: TTimer;
+    MenuItemEvolution: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
@@ -76,6 +77,7 @@ type
     procedure MenuItemPartieRepriseClick(Sender: TObject);
     procedure MenuItemPartieAbandonClick(Sender: TObject);
     procedure TimerClignotementTimer(Sender: TObject);
+    procedure MenuItemEvolutionClick(Sender: TObject);
   private
     FMessage   : String;
     procedure LitParametres;
@@ -90,6 +92,7 @@ type
     procedure DessineJackpot(Score, DrnSc : Integer; DrnJr : TJoueurId);
     procedure DessineLanceDes(Id : TJoueurId; De : array of TDe);
     procedure DessineBilan(Tour : Integer);
+    procedure DessineEvolution;
     procedure DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
     procedure DessineCompteurEvt(Couleur : TCouleur);
     property stMessage : String read FMessage write DefinitMessage;
@@ -106,10 +109,11 @@ uses
   nvpartie_f;
 
 const
-  stNomFichierIni  : String = 'Paradice.ini';
-  stSectionOptions : String = 'Options';
-  stEntreePolice   : String = 'Police';
-  stEntreeVitesse  : String = 'Vitesse';
+  stNomFichierIni   : String = 'Paradice.ini';
+  stSectionOptions  : String = 'Options';
+  stEntreePolice    : String = 'Police';
+  stEntreeVitesse   : String = 'Vitesse';
+  stEntreeEvolution : String = 'Evolution';
 
 // -------------------
 // Evénements de fiche
@@ -378,11 +382,17 @@ for x := Canvas.ClipRect.Left div (TailleCase+1) to Canvas.ClipRect.Right div (T
            (x>=1) and (x<=5) and
            (y>=1) and (y<=5) then
           begin
-          try
-            Partie.DessineBilan;
-          except
-            DessineBilan(0);
-          end;
+          if MenuItemEvolution.Checked then
+            try
+              DessineEvolution;
+            except
+            end
+          else
+            try
+              Partie.DessineBilan;
+            except
+              DessineBilan(0);
+            end;
           BlnOK := true;
           end;
         if not EvtOK and // Affichage des evts then
@@ -420,6 +430,17 @@ with FormEvtDes do
     ShowModal;
   finally
     Release;
+  end;
+end;
+
+procedure TFormPlateau.MenuItemEvolutionClick(Sender: TObject);
+begin
+// On efface la zone
+with Canvas do
+  begin
+  Brush.Color:=clBlack;
+  FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
+                        6*(TailleCase+1), 6*(TailleCase+1)));
   end;
 end;
 
@@ -461,8 +482,8 @@ try
       Canvas.FillRect(TRect.Create( 7*(TailleCase + 1) + 1, 1*(TailleCase + 1) + 1,
                                    12*(TailleCase + 1) - 1, 4*(TailleCase + 1) - 1));
       // On efface la zone de bilan
-      Canvas.FillRect(TRect.Create(1*(TailleCase+1) + 1, 1*(TailleCase+1) + 1,
-                                   6*(TailleCase+1) - 1, 6*(TailleCase+1) - 1));
+      Canvas.FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
+                                   6*(TailleCase+1), 6*(TailleCase+1)));
       Partie.Demarre; // L'instance Partie a été créée : on démarre le jeu
       end
 finally
@@ -627,6 +648,7 @@ begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
   Font.Name := IniFile.ReadString(stSectionOptions, stEntreePolice, 'Impact');
+  MenuItemEvolution.Checked := IniFile.ReadBool(stSectionOptions, stEntreeEvolution, False);
   TimerPion.Interval := IniFile.ReadInteger(stSectionOptions, stEntreeVitesse, MenuItemVitesseMoyenne.Tag);
   TimerAutomate.Interval := 5 * TimerPion.Interval;
   TimerClignotement.Interval := TimerAutomate.Interval div 2;
@@ -645,6 +667,7 @@ begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
   IniFile.WriteString(stSectionOptions, stEntreePolice, Font.Name);
+  IniFile.WriteBool(stSectionOptions, stEntreeEvolution, MenuItemEvolution.Checked);
   IniFile.WriteInteger(stSectionOptions, stEntreeVitesse, TimerPion.Interval);
 finally
   FreeAndNil(IniFile);
@@ -1247,6 +1270,73 @@ for u := False to True do // Unité (true) ou dizaine (false)
                                   xc + TailleEvt div 4, yc + TailleEvt div 2), bmEvt);
   FreeAndNil(bmEvt);
   end
-end;
+end{procedure TFormPlateau.DessineCompteurEvt};
+
+procedure TFormPlateau.DessineEvolution;
+const
+    PtScore : Integer = 10000;
+    PtTour  : Integer = 1;
+
+var Taille,
+    ScoreMax,
+    TourMax,
+    x, y,
+    x0, y0,
+    t, s   : Integer;
+    dx, dy : Double;
+    j      : TJoueurId;
+begin
+if Partie.TrCrt = 0 then Exit;
+
+// 0. On efface la zone
+Canvas.Brush.Color:=clBlack;
+Canvas.FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
+                             6*(TailleCase+1), 6*(TailleCase+1)));
+
+Taille := 5*(TailleCase+1);
+x0 := 1*(TailleCase+1);
+y0 := 1*(TailleCase+1);
+
+// 1. Calcul des dimensions en abscisses (tours)
+TourMax := Partie.TrCrt;
+dx := (Taille-1)/TourMax;
+
+// 2. Calcul des dimensions en ordonnées (scores)
+ScoreMax := 0;
+for t := 0 to TourMax do
+  for j := Succ(Low(TJoueurId)) to (High(TJoueurId)) do
+    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
+      ScoreMax := max(Partie.Score(j, t), ScoreMax);
+dy := (Taille-1)/ScoreMax;
+
+// 4. Affichage des graphes par joueurs
+with Canvas do
+  begin
+  Brush.Color := clWhite;
+  // 3. Affichage du quadrillage par point (10 tours, 100000 pts)
+  for t := 0 to TourMax div PtTour do
+    for s := 0 to ScoreMax div PtScore do
+      begin
+      x := x0 + Round(dx*t*PtTour);
+      y := y0 + Taille - Round(dy*s*PtScore);
+      if (t mod 10)*(s mod 10) = 0 then
+        FillRect(TRect.Create(x-1, y-1, x+1, y+1))
+      else
+        Pixels[x, y] := clWhite;
+      end;
+  Pen.Style := psSolid;
+  Pen.Width := 1;
+  for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
+    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
+      begin
+      Pen.Color := Couleur[TCouleur(j)];
+      for t := 0 to TourMax do
+        if t = 0 then
+          MoveTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)))
+        else
+          LineTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)));
+      end
+  end
+end{procedure TFormPlateau.DessineEvolution};
 
 end.

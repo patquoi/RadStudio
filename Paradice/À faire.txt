@@ -1,4 +1,6 @@
-+ Faire graphique d'évolution des joueurs.
+! Option de règle du jeu : 
+  si joueur éliminé, ses événements peuvent ne pas appartenir au jackpot (ça favorise les joueurs les plus riches)
+
 + Faires stats de gains par événement
 + Afficher un bilan par destinataire des paiements
 + Avant de déplacer le pion, afficher les cases finales possibles

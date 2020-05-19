@@ -192,6 +192,7 @@ type
     procedure DessineJackpot;
     procedure DessineLanceDes;
     procedure DessineBilan;
+    procedure DessineEvolution;
     procedure DessineEvenement(TypeEvt : TTypeEvt);
     procedure DessineCompteurEvt(Couleur : TCouleur; PlusBlanc : Boolean);
     procedure DessineEvenements;
@@ -213,7 +214,8 @@ type
     // Divers
     procedure Paie(Score : Integer; Crediteur, Debiteur : TJoueurId);
     procedure Credite(Id : TJoueurId; Score : Integer);
-    function Score(Id : TJoueurId) : Integer;
+    function Score(Id : TJoueurId) : Integer; overload;
+    function Score(Id : TJoueurId; Tour : Integer) : Integer; overload;
     function ScoreTour(Id : TJoueurId; Tour : Integer) : Integer;
     function DebitTour(Id : TJoueurId; Tour : Integer) : Integer;
     function CreditTour(Id : TJoueurId; Tour : Integer) : Integer;
@@ -1047,7 +1049,10 @@ for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
       end
     end;
 DessineScores; // score par joueur
-DessineBilan;  // score par tour
+if FormPlateau.MenuItemEvolution.Checked then
+  DessineEvolution
+else
+  DessineBilan;  // score par tour
 end;
 
 function TPartie.NbEvenements(Id: TJoueurId) : Integer;
@@ -1360,7 +1365,10 @@ case NvPhase of
                             TimerAutomate.Enabled := True;
                             end;
                           DessineScores;
-                          DessineBilan(TrCrt);
+                          if FormPlateau.MenuItemEvolution.Checked then
+                            DessineEvolution
+                          else
+                            DessineBilan(TrCrt);
                           PhaseSvt := phtJoueurSvt;
                           Exit;
                           end
@@ -1462,6 +1470,11 @@ end;
 procedure TPartie.DessineBilan;
 begin
 FormPlateau.DessineBilan(TrCrt);
+end;
+
+procedure TPartie.DessineEvolution;
+begin
+FormPlateau.DessineEvolution;
 end;
 
 procedure TPartie.DessineEvenement(TypeEvt : TTypeEvt);
@@ -1575,7 +1588,10 @@ begin
 for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
   Jr[j].Score.Initialise(TrCrt);
 Jckpt.Score.Initialise(TrCrt);
-DessineBilan; // Pour l'affichage du tour
+if FormPlateau.MenuItemEvolution.Checked then
+  DessineEvolution
+else
+  DessineBilan; // Pour l'affichage du tour
 end;
 
 procedure TPartie.TourSuivant;
@@ -1606,7 +1622,10 @@ else
   Jr[Debiteur].Debite(TrCrt, Score, Crediteur);
 end{case of};
 DessineScores; // Score par joueur
-DessineBilan; // Scores par tour
+if FormPlateau.MenuItemEvolution.Checked then
+  DessineEvolution
+else
+  DessineBilan; // Scores par tour
 if (Debiteur = jJackpot) or
    (Crediteur = jJackpot) then
   DessineJackpot;
@@ -1620,6 +1639,14 @@ end;
 function TPartie.Score(Id : TJoueurId) : Integer;
 begin
 Result := Jr[Id].CumulScore(TrCrt);
+end;
+
+function TPartie.Score(Id : TJoueurId; Tour : Integer) : Integer;
+begin
+if Id = jJackpot then
+  Result := Jckpt.CumulScore(Tour)
+else
+  Result := max(0, Jr[Id].CumulScore(Tour)); // On évite les scores négatifs
 end;
 
 function TPartie.ScoreTour(Id : TJoueurId; Tour : Integer) : Integer;
