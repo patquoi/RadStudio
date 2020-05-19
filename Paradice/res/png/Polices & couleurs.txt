@@ -1,0 +1,14 @@
+Optima Heavy 400
+
+Couleurs
+
+N°	Couleur Joueur		Code RGB
+0	Noir	N/A			$000000
+1	Ciel	Myrtille	$2450ef
+2	Magenta Framboise	$c23979
+3	Orange	Orange		$ff8000
+4	Rouge	Fraise		$ff0000
+5	Jaune	Citron		$ffff60
+6	Vert	Kiwi		$008900
+
+

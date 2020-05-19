@@ -1,0 +1,7 @@
++ Faire graphique d'évolution des joueurs.
++ Faires stats de gains par événement
++ Afficher un bilan par destinataire des paiements
++ Avant de déplacer le pion, afficher les cases finales possibles
+
++++ Faire aide en ligne
+++ Débogage pour le calcul des gains (fichier log)

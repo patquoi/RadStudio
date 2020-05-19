@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E26C5783-E79A-40E5-8CD3-0E4EA5C595ED}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="paradice.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="paradice">
+        <MSBuild Projects="paradice.dproj"/>
+    </Target>
+    <Target Name="paradice:Clean">
+        <MSBuild Projects="paradice.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="paradice:Make">
+        <MSBuild Projects="paradice.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="paradice"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="paradice:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="paradice:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

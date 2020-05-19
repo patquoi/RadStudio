@@ -1,0 +1,57 @@
+PARADICE - LISEZMOI
+===================
+
+LICENCE
+
+Paradice est sous licence GPL 2.0 (Licence Publique Générale).
+Merci de consulter le fichier licence.txt, traduite de la licence officielle 
+en langue anglaise license.txt.
+
+COMPATIBILITE WINDOWS
+
+Vous pouvez installer Paradice de Windows XP (32 bits) à Windows 10 (64 bits).
+ 
+INSTALLATION ET DESINSTALLATION
+
+L'archive d'installation a été générée avec l'outil GPL InnoSetup.
+Il permet d'installer "Paradice" avec les sources.
+Elle inclut la désinstallation. Pour ce faire, aller dans le panneau de 
+configuration et choisir Ajout/Suppression de programmes puis 
+"Paradice". Sous Windows 10, aller dans les paramètres puis 
+Programmes et rechercher "Paradice".
+
+Les paramètres de jeu NE SONT PAS SUPPRIMES lorsque vous désinstallez le 
+programme. Après désinstallation, vous devez aller supprimer explicitement le
+dossier selon les versions de Windows :
+	
+	%Userprofile%\Local Settings\Application Data\Patquoi.fr\Paradice
+ou 	
+	%LocalAppData%\Patquoi.fr\Paradice.
+
+CONFIGURATION MINIMALE ET RECOMMANDEE
+
+Paradice nécessite environ 140 Mo de mémoire.
+La résolution de l'écran minimale est de 1024x768 mais le plateau de jeu est
+redimensionnable.
+
+SOURCES
+
+Paradice a été développé avec RAD Studio 10.3.3 Rio Community Edition (Delphi)
+qui est une version gratuite.
+
+Pour les installer, il faut décompresser le fichier src.zip dans le dossier
+d'installation en précisant de recréer les sous-dossiers. Les sources sont
+alors décompressés dans le dossier src.
+
+Les sources peuvent donc être recompilés avec les versions plus complètes de
+Delphi. Pour les autres versions de Delphi, cela ne devrait pas poser 
+trop de problèmes vu qu'il n'y a pas de composants spéciaux utilisés. 
+Il se peut qu'il y ait quelques propriétés supplémentaires dans les fichiers
+ressources des fiches (*.dfm) mais pas inévitables. Aucun projet avec des 
+versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
+
+HISTORIQUE DES VERSIONS
+
+[Version 1.0 - 19/05/2020] Première version.
+
+Dernière mise à jour le 19 mai 2020.
