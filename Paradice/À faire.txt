@@ -1,8 +1,10 @@
-! Option de règle du jeu : 
-  si joueur éliminé, ses événements peuvent ne pas appartenir au jackpot (ça favorise les joueurs les plus riches)
+! Option de règle du jeu (ça favorise les joueurs les plus riches sur la fin) : 
+  - Si un joueur n'achète pas, l'événement ne passe par le jackpot (par défaut) 
+  - si un joueur vend un événement, il est remis en jeu sans passer par le jackpot
+  - si un joueur est éliminé, ses événements sont remis en jeu sans passer nécessairement par le jackpot 
 
-+ Faires stats de gains par événement
-+ Afficher un bilan par destinataire des paiements
+! Echap permet de sortir de la boîte de dialogue des événements
+
 + Avant de déplacer le pion, afficher les cases finales possibles
 
 +++ Faire aide en ligne

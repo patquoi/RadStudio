@@ -10,6 +10,10 @@ uses
   Vcl.ExtCtrls;
 
 type
+
+  TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3); // Indique l'affichage en haut à gauche (Bilan Tour par défaut)
+  TFormatStats   = (fsPourcent=0, fsScore=1); // Indique le format des statistiques de dés et d'événements
+
   TFormPlateau = class(TForm)
     ImageCollection: TImageCollection;
     VirtualImageListCases: TVirtualImageList;
@@ -56,6 +60,13 @@ type
     MenuItemPartieAbandon: TMenuItem;
     TimerClignotement: TTimer;
     MenuItemEvolution: TMenuItem;
+    MenuITemSeparator2: TMenuItem;
+    MenuITemBilanTour: TMenuItem;
+    MenuItemStatsEvts: TMenuItem;
+    MenuItemStatsDes: TMenuItem;
+    MenuItemFormatStats: TMenuItem;
+    MenuItemFormatStatsPourcents: TMenuItem;
+    MenuItemFormatStatsScore: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
@@ -77,22 +88,28 @@ type
     procedure MenuItemPartieRepriseClick(Sender: TObject);
     procedure MenuItemPartieAbandonClick(Sender: TObject);
     procedure TimerClignotementTimer(Sender: TObject);
-    procedure MenuItemEvolutionClick(Sender: TObject);
+    procedure MenuItemTypeAffichageClick(Sender: TObject);
+    procedure MenuItemFormatStatsClick(Sender: TObject);
   private
-    FMessage   : String;
+    FMessage : String;
     procedure LitParametres;
     procedure EcritParametres;
     procedure DefinitMessage(stNvMessage : String); // Exécuté en affectant la property stMesssage
     procedure DessineMessage; // Exécuté en affectant la property stMesssage
     function RectCase(x : TCoordonnee; y : TCoordonnee) : TRect;
   public // Les procédures Dessine... ci-dessous sont utilisées automatiquement par FormPaint
-    TailleCase : Integer;
+    TailleCase    : Integer;
+    TypeAffichage : TTypeAffichage;
+    FormatStats   : TFormatStats;
     procedure DessineCase(ProprioId : TJoueurId; x : TCoordonnee; y : TCoordonnee; DirPoss : TDirPoss);
     procedure DessineScore(Id : TJoueurId; Pos, Score : Integer; JrCrt, Automate, Elimine : Boolean);
     procedure DessineJackpot(Score, DrnSc : Integer; DrnJr : TJoueurId);
     procedure DessineLanceDes(Id : TJoueurId; De : array of TDe);
     procedure DessineBilan(Tour : Integer);
     procedure DessineEvolution;
+    procedure DessineStatsEvts;
+    procedure DessineStatsDes;
+    procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
     procedure DessineCompteurEvt(Couleur : TCouleur);
     property stMessage : String read FMessage write DefinitMessage;
@@ -113,7 +130,8 @@ const
   stSectionOptions  : String = 'Options';
   stEntreePolice    : String = 'Police';
   stEntreeVitesse   : String = 'Vitesse';
-  stEntreeEvolution : String = 'Evolution';
+  stEntreeAffichage : String = 'Affichage';
+  stEntreeFormat    : String = 'Format';
 
 // -------------------
 // Evénements de fiche
@@ -382,17 +400,7 @@ for x := Canvas.ClipRect.Left div (TailleCase+1) to Canvas.ClipRect.Right div (T
            (x>=1) and (x<=5) and
            (y>=1) and (y<=5) then
           begin
-          if MenuItemEvolution.Checked then
-            try
-              DessineEvolution;
-            except
-            end
-          else
-            try
-              Partie.DessineBilan;
-            except
-              DessineBilan(0);
-            end;
+          DessineSelonTypeAffichage;
           BlnOK := true;
           end;
         if not EvtOK and // Affichage des evts then
@@ -433,15 +441,19 @@ with FormEvtDes do
   end;
 end;
 
-procedure TFormPlateau.MenuItemEvolutionClick(Sender: TObject);
+procedure TFormPlateau.MenuItemFormatStatsClick(Sender: TObject);
 begin
-// On efface la zone
+// 1. On efface la zone
 with Canvas do
   begin
   Brush.Color:=clBlack;
-  FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
+  FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
                         6*(TailleCase+1), 6*(TailleCase+1)));
   end;
+// 2. On affecte la propriété
+FormatStats := TFormatStats((Sender as TMenuItem).Tag);
+// 3. On rafraîchit la zone
+DessineSelonTypeAffichage;
 end;
 
 procedure TFormPlateau.MenuItemParcoursClick(Sender: TObject);
@@ -479,10 +491,10 @@ try
       begin
       Canvas.Brush.Color:=clBlack;
       // On efface la zone de score
-      Canvas.FillRect(TRect.Create( 7*(TailleCase + 1) + 1, 1*(TailleCase + 1) + 1,
-                                   12*(TailleCase + 1) - 1, 4*(TailleCase + 1) - 1));
+      Canvas.FillRect(TRect.Create( 7*(TailleCase + 1), 1*(TailleCase + 1),
+                                   12*(TailleCase + 1), 4*(TailleCase + 1)));
       // On efface la zone de bilan
-      Canvas.FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
+      Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
                                    6*(TailleCase+1), 6*(TailleCase+1)));
       Partie.Demarre; // L'instance Partie a été créée : on démarre le jeu
       end
@@ -513,6 +525,21 @@ begin
 FontDialog.Font.Name := Self.Font.Name;
 if FontDialog.Execute then
   Self.Font.Name := FontDialog.Font.Name;
+end;
+
+procedure TFormPlateau.MenuItemTypeAffichageClick(Sender: TObject);
+begin
+// 1. On efface la zone
+with Canvas do
+  begin
+  Brush.Color:=clBlack;
+  FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
+                        6*(TailleCase+1), 6*(TailleCase+1)));
+  end;
+// 2. On affecte la propriété
+TypeAffichage := TTypeAffichage((Sender as TMenuItem).Tag);
+// 3. On rafraîchit la zone
+DessineSelonTypeAffichage;
 end;
 
 procedure TFormPlateau.MenuItemVitesseClick(Sender: TObject);
@@ -644,11 +671,51 @@ end;
 procedure TFormPlateau.LitParametres;
 var IniFile : TIniFile;
     i       : Integer;
+    ta      : TTypeAffichage;
+    fs      : TFormatStats;
 begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
+  // 1. Police (Impact par défaut)
   Font.Name := IniFile.ReadString(stSectionOptions, stEntreePolice, 'Impact');
-  MenuItemEvolution.Checked := IniFile.ReadBool(stSectionOptions, stEntreeEvolution, False);
+
+  // 2. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
+  ta := TTypeAffichage(IniFile.ReadInteger(stSectionOptions, stEntreeAffichage, Ord(taBilanTour))); // Bilan tour par défaut
+  // On rafraîchit le menu des options
+  case ta of // On affecte TypeAffichage depuis l'événement du menu
+    taBilanTour: begin
+                 MenuItemBilanTour.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemBilanTour);
+                 end;
+    taEvolution: begin
+                 MenuItemEvolution.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemEvolution);
+                 end;
+    taStatsEvts: begin
+                 MenuItemStatsEvts.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemStatsEvts);
+                 end;
+    taStatsDes:  begin
+                 MenuItemStatsDes.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemStatsDes);
+                 end;
+  end{case of};
+
+  // 3. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
+  fs := TFormatStats(IniFile.ReadInteger(stSectionOptions, stEntreeFormat, Ord(fsPourcent))); // Format % par défaut
+  // On rafraîchit le menu des options
+  case fs of
+    fsPourcent: begin
+                MenuItemFormatStatsPourcents.Checked := True;
+                MenuItemFormatStatsClick(MenuItemFormatStatsPourcents);
+                end;
+    fsScore:    begin
+                MenuItemFormatStatsScore.Checked := True;
+                MenuItemFormatStatsClick(MenuItemFormatStatsScore);
+                end;
+  end{case of};
+
+  // 4. Vitesse (Moyenne par défaut)
   TimerPion.Interval := IniFile.ReadInteger(stSectionOptions, stEntreeVitesse, MenuItemVitesseMoyenne.Tag);
   TimerAutomate.Interval := 5 * TimerPion.Interval;
   TimerClignotement.Interval := TimerAutomate.Interval div 2;
@@ -667,7 +734,8 @@ begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
   IniFile.WriteString(stSectionOptions, stEntreePolice, Font.Name);
-  IniFile.WriteBool(stSectionOptions, stEntreeEvolution, MenuItemEvolution.Checked);
+  IniFile.WriteInteger(stSectionOptions, stEntreeAffichage, Ord(TypeAffichage));
+  IniFile.WriteInteger(stSectionOptions, stEntreeFormat, Ord(FormatStats));
   IniFile.WriteInteger(stSectionOptions, stEntreeVitesse, TimerPion.Interval);
 finally
   FreeAndNil(IniFile);
@@ -678,7 +746,7 @@ procedure TFormPlateau.DefinitMessage(stNvMessage : String); // Exécuté en affec
 begin
 FMessage := stNvMessage;
 DessineMessage;
-end;
+end{TFormPlateau.DefinitMessage};
 
 procedure TFormPlateau.DessineMessage; // Exécuté en affectant la property stMesssage
 const stVide = '';
@@ -794,8 +862,8 @@ y0Msg := y0Min;
 
 // 2. On efface la zone
 Canvas.Brush.Color:=clBlack;
-Canvas.FillRect(TRect.Create(x0Min + 1,              y0Min + 1,
-                             x0Min + LargeurMax - 1, y0Min + HauteurMax - 1));
+Canvas.FillRect(TRect.Create(x0Min,              y0Min,
+                             x0Min + LargeurMax, y0Min + HauteurMax));
 
 if stMessage = '' then Exit;
 
@@ -901,6 +969,11 @@ if (TypeCase[x, y]>tcIndefini) then
         begin
         xj := Jr[JrCrt].Pion.x;
         yj := Jr[JrCrt].Pion.y;
+        end
+      else
+        begin // Hors case arbitrairement
+        xj := 1;
+        yj := 1;
         end;
 
     if (xj <> x) or (yj <> y) or not TimerClignotement.Enabled or (TimerClignotement.Tag <> 0) then // Condition de clignotement pion joueur courant
@@ -1196,6 +1269,353 @@ for j := Succ(Low(TJoueurId)) to TJoueurId(Partie.Nbj) do
   end;
 end{procedure TFormPlateau.DessineBilan};
 
+procedure TFormPlateau.DessineEvolution;
+const
+    PtScore : Integer = 10000;
+    PtTour  : Integer = 1;
+
+var Taille,
+    ScoreMax,
+    TourMax,
+    x, y,
+    x0, y0,
+    t, s   : Integer;
+    dx, dy : Double;
+    j      : TJoueurId;
+begin
+if Partie.TrCrt = 0 then Exit;
+
+// 0. On efface la zone
+Canvas.Brush.Color:=clBlack;
+Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
+                             6*(TailleCase+1), 6*(TailleCase+1)));
+
+Taille := 5*(TailleCase+1);
+x0 := 1*(TailleCase+1);
+y0 := 1*(TailleCase+1);
+
+// 1. Calcul des dimensions en abscisses (tours)
+TourMax := Partie.TrCrt;
+dx := (Taille-1)/TourMax;
+
+// 2. Calcul des dimensions en ordonnées (scores)
+ScoreMax := 0;
+for t := 0 to TourMax do
+  for j := Succ(Low(TJoueurId)) to (High(TJoueurId)) do
+    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
+      ScoreMax := max(Partie.Score(j, t), ScoreMax);
+dy := (Taille-1)/ScoreMax;
+
+// 4. Affichage des graphes par joueurs
+with Canvas do
+  begin
+  Brush.Color := clWhite;
+  // 3. Affichage du quadrillage par point (10 tours, 100000 pts)
+  for t := 0 to TourMax div PtTour do
+    for s := 0 to ScoreMax div PtScore do
+      begin
+      x := x0 + Round(dx*t*PtTour);
+      y := y0 + Taille - Round(dy*s*PtScore);
+      if (t mod 10)*(s mod 10) = 0 then
+        FillRect(TRect.Create(x-1, y-1, x+1, y+1))
+      else
+        Pixels[x, y] := clWhite;
+      end;
+  Pen.Style := psSolid;
+  Pen.Width := 1;
+  for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
+    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
+      begin
+      Pen.Color := Couleur[TCouleur(j)];
+      for t := 0 to TourMax do
+        if t = 0 then
+          MoveTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)))
+        else
+          LineTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)));
+      end
+  end
+end{procedure TFormPlateau.DessineEvolution};
+
+procedure TFormPlateau.DessineStatsEvts;
+const Colonnes : Integer = 4;
+      Lignes   : Integer = 7;
+      stStats    : array [TFormatStats] of String = ('Stats en %','Stats en score');
+      stValMax   : array [TFormatStats] of String = ('100.0','888888');
+      stFrmStats : array [TFormatStats] of String = ('00.0','000000');
+var x,y,x0,y0,
+    xSE,ySE,
+    Hauteur,
+    Largeur,
+    Taille,
+    sc1, sc2,
+    r, v, b  : Integer;
+    dx,dy : Double;
+    e,e1,e2  : TTypeEvt;
+    Proprio1,
+    Proprio2 : TJoueurId;
+    se       : array [TFormatStats] of Double;
+    stValSE  : array [TFormatStats] of String;
+    Pos      : array [TTypeEvt] of Integer;
+    bmEvt    : TBitmap;
+
+procedure DetermineTaillePolice(stTexte : String; LargeurMax : Integer);
+begin
+with Canvas do
+  begin
+  Font.Size := 1;
+  while (TextWidth(stTexte) < LargeurMax) and
+        (TextHeight(stTexte) < Hauteur) do
+    Font.Size := Font.Size + 1;
+  Font.Size := Font.Size - 1;
+  end;
+end{procedure DetermineTaillePolice};
+
+begin
+Taille := 5*(TailleCase+1);
+x0 := 1*(TailleCase+1);
+y0 := 1*(TailleCase+1);
+Largeur := Taille div (Colonnes + 2);
+Hauteur := Taille div (Lignes + 3);
+dx := (Taille - Largeur * Colonnes) / (Colonnes + 1);
+dy := (Taille - Hauteur * Lignes) / (Lignes + 1);
+Pos[teIndefini] := 0;
+
+// 1. Calcul des positions
+for e1 := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
+  begin
+  Pos[e1] := 1;
+  sc1 := Partie.ScEvt[e1];
+  for e2 := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
+    begin
+    sc2 := Partie.ScEvt[e2];
+    if (sc1 < sc2) or
+       ((sc1 = sc2) and (Ord(e2) < Ord(e1))) then
+      Inc(Pos[e1]);
+    end;
+  end;
+
+// 2. Affichage de l'unité (en haut à gauche)
+DetermineTaillePolice(stStats[FormatStats], Round(3*dx + 2*Largeur));
+with Canvas do
+  begin
+  Font.Color := clWhite;
+  TextOut(x0 + Round((3*dx + 2*Largeur - TextWidth(stStats[FormatStats]))/2),
+          y0 + Round((  dx +   Hauteur - TextHeight(stStats[FormatStats]))/2), stStats[FormatStats]);
+  end;
+
+// 3. Affichage des événements
+DetermineTaillePolice(stValMax[FormatStats], Round(Largeur + dx - Hauteur));
+for e := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
+  begin
+  x := x0 + Round(dx + ((Pos[e] + 1) mod Colonnes) * (Largeur + dx));
+  y := y0 + Round(dy + ((Pos[e] + 1) div Colonnes) * (Hauteur + dy));
+  Proprio1 := Partie.Evt[e].CaseEvt[ncePrm].Id;
+  Proprio2 := Partie.Evt[e].CaseEvt[nceDrn].Id;
+
+  // 2a. Affichage de l'événement avec les propriétaires en fond
+  bmEvt := TBitmap.Create;
+  VirtualImageListFonds.GetBitmap(Ord(Proprio1)+8*Ord(Proprio1=jIndefini), bmEvt);
+  VirtualImageListDemiFonds.GetBitmap(Ord(Proprio2)+8*Ord(Proprio2=jIndefini), bmEvt);
+  VirtualImageListCases.GetBitmap(Ord(TypeCaseEvt[e])-1, bmEvt);
+  Canvas.StretchDraw(TRect.Create(x, y, x + Hauteur - 1, y + Hauteur - 1), bmEvt);
+  FreeAndNil(bmEvt);
+
+  // 2b. Calcul de la couleur de la statistique
+  with Partie do
+   begin
+    if Partie.ScEvt[teIndefini] > 0 then
+      begin
+      se[fsPourcent] := (100.0 * Partie.ScEvt[e]) / Partie.ScEvt[teIndefini];
+      se[fsScore]    := 1.0 * Partie.ScEvt[e];
+      end
+    else
+      begin
+      se[fsPourcent] := 0.0;
+      se[fsPourcent] := 0.0;
+      end;
+    r := 0; v := 0; b := 0;
+    case Trunc(se[fsPourcent]/25) of
+      0: begin
+         b := Round((255*(25-se[fsPourcent]))/25);
+         v := Round((255*se[fsPourcent])/25);
+         end;
+      1: begin
+         v := Round((255*(50-se[fsPourcent]))/25);
+         r := Round((255*(se[fsPourcent]-25))/25);
+         end;
+      2: begin
+         v := Round((255*(se[fsPourcent]-50))/25);
+         r := 255;
+         end;
+      3: begin
+         b := Round((255*(se[fsPourcent]-75))/25);
+         v := 255;
+         r := 255;
+         end;
+      4: begin
+         b := 255;
+         v := 255;
+         r := 255;
+         end;
+    end{case of};
+    stValSE[FormatStats] := FormatFloat(stFrmStats[FormatStats], se[FormatStats]);
+   end;
+  with Canvas do
+    begin
+    // 2c. Effacement la zone d'écriture
+    Brush.Color := clBlack;
+    FillRect(TRect.Create(x + Hauteur,                 y,
+                          x + Round(Largeur + dx) - 1, y + Round(Hauteur + dy) - 1));
+    // 2d. Affichage de la statistique (score ou pourcent)
+    Font.Color := TColor(r + 256*v + 65536*b);
+    xSE := x + Hauteur + Round((Largeur - dx/2 - TextWidth(stValSE[FormatStats]))/2);
+    ySE := y +           Round((Hauteur -        TextHeight(stValSE[FormatStats]))/2);
+    TextOut(xSE, ySE, stValSE[FormatStats]);
+    end
+  end;
+end{procedure TFormPlateau.DessineStatsEvts};
+
+procedure TFormPlateau.DessineStatsDes;
+const stFormat   : array [TFormatStats] of String = ('%','Score');
+      stValMax   : array [TFormatStats] of String = ('100.0','888888');
+      stFrmStats : array [TFormatStats] of String = ('00.0','000000');
+var x, y,
+    xSD,ySD,
+    x0,y0,
+    Taille,
+    tc,dc,
+    r,v,b   : Integer;
+    sd      : Array [TFormatStats] of Double;
+    d,d1,d2 : TDe;
+    stValSD : String;
+    bmDe    : TBitmap;
+
+procedure DetermineTaillePolice(stTexte : String);
+begin
+with Canvas do
+  begin
+  Font.Size := 1;
+  while (TextWidth(stTexte) < tc) and
+        (TextHeight(stTexte) < tc) do
+    Font.Size := Font.Size + 1;
+  Font.Size := Font.Size - 1;
+  end;
+end{procedure DetermineTaillePolice};
+
+begin
+Taille := 5*(TailleCase+1);
+x0 := 1*(TailleCase+1);
+y0 := 1*(TailleCase+1);
+tc := Taille div (Ord(High(TDe))+3);
+dc := Round((Taille - tc * (Ord(High(TDe))+1)) div (Ord(High(TDe))+2));
+
+for d1 := Low(TDe) to High(TDe) do
+  for d2 := Low(TDe) to High(TDe) do
+    begin
+    if d1 = dIndefini then
+      d := d2
+    else
+      if d2 = dIndefini then
+        d := d1
+      else
+        d := dIndefini;
+    x := x0 + dc + Ord(d1)*(dc + tc);
+    y := y0 + dc + Ord(d2)*(dc + tc);
+    if (d > dIndefini) then
+      begin
+      bmDe := TBitmap.Create;
+      VirtualImageListFonds.GetBitmap(Ord(cBlanc), bmDe); // Fond blanc pour les dés
+      VirtualImageListDes.GetBitmap(Ord(d)-1, bmDe);
+      Canvas.StretchDraw(TRect.Create(x, y,
+                                      x + tc - 1, y + tc - 1), bmDe);
+      FreeAndNil(bmDe);
+      end
+    else
+      if Ord(d1)+Ord(d2) = 0 then
+        with Canvas do
+          begin
+          DetermineTaillePolice(stFormat[FormatStats]);
+          Font.Color := clWhite;
+          xSD := x + (tc - TextWidth(stFormat[FormatStats])) div 2;
+          ySD := y + (tc - TextHeight(stFormat[FormatStats])) div 2;
+          TextOut(xSD, ySD, stFormat[FormatStats]);
+          DetermineTaillePolice(stValMax[FormatStats]);
+          end
+      else
+        if Partie.ScEvt[teIndefini] > 0 then
+          begin
+          // On efface uniquement la zone de chiffres qui bouge
+          with Canvas do
+            begin
+            Brush.Color:=clBlack;
+            FillRect(TRect.Create(x, y,
+                                  x + tc - 1, y + tc - 1));
+            end;
+          with Partie do
+           begin
+            sd[fsPourcent] := (100.0 * ScDes[d1, d2]) / ScEvt[teIndefini];
+            sd[fsScore]    := 1.0 * ScDes[d1, d2];
+            r := 0; v := 0; b := 0;
+            case Trunc(sd[fsPourcent]/25) of
+              0: begin
+                 b := Round((255*(25-sd[fsPourcent]))/25);
+                 v := Round((255*sd[fsPourcent])/25);
+                 end;
+              1: begin
+                 v := Round((255*(50-sd[fsPourcent]))/25);
+                 r := Round((255*(sd[fsPourcent]-25))/25);
+                 end;
+              2: begin
+                 v := Round((255*(sd[fsPourcent]-50))/25);
+                 r := 255;
+                 end;
+              3: begin
+                 b := Round((255*(sd[fsPourcent]-75))/25);
+                 v := 255;
+                 r := 255;
+                 end;
+              4: begin
+                 b := 255;
+                 v := 255;
+                 r := 255;
+                 end;
+            end{case of};
+            stValSD := FormatFloat(stFrmStats[FormatStats], sd[FormatStats]);
+           end;
+          with Canvas do
+            begin
+            Font.Color := TColor(r + 256*v + 65536*b);
+            xSD := x + (tc - TextWidth(stValSD)) div 2;
+            ySD := y + (tc - TextHeight(stValSD)) div 2;
+            TextOut(xSD, ySD, stValSD);
+            end
+          end
+    end
+end{procedure TFormPlateau.DessineStatsDes};
+
+procedure TFormPlateau.DessineSelonTypeAffichage;
+begin
+case TypeAffichage of
+  taEvolution: try
+                 DessineEvolution;
+               except
+               end;
+  taBilanTour: try
+                 Partie.DessineBilan;
+               except
+                 DessineBilan(0);
+               end;
+  taStatsEvts: try
+                 DessineStatsEvts
+               except
+               end;
+  taStatsDes:  try
+                 DessineStatsDes
+               except
+               end;
+end{case of};
+end{procedure TFormPlateau.DessineSelonTypeAffichage};
+
 procedure TFormPlateau.DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
 var Largeur,
     Hauteur,
@@ -1247,8 +1667,8 @@ x := x0 + dx + (dx + TailleEvt) * (1 + xTypeEvt[teImpair]);
 y := y0 + dy + (dy + TailleEvt) * (0 + yTypeEvt[teImpair]);
 
 try
-  with Partie do  
-    // 2. On compte les événements  
+  with Partie do
+    // 2. On compte les événements
     if Couleur = cBlanc then
       ne := NbEvenements(jIndefini) // cBlanc = événements encore libres => proprio = jIndefini => cNoir
     else
@@ -1271,72 +1691,5 @@ for u := False to True do // Unité (true) ou dizaine (false)
   FreeAndNil(bmEvt);
   end
 end{procedure TFormPlateau.DessineCompteurEvt};
-
-procedure TFormPlateau.DessineEvolution;
-const
-    PtScore : Integer = 10000;
-    PtTour  : Integer = 1;
-
-var Taille,
-    ScoreMax,
-    TourMax,
-    x, y,
-    x0, y0,
-    t, s   : Integer;
-    dx, dy : Double;
-    j      : TJoueurId;
-begin
-if Partie.TrCrt = 0 then Exit;
-
-// 0. On efface la zone
-Canvas.Brush.Color:=clBlack;
-Canvas.FillRect(TRect.Create(1*(TailleCase+1), 1*(TailleCase+1),
-                             6*(TailleCase+1), 6*(TailleCase+1)));
-
-Taille := 5*(TailleCase+1);
-x0 := 1*(TailleCase+1);
-y0 := 1*(TailleCase+1);
-
-// 1. Calcul des dimensions en abscisses (tours)
-TourMax := Partie.TrCrt;
-dx := (Taille-1)/TourMax;
-
-// 2. Calcul des dimensions en ordonnées (scores)
-ScoreMax := 0;
-for t := 0 to TourMax do
-  for j := Succ(Low(TJoueurId)) to (High(TJoueurId)) do
-    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
-      ScoreMax := max(Partie.Score(j, t), ScoreMax);
-dy := (Taille-1)/ScoreMax;
-
-// 4. Affichage des graphes par joueurs
-with Canvas do
-  begin
-  Brush.Color := clWhite;
-  // 3. Affichage du quadrillage par point (10 tours, 100000 pts)
-  for t := 0 to TourMax div PtTour do
-    for s := 0 to ScoreMax div PtScore do
-      begin
-      x := x0 + Round(dx*t*PtTour);
-      y := y0 + Taille - Round(dy*s*PtScore);
-      if (t mod 10)*(s mod 10) = 0 then
-        FillRect(TRect.Create(x-1, y-1, x+1, y+1))
-      else
-        Pixels[x, y] := clWhite;
-      end;
-  Pen.Style := psSolid;
-  Pen.Width := 1;
-  for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
-    if (j <= TJoueurId(Partie.Nbj)) or (j = jJackpot) then
-      begin
-      Pen.Color := Couleur[TCouleur(j)];
-      for t := 0 to TourMax do
-        if t = 0 then
-          MoveTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)))
-        else
-          LineTo(x0 + Round(dx*t), y0 + Taille - Round(dy*Partie.Score(j, t)));
-      end
-  end
-end{procedure TFormPlateau.DessineEvolution};
 
 end.

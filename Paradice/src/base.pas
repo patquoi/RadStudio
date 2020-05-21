@@ -168,6 +168,9 @@ type
     De     : array [TNumDe] of TDe;
     Jr     : array [TJoueurId] of TJoueur;
     Evt    : array [TTypeEvt] of TEvenement;
+    // Stats
+    ScDes  : array [TDe, TDe] of Integer;
+    ScEvt  : array [TTypeEvt] of Integer;
   private
     FEtat  : TEtatPartie;
     FPhase : TPhaseTour;
@@ -193,6 +196,9 @@ type
     procedure DessineLanceDes;
     procedure DessineBilan;
     procedure DessineEvolution;
+    procedure DessineStatsEvts;
+    procedure DessineStatsDes;
+    procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt);
     procedure DessineCompteurEvt(Couleur : TCouleur; PlusBlanc : Boolean);
     procedure DessineEvenements;
@@ -954,6 +960,7 @@ var d     : TNumDe;
     j     : TJoueurId;
     e     : TTypeEvt;
     x, y  : TCoordonnee;
+    d1, d2: TDe;
 begin
 self.TrCrt:=0;
 self.JrCrt:=jIndefini;
@@ -983,6 +990,12 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
         Evt[e].Ajoute(x, y); // Deuxième case de l'événement : on complète l'instance créée
       end;
     end;
+// Stats
+for d1 := Low(TDe) to High(TDe) do
+  for d2 := Low(TDe) to High(TDe) do
+    ScDes[d1, d2] := 0;
+for e := Low(TTYpeEvt) to High(TTypeEvt) do
+  ScEvt[e] := 0;    
 end;
 
 destructor TPartie.Destroy;
@@ -1031,6 +1044,7 @@ var tc        : TTypeCase;
     te        : TTypeEvt;
     ce        : TNumCaseEvt;
     Crediteur : TJoueurId;
+    Gain      : Integer;
 begin
 EvtAVendre := teIndefini; // La vente est terminée
 x := Jr[JrCrt].Pion.x;
@@ -1042,17 +1056,20 @@ for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
     Crediteur := Evt[te].CaseEvt[ce].Id;
     if (Crediteur > jIndefini) and (Crediteur <> jrCrt) then
       begin
+      Gain := Evt[te].DonneGain(De);
       if tc = tcTirelire then
-        Paie(Evt[te].DonneGain(De), jJackpot, JrCrt)
+        Paie(Gain, jJackpot, JrCrt)
       else
-        Paie(Evt[te].DonneGain(De), Crediteur, JrCrt);
+        Paie(Gain, Crediteur, JrCrt);
+      // Stats
+      Inc(scDes[De[PrmDe], De[DrnDe]], Gain);
+      Inc(scDes[De[DrnDe], De[PrmDe]], Gain);
+      Inc(ScEvt[te], Gain);
+      Inc(scEvt[teIndefini], Gain); // Total gains pour calculer le pourcentage
       end
     end;
 DessineScores; // score par joueur
-if FormPlateau.MenuItemEvolution.Checked then
-  DessineEvolution
-else
-  DessineBilan;  // score par tour
+DessineSelonTypeAffichage;
 end;
 
 function TPartie.NbEvenements(Id: TJoueurId) : Integer;
@@ -1365,10 +1382,7 @@ case NvPhase of
                             TimerAutomate.Enabled := True;
                             end;
                           DessineScores;
-                          if FormPlateau.MenuItemEvolution.Checked then
-                            DessineEvolution
-                          else
-                            DessineBilan(TrCrt);
+                          DessineSelonTypeAffichage;
                           PhaseSvt := phtJoueurSvt;
                           Exit;
                           end
@@ -1475,6 +1489,26 @@ end;
 procedure TPartie.DessineEvolution;
 begin
 FormPlateau.DessineEvolution;
+end;
+
+procedure TPartie.DessineStatsEvts;
+begin
+FormPlateau.DessineStatsEvts;
+end;
+
+procedure TPartie.DessineStatsDes;
+begin
+FormPlateau.DessineStatsDes;
+end;
+
+procedure TPartie.DessineSelonTypeAffichage;
+begin
+case FormPlateau.TypeAffichage of
+  taBilanTour: DessineBilan;
+  taEvolution: DessineEvolution;
+  taStatsEvts: DessineStatsEvts;
+  taStatsDes : DessineStatsDes;
+end{case of}
 end;
 
 procedure TPartie.DessineEvenement(TypeEvt : TTypeEvt);
@@ -1588,10 +1622,7 @@ begin
 for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
   Jr[j].Score.Initialise(TrCrt);
 Jckpt.Score.Initialise(TrCrt);
-if FormPlateau.MenuItemEvolution.Checked then
-  DessineEvolution
-else
-  DessineBilan; // Pour l'affichage du tour
+DessineSelonTypeAffichage;
 end;
 
 procedure TPartie.TourSuivant;
@@ -1622,10 +1653,7 @@ else
   Jr[Debiteur].Debite(TrCrt, Score, Crediteur);
 end{case of};
 DessineScores; // Score par joueur
-if FormPlateau.MenuItemEvolution.Checked then
-  DessineEvolution
-else
-  DessineBilan; // Scores par tour
+DessineSelonTypeAffichage;
 if (Debiteur = jJackpot) or
    (Crediteur = jJackpot) then
   DessineJackpot;
