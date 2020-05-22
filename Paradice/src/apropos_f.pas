@@ -19,10 +19,12 @@ type
     Label2: TLabel;
     LabelAlignement: TLabel;
     ImageCollection: TImageCollection;
+    TimerLancement: TTimer;
     procedure TimerTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure TimerLancementTimer(Sender: TObject);
   private
     bmParadice    : TBitMap;
     stVersion,
@@ -88,9 +90,9 @@ end;
 procedure TFormAPropos.FormKeyPress(Sender: TObject; var Key: Char);
 begin
 case Key of
- #27: Self.Close;
- #13: Self.Close;
-end;
+ #27,
+ #13: Self.ModalResult := mrOK;
+end{case of};
 end;
 
 procedure TFormAPropos.AfficheParadice(Couleur : TCouleur);
@@ -101,6 +103,11 @@ VirtualImageList.GetBitmap(0, bmParadice);
 With PaintBox do
   Canvas.StretchDraw(TRect.Create(0, 0, Width, Height), bmParadice);
 FreeAndNil(bmParadice);
+end;
+
+procedure TFormAPropos.TimerLancementTimer(Sender: TObject);
+begin
+Self.ModalResult := mrOK;
 end;
 
 procedure TFormAPropos.TimerTimer(Sender: TObject);

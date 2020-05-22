@@ -14,6 +14,9 @@ type
   TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3); // Indique l'affichage en haut à gauche (Bilan Tour par défaut)
   TFormatStats   = (fsPourcent=0, fsScore=1); // Indique le format des statistiques de dés et d'événements
 
+  TOptionRegle  = (orEvtJckptAcht=1, orEvtJckptVnte=2, orEvtJckptLiqd=4); // Attention à bien définir des puissances de 2 pour pouvoir stocker TOptionsRegle ci-dessous
+  TOptionsRegle = set of TOptionRegle;
+
   TFormPlateau = class(TForm)
     ImageCollection: TImageCollection;
     VirtualImageListCases: TVirtualImageList;
@@ -60,13 +63,21 @@ type
     MenuItemPartieAbandon: TMenuItem;
     TimerClignotement: TTimer;
     MenuItemEvolution: TMenuItem;
-    MenuITemSeparator2: TMenuItem;
+    MenuITemSeparator3: TMenuItem;
     MenuITemBilanTour: TMenuItem;
     MenuItemStatsEvts: TMenuItem;
     MenuItemStatsDes: TMenuItem;
     MenuItemFormatStats: TMenuItem;
     MenuItemFormatStatsPourcents: TMenuItem;
     MenuItemFormatStatsScore: TMenuItem;
+    TimerLancement: TTimer;
+    MenuItemSeparator2: TMenuItem;
+    MenuItemRegle: TMenuItem;
+    MenuItemRegleEvtJackpot: TMenuItem;
+    MenuItemRegleEvtJackpotAchat: TMenuItem;
+    MenuItemRegleEvtJackpotVente: TMenuItem;
+    MenuItemRegleEvtJackpotLiquidation: TMenuItem;
+    MenuItemDemo: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
@@ -90,8 +101,12 @@ type
     procedure TimerClignotementTimer(Sender: TObject);
     procedure MenuItemTypeAffichageClick(Sender: TObject);
     procedure MenuItemFormatStatsClick(Sender: TObject);
+    procedure TimerLancementTimer(Sender: TObject);
+    procedure MenuItemRegleClick(Sender: TObject);
+    procedure MenuItemDemoClick(Sender: TObject);
   private
     FMessage : String;
+    procedure DemarrePartie;
     procedure LitParametres;
     procedure EcritParametres;
     procedure DefinitMessage(stNvMessage : String); // Exécuté en affectant la property stMesssage
@@ -101,6 +116,9 @@ type
     TailleCase    : Integer;
     TypeAffichage : TTypeAffichage;
     FormatStats   : TFormatStats;
+    OptionsRegle  : TOptionsRegle;
+    procedure ChangeAccesRegle(MenuItem : TMenuItem; Activer : Boolean);
+    function DonneOptionsRegle : Integer;
     procedure DessineCase(ProprioId : TJoueurId; x : TCoordonnee; y : TCoordonnee; DirPoss : TDirPoss);
     procedure DessineScore(Id : TJoueurId; Pos, Score : Integer; JrCrt, Automate, Elimine : Boolean);
     procedure DessineJackpot(Score, DrnSc : Integer; DrnJr : TJoueurId);
@@ -126,12 +144,14 @@ uses
   nvpartie_f;
 
 const
-  stNomFichierIni   : String = 'Paradice.ini';
-  stSectionOptions  : String = 'Options';
-  stEntreePolice    : String = 'Police';
-  stEntreeVitesse   : String = 'Vitesse';
-  stEntreeAffichage : String = 'Affichage';
-  stEntreeFormat    : String = 'Format';
+  stNomFichierIni    : String = 'Paradice.ini';
+  stSectionOptions   : String = 'Options';
+  stSectionAffichage : String = 'Affichage';
+  stEntreePolice     : String = 'Police';
+  stEntreeVitesse    : String = 'Vitesse';
+  stEntreeFormat     : String = 'Format';
+  stEntreeStats      : String = 'Stats';
+  stEntreeRegle      : String = 'Règle';
 
 // -------------------
 // Evénements de fiche
@@ -273,7 +293,10 @@ case Key of
                 Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := JrCrt;
                 end
               else // Le jackpot hérite l'événement
-                Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
+                if orEvtJckptAcht in OptionsRegle then // Si option "Evt Jackpot Achat" est activée
+                  Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot
+                else
+                  Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jIndefini;
               DessineCase(x, y);
               DessineEvenement(te);
               DessineCompteurEvt(TCouleur(Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id), AvecBlanc);
@@ -308,7 +331,7 @@ case Key of
          with Partie do
            if Phase = phtVenteEvt then
              begin
-             VendEvenement;
+             VendEvenement(VenteUnitaire);
              if NbEvenements(JrCrt)>0 then
                begin
                EvtAVendreSvt;
@@ -430,6 +453,19 @@ with FormAPropos do
   end;
 end;
 
+procedure TFormPlateau.MenuItemDemoClick(Sender: TObject);
+begin
+try
+  try
+    FreeAndNil(Partie)
+  except
+  end;
+finally
+  Partie := TPartie.Create(High(TNbJoueurs), [False, True, True, True, True, True, True]);
+  DemarrePartie;
+end;
+end;
+
 procedure TFormPlateau.MenuItemEvenementsClick(Sender: TObject);
 begin
 FormEvtDes:=TFormEvtDes.Create(self);
@@ -439,6 +475,14 @@ with FormEvtDes do
   finally
     Release;
   end;
+end;
+
+procedure TFormPlateau.MenuItemRegleClick(Sender: TObject);
+var OptionRegle : TOptionRegle;
+begin
+OptionRegle := TOptionRegle((Sender as TMenuItem).Tag);
+if not (OptionRegle in OptionsRegle) then
+  Include(OptionsRegle, OptionRegle);
 end;
 
 procedure TFormPlateau.MenuItemFormatStatsClick(Sender: TObject);
@@ -487,17 +531,7 @@ begin
 FormNvPartie := TFormNvPartie.Create(self);
 try
   if FormNvPartie.ShowModal = mrOK then
-    with FormPlateau do
-      begin
-      Canvas.Brush.Color:=clBlack;
-      // On efface la zone de score
-      Canvas.FillRect(TRect.Create( 7*(TailleCase + 1), 1*(TailleCase + 1),
-                                   12*(TailleCase + 1), 4*(TailleCase + 1)));
-      // On efface la zone de bilan
-      Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
-                                   6*(TailleCase+1), 6*(TailleCase+1)));
-      Partie.Demarre; // L'instance Partie a été créée : on démarre le jeu
-      end
+    DemarrePartie;
 finally
   FormNvPartie.Release
 end;
@@ -614,6 +648,19 @@ except
 end{try};
 end;
 
+procedure TFormPlateau.TimerLancementTimer(Sender: TObject);
+begin
+TimerLancement.Enabled := False;
+FormAPropos:=TFormAPropos.Create(self);
+with FormAPropos do
+  try
+    TimerLancement.Enabled := True;
+    ShowModal;
+  finally
+    Release
+  end;
+end;
+
 procedure TFormPlateau.TimerParcoursTimer(Sender: TObject);
 begin
 TimerParcours.Tag := 0;
@@ -668,19 +715,60 @@ end;
 // méthodes personnalisées
 // -----------------------
 
+procedure TFormPlateau.DemarrePartie;
+begin
+with FormPlateau do
+  begin
+  Canvas.Brush.Color:=clBlack;
+  // On efface la zone de score
+  Canvas.FillRect(TRect.Create( 7*(TailleCase + 1), 1*(TailleCase + 1),
+                               12*(TailleCase + 1), 4*(TailleCase + 1)));
+  // On efface la zone de bilan
+  Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
+                               6*(TailleCase+1), 6*(TailleCase+1)));
+  Partie.Demarre; // L'instance Partie a été créée : on démarre le jeu
+  end
+end{procedure TFormPlateau.DemarrePartie};
+
 procedure TFormPlateau.LitParametres;
-var IniFile : TIniFile;
-    i       : Integer;
-    ta      : TTypeAffichage;
-    fs      : TFormatStats;
+var IniFile     : TIniFile;
+    ta          : TTypeAffichage;
+    fs          : TFormatStats;
+    i, eor      : Integer;
+    OptionRegle : TOptionRegle;
 begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
   // 1. Police (Impact par défaut)
   Font.Name := IniFile.ReadString(stSectionOptions, stEntreePolice, 'Impact');
 
-  // 2. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
-  ta := TTypeAffichage(IniFile.ReadInteger(stSectionOptions, stEntreeAffichage, Ord(taBilanTour))); // Bilan tour par défaut
+  // 2. Vitesse (Moyenne par défaut)
+  TimerPion.Interval := IniFile.ReadInteger(stSectionOptions, stEntreeVitesse, MenuItemVitesseMoyenne.Tag);
+  TimerAutomate.Interval := 5 * TimerPion.Interval;
+  TimerClignotement.Interval := TimerAutomate.Interval div 2;
+
+  // 3. Règle du jeu (élément orEvtJckptAcht activé uniquement)
+  OptionsRegle := []; // Défini dans les événements OnClick des rubriques de menu
+  eor := IniFile.ReadInteger(stSectionOptions, stEntreeRegle, Ord(orEvtJckptAcht));
+  for OptionRegle := Low(TOptionRegle) to High(TOptionRegle) do
+    if (Ord(OptionRegle) and eor) = Ord(OptionRegle) then
+      case OptionRegle of
+        orEvtJckptAcht: begin
+                        MenuItemRegleEvtJackpotAchat.Checked := True;
+                        MenuItemRegleClick(MenuItemRegleEvtJackpotAchat);
+                        end;
+        orEvtJckptVnte: begin
+                        MenuItemRegleEvtJackpotVente.Checked := True;
+                        MenuItemRegleClick(MenuItemRegleEvtJackpotVente);
+                        end;
+        orEvtJckptLiqd: begin
+                        MenuItemRegleEvtJackpotLiquidation.Checked := True;
+                        MenuItemRegleClick(MenuItemRegleEvtJackpotLiquidation);
+                        end;
+      end;
+
+  // 4. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
+  ta := TTypeAffichage(IniFile.ReadInteger(stSectionAffichage, stEntreeStats, Ord(taBilanTour))); // Bilan tour par défaut
   // On rafraîchit le menu des options
   case ta of // On affecte TypeAffichage depuis l'événement du menu
     taBilanTour: begin
@@ -701,7 +789,7 @@ try
                  end;
   end{case of};
 
-  // 3. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
+  // 5. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
   fs := TFormatStats(IniFile.ReadInteger(stSectionOptions, stEntreeFormat, Ord(fsPourcent))); // Format % par défaut
   // On rafraîchit le menu des options
   case fs of
@@ -715,10 +803,6 @@ try
                 end;
   end{case of};
 
-  // 4. Vitesse (Moyenne par défaut)
-  TimerPion.Interval := IniFile.ReadInteger(stSectionOptions, stEntreeVitesse, MenuItemVitesseMoyenne.Tag);
-  TimerAutomate.Interval := 5 * TimerPion.Interval;
-  TimerClignotement.Interval := TimerAutomate.Interval div 2;
   // On rafraîchit le menu des options (vitesse)
   for i:= 0 to MenuItemVitesse.Count - 1 do
     with MenuItemVitesse.Items[i] do
@@ -726,20 +810,41 @@ try
 finally
   FreeAndNil(IniFile);
 end{try}
-end;
+end{procedure TFormPlateau.LitParametres};
 
 procedure TFormPlateau.EcritParametres;
 var IniFile : TIniFile;
 begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
+  // 1. Options
   IniFile.WriteString(stSectionOptions, stEntreePolice, Font.Name);
-  IniFile.WriteInteger(stSectionOptions, stEntreeAffichage, Ord(TypeAffichage));
-  IniFile.WriteInteger(stSectionOptions, stEntreeFormat, Ord(FormatStats));
   IniFile.WriteInteger(stSectionOptions, stEntreeVitesse, TimerPion.Interval);
+  IniFile.WriteInteger(stSectionOptions, stEntreeRegle, DonneOptionsRegle);
+  // 2. Affichage
+  IniFile.WriteInteger(stSectionAffichage, stEntreeStats, Ord(TypeAffichage));
+  IniFile.WriteInteger(stSectionAffichage, stEntreeFormat, Ord(FormatStats));
 finally
   FreeAndNil(IniFile);
 end{try}
+end{procedure TFormPlateau.EcritParametres};
+
+procedure TFormPlateau.ChangeAccesRegle(MenuItem : TMenuItem; Activer : Boolean);
+var i : Integer;
+begin
+if (MenuItem.Count > 0) then
+  for i := 0 to MenuItem.Count - 1 do
+    ChangeAccesRegle(MenuItem.Items[i], Activer)
+else
+  MenuItem.Enabled := Activer;
+end{procedure TFormPlateau.ChangeAccesRegle};
+
+function TFormPlateau.DonneOptionsRegle : Integer;
+var OptionRegle : TOptionRegle;
+begin
+Result := 0;
+for OptionRegle := Low(TOptionRegle) to High(TOptionRegle) do
+  Inc(Result, Ord(OptionRegle) * Ord(OptionRegle in OptionsRegle));
 end;
 
 procedure TFormPlateau.DefinitMessage(stNvMessage : String); // Exécuté en affectant la property stMesssage

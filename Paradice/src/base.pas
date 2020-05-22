@@ -213,7 +213,7 @@ type
     procedure Demarre;
     // Vente
     procedure EvtAVendreSvt;
-    procedure VendEvenement;
+    procedure VendEvenement(EstLiquidation : Boolean);
     function NbEvenements(Id : TJoueurId) : Integer;
     procedure VenteEvenements;
     procedure LiquideEvenements;
@@ -254,6 +254,9 @@ const
   // Paramètre de TPartie.DessineCompteurEvt
   AvecBlanc     : Boolean = True;
   SansBlanc     : Boolean = False;
+  // Paramètre de TPartie.VendEvenement
+  Liquidation   : Boolean = True;
+  VenteUnitaire : Boolean = False;
 
   //  Evénements et cases
 
@@ -1124,9 +1127,10 @@ if TypeEvtCase[tc]>teIndefini then
           Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := JrCrt;
           end
         else // sinon
-          begin // Le jackpot hérite de l'événement
+          begin // Le jackpot hérite de l'événement (si option "Evt Jackpot Achat" activée)
           stMsg := stMsg + 'Vous n''achetez pas'#13'cet événement.';
-          Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
+          if orEvtJckptAcht in FormPlateau.OptionsRegle then
+            Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
           end;
         DessineCase(x, y);
         DessineEvenement(te);
@@ -1141,8 +1145,9 @@ if TypeEvtCase[tc]>teIndefini then
           PhaseSvt := phtAchatEvt;
           end
         else
-          begin // Pas assez pour acheter -> Jackpot
-          Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
+          begin // Pas assez pour acheter -> Jackpot (si option "Evt Jackpot Achat" activée)
+          if orEvtJckptAcht in FormPlateau.OptionsRegle then
+            Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
           DessineCase(x, y);
           DessineEvenement(te);
           DessineCompteurEvt(cPourpre, AvecBlanc);
@@ -1222,13 +1227,17 @@ else
         (Evt[EvtAVendre].CaseEvt[nceDrn].Id = JrCrt);
 end;
 
-procedure TPartie.VendEvenement;
+procedure TPartie.VendEvenement(EstLiquidation : Boolean);
 var ce : TCaseEvt;
 begin
 ce := Evt[EvtAVendre].CaseEvt[ncePrm];
 if ce.Id = JrCrt then
   begin
-  ce.Id := jJackpot;
+  if (    EstLiquidation and (orEvtJckptLiqd in FormPlateau.OptionsRegle)) or
+     (not EstLiquidation and (orEvtJckptVnte in FormPlateau.OptionsRegle)) then
+    ce.Id := jJackpot // Si règle "Evt Jackpot Vente/Liquidation" activée
+  else
+    ce.Id := jIndefini;
   Credite(JrCrt, PrixEvt[Nbj]);
   DessineCase(ce.x, ce.y);
   DessineEvenement(EvtAVendre);
@@ -1240,7 +1249,11 @@ else
   ce := Evt[EvtAVendre].CaseEvt[nceDrn];
   if ce.Id = JrCrt then
     begin
-    ce.Id := jJackpot;
+    if (    EstLiquidation and (orEvtJckptLiqd in FormPlateau.OptionsRegle)) or
+       (not EstLiquidation and (orEvtJckptVnte in FormPlateau.OptionsRegle)) then
+      ce.Id := jJackpot // Si règle "Evt Jackpot Vente/Liquidation" activée
+    else
+      ce.Id := jJackpot;
     Credite(JrCrt, PrixEvt[Nbj]);
     DessineCase(ce.x, ce.y);
     DessineEvenement(EvtAVendre);
@@ -1266,7 +1279,7 @@ with FormPlateau do
   if Jr[JrCrt].Automate then
     begin
     stMessage := stMsg + Enrichit(stNomJoueur[JrCrt]+' vend', cNoir, TCouleur(JrCrt))+#13+Enrichit(TypeCaseEvt[EvtAVendre])+'.';
-    VendEvenement;
+    VendEvenement(VenteUnitaire);
     TimerAutomate.Enabled := True // On attend avant de passer à la phase suivante le temps de voir le message
     end
   else
@@ -1279,7 +1292,7 @@ begin
 while NbEvenements(JrCrt)>0 do
   begin
   EvtAVendreSvt;
-  VendEvenement;
+  VendEvenement(Liquidation);
   end;
 end;
 
@@ -1293,6 +1306,7 @@ try
       MenuItemPartieReprise.Enabled := (NvEtat = epPause);
       MenuItemPartiePause.Enabled := (NvEtat = epEnCours);
       MenuItemPartieAbandon.Enabled := (NvEtat = epPause);
+      ChangeAccesRegle(MenuItemRegle, NvEtat = epInactif); // Interdit de changer les options de règle du jeu pendant une partie
       case NvEtat of
         epInactif: begin
                    self.Reprise := rjIndefinie;
@@ -1377,13 +1391,12 @@ case NvPhase of
                           if not Jr[JrCrt].Automate then
                             stMessage := stMsg + #13' '#13'Appuyez sur '+Enrichit('ENTRÉE', cBlanc, cNoir)+'.'
                           else
-                            begin
                             stMessage := stMsg;
-                            TimerAutomate.Enabled := True;
-                            end;
                           DessineScores;
                           DessineSelonTypeAffichage;
                           PhaseSvt := phtJoueurSvt;
+                          if Jr[JrCrt].Automate then
+                            TimerAutomate.Enabled := True;
                           Exit;
                           end
                         else // Liquidation d'événements

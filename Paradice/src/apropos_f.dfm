@@ -772,4 +772,11 @@ object FormAPropos: TFormAPropos
     Left = 16
     Top = 64
   end
+  object TimerLancement: TTimer
+    Enabled = False
+    Interval = 8000
+    OnTimer = TimerLancementTimer
+    Left = 56
+    Top = 16
+  end
 end
