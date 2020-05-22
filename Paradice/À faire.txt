@@ -1,5 +1,2 @@
-! En mode démo, pas de classement final !
-! Ne pas afficher le nombre d'événements pour les joueurs inactifs
-
 +++ Faire aide en ligne
 ++ Débogage pour le calcul des gains (fichier log)

@@ -5,7 +5,7 @@
         <FrameworkType>VCL</FrameworkType>
         <MainSource>paradice.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -71,10 +71,10 @@
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>paradice</SanitizedProjectName>
         <VerInfo_Locale>1036</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.70;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.76;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Build>70</VerInfo_Build>
+        <VerInfo_Build>76</VerInfo_Build>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;IndyIPCommon;RESTComponents;bindcompdbx;DBXInterBaseDriver;vcl;IndyIPServer;vclactnband;vclFireDAC;IndySystem;tethering;svnui;dsnapcon;FireDACADSDriver;FireDACMSAccDriver;fmxFireDAC;vclimg;FireDAC;vcltouch;vcldb;bindcompfmx;svn;FireDACSqliteDriver;FireDACPgDriver;inetdb;soaprtl;DbxCommonDriver;fmx;FireDACIBDriver;fmxdae;xmlrtl;soapmidas;fmxobj;vclwinx;rtl;DbxClientDriver;CustomIPTransport;vcldsnap;dbexpress;IndyCore;vclx;bindcomp;appanalytics;dsnap;FireDACCommon;IndyIPClient;bindcompvcl;RESTBackendComponents;VCLRESTComponents;soapserver;dbxcds;VclSmp;adortl;vclie;bindengine;DBXMySQLDriver;CloudService;dsnapxml;FireDACMySQLDriver;dbrtl;IndyProtocols;inetdbxpress;FireDACCommonODBC;FireDACCommonDriver;inet;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -112,14 +112,10 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <Icon_MainIcon>paradice_Icon.ico</Icon_MainIcon>
-        <VerInfo_Build>71</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.71;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <Icon_MainIcon>paradice_Icon.ico</Icon_MainIcon>
-        <VerInfo_Build>71</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.71;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -130,10 +126,14 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <Icon_MainIcon>paradice_Icon.ico</Icon_MainIcon>
+        <VerInfo_Build>77</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.77;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <Icon_MainIcon>paradice_Icon.ico</Icon_MainIcon>
+        <VerInfo_Build>77</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.77;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0;Comments=Licence Publique Générale 2.0</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

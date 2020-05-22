@@ -291,8 +291,8 @@ const
                                                      'Produit des dés = 4', 'Produit des dés = 6', 'Produit des dés = 12',
                                                      'Ecart des dés = 0', 'Ecart des dés = 1', 'Ecart des dés = 2', 'Ecart des dés = 3',
                                                      'Rapport des dés = 2', 'Rapport des dés = 3');
-  stDefGain : array [TDefGain] of String = ('', 'Variable','Fixe');
-  stFrmGain : array [TDefGain] of String = ('', '%s × %d', 'Si %s alors %d');
+  stDefGain : array [TDefGain] of String = ('', 'Fixe',           'Variable');
+  stFrmGain : array [TDefGain] of String = ('', 'Si %s alors %d', '%s × %d');
   RsltEvt : array [TTypeEvt] of Integer = (0, 0, 0, 0, 0,
                                               0, 0, 0, 0, 0, 0,
                                               0, 0,
@@ -1542,8 +1542,9 @@ var te : TTypeEvt;
 begin
 for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
   DessineEvenement(te);
-for c := Succ(Low(TCouleur)) to Pred(High(TCouleur)) do
+for c := Succ(Low(TCouleur)) to TCouleur(Nbj) do
   DessineCompteurEvt(c, SansBlanc); // ON affiche pas le compteur blanc (affiché après une fois)
+DessineCompteurEvt(cPourpre, SansBlanc);
 DessineCompteurEvt(cBlanc, SansBlanc);
 end;
 
@@ -1592,13 +1593,13 @@ begin
 if (NbJoueursRestants=1) then // FIN DE JEU
   begin
   // 1. On calcule le classement final
-  for j := Succ(Low(TJoueurId)) to Pred(High(TJoueurId)) do
+  for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
     if Jr[j].Elimine then
       Pos[j] := Jr[j].PosElm
     else
       Pos[j] := 1;
   for i := 1 to Nbj do
-    for j := Succ(Low(TJoueurId)) to Pred(High(TJoueurId)) do
+    for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
       if Pos[j] = i then
         stMsg := stMsg + #13+Enrichit(IntToStr(i)+'. '+stNomJoueur[j], cNoir, TCouleur(j));
   // 2. On affiche le classement

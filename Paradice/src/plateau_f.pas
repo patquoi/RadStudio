@@ -492,7 +492,7 @@ with Canvas do
   begin
   Brush.Color:=clBlack;
   FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
-                        6*(TailleCase+1), 6*(TailleCase+1)));
+                        6*(TailleCase+1), 6*(TailleCase+1)+1));
   end;
 // 2. On affecte la propriété
 FormatStats := TFormatStats((Sender as TMenuItem).Tag);
@@ -568,7 +568,7 @@ with Canvas do
   begin
   Brush.Color:=clBlack;
   FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
-                        6*(TailleCase+1), 6*(TailleCase+1)));
+                        6*(TailleCase+1), 6*(TailleCase+1)+1));
   end;
 // 2. On affecte la propriété
 TypeAffichage := TTypeAffichage((Sender as TMenuItem).Tag);
@@ -725,8 +725,15 @@ with FormPlateau do
                                12*(TailleCase + 1), 4*(TailleCase + 1)));
   // On efface la zone de bilan
   Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
-                               6*(TailleCase+1), 6*(TailleCase+1)));
-  Partie.Demarre; // L'instance Partie a été créée : on démarre le jeu
+                               6*(TailleCase+1), 6*(TailleCase+1)+1));
+  // On efface la zone des événements
+  Canvas.FillRect(TRect.Create(1*(TailleCase + 1),  7*(TailleCase + 1),
+                               4*(TailleCase + 1), 12*(TailleCase + 1)));
+  with Partie do
+    begin
+    DessineEvenements; // On redessine une seule fois tous les événements
+    Demarre; // L'instance Partie a été créée : on démarre le jeu
+    end;
   end
 end{procedure TFormPlateau.DemarrePartie};
 
@@ -1393,7 +1400,7 @@ if Partie.TrCrt = 0 then Exit;
 // 0. On efface la zone
 Canvas.Brush.Color:=clBlack;
 Canvas.FillRect(TRect.Create(1*(TailleCase+1)-1, 1*(TailleCase+1),
-                             6*(TailleCase+1), 6*(TailleCase+1)));
+                             6*(TailleCase+1), 6*(TailleCase+1)+1));
 
 Taille := 5*(TailleCase+1);
 x0 := 1*(TailleCase+1);
