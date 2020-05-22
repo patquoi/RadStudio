@@ -5,8 +5,8 @@ object FormAPropos: TFormAPropos
   BorderStyle = bsNone
   Caption = 'FormAPropos'
   ClientHeight = 273
-  ClientWidth = 321
-  Color = clBackground
+  ClientWidth = 161
+  Color = 2105376
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -21,13 +21,13 @@ object FormAPropos: TFormAPropos
   PixelsPerInch = 96
   TextHeight = 13
   object PaintBox: TPaintBox
-    Left = 104
+    Left = 24
     Top = 24
     Width = 113
     Height = 113
   end
   object LabelVersion: TLabel
-    Left = 104
+    Left = 24
     Top = 143
     Width = 97
     Height = 51
@@ -42,7 +42,7 @@ object FormAPropos: TFormAPropos
     ParentFont = False
   end
   object LabelSousVersion: TLabel
-    Left = 205
+    Left = 123
     Top = 165
     Width = 26
     Height = 26
@@ -56,7 +56,7 @@ object FormAPropos: TFormAPropos
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 104
+    Left = 24
     Top = 216
     Width = 113
     Height = 17
@@ -71,7 +71,7 @@ object FormAPropos: TFormAPropos
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 104
+    Left = 24
     Top = 232
     Width = 113
     Height = 17
@@ -86,7 +86,7 @@ object FormAPropos: TFormAPropos
     ParentFont = False
   end
   object LabelAlignement: TLabel
-    Left = 104
+    Left = 24
     Top = 197
     Width = 113
     Height = 18

@@ -1,2 +1,4 @@
-+++ Faire aide en ligne
++++ Continuer l'aide en ligne
+
+++ Gestion des records
 ++ Débogage pour le calcul des gains (fichier log)

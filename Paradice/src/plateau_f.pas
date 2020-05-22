@@ -78,8 +78,7 @@ type
     MenuItemRegleEvtJackpotVente: TMenuItem;
     MenuItemRegleEvtJackpotLiquidation: TMenuItem;
     MenuItemDemo: TMenuItem;
-    procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
-      var Resize: Boolean);
+    procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
     procedure MenuItemEvenementsClick(Sender: TObject);
@@ -106,6 +105,9 @@ type
     procedure MenuItemDemoClick(Sender: TObject);
   private
     FMessage : String;
+    DrnHauteur,
+    DrnLargeur,
+    DrnTaille : Integer; // Sauvegarde la taille de la fenêtre en cas de diminution (minimize)
     procedure DemarrePartie;
     procedure LitParametres;
     procedure EcritParametres;
@@ -152,15 +154,20 @@ const
   stEntreeFormat     : String = 'Format';
   stEntreeStats      : String = 'Stats';
   stEntreeRegle      : String = 'Règle';
+  stEntreeHauteur    : String = 'Hauteur';
+  stEntreeLargeur    : String = 'Largeur';
+  stEntreeTaille     : String = 'Taille';
 
 // -------------------
 // Evénements de fiche
 // -------------------
 
-procedure TFormPlateau.FormCanResize(Sender: TObject; var NewWidth,
-  NewHeight: Integer; var Resize: Boolean);
+procedure TFormPlateau.FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
 var dw, dh : Integer;
 begin
+if WindowState = wsMinimized then Exit;
+if (NewHeight = DrnHauteur) and (NewWidth = DrnLargeur) then Exit;
+
 dw:=Width-ClientWidth;
 dh:=Height-ClientHeight+StatusBar.Height;
 Resize:=True;
@@ -188,13 +195,27 @@ if Resize then
   TailleCase:=(NewWidth-dw-(NbCasesDeCote+1)) div NbCasesDeCote;
   NewWidth:=NbCasesDeCote*TailleCase+dw+(NbCasesDeCote+1);
   NewHeight:=NewWidth-dw+dh;
-  Refresh;
-  StatusBar.SimpleText:=Format('Taille d''une case : %d', [TailleCase]);
+  // Sauvegarde des dernières dimensions OK
+  DrnLargeur := NewWidth;
+  DrnHauteur := NewHeight;
+  DrnTaille := TailleCase;
+  end
+else
+  begin
+  // Restauration des derniers dimensions OK;
+  NewWidth := DrnLargeur;
+  NewHeight := DrnHauteur;
+  TailleCase := DrnTaille;
+  Resize := True;
   end;
+Refresh;
+StatusBar.SimpleText:=Format('Taille d''une case : %d', [TailleCase]);
 end;
 
 procedure TFormPlateau.FormCreate(Sender: TObject);
 begin
+DrnHauteur := Height;
+DrnLargeur := Width;
 LitParametres;
 end;
 
@@ -810,6 +831,11 @@ try
                 end;
   end{case of};
 
+  // 6. Dimensions de la fenêtre
+  Width := IniFile.ReadInteger(stSectionAffichage, stEntreeLargeur, Width);
+  Height := IniFile.ReadInteger(stSectionAffichage, stEntreeHauteur, Height);
+  TailleCase := IniFile.ReadInteger(stSectionAffichage, stEntreeTaille, TailleCase);
+
   // On rafraîchit le menu des options (vitesse)
   for i:= 0 to MenuItemVitesse.Count - 1 do
     with MenuItemVitesse.Items[i] do
@@ -831,6 +857,10 @@ try
   // 2. Affichage
   IniFile.WriteInteger(stSectionAffichage, stEntreeStats, Ord(TypeAffichage));
   IniFile.WriteInteger(stSectionAffichage, stEntreeFormat, Ord(FormatStats));
+  IniFile.WriteInteger(stSectionAffichage, stEntreeLargeur, DrnLargeur);
+  IniFile.WriteInteger(stSectionAffichage, stEntreeHauteur, DrnHauteur);
+  IniFile.WriteInteger(stSectionAffichage, stEntreeTaille, DrnTaille);
+
 finally
   FreeAndNil(IniFile);
 end{try}
@@ -1762,9 +1792,9 @@ var Largeur,
     x0, y0,
     x, y,
     xc, yc,
-    Chf, ne   : Integer;
-    u         : Boolean;
-    bmEvt     : TBitmap;
+    Chf, ne  : Integer;
+    u, JrElm : Boolean;
+    bmEvt    : TBitmap;
 begin
 // 1. On reprend le calcul pour l'affichage des événement affichés juste au dessus
 Largeur := 3*(TailleCase+1);
@@ -1780,13 +1810,17 @@ y := y0 + dy + (dy + TailleEvt) * (0 + yTypeEvt[teImpair]);
 
 try
   with Partie do
+    begin
     // 2. On compte les événements
     if Couleur = cBlanc then
       ne := NbEvenements(jIndefini) // cBlanc = événements encore libres => proprio = jIndefini => cNoir
     else
-      ne := NbEvenements(TJoueurId(Couleur)); 
+      ne := NbEvenements(TJoueurId(Couleur));
+    JrElm := (Couleur > cNoir) and (Ord(Couleur) <= Nbj) and Jr[TJoueurId(Couleur)].Elimine;
+    end;
 except
   ne := 0;
+  JrElm := False;
 end;
 
 // 3. On affiche le compteur
@@ -1795,7 +1829,7 @@ for u := False to True do // Unité (true) ou dizaine (false)
   Chf := IfThen(u, ne mod 10, ne div 10);
   bmEvt := TBitmap.Create;
   VirtualImageListFonds.GetBitmap(Ord(cNoir), bmEvt);
-  VirtualImageListChiffres.GetBitmap(Chf*NbMaxCouleurs+Ord(Couleur), bmEvt);
+  VirtualImageListChiffres.GetBitmap(Chf*NbMaxCouleurs+IfThen(JrElm,Ord(cGris),Ord(Couleur)), bmEvt);
   xc := x + dx div 4 + ((Ord(Couleur)-1) div 2)*(dx div 4 + TailleEvt div 2) + Ord(u)*(TailleEvt div 4);
   yc := y - dy div 8 + ((Ord(Couleur)-1) mod 2)*(dy div 4 + TailleEvt div 2);
   Canvas.StretchDraw(TRect.Create(xc,                   yc, 
