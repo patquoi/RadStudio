@@ -1394,6 +1394,7 @@ case NvPhase of
                             stMessage := stMsg;
                           DessineScores;
                           DessineSelonTypeAffichage;
+                          DessineEvenements;
                           PhaseSvt := phtJoueurSvt;
                           if Jr[JrCrt].Automate then
                             TimerAutomate.Enabled := True;

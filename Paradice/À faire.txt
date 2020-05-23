@@ -1,4 +1,22 @@
+! Rafraîchir les événements après une élimination
 +++ Continuer l'aide en ligne
 
-++ Gestion des records
+++ Gestion des records :
+ - Débit pour un événement
+ - Cumul débits pour un lancer de dés
+ - Cumul débits pour un tour
+ - Cumul débits pour un joueur
+ - Cumul crédits pour un lancer de dés
+ - Cumul crédits pour un tour (hors jackpot)
+ - Cumul crédits pour un joueur (hors jackpot)
+ - Cumul crédits pour un événement 
+ - Nombre d'événements achetés par un joueur (hors jackpot)
+ - Nombre d'événements attribués au jackpot
+
+// Record en fonction des options de règles :
+ - Montant jackpot
+ - Jackpot empoché
+ - Cumul Jackpots empochés par un joueur
+ - Cumul Jackpots empochés dans une partie
+ 
 ++ Débogage pour le calcul des gains (fichier log)

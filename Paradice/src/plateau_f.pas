@@ -78,6 +78,7 @@ type
     MenuItemRegleEvtJackpotVente: TMenuItem;
     MenuItemRegleEvtJackpotLiquidation: TMenuItem;
     MenuItemDemo: TMenuItem;
+    Aide1: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
@@ -103,6 +104,7 @@ type
     procedure TimerLancementTimer(Sender: TObject);
     procedure MenuItemRegleClick(Sender: TObject);
     procedure MenuItemDemoClick(Sender: TObject);
+    procedure Aide1Click(Sender: TObject);
   private
     FMessage : String;
     DrnHauteur,
@@ -142,7 +144,7 @@ implementation
 {$R *.dfm}
 
 uses
-  IniFiles, System.Types, System.Math, System.StrUtils, apropos_f, evtdes_f,
+  IniFiles, System.Types, System.Math, System.StrUtils, ShellApi, apropos_f, evtdes_f,
   nvpartie_f;
 
 const
@@ -380,7 +382,7 @@ var x, y  : TCoordonnee;
 begin
 // On ne rafraîchit qu'une fois les parties multicases hors parcours
 JptOK := False; // Jackpot
-DesOK := False; // Lancé de dés
+DesOK := False; // Lancer de dés
 PtsOK := False; // Score des joueurs
 MsgOK := False; // Message
 BlnOK := False; // Bilan du tour
@@ -865,6 +867,11 @@ finally
   FreeAndNil(IniFile);
 end{try}
 end{procedure TFormPlateau.EcritParametres};
+
+procedure TFormPlateau.Aide1Click(Sender: TObject);
+begin
+ShellExecute(0, 'Open', pChar(ExtractFilePath(Application.ExeName)+'\html\index.html'), '', '', SW_SHOWNORMAL);
+end;
 
 procedure TFormPlateau.ChangeAccesRegle(MenuItem : TMenuItem; Activer : Boolean);
 var i : Integer;
