@@ -1,4 +1,3 @@
-! Rafraîchir les événements après une élimination
 +++ Continuer l'aide en ligne
 
 ++ Gestion des records :

@@ -62,6 +62,7 @@ Source: "..\bin\html\index.html"; DestDir: "{app}\bin\html"; Flags: ignoreversio
 Source: "..\bin\html\png\bdt.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\br.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\cd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\cdd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\d1.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\d2.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\d3.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
@@ -87,6 +88,7 @@ Source: "..\bin\html\png\mv.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreve
 Source: "..\bin\html\png\ni.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\np.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\nvp.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\odj.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\p.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\p12.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\p4.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion

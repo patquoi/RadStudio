@@ -43,6 +43,12 @@
 	    <UL>
 		  <LI><A HREF="#dup">Démarrer une partie</A>
 		  <LI><A HREF="#tdj">Tour de jeu</A>
+		    <UL>
+			  <LI><A HREF="#lddeddp">Lancer des dés et déplacement du pion</A>
+			  <LI><A HREF="#pdgaapdedd">Paiement des gains aux adversaires propriétaires d'événements de dés</A>
+			  <LI><A HREF="#vdeddppp">Vente d'événements de dés pour pouvoir payer</A>
+			  <LI><A HREF="#aslcostlp">Action selon la case où se trouve le pion</A>
+			</UL>  
 		</UL>
     </UL>		
   <LI><A HREF="#a">Annexes</A>
@@ -238,10 +244,10 @@ Vous obtenez cette boîte de dialogue&nbsp;:<P>
 
 Vous pouvez alors&nbsp;:
 <UL>
-  <LI> Choisir le <B>nombre de joueurs</B> en utilisant les <B>4 boutons</B> |&lt;, &lt;, &gt; et &gt;|&nbsp;;
-  <LI> Définir pour chaque joueur son type&nbsp;: <B>automate</B> <IMG Alt="automate" SRC="png/ta.png" HEIGHT=20 WIDTH=20 BORDER=0> (cocher) ou <B>humain</B> <IMG Alt="humain" SRC="png/th.png" HEIGHT=20 WIDTH=20 BORDER=0> (décocher)&nbsp;.
+  <LI> choisir le <B>nombre de joueurs</B> en utilisant les <B>4 boutons</B> |&lt;, &lt;, &gt; et &gt;|&nbsp;;
+  <LI> définir pour chaque joueur son type&nbsp;: <B>automate</B> <IMG Alt="automate" SRC="png/ta.png" HEIGHT=20 WIDTH=20 BORDER=0> (cocher) ou <B>humain</B> <IMG Alt="humain" SRC="png/th.png" HEIGHT=20 WIDTH=20 BORDER=0> (décocher).
 </UL><P>
-Selon le nombre de joueurs, le <B>prix d'achat d'un événement de dés</B> varie de la manière suivante&nbsp;:<P>
+<A NAME="pdaduedd"></A>Selon le nombre de joueurs, le <B>prix d'achat d'un événement de dés</B> varie de la manière suivante&nbsp;:<P>
 <TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
   <TR><TH>Nombre<BR>de joueurs</TH><TH>Prix d'un<BR>événement<BR>de dés</TH></TR>
   <TR><TD align=center>2</TD><TD align=center>2&nbsp;500</TD></TR>
@@ -253,10 +259,68 @@ Selon le nombre de joueurs, le <B>prix d'achat d'un événement de dés</B> varie d
 
 Pour <B>démarrer la partie</B> avec les paramètres choisis, appuyez sur <I>Commencer&nbsp;!</I>.<P>
 
-Avant de commencer le tour de jeu, les pions sont tous sur la <B>case départ</B>&nbsp;:<P>
-<CENTER><IMG Alt="Pions sur la case départ" SRC="png/pslcd.png" HEIGHT=238 WIDTH=238 BORDER=0></CENTER>
+Avant de commencer le tour de jeu&nbsp;:
+<UL>
+  <LI> les pions sont tous sur la <B>case départ</B>&nbsp;;
+  <LI> tous les joueurs ont un score initial de <B>100&nbsp;000</B>&nbsp;;
+  <LI> le tour de jeu est toujours dans le même ordre comme indiqué dans la zone de score&nbsp;:
+    <OL> 
+	  <LI> <FONT COLOR="#2450ef"><B>Myrtille</B></FONT>
+	  <LI> <FONT COLOR="#c23979"><B>Framboise</B></FONT>
+	  <LI> <FONT COLOR="#ff8000"><B>Orange</B></FONT>
+	  <LI> <FONT COLOR="#ff0000"><B>Fraise</B></FONT>
+	  <LI> <FONT COLOR="#808030"><B>Citron</B></FONT>
+	  <LI> <FONT COLOR="#008900"><B>Kiwi</B></FONT>
+	</OL>  
+</UL>  
+<CENTER><IMG Alt="Pions sur la case départ" SRC="png/pslcd.png" HEIGHT=238 WIDTH=238 BORDER=0>
+<IMG Alt="Score initial et ordre des joueurs" SRC="png/odj.png" HEIGHT=235 WIDTH=335 BORDER=0></CENTER>
 
 <A NAME="tdj"></A><H3>Tour de jeu</H3>
+
+<A NAME="lddeddp"></A><H4>Lancer des dés et déplacement du pion</H4>
+
+À tour de rôle, chaque joueur commence par <B>lancer les dés</B>.<BR>
+Pour un joueur humain, il doit <B>arrêter le défilement des dés</B> en appuyant sur la touche <I>Espace</I>.<BR>
+Une fois les dés arrêtés, le <B>pion est déplacé</B> d'autant de cases que le total des dés.<BR>
+Selon le parcours imposé, il arrive souvent que le joueur doive <B>choisir une direction</B> à une intersection.<BR>
+Dans ce cas, des flèches apparaissent pour indiquer les directions possibles&nbsp;:<P>
+<CENTER><IMG Alt="Choix de direction" SRC="png/cdd.png" HEIGHT=425 WIDTH=335 BORDER=0></CENTER><P>
+Il faut alors utiliser les touches fléchées pour faire son choix.<BR>
+Une fois les choix de directions effectués, le <B>pion arrive à destination</B>.<BR>
+Si le pion est sur une case <IMG Alt="Bis repetita" SRC="png/br.png" HEIGHT=20 WIDTH=20 BORDER=0> alors le pion est à nouveau déplacé d'autant de cases que le total des dés.<BR>
+
+<A NAME="pdgaapdedd"></A><H4>Paiement des gains aux adversaires propriétaires d'événements de dés</H4>
+
+Le joueur courant <B>doit payer</B> à tous ses <B>adversaires propriétaires d'événements de dés</B>, le total correspondant aux gains selon le résultat et les événements de dés&nbsp;: voir l'exemple donné dans <A HREF="#pr">Présentation rapide</A> et pour tous les détails par tirage et événement de dés, <A HREF="#ddedd">Définition des événements de dés</A>.<BR>
+Si un joueur adverse est propriétaire de <B>deux événements de dés identiques</B>, il reçoit <B>deux fois</B> le gain correspondant à cet événement de dés.<BR>
+
+<A NAME="vdeddppp"></A><H4>Vente d'événements de dés pour pouvoir payer</H4>
+
+Si le joueur courant <B>ne peut pas payer</B>, il peut <B>vendre ses événements de dés</B> au prix d'achat&nbsp;: voir <A HREF="#pdaduedd">Prix d'un achat d'un événement de dés</A>. <BR>
+Si malgré la vente de tous les événements de dés, le joueur courant ne peut toujours pas payer, il est <B>éliminé</B>&nbsp;: son pion est sorti du jeu et tous les créanciers sont quand même crédités de leurs gains dus.<BR>
+
+<A NAME="aslcostlp"></A><H4>Action selon la case où se trouve le pion</H4>
+
+Si la case est un <A HREF="#ddedd">événement de dés</A>...
+ <UL>
+   <LI> qui <B>appartient à un adversaire</B> (la case a le fond de la couleur du propriétaire), c'est au <B>tour du joueur suivant</B>&nbsp;;
+   <LI> qui <B>n'appartient à personne</B> (le fond est blanc) ou <B>appartient au jackpot</B> (la case a le fond fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0>), alors le joueur peut <B>l'acquérir</B> en payant le <A HREF="#pdaduedd">prix d'achat</A> sauf s'il a <B>déjà acquis le même événement de dés</B> (il y a deux exemplaires répartis sur le plateau) auquel cas, il ne paie rien&nbsp;: <B>la deuxième est gratuite&nbsp;!</B>
+ </UL>
+Sinon, il faut appliquer l'action suivante selon la case&nbsp;:<P>
+
+<TABLE CELLSPACING=1 CELLPADDING=1 BORDER=1>
+  <TR><TH>Case</TH><TH>Description</TH><TH>Action</TH></TR>
+  <TR><TD align=center><IMG Alt="Case départ" SRC="png/cd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Case départ</TD><TD>Il n'est plus possible de tomber sur cette case après le premier déplacement de pion.</TD></TR>
+  <TR><TD align=center><IMG Alt="Bis repetita" SRC="png/br.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Bis repetita*</TD><TD>Le <B>pion doit être déplacé</B> à nouveau du même nombre de cases que le total des dés.</TD></TR>
+  <TR><TD align=center><IMG Alt="Relance des dés" SRC="png/rdd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Relance des dés</TD><TD>Le joueur doit relancer les dés ce qui signifie qu'il va de nouveau devoir payer les gains<BR>aux adversaires propriétaires d'événements de dés une nouvelle fois au cours d'un même tour.</TD></TR>
+  <TR><TD align=center><IMG Alt="Echelle Nord" SRC="png/en.png" HEIGHT=20 WIDTH=20 BORDER=0>&nbsp;<IMG Alt="Echelle Est" SRC="png/ee.png" HEIGHT=20 WIDTH=20 BORDER=0><BR>
+                       <IMG Alt="Echelle Sud" SRC="png/es.png" HEIGHT=20 WIDTH=20 BORDER=0>&nbsp;<IMG Alt="Echelle Ouest" SRC="png/eo.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Echelles</TD><TD>Le <B>pion doit être déplacé</B> vers la case ayant la même orientation d'échelle (il y en a deux<BR>exemplaires de chaque répartis sur tout le plateau).</TR> 
+  <TR><TD align=center><IMG Alt="Tirelire" SRC="png/t.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Tirelire</TD><TD>Tous les <B>gains d'événements de dés</B> initialement destinés aux adversaires vont finalement<BR>tous dans le <B>jackpot</B>.</TD></TR>
+  <TR><TD align=center><IMG Alt="Jackpot" SRC="png/j.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Jackpot</TD><TD>Le joueur <B>empoche le jackpot&nbsp;!</B> Ce dernier est alors <B>remis à zéro</B>.<BR>
+                                                                                                               Si le joueur a versé des gains au jackpot, il les récupère. En revanche, si le joueur n'a pas<BR>pu payer les gains adverses, il ne peut malheusement pas utiliser le contenu du jackpot.</TD></TR>
+</TABLE>
+<FONT SIZE=2>(*) <B><U>Attention</U></B>&nbsp;: pour cette case seulement, l'action doit être réalisée <U>avant</U> paiement des gains aux adversaires propriétaires d'événements de dés.</FONT>
 
 <HR>
 
