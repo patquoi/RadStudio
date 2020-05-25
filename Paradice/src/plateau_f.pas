@@ -9,13 +9,17 @@ uses
   base, System.ImageList, Vcl.ImgList, Vcl.VirtualImageList, Vcl.Menus,
   Vcl.ExtCtrls;
 
+const
+  NbMaxRegles    = 3;
+
 type
 
   TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3); // Indique l'affichage en haut à gauche (Bilan Tour par défaut)
   TFormatStats   = (fsPourcent=0, fsScore=1); // Indique le format des statistiques de dés et d'événements
 
-  TOptionRegle  = (orEvtJckptAcht=1, orEvtJckptVnte=2, orEvtJckptLiqd=4); // Attention à bien définir des puissances de 2 pour pouvoir stocker TOptionsRegle ci-dessous
-  TOptionsRegle = set of TOptionRegle;
+  TNumRegle      = 1..NbMaxRegles;
+  TOptionRegle   = (orEvtJckptAcht=1, orEvtJckptVnte=2, orEvtJckptLiqd=4); // Attention à bien définir des puissances de 2 pour pouvoir stocker TOptionsRegle ci-dessous
+  TOptionsRegle  = set of TOptionRegle;
 
   TFormPlateau = class(TForm)
     ImageCollection: TImageCollection;
@@ -77,7 +81,7 @@ type
     MenuItemRegleEvtJackpotAchat: TMenuItem;
     MenuItemRegleEvtJackpotVente: TMenuItem;
     MenuItemRegleEvtJackpotLiquidation: TMenuItem;
-    MenuItemDemo: TMenuItem;
+    MenuItemPartieDemo: TMenuItem;
     Aide1: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
@@ -103,7 +107,7 @@ type
     procedure MenuItemFormatStatsClick(Sender: TObject);
     procedure TimerLancementTimer(Sender: TObject);
     procedure MenuItemRegleClick(Sender: TObject);
-    procedure MenuItemDemoClick(Sender: TObject);
+    procedure MenuItemPartieDemoClick(Sender: TObject);
     procedure Aide1Click(Sender: TObject);
   private
     FMessage : String;
@@ -159,6 +163,7 @@ const
   stEntreeHauteur    : String = 'Hauteur';
   stEntreeLargeur    : String = 'Largeur';
   stEntreeTaille     : String = 'Taille';
+  NumRegle           : array [1..NbMaxRegles] of TOptionRegle = (orEvtJckptAcht, orEvtJckptVnte, orEvtJckptLiqd);
 
 // -------------------
 // Evénements de fiche
@@ -476,7 +481,7 @@ with FormAPropos do
   end;
 end;
 
-procedure TFormPlateau.MenuItemDemoClick(Sender: TObject);
+procedure TFormPlateau.MenuItemPartieDemoClick(Sender: TObject);
 begin
 try
   try
@@ -765,7 +770,7 @@ var IniFile     : TIniFile;
     ta          : TTypeAffichage;
     fs          : TFormatStats;
     i, eor      : Integer;
-    OptionRegle : TOptionRegle;
+    nr          : TNumRegle;
 begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
@@ -780,9 +785,10 @@ try
   // 3. Règle du jeu (élément orEvtJckptAcht activé uniquement)
   OptionsRegle := []; // Défini dans les événements OnClick des rubriques de menu
   eor := IniFile.ReadInteger(stSectionOptions, stEntreeRegle, Ord(orEvtJckptAcht));
-  for OptionRegle := Low(TOptionRegle) to High(TOptionRegle) do
-    if (Ord(OptionRegle) and eor) = Ord(OptionRegle) then
-      case OptionRegle of
+  for nr := Low(TNumRegle) to High(TNumRegle) do
+    begin
+    if (Ord(NumRegle[nr]) and eor) = Ord(NumRegle[nr]) then
+      case NumRegle[nr] of
         orEvtJckptAcht: begin
                         MenuItemRegleEvtJackpotAchat.Checked := True;
                         MenuItemRegleClick(MenuItemRegleEvtJackpotAchat);
@@ -796,6 +802,7 @@ try
                         MenuItemRegleClick(MenuItemRegleEvtJackpotLiquidation);
                         end;
       end;
+    end;
 
   // 4. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
   ta := TTypeAffichage(IniFile.ReadInteger(stSectionAffichage, stEntreeStats, Ord(taBilanTour))); // Bilan tour par défaut

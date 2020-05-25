@@ -1303,6 +1303,7 @@ try
     with FormPlateau do
       begin
       MenuItemPartieNouvelle.Enabled := (NvEtat = epInactif);
+      MenuItemPartieDemo.Enabled := (NvEtat = epInactif);
       MenuItemPartieReprise.Enabled := (NvEtat = epPause);
       MenuItemPartiePause.Enabled := (NvEtat = epEnCours);
       MenuItemPartieAbandon.Enabled := (NvEtat = epPause);

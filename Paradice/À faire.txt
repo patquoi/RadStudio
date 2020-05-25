@@ -1,4 +1,4 @@
-+++ Continuer l'aide en ligne
+! Confirmation de quitter si partie en cours ou en pause.
 
 ++ Gestion des records :
  - Débit pour un événement

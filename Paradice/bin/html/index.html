@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
+
 <HEAD>
+
 <TITLE>Paradice : Règle du jeu et utilisation</TITLE>
 <META Name="description" Content="Aide de Paradice">
 <META Name="keywords" Content="Aide, Paradice">
+<META HTTP-EQUIV="Content-type" content="text/html; charset=ISO-8859-15">
+
 </HEAD>
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#4040FF">
+
+<BODY>
 
 <H1>Paradice&nbsp;: Règle du jeu et utilisation</H1>
 
@@ -21,12 +25,12 @@
   <LI><A HREF="#lpdj">Le plateau de jeu</A>
     <UL>
 	  <LI><A HREF="#lc">Les cases</A>
-	  <LI><A HREF="#lzdi">Les zones d'informations</A>
+	  <LI><A HREF="#lzdi">Les zones d&rsquo;informations</A>
 	    <OL>
 		  <LI><A HREF="#zdst">Zone de statistiques</A>
 		    <UL>
 			  <LI><A HREF="#bdt">Bilan du tour</A>
-			  <LI><A HREF="#gde">Graphe d'évolution</A>
+			  <LI><A HREF="#gde">Graphe d&rsquo;évolution</A>
 			  <LI><A HREF="#spedd">Evénements de dés</A>
 			  <LI><A HREF="#sptdd">Tirages de dés</A>
 			</UL>  
@@ -39,57 +43,58 @@
 	</UL>  
   <LI><A HREF="#rdj">Règle du jeu</A>
     <UL>
-	  <LI><A HREF="#ddup">Déroulement d'une partie</A>
-	    <UL>
-		  <LI><A HREF="#dup">Démarrer une partie</A>
-		  <LI><A HREF="#tdj">Tour de jeu</A>
-		    <UL>
-			  <LI><A HREF="#lddeddp">Lancer des dés et déplacement du pion</A>
-			  <LI><A HREF="#pdgaapdedd">Paiement des gains aux adversaires propriétaires d'événements de dés</A>
-			  <LI><A HREF="#vdeddppp">Vente d'événements de dés pour pouvoir payer</A>
-			  <LI><A HREF="#aslcostlp">Action selon la case où se trouve le pion</A>
-			</UL>  
-		</UL>
+	  <LI><A HREF="#ddup">Déroulement d&rsquo;une partie</A>
+	  <LI><A HREF="#ldup">Lancement d&rsquo;une partie</A>
+      <LI><A HREF="#tdj">Tour de jeu</A>
+        <UL>
+          <LI><A HREF="#lddeddp">Lancer des dés et déplacement du pion</A>
+          <LI><A HREF="#pdgaapdedd">Paiement des gains aux adversaires propriétaires d&rsquo;événements de dés</A>
+          <LI><A HREF="#vdeddppp">Vente d&rsquo;événements de dés pour pouvoir payer</A>
+          <LI><A HREF="#aslcostlp">Action selon la case où se trouve le pion</A>
+        </UL>
+      <LI><A HREF="#odj">Options de jeu</A>	
     </UL>		
   <LI><A HREF="#a">Annexes</A>
     <UL>
+      <LI><A HREF="#sadp">Sauvegarde automatique des paramètres</A>
       <LI><A HREF="#ddedd">Définition des événements de dés</A>
       <LI><A HREF="#pdj">Parcours des joueurs</A>
+	  <LI><A HREF="#rc">Raccourcis clavier</A>
 	</UL>  
 </UL>
-<U>Remarque</U>&nbsp;: N'hésitez pas à utiliser l'outil de recherche de votre navigateur, toute l'aide est dans cette unique page&nbsp;!<BR><BR>
+<U>Remarque</U>&nbsp;: N&rsquo;hésitez pas à utiliser l&rsquo;outil de recherche de votre navigateur, toute l&rsquo;aide est dans cette unique page&nbsp;!<BR><BR>
 
 <HR>
 
 <A NAME="pr"></A><H1>Présentation rapide</H1>
 
-<B>Paradice</B> est un jeu de plateau dans lequel vous devez acheter le plus d'événements de dés.<BR>
+<B>Paradice</B> est un jeu de plateau dans lequel vous devez acheter le plus d&rsquo;événements de dés.<BR>
 Il y a <B>26</B> événements de dés différents, en deux exemplaires de chaque, répartis sur tout le plateau.<BR>
-L'achat est possible quand le pion d'un joueur arrive sur une case d'événement de dés si celle-ci n'a pas déjà trouvé preneur.<BR>
-Dans une partie à <B>6 joueurs</B>, l'achat coûte <B>7&nbsp;500</B> quel que soit l'événement. Il donne potentiellement droit à des gains à chaque lancer de dé des adversaires.<P>
+L&rsquo;achat est possible quand le pion d&rsquo;un joueur arrive sur une case d&rsquo;événement de dés si celle-ci n&rsquo;a pas déjà trouvé preneur.<BR>
+Dans une partie à <B>6 joueurs</B>, l&rsquo;achat coûte <B>7&nbsp;500</B> quel que soit l&rsquo;événement. Il donne potentiellement droit à des gains à chaque lancer de dé des adversaires.<P>
 
-Le plateau de jeu contient d'autres cases qui seront détaillées par la suite.<BR>
-Le sens du parcours n'est pas le même d'un joueur à l'autre mais à certaines intersections, il est libre de choisir la direction.<P>
+Le plateau de jeu contient d&rsquo;autres cases qui seront détaillées par la suite.<BR>
+Le sens du parcours n&rsquo;est pas le même d&rsquo;un joueur à l&rsquo;autre mais à certaines intersections, il est libre de choisir la direction.<P>
 
 Chaque joueur a <B>100&nbsp;000</B> au départ et tous partent de la case <B>Départ</B>.<BR>
-Chaque joueur à tour de rôle lance les dés et déplace son pion d'autant de cases qu'indique la somme des dés.<BR>
-Si le pion tombe sur une case <B>Bis repetita</B> alors il déplace à nouveau son pion d'autant de cases et toujours selon le parcours qui lui est imposé.<BR>
-Sinon, le joueur doit immédiatement verser aux propriétaires d'événements de dés les gains qui dépendent du résultat des dés.<P>
+Chaque joueur à tour de rôle lance les dés et déplace son pion d&rsquo;autant de cases qu&rsquo;indique la somme des dés.<BR>
+Si le pion tombe sur une case <B>Bis repetita</B> alors il déplace à nouveau son pion d&rsquo;autant de cases et toujours selon le parcours qui lui est imposé.<BR>
+Sinon, le joueur doit immédiatement verser aux propriétaires d&rsquo;événements de dés les gains qui dépendent du résultat des dés.<P>
 
 Voici un exemple de gains&nbsp;:
 <UL>
  <LI> <FONT COLOR="#2450ef"><B>Myrtille</B></FONT> a lancé les dés et a obtenu <IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0> et <IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0>.
- <LI> <FONT COLOR="#ff8000"><B>Orange</B></FONT> est propriétaire de l'événement <IMG Alt="Ecart = 2" SRC="png/e2.png" HEIGHT=20 WIDTH=20 BORDER=0> (écart égal à 2).
- <LI> <FONT COLOR="#008900"><B>Kiwi</B></FONT> est propriétaire de l'événement <IMG Alt="Nombre de dés impairs" SRC="png/ni.png" HEIGHT=20 WIDTH=20 BORDER=0> (nombre de dés impairs).
- <LI> La formule du gain pour <IMG Alt="Ecart = 2" SRC="png/e2.png" HEIGHT=20 WIDTH=20 BORDER=0> est <B>2&nbsp;205 si l'écart des dés est égal à 2</B>, ce qui donne donc <B>2&nbsp;205</B>.
+ <LI> <FONT COLOR="#ff8000"><B>Orange</B></FONT> est propriétaire de l&rsquo;événement <IMG Alt="Ecart = 2" SRC="png/e2.png" HEIGHT=20 WIDTH=20 BORDER=0> (écart égal à 2).
+ <LI> <FONT COLOR="#008900"><B>Kiwi</B></FONT> est propriétaire de l&rsquo;événement <IMG Alt="Nombre de dés impairs" SRC="png/ni.png" HEIGHT=20 WIDTH=20 BORDER=0> (nombre de dés impairs).
+ <LI> La formule du gain pour <IMG Alt="Ecart = 2" SRC="png/e2.png" HEIGHT=20 WIDTH=20 BORDER=0> est <B>2&nbsp;205 si l&rsquo;écart des dés est égal à 2</B>, ce qui donne donc <B>2&nbsp;205</B>.
  <LI> La formule du gain pour <IMG Alt="Nombre de dés impairs" SRC="png/ni.png" HEIGHT=20 WIDTH=20 BORDER=0> est <B>490 &times nombre de dés impairs</B>, ce qui donne <B>980</B>.
  <LI> <B><FONT COLOR="#2450ef">Myrtille</FONT></B> doit donc <B>980</B> à <B><FONT COLOR="#008900">Kiwi</FONT></B> et <B>2&nbsp;205</B> à <B><FONT COLOR="#ff8000">Orange</FONT></B>.
 </UL>
 
-Si le pion tombe sur une case <IMG Alt="Tirelire" SRC="png/t.png" HEIGHT=20 WIDTH=20 BORDER=0> (tirelire), alors l'ensemble des gains est versé au <B>jackpot</B>. Dans notre exemple, <B><FONT COLOR="#2450ef">Myrtille</FONT></B>  verserait <B>3&nbsp;185</B> au <B>jackpot</B>.<BR>
+Si le pion tombe sur une case <IMG Alt="Tirelire" SRC="png/t.png" HEIGHT=20 WIDTH=20 BORDER=0> (tirelire), alors l&rsquo;ensemble des gains est versé au <B>jackpot</B>. Dans notre exemple, <B><FONT COLOR="#2450ef">Myrtille</FONT></B>  verserait <B>3&nbsp;185</B> au <B>jackpot</B>.<BR>
 Si un pion tombe sur une case <IMG Alt="Jackpot" SRC="png/j.png" HEIGHT=20 WIDTH=20 BORDER=0> (jackpot), le joueur remporte le total du montant du <B>jackpot</B> indiqué en bas à droite du plateau de jeu.<P>
-Si un joueur n'a pas assez pour payer, il peut revendre ses événements de dés pour <B>7&nbsp;500</B>.<BR>
-S'il ne peut toujours pas payer alors il est <B>éliminé</B>.<BR>
+Si un joueur n&rsquo;a pas assez pour payer, il peut revendre ses événements de dés pour <B>7&nbsp;500</B>.<BR>
+S&rsquo;il ne peut toujours pas payer alors il est <B>éliminé</B>.<BR>
 Le dernier joueur sur le plateau <B>remporte la victoire</B>.
 
 <HR>
@@ -123,46 +128,46 @@ Le <B>plateau de jeu</B> est constitué de <B>81 cases</B> réparties sur un <B>ca
 
 Le <B>fond des cases</B> reflète la propriété des événements de dés&nbsp;:
 <UL>
-  <LI> Le fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0> indique que les gains de l'événement de dés vont au <B>jackpot</B>**.
-  <LI> Le fond blanc indique que l'événement de dés n'a pas encore trouvé preneur. 
+  <LI> Le fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0> indique que les gains de l&rsquo;événement de dés vont au <B>jackpot</B>**.
+  <LI> Le fond blanc indique que l&rsquo;événement de dés n&rsquo;a pas encore trouvé preneur. 
 </UL>  
-<FONT SIZE=2>(*) cette case n'est plus accessibles par les pions après le premier tour.<BR>
-(**) les événements de dés dont les gains vont au jackpot sont toujours accessibles à l'achat.</FONT><P>
+<FONT SIZE=2>(*) cette case n&rsquo;est plus accessibles par les pions après le premier tour.<BR>
+(**) les événements de dés dont les gains vont au jackpot sont toujours accessibles à l&rsquo;achat.</FONT><P>
 
-<A NAME="lzdi"></A><H2>Les zones d'informations</H2>
+<A NAME="lzdi"></A><H2>Les zones d&rsquo;informations</H2>
 
 <CENTER><IMG Alt="Zones d'informations" SRC="png/zdi.png" HEIGHT=365 WIDTH=343 BORDER=0></CENTER><P>
 
-Il y a <B>6 zones</B> d'informations réparties sur tout le plateau de jeu.
+Il y a <B>6 zones</B> d&rsquo;informations réparties sur tout le plateau de jeu.
 
-<A NAME="zdst"><H3>1. Zone de statistiques</H3>
+<A NAME="zdst"></A><H3>1. Zone de statistiques</H3>
 
-Le contenu de cette zone dépend du choix d'affichage via le menu <I><U>V</U>oir</I>&nbsp;:<P>
+Le contenu de cette zone dépend du choix d&rsquo;affichage via le menu <I><U>V</U>oir</I>&nbsp;:<P>
 <CENTER><IMG Alt="Menu Voir" SRC="png/mv.png" HEIGHT=140 WIDTH=298 BORDER=0></CENTER> 
 
-<A NAME="bdt"><H4>Bilan du tour</H4>
+<A NAME="bdt"></A><H4>Bilan du tour</H4>
 
 <CENTER><IMG Alt="Bilan du tour" SRC="png/bdt.png" HEIGHT=198 WIDTH=198 BORDER=0></CENTER><P>
 
 Le <B>bilan du tour</B> affiche la tendance en temps réel du déroulement du tour courant (indiqué en gros) en présentant le bilan &laquo;&nbsp;comptable&nbsp;&raquo; par joueur&nbsp;:
 <UL>
-  <LI> le <B>bilan du tour</B> est affiché dans la couleur du joueur s'il est toujours en jeu (en gris s'il est éliminé)&nbsp;;
+  <LI> le <B>bilan du tour</B> est affiché dans la couleur du joueur s&rsquo;il est toujours en jeu (en gris s&rsquo;il est éliminé)&nbsp;;
   <LI> les <B>gains</B> (événements de dés et jackpot) sont affichés en <FONT COLOR="#00A000"><B>vert</B></FONT> et les <B>dépenses</B> (événements de dés adverses et achats) en <FONT COLOR="#FF0000"><B>rouge</B></FONT>&nbsp;;
   <LI> le chiffre en tête de ligne est le <B>classement</B> par ordre décroissant du score du tour.
 </UL>
 
-<A NAME="gde"><H4>Graphe d'évolution</H4>
+<A NAME="gde"></A><H4>Graphe d&rsquo;évolution</H4>
 
 <CENTER><IMG Alt="Graphe d'évolution" SRC="png/gde.png" HEIGHT=198 WIDTH=198 BORDER=0></CENTER><P>
 
-Le <B>graphe d'évolution</B> donne un bon aperçu de l'évolution du <B>score des joueurs</B> au fil de la partie, avec&nbsp;:
+Le <B>graphe d&rsquo;évolution</B> donne un bon aperçu de l&rsquo;évolution du <B>score des joueurs</B> au fil de la partie, avec&nbsp;:
 <UL>
   <LI> en <B>abscisses</B>, le nombre de tours où chaque point représente <B>1 tour</B> avec un &laquo;&nbsp;gros point&nbsp;&raquo; tous les <B>10 tours</B>&nbsp;;
   <LI> en <B>ordonnées</B>, le score où chaque point représente <B>10&nbsp;000</B> avec un &laquo;&nbsp;gros point&nbsp;&raquo; tous les <B>100&nbsp;000</B>&nbsp;;
-  <LI> la courbe en couleur <FONT COLOR="#974bb4"><B>pourpre</B></FONT> donne l'évolution du <B>jackpot</B>
+  <LI> la courbe en couleur <FONT COLOR="#974bb4"><B>pourpre</B></FONT> donne l&rsquo;évolution du <B>jackpot</B>
 </UL>
 
-Pour les statistiques qui suivent (par événement et tirage de dés), on a le choix d'affichage&nbsp;:
+Pour les statistiques qui suivent (par événement et tirage de dés), on a le choix d&rsquo;affichage&nbsp;:
 <UL>
   <LI> par <B>pourcentage</B>&nbsp;;
   <LI> par <B>score</B>.
@@ -171,7 +176,7 @@ Pour les statistiques qui suivent (par événement et tirage de dés), on a le choi
 Cette option est modifiable via le menu <I><U>O</U>ptions</I>&nbsp;:<P>
 <CENTER><IMG Alt="Menu Options" SRC="png/mo.png" HEIGHT=102 WIDTH=365 BORDER=0></CENTER> 
 
-<A NAME="spedd"><H4>Statistiques par événement de dés</H4>
+<A NAME="spedd"></A><H4>Statistiques par événement de dés</H4>
 <CENTER><IMG Alt="Stats par événement de dés" SRC="png/spedd.png" HEIGHT=197 WIDTH=197 BORDER=0></CENTER><P>
 
 Les statistiques <B>par événement de dés</B> présentent la <B>répartition des gains</B> par événement de dés.<BR>
@@ -181,7 +186,7 @@ Comme pour le fond des cases, le fond en damier &laquo;&nbsp;ciel et pourpre&nbs
 Les événements ont la plupart un <B>fond bicolore</B> car il y a deux exemplaires répartis sur le plateau de jeu.
 
 
-<A NAME="sptdd"><H4>Statistiques par tirage de dés</H4>
+<A NAME="sptdd"></A><H4>Statistiques par tirage de dés</H4>
 <CENTER><IMG Alt="Stats par tirage de dés" SRC="png/sptdd.png" HEIGHT=197 WIDTH=197 BORDER=0></CENTER><P>
 
 Les statistiques <B>par tirage de dés</B> présentent la <B>répartition des gains</B> par tirage de dés.<BR>
@@ -193,17 +198,17 @@ La <B>zone des scores</B> présente&nbsp;:
 <UL>
   <LI> le <B>type</B> de joueur en fin de ligne&nbsp;: <B>humain <IMG Alt="humain" SRC="png/th.png" HEIGHT=20 WIDTH=20 BORDER=0> ou automate <IMG Alt="automate" SRC="png/ta.png" HEIGHT=20 WIDTH=20 BORDER=0></B>&nbsp;;
   <LI> le <B>score</B> en temps réel de chaque joueur&nbsp;;
-  <LI> le <B>classement</B> en tête de ligne, selon l'ordre décroissant des scores&nbsp;;
-  <LI> les joueurs <B>éliminés</B>* sont en <FONT COLOR="#404040"><B>gris</B></FONT>, comme <FONT COLOR="#c23979"><B>Framboise</B></FONT> dans l'exemple&nbsp;;
-  <LI> le fond de la ligne est de la couleur du joueur courant, comme <FONT COLOR="#2450ef"><B>Myrtille</B></FONT> dans l'exemple. 
+  <LI> le <B>classement</B> en tête de ligne, selon l&rsquo;ordre décroissant des scores&nbsp;;
+  <LI> les joueurs <B>éliminés</B>* sont en <FONT COLOR="#404040"><B>gris</B></FONT>, comme <FONT COLOR="#c23979"><B>Framboise</B></FONT> dans l&rsquo;exemple&nbsp;;
+  <LI> le fond de la ligne est de la couleur du joueur courant, comme <FONT COLOR="#2450ef"><B>Myrtille</B></FONT> dans l&rsquo;exemple. 
   
 </UL>  
-<FONT SIZE=2>(*) Leur classement est selon l'ordre d'élimination&nbsp;: le premier éliminé est le dernier au classement.</FONT><P>
+<FONT SIZE=2>(*) Leur classement est selon l&rsquo;ordre d&rsquo;élimination&nbsp;: le premier éliminé est le dernier au classement.</FONT><P>
 
 <A NAME="zdldd"></A><H3>3. Zone du lancer de dés</H3>
 <CENTER><IMG Alt="Zone de lancer de dés" SRC="png/zdldd.png" HEIGHT=118 WIDTH=118 BORDER=0></CENTER><P>
 
-La <B>zone de lancer de dés</B> affiche le résultat des dés. Quand un joueur doit lancer les dés, ceux-ci changent jusqu'à ce qu'ils soient arrêtés (touche <I>Espace</I>).<BR>
+La <B>zone de lancer de dés</B> affiche le résultat des dés. Quand un joueur doit lancer les dés, ceux-ci changent jusqu&rsquo;à ce qu&rsquo;ils soient arrêtés (touche <I>Espace</I>).<BR>
 Les dés sont de la <B>couleur du joueur courant</B>.
 
 <A NAME="zdedd"></A><H3>4. Zone des événements de dés</H3>
@@ -213,29 +218,39 @@ La <B>zone des événements de dés</B> affichent tous les événements de dés.<BR>
 Les <B>couleurs de fond</B> indiquent quels joueurs sont <B>propriétaires</B>.<BR> 
 Comme pour le fond des cases, le fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0> indique que les gains vont au <B>jackpot</B>.<BR>
 Les événements ont la plupart un <B>fond bicolore</B> car il y a deux exemplaires répartis sur le plateau de jeu.<P>
-Les <B>compteurs</B> en bas à droite indiquent le nombre d'événements que <B>possède chaque joueur</B> représenté par sa couleur.<BR>
+Les <B>compteurs</B> en bas à droite indiquent le nombre d&rsquo;événements que <B>possède chaque joueur</B> représenté par sa couleur.<BR>
 Le compteur de couleur <FONT COLOR="#974bb4"><B>pourpre</B></FONT> correspond aux événements dont les gains vont au <B>jackpot</B>.<BR>
-En blanc est affiché le nombre d'événements n'ayant toujours pas trouvé preneur.
+En blanc est affiché le nombre d&rsquo;événements n&rsquo;ayant toujours pas trouvé preneur.
 
 <A NAME="zdm"></A><H3>5. Zone des messages</H3>
 <CENTER><IMG Alt="Zone des messages" SRC="png/zdm.png" HEIGHT=197 WIDTH=118 BORDER=0></CENTER><P>
-C'est dans cette zone que tous les <B>messages en cours de jeu</B> s'affichent.<BR>
-Pour les joueurs humains, les touches apparaissent sur fond blanc comme la touche <I>Espace</I> pour arrêter les dés dans l'exemple.
+C&rsquo;est dans cette zone que tous les <B>messages en cours de jeu</B> s&rsquo;affichent.<BR>
+Pour les joueurs humains, les touches apparaissent sur fond blanc comme la touche <I>Espace</I> pour arrêter les dés dans l&rsquo;exemple.
 
 <A NAME="zdj"></A><H3>6. Zone du jackpot</H3>
 <CENTER><IMG Alt="Zone du jackpot" SRC="png/zdj.png" HEIGHT=118 WIDTH=118 BORDER=0></CENTER><P>
 
 La <B>zone du jackpot</B> affiche son <B>montant en temps réel</B> en couleur <FONT COLOR="#974bb4"><B>pourpre</B></FONT>.<BR>
-Dès qu'un joueur le remporte en positionnant son pion sur la case <IMG Alt="Case jackpot" SRC="png/j.png" HEIGHT=20 WIDTH=20 BORDER=0>, son montant s'affiche dans la couleur du gagnant juste en dessous du montant du jackpot remis à zéro.<BR>
-Dans l'exemple, <FONT COLOR="#ff8000"><B>Orange</B></FONT> est le dernier joueur à avoir emporté le jackpot qui alors était de 2&nbsp;492. 
+Dès qu&rsquo;un joueur le remporte en positionnant son pion sur la case <IMG Alt="Case jackpot" SRC="png/j.png" HEIGHT=20 WIDTH=20 BORDER=0>, son montant s&rsquo;affiche dans la couleur du gagnant juste en dessous du montant du jackpot remis à zéro.<BR>
+Dans l&rsquo;exemple, <FONT COLOR="#ff8000"><B>Orange</B></FONT> est le dernier joueur à avoir emporté le jackpot qui alors était de 2&nbsp;492. 
 
 <HR>
 
 <A NAME="rdj"></A><H1>Règle du jeu</H1>
 
-<A NAME="ddup"></A><H2>Déroulement d'une partie</H2>
+<A NAME="ddup"></A><H2>Déroulement d&rsquo;une partie</H2>
 
-<A NAME="dup"></A><H3>Démarrer une partie</H3>
+Une partie est composée de tours de jeu pendant lequel chaque joueur&nbsp;:
+<UL>
+  <LI> <B>lance les dés</B> pour <B>déplacer son pion</B>&nbsp;;
+  <LI> <B>paie</B> les gains aux <B>adversaires propriétaires</B> d&rsquo;événements de dés&nbsp;;
+  <LI> <B>achète</B> l&rsquo;événement de dés libre sur lequel a atterri le pion.
+</UL>
+
+Les tours s&rsquo;enchaînent dans le même ordre jusqu&rsquo;à ce qu&rsquo;il ne reste plus <B>qu&rsquo;un seul joueur</B> sur le plateau de jeu.<BR>
+Le <B>dernier joueur restant gagne la partie</B>.
+
+<A NAME="ldup"></A><H2>Lancement d&rsquo;une partie</H2>
 
 Pour démarrer une partie, il faut <B>définir les joueurs</B>. Pour ce faire, il faut aller dans le menu <I><U>P</U>artie</I> et choisir <I><U>N</U>ouvelle...</I> ou appuyer sur <I>Ctrl+N</I>&nbsp;:<P>
 <CENTER><IMG Alt="Menu Partie" SRC="png/mp.png" HEIGHT=121 WIDTH=179 BORDER=0></CENTER><P>
@@ -247,15 +262,15 @@ Vous pouvez alors&nbsp;:
   <LI> choisir le <B>nombre de joueurs</B> en utilisant les <B>4 boutons</B> |&lt;, &lt;, &gt; et &gt;|&nbsp;;
   <LI> définir pour chaque joueur son type&nbsp;: <B>automate</B> <IMG Alt="automate" SRC="png/ta.png" HEIGHT=20 WIDTH=20 BORDER=0> (cocher) ou <B>humain</B> <IMG Alt="humain" SRC="png/th.png" HEIGHT=20 WIDTH=20 BORDER=0> (décocher).
 </UL><P>
-<A NAME="pdaduedd"></A>Selon le nombre de joueurs, le <B>prix d'achat d'un événement de dés</B> varie de la manière suivante&nbsp;:<P>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
-  <TR><TH>Nombre<BR>de joueurs</TH><TH>Prix d'un<BR>événement<BR>de dés</TH></TR>
+<A NAME="pdaduedd"></A>Selon le nombre de joueurs, le <B>prix d&rsquo;achat d&rsquo;un événement de dés</B> varie de la manière suivante&nbsp;:<P>
+<CENTER><TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
+  <TR><TH>Nombre<BR>de joueurs</TH><TH>Prix d&rsquo;un<BR>événement<BR>de dés</TH></TR>
   <TR><TD align=center>2</TD><TD align=center>2&nbsp;500</TD></TR>
   <TR><TD align=center>3</TD><TD align=center>3&nbsp;750</TD></TR>
   <TR><TD align=center>4</TD><TD align=center>5&nbsp;000</TD></TR>
   <TR><TD align=center>5</TD><TD align=center>6&nbsp;250</TD></TR>
   <TR><TD align=center>6</TD><TD align=center>7&nbsp;500</TD></TR>
-</TABLE><P>  
+</TABLE></CENTER><P>  
 
 Pour <B>démarrer la partie</B> avec les paramètres choisis, appuyez sur <I>Commencer&nbsp;!</I>.<P>
 
@@ -276,57 +291,98 @@ Avant de commencer le tour de jeu&nbsp;:
 <CENTER><IMG Alt="Pions sur la case départ" SRC="png/pslcd.png" HEIGHT=238 WIDTH=238 BORDER=0>
 <IMG Alt="Score initial et ordre des joueurs" SRC="png/odj.png" HEIGHT=235 WIDTH=335 BORDER=0></CENTER>
 
-<A NAME="tdj"></A><H3>Tour de jeu</H3>
+<A NAME="tdj"></A><H2>Tour de jeu</H2>
 
-<A NAME="lddeddp"></A><H4>Lancer des dés et déplacement du pion</H4>
+<A NAME="lddeddp"></A><H3>Lancer des dés et déplacement du pion</H3>
 
 À tour de rôle, chaque joueur commence par <B>lancer les dés</B>.<BR>
 Pour un joueur humain, il doit <B>arrêter le défilement des dés</B> en appuyant sur la touche <I>Espace</I>.<BR>
-Une fois les dés arrêtés, le <B>pion est déplacé</B> d'autant de cases que le total des dés.<BR>
+Une fois les dés arrêtés, le <B>pion est déplacé</B> d&rsquo;autant de cases que le total des dés.<BR>
 Selon le parcours imposé, il arrive souvent que le joueur doive <B>choisir une direction</B> à une intersection.<BR>
 Dans ce cas, des flèches apparaissent pour indiquer les directions possibles&nbsp;:<P>
 <CENTER><IMG Alt="Choix de direction" SRC="png/cdd.png" HEIGHT=425 WIDTH=335 BORDER=0></CENTER><P>
 Il faut alors utiliser les touches fléchées pour faire son choix.<BR>
 Une fois les choix de directions effectués, le <B>pion arrive à destination</B>.<BR>
-Si le pion est sur une case <IMG Alt="Bis repetita" SRC="png/br.png" HEIGHT=20 WIDTH=20 BORDER=0> alors le pion est à nouveau déplacé d'autant de cases que le total des dés.<BR>
+Si le pion est sur une case <IMG Alt="Bis repetita" SRC="png/br.png" HEIGHT=20 WIDTH=20 BORDER=0> alors le pion est à nouveau déplacé d&rsquo;autant de cases que le total des dés.<BR>
 
-<A NAME="pdgaapdedd"></A><H4>Paiement des gains aux adversaires propriétaires d'événements de dés</H4>
+<A NAME="pdgaapdedd"></A><H3>Paiement des gains aux adversaires propriétaires d&rsquo;événements de dés</H3>
 
-Le joueur courant <B>doit payer</B> à tous ses <B>adversaires propriétaires d'événements de dés</B>, le total correspondant aux gains selon le résultat et les événements de dés&nbsp;: voir l'exemple donné dans <A HREF="#pr">Présentation rapide</A> et pour tous les détails par tirage et événement de dés, <A HREF="#ddedd">Définition des événements de dés</A>.<BR>
+Le joueur courant <B>doit payer</B> à tous ses <B>adversaires propriétaires d&rsquo;événements de dés</B>, le total correspondant aux gains selon le résultat et les événements de dés&nbsp;: voir l&rsquo;exemple donné dans <A HREF="#pr">Présentation rapide</A> et pour tous les détails par tirage et événement de dés, <A HREF="#ddedd">Définition des événements de dés</A>.<BR>
 Si un joueur adverse est propriétaire de <B>deux événements de dés identiques</B>, il reçoit <B>deux fois</B> le gain correspondant à cet événement de dés.<BR>
 
-<A NAME="vdeddppp"></A><H4>Vente d'événements de dés pour pouvoir payer</H4>
+<A NAME="vdeddppp"></A><H3>Vente d&rsquo;événements de dés pour pouvoir payer</H3>
 
-Si le joueur courant <B>ne peut pas payer</B>, il peut <B>vendre ses événements de dés</B> au prix d'achat&nbsp;: voir <A HREF="#pdaduedd">Prix d'un achat d'un événement de dés</A>. <BR>
+Si le joueur courant <B>ne peut pas payer</B>, il peut <B>vendre ses événements de dés</B> au prix d&rsquo;achat&nbsp;: voir <A HREF="#pdaduedd">Prix d&rsquo;un achat d&rsquo;un événement de dés</A>. <BR>
 Si malgré la vente de tous les événements de dés, le joueur courant ne peut toujours pas payer, il est <B>éliminé</B>&nbsp;: son pion est sorti du jeu et tous les créanciers sont quand même crédités de leurs gains dus.<BR>
 
-<A NAME="aslcostlp"></A><H4>Action selon la case où se trouve le pion</H4>
+<A NAME="aslcostlp"></A><H3>Action selon la case où se trouve le pion</H3>
 
 Si la case est un <A HREF="#ddedd">événement de dés</A>...
  <UL>
-   <LI> qui <B>appartient à un adversaire</B> (la case a le fond de la couleur du propriétaire), c'est au <B>tour du joueur suivant</B>&nbsp;;
-   <LI> qui <B>n'appartient à personne</B> (le fond est blanc) ou <B>appartient au jackpot</B> (la case a le fond fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0>), alors le joueur peut <B>l'acquérir</B> en payant le <A HREF="#pdaduedd">prix d'achat</A> sauf s'il a <B>déjà acquis le même événement de dés</B> (il y a deux exemplaires répartis sur le plateau) auquel cas, il ne paie rien&nbsp;: <B>la deuxième est gratuite&nbsp;!</B>
+   <LI> qui <B>appartient à un adversaire</B> (la case a le fond de la couleur du propriétaire), c&rsquo;est au <B>tour du joueur suivant</B>&nbsp;;
+   <LI> qui <B>n&rsquo;appartient à personne</B> (le fond est blanc) ou <B>appartient au jackpot</B> (la case a le fond fond en damier &laquo;&nbsp;ciel et pourpre&nbsp;&raquo; <IMG Alt="Fond ciel et pourpre" SRC="png/fp.png" HEIGHT=16 WIDTH=16 BORDER=0>), alors le joueur peut <B>l&rsquo;acquérir</B> en payant le <A HREF="#pdaduedd">prix d&rsquo;achat</A> sauf s&rsquo;il a <B>déjà acquis le même événement de dés</B> (il y a deux exemplaires répartis sur le plateau) auquel cas, il ne paie rien&nbsp;: <B>la deuxième est gratuite&nbsp;!</B>
  </UL>
-Sinon, il faut appliquer l'action suivante selon la case&nbsp;:<P>
+Sinon, il faut appliquer l&rsquo;action suivante selon la case&nbsp;:<P>
 
-<TABLE CELLSPACING=1 CELLPADDING=1 BORDER=1>
+<CENTER><TABLE CELLSPACING=1 CELLPADDING=1 BORDER=1>
   <TR><TH>Case</TH><TH>Description</TH><TH>Action</TH></TR>
-  <TR><TD align=center><IMG Alt="Case départ" SRC="png/cd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Case départ</TD><TD>Il n'est plus possible de tomber sur cette case après le premier déplacement de pion.</TD></TR>
+  <TR><TD align=center><IMG Alt="Case départ" SRC="png/cd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Case départ</TD><TD>Il n&rsquo;est plus possible de tomber sur cette case après le premier déplacement de pion.</TD></TR>
   <TR><TD align=center><IMG Alt="Bis repetita" SRC="png/br.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Bis repetita*</TD><TD>Le <B>pion doit être déplacé</B> à nouveau du même nombre de cases que le total des dés.</TD></TR>
-  <TR><TD align=center><IMG Alt="Relance des dés" SRC="png/rdd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Relance des dés</TD><TD>Le joueur doit relancer les dés ce qui signifie qu'il va de nouveau devoir payer les gains<BR>aux adversaires propriétaires d'événements de dés une nouvelle fois au cours d'un même tour.</TD></TR>
+  <TR><TD align=center><IMG Alt="Relance des dés" SRC="png/rdd.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Relance des dés</TD><TD>Le joueur doit relancer les dés ce qui signifie qu&rsquo;il va de nouveau devoir payer les gains<BR>aux adversaires propriétaires d&rsquo;événements de dés une nouvelle fois au cours d&rsquo;un même tour.</TD></TR>
   <TR><TD align=center><IMG Alt="Echelle Nord" SRC="png/en.png" HEIGHT=20 WIDTH=20 BORDER=0>&nbsp;<IMG Alt="Echelle Est" SRC="png/ee.png" HEIGHT=20 WIDTH=20 BORDER=0><BR>
-                       <IMG Alt="Echelle Sud" SRC="png/es.png" HEIGHT=20 WIDTH=20 BORDER=0>&nbsp;<IMG Alt="Echelle Ouest" SRC="png/eo.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Echelles</TD><TD>Le <B>pion doit être déplacé</B> vers la case ayant la même orientation d'échelle (il y en a deux<BR>exemplaires de chaque répartis sur tout le plateau).</TR> 
-  <TR><TD align=center><IMG Alt="Tirelire" SRC="png/t.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Tirelire</TD><TD>Tous les <B>gains d'événements de dés</B> initialement destinés aux adversaires vont finalement<BR>tous dans le <B>jackpot</B>.</TD></TR>
+                       <IMG Alt="Echelle Sud" SRC="png/es.png" HEIGHT=20 WIDTH=20 BORDER=0>&nbsp;<IMG Alt="Echelle Ouest" SRC="png/eo.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Echelles</TD><TD>Le <B>pion doit être déplacé</B> vers la case ayant la même orientation d&rsquo;échelle (il y en a deux<BR>exemplaires de chaque répartis sur tout le plateau).</TR> 
+  <TR><TD align=center><IMG Alt="Tirelire" SRC="png/t.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Tirelire</TD><TD>Tous les <B>gains d&rsquo;événements de dés</B> initialement destinés aux adversaires vont finalement<BR>tous dans le <B>jackpot</B>.</TD></TR>
   <TR><TD align=center><IMG Alt="Jackpot" SRC="png/j.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD>Jackpot</TD><TD>Le joueur <B>empoche le jackpot&nbsp;!</B> Ce dernier est alors <B>remis à zéro</B>.<BR>
-                                                                                                               Si le joueur a versé des gains au jackpot, il les récupère. En revanche, si le joueur n'a pas<BR>pu payer les gains adverses, il ne peut malheusement pas utiliser le contenu du jackpot.</TD></TR>
+                                                                                                               Si le joueur a versé des gains au jackpot, il les récupère. En revanche, si le joueur n&rsquo;a pas<BR>pu payer les gains adverses, il ne peut malheusement pas utiliser le contenu du jackpot.</TD></TR>
 </TABLE>
-<FONT SIZE=2>(*) <B><U>Attention</U></B>&nbsp;: pour cette case seulement, l'action doit être réalisée <U>avant</U> paiement des gains aux adversaires propriétaires d'événements de dés.</FONT>
+<FONT SIZE=2>(*) <B><U>Attention</U></B>&nbsp;: pour cette case seulement, l&rsquo;action doit être réalisée <U>avant</U> paiement des gains aux adversaires propriétaires d&rsquo;événements de dés.</FONT></CENTER>
+
+<A NAME="odj"></A><H2>Options de jeu</H2>
+
+Les <B>options de jeu</B> se trouvent dans le menu <I><U>O</U>ptions | <U>R</U>ègle du jeu...</I>.<P>
+
+<CENTER><IMG Alt="Sous-menu Règle du jeu" SRC="png/smrdj.png" HEIGHT=140 WIDTH=710 BORDER=0></CENTER><P>
+
+la seule option actuellement concerne les situations de <B>cession des événements de dés au jackpot</B>.<P>
+
+Par défaut, les événements de dés qui ne sont pas achetés par un joueur sont <B>attribués au jackpot</B>.<BR>
+Cela implique qu&rsquo;à chaque fois qu&rsquo;un joueur <B>lance les dés</B>, tous les gains générés par les <B>événements appartenant au jackpot</B> lui reviennent.<P>
+Pour accélérer le jeu, il est possible d&rsquo;ajouter deux autres situations où les événements de dés peuvent être cédés au jackpot&nbsp;:
+<UL>
+  <LI>Quand un joueur doit <B>vendre un événement de dés</B> pour pouvoir <B>payer</B>, il peut être cédé au jackpot&nbsp;;
+  <LI>Quand un joueur <B>est éliminé</B> parce qu&rsquo;il ne peut plus payer même en vendant tous ses événements&nbsp;: ces derniers sont <B>liquidés</B> et cédés au jackpot.
+</UL>  
 
 <HR>
 
 <A NAME="a"></A><H1>Annexes</H1>
 
 Dans les annexes vous trouverez des informations détaillées sur des éléments du jeu.
+
+<A NAME="sadp"></A><H2>Sauvegarde automatique des paramètres</H2>
+
+Les <B>paramètres suivants</B> sont enregistrés dans le fichier <TT><B>Paradice.ini</B></TT> en quittant l&rsquo;application&nbsp;:<P>
+
+<CENTER><TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
+  <TR><TH>Paramètre</TH><TH>Section</TH><TH>Entrée</TH><TH>Valeurs</TH><TH>Valeur par défaut</TH></TR>
+  <TR><TD><I><U>O</U>ptions | <U>F</U>onte...</I></TD><TD align=center rowspan=3><TT>[Options]</TT></TD><TD align=center><TT>Police</TT></TD><TD>Nom de la police</TD><TD align=center><TT>Impact</TT></TD></TR>
+  <TR><TD><I><U>O</U>ptions | <U>V</U>itesse...</I></TD><TD align=center><TT>Vitesse</TT></TD><TD>Une des options suivantes&nbsp;:<UL><LI> <TT>100</TT> pour <B>Rapide</B>
+                                                                                                                                  <LI> <TT>200</TT> pour <B>Moyenne</B>
+																														          <LI> <TT>500</TT> pour <B>Lente</B></UL></TD><TD align=center><TT>200</TT></TD></TR>
+  <TR><TD><I><U>O</U>ptions | <U>R</U>ègle du jeu...</I></TD><TD align=center><TT>Règle</TT></TD><TD>Somme des options suivantes&nbsp;:<UL>
+                                                                                     <LI> <TT>1</TT> pour <B>Cession d&rsquo;événements au jackpot si un joueur ne souhaite pas acheter</B>
+                                                                                     <LI> <TT>2</TT> pour <B>Cession d&rsquo;événements au jackpot si un joueur doit vendre pour payer</B>
+																					 <LI> <TT>4</TT> pour <B>Cession d&rsquo;événements au jackpot si un joueur est éliminé (liquidation)</B></UL></TD><TD align=center><TT>1</TT></TR>
+  <TR><TD><I><U>V</U>oir</I></TD><TD align=center rowspan=5><TT>[Affichage]</TT></TD><TD align=center><TT>Stats</TT></TD><TD>Une des options suivantes&nbsp;:<UL><LI> <TT>0</TT> pour <B>Bilan du Tour</B>
+                                                                                                                                                      <LI> <TT>1</TT> pour <B>Graphe d&rsquo;évolution</B>
+																																					  <LI> <TT>2</TT> pour <B>Stats par Évenement de dés</B>
+																																					  <LI> <TT>3</TT> pour <B>Stats par Tirage de dés</B></UL></TD><TD align=center><TT>0</TT></TD></TR>
+  <TR><TD><I><U>O</U>ptions | <U>S</U>tatistiques...</I></TD><TD align=center><TT>Format</TT></TD><TD>Une des options suivantes&nbsp;:<UL><LI> <TT>0</TT> pour <B>Pourcentages</B>
+                                                                                                                                      <LI> <TT>1</TT> pour <B>Scores</B></UL></TD><TD align=center><TT>0</TT></TD></TR>
+  <TR><TD>Largeur de la fenêtre</TD><TD><TT>Largeur</TT></TD><TD rowspan=3>Taille en pixels</TD><TD align=center><TT>893</TT> (96 dpi)<BR><TT>1795</TT> (192 dpi)</TD></TR>
+  <TR><TD>Hauteur de la fenêtre</TD><TD><TT>Hauteur</TT></TD><TD align=center><TT>958</TT> (96 dpi)<BR><TT>1917</TT> (192 dpi)</TD></TR>
+  <TR><TD>Taille d&rsquo;une case</TD><TD><TT>Taille</TT></TD><TD align=center><TT>67</TT> (192 dpi)<BR><TT>135</TT> (192 dpi)</TD></TR>
+</TABLE></CENTER>
 
 <A NAME="ddedd"></A><H2>Définition des événements de dés</H2>
 
@@ -336,9 +392,9 @@ Les événements de dés se répartissent en deux groupes selon le <B>type de gains<
   <LI> Soit le gain est <B>variable</B> selon le résultat des dés mais la fréquence est <B>régulière</B>* (par exemple <B>le produit des dés</B>).
 </UL>
 
-<FONT SIZE=2>(*) Quasiment&nbsp;! Par exemple pour l'événement &laquo;&nbsp;écart des dés&nbsp;&raquo;, le gain est nul si le lancer des dés donne un &laquo;&nbsp;double&nbsp;&raquo;.</FONT><P>
+<FONT SIZE=2>(*) Quasiment&nbsp;! Par exemple pour l&rsquo;événement &laquo;&nbsp;écart des dés&nbsp;&raquo;, le gain est nul si le lancer des dés donne un &laquo;&nbsp;double&nbsp;&raquo;.</FONT><P>
 
-<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1>
+<CENTER><TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1>
 <TR><TD><B>Evt</B></TD><TD><B>Description</B></TD><TD><B>Gain</B></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="1" SRC="png/d1.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="2" SRC="png/d2.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="3" SRC="png/d3.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="4" SRC="png/d4.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="5" SRC="png/d5.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD><TD align=right><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0><IMG Alt="6" SRC="png/d6.png" HEIGHT=20 WIDTH=20 BORDER=0></TD></TR>
 <TR><TD><IMG Alt="Somme" SRC="png/s.png" HEIGHT=20 WIDTH=20 BORDER=0><TD><B>Somme</B></TD><TD rowspan=12 align=center>V<P>A<P>R<P>I<P>A<P>B<P>L<P>E</TD><TD align=right>140</TD><TD align=right>210</TD><TD align=right>280</TD><TD align=right>350</TD><TD align=right>420</TD><TD align=right>490</TD><TD align=right>280</TD><TD align=right>350</TD><TD align=right>420</TD><TD align=right>490</TD><TD align=right>560</TD><TD align=right>420</TD><TD align=right>490</TD><TD align=right>560</TD><TD align=right>630</TD><TD align=right>560</TD><TD align=right>630</TD><TD align=right>700</TD><TD align=right>700</TD><TD align=right>770</TD><TD align=right>840</TD></TR>
 <TR><TD><IMG Alt="Produit" SRC="png/p.png" HEIGHT=20 WIDTH=20 BORDER=0><TD><B>Produit</B></TD><TD align=right>40</TD><TD align=right>80</TD><TD align=right>120</TD><TD align=right>160</TD><TD align=right>200</TD><TD align=right>240</TD><TD align=right>160</TD><TD align=right>240</TD><TD align=right>320</TD><TD align=right>400</TD><TD align=right>480</TD><TD align=right>360</TD><TD align=right>480</TD><TD align=right>600</TD><TD align=right>720</TD><TD align=right>640</TD><TD align=right>800</TD><TD align=right>960</TD><TD align=right>1000</TD><TD align=right>1200</TD><TD align=right>1440</TD></TR>
@@ -366,7 +422,7 @@ Les événements de dés se répartissent en deux groupes selon le <B>type de gains<
 <TR><TD><IMG Alt="Ecart=3" SRC="png/e3.png" HEIGHT=20 WIDTH=20 BORDER=0><TD><B>Ecart=3</B></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD></TR>
 <TR><TD><IMG Alt="Rapport=2" SRC="png/r2.png" HEIGHT=20 WIDTH=20 BORDER=0><TD><B>Rapport=2</B></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>2940</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD></TR>
 <TR><TD><IMG Alt="Rapport=3" SRC="png/r3.png" HEIGHT=20 WIDTH=20 BORDER=0><TD><B>Rapport=3</B></TD><TD align=right></TD><TD align=right></TD><TD align=right>4410</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right>4410</TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD><TD align=right></TD></TR>
-</TABLE><P>
+</TABLE></CENTER><P>
 
 Ces informations sont consultables également au menu <I><U>V</U>oir</I>&nbsp;:<P>
 
@@ -374,9 +430,9 @@ Ces informations sont consultables également au menu <I><U>V</U>oir</I>&nbsp;:<P
 
 <A NAME="pdj"></A><H2>Parcours des joueurs</H2>
 
-Un parcours différent est imposé pour chaque joueur afin qu'ils ne se suivent pas et qu'ils n'aient pas trop de liberté de choix de cases destinataires pour leur pion.<BR>
-Il peut être visualisé à tout moment en appuyant de <I>Ctrl+1</I> à <I>Ctrl+6</I> selon l'ordre des joueurs au départ&nbsp;:<P>
-<IMG Alt="Sous-menu Parcours" SRC="png/smp.png" HEIGHT=238 WIDTH=470 BORDER=0><P>
+Un parcours différent est imposé pour chaque joueur afin qu&rsquo;ils ne se suivent pas et qu&rsquo;ils n&rsquo;aient pas trop de liberté de choix de cases destinataires pour leur pion.<BR>
+Il peut être visualisé à tout moment en appuyant de <I>Ctrl+1</I> à <I>Ctrl+6</I> selon l&rsquo;ordre des joueurs au départ&nbsp;:<P>
+<CENTER><IMG Alt="Sous-menu Parcours" SRC="png/smp.png" HEIGHT=238 WIDTH=470 BORDER=0></CENTER><P>
 
 
 Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case départ</B>&nbsp;:<P>
@@ -385,9 +441,50 @@ Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case
 <IMG Alt="Parcours de Orange" SRC="png/pj3.png" HEIGHT=409 WIDTH=409 BORDER=0>&nbsp;<IMG Alt="Parcours de Fraise" SRC="png/pj4.png" HEIGHT=409 WIDTH=409 BORDER=0><BR>
 <IMG Alt="Parcours de Citron" SRC="png/pj5.png" HEIGHT=409 WIDTH=409 BORDER=0>&nbsp;<IMG Alt="Parcours de Kiwi" SRC="png/pj6.png" HEIGHT=409 WIDTH=409 BORDER=0></CENTER><BR>
 
+<A NAME="rc"></A><H2>Raccourcis clavier</H2>
+
+<CENTER><TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
+  <TR><TH>Raccourci</TH><TH>Equivalent menu</TH><TH>Contexte</TH><TH>Action</TH></TR>
+
+  <TR><TD align=center>Ctrl+N</TD><TD><U>P</U>artie | <U>N</U>ouvelle...</TD><TD align=center rowspan=2>Aucune partie<BR>en cours ou en pause</TD><TD>Ouvre une boîte de dialogue pour définir le nombre et le type des joueurs d&rsquo;une nuvelle partie.</TD></TR>
+  <TR><TD align=center>Ctrl+O</TD><TD><U>P</U>artie | Dém<U>o</U>nstration</TD><TD align=center >Lance une démonstration de partie avec six joueurs automates.</TD></TR>
+  <TR><TD align=center>Ctrl+P</TD><TD><U>P</U>artie | <U>P</U>ause</TD><TD align=center >Partie en cours</TD><TD>Met en pause une partie en cours.</TD></TR>
+  <TR><TD align=center>Ctrl+R</TD><TD><U>P</U>artie | <U>R</U>eprise</TD><TD align=center rowspan=2>Partie en pause</TD><TD>Reprend une partie en pause.</TD></TR>
+  <TR><TD align=center>Ctrl+A</TD><TD><U>P</U>artie | <U>A</U>bandon</TD><TD>Abandonne une partie en pause.</TD></TR>
+
+  <TR><TD align=center>Ctrl+F</TD><TD><U>O</U>ptions | <U>F</U>onte...</TD><TD align=center rowspan=19>Tout<BR>contexte</TD><TD>Change la police des messages.</TD></TR>
+  <TR><TD align=center>Ctrl+I</TD><TD><U>O</U>ptions | <U>V</U>itesse... | Rap<U>i</U>de</TD><TD>Passe la vitesse de jeu à &laquo;&nbsp;Rapide&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+M</TD><TD><U>O</U>ptions | <U>V</U>itesse... | <U>M</U>oyenne</TD><TD>Passe la vitesse de jeu à &laquo;&nbsp;Moyenne&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+L</TD><TD><U>O</U>ptions | <U>V</U>itesse... | <U>L</U>ente</TD><TD>Passe la vitesse de jeu à &laquo;&nbsp;Lente&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+C</TD><TD><U>O</U>ptions | <U>S</U>tatistiques... | par&nbsp;Pour<U>c</U>entages</TD><TD>Change l&rsquo;unité de statistiques en &laquo;&nbsp;pourcentages&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+S</TD><TD><U>O</U>ptions | <U>S</U>tatistiques... | par&nbsp;<U>S</U>cores</TD><TD>Change l&rsquo;unité de statistiques en &laquo;&nbsp;scores&nbsp;&raquo;.</TD></TR>
+
+  <TR><TD align=center>Ctrl+T</TD><TD><U>V</U>oir | Bilan du <U>T</U>our</TD><TD>Affiche le bilan par tour en haut à gauche du plateau de jeu.</TD></TR>
+  <TR><TD align=center>Ctrl+G</TD><TD><U>V</U>oir | <U>G</U>raphe d&rsquo;évolution</TD><TD>Affiche le graphe d&rsquo;évolution des joueurs en haut à gauche du plateau de jeu.</TD></TR>
+  <TR><TD align=center>Ctrl+V</TD><TD><U>V</U>oir | Statistiques par É<U>v</U>énements de dés</TD><TD>Affiche les statistiques d&rsquo;événements de dés en haut à gauche du plateau de jeu.</TD></TR>
+  <TR><TD align=center>Ctrl+D</TD><TD><U>V</U>oir | Statistiques par Tirage de <U>d</U>és</TD><TD>Affiche le bilan par tour en haut à gauche du plateau de jeu.</TD></TR>
+  <TR><TD align=center>Ctrl+E</TD><TD><U>V</U>oir | <U>E</U>vénements de dés...</TD><TD>Affiche la définition des événements de dés&nbsp;: famille, type de gain, formule de calcul des gains et gains par tirage de dés.</TD></TR>
+
+  <TR><TD align=center>Ctrl+1</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Myrtille</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Myrtille&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+2</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Framboise</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Framboise&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+3</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Orange</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Orange&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+4</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Fraise</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Fraise&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+5</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Citron</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Citron&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Ctrl+6</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Kiwi</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Kiwi&nbsp;&raquo;.</TD></TR>
+
+  <TR><TD align=center>Maj+F1</TD><TD><U>?</U> | À propos...</TD><TD>Affiche l&rsquo;À propos avec la version et l&rsquo;alignement (32/64 bits).</TD></TR>
+  <TR><TD align=center>F1</TD><TD><U>?</U> | Aide</TD><TD>Affiche l&rsquo;aide en HTML&nbsp;: Règle du jeu et utilisation.</TD></TR>
+  <TR><TD align=center>&larr;&nbsp;&uarr;&nbsp;&rarr;&nbsp;&darr;</TD><TD align=center rowspan=4>N/A</TD><TD align=center rowspan=4>Partie en cours</TD><TD>Permet de choisir la direction du pion d&rsquo;un joueur &laquo;&nbsp;humain&nbsp;&raquo; en cours de déplacement arrivant à une intersection.</TD></TR>
+  <TR><TD align=center>Entrée</TD><TD>Permet de passer au joueur suivant après la fin du tour d&rsquo;un joueur &laquo;&nbsp;humain&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>Espace</TD><TD>Permet d&rsquo;arrêter le défilement des dés lors du tour d&rsquo;un joueur &laquo;&nbsp;humain&nbsp;&raquo;.</TD></TR>
+  <TR><TD align=center>O/N</TD><TD>Répond à la question &laquo;&nbsp;Voulez-vous acheter l&rsquo;événement de dés&nbsp;?&nbsp;&raquo; pour un joueur &laquo;&nbsp;humain&nbsp;&raquo;.</TD></TR>
+
+</TABLE></CENTER>
+
 <HR>
 
-<CENTER>Dernière mise à jour&nbsp;: le 23 mai 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
-<HR>
+<CENTER>Dernière mise à jour&nbsp;: le 25 mai 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
+
 </BODY>
+
 </HTML>
