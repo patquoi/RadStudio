@@ -507,6 +507,7 @@ const
                                                                           (dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune)));
 
   NumBmDp : array [TDirPoss] of Integer = (0, 1, 2, 3, 4, 5, 6, 0, 7, 8, 9, 0, 10, 0, 0, 11); // Pas d'image si plus de 2 directions possibles (sauf départ toutes directions)
+  stNomFichierLog   : String = 'Paradice.log';
 
 var
   stRepLocalAppData : String;

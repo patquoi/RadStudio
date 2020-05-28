@@ -1,4 +1,4 @@
-! Confirmation de quitter si partie en cours ou en pause.
+! Sauvegarde de partie
 
 ++ Gestion des records :
  - Débit pour un événement

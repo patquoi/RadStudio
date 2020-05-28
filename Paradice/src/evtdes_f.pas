@@ -35,6 +35,7 @@ type
       Rect: TRect; State: TGridDrawState);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     TypeEvtCrt : TTypeEvt;
     EvtCrt : TEvenement; // Pour appel à TEvenement.DonneGain
@@ -112,6 +113,12 @@ for e:=Succ(Low(TTypeEvt)) to High(TTypeEvt) do
   FreeAndNil(bmEvt[e]);
 for d:=Succ(Low(TDe)) to High(TDe) do
   FreeAndNil(bmDe[d]);
+end;
+
+procedure TFormEvtDes.FormKeyPress(Sender: TObject; var Key: Char);
+begin // v1.1 : Echap permet de sortir
+ if Key = #27 (* Echap *) then
+   ModalResult := MrOk;
 end;
 
 procedure TFormEvtDes.FormShow(Sender: TObject);

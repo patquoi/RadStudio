@@ -109,6 +109,7 @@ type
     procedure MenuItemRegleClick(Sender: TObject);
     procedure MenuItemPartieDemoClick(Sender: TObject);
     procedure Aide1Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     FMessage : String;
     DrnHauteur,
@@ -165,6 +166,10 @@ const
   stEntreeTaille     : String = 'Taille';
   NumRegle           : array [1..NbMaxRegles] of TOptionRegle = (orEvtJckptAcht, orEvtJckptVnte, orEvtJckptLiqd);
 
+  // MessageBox
+  stConfirmation     : String = 'Confirmation';
+  stConfEVSDV        : String = '%sEtes-vous sûr(e) de vouloir %s ?';
+
 // -------------------
 // Evénements de fiche
 // -------------------
@@ -219,17 +224,27 @@ Refresh;
 StatusBar.SimpleText:=Format('Taille d''une case : %d', [TailleCase]);
 end;
 
+procedure TFormPlateau.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin // v1.1 : ajout confirmation si partie en cours
+try
+  if Partie.Etat <> epInactif then
+    Canclose := (Application.MessageBox(pWideChar(Format(stConfEVSDV, ['Une partie est en cours. ', 'quitter'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES);
+except
+  Canclose := True;
+end;
+end{procedure TFormPlateau.FormCloseQuery};
+
 procedure TFormPlateau.FormCreate(Sender: TObject);
 begin
 DrnHauteur := Height;
 DrnLargeur := Width;
 LitParametres;
-end;
+end{procedure TFormPlateau.FormCreate};
 
 procedure TFormPlateau.FormDestroy(Sender: TObject);
 begin
 EcritParametres;
-end;
+end{procedure TFormPlateau.FormDestroy};
 
 procedure TFormPlateau.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
 var d : base.TDirection;
@@ -260,7 +275,7 @@ case Key of
           except
           end{try};
 end{case of};
-end;
+end{procedure TFormPlateau.FormKeyDown};
 
 procedure TFormPlateau.FormKeyPress(Sender: TObject; var Key: Char);
 var x, y : TCoordonnee;
@@ -371,7 +386,7 @@ case Key of
        except
        end{try};
 end{case of};
-end;
+end{procedure TFormPlateau.FormKeyPress};
 
 procedure TFormPlateau.FormPaint(Sender: TObject);
 var x, y  : TCoordonnee;
@@ -468,7 +483,7 @@ for x := Canvas.ClipRect.Left div (TailleCase+1) to Canvas.ClipRect.Right div (T
           end;
           end;
         end;
-end;
+end{procedure TFormPlateau.FormPaint};
 
 procedure TFormPlateau.MenuItemAProposClick(Sender: TObject);
 begin
@@ -540,8 +555,8 @@ Refresh;
 end;
 
 procedure TFormPlateau.MenuItemPartieAbandonClick(Sender: TObject);
-begin
-if Application.MessageBox('Êtes-vous sûr(e) de vouloir abandonner la partie ?', 'Confirmation d''abandon', MB_ICONEXCLAMATION + MB_YESNO) = IDYES then
+begin // v1.1 : mise en commun des messages de confirmation
+if Application.MessageBox(pWideChar(Format(stConfEVSDV, ['', 'abandonner la partie'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES then
   try
     try
       FreeAndNil(Partie);
@@ -633,14 +648,14 @@ try
     end;
 except
 end{try};
-end;
+end{procedure TFormPlateau.TimerAutomateTimer};
 
 procedure TFormPlateau.TimerClignotementTimer(Sender: TObject);
 begin
 TimerClignotement.Tag := 1 - TimerClignotement.Tag;
 with Partie do
   DessineCase(Jr[JrCrt].Pion.x, Jr[JrCrt].Pion.y);
-end;
+end{procedure TFormPlateau.TimerClignotementTimer};
 
 procedure TFormPlateau.TimerDesTimer(Sender: TObject);
 var d : TNumDe;
@@ -674,7 +689,7 @@ try
     end;
 except
 end{try};
-end;
+end{procedure TFormPlateau.TimerDesTimer};
 
 procedure TFormPlateau.TimerLancementTimer(Sender: TObject);
 begin
@@ -687,14 +702,14 @@ with FormAPropos do
   finally
     Release
   end;
-end;
+end{procedure TFormPlateau.TimerLancementTimer};
 
 procedure TFormPlateau.TimerParcoursTimer(Sender: TObject);
 begin
 TimerParcours.Tag := 0;
 Refresh;
 TimerParcours.Enabled:=False;
-end;
+end{procedure TFormPlateau.TimerParcoursTimer};
 
 procedure TFormPlateau.TimerPionTimer(Sender: TObject);
 begin
@@ -737,7 +752,7 @@ try
     end;
 except
 end{try};
-end;
+end{procedure TFormPlateau.TimerPionTimer};
 
 // -----------------------
 // méthodes personnalisées
