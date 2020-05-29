@@ -225,7 +225,7 @@ StatusBar.SimpleText:=Format('Taille d''une case : %d', [TailleCase]);
 end;
 
 procedure TFormPlateau.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-begin // v1.1 : ajout confirmation si partie en cours
+begin // v1.0.1 : ajout confirmation si partie en cours
 try
   if Partie.Etat <> epInactif then
     Canclose := (Application.MessageBox(pWideChar(Format(stConfEVSDV, ['Une partie est en cours. ', 'quitter'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES);
@@ -555,7 +555,7 @@ Refresh;
 end;
 
 procedure TFormPlateau.MenuItemPartieAbandonClick(Sender: TObject);
-begin // v1.1 : mise en commun des messages de confirmation
+begin // v1.0.1 : mise en commun des messages de confirmation
 if Application.MessageBox(pWideChar(Format(stConfEVSDV, ['', 'abandonner la partie'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES then
   try
     try

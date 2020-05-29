@@ -116,7 +116,7 @@ for d:=Succ(Low(TDe)) to High(TDe) do
 end;
 
 procedure TFormEvtDes.FormKeyPress(Sender: TObject; var Key: Char);
-begin // v1.1 : Echap permet de sortir
+begin // v1.0.1 : Echap permet de sortir
  if Key = #27 (* Echap *) then
    ModalResult := MrOk;
 end;
