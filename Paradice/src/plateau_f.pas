@@ -68,7 +68,7 @@ type
     TimerClignotement: TTimer;
     MenuItemEvolution: TMenuItem;
     MenuITemSeparator3: TMenuItem;
-    MenuITemBilanTour: TMenuItem;
+    MenuItemBilanTour: TMenuItem;
     MenuItemStatsEvts: TMenuItem;
     MenuItemStatsDes: TMenuItem;
     MenuItemFormatStats: TMenuItem;
@@ -82,7 +82,13 @@ type
     MenuItemRegleEvtJackpotVente: TMenuItem;
     MenuItemRegleEvtJackpotLiquidation: TMenuItem;
     MenuItemPartieDemo: TMenuItem;
-    Aide1: TMenuItem;
+    MenuItemAide: TMenuItem;
+    MenuItemSeparator4: TMenuItem;
+    MenuItemPartieOuvrir: TMenuItem;
+    MenuItemPartieEnregistrer: TMenuItem;
+    MenuITemPartieEnregistrerSous: TMenuItem;
+    OpenDialog: TOpenDialog;
+    SaveDialog: TSaveDialog;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
@@ -108,26 +114,36 @@ type
     procedure TimerLancementTimer(Sender: TObject);
     procedure MenuItemRegleClick(Sender: TObject);
     procedure MenuItemPartieDemoClick(Sender: TObject);
-    procedure Aide1Click(Sender: TObject);
+    procedure MenuItemAideClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure MenuItemPartieEnregistrerClick(Sender: TObject);
+    procedure MenuITemPartieEnregistrerSousClick(Sender: TObject);
+    procedure MenuItemPartieOuvrirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
-    FMessage : String;
+    FMessage,
+    FNomPartie : String; // v1.1 Nom de partie associé au fichier de partie
     DrnHauteur,
     DrnLargeur,
-    DrnTaille : Integer; // Sauvegarde la taille de la fenêtre en cas de diminution (minimize)
+    DrnTaille   : Integer; // Sauvegarde la taille de la fenêtre en cas de diminution (minimize)
     procedure DemarrePartie;
     procedure LitParametres;
     procedure EcritParametres;
+    procedure ChargePartie; // v1.1 partie enregistrée
+    procedure SauvePartie;  // v1.1 partie enregistrée
     procedure DefinitMessage(stNvMessage : String); // Exécuté en affectant la property stMesssage
+    procedure DefinitNomPartie(stNvNomPartie : String); // v1.1 Nom de partie associé au fichier de partie
     procedure DessineMessage; // Exécuté en affectant la property stMesssage
     function RectCase(x : TCoordonnee; y : TCoordonnee) : TRect;
   public // Les procédures Dessine... ci-dessous sont utilisées automatiquement par FormPaint
-    TailleCase    : Integer;
-    TypeAffichage : TTypeAffichage;
-    FormatStats   : TFormatStats;
-    OptionsRegle  : TOptionsRegle;
+    ChargementEnCours : Boolean; // v1.1 tag de chargement de partie
+    TailleCase        : Integer;
+    TypeAffichage     : TTypeAffichage;
+    FormatStats       : TFormatStats;
+    OptionsRegle      : TOptionsRegle;
     procedure ChangeAccesRegle(MenuItem : TMenuItem; Activer : Boolean);
-    function DonneOptionsRegle : Integer;
+    procedure AppliqueOptionsRegle(eor : Integer); // v1.1 : utilisation dans LitParametres et ChargePartie
+    function DonneOptionsRegle : Integer;          // v1.1 : utilisation dans EcritParametres et SauvePartie
     procedure DessineCase(ProprioId : TJoueurId; x : TCoordonnee; y : TCoordonnee; DirPoss : TDirPoss);
     procedure DessineScore(Id : TJoueurId; Pos, Score : Integer; JrCrt, Automate, Elimine : Boolean);
     procedure DessineJackpot(Score, DrnSc : Integer; DrnJr : TJoueurId);
@@ -140,6 +156,7 @@ type
     procedure DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
     procedure DessineCompteurEvt(Couleur : TCouleur);
     property stMessage : String read FMessage write DefinitMessage;
+    property stNomPartie : String read FNomPartie write DefinitNomPartie; // v1.1 Nom de partie associé au fichier de partie
   end;
 
 var
@@ -153,22 +170,27 @@ uses
   nvpartie_f;
 
 const
-  stNomFichierIni    : String = 'Paradice.ini';
-  stSectionOptions   : String = 'Options';
-  stSectionAffichage : String = 'Affichage';
-  stEntreePolice     : String = 'Police';
-  stEntreeVitesse    : String = 'Vitesse';
-  stEntreeFormat     : String = 'Format';
-  stEntreeStats      : String = 'Stats';
-  stEntreeRegle      : String = 'Règle';
-  stEntreeHauteur    : String = 'Hauteur';
-  stEntreeLargeur    : String = 'Largeur';
-  stEntreeTaille     : String = 'Taille';
+  stNomFichierIni    : String    = 'Paradice.ini';
+  stSectionOptions   : String    = 'Options';
+  stSectionAffichage : String    = 'Affichage';
+  stEntreePolice     : String    = 'Police';
+  stEntreeVitesse    : String    = 'Vitesse';
+  stEntreeFormat     : String    = 'Format';
+  stEntreeStats      : String    = 'Stats';
+  stEntreeRegle      : String    = 'Règle';
+  stEntreeHauteur    : String    = 'Hauteur';
+  stEntreeLargeur    : String    = 'Largeur';
+  stEntreeTaille     : String    = 'Taille';
   NumRegle           : array [1..NbMaxRegles] of TOptionRegle = (orEvtJckptAcht, orEvtJckptVnte, orEvtJckptLiqd);
 
+  // v1.1 : partie enregistrée
+  stParadice         : String    = 'Paradice';
+  VersionCrtFichier  : Integer   = $110; // v1.1 : à changer si la structure du fichier change
+  stErrNomFichInc    : pWideChar = 'Extension de fichier incorrecte : extension prdc attendue.'; // v1.1 ChargePartie/EcritPartie
+
   // MessageBox
-  stConfirmation     : String = 'Confirmation';
-  stConfEVSDV        : String = '%sEtes-vous sûr(e) de vouloir %s ?';
+  stConfEVSDV        : String    = '%sEtes-vous sûr(e) de vouloir %s ?';
+  stConfirmation     : pWideChar = 'Confirmation';
 
 // -------------------
 // Evénements de fiche
@@ -228,7 +250,7 @@ procedure TFormPlateau.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin // v1.0.1 : ajout confirmation si partie en cours
 try
   if Partie.Etat <> epInactif then
-    Canclose := (Application.MessageBox(pWideChar(Format(stConfEVSDV, ['Une partie est en cours. ', 'quitter'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES);
+    Canclose := (Application.MessageBox(pWideChar(Format(stConfEVSDV, ['Une partie est en cours. ', 'quitter'])), stConfirmation, MB_ICONEXCLAMATION + MB_YESNO) = IDYES);
 except
   Canclose := True;
 end;
@@ -239,6 +261,10 @@ begin
 DrnHauteur := Height;
 DrnLargeur := Width;
 LitParametres;
+// v1.1 partie enregistrée
+SaveDialog.InitialDir := stRepLocalAppData;
+OpenDialog.InitialDir := stRepLocalAppData;
+ChargementEnCours := False;
 end{procedure TFormPlateau.FormCreate};
 
 procedure TFormPlateau.FormDestroy(Sender: TObject);
@@ -485,6 +511,15 @@ for x := Canvas.ClipRect.Left div (TailleCase+1) to Canvas.ClipRect.Right div (T
         end;
 end{procedure TFormPlateau.FormPaint};
 
+procedure TFormPlateau.FormShow(Sender: TObject);
+begin
+if ParamStr(1) <> '' then
+  begin
+  OpenDialog.FileName := ParamStr(1);
+  ChargePartie;
+  end;
+end;
+
 procedure TFormPlateau.MenuItemAProposClick(Sender: TObject);
 begin
 FormAPropos:=TFormAPropos.Create(self);
@@ -507,6 +542,20 @@ finally
   Partie := TPartie.Create(High(TNbJoueurs), [False, True, True, True, True, True, True]);
   DemarrePartie;
 end;
+end;
+
+procedure TFormPlateau.MenuItemPartieEnregistrerClick(Sender: TObject);
+begin
+if stNomPartie='' then
+  MenuItemPartieEnregistrerSousClick(Sender)
+else
+  SauvePartie;
+end;
+
+procedure TFormPlateau.MenuITemPartieEnregistrerSousClick(Sender: TObject);
+begin
+if SaveDialog.Execute then
+  SauvePartie;
 end;
 
 procedure TFormPlateau.MenuItemEvenementsClick(Sender: TObject);
@@ -556,16 +605,16 @@ end;
 
 procedure TFormPlateau.MenuItemPartieAbandonClick(Sender: TObject);
 begin // v1.0.1 : mise en commun des messages de confirmation
-if Application.MessageBox(pWideChar(Format(stConfEVSDV, ['', 'abandonner la partie'])), pWideChar(stConfirmation), MB_ICONEXCLAMATION + MB_YESNO) = IDYES then
+if Application.MessageBox(pWideChar(Format(stConfEVSDV, ['', 'abandonner la partie'])), stConfirmation, MB_ICONEXCLAMATION + MB_YESNO) = IDYES then
   try
     try
+      Partie.Etat := epInactif; // v1.1 : pour afficher le titre sans le nom de partie
       FreeAndNil(Partie);
     except
     end;
   finally
     Partie := TPartie.Create(High(TNbJoueurs), [False, False, False, False, False, False, False]);
     Refresh;
-    StatusBar.SimpleText := 'Partie abandonnée.';
   end;
 end;
 
@@ -578,6 +627,12 @@ try
 finally
   FormNvPartie.Release
 end;
+end;
+
+procedure TFormPlateau.MenuItemPartieOuvrirClick(Sender: TObject);
+begin
+if OpenDialog.Execute then
+  ChargePartie;
 end;
 
 procedure TFormPlateau.MenuItemPartiePauseClick(Sender: TObject);
@@ -624,6 +679,11 @@ begin
 TimerPion.Interval := (Sender as TMenuItem).Tag;
 TimerAutomate.Interval := 5 * TimerPion.Interval;
 TimerClignotement.Interval := TimerAutomate.Interval div 2;
+end;
+
+procedure TFormPlateau.MenuItemAideClick(Sender: TObject);
+begin
+ShellExecute(0, 'Open', pChar(ExtractFilePath(Application.ExeName)+'\html\index.html'), '', '', SW_SHOWNORMAL);
 end;
 
 procedure TFormPlateau.TimerAutomateTimer(Sender: TObject);
@@ -780,12 +840,43 @@ with FormPlateau do
   end
 end{procedure TFormPlateau.DemarrePartie};
 
+procedure TFormPlateau.AppliqueOptionsRegle(eor : Integer);
+var nr : TNumRegle;
+begin
+OptionsRegle := []; // Défini dans les événements OnClick des rubriques de menu
+for nr := Low(TNumRegle) to High(TNumRegle) do
+  begin
+  if (Ord(NumRegle[nr]) and eor) = Ord(NumRegle[nr]) then
+    case NumRegle[nr] of
+      orEvtJckptAcht: begin
+                      MenuItemRegleEvtJackpotAchat.Checked := True;
+                      MenuItemRegleClick(MenuItemRegleEvtJackpotAchat);
+                      end;
+      orEvtJckptVnte: begin
+                      MenuItemRegleEvtJackpotVente.Checked := True;
+                      MenuItemRegleClick(MenuItemRegleEvtJackpotVente);
+                      end;
+      orEvtJckptLiqd: begin
+                      MenuItemRegleEvtJackpotLiquidation.Checked := True;
+                      MenuItemRegleClick(MenuItemRegleEvtJackpotLiquidation);
+                      end;
+    end;
+  end;
+end{procedure TFormPlateau.AppliqueOptionsRegle};
+
+function TFormPlateau.DonneOptionsRegle : Integer;
+var OptionRegle : TOptionRegle;
+begin
+Result := 0;
+for OptionRegle := Low(TOptionRegle) to High(TOptionRegle) do
+  Inc(Result, Ord(OptionRegle) * Ord(OptionRegle in OptionsRegle));
+end{TFormPlateau.DonneOptionsRegle};
+
 procedure TFormPlateau.LitParametres;
-var IniFile     : TIniFile;
+var i           : Integer;
     ta          : TTypeAffichage;
     fs          : TFormatStats;
-    i, eor      : Integer;
-    nr          : TNumRegle;
+    IniFile     : TIniFile;
 begin
 IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
 try
@@ -798,26 +889,7 @@ try
   TimerClignotement.Interval := TimerAutomate.Interval div 2;
 
   // 3. Règle du jeu (élément orEvtJckptAcht activé uniquement)
-  OptionsRegle := []; // Défini dans les événements OnClick des rubriques de menu
-  eor := IniFile.ReadInteger(stSectionOptions, stEntreeRegle, Ord(orEvtJckptAcht));
-  for nr := Low(TNumRegle) to High(TNumRegle) do
-    begin
-    if (Ord(NumRegle[nr]) and eor) = Ord(NumRegle[nr]) then
-      case NumRegle[nr] of
-        orEvtJckptAcht: begin
-                        MenuItemRegleEvtJackpotAchat.Checked := True;
-                        MenuItemRegleClick(MenuItemRegleEvtJackpotAchat);
-                        end;
-        orEvtJckptVnte: begin
-                        MenuItemRegleEvtJackpotVente.Checked := True;
-                        MenuItemRegleClick(MenuItemRegleEvtJackpotVente);
-                        end;
-        orEvtJckptLiqd: begin
-                        MenuItemRegleEvtJackpotLiquidation.Checked := True;
-                        MenuItemRegleClick(MenuItemRegleEvtJackpotLiquidation);
-                        end;
-      end;
-    end;
+  AppliqueOptionsRegle(IniFile.ReadInteger(stSectionOptions, stEntreeRegle, Ord(orEvtJckptAcht)));
 
   // 4. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
   ta := TTypeAffichage(IniFile.ReadInteger(stSectionAffichage, stEntreeStats, Ord(taBilanTour))); // Bilan tour par défaut
@@ -890,10 +962,111 @@ finally
 end{try}
 end{procedure TFormPlateau.EcritParametres};
 
-procedure TFormPlateau.Aide1Click(Sender: TObject);
+procedure TFormPlateau.ChargePartie; // v1.1 partie enregistrée
+const (* Titres *)
+      stChargementImpossible : pWideChar = 'Chargement impossible';
+      stChargementTermine    : pWideChar = 'Chargement terminé';
+      (* Messages *)
+      stErrLctFichier        : pWideChar = 'Erreur lors de la lecture du fichier.';
+      stErrFrmFichInc        : pWideChar = 'Format du fichier incorrect : version de fichier attendue.';
+      stChargementOK         : pWideChar = 'La partie est chargée.'#13'Les options de règles du jeu de la partie ont été appliquées (voir Options | Règles du jeu).'#13'Choisissez Partie | Reprise (Ctrl+R) pour poursuivre la partie.';
+      stPartieChargee        : String    = 'Partie chargée.';
+var   VersionFichier,
+      eor            : Integer;
+      Nbj            : TNbJoueurs;
+      stExtension,
+      stNomFichier   : String;
+      fs             : TFileStream;
 begin
-ShellExecute(0, 'Open', pChar(ExtractFilePath(Application.ExeName)+'\html\index.html'), '', '', SW_SHOWNORMAL);
-end;
+ChargementEnCours := True; // Permet de rafraîchir l'état de la partie sans rien déclencher (TPartie.ChangeEtat)
+stNomFichier := ExtractFileName(OpenDialog.FileName);
+stExtension := stNomFichier.Substring(stNomFichier.Length - 5, 5);
+if stExtension <> '.' + OpenDialog.DefaultExt then
+  Application.MessageBox(stErrNomFichInc, stChargementImpossible, MB_ICONHAND)
+else
+  begin
+  stNomPartie := stNomFichier.Substring(0, stNomFichier.Length - 5);
+  try
+    fs := TFileStream.Create(OpenDialog.FileName, fmOpenRead);
+    try
+      with fs do
+        begin
+        // 1. Version de fichier
+        ReadBuffer(VersionFichier, sizeof(VersionFichier));
+        if VersionFichier <> VersionCrtFichier then // Pour l'instant, il n'y a qu'une version de fichier
+          Application.MessageBox(stErrFrmFichInc, stChargementImpossible, MB_ICONHAND);
+        // 2. Options règles du jeu
+        ReadBuffer(eor, sizeof(eor));
+        // 3. Initialisation de l'instance Partie
+        FreeAndNil(Partie);
+        ReadBuffer(Nbj, sizeof(Nbj));
+        Partie := TPartie.Create(Nbj, [False, False, False, False, False, False, False]);
+        if not Partie.Charge(fs) then raise EReadError.Create('ChargePartie');
+        end;
+      AppliqueOptionsRegle(eor); // On applique les options de règles du jeu si tout est ok
+      Application.MessageBox(stChargementOK, stChargementTermine, MB_ICONINFORMATION);
+      StatusBar.SimpleText := stPartieChargee;
+    except
+      Application.MessageBox(stErrLctFichier, stChargementImpossible, MB_ICONHAND);
+      // On réinitialise une partie vierge
+      FreeAndNil(Partie);
+      Partie := TPartie.Create(High(TNbJoueurs), [False, False, False, False, False, False, False]);
+    end;
+  finally
+    FreeAndNil(fs);
+    ChargementEnCours := False;
+    Refresh // On rafraîchit tout le plateau dans tous les cas
+  end{try}
+  end
+end{procedure TFormPlateau.ChargePartie};
+
+procedure TFormPlateau.SauvePartie; // v1.1 partie enregistrée
+const (* Titres *)
+      stSauvegardeImpossible : pWideChar = 'Enregistrement impossible';
+      stSauvegardeTerminee   : pWideChar = 'Enregistrement terminé';
+      (* Messages *)
+      stErrEcrFichier    : pWideChar = 'Erreur lors de l''écriture du fichier.';
+      stSauvegardeOK     : pWideChar = 'La partie est sauvegardée.'#13'Choisissez Partie | Reprise (Ctrl+R) pour poursuivre la partie.';
+      stPartieEnregistree    : String    = 'Partie enregistrée.';
+var   stExtension,
+      stNomFichier : String;
+      eor          : Integer;
+      fs           : TFileStream;
+begin
+stNomFichier := ExtractFileName(SaveDialog.FileName);
+stExtension := stNomFichier.Substring(stNomFichier.Length - 5, 5);
+if stExtension <> '.' + SaveDialog.DefaultExt then
+  Application.MessageBox(pWideChar(stErrNomFichInc), pWideChar(stSauvegardeImpossible), MB_ICONHAND)
+else
+  begin
+  stNomPartie := stNomFichier.Substring(0, stNomFichier.Length - 5);
+  try
+    if FileExists(SaveDialog.FileName) then
+      fs := TFileStream.Create(SaveDialog.FileName, fmOpenWrite)
+    else
+      fs := TFileStream.Create(SaveDialog.FileName, fmCreate);
+    try
+      with fs do
+        begin
+        // 1. Version de fichier
+        WriteBuffer(VersionCrtFichier, sizeof(VersionCrtFichier));
+        // 2. Options règles du jeu
+        eor := DonneOptionsRegle;
+        WriteBuffer(eor, sizeof(eor));
+        // 3. Sauvegarde de la partie
+        WriteBuffer(Partie.Nbj, sizeof(Partie.Nbj));
+        if not Partie.Sauve(fs) then raise EWriteError.Create('SauvePartie');
+        end;
+      Application.MessageBox(stSauvegardeOK, stSauvegardeTerminee, MB_ICONINFORMATION);
+      StatusBar.SimpleText := stPartieEnregistree;
+    except
+      Application.MessageBox(stErrEcrFichier, stSauvegardeImpossible, MB_ICONHAND);
+    end{try};
+  finally
+    FreeAndNil(fs);
+  end{try}
+  end
+end{procedure TFormPlateau.SauvePartie};
 
 procedure TFormPlateau.ChangeAccesRegle(MenuItem : TMenuItem; Activer : Boolean);
 var i : Integer;
@@ -905,19 +1078,20 @@ else
   MenuItem.Enabled := Activer;
 end{procedure TFormPlateau.ChangeAccesRegle};
 
-function TFormPlateau.DonneOptionsRegle : Integer;
-var OptionRegle : TOptionRegle;
-begin
-Result := 0;
-for OptionRegle := Low(TOptionRegle) to High(TOptionRegle) do
-  Inc(Result, Ord(OptionRegle) * Ord(OptionRegle in OptionsRegle));
-end;
-
 procedure TFormPlateau.DefinitMessage(stNvMessage : String); // Exécuté en affectant la property stMesssage
 begin
 FMessage := stNvMessage;
 DessineMessage;
 end{TFormPlateau.DefinitMessage};
+
+procedure TFormPlateau.DefinitNomPartie(stNvNomPartie : String); // v1.1 Nom de partie associé au fichier de partie
+begin
+if stNvNomPartie='' then
+  Caption := stParadice
+else
+  Caption := stParadice + ' - ' + stNvNomPartie;
+FNomPartie := stNvNomPartie
+end;
 
 procedure TFormPlateau.DessineMessage; // Exécuté en affectant la property stMesssage
 const stVide = '';

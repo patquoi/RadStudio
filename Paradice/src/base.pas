@@ -3,7 +3,7 @@ unit base;
 interface
 
 uses
-  Vcl.Graphics;
+  System.Classes, Vcl.Graphics;
 
 const
   PrmDe        = 0;
@@ -70,6 +70,9 @@ type
     Id       : TJoueurId;
     constructor Create(TypeEvt : TTypeEvt; NumCase : TNumCaseEvt; x, y : TCoordonnee); overload;
     destructor Destroy; override;
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream) : Boolean;
+    function Charge(fs : TFileStream) : Boolean;
   end{class TCaseEvt};
 
   TEvenement = class
@@ -84,6 +87,9 @@ type
     // Pour affichage définition des événements hors partie
     function ResultatDes(De : array of TDe) : Integer;
     function DonneGain(De : array of TDe) : Integer;
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream) : Boolean;
+    function Charge(fs : TFileStream) : Boolean;
   end{class TEvenement};
 
   TScore = class
@@ -95,18 +101,17 @@ type
     constructor Create(Id : TJoueurId; ScoreDepart : Integer);
     destructor Destroy; override;
     procedure Initialise(Tour : Integer);
-
     procedure Debite(Tour, Score : Integer; Crediteur : TJoueurId);
     function DebitTour(Tour : Integer) : Integer; overload;
     function CumulDebit(Tour : Integer) : Integer; overload;
-
     procedure Credite(Tour, Score : Integer; Debiteur : TJoueurId);
     function CreditTour(Tour : Integer) : Integer; overload;
     function CumulCredit(Tour : Integer) : Integer; overload;
-
     function ScoreTour(Tour : Integer) : Integer;
     function CumulScore(Tour : Integer) : Integer;
-
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+    function Charge(fs : TFileStream; Tour : Integer) : Boolean;
   end{class TScore};
 
   TJackpot = class
@@ -122,6 +127,9 @@ type
     function CumulScore(Tour : Integer) : Integer;
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+    function Charge(fs : TFileStream; Tour : Integer) : Boolean;
   end{class TJackpot};
 
   TPion = class
@@ -136,6 +144,9 @@ type
     procedure ChoisitDirection;
     procedure AvancePion;
     procedure DeplacePion(x, y : TCoordonnee);
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream) : Boolean;
+    function Charge(fs : TFileStream) : Boolean;
   end{class TPion};
 
   TJoueur = class
@@ -158,6 +169,9 @@ type
     function ScoreTour(Tour : Integer) : Integer;
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+    function Charge(fs : TFileStream; Tour : Integer) : Boolean;
   end{class TJoueur};
 
   TPartie = class // Eléments variables d'une partie
@@ -225,23 +239,26 @@ type
     function ScoreTour(Id : TJoueurId; Tour : Integer) : Integer;
     function DebitTour(Id : TJoueurId; Tour : Integer) : Integer;
     function CreditTour(Id : TJoueurId; Tour : Integer) : Integer;
+    // v1.1 partie enregistrée
+    function Sauve(fs : TFileStream) : Boolean;
+    function Charge(fs : TFileStream) : Boolean;
   end{class TPartie};
 
 const
 
   // Constantes générales
 
-  NbCasesDeCote : Integer = 13;
-  NbMaxCouleurs : Integer = 10; // Couleurs joueurs + Pourpre + Noir + Blanc + Gris
+  NbCasesDeCote  : Integer = 13;
+  NbMaxCouleurs  : Integer = 10; // Couleurs joueurs + Pourpre + Noir + Blanc + Gris
 
-  ScoreDepart   : Integer     = 100000;
+  ScoreDepart    : Integer     = 100000;
 
-  xDepart       : TCoordonnee = 7;
-  yDepart       : TCoordonnee = 5;
+  xDepart        : TCoordonnee = 7;
+  yDepart        : TCoordonnee = 5;
 
   Puiss10 : array [TNumChfScr] of Integer         = (1, 10, 100, 1000, 10000, 100000);
 
-  stEtat : array [TEtatPartie] of String = ('', 'Reprise de la partie.', 'Partie interrompue.'); // Message affiché dans la barre de statut
+  stEtat : array [TEtatPartie] of String = ('Partie terminée.', 'Reprise de la partie.', 'Partie interrompue.'); // Message affiché dans la barre de statut. v1.1 : Partie terminée
 
   // Joueurs et couleurs
                                                      // Noir,    Ciel, Magenta,  Orange,   Rouge,   Jaune,    Vert, Pourpre,   Blanc  Gris,
@@ -507,7 +524,9 @@ const
                                                                           (dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune,dpAucune)));
 
   NumBmDp : array [TDirPoss] of Integer = (0, 1, 2, 3, 4, 5, 6, 0, 7, 8, 9, 0, 10, 0, 0, 11); // Pas d'image si plus de 2 directions possibles (sauf départ toutes directions)
-  stNomFichierLog   : String = 'Paradice.log';
+
+  // v1.1 partie enregistrée
+  stMsgErrScoreDebitCredit = 'Score.Debit/Credit';
 
 var
   stRepLocalAppData : String;
@@ -601,6 +620,48 @@ begin
 inherited Destroy;
 end;
 
+// v1.1 partie enregistrée
+
+function TCaseEvt.Sauve(fs : TFileStream) : Boolean;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(TypeEvt, sizeof(TypeEvt));
+    WriteBuffer(NumCase, sizeof(NumCase));
+    // public
+    WriteBuffer(x, sizeof(x));
+    WriteBuffer(y, sizeof(y));
+    WriteBuffer(Id, sizeof(Id));
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function Sauve};
+
+function TCaseEvt.Charge(fs : TFileStream) : Boolean;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(TypeEvt, sizeof(TypeEvt));
+    ReadBuffer(NumCase, sizeof(NumCase));
+    // public
+    ReadBuffer(x, sizeof(x));
+    ReadBuffer(y, sizeof(y));
+    ReadBuffer(Id, sizeof(Id));
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function Charge};
+
 // -----------------
 // Classe TEvenement
 // -----------------
@@ -618,10 +679,10 @@ self.TypeEvt:=TypeEvt;
 end;
 
 destructor TEvenement.Destroy;
-var n : TNumCaseEvt;
+var ce : TNumCaseEvt;
 begin
-for n := Low(TNumCaseEvt) to High(TNumCaseEvt) do
-  FreeAndNil(CaseEvt[n]);
+for ce := Low(TNumCaseEvt) to High(TNumCaseEvt) do
+  FreeAndNil(CaseEvt[ce]);
 inherited Destroy;
 end;
 
@@ -686,6 +747,48 @@ else
   Result:=0;
 end{case of};
 end{function TEvenement.DonneGain};
+
+// v1.1 partie enregistrée
+
+function TEvenement.Sauve(fs : TFileStream) : Boolean;
+const stFrmMsgErr = 'Partie.Evt[%d].CaseEvt[%d].Sauve';
+var ce : TNumCaseEvt;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(TypeEvt, sizeof(TypeEvt));
+    for ce := Low(TNumCaseEvt) to High(TNumCaseEvt) do
+      if not CaseEvt[ce].Sauve(fs) then raise EWriteError.CreateFmt(stFrmMsgErr, [Ord(TypeEvt), Ord(ce)]);
+    // public
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function TEvenement.Sauve};
+
+function TEvenement.Charge(fs : TFileStream) : Boolean;
+const stFrmMsgErr = 'Partie.Evt[%d].CaseEvt[%d].Charge';
+var ce : TNumCaseEvt;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(TypeEvt, sizeof(TypeEvt));
+    for ce := Low(TNumCaseEvt) to High(TNumCaseEvt) do
+      if not CaseEvt[ce].Charge(fs) then raise EReadError.CreateFmt(stFrmMsgErr, [Ord(TypeEvt), Ord(ce)]);
+    // public
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function TEvenement.Charge};
 
 // -------------
 // Classe TScore
@@ -774,6 +877,86 @@ for t := 0 to Tour do
   Inc(Result, ScoreTour(t));
 end;
 
+// v1.1 partie enregistrée
+
+function TScore.Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+
+function SauveDebitCredit : Boolean;
+var t : Integer;
+    j : TJoueurId;
+begin
+Result := True;
+try
+  for t := 0 to Tour do
+    for j := Low(TJoueurId) to High(TJoueurId) do
+      with fs do
+        begin
+        WriteBuffer(Credit[t, Ord(j)], sizeof(Credit[t, Ord(j)]));
+        WriteBuffer(Debit[t, Ord(j)], sizeof(Debit[t, Ord(j)]));
+        end;
+except
+  Result := False;
+end;
+end{function SauveDebitCredit};
+
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(Id, sizeof(Id));
+    if not SauveDebitCredit then raise EWriteError.Create(stMsgErrScoreDebitCredit);
+    // public
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function Sauve};
+
+function TScore.Charge(fs : TFileStream; Tour : Integer) : Boolean;
+
+function ChargeDebitCredit : Boolean;
+var t : Integer;
+    j : TJoueurId;
+begin
+Result := True;
+try
+  SetLength(Debit, Tour+1);
+  SetLength(Credit, Tour+1);
+  for t := 0 to Tour do
+    begin
+    SetLength(Debit[t], Ord(High(TJoueurId))-Ord(Low(TJoueurId))+1);
+    SetLength(Credit[t], Ord(High(TJoueurId))-Ord(Low(TJoueurId))+1);
+    for j := Low(TJoueurId) to High(TJoueurId) do
+      with fs do
+        begin
+        ReadBuffer(Credit[t, Ord(j)], sizeof(Credit[t, Ord(j)]));
+        ReadBuffer(Debit[t, Ord(j)], sizeof(Debit[t, Ord(j)]));
+      end;
+    end;
+except
+  Result := False;
+end;
+end{function ChargeDebitCredit};
+
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(Id, sizeof(Id));
+    if not ChargeDebitCredit then raise EReadError.Create(stMsgErrScoreDebitCredit);
+    // public
+    // protected
+    end;
+except
+  Result:=False;
+end{try}
+end{function Charge};
+
 // ---------------
 // Classe TJackpot
 // ---------------
@@ -822,6 +1005,46 @@ function TJackpot.CreditTour(Tour : Integer) : Integer;
 begin
 Result := Score.CreditTour(Tour);
 end;
+
+// v1.1 partie enregistrée
+
+function TJackpot.Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+const stFrmMsgErr = 'Partie.Jckpt.%s.Sauve';
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    // public
+    // protected
+    if not Score.Sauve(fs, Tour) then raise EWriteError.CreateFmt(stFrmMsgErr, ['Score']);
+    WriteBuffer(DrnSc, sizeof(DrnSc));
+    WriteBuffer(DrnJr, sizeof(DrnJr));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TJackpot.Sauve};
+
+function TJackpot.Charge(fs : TFileStream; Tour : Integer) : Boolean;
+const stFrmMsgErr = 'Partie.Jckpt.%s.Charge';
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    // public
+    // protected
+    if not Score.Charge(fs, Tour) then raise EReadError.CreateFmt(stFrmMsgErr, ['Score']);
+    ReadBuffer(DrnSc, sizeof(DrnSc));
+    ReadBuffer(DrnJr, sizeof(DrnJr));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TJackpot.Charge};
 
 // ------------
 // Classe TPion
@@ -878,6 +1101,48 @@ self.y := y;
 CAP := 0;
 Dir := dIndefinie; // Oblige à déterminer la direction à la prochaine case
 end;
+
+// v1.1 partie enregistrée
+
+function TPion.Sauve(fs : TFileStream) : Boolean;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(Id, sizeof(Id));
+    // public
+    // protected
+    WriteBuffer(x, sizeof(x));
+    WriteBuffer(y, sizeof(y));
+    WriteBuffer(Dir, sizeof(Dir));
+    WriteBuffer(CAP, sizeof(CAP));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TPion.Sauve};
+
+function TPion.Charge(fs : TFileStream) : Boolean;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(Id, sizeof(Id));
+    // public
+    // protected
+    ReadBuffer(x, sizeof(x));
+    ReadBuffer(y, sizeof(y));
+    ReadBuffer(Dir, sizeof(Dir));
+    ReadBuffer(CAP, sizeof(CAP));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TPion.Charge};
 
 // --------------
 // Classe TJoueur
@@ -954,6 +1219,49 @@ begin
 Result := Score.CreditTour(Tour);
 end;
 
+// v1.1 partie enregistrée
+
+function TJoueur.Sauve(fs : TFileStream; Tour : Integer) : Boolean;
+const stFrmMsgErr = 'Partie.Jr[%d].%s.Sauve';
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(Id, sizeof(Id));
+    // public
+    // protected
+    WriteBuffer(Elimine, sizeof(Elimine));
+    WriteBuffer(PosElm, sizeof(PosElm));
+    if not Pion.Sauve(fs) then raise EWriteError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Pion']);;
+    if not Score.Sauve(fs, Tour) then raise EWriteError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Score']);;
+    end;
+except
+  Result:=False;
+end{try}
+end{function TJoueur.Sauve};
+
+function TJoueur.Charge(fs : TFileStream; Tour : Integer) : Boolean;
+const stFrmMsgErr = 'Partie.Jr[%d].%s.Charge';
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(Id, sizeof(Id));
+    // public
+    // protected
+    ReadBuffer(Elimine, sizeof(Elimine));
+    ReadBuffer(PosElm, sizeof(PosElm));
+    if not Pion.Charge(fs) then raise EReadError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Pion']);
+    if not Score.Charge(fs, Tour) then raise EReadError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Score']);
+    end;
+except
+  Result:=False;
+end{try}
+end{function TJoueur.Charge};
 
 // --------------
 // Classe TPartie
@@ -1308,21 +1616,31 @@ try
       MenuItemPartieReprise.Enabled := (NvEtat = epPause);
       MenuItemPartiePause.Enabled := (NvEtat = epEnCours);
       MenuItemPartieAbandon.Enabled := (NvEtat = epPause);
+
+      //v1.1 parties enregistrées
+      MenuItemPartieEnregistrer.Enabled := (NvEtat = epPause);
+      MenuItemPartieEnregistrerSous.Enabled := (NvEtat = epPause);
+      MenuItemPartieOuvrir.Enabled := (NvEtat = epInactif);
+
       ChangeAccesRegle(MenuItemRegle, NvEtat = epInactif); // Interdit de changer les options de règle du jeu pendant une partie
-      case NvEtat of
-        epInactif: begin
-                   self.Reprise := rjIndefinie;
-                   TimerClignotement.Enabled := False;
-                   end;
-        epEnCours: case Reprise of
-                     rjPion:     TimerPion.Enabled := true;
-                     rjDes:      TimerDes.Enabled := true;
-                     rjAutomate: TimerAutomate.Enabled := true;
-                   end;
-        epPause:   self.Reprise := rjIndefinie;
-      end{case of};
-      if (FEtat <> epInactif) or (NvEtat <> epEnCours) then
-        StatusBar.SimpleText := stEtat[NvEtat];
+      if not ChargementEnCours then
+        begin
+        case NvEtat of
+          epInactif: begin
+                     self.Reprise := rjIndefinie;
+                     TimerClignotement.Enabled := False;
+                     stNomPartie := ''; // v1.1 : on remet à zéro de nom de la partie (défini au moment d'enregistrer)
+                     end;
+          epEnCours: case Reprise of
+                       rjPion:     TimerPion.Enabled := true;
+                       rjDes:      TimerDes.Enabled := true;
+                       rjAutomate: TimerAutomate.Enabled := true;
+                     end;
+          epPause:   self.Reprise := rjIndefinie;
+        end{case of};
+        if (FEtat <> epInactif) or (NvEtat <> epEnCours) then
+          StatusBar.SimpleText := stEtat[NvEtat];
+        end;
       end;
   except
   end;
@@ -1708,6 +2026,78 @@ function TPartie.CreditTour(Id : TJoueurId; Tour : Integer) : Integer;
 begin
 Result := Jr[Id].CreditTour(Tour);
 end;
+
+// v1.1 partie enregistrée
+
+function TPartie.Sauve(fs : TFileStream) : Boolean;
+const stFrmMsgErr = 'Partie.%s.Sauve';
+var j  : TJoueurId;
+    te : TTypeEvt;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    WriteBuffer(FEtat, sizeof(FEtat));
+    WriteBuffer(FPhase, sizeof(FPhase));
+    WriteBuffer(PosElm, sizeof(PosElm));
+    // public
+    WriteBuffer(Reprise, sizeof(Reprise));
+    WriteBuffer(PhaseSvt, sizeof(PhaseSvt));
+    WriteBuffer(EvtAVendre, sizeof(EvtAVendre));
+    // protected
+    WriteBuffer(TrCrt, sizeof(TrCrt));
+    WriteBuffer(JrCrt, sizeof(TrCrt));
+    if not Jckpt.Sauve(fs, TrCrt) then raise EWriteError.CreateFmt(stFrmMsgErr, ['Jckpt']);
+    WriteBuffer(De, sizeof(De));
+    for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
+      if not Jr[j].Sauve(fs, TrCrt) then raise EWriteError.CreateFmt(stFrmMsgErr, ['Jr['+IntToStr(Ord(j))+']']);
+    for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
+      if not Evt[te].Sauve(fs) then raise EWriteError.CreateFmt(stFrmMsgErr, ['Evt['+IntToStr(Ord(te))+']']);
+    WriteBuffer(scDes, sizeof(scDes));
+    WriteBuffer(scEvt, sizeof(scEvt));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TPartie.Sauve};
+
+function TPartie.Charge(fs : TFileStream) : Boolean;
+const stFrmMsgErr = 'Partie.%s.Charge';
+var j    : TJoueurId;
+    te   : TTypeEvt;
+    Etat : TEtatPartie;
+begin
+Result:=True;
+try
+  with fs do
+    begin
+    // private
+    ReadBuffer(Etat, sizeof(Etat));
+    self.Etat := Etat; // Rafraîchit les menus sans rien déclencher
+    ReadBuffer(FPhase, sizeof(FPhase));
+    ReadBuffer(PosElm, sizeof(PosElm));
+    // public
+    ReadBuffer(Reprise, sizeof(Reprise));
+    ReadBuffer(PhaseSvt, sizeof(PhaseSvt));
+    ReadBuffer(EvtAVendre, sizeof(EvtAVendre));
+    // protected
+    ReadBuffer(TrCrt, sizeof(TrCrt));
+    ReadBuffer(JrCrt, sizeof(TrCrt));
+    if not Jckpt.Charge(fs, TrCrt) then raise EReadError.CreateFmt(stFrmMsgErr, ['Jckpt']);
+    ReadBuffer(De, sizeof(De));
+    for j := Succ(Low(TJoueurId)) to TJoueurId(Nbj) do
+      if not Jr[j].Charge(fs, TrCrt) then raise EReadError.CreateFmt(stFrmMsgErr, ['Jr['+IntToStr(Ord(j))+']']);
+    for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
+      if not Evt[te].Charge(fs) then raise EReadError.CreateFmt(stFrmMsgErr, ['Evt['+IntToStr(Ord(te))+']']);
+    ReadBuffer(scDes, sizeof(scDes));
+    ReadBuffer(scEvt, sizeof(scEvt));
+    end;
+except
+  Result:=False;
+end{try}
+end{function TPartie.Charge};
 
 // ============================================================================
 // Initialisation & finalisation

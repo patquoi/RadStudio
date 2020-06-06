@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Paradice"
-#define MyAppVersion "1.0.1.10"
+#define MyAppVersion "1.1.0.26"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
 
@@ -48,6 +48,12 @@ Name: "{group}\Aide de Paradice"; Filename: "{app}\bin\html\index.html"; Working
 Name: "{group}\Lisez-Moi (Paradice)"; Filename: "{app}\lisezmoi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
 Name: "{group}\Sources de Paradice"; Filename: "{app}\paradice-win64-src.zip"; Comment: "Code source de Paradice"
 
+[Registry]
+Root: HKCR; SubKey: ".prdc"; ValueType: string; ValueData: "Paradice";
+Root: HKCR; SubKey: "Paradice"; ValueType: string; ValueData: "Partie de Paradice";
+Root: HKCR; SubKey: "Paradice\DefaultIcon"; ValueType: string; ValueData: "{app}\bin\Paradice.exe,0";
+Root: HKCR; SubKey: "Paradice\shell\open\command"; ValueType: string; ValueData: "{app}\bin\Paradice.exe ""%1""";
+
 [Run]
 Filename: "{app}\lisezmoi.txt"; Description: "Lisez-moi !"; Flags: postinstall shellexec skipifsilent
 Filename: "{app}\bin\Paradice.exe"; Description: "Lancer l'application"; Flags: postinstall nowait skipifsilent
@@ -84,6 +90,8 @@ Source: "..\bin\html\png\gde.png"; DestDir: "{app}\bin\html\png"; Flags: ignorev
 Source: "..\bin\html\png\j.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\mo.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\mp.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\mpep.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\mpo.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\mv.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\ni.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\np.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
@@ -106,6 +114,7 @@ Source: "..\bin\html\png\plt.png"; DestDir: "{app}\bin\html\png"; Flags: ignorev
 Source: "..\bin\html\png\pm.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\po.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\pr.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\prdc.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\pslcd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\pv.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\r.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
@@ -124,6 +133,7 @@ Source: "..\bin\html\png\spedd.png"; DestDir: "{app}\bin\html\png"; Flags: ignor
 Source: "..\bin\html\png\sptdd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\t.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\ta.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\tandp.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\th.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\zdedd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\zdi.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion

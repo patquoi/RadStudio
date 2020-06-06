@@ -53,6 +53,8 @@
           <LI><A HREF="#aslcostlp">Action selon la case où se trouve le pion</A>
         </UL>
       <LI><A HREF="#odj">Options de jeu</A>	
+	  <LI><A HREF="#idupec">Interruption d&rsquo;une partie en cours</A>
+      <LI><A HREF="#cdups">Chargement d&rsquo;une partie sauvegardée</A>
     </UL>		
   <LI><A HREF="#a">Annexes</A>
     <UL>
@@ -253,7 +255,7 @@ Le <B>dernier joueur restant gagne la partie</B>.
 <A NAME="ldup"></A><H2>Lancement d&rsquo;une partie</H2>
 
 Pour démarrer une partie, il faut <B>définir les joueurs</B>. Pour ce faire, il faut aller dans le menu <I><U>P</U>artie</I> et choisir <I><U>N</U>ouvelle...</I> ou appuyer sur <I>Ctrl+N</I>&nbsp;:<P>
-<CENTER><IMG Alt="Menu Partie" SRC="png/mp.png" HEIGHT=121 WIDTH=179 BORDER=0></CENTER><P>
+<CENTER><IMG Alt="Menu Partie" SRC="png/mp.png" HEIGHT=180 WIDTH=195 BORDER=0></CENTER><P>
 Vous obtenez cette boîte de dialogue&nbsp;:<P>
 <CENTER><IMG Alt="Boîte de dialogue Nouvelle partie" SRC="png/nvp.png" HEIGHT=384 WIDTH=299 BORDER=0></CENTER><P> 
 
@@ -353,6 +355,46 @@ Pour accélérer le jeu, il est possible d&rsquo;ajouter deux autres situations où
   <LI>Quand un joueur <B>est éliminé</B> parce qu&rsquo;il ne peut plus payer même en vendant tous ses événements&nbsp;: ces derniers sont <B>liquidés</B> et cédés au jackpot.
 </UL>  
 
+<A NAME="idupec"></A><H2>Interruption d&rsquo;une partie en cours</H2>
+
+Il est possible d&rsquo;interrompre une partie pour simplement faire une <B>pause</B> mais aussi pour <B>abandonner</B> ou <B>enregistrer</B>.<BR>
+Pour ce faire, il faut aller dans le menu <I><U>P</U>artie</I> et choisir <I><U>P</U>ause</I> ou appuyer sur <I>Ctrl+P</I>.<P>
+Le menu <I><U>P</U>artie</I> apparaît alors comme ceci&nbsp;:
+
+<CENTER><IMG Alt="Menu Partie en pause" SRC="png/mpep.png" HEIGHT=180 WIDTH=195 BORDER=0></CENTER><P>
+
+<UL>
+  <LI> Pour <B>reprendre</B> la partie, choisir <I><U>R</U>eprise</I> ou appuyer sur <I>Ctrl+R</I>.
+  <LI> Pour <B>enregistrer</B> une partie, choisir <I><U>E</U>nregistrer</I> ou appuyer sur <I>F2</I>&nbsp;: Si la partie n&rsquo;a jamais été sauvegardée, un nom de fichier sera demandé.
+  <LI> Pour <B>changer le nom</B> d&rsquo;une partie, choisir <I>Enregistrer <U>s</U>ous...</I> ou appuyer sur <I>Maj+F2</I>&nbsp;: un nouveau nom de fichier sera demandé.
+  <LI> Pour <B>abandonner</B> la partie sans quitter l&rsquo;application, choisir <I><U>A</U>bandon</I> ou appuyer sur <I>Ctrl+A</I>.
+</UL>
+
+Quand une partie est <B>sauvegardée</B>, son <B>nom apparaît dans le titre</B> de la fenêtre&nbsp;:<P>
+<CENTER><IMG Alt="Titre avec nom de partie" SRC="png/tandp.png" HEIGHT=44 WIDTH=208 BORDER=0></CENTER><P>
+
+<A NAME="cdups"></A><H2>Chargement d&rsquo;une partie sauvegardée</H2>
+
+Pour pouvoir <B>continuer une partie sauvegardée</B>, il ne faut pas qu'une partie soit <B>en cours</B> ou <B>en pause</B>&nbsp;:
+<UL>
+  <LI>Si la partie est <B>en cours</B>, il faut l&rsquo;<B>interrompre</B> (Ctrl+P)&nbsp;;
+  <LI>Si la partie est <B>interrompue</B>, il faut l&rsquo;<B>abandonner</B> (Ctrl+A).
+</UL>
+
+Le menu <I><U>P</U>artie</I> apparaît alors comme ceci&nbsp;:
+
+<CENTER><IMG Alt="Menu Partie" SRC="png/mpo.png" HEIGHT=180 WIDTH=195 BORDER=0></CENTER><P>
+
+Choisir <I><U>O</U>uvrir...</I> ou appuyer sur <I>F3</I> pour <B>charger une partie</B>&nbsp;: un nom de fichier sera demandé.<BR>
+Les fichiers de partie <I>Paradice</I> ont une extension <TT><B>.prdc</B></TT>.<P>
+
+Si l&rsquo;application <I>Paradice</I> <B>n&rsquo;est pas lancée</B>, il est possible de <B>double cliquer</B> sur un fichier de partie pour <B>l&rsquo;ouvrir avec l&rsquo;application</B>.<BR>
+Les fichiers sont facilement reconnaissables&nbsp;:<P>
+<CENTER><IMG Alt="Icône partie Paradice" SRC="png/prdc.png" HEIGHT=60 WIDTH=160 BORDER=0></CENTER><P>
+
+Quand une partie est <B>chargée</B>, son <B>nom apparaît dans le titre</B> de la fenêtre&nbsp;:<P>
+<CENTER><IMG Alt="Titre avec nom de partie" SRC="png/tandp.png" HEIGHT=44 WIDTH=208 BORDER=0></CENTER><P>
+
 <HR>
 
 <A NAME="a"></A><H1>Annexes</H1>
@@ -446,12 +488,16 @@ Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case
 <CENTER><TABLE CELLPADDING=1 CELLSPACING=1 BORDER=1>
   <TR><TH>Raccourci</TH><TH>Equivalent menu</TH><TH>Contexte</TH><TH>Action</TH></TR>
 
-  <TR><TD align=center>Ctrl+N</TD><TD><U>P</U>artie | <U>N</U>ouvelle...</TD><TD align=center rowspan=2>Aucune partie<BR>en cours ou en pause</TD><TD>Ouvre une boîte de dialogue pour définir le nombre et le type des joueurs d&rsquo;une nuvelle partie.</TD></TR>
-  <TR><TD align=center>Ctrl+O</TD><TD><U>P</U>artie | Dém<U>o</U>nstration</TD><TD align=center >Lance une démonstration de partie avec six joueurs automates.</TD></TR>
+  <TR><TD align=center>F4</TD><TD><U>P</U>artie | <U>N</U>ouvelle...</TD><TD align=center rowspan=2>Aucune partie<BR>ni en cours, ni en pause</TD><TD>Ouvre une boîte de dialogue pour définir le nombre et le type des joueurs d&rsquo;une nuvelle partie.</TD></TR>
+  <TR><TD align=center>Maj+F4</TD><TD><U>P</U>artie | <U>D</U>émonstration</TD><TD>Lance une démonstration de partie avec six joueurs automates.</TD></TR>
   <TR><TD align=center>Ctrl+P</TD><TD><U>P</U>artie | <U>P</U>ause</TD><TD align=center >Partie en cours</TD><TD>Met en pause une partie en cours.</TD></TR>
-  <TR><TD align=center>Ctrl+R</TD><TD><U>P</U>artie | <U>R</U>eprise</TD><TD align=center rowspan=2>Partie en pause</TD><TD>Reprend une partie en pause.</TD></TR>
+  <TR><TD align=center>Ctrl+R</TD><TD><U>P</U>artie | <U>R</U>eprise</TD><TD align=center rowspan=4>Partie en pause</TD><TD>Reprend une partie en pause.</TD></TR>
   <TR><TD align=center>Ctrl+A</TD><TD><U>P</U>artie | <U>A</U>bandon</TD><TD>Abandonne une partie en pause.</TD></TR>
 
+  <TR><TD align=center>F2</TD><TD><U>P</U>artie | <U>E</U>nregistrer</TD><TD>Enregistre la partie en pause si celle-ci a déjà été enregistrée sinon ouvre une boîte de dialogue afin de préciser le chemin et le nom du fichier.</TD></TR>
+  <TR><TD align=center>Maj+F2</TD><TD><U>P</U>artie | Enregistrer <U>s</U>ous...</TD><TD>Ouvre une boîte de dialogue afin de changer le chemin et/ou le nom du fichier de la partie en pause.</TD></TR>
+  <TR><TD align=center>F3</TD><TD><U>P</U>artie | <U>O</U>uvrir...</TD><TD align=center>Aucune partie<BR>ni en cours, ni en pause</TD><TD>Ouvre une boîte de dialogue afin de sélectionner le fichier d&rsquo;une partie enregistrée.</TD></TR>
+  
   <TR><TD align=center>Ctrl+F</TD><TD><U>O</U>ptions | <U>F</U>onte...</TD><TD align=center rowspan=19>Tout<BR>contexte</TD><TD>Change la police des messages.</TD></TR>
   <TR><TD align=center>Ctrl+I</TD><TD><U>O</U>ptions | <U>V</U>itesse... | Rap<U>i</U>de</TD><TD>Passe la vitesse de jeu à &laquo;&nbsp;Rapide&nbsp;&raquo;.</TD></TR>
   <TR><TD align=center>Ctrl+M</TD><TD><U>O</U>ptions | <U>V</U>itesse... | <U>M</U>oyenne</TD><TD>Passe la vitesse de jeu à &laquo;&nbsp;Moyenne&nbsp;&raquo;.</TD></TR>
@@ -483,7 +529,7 @@ Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case
 
 <HR>
 
-<CENTER>Dernière mise à jour&nbsp;: le 25 mai 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
+<CENTER>Dernière mise à jour&nbsp;: le 1<sup>er</sup> juin 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
 
 </BODY>
 

@@ -1,4 +1,5 @@
-! Sauvegarde de partie
+! Hints de rubriques de menus dans la barre de statuts (options de règles du jeu)
+! Ajouter la règle du jeu : Evénement du pion éliminé => Jackpot
 
 ++ Gestion des records :
  - Débit pour un événement

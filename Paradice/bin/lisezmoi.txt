@@ -52,10 +52,21 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1 - 01/06/2020] Sauvegarde de partie
+ - Il est possible d'enregistrer et ouvrir une partie. Les fichiers ont une
+   extension prdc.
+ - Les raccourcis pour "Partie | Nouvelle..." et "Partie | Démonstration" sont
+   respectivement F4 au lieu de Ctrl+N et Maj+F4 au lieu de Ctrl+O afin d'être
+   en cohérence avec les raccourcis des parties enregistrées :
+     - "Partie | Enregistrer..." = F2
+	 - "Partie | Enregistrer sous..." = Maj+F2
+	 - "Partie | Ouvrir..." = F3.
+ - L'aide HTML a été mise à jour en conséquence. 
+   
 [Version 1.0.1 - 28/05/2020] 
  - Ajout d'une confirmation de quitter si une partie est en cours.
  - Echap permet de quitter la boîte de dialogue des événements.
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 29 mai 2020.
+Dernière mise à jour le 1er juin 2020.
