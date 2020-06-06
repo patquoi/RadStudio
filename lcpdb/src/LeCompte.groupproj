@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{6517C5E7-4250-4082-B3DE-9DCADD4CA40C}</ProjectGuid>
+        <ProjectGuid>{C0F25294-D60E-46C9-A669-1A0237692663}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="lcpdb.dproj">
