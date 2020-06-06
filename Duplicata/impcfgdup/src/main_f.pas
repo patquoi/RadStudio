@@ -358,30 +358,40 @@ const stTitreMessage = 'Import de configuration Duplicata';
 //---------------------------------------------------------------------------
 function GetLocalAppDataDupFolder : String;
 const stVarLocalAppData  = 'LocalAppData';
+      stVarUserProfile   = 'USERPROFILE'; // v1.1
       stRepLocAppDataDup = '\Patquoi.fr\Duplicata';
-var n : DWord;
-begin
-n:=0;
-n:=GetEnvironmentVariable(pChar(stVarLocalAppData), nil, n);
-if n>0 then
+var stExePath : String; // v1.1
+begin // v1.1 fonction réécrite
+stExePath := ExtractFilePath(ParamStr(0));
+Result := GetEnvironmentVariable(stVarLocalAppData);
+if Result = '' then
   begin
-  SetLength(Result, n-1);
-  if GetEnvironmentVariable(pChar(stVarLocalAppData), pChar(Result), n)<>n-1 then
-    Result:=''
+  Result := GetEnvironmentVariable(stVarUserProfile);
+  if Result = '' then
+    Result := stExePath // Dossier de Duplicata.exe
   else
     begin
-    Result:=Result+stRepLocAppDataDup;
-    if not DirectoryExists(Result) then
-      if not ForceDirectories(Result) then
-        Result:=''
+	  Result := Result + '\Local Settings\Application Data' + stRepLocAppDataDup;
+	  if not DirectoryExists(Result) then
+		  if not ForceDirectories(Result) then
+        Result := stExePath // Dossier de Duplicata.exe
       else
         Result:=Result+'\'
     else
       Result:=Result+'\';
-    end
+    end;
   end
 else
-  Result:=''
+  begin
+  Result := Result + stRepLocAppDataDup;
+  if not DirectoryExists(Result) then
+    if not ForceDirectories(Result) then
+      Result:=stExePath // Dossier de Duplicata.exe
+    else
+      Result:=Result+'\'
+  else
+    Result:=Result+'\';
+  end
 end{function stRepLocalAppDataDup};
 //---------------------------------------------------------------------------
 begin{function TFormMain.TimerTimer}
