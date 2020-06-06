@@ -356,32 +356,42 @@ procedure TFormMain.TimerTimer(Sender: TObject);
 //---------------------------------------------------------------------------
 const stTitreMessage = 'Import de configuration Diplikata';
 //---------------------------------------------------------------------------
-function GetLocalAppDataDupFolder : String;
+function GetLocalAppDataDipFolder : String;
 const stVarLocalAppData  = 'LocalAppData';
-      stRepLocAppDataDup = '\Patquoi.fr\Diplikata';
-var n : DWord;
-begin
-n:=0;
-n:=GetEnvironmentVariable(pChar(stVarLocalAppData), nil, n);
-if n>0 then
+      stVarUserProfile   = 'USERPROFILE'; // v1.1
+      stRepLocAppDataDip = '\Patquoi.fr\Diplikata';
+var stExePath : String; // v1.1
+begin // v1.1 fonction réécrite
+stExePath := ExtractFilePath(ParamStr(0));
+Result := GetEnvironmentVariable(stVarLocalAppData);
+if Result = '' then
   begin
-  SetLength(Result, n-1);
-  if GetEnvironmentVariable(pChar(stVarLocalAppData), pChar(Result), n)<>n-1 then
-    Result:=''
+  Result := GetEnvironmentVariable(stVarUserProfile);
+  if Result = '' then
+    Result := stExePath // Dossier de Diplikata.exe
   else
     begin
-    Result:=Result+stRepLocAppDataDup;
-    if not DirectoryExists(Result) then
-      if not ForceDirectories(Result) then
-        Result:=''
+	  Result := Result + '\Local Settings\Application Data' + stRepLocAppDataDip;
+	  if not DirectoryExists(Result) then
+		  if not ForceDirectories(Result) then
+        Result := stExePath // Dossier de Diplikata.exe
       else
         Result:=Result+'\'
     else
       Result:=Result+'\';
-    end
+    end;
   end
 else
-  Result:=''
+  begin
+  Result := Result + stRepLocAppDataDip;
+  if not DirectoryExists(Result) then
+    if not ForceDirectories(Result) then
+      Result:=stExePath // Dossier de Diplikata.exe
+    else
+      Result:=Result+'\'
+  else
+    Result:=Result+'\';
+  end
 end{function stRepLocalAppDataDup};
 //---------------------------------------------------------------------------
 begin{function TFormMain.TimerTimer}
@@ -389,7 +399,7 @@ if Tag>0 then Exit; // Busy?
 case Timer.Tag of
  0: begin // 1. EXISTENCE DE %LocalAppData% ?
     Tag:=1; // Busy
-    LabeledEditLocalAppData.Text:=GetLocalAppDataDupFolder;
+    LabeledEditLocalAppData.Text:=GetLocalAppDataDipFolder;
     if LabeledEditLocalAppData.Text = '' then
       begin
       AffecteImage(1, False);

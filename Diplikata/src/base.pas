@@ -4374,30 +4374,40 @@ end;
 //---------------------------------------------------------------------------
 procedure InitialiseRepLocalAppData; // v1.7.4 : stRepLocalAppData remplace ExtractFilePath(ParamStr(0))
 const stVarLocalAppData  = 'LOCALAPPDATA';
-      stRepLocAppDataDup = '\Patquoi.fr\Diplikata';
-var n : DWord;
-begin
-n:=0;
-n:=GetEnvironmentVariable(pChar(stVarLocalAppData), nil, n);
-if n>0 then
+      stVarUserProfile   = 'USERPROFILE'; // v1.8.3
+      stRepLocAppDataDip = '\Patquoi.fr\Diplikata';
+var stExePath : String; // v1.8.3
+begin // v1.8.3 procédure réécrite
+stExePath := ExtractFilePath(ParamStr(0));
+stRepLocalAppData := GetEnvironmentVariable(stVarLocalAppData);
+if stRepLocalAppData = '' then
   begin
-  SetLength(stRepLocalAppData, n-1);
-  if GetEnvironmentVariable(pChar(stVarLocalAppData), pChar(stRepLocalAppData), n)<>n-1 then
-    stRepLocalAppData:=ExtractFilePath(ParamStr(0)) // Dossier de Diplikata.exe
+  stRepLocalAppData := GetEnvironmentVariable(stVarUserProfile);
+  if stRepLocalAppData = '' then
+    stRepLocalAppData := stExePath // Dossier de Diplikata.exe
   else
     begin
-    stRepLocalAppData:=stRepLocalAppData+stRepLocAppDataDup;
-    if not DirectoryExists(stRepLocalAppData) then
-      if not ForceDirectories(stRepLocalAppData) then
-        stRepLocalAppData:=ExtractFilePath(ParamStr(0)) // Dossier de Diplikata.exe
+	  stRepLocalAppData := stRepLocalAppData + '\Local Settings\Application Data' + stRepLocAppDataDip;
+	  if not DirectoryExists(stRepLocalAppData) then
+		  if not ForceDirectories(stRepLocalAppData) then
+        stRepLocalAppData := stExePath // Dossier de Diplikata.exe
       else
         stRepLocalAppData:=stRepLocalAppData+'\'
     else
       stRepLocalAppData:=stRepLocalAppData+'\';
-    end
+    end;
   end
 else
-  stRepLocalAppData:=ExtractFilePath(ParamStr(0)); // Dossier de Diplikata.exe
+  begin
+  stRepLocalAppData := stRepLocalAppData + stRepLocAppDataDip;
+  if not DirectoryExists(stRepLocalAppData) then
+    if not ForceDirectories(stRepLocalAppData) then
+      stRepLocalAppData:=stExePath // Dossier de Diplikata.exe
+    else
+      stRepLocalAppData:=stRepLocalAppData+'\'
+  else
+    stRepLocalAppData:=stRepLocalAppData+'\';
+  end
 end;
 //---------------------------------------------------------------------------
 initialization
