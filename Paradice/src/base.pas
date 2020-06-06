@@ -258,7 +258,7 @@ const
 
   Puiss10 : array [TNumChfScr] of Integer         = (1, 10, 100, 1000, 10000, 100000);
 
-  stEtat : array [TEtatPartie] of String = ('Partie terminée.', 'Reprise de la partie.', 'Partie interrompue.'); // Message affiché dans la barre de statut. v1.1 : Partie terminée
+  stEtat : array [TEtatPartie] of String = ('Partie inactive.', 'Partie reprise.', 'Partie interrompue.'); // Message affiché dans la barre de statut. v1.1.1 : Partie inactive+reprise.
 
   // Joueurs et couleurs
                                                      // Noir,    Ciel, Magenta,  Orange,   Rouge,   Jaune,    Vert, Pourpre,   Blanc  Gris,
@@ -1410,7 +1410,7 @@ y := Jr[JrCrt].Pion.y;
 tc := TypeCase[x, y];
 te := TypeEvtCase[tc];
 stMsg := Enrichit(stNomJoueur[JrCrt]+',', cNoir, TCouleur(JrCrt))+#13'votre pion est'#13'sur '+Enrichit(tc)+'.'#13' '#13;
-if TypeEvtCase[tc]>teIndefini then
+if te>teIndefini then
   begin
   PrpId := Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id;
   if (PrpId = jIndefini) or (PrpId = jJackpot) then
@@ -1654,6 +1654,8 @@ var stMsg : String;
     nc, ne,
     ap, sc  : Integer;
     x, y    : TCoordonnee;
+    te      : TTypeEvt; // v1.1.1
+    PrpId   : TJoueurId; // v1.1.1
 begin
 case NvPhase of
   phtLanceDes:    with FormPlateau do
@@ -1703,7 +1705,21 @@ case NvPhase of
                       else // Pas assez pour payer
                         if sc + PrixEvt[Nbj] * NbEvenements(JrCrt) < ap then
                           begin
-                          LiquideEvenements; // Tous les événements du joueur passent au Jackpot
+                         // v1.1.1 si pion sur événement libre et règle 1 activée -> Jackpot
+                          te := TypeEvtCase[TypeCase[x, y]];
+                          if te>teIndefini then
+                            begin
+                            PrpId := Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id;
+                            if PrpId = jIndefini then
+                              if orEvtJckptAcht in FormPlateau.OptionsRegle then
+                                begin
+                                Evt[te].CaseEvt[TNumCaseEvt(NumCase[x, y])].Id := jJackpot;
+                                self.DessineCase(x, y);
+                                self.DessineEvenement(te);
+                                self.DessineCompteurEvt(cPourpre, AvecBlanc);
+                                end
+                            end;
+                          LiquideEvenements; // Tous les événements du joueur passent au Jackpot (si règle 3 activée)
                           PaieEvenementDes; // On paie quand même les créanciers mais on passe le joueur en statut Eliminé
                           Elimine(JrCrt); // Permet de définir Elimine mais aussi PosElm
                           self.DessineCase(x, y);

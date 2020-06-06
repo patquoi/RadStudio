@@ -1,5 +1,4 @@
-! Hints de rubriques de menus dans la barre de statuts (options de règles du jeu)
-! Ajouter la règle du jeu : Evénement du pion éliminé => Jackpot
+! Choisir le meilleur parcours pour un pion (automate)
 
 ++ Gestion des records :
  - Débit pour un événement

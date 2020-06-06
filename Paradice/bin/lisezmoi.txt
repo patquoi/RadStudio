@@ -52,6 +52,17 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.1 - 06/06/2020] 
+ - La position de la fenêtre se décalait vers le bas et la droite au fur et à
+   mesure des lancements.
+ - L'aide succinte des rubriques de menu apparaissent dans la barre de statut.
+ - La première règle "Si un joueur ne souhaite pas acheter" est renommée
+   "Si un joueur n'achète pas" incluant la situation où le joueur n'a pas 
+   assez pour acheter l'événement sur lequel se trouve son pion.
+ - Si un joueur est éliminé et que son pion était sur un événement libre,
+   celui est cédé au Jackpot si la règle ci-dessus est activée (cochée). 
+ - Aide HTML mise à jour.
+   
 [Version 1.1 - 01/06/2020] Sauvegarde de partie
  - Il est possible d'enregistrer et ouvrir une partie. Les fichiers ont une
    extension prdc.
@@ -69,4 +80,4 @@ HISTORIQUE DES VERSIONS
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 1er juin 2020.
+Dernière mise à jour le 6 juin 2020.
