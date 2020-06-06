@@ -4150,30 +4150,40 @@ end;
 //---------------------------------------------------------------------------
 procedure InitialiseRepLocalAppData; // v1.8.4 : stRepLocalAppData remplace ExtractFilePath(ParamStr(0))
 const stVarLocalAppData  = 'LOCALAPPDATA';
-      stRepLocAppDataDup = '\Patquoi.fr\Word Killers';
-var n : DWord;
-begin
-n:=0;
-n:=GetEnvironmentVariable(pChar(stVarLocalAppData), nil, n);
-if n>0 then
+      stVarUserProfile   = 'USERPROFILE'; // vWK 1.5.2
+      stRepLocAppDataWK = '\Patquoi.fr\Word Killers';
+var stExePath : String; // vWK 1.5.2
+begin // vWK 1.5.2 procédure réécrite
+stExePath := ExtractFilePath(ParamStr(0));
+stRepLocalAppData := GetEnvironmentVariable(stVarLocalAppData);
+if stRepLocalAppData = '' then
   begin
-  SetLength(stRepLocalAppData, n-1);
-  if GetEnvironmentVariable(pChar(stVarLocalAppData), pChar(stRepLocalAppData), n)<>n-1 then
-    stRepLocalAppData:=ExtractFilePath(ParamStr(0)) // Dossier de WordKillers.exe
+  stRepLocalAppData := GetEnvironmentVariable(stVarUserProfile);
+  if stRepLocalAppData = '' then
+    stRepLocalAppData := stExePath // Dossier de Duplicata.exe
   else
     begin
-    stRepLocalAppData:=stRepLocalAppData+stRepLocAppDataDup;
-    if not DirectoryExists(stRepLocalAppData) then
-      if not ForceDirectories(stRepLocalAppData) then
-        stRepLocalAppData:=ExtractFilePath(ParamStr(0)) // Dossier de WordKillers.exe
+	  stRepLocalAppData := stRepLocalAppData + '\Local Settings\Application Data' + stRepLocAppDataWK;
+	  if not DirectoryExists(stRepLocalAppData) then
+		  if not ForceDirectories(stRepLocalAppData) then
+        stRepLocalAppData := stExePath // Dossier de Duplicata.exe
       else
         stRepLocalAppData:=stRepLocalAppData+'\'
     else
       stRepLocalAppData:=stRepLocalAppData+'\';
-    end
+    end;
   end
 else
-  stRepLocalAppData:=ExtractFilePath(ParamStr(0)); // Dossier de WordKillers.exe
+  begin
+  stRepLocalAppData := stRepLocalAppData + stRepLocAppDataWK;
+  if not DirectoryExists(stRepLocalAppData) then
+    if not ForceDirectories(stRepLocalAppData) then
+      stRepLocalAppData:=stExePath // Dossier de Duplicata.exe
+    else
+      stRepLocalAppData:=stRepLocalAppData+'\'
+  else
+    stRepLocalAppData:=stRepLocalAppData+'\';
+  end
 end;
 //---------------------------------------------------------------------------
 initialization
