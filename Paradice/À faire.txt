@@ -1,5 +1,3 @@
-! Choisir le meilleur parcours pour un pion (automate)
-
 ++ Gestion des records :
  - Débit pour un événement
  - Cumul débits pour un lancer de dés
@@ -17,5 +15,3 @@
  - Jackpot empoché
  - Cumul Jackpots empochés par un joueur
  - Cumul Jackpots empochés dans une partie
- 
-++ Débogage pour le calcul des gains (fichier log)

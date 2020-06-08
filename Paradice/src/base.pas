@@ -1232,6 +1232,7 @@ try
     WriteBuffer(Id, sizeof(Id));
     // public
     // protected
+    WriteBuffer(Automate, sizeof(Automate)); // v1.1.2 : Oubli
     WriteBuffer(Elimine, sizeof(Elimine));
     WriteBuffer(PosElm, sizeof(PosElm));
     if not Pion.Sauve(fs) then raise EWriteError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Pion']);;
@@ -1253,6 +1254,7 @@ try
     ReadBuffer(Id, sizeof(Id));
     // public
     // protected
+    ReadBuffer(Automate, sizeof(Automate)); // v1.1.2 : Oubli
     ReadBuffer(Elimine, sizeof(Elimine));
     ReadBuffer(PosElm, sizeof(PosElm));
     if not Pion.Charge(fs) then raise EReadError.CreateFmt(stFrmMsgErr, [Ord(Id), 'Pion']);

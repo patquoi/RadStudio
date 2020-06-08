@@ -52,6 +52,10 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.2 - 08/06/2020] 
+ - Le type de joueur (Automate) n'était pas stocké dans le fichier de partie.
+ - Les options de règles du jeu étaient mal affichées.
+ 
 [Version 1.1.1 - 06/06/2020] 
  - La position de la fenêtre se décalait vers le bas et la droite au fur et à
    mesure des lancements.
@@ -80,4 +84,4 @@ HISTORIQUE DES VERSIONS
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 6 juin 2020.
+Dernière mise à jour le 8 juin 2020.

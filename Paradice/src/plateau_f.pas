@@ -570,11 +570,15 @@ with FormEvtDes do
 end;
 
 procedure TFormPlateau.MenuItemRegleClick(Sender: TObject);
-var OptionRegle : TOptionRegle;
+var OptionRegle  : TOptionRegle;
+    RegleActivee : Boolean; // v1.1.2 : Ajout
 begin
 OptionRegle := TOptionRegle((Sender as TMenuItem).Tag);
-if not (OptionRegle in OptionsRegle) then
-  Include(OptionsRegle, OptionRegle);
+RegleActivee := (Sender as TMenuItem).Checked;
+if RegleActivee then
+  Include(OptionsRegle, OptionRegle)
+else
+  Exclude(OptionsRegle, OptionRegle)
 end;
 
 procedure TFormPlateau.MenuItemFormatStatsClick(Sender: TObject);
