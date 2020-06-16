@@ -127,6 +127,7 @@ type
     function CumulScore(Tour : Integer) : Integer;
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
+    function CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
     // v1.1 partie enregistrée
     function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
     function Charge(fs : TFileStream; Tour : Integer) : Boolean;
@@ -169,6 +170,7 @@ type
     function ScoreTour(Tour : Integer) : Integer;
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
+    function CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
     // v1.1 partie enregistrée
     function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
     function Charge(fs : TFileStream; Tour : Integer) : Boolean;
@@ -212,6 +214,7 @@ type
     procedure DessineEvolution;
     procedure DessineStatsEvts;
     procedure DessineStatsDes;
+    procedure DessineStatsJrs; // v1.1.3
     procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt);
     procedure DessineCompteurEvt(Couleur : TCouleur; PlusBlanc : Boolean);
@@ -1006,6 +1009,11 @@ begin
 Result := Score.CreditTour(Tour);
 end;
 
+function TJackpot.CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
+begin
+Result := Score.CumulCredit(Tour);
+end;
+
 // v1.1 partie enregistrée
 
 function TJackpot.Sauve(fs : TFileStream; Tour : Integer) : Boolean;
@@ -1218,6 +1226,12 @@ function TJoueur.CreditTour(Tour : Integer) : Integer;
 begin
 Result := Score.CreditTour(Tour);
 end;
+
+function TJoueur.CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
+begin
+Result := Score.CumulCredit(Tour);
+end;
+
 
 // v1.1 partie enregistrée
 
@@ -1853,6 +1867,11 @@ begin
 FormPlateau.DessineStatsDes;
 end;
 
+procedure TPartie.DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+begin
+FormPlateau.DessineStatsJrs;
+end;
+
 procedure TPartie.DessineSelonTypeAffichage;
 begin
 case FormPlateau.TypeAffichage of
@@ -1860,6 +1879,7 @@ case FormPlateau.TypeAffichage of
   taEvolution: DessineEvolution;
   taStatsEvts: DessineStatsEvts;
   taStatsDes : DessineStatsDes;
+  taStatsJrs : DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
 end{case of}
 end;
 

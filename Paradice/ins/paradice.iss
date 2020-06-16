@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Paradice"
-#define MyAppVersion "1.1.2.3"
+#define MyAppVersion "1.1.3.17"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
 
@@ -130,6 +130,7 @@ Source: "..\bin\html\png\s9.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreve
 Source: "..\bin\html\png\smp.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\smrdj.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\spedd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
+Source: "..\bin\html\png\spjs.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\sptdd.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\t.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\ta.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion

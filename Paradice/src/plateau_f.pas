@@ -14,7 +14,7 @@ const
 
 type
 
-  TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3); // Indique l'affichage en haut à gauche (Bilan Tour par défaut)
+  TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3, taStatsJrs=4); // Indique l'affichage en haut à gauche (Bilan Tour par défaut). v1.1.3: Ajout stats par joueur
   TFormatStats   = (fsPourcent=0, fsScore=1); // Indique le format des statistiques de dés et d'événements
 
   TNumRegle      = 1..NbMaxRegles;
@@ -89,6 +89,7 @@ type
     MenuITemPartieEnregistrerSous: TMenuItem;
     OpenDialog: TOpenDialog;
     SaveDialog: TSaveDialog;
+    MenuItemStatsJrs: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
@@ -152,6 +153,7 @@ type
     procedure DessineEvolution;
     procedure DessineStatsEvts;
     procedure DessineStatsDes;
+    procedure DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
     procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
     procedure DessineCompteurEvt(Couleur : TCouleur);
@@ -914,6 +916,10 @@ try
     taStatsDes:  begin
                  MenuItemStatsDes.Checked := True;
                  MenuItemTypeAffichageClick(MenuItemStatsDes);
+                 end;
+    taStatsJrs:  begin // v1.1.3: Ajout stats par joueur
+                 MenuItemStatsJrs.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemStatsJrs);
                  end;
   end{case of};
 
@@ -1942,6 +1948,166 @@ for d1 := Low(TDe) to High(TDe) do
     end
 end{procedure TFormPlateau.DessineStatsDes};
 
+procedure TFormPlateau.DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+const
+    stMaxPC   = '100.00';
+    stFrmPC   =  '00.00';
+var x, y,
+    x0, y0,
+    Taille,
+    tc,dh,dl,
+    p, Chf,
+    r, v, b,
+    Credits   : Integer;
+    Pourcents : Double;
+    stPrcnt   : String;
+    c         : TNumChfScr;
+    j, j1, j2 : TJoueurId;
+    Credit,
+    Pos       : array [TJoueurId] of Integer;
+    bmJrs     : TBitmap;
+
+procedure DetermineTaillePolice;
+begin
+with Canvas do
+  begin
+  Font.Size := 1;
+  while (TextHeight(stMaxPC) < Taille div 6) do
+    Font.Size := Font.Size + 1;
+  Font.Size := Font.Size - 1;
+  end;
+end{procedure DetermineTaillePolice};
+
+
+begin
+Taille := 5*(TailleCase+1);
+x0 := 1*(TailleCase+1);
+y0 := 1*(TailleCase+1);
+tc := Round(Taille / 9);
+dh := Round((Taille - 7 * tc) / 8);
+dl := Round((Taille - 9 * tc) / 4);
+
+DetermineTaillePolice;
+
+// 1. On relève les compteurs
+Credits := 0; // Pour calculer en %
+with Partie do
+  for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
+    begin
+    if j = jJackpot then
+      Credit[j] := Jckpt.CumulCredit(TrCrt)
+    else
+      Credit[j] := Jr[j].CumulCredit(TrCrt) - ScoreDepart;
+    Inc(Credits, Credit[j]);
+    end;
+// 2. On classe
+for j1 := Succ(Low(TJoueurId)) to High(TJoueurId) do
+  begin
+  Pos[j1] := 0;
+  for j2 := Succ(Low(TJoueurId)) to High(TJoueurId) do
+    if (Credit[j1] < Credit[j2]) or
+       ((Credit[j1] = Credit[j2]) and (j2 <= j1)) then
+      Inc(Pos[j1]);
+  end;
+
+// 3. On affiche dans l'ordre
+y := y0 + dh;
+
+for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
+  begin
+  for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
+    if Pos[j] = p then
+      begin
+      // 1. Position
+      x := x0 + dl;
+      bmJrs := TBitmap.Create;
+      VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
+      VirtualImageListChiffres.GetBitmap(NbMaxCouleurs*p + Ord(j), bmJrs);
+      Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
+      FreeAndNil(bmJrs);
+      // 2. Joueur
+      Inc(x, tc);
+      bmJrs := TBitmap.Create;
+      VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
+      if j < jJackpot then
+        VirtualImageListJoueurs.GetBitmap(Ord(j) - 1, bmJrs)
+      else
+        VirtualImageListCases.GetBitmap(Ord(tcJackpot) - 1, bmJrs);
+      Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
+      FreeAndNil(bmJrs);
+      // 3. Credit
+      Inc(x, tc + dl);
+      if FormatStats = fsScore then
+        begin // 3a. Sous forme de Score
+        // Million
+        bmJrs:=TBitmap.Create;
+        VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
+        Chf:=Credit[j] div 1000000;
+        if Chf > 0 then
+          VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + Ord(j), bmJrs);
+        Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
+        FreeAndNil(bmJrs);
+        Inc(x, tc);
+        // Reste du score
+        for c := Low(TNumChfScr) to High(TNumChfScr) do
+          begin
+          bmJrs:=TBitmap.Create;
+          Chf:=(Credit[j] div Puiss10[High(TNumChfScr)-c]) mod 10;
+          VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
+          VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + Ord(j), bmJrs); // Crédit couleur du joueur
+          Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
+          FreeAndNil(bmJrs);
+          Inc(x, tc);
+          end
+        end
+      else // 3b. Sous forme de %
+        begin
+        if Credits>0 then
+          Pourcents := (100.0*Credit[j])/Credits
+        else
+          Pourcents := 0;
+        r := 0; v := 0; b := 0;
+        case Trunc(Pourcents/25) of
+          0: begin
+             b := Round((255*(25-Pourcents))/25);
+             v := Round((255*Pourcents)/25);
+             end;
+          1: begin
+             v := Round((255*(50-Pourcents))/25);
+             r := Round((255*(Pourcents-25))/25);
+             end;
+          2: begin
+             v := Round((255*(Pourcents-50))/25);
+             r := 255;
+             end;
+          3: begin
+             b := Round((255*(Pourcents-75))/25);
+             v := 255;
+             r := 255;
+             end;
+          4: begin
+             b := 255;
+             v := 255;
+             r := 255;
+             end;
+        end{case of};
+        stPrcnt := FormatFloat(stFrmPC, Pourcents);
+        with Canvas do
+          begin
+          // Effacement la zone d'écriture
+          Brush.Color := clBlack;
+          FillRect(TRect.Create(x, y, x + 6*tc, y + tc));
+          // Affichage de la statistique (pourcent)
+          Font.Color := TColor(r + 256*v + 65536*b);
+          TextOut(x + (6*tc - TextWidth(stPrcnt)) div 2,
+                  y +  (tc - TextHeight(stMaxPC)) div 2, stPrcnt);
+          end
+        end
+      end;
+  Inc(y, tc + dh);
+  end;
+end;
+
 procedure TFormPlateau.DessineSelonTypeAffichage;
 begin
 case TypeAffichage of
@@ -1960,6 +2126,10 @@ case TypeAffichage of
                end;
   taStatsDes:  try
                  DessineStatsDes
+               except
+               end;
+  taStatsJrs:  try // v1.1.3 : Ajout stats par joueur
+                 DessineStatsJrs
                except
                end;
 end{case of};
@@ -2039,7 +2209,7 @@ for u := False to True do // Unité (true) ou dizaine (false)
   VirtualImageListChiffres.GetBitmap(Chf*NbMaxCouleurs+IfThen(JrElm,Ord(cGris),Ord(Couleur)), bmEvt);
   xc := x + dx div 4 + ((Ord(Couleur)-1) div 2)*(dx div 4 + TailleEvt div 2) + Ord(u)*(TailleEvt div 4);
   yc := y - dy div 8 + ((Ord(Couleur)-1) mod 2)*(dy div 4 + TailleEvt div 2);
-  Canvas.StretchDraw(TRect.Create(xc,                   yc, 
+  Canvas.StretchDraw(TRect.Create(xc,                   yc,
                                   xc + TailleEvt div 4, yc + TailleEvt div 2), bmEvt);
   FreeAndNil(bmEvt);
   end

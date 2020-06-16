@@ -1,3 +1,7 @@
+! Rafraîchir le Jackpot quand on redémarre une artie.
+++ Pion sur événement "maison", achat supplémentaire ?
+++ Pion sur événement ennemi : on double le gain ?
+
 ++ Gestion des records :
  - Débit pour un événement
  - Cumul débits pour un lancer de dés
