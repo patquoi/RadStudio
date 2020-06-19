@@ -61,6 +61,8 @@ type
 
   TPhaseTour  = (phtIndefinie=0, phtLanceDes, phtChxDirPion, phtDepltPion, phtActionDes, phtVenteEvt, phtAchatEvt, phtJoueurSvt);
 
+  TTypeStatsJr   = (tsjCredit=0, tsjDebit=1); // v1.1.4 : Ajout
+
   TCaseEvt = class
   private // constantes définies à la création et à usage interne
     TypeEvt  : TTypeEvt;
@@ -128,6 +130,7 @@ type
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
     function CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
+    function CumulDebit(Tour : Integer) : Integer; // v1.1.4
     // v1.1 partie enregistrée
     function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
     function Charge(fs : TFileStream; Tour : Integer) : Boolean;
@@ -171,6 +174,7 @@ type
     function DebitTour(Tour : Integer) : Integer;
     function CreditTour(Tour : Integer) : Integer;
     function CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
+    function CumulDebit(Tour : Integer) : Integer; // v1.1.4
     // v1.1 partie enregistrée
     function Sauve(fs : TFileStream; Tour : Integer) : Boolean;
     function Charge(fs : TFileStream; Tour : Integer) : Boolean;
@@ -214,7 +218,7 @@ type
     procedure DessineEvolution;
     procedure DessineStatsEvts;
     procedure DessineStatsDes;
-    procedure DessineStatsJrs; // v1.1.3
+    procedure DessineStatsJrs(TypeStatsJr : TTypeStatsJr); // v1.1.3 : Ajout stats par joueur. v1.1.4 : ajout TypeStatsJr
     procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt);
     procedure DessineCompteurEvt(Couleur : TCouleur; PlusBlanc : Boolean);
@@ -1014,6 +1018,11 @@ begin
 Result := Score.CumulCredit(Tour);
 end;
 
+function TJackpot.CumulDebit(Tour : Integer) : Integer; // v1.1.4
+begin
+Result := Score.CumulDebit(Tour);
+end;
+
 // v1.1 partie enregistrée
 
 function TJackpot.Sauve(fs : TFileStream; Tour : Integer) : Boolean;
@@ -1230,6 +1239,11 @@ end;
 function TJoueur.CumulCredit(Tour : Integer) : Integer; // v1.1.3 pour stats joueurs
 begin
 Result := Score.CumulCredit(Tour);
+end;
+
+function TJoueur.CumulDebit(Tour : Integer) : Integer; // v1.1.4
+begin
+Result := Score.CumulDebit(Tour);
 end;
 
 
@@ -1867,9 +1881,9 @@ begin
 FormPlateau.DessineStatsDes;
 end;
 
-procedure TPartie.DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+procedure TPartie.DessineStatsJrs(TypeStatsJr : TTypeStatsJr); // v1.1.3 : Ajout stats par joueur. v1.1.4 : ajout TypeStatsJr
 begin
-FormPlateau.DessineStatsJrs;
+FormPlateau.DessineStatsJrs(TypeStatsJr);
 end;
 
 procedure TPartie.DessineSelonTypeAffichage;
@@ -1879,7 +1893,8 @@ case FormPlateau.TypeAffichage of
   taEvolution: DessineEvolution;
   taStatsEvts: DessineStatsEvts;
   taStatsDes : DessineStatsDes;
-  taStatsJrs : DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+  taStatsJrC : DessineStatsJrs(tsjCredit); // v1.1.3 : Ajout stats par joueur. v1.1.4 : taStatsJrs devient taStatsJrC
+  taStatsJrD : DessineStatsJrs(tsjDebit); // v1.1.4 : Ajout
 end{case of}
 end;
 

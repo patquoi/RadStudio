@@ -52,6 +52,11 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.4 - 19/06/2020] 
+ - Les stats par joueur ont été divisées en stats Crédit (ex-Gains) et Débits.
+ - Le format des stats (Score/%) n'était pas récupéré du fichier Paradice.ini.
+ - Mise à jour de l'aide HTML.
+ 
 [Version 1.1.3 - 15/06/2020] 
  - Ajout stats de gains par joueur (y compris Jackpot).
  - Aide HTML mise à jour.
@@ -88,4 +93,4 @@ HISTORIQUE DES VERSIONS
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 15 juin 2020.
+Dernière mise à jour le 19 juin 2020.

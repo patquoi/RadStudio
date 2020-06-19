@@ -3,18 +3,19 @@ unit plateau_f;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.BaseImageCollection,
-  Vcl.ImageCollection, Vcl.ComCtrls, Vcl.Grids,
-  base, System.ImageList, Vcl.ImgList, Vcl.VirtualImageList, Vcl.Menus,
-  Vcl.ExtCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.ComCtrls, Vcl.Grids,
+  System.ImageList, Vcl.ImgList, Vcl.VirtualImageList, Vcl.Menus, Vcl.ExtCtrls,
+  base;
 
 const
   NbMaxRegles    = 3;
 
 type
 
-  TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3, taStatsJrs=4); // Indique l'affichage en haut à gauche (Bilan Tour par défaut). v1.1.3: Ajout stats par joueur
+  TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3, taStatsJrC=4, taStatsJrD=5); // Indique l'affichage en haut à gauche (Bilan Tour par défaut). v1.1.3: Ajout stats par joueur. v1.1.4: Stats par Joueur devient Stats par joueur Credits+Débits
+
   TFormatStats   = (fsPourcent=0, fsScore=1); // Indique le format des statistiques de dés et d'événements
 
   TNumRegle      = 1..NbMaxRegles;
@@ -89,7 +90,8 @@ type
     MenuITemPartieEnregistrerSous: TMenuItem;
     OpenDialog: TOpenDialog;
     SaveDialog: TSaveDialog;
-    MenuItemStatsJrs: TMenuItem;
+    MenuItemStatsJrC: TMenuItem;
+    MenuItemStatsJrD: TMenuItem;
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);
     procedure FormPaint(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
@@ -153,7 +155,7 @@ type
     procedure DessineEvolution;
     procedure DessineStatsEvts;
     procedure DessineStatsDes;
-    procedure DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+    procedure DessineStatsJrs(TypeStatsJr : TTypeStatsJr); // v1.1.3 : Ajout stats par joueur. v1.1.4 : ajout TypeStatsJr
     procedure DessineSelonTypeAffichage; // Appelle DessineBilan ou DessineEvolution selon TypeAffichage
     procedure DessineEvenement(TypeEvt : TTypeEvt; Proprio1, Proprio2 : TJoueurId);
     procedure DessineCompteurEvt(Couleur : TCouleur);
@@ -917,14 +919,18 @@ try
                  MenuItemStatsDes.Checked := True;
                  MenuItemTypeAffichageClick(MenuItemStatsDes);
                  end;
-    taStatsJrs:  begin // v1.1.3: Ajout stats par joueur
-                 MenuItemStatsJrs.Checked := True;
-                 MenuItemTypeAffichageClick(MenuItemStatsJrs);
+    taStatsJrC:  begin // v1.1.3: Ajout stats par joueur. v1.1.4: taStatsJrs devient taStatsJrC
+                 MenuItemStatsJrC.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemStatsJrC);
+                 end;
+    taStatsJrD:  begin // v1.1.4: Ajout stats par joueur (débit)
+                 MenuItemStatsJrD.Checked := True;
+                 MenuItemTypeAffichageClick(MenuItemStatsJrD);
                  end;
   end{case of};
 
   // 5. Type d'affichage en haut à gauche du plateau (Bilan Tour par défaut)
-  fs := TFormatStats(IniFile.ReadInteger(stSectionOptions, stEntreeFormat, Ord(fsPourcent))); // Format % par défaut
+  fs := TFormatStats(IniFile.ReadInteger(stSectionAffichage, stEntreeFormat, Ord(fsPourcent))); // Format % par défaut. v1.1.4 : mauvaise section (Options au lieu de Affichage)
   // On rafraîchit le menu des options
   case fs of
     fsPourcent: begin
@@ -1948,7 +1954,7 @@ for d1 := Low(TDe) to High(TDe) do
     end
 end{procedure TFormPlateau.DessineStatsDes};
 
-procedure TFormPlateau.DessineStatsJrs; // v1.1.3 : Ajout stats par joueur
+procedure TFormPlateau.DessineStatsJrs(TypeStatsJr : TTypeStatsJr); // v1.1.3 : Ajout stats par joueur. v1.1.4 : ajout TypeStatsJr
 const
     stMaxPC   = '100.00';
     stFrmPC   =  '00.00';
@@ -1958,12 +1964,12 @@ var x, y,
     tc,dh,dl,
     p, Chf,
     r, v, b,
-    Credits   : Integer;
+    ScrJrs   : Integer; // v1.1.4 Credits devient ScrJrs
     Pourcents : Double;
     stPrcnt   : String;
     c         : TNumChfScr;
     j, j1, j2 : TJoueurId;
-    Credit,
+    ScrJr,              // v1.1.4 Credit devient ScrJr
     Pos       : array [TJoueurId] of Integer;
     bmJrs     : TBitmap;
 
@@ -1983,30 +1989,40 @@ begin
 Taille := 5*(TailleCase+1);
 x0 := 1*(TailleCase+1);
 y0 := 1*(TailleCase+1);
-tc := Round(Taille / 9);
-dh := Round((Taille - 7 * tc) / 8);
-dl := Round((Taille - 9 * tc) / 4);
+tc := Trunc(Taille / (9 + Ord(TypeStatsJr))); // v1.1.4 : Ajout Ord(TypeStatsJr) + Trunc au lieu de Round
+dh := Trunc((Taille - 7 * tc) / 8); // v1.1.4 Trunc au lieu de Round
+dl := Trunc((Taille - (9 + Ord(TypeStatsJr)) * tc) / 4); // v1.1.4 : Ajout Ord(TypeStatsJr) + Trunc au lieu de Round
 
 DetermineTaillePolice;
 
-// 1. On relève les compteurs
-Credits := 0; // Pour calculer en %
+// 1. On relève les compteurs. v1.1.4 Credit(s) devient ScrJr(s) à cause d'ajout des débits
+ScrJrs := 0; // Pour calculer en %
 with Partie do
   for j := Succ(Low(TJoueurId)) to High(TJoueurId) do
     begin
-    if j = jJackpot then
-      Credit[j] := Jckpt.CumulCredit(TrCrt)
+    if TypeStatsJr = tsjCredit then
+      begin
+      if j = jJackpot then
+        ScrJr[j] := Jckpt.CumulCredit(TrCrt)
+      else
+        ScrJr[j] := Jr[j].CumulCredit(TrCrt) - ScoreDepart
+      end
     else
-      Credit[j] := Jr[j].CumulCredit(TrCrt) - ScoreDepart;
-    Inc(Credits, Credit[j]);
+      begin
+      if j = jJackpot then
+        ScrJr[j] := -Jckpt.CumulDebit(TrCrt)
+      else
+        ScrJr[j] := -Jr[j].CumulDebit(TrCrt);
+      end;
+    Inc(ScrJrs, ScrJr[j]);
     end;
 // 2. On classe
 for j1 := Succ(Low(TJoueurId)) to High(TJoueurId) do
   begin
   Pos[j1] := 0;
   for j2 := Succ(Low(TJoueurId)) to High(TJoueurId) do
-    if (Credit[j1] < Credit[j2]) or
-       ((Credit[j1] = Credit[j2]) and (j2 <= j1)) then
+    if (ScrJr[j1] < ScrJr[j2]) or
+       ((ScrJr[j1] = ScrJr[j2]) and (j2 <= j1)) then
       Inc(Pos[j1]);
   end;
 
@@ -2039,12 +2055,25 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
       Inc(x, tc + dl);
       if FormatStats = fsScore then
         begin // 3a. Sous forme de Score
-        // Million
+        // Million. v1.1.4 ... et/ou signe moins
+        if (TypeStatsJr = tsjDebit) then // v1.1.4. Si débit
+          begin
+          bmJrs:=TBitmap.Create;
+          VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
+          if (Abs(ScrJr[j]) div 1000000 > 0) then // SI le million ALORS...
+            VirtualImageListSignes.GetBitmap(Ord(j), bmJrs); // On affiche le signe Moins
+          Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
+          FreeAndNil(bmJrs);
+          Inc(x, tc);
+          end;
         bmJrs:=TBitmap.Create;
         VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
-        Chf:=Credit[j] div 1000000;
+        Chf:=Abs(ScrJr[j]) div 1000000; // v1.1.4 : Ajout de Abs
         if Chf > 0 then
-          VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + Ord(j), bmJrs);
+          VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + Ord(j), bmJrs)
+        else // v1.1.4 Si pas de million
+          if (TypeStatsJr = tsjDebit) then // ET débit ALORS...
+            VirtualImageListSignes.GetBitmap(Ord(j), bmJrs); // On affiche le signe Moins
         Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
         FreeAndNil(bmJrs);
         Inc(x, tc);
@@ -2052,7 +2081,7 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
         for c := Low(TNumChfScr) to High(TNumChfScr) do
           begin
           bmJrs:=TBitmap.Create;
-          Chf:=(Credit[j] div Puiss10[High(TNumChfScr)-c]) mod 10;
+          Chf:=(Abs(ScrJr[j]) div Puiss10[High(TNumChfScr)-c]) mod 10; // v1.1.4 : Ajout de Abs
           VirtualImageListFonds.GetBitmap(Ord(cNoir), bmJrs);
           VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + Ord(j), bmJrs); // Crédit couleur du joueur
           Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
@@ -2062,8 +2091,8 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
         end
       else // 3b. Sous forme de %
         begin
-        if Credits>0 then
-          Pourcents := (100.0*Credit[j])/Credits
+        if ScrJrs>0 then
+          Pourcents := (100.0*ScrJr[j])/ScrJrs
         else
           Pourcents := 0;
         r := 0; v := 0; b := 0;
@@ -2128,8 +2157,12 @@ case TypeAffichage of
                  DessineStatsDes
                except
                end;
-  taStatsJrs:  try // v1.1.3 : Ajout stats par joueur
-                 DessineStatsJrs
+  taStatsJrC:  try // v1.1.3 : Ajout stats par joueur. v1.1.4 : taStatsJrs devient taStatsJrC
+                 DessineStatsJrs(tsjCredit);
+               except
+               end;
+  taStatsJrD:  try // v1.1.3 : Ajout stats par joueur. v1.1.4 : taStatsJrs devient taStatsJrC
+                 DessineStatsJrs(tsjDebit);
                except
                end;
 end{case of};

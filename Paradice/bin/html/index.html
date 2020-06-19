@@ -33,7 +33,7 @@
 			  <LI><A HREF="#gde">Graphe d&rsquo;évolution</A>
 			  <LI><A HREF="#spedd">Stats par événement de dés</A>
 			  <LI><A HREF="#sptdd">Stats par tirage de dés</A>
-			  <LI><A HREF="#spjg">Stats par joueur (gains)</A>
+			  <LI><A HREF="#spj">Stats par joueur</A>
 			</UL>  
 		  <LI><A HREF="#zdsc">Zone des scores</A>
 		  <LI><A HREF="#zdldd">Zone du lancer de dés</A>
@@ -146,7 +146,7 @@ Il y a <B>6 zones</B> d&rsquo;informations réparties sur tout le plateau de jeu.
 <A NAME="zdst"></A><H3>1. Zone de statistiques</H3>
 
 Le contenu de cette zone dépend du choix d&rsquo;affichage via le menu <I><U>V</U>oir</I>&nbsp;:<P>
-<CENTER><IMG Alt="Menu Voir" SRC="png/mv.png" HEIGHT=160 WIDTH=331 BORDER=0></CENTER> 
+<CENTER><IMG Alt="Menu Voir" SRC="png/mv.png" HEIGHT=177 WIDTH=355 BORDER=0></CENTER> 
 
 <A NAME="bdt"></A><H4>Bilan du tour</H4>
 
@@ -194,17 +194,30 @@ Les événements ont la plupart un <B>fond bicolore</B> car il y a deux exemplaire
 
 Les statistiques <B>par tirage de dés</B> présentent la <B>répartition des gains</B> par tirage de dés.<BR>
 
-<A NAME="spjg"></A><H4>Statistiques par joueur (gains)</H4>
-<CENTER><IMG Alt="Stats par joueur (gains) en scores" SRC="png/spjs.png" HEIGHT=262 WIDTH=262 BORDER=0></CENTER><P>
+<A NAME="spj"></A><H4>Statistiques par joueur</H4>
 
-Les statistiques <B>par joueur</B> concernent les <B>gains engrangés</B><UL>
- <LI> soit par les <B>événements de dés</B> leur appartenant, 
- <LI> soit par le <B>Jackpot</B> via la case <IMG Alt="Case Jackpot" SRC="png/j.png" width=20 height=20 border=0>.<BR>
+Les statistiques <B>par joueur</B> concernent les <B>crédits</B> (<I>Ctrl+J</I>) ou les <B>débits</B> (<I>Maj+Ctrl+J</I>).
+
+<CENTER><IMG Alt="Stats des crédits par joueur en scores" SRC="png/spjc.png" HEIGHT=262 WIDTH=262 BORDER=0></CENTER><P>
+
+Les <B>crédits</B> incluent&nbsp;:
+<UL>
+ <LI> les gains issus des <B>événements de dés</B> appartenant au joueur, 
+ <LI> les <B>Jackpots</B> récoltés en passant par la case <IMG Alt="Case Jackpot" SRC="png/j.png" width=20 height=20 border=0>.<BR>
 </UL>
-Les <B>gains engrangés par le Jackpot</B> sont également pris en compte<UL>
- <LI> soit par les <B>événements de dés</B> lui appartenant,
- <LI> soit via la case <IMG Alt="Case Tirelire" SRC="png/t.png" width=20 height=20 border=0>.
+Ceux du <B>Jackpot</B> sont également pris en compte&nbsp;:<UL>
+ <LI> via les <B>événements de dés</B> lui appartenant,
+ <LI> via la case <IMG Alt="Case Tirelire" SRC="png/t.png" width=20 height=20 border=0>.
 </UL> 
+
+<CENTER><IMG Alt="Stats des débis par joueur en scores" SRC="png/spjd.png" HEIGHT=262 WIDTH=262 BORDER=0></CENTER><P>
+
+Les <B>débits</B> incluent&nbsp;:
+<UL>
+ <LI> le versement des gains des <B>événements de dés</B> des adversaires, 
+ <LI> le versement des gains des <B>événements de dés</B> des adversaires entièrement versés au <B>Jackpot</B> en passant par la case <IMG Alt="Case Tirelire" SRC="png/t.png" width=20 height=20 border=0>.<BR>
+</UL>
+Les <B>Jackpots</B> versés aux joueurs</B> passant par la case <IMG Alt="Case Jackpot" SRC="png/j.png" width=20 height=20 border=0> sont également pris en compte.
 
 <A NAME="zdsc"></A><H3>2. Zone des scores</H3>
 <CENTER><IMG Alt="Zone des scores" SRC="png/zds.png" HEIGHT=119 WIDTH=198 BORDER=0></CENTER><P>
@@ -522,7 +535,8 @@ Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case
   <TR><TD align=center>Ctrl+G</TD><TD><U>V</U>oir | <U>G</U>raphe d&rsquo;évolution</TD><TD>Affiche le graphe d&rsquo;évolution des joueurs en haut à gauche du plateau de jeu.</TD></TR>
   <TR><TD align=center>Ctrl+V</TD><TD><U>V</U>oir | Statistiques par É<U>v</U>énements de dés</TD><TD>Affiche les statistiques d&rsquo;événements de dés en haut à gauche du plateau de jeu.</TD></TR>
   <TR><TD align=center>Ctrl+D</TD><TD><U>V</U>oir | Statistiques par Tirage de <U>d</U>és</TD><TD>Affiche le bilan par tour en haut à gauche du plateau de jeu.</TD></TR>
-  <TR><TD align=center>Ctrl+J</TD><TD><U>V</U>oir | Statistiques par <U>J</U>oueur (gains)</TD><TD>Affiche les statistiques des gains par joueur, y compris le Jackpot.</TD></TR>
+  <TR><TD align=center>Ctrl+J</TD><TD><U>V</U>oir | Statistiques par <U>J</U>oueur (gains)</TD><TD>Affiche les statistiques des crédits par joueur, y compris le Jackpot.</TD></TR>
+  <TR><TD align=center>Maj+Ctrl+J</TD><TD><U>V</U>oir | Statistiques par <U>J</U>oueur (débits)</TD><TD>Affiche les statistiques des débits par joueur, y compris le Jackpot.</TD></TR>
   <TR><TD align=center>Ctrl+E</TD><TD><U>V</U>oir | <U>E</U>vénements de dés...</TD><TD>Affiche la définition des événements de dés&nbsp;: famille, type de gain, formule de calcul des gains et gains par tirage de dés.</TD></TR>
   
   <TR><TD align=center>Ctrl+1</TD><TD><U>V</U>oir | <U>P</U>arcours... | du joueur Myrtille</TD><TD>Affiche le parcours du joueur &laquo;&nbsp;Myrtille&nbsp;&raquo;.</TD></TR>
@@ -543,7 +557,7 @@ Voici le parcours pour chacun des six joueurs avec tous les pions sur la <B>case
 
 <HR>
 
-<CENTER>Dernière mise à jour&nbsp;: le 16 juin 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
+<CENTER>Dernière mise à jour&nbsp;: le 19 juin 2020 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:paradice@patquoi.fr?subject=Paradice">Envoyer un mail</A>.</CENTER>
 
 </BODY>
 
