@@ -1365,7 +1365,7 @@ procedure TFormPlateau.DessineScore(Id : TJoueurId; Pos, Score : Integer; JrCrt,
 const x = 7;
       y = 1;
 var Chf     : Integer;
-    c       : TNumChfScr;
+    c       : TNumChfTtl; // v1.1.5 : au lieu de TNumChfScr
     bmScr   : TBitmap;
 begin
 if Elimine then
@@ -1389,14 +1389,15 @@ Canvas.StretchDraw(TRect.Create(Round((x+0.5)*(TailleCase+1))+1, Round((y+0.5*(O
 FreeAndNil(bmScr);
 
 // 3. Affichage du score
-for c := Low(TNumChfScr) to High(TNumChfScr) do
+for c := Low(TNumChfTtl) to High(TNumChfTtl) do // v1.1.5 : on affiche sur six chiffres pour pouvoir afficher le million (TNumChfTtl au lieu de TNumChfScr)
   begin
   bmScr:=TBitmap.Create;
-  Chf:=(Score div Puiss10[High(TNumChfScr)-c]) mod 10;
+  Chf:=(Score div PuisT10[High(TNumChfTtl)-c]) mod 10; // v1.1.5 : PuisT10 au lieu de Puiss10
   VirtualImageListFonds.GetBitmap(IfThen(JrCrt,Ord(Id),Ord(cNoir)), bmScr); // Fond noir ou couleur si joueur courant  ou gris si éliminé
   VirtualImageListChiffres.GetBitmap(Chf * NbMaxCouleurs + IfThen(Elimine, Ord(cGris), IfThen(JrCrt,Ord(cNoir),Ord(Id))), bmScr); // Position en noir si joueur courant sinon couleur du joueur ou gris si éliminé
-  Canvas.StretchDraw(TRect.Create(Round((x+1.25+0.5*c+0.0)*(TailleCase+1)), Round((y+0.5*(Ord(Id)-1)+0.0)*(TailleCase+1))+1,
-                                  Round((x+1.25+0.5*c+0.5)*(TailleCase+1)), Round((y+0.5*(Ord(Id)-1)+0.5)*(TailleCase+1))-1),
+  // v1.1.5 : décalage pour laisser place au million (x+1.5 au lieu de x+1.25)
+  Canvas.StretchDraw(TRect.Create(Round((x+1.3+0.4*c+0.0)*(TailleCase+1)), Round((y+0.5*(Ord(Id)-1)+0.0)*(TailleCase+1))+1,
+                                  Round((x+1.3+0.4*c+0.4)*(TailleCase+1)), Round((y+0.5*(Ord(Id)-1)+0.5)*(TailleCase+1))-1),
                      bmScr);
   FreeAndNil(bmScr);
   end;

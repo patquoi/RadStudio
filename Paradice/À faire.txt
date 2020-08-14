@@ -1,4 +1,4 @@
-! Rafraîchir le Jackpot quand on redémarre une artie.
+! Rafraîchir le Jackpot quand on redémarre une partie.
 ++ Pion sur événement "maison", achat supplémentaire ?
 ++ Pion sur événement ennemi : on double le gain ?
 
