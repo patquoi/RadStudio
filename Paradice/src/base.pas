@@ -15,7 +15,6 @@ const
 type
   TNbJoueurs = NbMinJoueurs..NbMaxJoueurs;
   TNumChfScr = 0..5; // Les scores vont de 0 à 999999
-  TNumChfTtl = 0..6; // v1.1.5 : sauf le score total qui peut dépasser le million
 
   TEtatPartie= (epInactif=0, epEnCours, epPause); // permet de mettre à jour le menu Partie
   TRepriseJeu= (rjIndefinie=0, rjPion, rjDes, rjAutomate); // Indique quel Timer est utilisé pour la pause/reprise du jeu
@@ -265,7 +264,6 @@ const
   yDepart        : TCoordonnee = 5;
 
   Puiss10 : array [TNumChfScr] of Integer         = (1, 10, 100, 1000, 10000, 100000);
-  PuisT10 : array [TNumChfTtl] of Integer         = (1, 10, 100, 1000, 10000, 100000, 1000000); // v1.1.5 : le score total qui peut dépasser le million
 
   stEtat : array [TEtatPartie] of String = ('Partie inactive.', 'Partie reprise.', 'Partie interrompue.'); // Message affiché dans la barre de statut. v1.1.1 : Partie inactive+reprise.
 
