@@ -269,6 +269,7 @@ LitParametres;
 SaveDialog.InitialDir := stRepLocalAppData;
 OpenDialog.InitialDir := stRepLocalAppData;
 ChargementEnCours := False;
+FormatSettings.DecimalSeparator := '.'; // v1.1.5 : pour les affichages de stats en % : la virgule prend trop de place :^(
 end{procedure TFormPlateau.FormCreate};
 
 procedure TFormPlateau.FormDestroy(Sender: TObject);
@@ -2051,7 +2052,7 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
         VirtualImageListCases.GetBitmap(Ord(tcJackpot) - 1, bmJrs);
       Canvas.StretchDraw(TRect.Create(x, y, x + tc, y + tc), bmJrs);
       FreeAndNil(bmJrs);
-      // 3. Credit
+      // 3. Crédit/Débit
       Inc(x, tc + dl);
       if FormatStats = fsScore then
         begin // 3a. Sous forme de Score
@@ -2091,7 +2092,7 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
         end
       else // 3b. Sous forme de %
         begin
-        if ScrJrs>0 then
+        if Abs(ScrJrs)>0 then // v1.1.5 : ajout de Abs
           Pourcents := (100.0*ScrJr[j])/ScrJrs
         else
           Pourcents := 0;
@@ -2120,7 +2121,7 @@ for p := Ord(Succ(Low(TJoueurId))) to Ord(High(TJoueurId)) do
              r := 255;
              end;
         end{case of};
-        stPrcnt := FormatFloat(stFrmPC, Pourcents);
+        stPrcnt := '  '+FormatFloat(stFrmPC, Pourcents)+'  '; // v1.1.5 : ajout d'espace pour effacer les précédents affichages
         with Canvas do
           begin
           // Effacement la zone d'écriture
