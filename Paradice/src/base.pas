@@ -1661,10 +1661,13 @@ try
                      TimerClignotement.Enabled := False;
                      stNomPartie := ''; // v1.1 : on remet à zéro de nom de la partie (défini au moment d'enregistrer)
                      end;
-          epEnCours: case Reprise of
-                       rjPion:     TimerPion.Enabled := true;
-                       rjDes:      TimerDes.Enabled := true;
-                       rjAutomate: TimerAutomate.Enabled := true;
+          epEnCours: case self.Reprise of
+                       rjPion:      TimerPion.Enabled := true;
+                       rjDes:       TimerDes.Enabled := true;
+                       rjAutomate:  TimerAutomate.Enabled := true;
+                       rjIndefinie: // 1.1.6 : si une touche était demandée, il faut rafficher le message !
+                                    if Phase > phtIndefinie then
+                                      ChangePhase(Phase);
                      end;
           epPause:   self.Reprise := rjIndefinie;
         end{case of};

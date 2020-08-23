@@ -52,6 +52,12 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.6 - 23/08/2020]
+Problème à la reprise du jeu après le chargement d'un fichier de partie :
+Si la partie a été sauvegardée au moment où Paradice posait une question 
+comme l'achat d'événement ou le choix d'une direction, le message n'était pas
+affiché et donc il était difficile de savoir ce qu'il fallait faire !
+
 [Version 1.1.5 - 15/08/2020]
 Affichage des stats en %
  - Les stats des Débits restaient toujours à zéro.
@@ -98,4 +104,4 @@ Affichage des stats en %
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 15 août 2020.
+Dernière mise à jour le 23 août 2020.
