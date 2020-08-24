@@ -1002,6 +1002,7 @@ if stExtension <> '.' + OpenDialog.DefaultExt then
   Application.MessageBox(stErrNomFichInc, stChargementImpossible, MB_ICONHAND)
 else
   begin
+  SaveDialog.FileName := OpenDialog.FileName; // v1.1.7 : on sauvegarde le choix dans SaveDialog aussi
   stNomPartie := stNomFichier.Substring(0, stNomFichier.Length - 5);
   try
     fs := TFileStream.Create(OpenDialog.FileName, fmOpenRead);

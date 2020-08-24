@@ -1,6 +1,5 @@
 ++ Pion sur événement "maison", achat supplémentaire ?
 ++ Pion sur événement ennemi : on double le gain ?
-!! Reprise Partie Interminable
 
 ++ Gestion des records :
  - Débit pour un événement
