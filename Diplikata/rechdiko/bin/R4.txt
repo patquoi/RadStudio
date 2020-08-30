@@ -862,6 +862,7 @@ DEGI: DEGI
       GIDE
 DEGN: DENG
 DEGO: GODE
+DEGY: DYEG
 DEGÛ: DEGÛ
 DEIJ: JEDI
 DEIL: LIDE
@@ -1530,6 +1531,7 @@ ETÂÇ: ÇÂTE
 ETÇÊ: ÇÊTE
 ETÇÛ: ÇÛTE
       TÛÇE
+EVWÔ: VEWÔ
 EVYY: VYEY
 EVÇÔ: ÇEVÔ
 EWYÛ: WÛYE
@@ -1911,6 +1913,7 @@ MNOS: MONS
 MNOT: MONT
       TONM
 MNOW: WONM
+MNYÂ: MYÂN
 MNÂÂ: MÂNÂ
 MNÊÊ: MÊNÊ
 MNÊÔ: MÔNÊ

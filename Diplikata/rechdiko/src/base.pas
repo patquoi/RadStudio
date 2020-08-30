@@ -15,7 +15,7 @@ const NbCasesCote         =  15;
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
 
-      NbLettresDico       = 102251; // 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
+      NbLettresDico       = 102413; // 102251; // 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
 
       stVersionDico       = 'KA0'; // vKA
       BonusScrabble       = 50;
@@ -81,7 +81,7 @@ type  TBonus = (bAucun,
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer            = (318,2589,8116,15565,18396,19215,14856,9612,6170,3630,2124,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (318,2589,8128,15590,18432,19243,14888,9630,6170,3641,2124,1092,448,120); // vKA : Référence du gwodiko
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
       stMsgMotNonValable                             = 'Le mot %s n''est pas valable selon le Gwodiko.'#13;
