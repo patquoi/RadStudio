@@ -145,7 +145,8 @@ VÂ: VÂ
 VÊ: VÊ
 WÔ: WÔ
 WÛ: WÛ
-YÂ: YÂ
+YÂ: ÂY
+    YÂ
 YÔ: YÔ
 YÛ: ÛY
 YÜ: YÜ
@@ -304,7 +305,8 @@ VÂ: VÂ
 VÊ: VÊ
 WÔ: WÔ
 WÛ: WÛ
-YÂ: YÂ
+YÂ: ÂY
+    YÂ
 YÔ: YÔ
 YÛ: ÛY
 YÜ: YÜ
@@ -348,7 +350,6 @@ BI: BI
 BO: BO
 BÂ: ÂB
     BÂ
-BÊ: BÊ
 AAB: ABA
 AAG: AGA
 AAL: ALA
@@ -619,7 +620,8 @@ BRÊ: BRÊ
 BSÛ: BÛS
 BTÊ: TÊB
 BTÛ: BÛT
-BYÊ: BYÊ
+BYÊ: BÊY
+     BYÊ
 BÇÛ: BÛÇ
 BÊÊ: ÊBÊ
 DEE: EDE
@@ -671,6 +673,7 @@ DSÂ: DÂS
 DSÛ: DÛS
      SÛD
 DTÛ: DÛT
+DYÔ: DÔY
 DYÛ: DÛY
 DZÛ: DÛZ
 DÂÎ: ÂDÎ
@@ -995,6 +998,7 @@ JTÂ: JÂT
 JTÊ: JÊT
 JWÊ: JWÊ
 JWÛ: WÛJ
+JYÂ: JÂY
 JZÂ: ZÂJ
 KKO: KOK
 KLO: KLO
@@ -1175,6 +1179,7 @@ PTÛ: PÛT
 PVÛ: VÛP
 PWÊ: PWÊ
 PYÂ: PYÂ
+PYÊ: PÊY
 PYÔ: PYÔ
 PÂÂ: ÂPÂ
 PÇÊ: PÊÇ
@@ -1211,6 +1216,7 @@ VÂÊ: ÂVÊ
 WYÛ: WÛY
 WÇÊ: WÊÇ
 WÇÛ: WÛÇ
+YÂÇ: ÇÂY
 YÇÊ: ÇYÊ
 AABF: AFAB
 AABK: BAKA
@@ -2222,6 +2228,7 @@ DRÂÎ: RÂDÎ
 DTÂÔ: TÂDÔ
 DTÊÔ: ÊDÔT
 DVÂÛ: DÛVÂ
+DWYÂ: DWÂY
 DYÊÊ: ÊDYÊ
 DYÔÛ: DÛYÔ
 DZÂÛ: DÛZÂ
@@ -3200,6 +3207,7 @@ OTVÛ: VOTÛ
 OTÂÇ: ÂTOÇ
 OTÇÔ: TOÇÔ
 OYYÜ: YOYÜ
+OYZÂ: OZÂY
 PPÂÂ: PÂPÂ
 PPÂÊ: PÊPÂ
 PPÔÔ: PÔPÔ
@@ -4189,6 +4197,7 @@ AGLNO: GALON
 AGLNÔ: LÔGAN
 AGLOP: GALOP
 AGLTÊ: LATÊG
+AGLYÂ: LAGÂY
 AGMNO: MANGO
 AGMNÊ: ÊGANM
 AGMÂÂ: AGÂMÂ
@@ -4625,6 +4634,7 @@ ATVYÂ: VÂTAY
 ATYÂÇ: ÇÂTAY
 AVWYÂ: VWAYÂ
 AVWZÊ: VWAZÊ
+AWYÇÔ: ÇAWÔY
 BBEEL: BEBEL
 BBENO: BENBO
        BONBE
@@ -5891,6 +5901,7 @@ ERTÂÇ: TRÂÇE
 ERTÂÛ: ÂRETÛ
        ÂTÛRE
 ERTÇÛ: RETÛÇ
+ERYÂÇ: REÇÂY
 ESSTÛ: SÛSET
 ESSYÂ: SEYÂS
 ESSÂÂ: ÂSÂSE
@@ -6251,6 +6262,7 @@ KOSYÂ: KOSYÂ
 KPRÂÔ: KRÂPÔ
 KPSÛÛ: SÛKÛP
 KPTÔÛ: PÛKÔT
+KPYÂÔ: KÔPÂY
 KPYÔÛ: KÛPYÔ
 KRTÂÔ: RÂKÔT
 KSTÂÔ: KÔSTÂ
@@ -6362,6 +6374,7 @@ STYÂÔ: TÂSYÔ
 STYÊÛ: SÛTYÊ
 SYZÂÊ: ZÂSYÊ
 TVZÂÛ: VÂTÛZ
+YÂÇÇÛ: ÇÛÇÂY
 AAABKL: BAKALA
 AAABKR: BAKARA
 AAABLZ: ALABAZ
@@ -9366,6 +9379,7 @@ KNOOPS: KONPOS
 KNOPRÂ: KRÂPON
 KNOPTÂ: PÂNKOT
 KNOPTÛ: PÛKONT
+KNOPYÂ: KONPÂY
 KNOPYÛ: KÛPYON
 KNORTÂ: RÂKONT
 KNOSTÂ: KONSTÂ
@@ -9497,6 +9511,7 @@ AAANPRT: ATRAPAN
 AAANPRV: PARAVAN
 AAANPTY: APANTAY
 AABBDOY: BABYADO
+AABBILS: LASIBAB
 AABBKNÛ: BABANKÛ
 AABBLNS: SANBLAB
 AABBLNÛ: BANBÛLA

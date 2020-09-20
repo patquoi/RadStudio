@@ -943,6 +943,7 @@ AGLNO: GALON
 AGLNÔ: LÔGAN
 AGLOP: GALOP
 AGLTÊ: LATÊG
+AGLYÂ: LAGÂY
 AGMNO: MANGO
 AGMNÊ: ÊGANM
 AGMÂÂ: AGÂMÂ
@@ -1379,6 +1380,7 @@ ATVYÂ: VÂTAY
 ATYÂÇ: ÇÂTAY
 AVWYÂ: VWAYÂ
 AVWZÊ: VWAZÊ
+AWYÇÔ: ÇAWÔY
 BBEEL: BEBEL
 BBENO: BENBO
        BONBE
@@ -2645,6 +2647,7 @@ ERTÂÇ: TRÂÇE
 ERTÂÛ: ÂRETÛ
        ÂTÛRE
 ERTÇÛ: RETÛÇ
+ERYÂÇ: REÇÂY
 ESSTÛ: SÛSET
 ESSYÂ: SEYÂS
 ESSÂÂ: ÂSÂSE
@@ -3005,6 +3008,7 @@ KOSYÂ: KOSYÂ
 KPRÂÔ: KRÂPÔ
 KPSÛÛ: SÛKÛP
 KPTÔÛ: PÛKÔT
+KPYÂÔ: KÔPÂY
 KPYÔÛ: KÛPYÔ
 KRTÂÔ: RÂKÔT
 KSTÂÔ: KÔSTÂ
@@ -3116,3 +3120,4 @@ STYÂÔ: TÂSYÔ
 STYÊÛ: SÛTYÊ
 SYZÂÊ: ZÂSYÊ
 TVZÂÛ: VÂTÛZ
+YÂÇÇÛ: ÇÛÇÂY

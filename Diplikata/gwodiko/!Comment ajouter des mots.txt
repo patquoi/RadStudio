@@ -20,9 +20,9 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 	 - Ouvrir le fichier .ods depuis MacOS et copier-coller sur chaque feuille en les vidant avant
 	 - Une fois généré, recopier les fichiers .ods et .pdf dans rechdiko/bin
 	 - rechercher les nouveaux mots dans le PDF
-14. Faire le dictionnaire Kreyòl<->Eskrab à partir du fichier Ofisyeldiksyone.txt (Gwodiko\bin) :
+14. Faire le dictionnaire Kreyòl<->Eskrab à partir du fichier Ofisyeldiksyone.txt (Gwodiko) :
      - Convertir en UTF-8 avec notepad++
-	 - Copier les 2 fichiers Ofisyeldiksyone (.txt et .ods) dans Z:\Dossier Partagé VMWare\dev\apps\Diplikata
+	 - Copier le fichier Ofisyeldiksyone.txt dans Z:\Dossier Partagé VMWare\dev\apps\Diplikata
 	 - Ouvrir Ofisyeldiksyone.ods sous OpenOffice (Mac) 
      - effacer puis coller le fichier Ofisyeldiksyone.txt 
      - retailler automatiquement les colonnes
@@ -37,3 +37,4 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 18b.Envoyer les fichiers via FileZilla
 19. Sauvegarder Diplikata xxxx (Rio).zip et générer www.zip pour copie sur Lacie
 20. Mettre à jour gitHub.com
+21. Mettre à jour les applications Gwodiko et Mélélémo depuis le Mac (Voir Dossier Partagé VMWare\dev\apps\Gwodiko\! Mettre à jour les applications avec Gwodiko.txt)

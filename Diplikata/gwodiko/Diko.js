@@ -7175,6 +7175,7 @@ const diko = [[
 'LARENKS',
 'LARIVYE',
 'LASANTE',
+'LASIBAB',
 'LASILAB',
 'LASISIN',
 'LASKAWO',

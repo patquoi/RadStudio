@@ -268,7 +268,8 @@ BRÊ: BRÊ
 BSÛ: BÛS
 BTÊ: TÊB
 BTÛ: BÛT
-BYÊ: BYÊ
+BYÊ: BÊY
+     BYÊ
 BÇÛ: BÛÇ
 BÊÊ: ÊBÊ
 DEE: EDE
@@ -320,6 +321,7 @@ DSÂ: DÂS
 DSÛ: DÛS
      SÛD
 DTÛ: DÛT
+DYÔ: DÔY
 DYÛ: DÛY
 DZÛ: DÛZ
 DÂÎ: ÂDÎ
@@ -644,6 +646,7 @@ JTÂ: JÂT
 JTÊ: JÊT
 JWÊ: JWÊ
 JWÛ: WÛJ
+JYÂ: JÂY
 JZÂ: ZÂJ
 KKO: KOK
 KLO: KLO
@@ -824,6 +827,7 @@ PTÛ: PÛT
 PVÛ: VÛP
 PWÊ: PWÊ
 PYÂ: PYÂ
+PYÊ: PÊY
 PYÔ: PYÔ
 PÂÂ: ÂPÂ
 PÇÊ: PÊÇ
@@ -860,4 +864,5 @@ VÂÊ: ÂVÊ
 WYÛ: WÛY
 WÇÊ: WÊÇ
 WÇÛ: WÛÇ
+YÂÇ: ÇÂY
 YÇÊ: ÇYÊ
