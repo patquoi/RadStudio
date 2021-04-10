@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AB51FCE0-9071-4661-BFC8-4DCADA26EBE7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Indecix.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Indecix">
+        <MSBuild Projects="Indecix.dproj"/>
+    </Target>
+    <Target Name="Indecix:Clean">
+        <MSBuild Projects="Indecix.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Indecix:Make">
+        <MSBuild Projects="Indecix.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Indecix"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Indecix:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Indecix:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
