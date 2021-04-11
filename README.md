@@ -6,7 +6,7 @@ The Rad Studio C++Builder projects are in the repository RadCppBuilder.\
 The last version of RadStudio used is Rio (10.3.3) Community.\
 Most of projects are games running on Windows from XP to 10 (32 and 64-bit versions).\
 \
-Duplicata is the famous wordgame in duplicate mode (solo).\
+<b>Duplicata</b> is the famous wordgame in duplicate mode (solo).\
 Diplikata is a Creole Haitian Duplicata version.\
 Indecix is a game mixing sudoku go and dice inspired by a dream!\
 Paradice is a Monopoly-like game based on dice probabilities.\
