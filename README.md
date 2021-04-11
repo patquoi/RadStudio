@@ -12,6 +12,6 @@ Indecix is a game mixing sudoku go and dice inspired by a dream!
 Paradice is a Monopoly-like game based on dice probabilities. 
 Wordkillers is another wordgame like Duplicata with "Word with friends" app rules.
 OdissimoT is a universal version of the iOS/Android OdissimoT app.
-lcpdb is commandline tool to find counts from six numbers from 1 to 10 and 25, 50, 75 and 100 with arithmetic operators.
-iAspic is a automate tool for the iOS/Android Aspic app.
+lcpdb is commandline tool to calcule a count from 101 to 999 giving six numbers from 1 to 10 and 25, 50, 75 and 100 and using arithmetic operators.
+iAspic is a workshop tool to play bots for the iOS/Android Aspic app (work in progress).
 
