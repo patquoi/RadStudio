@@ -29,16 +29,16 @@ type
   TMarquage   = array [TCoordonnee, TCoordonnee] of Boolean;
   TScore      = array [TCoordonnee, TCoordonnee] of Integer;
   TEtatDe     = (edEnAttente, edLance, edPose, edNonJoue, edCapture);
-  TCompteur   = (cDRAJ, cDC, cDNJ);
-
+  TCompteur   = (cDRAJ, cDC, cDNJ, cSM, cSP); // Dés Restant À Jouer, Dés Capturés, Dés Non Joués, Suite Mixtes, Suites Propres
   TPhaseJeu   = (phIndefinie=0, phLanceDes=1, phPoseDe=2, phResultatPose=3);
+  TTour       = 0..NbTotalDes;
 
   TDe = class
     Id : TNumDe;
     Jr, Vq : TIdJoueur; // Si Etat = edCapture alors Vq est le joueur l'ayant capturé (par défaut Vq=Jr) ; Si Etat = edNonJoue alors Vq = Adv[Jr]
     x, y : Integer; // si (0,0), dé non posé
     Etat : TEtatDe;
-    Tour : Integer; // Tour de la dernière action
+    Tour : TTour; // Tour de la dernière action
     FFace : TFaceDe;
     procedure Change(NvFace : TFaceDe);
   public
@@ -50,6 +50,8 @@ type
 
   TPartie = class;
 
+  TDes = array [TNumDe] of TDe;
+
   TListeDes = class
     NumDe : TNumDe;
     Svt : TListeDes;
@@ -57,8 +59,8 @@ type
     constructor Create(PrmNumDe : TNumDe);
     destructor Destroy; override;
     procedure AjouteDe(NvNumDe : TNumDe);
-    function Des(p : TPartie; Id : TIdJoueur) : Integer; // Si Id = jIndefini alors nombre total de dés sinon nombre de dés de Id
-    function Score(p : TPartie; Id : TIdJoueur) : Integer; // Score pour p.JrCrt : Si Id = jIndefini alors Score total sinon Score des dés de Id
+    function Des(d : TDes; Id : TIdJoueur) : Integer; // Si Id = jIndefini alors nombre total de dés sinon nombre de dés de Id
+    function Score(d: TDes; JrCrt, Id : TIdJoueur) : Integer; // Score pour p.JrCrt : Si Id = jIndefini alors Score total sinon Score des dés de Id
   end{class TListeDes};
 
   TJoueur = class
@@ -70,20 +72,21 @@ type
   end{class TJoueur};
 
   TJoueurs     = array [TIdJoueur] of TJoueur;
-  TDes         = array [TNumDe] of TDe;
 
   TSuiteDes = class
     x, y : Integer; // Case où a été "créée" la suite
+    Tr : TTour; // Tour pendant lequel la suite a été créée
     Jr : TIdJoueur; // Joueur ayant posé le dé en (x, y)
     o : TOrientation; // Horizontal (ligne) ou vertical (colonne)
     Pos : TCoordonnee; // dans la grille (ligne ou colonne selon l'orientation)
+    Propre : Boolean; // Vrai si tous les dés appartiennent à Self.Jr.
     procedure Initialise;
   public
     constructor Create(o : TOrientation; Pos : TCoordonnee);
     destructor Destroy; override;
-    procedure Affecte(Jr : TIdJoueur; x, y : TCoordonnee);
-    function CreateurSiExiste(Gr : TGrille) : TIdJoueur; // Si la suite existe, renvoie son créateur, sinon jIndefini
-    function PropreSiExiste(Gr: TGrille) : Boolean; // Retourne Vrai si tous les dés de la suite appartiennent au créateur (Score x2)
+    procedure Affecte(Jr : TIdJoueur; x, y : TCoordonnee; Propre : Boolean);
+    function ExisteTjrs(Gr : TGrille) : Boolean; // Retourne Vrai si la suite est toujours présente
+    function Score(Gr : TGrille; Des : TDes) : Integer; // Calcule le score en fonction du type de suite (x2 si propre) et du dé posé (à ne pas comptabiliser)
   end{class TSuiteDes};
 
   TSuitesDes = array [TOrientation, TCoordonnee] of TSuiteDes;
@@ -93,8 +96,8 @@ type
     Jouable : TMarquage;
     Scores  : TScore;
     Jr      : TJoueurs;
-    De      : TDes;
-    TrCrt   : Integer;
+    Des     : TDes;
+    TrCrt   : TTour;
     JrCrt   : TIdJoueur;
     DeCrt   : TNumDe;
     PhCrt   : TPhaseJeu;
@@ -120,7 +123,7 @@ type
     function Score(j : TIdJoueur) : Integer; overload;
     procedure PhaseSuivante;
     function CreateurSuite(x, y : TCoordonnee) : TIdJoueur;
-    function SuiteCree(x, y : TCoordonnee) : Boolean; // Retourne Vrai si une suite vient d'être créée en posant un dé en (x,y)
+    function SuiteCree(x, y : TCoordonnee) : Boolean; // Retourne Vrai si une suite vient d'être créée en posant un dé en (x,y) : alimente Suites
   end{class TPartie};
 
 var
@@ -195,18 +198,18 @@ else
   Svt := TListeDes.Create(NvNumDe);
 end;
 
-function TListeDes.Des(p : TPartie; Id : TIdJoueur) : Integer;
+function TListeDes.Des(d : TDes; Id : TIdJoueur) : Integer;
 begin
-Result := Ord((Id = jIndefini) or (Id = p.De[NumDe].Jr));
+Result := Ord((Id = jIndefini) or (Id = d[NumDe].Jr));
 if Svt <> nil then
-  Inc(Result, Svt.Des(p, Id));
+  Inc(Result, Svt.Des(d, Id));
 end;
 
-function TListeDes.Score(p : TPartie; Id : TIdJoueur) : Integer;
+function TListeDes.Score(d : TDes; JrCrt, Id : TIdJoueur) : Integer;
 begin
-Result := Ord(p.De[NumDe].Face) * (1 + Ord(p.JrCrt <> p.De[NumDe].Jr));
+Result := Ord(d[NumDe].Face) * (1 + Ord(JrCrt <> d[NumDe].Jr));
 if Svt <> Nil then
-  Inc(Result, Svt.Score(p, Id));
+  Inc(Result, Svt.Score(d, JrCrt, Id));
 end;
 
 (* Class TJoueur *)
@@ -229,6 +232,7 @@ begin
 // Données du futur créateur de la suite
 Self.x := -1; Self.y := -1;
 Self.Jr := jIndefini;
+Self.Propre := False;
 end;
 
 constructor TSuiteDes.Create(o : TOrientation; Pos : TCoordonnee);
@@ -243,52 +247,61 @@ begin
 inherited Destroy;
 end;
 
-procedure TSuiteDes.Affecte(Jr : TIdJoueur; x, y : TCoordonnee);
+procedure TSuiteDes.Affecte(Jr : TIdJoueur; x, y : TCoordonnee; Propre : Boolean);
 begin
 Self.Jr := Jr;
 Self.x := x;
 Self.y := y;
+Self.Propre := Propre;
 end;
 
-function TSuiteDes.CreateurSiExiste(Gr : TGrille) : TIdJoueur;
+function TSuiteDes.ExisteTjrs(Gr : TGrille) : Boolean;
 var c : TCoordonnee;
 begin
-Result := Self.Jr;
-If Result = jIndefini then Exit;
+Result := False;
+if Self.Jr = jIndefini then Exit; // Suite non créée
+Result := True; // Optimiste
 for c := Low(TCoordonnee) to High(TCoordonnee) do
   case o of
     oHorizontale: if Gr[c, y] = ndIndefini then
                     begin
-                    Result := jIndefini;
-                    break;
+                    Result := False;
+                    Exit;
                     end;
     oVerticale:   if Gr[x, c] = ndIndefini then
                     begin
-                    Result := jIndefini;
-                    break;
+                    Result := False;
+                    Exit;
                     end;
-  end
+  end{case o of};
 end;
 
-function TSuiteDes.PropreSiExiste(Gr: TGrille) : Boolean;
+function TSuiteDes.Score(Gr : TGrille; Des : TDes) : Integer;
 var c : TCoordonnee;
 begin
-Result := True; // Optimiste !
+Result := 0;
+if Self.Jr = jIndefini then Exit; // Suite non créée
 for c := Low(TCoordonnee) to High(TCoordonnee) do
   case o of
-    oHorizontale: if (Gr[c, y] = ndIndefini) or
-                     (TIdJoueur(1 + Ord(Gr[c, y]) mod 2) <> Self.Jr) then
+    oHorizontale: if Gr[c, y] = ndIndefini then
                     begin
-                    Result := False;
-                    break;
-                    end;
-    oVerticale:   if (Gr[x, c] = ndIndefini) or
-                     (TIdJoueur(1 + Ord(Gr[x, c]) mod 2) <> Self.Jr) then
+                    Result := 0; // La suite a été cassée
+                    Exit;
+                    end
+                  else
+                    if c <> x then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
+                      Inc(Result, Ord(Des[Gr[c, y]].Face));
+    oVerticale:   if Gr[x, c] = ndIndefini then
                     begin
-                    Result := False;
-                    break;
-                    end;
-  end
+                    Result := 0; // La suite a été cassée
+                    Exit;
+                    end
+                  else
+                    if c <> y then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
+                      Inc(Result, Ord(Des[Gr[x, c]].Face));
+  end{case o of};
+if Propre then // Score x2
+  Inc(Result, Result);
 end;
 
 (* Class TPartie *)
@@ -326,9 +339,9 @@ for j := Low(TIdJoueur) to High(TIdJoueur) do
     Jr[j] := Nil;
 for d := Low(TNumDe) to High(TNumDe) do
   if d > ndIndefini then
-    De[d] := TDe.Create(d)
+    Des[d] := TDe.Create(d)
   else
-    De[d] := Nil;
+    Des[d] := Nil;
 for o := Low(TOrientation) to High(TOrientation) do
   for c := Low(TCoordonnee) to High(TCoordonnee) do
     Suites[o, c] := TSuiteDes.Create(o, c);
@@ -347,7 +360,7 @@ for j := Low(TIdJoueur) to High(TIdJoueur) do
     Jr[j].Free;
 for d := Low(TNumDe) to High(TNumDe) do
   if d > ndIndefini then
-    De[d].Free;
+    Des[d].Free;
 for o := Low(TOrientation) to High(TOrientation) do
   for c := Low(TCoordonnee) to High(TCoordonnee) do
     Suites[o, c].Free;
@@ -360,7 +373,7 @@ begin
 InitialiseGrille;
 for d := Low(TNumDe) to High(TNumDe) do
   if d > ndIndefini then
-    De[d].Initialise;
+    Des[d].Initialise;
 TrCrt := 0;
 JrCrt := jIndefini;
 DeCrt := ndIndefini;
@@ -372,7 +385,7 @@ begin
 if DeCrt<High(TNumDe) then
   begin
   DeCrt := Succ(DeCrt);
-  De[DeCrt].Etat := edLance;
+  Des[DeCrt].Etat := edLance;
   PhCrt := phLanceDes;
   Result := True;
   end
@@ -404,7 +417,7 @@ end;
 
 procedure TPartie.ChangeEtatDe(NumDe : TNumDe; NvEtat : TEtatDe);
 begin
-with De[NumDe] do
+with Des[NumDe] do
   begin
   Etat := NvEtat;
   Tour := TrCrt;
@@ -414,7 +427,7 @@ end;
 procedure TPartie.PoseDe(NumDe : TNumDe; xPose, yPose : Integer);
 begin
 ChangeEtatDe(NumDe, edPose);
-with De[NumDe] do
+with Des[NumDe] do
   begin
   x := xPose;
   y := yPose;
@@ -428,7 +441,7 @@ end;
 procedure TPartie.PasseDe(NumDe : TNumDe);
 begin
 ChangeEtatDe(NumDe, edNonJoue);
-with De[NumDe] do
+with Des[NumDe] do
   begin
   Vq := Adv[JrCrt];
   Tour := TrCrt;
@@ -438,8 +451,8 @@ end;
 procedure TPartie.CaptureDe(NumDe : TNumDe);
 begin
 ChangeEtatDe(NumDe, edCapture);
-Gr[De[NumDe].x, De[NumDe].y] := ndIndefini;
-with De[NumDe] do
+Gr[Des[NumDe].x, Des[NumDe].y] := ndIndefini;
+with Des[NumDe] do
   begin
   Vq := JrCrt;
   x := -1;
@@ -459,7 +472,7 @@ var d     : TDirection;
     KO    : Boolean;
 begin
 Result := False;
-f0 := De[NumDe].Face;
+f0 := Des[NumDe].Face;
 for d := dEst to dSud do
   begin
 
@@ -472,15 +485,15 @@ for d := dEst to dSud do
   for k := kd to -2 do
     begin // Il faut qu'entre les deux dés NumDe et Borne, il n'y ait que des dés dont la face est comprise entre f0 et fb
     Borne := Gr[x+k*dx[d], y+k*dy[d]];
-    fb := De[Borne].Face;
+    fb := Des[Borne].Face;
     KO := False;
     for kk := k+1 to -1 do
       begin
       ndkk := Gr[x+kk*dx[d], y+kk*dy[d]];
-      if ((De[ndkk].Face > fb) and
-          (De[ndkk].Face < f0)) or
-         ((De[ndkk].Face > f0) and
-          (De[ndkk].Face < fb)) then
+      if ((Des[ndkk].Face > fb) and
+          (Des[ndkk].Face < f0)) or
+         ((Des[ndkk].Face > f0) and
+          (Des[ndkk].Face < fb)) then
         continue
       else
         begin
@@ -514,15 +527,15 @@ for d := dEst to dSud do
   for k := 2 to kf do
     begin // Il faut qu'entre les deux dés NumDe et Borne, il n'y ait que des dés dont la face est comprise entre f0 et fb
     Borne := Gr[x+k*dx[d], y+k*dy[d]];
-    fb := De[Borne].Face;
+    fb := Des[Borne].Face;
     KO := False;
     for kk := 1 to k-1 do
       begin
       ndkk := Gr[x+kk*dx[d], y+kk*dy[d]];
-      if ((De[ndkk].Face > fb) and
-          (De[ndkk].Face < f0)) or
-         ((De[ndkk].Face > f0) and
-          (De[ndkk].Face < fb)) then
+      if ((Des[ndkk].Face > fb) and
+          (Des[ndkk].Face < f0)) or
+         ((Des[ndkk].Face > f0) and
+          (Des[ndkk].Face < fb)) then
         continue
       else
         begin
@@ -559,9 +572,9 @@ if Gr[x, y] > ndIndefini then
   Exit; // Case cible occupée
 for i := Low(TCoordonnee) to High(TCoordonnee) do
   begin
-  if (Gr[i, y] > ndIndefini) and (De[Gr[i, y]].Face = De[d].Face) then
+  if (Gr[i, y] > ndIndefini) and (Des[Gr[i, y]].Face = Des[d].Face) then
     Exit; // Dé de même valeur sur la ligne y
-  if (Gr[x, i] > ndIndefini) and (De[Gr[x, i]].Face = De[d].Face) then
+  if (Gr[x, i] > ndIndefini) and (Des[Gr[x, i]].Face = Des[d].Face) then
     Exit; // Dé de même valeur sur la colonne x
   end;
 Result := True; // Tout est ok !
@@ -581,7 +594,7 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
       ld := Nil;
       if CaptureDes(p.DeCrt, x, y, ld, NePasCapturer) then
         begin
-        Scores[x, y] := ld.Score(Self, p.JrCrt);
+        Scores[x, y] := ld.Score(Des, JrCrt, JrCrt);
         FreeAndNil(ld);
         end
       end;
@@ -590,15 +603,27 @@ end;
 function TPartie.Compte(j : TIdJoueur; c : TCompteur) : Integer;
 var nd : TNumDe;
     n  : Integer;
+    o  : TOrientation;
+    co : TCoordonnee;
 begin
 n := 0;
 case c of
     cDRAJ: for nd := Succ(Low(TNumDe)) to High(TNumDe) do
-             Inc(n, Ord((De[nd].Jr = j) and (De[nd].Etat = edEnAttente)));
+             Inc(n, Ord((Des[nd].Jr = j) and (Des[nd].Etat = edEnAttente)));
     cDC:   for nd := Succ(Low(TNumDe)) to High(TNumDe) do
-             Inc(n, Ord((De[nd].Vq = j) and (De[nd].Etat = edCapture)));
+             Inc(n, Ord((Des[nd].Vq = j) and (Des[nd].Etat = edCapture)));
     cDNJ:  for nd := Succ(Low(TNumDe)) to High(TNumDe) do
-             Inc(n, Ord((De[nd].Jr = Adv[j]) and (De[nd].Etat = edNonJoue)));
+             Inc(n, Ord((Des[nd].Jr = Adv[j]) and (Des[nd].Etat = edNonJoue)));
+    cSM:   for o := Low(TOrientation) to High(TOrientation) do
+             for co := Low(TCoordonnee) to High(TCoordonnee) do
+               with Suites[o, co] do
+                 if ExisteTjrs(Gr) then
+                   Inc(n, Ord((Jr = j) and not Propre));
+    cSP:   for o := Low(TOrientation) to High(TOrientation) do
+             for co := Low(TCoordonnee) to High(TCoordonnee) do
+               with Suites[o, co] do
+                 if ExisteTjrs(Gr) then
+                   Inc(n, Ord((Jr = j) and Propre));
   end;
 Result := n;
 end;
@@ -606,13 +631,18 @@ end;
 function TPartie.Score(j : TIdJoueur; c : TCompteur) : Integer;
 var nd : TNumDe;
     s  : Integer;
+    o  : TOrientation;
+    co : TCoordonnee;
 begin
 s := 0;
 case c of
-    cDC:   for nd := Succ(Low(TNumDe)) to High(TNumDe) do
-             Inc(s, Ord(De[nd].Face)*(Ord((De[nd].Vq = j) and (De[nd].Etat = edCapture))*(1+Ord(De[nd].Jr = Adv[j]))));
-    cDNJ:  for nd := Succ(Low(TNumDe)) to High(TNumDe) do
-             Inc(s, Ord((De[nd].Jr = Adv[j]) and (De[nd].Etat = edNonJoue)));
+    cDC:      for nd := Succ(Low(TNumDe)) to High(TNumDe) do
+                Inc(s, Ord(Des[nd].Face)*(Ord((Des[nd].Vq = j) and (Des[nd].Etat = edCapture))*(1+Ord(Des[nd].Jr = Adv[j]))));
+    cDNJ:     for nd := Succ(Low(TNumDe)) to High(TNumDe) do
+                Inc(s, Ord((Des[nd].Jr = Adv[j]) and (Des[nd].Etat = edNonJoue)));
+    cSM..cSP: for o := Low(TOrientation) to High(TOrientation) do
+                for co := Low(TCoordonnee) to High(TCoordonnee) do
+                  Inc(s, Suites[o, co].Score(Gr, Des)); // retourne zéro si la suite a été cassée
   end;
 Result := s;
 end;
@@ -629,36 +659,64 @@ if PhCrt < phResultatPose then
 end;
 
 function TPartie.CreateurSuite(x, y : TCoordonnee) : TIdJoueur;
-var jv, jh : TIdJoueur;
+var jh, jv : TIdJoueur;
 begin
 Result := jIndefini; // Pessimiste
-jv := Suites[oVerticale, x].CreateurSiExiste(Self.Gr);
-jh := Suites[oHorizontale, y].CreateurSiExiste(Self.Gr);
+jh := jIndefini;
+jv := jIndefini;
+if Suites[oVerticale, x].ExisteTjrs(Gr) then
+  jv := Suites[oVerticale, x].Jr;
+if Suites[oHorizontale, y].ExisteTjrs(Gr) then
+  jh := Suites[oHorizontale, y].Jr;
 if (jv = jIndefini) and (jh > jIndefini) then
   Result := jh;
 if (jh = jIndefini) and (jv > jIndefini) then
   Result := jv;
+if (jh > jIndefini) and (jv > jIndefini) then
+  if Suites[oVerticale, x].Tr > Suites[oHorizontale, y].Tr then
+    Result := jv
+  else
+    Result := jh;
 end;
 
 function TPartie.SuiteCree(x, y : TCoordonnee) : Boolean;
-var c : TCoordonnee;
-    o : TOrientation;
+var c      : TCoordonnee;
+    o      : TOrientation;
+    Propre : Boolean;
+    OK     : array [TOrientation] of Boolean;
 begin
-Result := True; // Optimiste !
 for o := Low(TOrientation) to High(TOrientation) do
+  begin
+  OK[o] := True; // Optimiste !
+  Propre := True; // Pessimiste
   for c := Low(TCoordonnee) to High(TCoordonnee) do
     case o of
       oHorizontale: if Gr[c, y] = ndIndefini then
                       begin
-                      Result := False;
+                      OK[o] := False;
                       break;
-                      end;
+                      end
+                    else
+                      if Propre and (Des[Gr[c, y]].Jr <> Des[Gr[x, y]].Jr) then
+                        Propre := False;
       oVerticale:   if Gr[x, c] = ndIndefini then
                       begin
-                      Result := False;
+                      OK[o] := False;
                       break;
-                      end;
-    end
+                      end
+                    else
+                      if Propre and (Des[Gr[x, c]].Jr <> Des[Gr[x, y]].Jr) then
+                        Propre := False;
+    end{case o of};
+    if not OK[o] then
+      Continue
+    else // On enregistre la suite
+      case o of
+        oHorizontale: Suites[o, y].Affecte(Des[Gr[x, y]].Jr, x, y, Propre);
+        oVerticale:   Suites[o, x].Affecte(Des[Gr[x, y]].Jr, x, y, Propre);
+      end{case o of};
+  end;
+Result := Ok[oHorizontale] or Ok[oVerticale]
 end;
 
 initialization

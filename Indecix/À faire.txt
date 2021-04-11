@@ -1,3 +1,8 @@
 INDECIX - À FAIRE
 -----------------
-1. Intégrer les lignes et colonnes complètes
+
+Suites de dés :
+
+1. Tester l'affichage des compteurs
+2. Tester le contour des dés
+3. Tester la fin du clignotement en fin de partie

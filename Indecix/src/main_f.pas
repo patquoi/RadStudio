@@ -9,36 +9,41 @@ uses
   Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.Menus, Vcl.StdCtrls, Base;
 
 const
-   NbCouleurs                               = 10;
-   NbColDes                                 = 6;
+   NbCouleurs                                = 10;
+   NbColDes                                  = 6;
 
 type
-   TDigit                                   = (dUnite, dDizaine, dCentaine);
-   TCouleur                                 = (cNoir=0,cBleu=1,cMagenta=2,cOrange=3,cRouge=4,cJaune=5,cVert=6,cPourpre=7,cBlanc=8,cGris=9);
-   TEtatBouton                              = (ebIndefini=0, ebOK=1, ebStop=2);
-
+   TDigit                                    = (dUnite, dDizaine, dCentaine);
+   TCouleur                                  = (cNoir=0,cBleu=1,cMagenta=2,cOrange=3,cRouge=4,cJaune=5,cVert=6,cPourpre=7,cBlanc=8,cGris=9);
+   TEtatBouton                               = (ebIndefini=0, ebOK=1, ebStop=2);
+   TTypeCpt                                  = (tcDes, tcSuites);
 const
-   Couleur   : array [TCouleur] of TColor   = ($000000, $ef5024, $7939c2, $0080ff, $0000ff, $60ffff, $008900, $b44b97, $ffffff, $404040);
-   stNomCl   : array [TCouleur] of String   = ('Noir',  'Bleu','Magenta','Orange', 'Rouge', 'Jaune', 'Vert','Pourpre', 'Blanc', 'Gris');
-   stDigit   : array [TDigit] of String     = ('U','D','C');
-   stIdJr    : array [TIdJoueur] of String  = ('', 'G', 'D');
-   stLabel                                  = 'Label';
-   stPaintBox                               = 'PaintBox';
-   stSfxCpt  : array [TCompteur] of string  = ('DRAJ', 'DC', 'DNJ');
-   NbLgnDes  : array [TCompteur] of Integer = (     3,    2,     2);
-   EtatDeCpt : array [TCompteur] of TEtatDe = (edEnAttente, edCapture, edNonJoue);
+   Couleur   : array [TCouleur] of TColor    = ($000000, $ef5024, $7939c2, $0080ff, $0000ff, $60ffff, $008900, $b44b97, $ffffff, $404040);
+   stNomCl   : array [TCouleur] of String    = ('Noir',  'Bleu','Magenta','Orange', 'Rouge', 'Jaune', 'Vert','Pourpre', 'Blanc', 'Gris');
+   stDigit   : array [TDigit] of String      = ('U','D','C');
+   stIdJr    : array [TIdJoueur] of String   = ('', 'G', 'D');
+   stSfxCpt  : array [TCompteur] of string   = ('DRAJ', 'DC', 'DNJ', 'SM', 'SP');
+   NbLgnDes  : array [TCompteur] of Integer  = (     3,    2,     2,    0,    0);
+   TypeCpt   : array [TCompteur] of TTypeCpt = (tcDes, tcDes, tcDes, tcSuites, tcSuites);
+   EtatDeCpt : array [TCompteur] of TEtatDe  = (edEnAttente, edCapture, edNonJoue, edPose, edPose);
+   stPluriel : array [Boolean] of string     = ('','s');
+   // Préfixes pour FindComponent
+   stLabel                                   = 'Label';
+   stPaintBox                                = 'PaintBox';
+   stTimer                                   = 'Timer';
    // Messages
-   stMsgTourJr                              = 'C''est à %s de jouer !'#13'Appuyez sur STOP'#13'pour arrêter le dé...';
-   stMsgAtteJr                              = '';
-   stMsgPlceDe                              = 'Placez votre dé sur'#13'l''une des cases de votre couleur...';
-   stMsgChxInc                              = 'Choix incorrect !'#13'Choisissez une case colorée !';
-   stMsgResCpt                              = 'Vous avez capturé'#13'%d dé%s dont'#13'%d adverse%s'#13'rapportant %d point%s.';
-   stMsgZeroPt                              = 'Vous n''obtenez aucun point.';
-   stMsgPlcImp                              = 'Impossible de placer votre dé !'#13'Votre adversaire gagne un point.';
-   stMsgAGagne                              = 'Partie terminée'#13'Vous avez gagné !';
-   stMsgAPerdu                              = 'Partie terminée'#13'Vous avez perdu !';
-   stMsgEgalite                             = 'Partie terminée'#13'Vous êtes à égalité !';
-   stPluriel : array [Boolean] of string    = ('','s');
+   stMsgTourJr                               = 'C''est à %s de jouer !'#13'Appuyez sur STOP'#13'pour arrêter le dé...';
+   stMsgAtteJr                               = '';
+   stMsgPlceDe                               = 'Placez votre dé sur'#13'l''une des cases de votre couleur...';
+   stMsgChxInc                               = 'Choix incorrect !'#13'Choisissez une case colorée !';
+   stMsgResCpt                               = 'Vous avez capturé %d dé%s dont'#13'%d adverse%s'#13'rapportant %d point%s.';
+   stMsgZeroPt                               = 'Vous n''obtenez aucun point.';
+   stMsgPlcImp                               = 'Impossible de placer votre dé !'#13'Votre adversaire gagne un point.';
+   stMsgAGagne                               = 'Partie terminée'#13'Vous avez gagné !';
+   stMsgAPerdu                               = 'Partie terminée'#13'Vous avez perdu !';
+   stMsgEgalite                              = 'Partie terminée'#13'Vous êtes à égalité !';
+   stMsgSteCree                              = 'Une suite vient d''être formée.'#13'Elle doit rester jusqu''à la fin'#13'pour être comptabilisée.'#13;
+
 type
   TFormMain = class(TForm)
     ImageCollection: TImageCollection;
@@ -80,11 +85,15 @@ type
     Label2DNJ: TLabel;
     PaintBox1ScoreU: TPaintBox;
     PaintBox2ScoreU: TPaintBox;
-    VirtualImageListStr: TVirtualImageList;
-    PaintBox1StarA: TPaintBox;
-    PaintBox1StarB: TPaintBox;
-    PaintBox2StarA: TPaintBox;
-    PaintBox2StarB: TPaintBox;
+    VirtualImageListSte: TVirtualImageList;
+    PaintBox1SM: TPaintBox;
+    PaintBox1SP: TPaintBox;
+    PaintBox2SM: TPaintBox;
+    PaintBox2SP: TPaintBox;
+    Timer1SM: TTimer;
+    Timer1SP: TTimer;
+    Timer2SM: TTimer;
+    Timer2SP: TTimer;
     procedure PaintBoxScorePaint(Sender: TObject);
     procedure PaintBoxDePaint(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -100,7 +109,8 @@ type
     procedure PaintBoxGrilleMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure PaintBoxTourPaint(Sender: TObject);
-    procedure PaintBoxStarPaint(Sender: TObject);
+    procedure PaintBoxSuitesPaint(Sender: TObject);
+    procedure TimerSuitesTimer(Sender: TObject);
   private
     stMsg : Array [TIdJoueur] of String;
     xPose, yPose : Integer; // Coordonnées du choix de la case du dé
@@ -110,12 +120,12 @@ type
     procedure ColoreTexteJoueurs;
     procedure AfficheMessage(Id : TIdJoueur; stNvMsg : String; EtatBouton : TEtatBouton = ebIndefini);
     procedure AfficheCompteur(c : TCompteur; Id : TIdJoueur = jIndefini); // Si Id = jIndefini, on affiche les deux compteurs
+    procedure AfficheCompteursSuite(Id : TIdJoueur = jIndefini); // Si Id = jIndefini, on affiche les deux compteurs
     procedure AfficheCompteurs(Id : TIdJoueur = jIndefini); // Si Id = jIndefini, on affiche tous les compteurs
     procedure AfficheScore(Id : TIdJoueur = jIndefini); // Si Id = jIndefini, on affiche tous les scores
     procedure AfficheTour;
     function AfficheCasesJouables : Integer;
     procedure AfficheGrille;
-    procedure AfficheStars;
     property EtatBouton : TEtatBouton read DonneEtatBouton write ChangeEtatBouton;
     procedure LanceDe;
     procedure ActionDe(NumDe : TNumDe; Etat: TEtatDe);
@@ -217,8 +227,8 @@ procedure TFormMain.PaintBoxDesPaint(Sender: TObject);
 var pb    : TPaintBox;
     bm    : TBitmap;
     nd,td,
-    x, y,
-    tCrt  : Integer;
+    x, y  : Integer;
+    tCrt  : TTour;
     jCrt  : TIdJoueur;
     cCrt  : TCompteur;
     dCrt  : TNumDe;
@@ -235,39 +245,61 @@ nd := 0; // On compte les dés affichés
 td := Min(pb.Width div NbColDes, pb.Height div NbLgnDes[cCrt]); // Taille d'un dé
 for tCrt := 0 to p.TrCrt do
   for dCrt := Succ(Low(TNumDe)) to High(TNumDe) do
-    if p.De[dCrt].Tour = tCrt then // On affiche les dé par ordre de tour de jeu
-      if (p.De[dCrt].Etat = EtatDeCpt[cCrt]) and
-         (((cCrt = cDC) and (p.De[dCrt].Vq = jCrt)) or           // Dés capturés = vainqueur courant uniquement
-          ((cCrt = cDRAJ) and (p.De[dCrt].Jr = jCrt)) or         // Dés restant à jouer = joueur courant uniquement
-          ((cCrt = cDNJ)  and (p.De[dCrt].Jr = Adv[jCrt]))) then // Dés non joués = joueur adverse uniquement
+    if p.Des[dCrt].Tour = tCrt then // On affiche les dé par ordre de tour de jeu
+      if (p.Des[dCrt].Etat = EtatDeCpt[cCrt]) and
+         (((cCrt = cDC) and (p.Des[dCrt].Vq = jCrt)) or           // Dés capturés = vainqueur courant uniquement
+          ((cCrt = cDRAJ) and (p.Des[dCrt].Jr = jCrt)) or         // Dés restant à jouer = joueur courant uniquement
+          ((cCrt = cDNJ)  and (p.Des[dCrt].Jr = Adv[jCrt]))) then // Dés non joués = joueur adverse uniquement
         begin
         x := td*(nd mod NbColDes);
         y := td*(nd div NbColDes);
         bm := TBitmap.Create;
         VirtualImageListFnd.GetBitmap(Ord(cNoir), bm);
-        VirtualImageListFde.GetBitmap(Ord(CoulJr[p.De[dCrt].Jr]), bm);
-        VirtualImageListDes.GetBitmap(Ord(p.De[dCrt].Face)-1, bm);
+        VirtualImageListFde.GetBitmap(Ord(CoulJr[p.Des[dCrt].Jr]), bm);
+        VirtualImageListDes.GetBitmap(Ord(p.Des[dCrt].Face)-1, bm);
         pb.Canvas.StretchDraw(TRect.Create(x, y, x+td-1, y+td-1), bm);
         FreeAndNil(bm);
         Inc(nd);
         end;
 end;
 
-procedure TFormMain.PaintBoxStarPaint(Sender: TObject);
+procedure TFormMain.PaintBoxSuitesPaint(Sender: TObject);
 var Id   : TIdJoueur;
     bm   : TBitmap;
     pb   : TPaintBox;
+    tm   : TTimer;
     Rect : TRect;
+    tw,th: Integer;
+    cSte : TCompteur;
+    stSc : String;
 begin
 pb := Sender as TPaintBox;
+tm := FindComponent(stTimer + Copy(pb.Name, 9, Length(pb.Name)-8)) as TTimer;
+case pb.Name[16] of
+  'M' : cSte := cSM;
+  'P' : cSte := cSP;
+end{case pb.Nane[16] of};
 Id := TIdJoueur(StrToInt(Copy(pb.Name,9,1)));
 Rect := TRect.Create(0, 0, pb.Width-1, pb.Height-1);
-pb.Canvas.Brush.Color:=Couleur[cGris];
-pb.Canvas.FillRect(Rect);
 bm := TBitmap.Create;
 VirtualImageListFnd.GetBitmap(Ord(cNoir), bm);
-VirtualImageListStr.GetBitmap(Ord(CoulJr[Id]), bm);
-pb.Canvas.StretchDraw(Rect, bm);
+if tm.Enabled and (tm.Tag = 1) then
+  begin
+  VirtualImageListSte.GetBitmap(Ord(CoulJr[Id]), bm);
+  pb.Canvas.StretchDraw(Rect, bm);
+  stSc := IntToStr(p.Score(Id, cSte));
+  with pb.Canvas do
+    begin
+    tw := TextWidth(stSc);
+    th := TextHeight(stSc);
+    Brush.Color := Couleur[CoulJr[Id]];
+    if CoulJr[p.JrCrt] = cJaune then
+      Font.Color := clBlack
+    else
+      Font.Color := clWhite;
+    TextOut((pb.Width - tw) div 2, (pb.Height - th) div 2, stSc);
+    end;
+  end;
 FreeAndNil(bm);
 FreeAndNil(Rect);
 end;
@@ -335,7 +367,7 @@ bm := TBitmap.Create;
 if p.JrCrt > jIndefini then
   VirtualImageListTde.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
 if p.DeCrt > ndIndefini then
-  VirtualImageListDes.GetBitmap(Ord(p.De[p.DeCrt].Face)-1, bm);
+  VirtualImageListDes.GetBitmap(Ord(p.Des[p.DeCrt].Face)-1, bm);
 pb.Canvas.StretchDraw(Rect, bm);
 FreeAndNil(bm);
 FreeAndNil(Rect);
@@ -376,6 +408,7 @@ var bm   : TBitmap;
     tc,
     tw,th: Integer;
     nd   : TNumDe;
+    JrSte: TIdJoueur;
     stSc : String;
 begin
 if p = Nil then Exit;
@@ -392,14 +425,17 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
     if nd > ndIndefini then
       begin
       VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
-      VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.De[nd].Jr]), bm);
-      VirtualImageListDes.GetBitmap(Ord(p.De[nd].Face)-1, bm);
+      VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.Des[nd].Jr]), bm);
+      VirtualImageListDes.GetBitmap(Ord(p.Des[nd].Face)-1, bm);
       pb.Canvas.StretchDraw(Rect, bm);
       end
     else
       if p.Jouable[x, y] then
         begin
         VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
+        JrSte := p.CreateurSuite(x, y);
+        if JrSte > jIndefini then
+          VirtualImageListTDe.GetBitmap(Ord(CoulJr[JrSte]), bm);
         VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
         pb.Canvas.StretchDraw(Rect, bm);
         if p.Scores[x, y]>0 then
@@ -464,11 +500,25 @@ with pb.Canvas do
   TextOut((Rect.Width - TextWidth(stTr)) div 2, (Rect.Height - TextHeight(stTr)) div 2, stTr);
 end;
 
+procedure TFormMain.TimerSuitesTimer(Sender: TObject);
+var tm : TTimer;
+    pb : TPaintBox;
+begin
+if p = nil then Exit;
+tm := Sender as TTimer;
+if (p.TrCrt = NbTotalDes) and (p.PhCrt = phResultatPose) then
+  tm.Tag := 1 // Plus de clignotement en fin de partie
+else
+  tm.Tag := 1 - tm.Tag;
+pb := FindComponent(stPaintBox + Copy(tm.Name,6,Length(tm.Name)-5)) as TPaintBox;
+pb.Refresh
+end;
+
 procedure TFormMain.TimerDeTimer(Sender: TObject);
 begin
 if p = Nil then Exit;
 if p.DeCrt > ndIndefini then
-  p.De[p.DeCrt].Face := TFaceDe(1+Random(6));
+  p.Des[p.DeCrt].Face := TFaceDe(1+Random(6));
 PaintBoxDe.Refresh
 end;
 
@@ -495,13 +545,12 @@ ActionDe(p.DeCrt, edLance);
 end;
 
 procedure TFormMain.ActionDe(NumDe : TNumDe; Etat: TEtatDe);
-var ld  : TListeDes;
-    nj,
-    na,
-    np  : Integer;
-    plj,
-    pla,
-    plp : String;
+var ld      : TListeDes;
+    nj,na,
+    np      : Integer;
+    plj,pla,
+    plp,
+    stMsg : String;
 
 begin
 if p = Nil then Exit;
@@ -515,32 +564,41 @@ case Etat of
                  begin
                  PoseDe(NumDe, xPose, yPose);
                  ld := Nil;
+                 // 1. Captures d'abord
                  if CaptureDes(NumDe, xPose, YPose, ld, True) then
                    begin
                    AfficheScore(JrCrt);
                    AfficheCompteur(cDC, JrCrt);
-                   nj := ld.Des(p, jIndefini);
-                   na := ld.Des(p, Adv[jrCrt]);
-                   np := ld.Score(p, jIndefini);
+                   AfficheCompteursSuite(jIndefini); // On rafraîchit les compteurs de suites car des captures ont eu lieu
+                   nj := ld.Des(Des, jIndefini);
+                   na := ld.Des(Des, Adv[jrCrt]);
+                   np := ld.Score(Des, JrCrt, jIndefini);
                    plj := stPluriel[nj>1];
                    pla := stPluriel[na>1];
                    plp := stPluriel[np>1];
-                   AfficheMessage(JrCrt, Format(stMsgResCpt, [nj, plj, na, pla, np, plp]), ebOK);
+                   stMsg := Format(stMsgResCpt, [nj, plj, na, pla, np, plp]);
                    FreeAndNil(ld);
                    end
                  else
-                   AfficheMessage(JrCrt, stMsgZeroPt, ebOK);
+                   stMsg := stMsgZeroPt;
+                 // 2. Suites ensuite
+                 if SuiteCree(xPose, yPose) then
+                   begin
+                   stMsg := stMsgSteCree + stMsg;
+                   AfficheCompteursSuite(p.JrCrt);
+                   end;
+                 AfficheMessage(p.JrCrt, stMsg, ebOK);
                  AfficheGrille;
                  p.PhaseSuivante; // Tour suivant
                  end;
   edNonJoue:   with p do
                  begin
                  PasseDe(NumDe);
-                 AfficheMessage(JrCrt, stMsgPlcImp, ebOK);
-                 AfficheCompteur(cDNJ, Adv[p.JrCrt]);
-                 AfficheScore(Adv[p.JrCrt]);
-                 p.PhaseSuivante; // On saute le placement
-                 p.PhaseSuivante; // Tour suivant
+                 AfficheMessage(p.JrCrt, stMsgPlcImp, ebOK);
+                 AfficheCompteur(cDNJ, Adv[JrCrt]);
+                 AfficheScore(Adv[JrCrt]);
+                 PhaseSuivante; // On saute le placement
+                 PhaseSuivante; // Tour suivant
                  end;
 end{case of};
 end;
@@ -574,6 +632,8 @@ end;
 procedure TFormMain.AfficheCompteur(c : TCompteur; Id : TIdJoueur = jIndefini);
 var j,jd,jf   : TIdJoueur;
     sc, nb    : Integer;
+    tm        : TTimer;
+    pb        : TPaintBox;
 begin
 if p = Nil then Exit;
 if Id = jIndefini then
@@ -588,19 +648,42 @@ else
   end;
 for j := jd to jf do
   begin
-  // 1. Affichage des dés
-  (FindComponent(stPaintBox+IntToStr(Ord(j))+stSfxCpt[c]) as TPaintBox).Refresh;
-  // 2. Affichage des scores entre parenthèses après les titres
-  with FindComponent(stLabel+IntToStr(Ord(j))+stSfxCpt[c]) as TLabel do
-    begin
-    nb := p.Compte(j, c);
-    sc := p.Score(j, c);
-    if sc = 0 then
-      Caption := Copy(Caption, 1, Pos('(', Caption)) + Format('%d)', [nb])
-    else
-      Caption := Copy(Caption, 1, Pos('(', Caption)) + Format('%d, %d pt%s)', [nb, sc, stPluriel[sc>1]]);
-    end;
+  case TypeCpt[c] of
+    tcDes :   begin
+              // 1. Affichage des dés
+              (FindComponent(stPaintBox+IntToStr(Ord(j))+stSfxCpt[c]) as TPaintBox).Refresh;
+              // 2. Affichage des scores entre parenthèses après les titres
+              with FindComponent(stLabel + IntToStr(Ord(j))+stSfxCpt[c]) as TLabel do
+                begin
+                nb := p.Compte(j, c);
+                sc := p.Score(j, c);
+                if sc = 0 then
+                  Caption := Copy(Caption, 1, Pos('(', Caption)) + Format('%d)', [nb])
+                else
+                  Caption := Copy(Caption, 1, Pos('(', Caption)) + Format('%d, %d pt%s)', [nb, sc, stPluriel[sc>1]]);
+                end
+              end;
+    tcSuites: // Si l'on active le timer, c'est lui qui rafraîchira le compteur
+              begin
+              tm := FindComponent(stTimer + IntToStr(Ord(j)) + stSfxCpt[c]) as TTimer;
+              pb := FindComponent(stPaintBox + IntToStr(Ord(j)) + stSfxCpt[c]) as TPaintBox;
+              if p.Compte(j, c) > 0 then
+                tm.Enabled := True
+              else
+                begin
+                tm.Tag := 0;
+                tm.Enabled := False;
+                pb.Refresh; // Pour "éteindre" l'étoile !
+                end;
+              end;
+  end{case TypeCpt[c] of};
   end;
+end;
+
+procedure TFormMain.AfficheCompteursSuite(Id : TIdJoueur = jIndefini);
+begin
+AfficheCompteur(cSM, Id);
+AfficheCompteur(cSP, Id);
 end;
 
 procedure TFormMain.AfficheCompteurs(Id : TIdJoueur = jIndefini);
@@ -647,15 +730,6 @@ end;
 procedure TFormMain.AfficheGrille;
 begin
 PaintBoxGrille.Refresh
-end;
-
-procedure TFormMain.AfficheStars;
-var Id : TIdJoueur;
-    ab : Char;
-begin
-for Id := Succ(Low(TIdJoueur)) to High(TIdJoueur) do
-  for ab := 'A' to 'B' do
-    (FindComponent(stPaintBox+IntToStr(Ord(Id))+'Star'+ab) as TPaintBox).Refresh;
 end;
 
 (* Autres méthodes *)
