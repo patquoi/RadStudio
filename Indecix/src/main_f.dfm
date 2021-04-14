@@ -262,13 +262,13 @@ object FormMain: TFormMain
     OnPaint = PaintBoxScorePaint
   end
   object PaintBox1SM: TPaintBox
-    Left = 318
-    Top = 126
-    Width = 40
-    Height = 40
+    Left = 310
+    Top = 122
+    Width = 48
+    Height = 48
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Impact'
     Font.Style = []
     ParentFont = False
@@ -276,13 +276,13 @@ object FormMain: TFormMain
   end
   object PaintBox1SP: TPaintBox
     Tag = 1
-    Left = 361
-    Top = 126
-    Width = 40
-    Height = 40
+    Left = 355
+    Top = 122
+    Width = 48
+    Height = 48
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Impact'
     Font.Style = []
     ParentFont = False
@@ -290,13 +290,13 @@ object FormMain: TFormMain
   end
   object PaintBox2SM: TPaintBox
     Tag = 2
-    Left = 495
-    Top = 126
-    Width = 40
-    Height = 40
+    Left = 486
+    Top = 122
+    Width = 48
+    Height = 48
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Impact'
     Font.Style = []
     ParentFont = False
@@ -304,13 +304,13 @@ object FormMain: TFormMain
   end
   object PaintBox2SP: TPaintBox
     Tag = 3
-    Left = 538
-    Top = 126
-    Width = 40
-    Height = 40
+    Left = 532
+    Top = 122
+    Width = 48
+    Height = 48
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Impact'
     Font.Style = []
     ParentFont = False

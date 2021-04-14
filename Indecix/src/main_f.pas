@@ -271,11 +271,12 @@ var Id   : TIdJoueur;
     Rect : TRect;
     tw,th: Integer;
     cSte : TCompteur;
+    clSc : TCouleur;
     stSc : String;
 begin
 pb := Sender as TPaintBox;
 tm := FindComponent(stTimer + Copy(pb.Name, 9, Length(pb.Name)-8)) as TTimer;
-case pb.Name[16] of
+case pb.Name[11] of
   'M' : cSte := cSM;
   'P' : cSte := cSP;
 end{case pb.Nane[16] of};
@@ -285,19 +286,23 @@ bm := TBitmap.Create;
 VirtualImageListFnd.GetBitmap(Ord(cNoir), bm);
 if tm.Enabled and (tm.Tag = 1) then
   begin
-  VirtualImageListSte.GetBitmap(Ord(CoulJr[Id]), bm);
-  pb.Canvas.StretchDraw(Rect, bm);
-  stSc := IntToStr(p.Score(Id, cSte));
+  if cSte = cSP then
+    clSc := CoulJr[Id]
+  else
+    clSc := cGris;
+  VirtualImageListSte.GetBitmap(Ord(clSc), bm);
   with pb.Canvas do
     begin
+    StretchDraw(Rect, bm);
+    stSc := IntToStr(p.Score(Id, cSte));
     tw := TextWidth(stSc);
     th := TextHeight(stSc);
-    Brush.Color := Couleur[CoulJr[Id]];
+    Brush.Color := Couleur[clSc];
     if CoulJr[p.JrCrt] = cJaune then
       Font.Color := clBlack
     else
       Font.Color := clWhite;
-    TextOut((pb.Width - tw) div 2, (pb.Height - th) div 2, stSc);
+    TextOut((pb.Width - tw) div 2, 2+(pb.Height - th) div 2, stSc);
     end;
   end;
 FreeAndNil(bm);
@@ -425,6 +430,9 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
     if nd > ndIndefini then
       begin
       VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
+      JrSte := p.CreateurSuite(x, y);
+      if JrSte > jIndefini then
+        VirtualImageListTDe.GetBitmap(Ord(CoulJr[JrSte]), bm);
       VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.Des[nd].Jr]), bm);
       VirtualImageListDes.GetBitmap(Ord(p.Des[nd].Face)-1, bm);
       pb.Canvas.StretchDraw(Rect, bm);
@@ -433,9 +441,6 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
       if p.Jouable[x, y] then
         begin
         VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
-        JrSte := p.CreateurSuite(x, y);
-        if JrSte > jIndefini then
-          VirtualImageListTDe.GetBitmap(Ord(CoulJr[JrSte]), bm);
         VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
         pb.Canvas.StretchDraw(Rect, bm);
         if p.Scores[x, y]>0 then
@@ -584,8 +589,9 @@ case Etat of
                  // 2. Suites ensuite
                  if SuiteCree(xPose, yPose) then
                    begin
-                   stMsg := stMsgSteCree + stMsg;
+                   AfficheScore(JrCrt);
                    AfficheCompteursSuite(p.JrCrt);
+                   stMsg := stMsgSteCree + stMsg;
                    end;
                  AfficheMessage(p.JrCrt, stMsg, ebOK);
                  AfficheGrille;
@@ -750,6 +756,7 @@ end;
 procedure TFormMain.FinDePartie;
 var sg, sd : Integer;
 begin
+AfficheScore;
 EtatBouton := ebIndefini;
 sg := p.Score(jGauche);
 sd := p.Score(jDroite);

@@ -1,8 +1,6 @@
 INDECIX - À FAIRE
 -----------------
 
-Suites de dés :
+Suites de dés
+ - afficher une étoile quand une suite peut être créée.
 
-1. Tester l'affichage des compteurs
-2. Tester le contour des dés
-3. Tester la fin du clignotement en fin de partie

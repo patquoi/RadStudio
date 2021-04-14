@@ -640,16 +640,21 @@ case c of
                 Inc(s, Ord(Des[nd].Face)*(Ord((Des[nd].Vq = j) and (Des[nd].Etat = edCapture))*(1+Ord(Des[nd].Jr = Adv[j]))));
     cDNJ:     for nd := Succ(Low(TNumDe)) to High(TNumDe) do
                 Inc(s, Ord((Des[nd].Jr = Adv[j]) and (Des[nd].Etat = edNonJoue)));
-    cSM..cSP: for o := Low(TOrientation) to High(TOrientation) do
+    cSM:      for o := Low(TOrientation) to High(TOrientation) do
                 for co := Low(TCoordonnee) to High(TCoordonnee) do
-                  Inc(s, Suites[o, co].Score(Gr, Des)); // retourne zéro si la suite a été cassée
+                  if (Suites[o, co].Jr = j) and not Suites[o, co].Propre then
+                    Inc(s, Suites[o, co].Score(Gr, Des));
+    cSP:      for o := Low(TOrientation) to High(TOrientation) do
+                for co := Low(TCoordonnee) to High(TCoordonnee) do
+                  if (Suites[o, co].Jr = j) and Suites[o, co].Propre then
+                    Inc(s, Suites[o, co].Score(Gr, Des));
   end;
 Result := s;
 end;
 
 function TPartie.Score(j : TIdJoueur) : Integer;
 begin
-Result := Score(j, cDC) + Score(j, cDNJ);
+Result := Score(j, cDC) + Score(j, cDNJ) + Score(j, cSM) + Score(j, cSP);
 end;
 
 procedure TPartie.PhaseSuivante;
