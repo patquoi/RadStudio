@@ -1,6 +1,0 @@
-INDECIX - À FAIRE
------------------
-
-Suites de dés
- - afficher une étoile quand une suite peut être créée.
-

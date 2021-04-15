@@ -411,7 +411,8 @@ var bm   : TBitmap;
     Rect : TRect;
     x, y : TCoordonnee;
     tc,
-    tw,th: Integer;
+    tw,th,
+    Sc   : Integer;
     nd   : TNumDe;
     JrSte: TIdJoueur;
     stSc : String;
@@ -441,11 +442,15 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
       if p.Jouable[x, y] then
         begin
         VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
-        VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
+        Sc := p.Scores[x, y];
+        if (Sc = 0) and p.CreeSuite(x, y) then
+          VirtualImageListSte.GetBitmap(Ord(CoulJr[p.JrCrt]), bm)
+        else
+          VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
         pb.Canvas.StretchDraw(Rect, bm);
-        if p.Scores[x, y]>0 then
+        if Sc > 0 then
           begin
-          stSc := IntToStr(p.Scores[x, y]);
+          stSc := IntToStr(Sc);
           with pb.Canvas do
             begin
             tw := TextWidth(stSc);
@@ -572,7 +577,7 @@ case Etat of
                  // 1. Captures d'abord
                  if CaptureDes(NumDe, xPose, YPose, ld, True) then
                    begin
-                   AfficheScore(JrCrt);
+                   AfficheScore; // rafraîchir les deux scores car des suites peuvent être "cassées" !
                    AfficheCompteur(cDC, JrCrt);
                    AfficheCompteursSuite(jIndefini); // On rafraîchit les compteurs de suites car des captures ont eu lieu
                    nj := ld.Des(Des, jIndefini);

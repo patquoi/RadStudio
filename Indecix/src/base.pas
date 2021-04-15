@@ -123,6 +123,7 @@ type
     function Score(j : TIdJoueur) : Integer; overload;
     procedure PhaseSuivante;
     function CreateurSuite(x, y : TCoordonnee) : TIdJoueur;
+    function CreeSuite(x, y : TCoordonnee) : Boolean; // Retourne Vrai si une suite est créée en posant le dé en (x,y)
     function SuiteCree(x, y : TCoordonnee) : Boolean; // Retourne Vrai si une suite vient d'être créée en posant un dé en (x,y) : alimente Suites
   end{class TPartie};
 
@@ -682,6 +683,33 @@ if (jh > jIndefini) and (jv > jIndefini) then
     Result := jv
   else
     Result := jh;
+end;
+
+function TPartie.CreeSuite(x, y : TCoordonnee) : Boolean;
+var c      : TCoordonnee;
+    o      : TOrientation;
+    OK     : array [TOrientation] of Boolean;
+begin
+for o := Low(TOrientation) to High(TOrientation) do
+  begin
+  OK[o] := True; // Optimiste !
+  for c := Low(TCoordonnee) to High(TCoordonnee) do
+    case o of
+      oHorizontale: if (c <> x) and (Gr[c, y] = ndIndefini) then
+                      begin
+                      OK[o] := False;
+                      break;
+                      end;
+      oVerticale:   if (c <> y) and (Gr[x, c] = ndIndefini) then
+                      begin
+                      OK[o] := False;
+                      break;
+                      end;
+    end{case o of};
+    if not OK[o] then
+      Continue
+  end;
+Result := Ok[oHorizontale] or Ok[oVerticale]
 end;
 
 function TPartie.SuiteCree(x, y : TCoordonnee) : Boolean;
