@@ -128,7 +128,8 @@ type
   end{class TPartie};
 
 var
-  p : TPartie;
+  stRepLocalAppData : String;
+  p                 : TPartie;
 
 function CoordonneesValides(x, y : Integer) : Boolean;
 
@@ -146,6 +147,44 @@ Result := (x >= Ord(Low(TCoordonnee))) and
           (x <= Ord(High(TCoordonnee))) and
           (y >= Ord(Low(TCoordonnee))) and
           (y <= Ord(High(TCoordonnee)));
+end;
+
+procedure InitialiseRepLocalAppData;
+const stVarLocalAppData  = 'LOCALAPPDATA';
+      stVarUserProfile   = 'USERPROFILE';
+      stRepLocAppDataPrdc = '\Patquoi.fr\Indecix';
+var stExePath : String;
+begin
+stExePath := ExtractFilePath(ParamStr(0));
+stRepLocalAppData := GetEnvironmentVariable(stVarLocalAppData);
+if stRepLocalAppData = '' then
+  begin
+  stRepLocalAppData := GetEnvironmentVariable(stVarUserProfile);
+  if stRepLocalAppData = '' then
+    stRepLocalAppData := stExePath // Dossier de Paradice.exe
+  else
+    begin
+	  stRepLocalAppData := stRepLocalAppData + '\Local Settings\Application Data' + stRepLocAppDataPrdc;
+	  if not DirectoryExists(stRepLocalAppData) then
+		  if not ForceDirectories(stRepLocalAppData) then
+        stRepLocalAppData := stExePath // Dossier de Paradice.exe
+      else
+        stRepLocalAppData:=stRepLocalAppData+'\'
+    else
+      stRepLocalAppData:=stRepLocalAppData+'\';
+    end;
+  end
+else
+  begin
+  stRepLocalAppData := stRepLocalAppData + stRepLocAppDataPrdc;
+  if not DirectoryExists(stRepLocalAppData) then
+    if not ForceDirectories(stRepLocalAppData) then
+      stRepLocalAppData:=stExePath // Dossier de Paradice.exe
+    else
+      stRepLocalAppData:=stRepLocalAppData+'\'
+  else
+    stRepLocalAppData:=stRepLocalAppData+'\';
+  end
 end;
 
 (* Class TDe *)
@@ -753,6 +792,7 @@ Result := Ok[oHorizontale] or Ok[oVerticale]
 end;
 
 initialization
+InitialiseRepLocalAppData;
 p := TPartie.Create;
 
 finalization

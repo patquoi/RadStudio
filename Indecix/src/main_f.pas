@@ -22,6 +22,7 @@ const
    stNomCl   : array [TCouleur] of String    = ('Noir',  'Bleu','Magenta','Orange', 'Rouge', 'Jaune', 'Vert','Pourpre', 'Blanc', 'Gris');
    stDigit   : array [TDigit] of String      = ('U','D','C');
    stIdJr    : array [TIdJoueur] of String   = ('', 'G', 'D');
+   clJrDft   : array [TIdJoueur] of TCouleur = (cNoir, cBleu, cRouge);
    stSfxCpt  : array [TCompteur] of string   = ('DRAJ', 'DC', 'DNJ', 'SM', 'SP');
    NbLgnDes  : array [TCompteur] of Integer  = (     3,    2,     2,    0,    0);
    TypeCpt   : array [TCompteur] of TTypeCpt = (tcDes, tcDes, tcDes, tcSuites, tcSuites);
@@ -94,6 +95,10 @@ type
     Timer1SP: TTimer;
     Timer2SM: TTimer;
     Timer2SP: TTimer;
+    MenuItemOptions: TMenuItem;
+    MenuItemAffichage: TMenuItem;
+    MenuItemAffichageCasesJouables: TMenuItem;
+    MenuItemAffichageScoresCaptures: TMenuItem;
     procedure PaintBoxScorePaint(Sender: TObject);
     procedure PaintBoxDePaint(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -111,11 +116,15 @@ type
     procedure PaintBoxTourPaint(Sender: TObject);
     procedure PaintBoxSuitesPaint(Sender: TObject);
     procedure TimerSuitesTimer(Sender: TObject);
+    procedure MenuItemAffichageCasesClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     stMsg : Array [TIdJoueur] of String;
     xPose, yPose : Integer; // Coordonnées du choix de la case du dé
     procedure ChangeEtatBouton(NvEtatBouton : TEtatBouton);
     function DonneEtatBouton : TEtatBouton;
+    procedure LitParametres;
+    procedure EcritParametres;
   public
     procedure ColoreTexteJoueurs;
     procedure AfficheMessage(Id : TIdJoueur; stNvMsg : String; EtatBouton : TEtatBouton = ebIndefini);
@@ -140,18 +149,45 @@ implementation
 
 {$R *.dfm}
 
-uses System.Math, joueurs_f;
+uses System.Math, System.IniFiles, joueurs_f;
+
+const
+  stNomFichierIni        : String = 'Paradice.ini';
+  stSectionOptions       : String = 'Options';
+  stSectionAffichage     : String = 'Affichage';
+  stEntreeCoulJr         : String = 'CoulJr';
+  stEntreeTypeJr         : String = 'TypeJr';
+  stEntreePoses          : String = 'Poses';
+  stEntreeScores         : String = 'Scores';
+
+
+procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+EcritParametres;
+end;
 
 procedure TFormMain.FormCreate(Sender: TObject);
 begin
- CoulJr[jGauche] := cBleu;
- CoulJr[jDroite] := cRouge;
- ColoreTexteJoueurs
+LitParametres;
+ColoreTexteJoueurs
 end;
 
 procedure TFormMain.FormShow(Sender: TObject);
 begin
 TimerDe.Enabled := False;
+end;
+
+procedure TFormMain.MenuItemAffichageCasesClick(Sender: TObject);
+var mi : TMenuItem;
+begin
+mi := Sender as TMenuItem;
+if mi = MenuItemAffichageCasesJouables then
+  begin
+  MenuItemAffichageScoresCaptures.Enabled := mi.Checked;
+  if not mi.Checked then
+    MenuItemAffichageScoresCaptures.Checked := False;
+  end;
+AfficheGrille
 end;
 
 procedure TFormMain.MenuItemJoueursClick(Sender: TObject);
@@ -401,7 +437,8 @@ if Button = mbLeft then
     ActionDe(p.DeCrt, edPose);
     end
   else
-    AfficheMessage(p.JrCrt, stMsgChxInc);
+    if p.Des[p.DeCrt].Etat = edLance then
+      AfficheMessage(p.JrCrt, stMsgChxInc);
   end;
 end;
 
@@ -439,7 +476,7 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
       pb.Canvas.StretchDraw(Rect, bm);
       end
     else
-      if p.Jouable[x, y] then
+      if p.Jouable[x, y] and MenuItemAffichageCasesJouables.Checked then
         begin
         VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
         Sc := p.Scores[x, y];
@@ -448,7 +485,7 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
         else
           VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
         pb.Canvas.StretchDraw(Rect, bm);
-        if Sc > 0 then
+        if (Sc > 0) and MenuItemAffichageScoresCaptures.Checked then
           begin
           stSc := IntToStr(Sc);
           with pb.Canvas do
@@ -543,6 +580,52 @@ for j := Succ(Low(TIdJoueur)) to High(TIdJoueur) do
   (FindComponent(stPaintBox+IntToStr(Ord(j))+'Msg') as TPaintBox).Font.Color := Couleur[CoulJr[j]];
   end;
 end;
+
+(**************)
+(* Paramètres *)
+(**************)
+
+procedure TFormMain.LitParametres;
+var Id      : TIdJoueur;
+    IniFile : TIniFile;
+begin
+IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
+try
+  // 1. Options Joueurs
+  for Id := Succ(Low(TIdJoueur)) to High(TIdJoueur) do
+    begin
+    CoulJr[Id] := TCouleur(IniFile.ReadInteger(stSectionOptions, stEntreeCoulJr + stIdJr[Id], Ord(clJrDft[Id])));
+    if p <> nil then
+      p.Jr[Id].Automate := IniFile.ReadBool(stSectionOptions, stEntreeTypeJr + stIdJr[Id], False);
+    end;
+  // 2. Affichage
+  MenuItemAffichageCasesJouables.Checked := IniFile.ReadBool(stSectionAffichage, stEntreePoses, True);
+  MenuItemAffichageScoresCaptures.Checked := IniFile.ReadBool(stSectionAffichage, stEntreeScores, True);
+finally
+  FreeAndNil(IniFile);
+end{try}
+end{procedure TFormPlateau.LitParametres};
+
+procedure TFormMain.EcritParametres;
+var Id      : TIdJoueur;
+    IniFile : TIniFile;
+begin
+IniFile:=TIniFile.Create(stRepLocalAppData+stNomFichierIni);
+try
+  // 1. Options Joueurs
+  for Id := Succ(Low(TIdJoueur)) to High(TIdJoueur) do
+    begin
+    IniFile.WriteInteger(stSectionOptions, stEntreeCoulJr + stIdJr[Id], Ord(CoulJr[Id]));
+    if p <> nil then
+      IniFile.ReadBool(stSectionOptions, stEntreeTypeJr + stIdJr[Id], p.Jr[Id].Automate);
+    end;
+  // 2. Affichage
+  IniFile.WriteBool(stSectionAffichage, stEntreePoses, MenuItemAffichageCasesJouables.Checked);
+  IniFile.WriteBool(stSectionAffichage, stEntreeScores, MenuItemAffichageScoresCaptures.Checked);
+finally
+  FreeAndNil(IniFile);
+end{try}
+end{procedure TFormPlateau.EcritParametres};
 
 (******************)
 (* Actions de dés *)

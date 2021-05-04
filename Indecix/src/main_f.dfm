@@ -16,6 +16,7 @@ object FormMain: TFormMain
   Menu = MainMenu
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
@@ -27919,10 +27920,30 @@ object FormMain: TFormMain
         ShortCut = 16462
         OnClick = MenuItemPartieNouvelleClick
       end
+    end
+    object MenuItemOptions: TMenuItem
+      Caption = '&Options'
       object MenuItemJoueurs: TMenuItem
         Caption = '&Joueurs...'
         ShortCut = 16458
         OnClick = MenuItemJoueursClick
+      end
+    end
+    object MenuItemAffichage: TMenuItem
+      Caption = '&Affichage'
+      object MenuItemAffichageCasesJouables: TMenuItem
+        AutoCheck = True
+        Caption = 'Cases &jouables'
+        Checked = True
+        ShortCut = 24650
+        OnClick = MenuItemAffichageCasesClick
+      end
+      object MenuItemAffichageScoresCaptures: TMenuItem
+        AutoCheck = True
+        Caption = '&Scores captures '
+        Checked = True
+        ShortCut = 24659
+        OnClick = MenuItemAffichageCasesClick
       end
     end
     object MenuItemInfo: TMenuItem
