@@ -1,1 +1,1 @@
-! Vérifier lors des captures que l'on a affaire à la plus grande suite.
+

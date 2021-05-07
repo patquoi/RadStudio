@@ -522,7 +522,7 @@ for d := dEst to dSud do
         (Gr[x+kd*dx[d], y+kd*dy[d]] > ndIndefini) do
     Dec(kd);
   Inc(kd);
-  for k := kd to -2 do
+  for k := kd to -2 do // Dès que l'on trouve que des dés à capturer entre le dé posé et la borne, on s'arrête !
     begin // Il faut qu'entre les deux dés NumDe et Borne, il n'y ait que des dés dont la face est comprise entre f0 et fb
     Borne := Gr[x+k*dx[d], y+k*dy[d]];
     fb := Des[Borne].Face;
@@ -543,7 +543,7 @@ for d := dEst to dSud do
       end;
     if KO then
       continue
-    else // Tous les dés entre NumDe et Borne sont capturés
+    else // Tous les dés entre NumDe et Borne sont capturés : on a trouvé la plus grande suite
       begin
       for kk := k+1 to -1 do
         begin
@@ -561,10 +561,11 @@ for d := dEst to dSud do
 
   // 2. Après le dé posé
   kf := 1;
-  while CoordonneesValides(x+kf*dx[d], y+kf*dy[d]) and (Gr[x+kf*dx[d], y+kf*dy[d]] > ndIndefini) do
+  while CoordonneesValides(x+kf*dx[d], y+kf*dy[d]) and
+        (Gr[x+kf*dx[d], y+kf*dy[d]] > ndIndefini) do
     Inc(kf);
   Dec(kf);
-  for k := 2 to kf do
+  for k := kf downto 2 do // Dès que l'on trouve que des dés à capturer entre le dé posé et la borne, on s'arrête !
     begin // Il faut qu'entre les deux dés NumDe et Borne, il n'y ait que des dés dont la face est comprise entre f0 et fb
     Borne := Gr[x+k*dx[d], y+k*dy[d]];
     fb := Des[Borne].Face;
@@ -585,7 +586,7 @@ for d := dEst to dSud do
       end;
     if KO then
       continue
-    else // Tous les dés entre NumDe et Borne sont capturés
+    else // Tous les dés entre NumDe et Borne sont capturés : on a trouvé la plus grande suite
       begin
       for kk := 1 to k-1 do
         begin
