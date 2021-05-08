@@ -202,6 +202,7 @@ end;
 
 procedure TFormMain.MenuItemPartieNouvelleClick(Sender: TObject);
 begin
+if p = Nil then Exit;
 p.Nouvelle;
 Refresh;
 AfficheTour; // Affiche les messages et le tour
@@ -270,7 +271,7 @@ var pb    : TPaintBox;
     dCrt  : TNumDe;
     stSfx : String;
 begin
-if p = Nil then Exit; // On ne fait rien si p n'est pas défini.
+if p = Nil then Exit;
 pb := Sender as TPaintBox;
 jCrt := TIdJoueur(StrToInt(Copy(pb.Name,9,1)));
 stSfx := Copy(pb.Name,10,4);
@@ -310,6 +311,7 @@ var Id   : TIdJoueur;
     clSc : TCouleur;
     stSc : String;
 begin
+if p = Nil then Exit;
 pb := Sender as TPaintBox;
 tm := FindComponent(stTimer + Copy(pb.Name, 9, Length(pb.Name)-8)) as TTimer;
 case pb.Name[11] of
@@ -349,6 +351,7 @@ procedure TFormMain.PaintBoxActionClick(Sender: TObject);
 var pb        : TPaintBox;
     Etat      : TEtatBouton;
 begin
+if p = Nil then Exit;
 pb := Sender as TPaintBox;
 Etat := TEtatBouton(pb.Tag);
 case Etat of
@@ -400,6 +403,7 @@ var bm   : TBitmap;
     pb   : TPaintBox;
     Rect : TRect;
 begin
+if p = Nil then Exit;
 pb := Sender as TPaintBox;
 Rect := TRect.Create(0, 0, pb.Width-1, pb.Height-1);
 pb.Canvas.Brush.Color:=Couleur[cGris];
@@ -480,7 +484,7 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
         begin
         VirtualImageListFnd.GetBitmap(Ord(cGris), bm);
         Sc := p.Scores[x, y];
-        if (Sc = 0) and p.CreeSuite(x, y) then
+        if (Sc = 0) and p.CreeSuite(x, y) and MenuItemAffichageScoresCaptures.Checked then
           VirtualImageListSte.GetBitmap(Ord(CoulJr[p.JrCrt]), bm)
         else
           VirtualImageListFDe.GetBitmap(Ord(CoulJr[p.JrCrt]), bm);
