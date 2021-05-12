@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+<HEAD>
+
+<TITLE>Indécix : règle du jeu et utilisation</TITLE>
+<META Name="description" Content="Aide sur Indécix">
+<META Name="keywords" Content="Aide, Indécix">
+<META HTTP-EQUIV="Content-type" content="text/html; charset=ISO-8859-15">
+
+</HEAD>
+
+<BODY>
+
+<H1>Indecix&nbsp;: règle du jeu et utilisation</H1>
+
+<CENTER><IMG Alt="Icône d'Indécix 48" SRC="png/indecix_48.png" HEIGHT=48 WIDTH=48 BORDER=0>&nbsp;
+	    <IMG Alt="Icône d'Indécix 150" SRC="png/indecix_150.png" HEIGHT=150 WIDTH=150 BORDER=0>&nbsp;
+	    <IMG Alt="Icône d'Indécix 256" SRC="png/indecix_256.png" HEIGHT=256 WIDTH=256 BORDER=0>&nbsp;
+	    <IMG Alt="Icône d'Indécix 150" SRC="png/indecix_150.png" HEIGHT=150 WIDTH=150 BORDER=0>&nbsp;
+	    <IMG Alt="Icône d'Indécix 48" SRC="png/indecix_48.png" HEIGHT=48 WIDTH=48 BORDER=0>&nbsp;
+</CENTER><BR>
+
+<HR>
+<H1>Sommaire</H1>
+<UL>
+  <LI><A HREF="#pr">Présentation rapide</A>
+  <LI><A HREF="#lpdj">Le plateau de jeu</A>
+    <UL>
+	  <LI><A HREF="#lc">Les cases</A>
+	  <LI><A HREF="#lzdi">Les zones d&rsquo;informations</A>
+	    <UL>
+		  <LI><A HREF="#zdm">Zone des messages</A>
+		  <LI><A HREF="#zds">Zone des scores</A>
+		  <LI><A HREF="#zdldd">Zone du lancer de dés</A>
+		</UL>  
+	</UL>  
+  <LI><A HREF="#rdj">Règle du jeu</A>
+    <UL>
+	  <LI><A HREF="#psd">Placer son dé</A>
+	  <LI><A HREF="#cdd">Capturer des dés</A>
+      <LI><A HREF="#fus">Former une suite</A>
+    </UL>		
+  <LI><A HREF="#odj">Options de jeu</A>	
+    <UL>
+		<LI><A HREF="#cdj">Couleurs des joueurs</A>
+		<LI><A HREF="#adpdp">Affichage des possibilités de poses</A>
+		<LI><A HREF="#adsdc">Affichage des scores de captures</A>
+	  </UL>		
+  </UL>
+<U>Remarque</U>&nbsp;: N&rsquo;hésitez pas à utiliser l&rsquo;outil de recherche de votre navigateur, toute l&rsquo;aide est dans cette unique page&nbsp;!<p>
+
+<HR>
+
+<A NAME="pr"></A><H1>Présentation rapide</H1>
+
+<B>Indécix</B> est un jeu dans lequel <B>chaque joueur a 18 dés</B> à <B>lancer et à poser</B> chacun son tour sur une <B>grille de 6 cases sur 6</B>.<BR>
+Selon le résultat du dé, la <b>pose</b> sur la grille comporte des <b>contraintes</b> et permet de <b>capturer</b> des dés <b>propres</b> comme <b>adverses</b>.<P>
+
+Une fois lancé, le dé <B>doit être posé sur une case libre</B> de la grille.<BR>
+L&rsquo;autre contrainte est qu&rsquo;il ne doit pas être sur la <B>même ligne</B> ou la <B>même colonne</B> avec un dé <B>ayant la même face</B>.<P>
+
+Une <b>capture</b> de dés a lieu s&rsquo;il existe un dé appelé <B>borne</B> de telle sorte que&nbsp;:<ul>
+	<li>il n&rsquo;y a pas de cases vides entre le dé posé et la borne&nbsp;;
+	<li>tous les dés situés sur la même ligne ou la même colonne et entre le dé posé et la borne, ont une face comprise entre celle du dé posé et celle de la borne, dans n&rsquo;importe quel ordre.
+</ul> 
+
+Certaines situations après le lancer de dé ou la pose <b>rapportent des points</b>&nbsp;:<ul>
+	<li><b>Passer son tour</b> par impossibilité de poser le dé <B>rapporte un point à l&rsquo;adversaire</B>&nbsp;;</li>
+	<li><b>Capturer</b> un dé rapporte <b>autant de points que la face du dé</b> s&rsquo;il s&rsquo;agit de l&rsquo;un de ses <b>propres dés</b> et le <b>double de points</b> s&rsquo;il s&rsquo;agit d&rsquo;un <b>dé adverse</b>&nbsp;;</li>
+	<li><b>Former une suite de six dés</b> sur une <b>même ligne</b> ou une <b>même colonne</b> rapporte <b>la somme des faces des dés alignés</b> excepté le dé qui vient d&rsquo;être posé et <b>le score est doublé</b> si la suite ne comporte que des <b>dés propres</b>.</li>
+</ul>
+
+Le <B>vainqueur</B> est le joueur ayant remporté <B>le plus de points</B> dès qu&rsquo;il ne reste plus de dés à jouer.<p>
+
+<HR>
+
+<A NAME="lpdj"></A><H1>Le plateau de jeu</H1>
+
+<CENTER><IMG Alt="Plateau de jeu (1)" SRC="png/ecran_1d6_a.png" HEIGHT=447 WIDTH=598  BORDER=1>&nbsp;<IMG Alt="Plateau de jeu (2)" SRC="png/ecran_1d6_b.png" HEIGHT=447 WIDTH=598  BORDER=1></CENTER><BR>
+
+Le plateau de jeu est composé de plusieurs zones&nbsp;:<ul>
+	<li>en bas au centre, la <b>grille</b> où l&rsquo;on <b>pose les dés</b>&nbsp;;</li>
+	<li>de chaque côté de la grille, les <b>dés qui ne sont pas sur la grille</b> (restant à jouer, non joués et capturés)&nbsp;;</li>
+	<li>dans les coins supérieurs, les <b>zones de messages destinés aux joueurs</b>&nbsp;;</li>
+	<li>en haut au centre, <b>le dé à lancer</b> du joueur courant et <b>en dessous</b> le <b>bouton d&rsquo;action</b> (&laquo;&nbsp;STOP&nbsp;&raquo; ou &laquo;&nbsp;OK&nbsp;&raquo;)&nbsp;</li>
+	<li>de chaque côté du bouton d&rsquo;action, les indicateurs de <b>suites de dés</b>.</li>
+</ul>
+
+<A NAME="lc"></A><H2>Les cases</H2>
+
+Les cases du plateau de jeu sont au <b>nombre de 36</b> (six par six).<BR>
+Au <b>début du jeu</b>, <b>la grille est vide</b> et à tour de rôle <b>chaque joueur pose son dé</b> une fois lancé, sur l&rsquo;une des <b>cases libres</b> de la grille selon le résultat.<BR>
+En effet, le dé <b>ne peut pas être posé</b> sur une <b>ligne ou une colonne</b> contenant déjà un dé avec la <b>même face</b> que celle du dé à poser, comme dans le jeu <I>Sudoku</I>.<P>
+
+Quand un dé est <b>posé sur la grille</b>, la <b>face</b> du dé posé est <b>affichée</b> sur la case choisie et le <b>dé prend la couleur du joueur</b>.<br>
+Si un joueur <b>complète</b> une <b>ligne</b> ou une <b>colonne</b> sans capturer de dés, le <b>fond de tous les dés</b> de la ligne ou de la colonne complète, <b>prend la couleur du joueur</b>.<BR>
+Dès que la <b>ligne ou la colonne est brisée</b> à cause d&rsquo;une capture, <b>ce fond disparaît</b>.
+
+<A NAME="lzdi"></A><H2>Les zones d&rsquo;informations</H2>
+
+Plusieurs informations sont affichées tout autour de la grille...
+
+<A NAME="zdm"></A><H3>Zones de messages</H3>
+
+Les <b>messages destinés aux joueurs</b> sont situés de part et d&rsquo;autre des scores, du dé lancé et du bouton d&rsquo;action.<br>
+Les messages affichés concernent le joueur dont <b>c&rsquo;est au tour de jouer</b>&nbsp;: ils sont dans la <b>couleur</b> et du <b>côté</b> du joueur concerné.<br>
+Ils donnent des indications sur les actions à faire et rapporte le résultat de la pose du dé sur la grille.<p>
+
+<A NAME="zds"></A><H3>Zones des scores</H3>
+
+Le <b>score principal</b> de chaque joueur apparaît <b>de chaque côté du dé à lancer</b>.<p>
+Ce score est le <b>cumul des scores intermédiaires...</b><ul>
+	<li>des <b>dés capturés</b> et <b>non joués</b> affichés de <b>chaque côté de la grille</b>&nbsp;;
+	<li>des <b>suites de dés formées</b> dont le total est affiché de <b>chaque côté du bouton d&rsquo;action</b>.</ul>
+
+Les <b>dés</b> qui <b>ne sont plus</b> ou <b>pas encore</b> sur la grille, sont affichés de part et d&rsquo;autre de celle-ci selon leur situation&nbsp:<ul>
+	<li>en haut, sont affichés les dés qui n&rsquo;ont <b>pas encore été lancés</b>&nbsp;;
+	<li>en dessous apparaissent les <b>dés capturés</b> par le joueur&nbsp;;
+	<li>en bas apparaissent les <b>dés adverses</b> qui n&rsquo;ont <b>pas pu être posé</b> sur la grille.</ul>
+
+Les dés sont de la <b>couleur du joueur qui les a lancés</b>.<p>
+À côté de chaque <b>situation de dés</b> est affiché <b>entre parenthèses</b>&nbsp;:<ul>
+	<li>le <b>nombre de dés concernés</b>&nbsp;;
+	<li>le <b>nombre de points rapportés</b> (sauf pour les dés restant à jouer).</ul> 
+
+<A NAME="zdldd"></A><H3>Zones du lancer de dé</H3>
+
+Le <b>dé à lancer</b> est affiché en <b>haut et au centre de l&rsquo;écran</b>, au <b>dessus du bouton d&rsquo;action</b>.<br>
+La <b>couleur du dé à lancer</b> est celle du joueur dont <b>c&rsquo;est au tour de jouer</b>.<br>
+Si le <b>tour de jeu change</b>, le dé a sa <b>face qui change en permanence</b> et le <b>bouton d&rsquo;action est à &laquo;&nbsp;STOP&nbsp;&raquo;</b>.<p>
+
+<center><IMG Alt="Bouton STOP" SRC="png/stop.png" HEIGHT=121 WIDTH=121 BORDER=0></center>
+
+Dès que le joueur <b>appuie sur le bouton &laquo;&nbsp;STOP&nbsp;&raquo;</b>, la <b>face du dé se fige</b>...<ul>
+	<li>Si le <b>dé peut être posé</b>, un message informe que le joueur <b>peut poser le dé</b> sur la grille dont il doit <b>choisir la case destination</b>&nbsp;;
+	<li>Si le <b>dé ne peut être posé</b>, un message en informe le joueur et <b>c&rsquo;&rsquo;est au tour de l&rsquo;adversaire de jouer</b> qui doit <b>appuyer sur &laquo;&nbsp;OK&nbsp;&raquo;</b>.</ul>
+	
+<center><IMG Alt="Bouton OK" SRC="png/ok.png" HEIGHT=121 WIDTH=121 BORDER=0></center>
+
+Le <b>tour courant</b> est affiché au <b>dessus</b> du <b>dé à lancer</b> (nombre de tours entre 1 et 36).<p>
+
+<HR>
+
+<A NAME="rdj"></A><H1>Règle du jeu</H1>
+
+<b>Indécix</b> est un jeu de <b>hasard</b> et de <b>stratégie</b> qui se joue à <b>deux joueurs</b> ayant chacun <b>18 dés à jouer</b>.<br>
+La partie est <b>terminée</b> dès que <b>tous les dés</b> ont été <b>joués</b>.<p>
+
+<A NAME="psd"></A><H2>Placer son dé</H2>
+
+À <b>tour de rôle</b>, chaque joueur <b>lance</b> un dé et le <b>place</b> sur la grille <b>selon une seule règle</b>&nbsp;: il ne doit pas y avoir de dé sur la <b>même ligne</b> ou la <b></b>même colonne</b> ayant la <b>même face</b> que celle du <b>dé posé</b>.<br>
+Si le dé <b>ne peut pas être placé</b>, il est considéré comme &laquo;&nbsp;<b>non joué</b>&nbsp;&raquo; et rapporte <b>un point à l&rsquo;adverse</b>.
+
+<A NAME="cdd"></A><H2>Capturer des dés</H2>
+
+Si le <b>dé peut être posé</b>, il peut permettre de &laquo;&nbsp;<b>capturer</b>&nbsp;&raquo; des dés <b>propres</b> comme <b>adverses</b>.<p>
+
+Pour ce faire, il faut d&rsquo;abord déterminer les potentielles &laquo;&nbsp;<b>bornes</b>&nbsp;&raquo;.<br>
+Une <b>borne</b> est un dé situé sur la <b>même ligne</b> ou la <b>même colonne</b> que celle du <b>dé posé</b> de telle sorte qu&rsquo;il <b>n&rsquo;existe aucune case vide</b> entre elle et le dé posé.<p>
+
+Les dés situés entre le <b>dé posé</b> et la <b>borne</b> doivent <b>tous</b> avoir une <b>face comprise</b> entre celle du <b>dé posé</b> et celle de la <b>borne</b> pour être <b>tous capturés</b>, quel que soit l&rsquo;ordre.<br>
+S&rsquo;il existe un seul dé qui n&rsquo;ait pas sa face comprise entre celle du dé posé et celle de la borne, aucun dé n&rsquo;est capturé.<p>
+
+Pour <b>chaque direction</b> depuis le dé posé, on doit considérer uniquement <b>la borne la plus éloignée</b> qui permette de <b>capturer des dés</b>.<p>
+
+La <b>capture rapporte des points</b> au joueur qui a placé son dé&nbsp;: autant de points que la <b>face du dé capturé</b> s&rsquo;il lui est <b>propre</b>, mais le <b>score double</b> s&rsquo;il est <b>adverse</b>&nbsp;!
+
+
+<A NAME="fus"></A><H2>Former une suite</H2>
+
+<b>Compléter une ligne</b> ou une <b>colonne</b> de la grille en posant son dé, <b>rapporte des points</b> : la <b>somme des faces de tous les dés</b> de la ligne ou de la colonne <b>sans compter le dé posé</b>.<br>
+Si la suite <b>ne contient que des dés propres</b>, le <b>score est doublé</b>.<p>
+
+<HR>
+
+<A NAME="odj"></A><H1>Options de jeu</H1>
+
+Les <b>options de jeu</b> sont accessibles depuis le <b>menu principal</b>.
+
+<A NAME="cdj"></A><H2>Couleurs des joueurs</H2>
+
+Chaque joueur peut choisir une <b>couleur</b> en choisissant la rubrique <i><u>O</u>ptions | <U>J</U>oueurs...</i> ou en appuyant sur <I>Ctrl+J</I>.
+
+<A NAME="adpdp"></A><H2>Affichage des possibilités de poses</H2>
+
+Pour afficher les cases sur lesquelles on peut placer son dé, il faut cocher l&rsquo;option <i><u>A</u>ffichage | Cases jouables</i> ou en appuyant sur <I>Maj+Ctrl+J</I>.
+
+<A NAME="adsdc"></A><H2>Affichage des scores de captures</H2>
+
+Pour afficher les scores sur les cases où l&rsquo;on peut capturer des dés, il faut cocher l&rsquo;option <i><u>A</u>ffichage | Scores captures</i> ou en appuyant sur <I>Maj+Ctrl+S</I>.<br>
+L&rsquo;option n&rsquo;est accessible que si <b>l&rsquo;option précédente a été activée</b>.
+Cette option permet également d&rsquo;afficher les cases sur lesquelles des <b>suites sont formées</b>&nbsp;: dans ce cas une <b>étoile apparaît alors sur la case</b>.<p>
+
+<HR>
+
+<CENTER>Dernière mise à jour&nbsp;: le 10 mai 2021 - <A HREF="http://patquoi.fr">patquoi.fr</A> - <A HREF="mailto:indecix@patquoi.fr?subject=Indecix">Envoyer un mail</A>.</CENTER>
+
+</BODY>
+
+</HTML>

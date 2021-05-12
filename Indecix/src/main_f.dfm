@@ -27948,6 +27948,16 @@ object FormMain: TFormMain
     end
     object MenuItemInfo: TMenuItem
       Caption = '&?'
+      object MenuItemAide: TMenuItem
+        Caption = '&R'#232'gle du jeu et utilisation'
+        ShortCut = 112
+        OnClick = MenuItemAideClick
+      end
+      object MenuItemAPropos: TMenuItem
+        Caption = #192' propos...'
+        ShortCut = 8304
+        OnClick = MenuItemAProposClick
+      end
     end
   end
   object VirtualImageListChf: TVirtualImageList

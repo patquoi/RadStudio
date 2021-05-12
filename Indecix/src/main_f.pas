@@ -99,6 +99,8 @@ type
     MenuItemAffichage: TMenuItem;
     MenuItemAffichageCasesJouables: TMenuItem;
     MenuItemAffichageScoresCaptures: TMenuItem;
+    MenuItemAide: TMenuItem;
+    MenuItemAPropos: TMenuItem;
     procedure PaintBoxScorePaint(Sender: TObject);
     procedure PaintBoxDePaint(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -118,13 +120,18 @@ type
     procedure TimerSuitesTimer(Sender: TObject);
     procedure MenuItemAffichageCasesClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure MenuItemAideClick(Sender: TObject);
+    procedure MenuItemAProposClick(Sender: TObject);
   private
-    stMsg : Array [TIdJoueur] of String;
-    xPose, yPose : Integer; // Coordonnées du choix de la case du dé
+    stMsg         : array [TIdJoueur] of String;
+    xPose, yPose  : Integer; // Coordonnées du choix de la case du dé
+    stVersion,
+    stSousVersion : String;
     procedure ChangeEtatBouton(NvEtatBouton : TEtatBouton);
     function DonneEtatBouton : TEtatBouton;
     procedure LitParametres;
     procedure EcritParametres;
+    procedure DetermineVersion;
   public
     procedure ColoreTexteJoueurs;
     procedure AfficheMessage(Id : TIdJoueur; stNvMsg : String; EtatBouton : TEtatBouton = ebIndefini);
@@ -149,7 +156,7 @@ implementation
 
 {$R *.dfm}
 
-uses System.Math, System.IniFiles, joueurs_f;
+uses System.Math, System.IniFiles, ShellApi, joueurs_f;
 
 const
   stNomFichierIni        : String = 'Paradice.ini';
@@ -169,6 +176,7 @@ end;
 procedure TFormMain.FormCreate(Sender: TObject);
 begin
 LitParametres;
+DetermineVersion;
 ColoreTexteJoueurs
 end;
 
@@ -188,6 +196,24 @@ if mi = MenuItemAffichageCasesJouables then
     MenuItemAffichageScoresCaptures.Checked := False;
   end;
 AfficheGrille
+end;
+
+procedure TFormMain.MenuItemAideClick(Sender: TObject);
+begin
+ShellExecute(0, 'Open', pChar(ExtractFilePath(Application.ExeName)+'\html\index.html'), '', '', SW_SHOWNORMAL);
+end;
+
+procedure TFormMain.MenuItemAProposClick(Sender: TObject);
+begin
+Application.MessageBox(pWideChar(Format('Indécix %s%s version %d bits'#13#13'Création onirique du %s'#13'Développé par Patrice Fouquet'#13#13'Licence Publique Générale 2.0',
+                                        [stVersion, stSousVersion,
+{$IFDEF WIN32}
+                                         32,
+{$ENDIF}
+{$IFDEF WIN64}
+                                         64,
+{$ENDIF}
+                                         '11/02/2021'])), 'À propos d''Indécix', MB_OK);
 end;
 
 procedure TFormMain.MenuItemJoueursClick(Sender: TObject);
@@ -585,9 +611,9 @@ for j := Succ(Low(TIdJoueur)) to High(TIdJoueur) do
   end;
 end;
 
-(**************)
-(* Paramètres *)
-(**************)
+(*************************)
+(* Paramètres et Version *)
+(*************************)
 
 procedure TFormMain.LitParametres;
 var Id      : TIdJoueur;
@@ -631,6 +657,34 @@ finally
 end{try}
 end{procedure TFormPlateau.EcritParametres};
 
+procedure TFormMain.DetermineVersion;
+var
+  VerInfoSize, VerValueSize, ParametreInutilise: DWord;
+  VerInfo: Pointer;
+  VerValue: PVSFixedFileInfo;
+begin
+VerInfoSize := GetFileVersionInfoSize(PChar(ParamStr(0)), ParametreInutilise);
+if VerInfoSize <> 0 then
+  begin
+  {On alloue de la mémoire pour un pointeur sur les info de version : }
+  GetMem(VerInfo, VerInfoSize);
+  {On récupère ces informations : }
+  GetFileVersionInfo(PChar(ParamStr(0)), 0, VerInfoSize, VerInfo);
+  VerQueryValue(VerInfo, '\', Pointer(VerValue), VerValueSize);
+  {On traite les informations ainsi récupérées : }
+  with VerValue^ do
+    begin
+    stVersion:=Format('%d.%d.%d',
+                      [dwFileVersionMS shr 16,
+                       dwFileVersionMS and $FFFF,
+                       dwFileVersionLS shr 16]);
+    stSousVersion:=Format('.%d', [dwFileVersionLS and $FFFF]); // v1.5
+    end;
+  FreeMem(VerInfo, VerInfoSize);
+  end
+else
+  raise EAccessViolation.Create('Erreur inattendue : aucune information de version incluse.');
+end;
 (******************)
 (* Actions de dés *)
 (******************)
