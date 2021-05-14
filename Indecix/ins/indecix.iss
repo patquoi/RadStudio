@@ -44,7 +44,7 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 [Icons]
 Name: "{group}\Indecix"; Filename: "{app}\bin\Indecix.exe"; IconFilename: "{app}\bin\Indecix.exe"; Comment: "Placez idéalement vos dés"; IconIndex: 0; Flags: createonlyiffileexists useapppaths
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\Uninstall.ico"; Comment: "Désinstalle Indécix"; IconIndex: 0
-Name: "{group}\Aide de Indécix"; Filename: "{app}\bin\html\index.html"; WorkingDir: "{app}\bin\html"; Comment: "Aide en ligne d'Indécix"
+Name: "{group}\Aide d'Indécix"; Filename: "{app}\bin\html\index.html"; WorkingDir: "{app}\bin\html"; Comment: "Aide en ligne d'Indécix"
 Name: "{group}\Lisez-Moi (Indécix)"; Filename: "{app}\lisezmoi.txt"; WorkingDir: "{app}"; Comment: "Fichier lisez-moi à lire en premier !"
 Name: "{group}\Sources d'Indécix"; Filename: "{app}\Indecix-win64-src.zip"; Comment: "Code source d'Indécix"
 
