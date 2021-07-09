@@ -1592,7 +1592,7 @@ else
        (not EstLiquidation and (orEvtJckptVnte in FormPlateau.OptionsRegle)) then
       ce.Id := jJackpot // Si règle "Evt Jackpot Vente/Liquidation" activée
     else
-      ce.Id := jJackpot;
+      ce.Id := jIndefini; // 1.1.8 (au lieu de jJackpot)
     Credite(JrCrt, PrixEvt[Nbj]);
     DessineCase(ce.x, ce.y);
     DessineEvenement(EvtAVendre);

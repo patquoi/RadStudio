@@ -52,6 +52,11 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.8 - 09/07/2021]
+Quand les joueurs automates vendaient leurs événements, ils étaient cédés au
+Jackpot même si l'option "Cession au jackpot si doit vendre pour payer" était
+désactivée.
+
 [Version 1.1.7 - 24/08/2020]
 Enregistrer une partie chargée provoquait systématiquement une erreur.
 
@@ -107,4 +112,4 @@ Affichage des stats en %
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 24 août 2020.
+Dernière mise à jour le 9 juillet 2021.
