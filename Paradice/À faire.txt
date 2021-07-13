@@ -1,3 +1,7 @@
+++ Afficher les gains, paiements et balance dans les messages :
+ - Pour les gains et balance, c'est avant de jouer.
+ - Pour les paiements, c'est après avoir lancé les dés.
+ 
 ++ Pion sur événement "maison", achat supplémentaire ?
 ++ Pion sur événement ennemi : on double le gain ?
 
