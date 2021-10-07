@@ -11,7 +11,9 @@ uses
 
 const
   NbMaxRegles    = 3;
-
+  // v1.1.9 : Valeurs pour OnOff dans TFormPlateau.DessineGainsDes(OnOff);
+  Affiche        = True;
+  Effacer        = False;
 type
 
   TTypeAffichage = (taBilanTour=0, taEvolution=1, taStatsEvts=2, taStatsDes=3, taStatsJrC=4, taStatsJrD=5); // Indique l'affichage en haut à gauche (Bilan Tour par défaut). v1.1.3: Ajout stats par joueur. v1.1.4: Stats par Joueur devient Stats par joueur Credits+Débits
@@ -151,6 +153,7 @@ type
     procedure DessineScore(Id : TJoueurId; Pos, Score : Integer; JrCrt, Automate, Elimine : Boolean);
     procedure DessineJackpot(Score, DrnSc : Integer; DrnJr : TJoueurId);
     procedure DessineLanceDes(Id : TJoueurId; De : array of TDe);
+    procedure DessineGainsDes(OnOff : Boolean); // v1.1.9 : ajout
     procedure DessineBilan(Tour : Integer);
     procedure DessineEvolution;
     procedure DessineStatsEvts;
@@ -1480,6 +1483,12 @@ for d := Low(TNumDe) to High(TNumDe) do
   FreeAndNil(bmDe[d]);
   end;
 end{procedure TFormPlateau.DessineLanceDes};
+
+procedure TFormPlateau.DessineGainsDes(OnOff : Boolean); // v1.1.9 : ajout
+begin
+// /!\ NE PAS OUBLIER DE RAJOUTER DessineGainsDes dans FormPaint !
+
+end{procedure TFormPlateau.DessineGainsDes};
 
 procedure TFormPlateau.DessineBilan(Tour : Integer);
 const  stTour : String = 'Tour ';

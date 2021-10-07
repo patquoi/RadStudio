@@ -52,6 +52,9 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1.9 - 13/07/2021]
+Affichage dans la zone des dés des gains adverses suite au lancer de dés.
+
 [Version 1.1.8 - 09/07/2021]
 Quand les joueurs automates vendaient leurs événements, ils étaient cédés au
 Jackpot même si l'option "Cession au jackpot si doit vendre pour payer" était
@@ -112,4 +115,4 @@ Affichage des stats en %
  
 [Version 1.0 - 19/05/2020] Première version.
 
-Dernière mise à jour le 9 juillet 2021.
+Dernière mise à jour le 13 juillet 2021.

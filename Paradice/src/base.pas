@@ -13,55 +13,57 @@ const
   NbMaxJoueurs = 6;
 
 type
-  TNbJoueurs = NbMinJoueurs..NbMaxJoueurs;
-  TNumChfScr = 0..5; // Les scores vont de 0 à 999999
+  TNbJoueurs   = NbMinJoueurs..NbMaxJoueurs;
+  TNumChfScr   = 0..5; // Les scores vont de 0 à 999999
 
-  TEtatPartie= (epInactif=0, epEnCours, epPause); // permet de mettre à jour le menu Partie
-  TRepriseJeu= (rjIndefinie=0, rjPion, rjDes, rjAutomate); // Indique quel Timer est utilisé pour la pause/reprise du jeu
+  TEtatPartie  = (epInactif=0, epEnCours, epPause); // permet de mettre à jour le menu Partie
+  TRepriseJeu  = (rjIndefinie=0, rjPion, rjDes, rjAutomate); // Indique quel Timer est utilisé pour la pause/reprise du jeu
 
-  TDe        = (dIndefini=0, dUn, dDeux, dTrois, dQuatre, dCinq, dSix);
-  TNumDe     = PrmDe..DrnDe;
+  TDe          = (dIndefini=0, dUn, dDeux, dTrois, dQuatre, dCinq, dSix);
+  TNumDe       = PrmDe..DrnDe;
 
-  TSymbole   = (sMoins, sPlus);
+  TSymbole     = (sMoins, sPlus);
 
-  TFamEvt    = (feIndefinie=0, feResultat, feNombreDes, feParite, feSomme, feProduit, feEcart, feRapport);
-  TTypeEvt   = (teIndefini=0,  teSomme,    teProduit,  teEcart,     teRapport,
-                               teNbDes1,   teNbDes2,   teNbDes3,    teNbDes4,  teNbDes5, teNbDes6,
-                               tePair,     teImpair,
-                               teSomme5,   teSomme6,   teSomme7,    teSomme8,  teSomme9,
-                               teProduit4, teProduit6, teProduit12,
-                               teEcart0,   teEcart1,   teEcart2,    teEcart3,
-                               teRapport2, teRapport3);
-  TTypeCase  = (tcIndefini=0,
-                tcDepart,
-                tcSomme,    tcProduit,     tcEcart,     tcRapport,
-                tcDe1,      tcDe2,         tcDe3,       tcDe4,      tcDe5,    tcDe6,
-                tcPair,     tcImpair,
-                tcSomme5,   tcSomme6,      tcSomme7,    tcSomme8,   tcSomme9,
-                tcProduit4, tcProduit6,    tcProduit12,
-                tcEcart0,   tcEcart1,      tcEcart2,    tcEcart3,
-                tcRapport2, tcRapport3,
-                tcEchelleN, tcEchelleE,    tcEchelleS,  tcEchelleO,
-                tcRelance,  tcBisRepet, tcTirelire,  tcJackpot);
+  TFamEvt      = (feIndefinie=0, feResultat, feNombreDes, feParite, feSomme, feProduit, feEcart, feRapport);
+  TTypeEvt     = (teIndefini=0,  teSomme,    teProduit,  teEcart,     teRapport,
+                                 teNbDes1,   teNbDes2,   teNbDes3,    teNbDes4,  teNbDes5, teNbDes6,
+                                 tePair,     teImpair,
+                                 teSomme5,   teSomme6,   teSomme7,    teSomme8,  teSomme9,
+                                 teProduit4, teProduit6, teProduit12,
+                                 teEcart0,   teEcart1,   teEcart2,    teEcart3,
+                                 teRapport2, teRapport3);
+  TTypeCase    = (tcIndefini=0,
+                  tcDepart,
+                  tcSomme,    tcProduit,     tcEcart,     tcRapport,
+                  tcDe1,      tcDe2,         tcDe3,       tcDe4,      tcDe5,    tcDe6,
+                  tcPair,     tcImpair,
+                  tcSomme5,   tcSomme6,      tcSomme7,    tcSomme8,   tcSomme9,
+                  tcProduit4, tcProduit6,    tcProduit12,
+                  tcEcart0,   tcEcart1,      tcEcart2,    tcEcart3,
+                  tcRapport2, tcRapport3,
+                  tcEchelleN, tcEchelleE,    tcEchelleS,  tcEchelleO,
+                  tcRelance,  tcBisRepet, tcTirelire,  tcJackpot);
 
-  TNumCaseEvt = (ncePrm=0, nceDrn);
-  TNumEchelle = (neNPrm=0, neNDrn, neEPrm, neEDrn, neSPrm, neSDrn, neOPrm, neODrn);
+  TNumCaseEvt   = (ncePrm=0, nceDrn);
+  TNumEchelle   = (neNPrm=0, neNDrn, neEPrm, neEDrn, neSPrm, neSDrn, neOPrm, neODrn);
 
-  TDefGain    = (dgIndefinie=0, dgFixe, dgVariable);
-  TSensCpta   = (scDebit=0, scCredit);
+  TDefGain      = (dgIndefinie=0, dgFixe, dgVariable);
+  TSensCpta     = (scDebit=0, scCredit);
 
-  TCoordonnee = 0..12;
-  TDirection  = (dIndefinie=0, dNord, dEst, dSud, dOuest);
-  TNbDirPoss  = 0..4;
-  TDirPoss    = (dpAucune=0, dpN, dpE, dpNE, dpS, dpNS, dpSE, dpTsO, dpO, dpNO, dpEO, dpTsS, dpSO, dpTsE, dpTsN, dpToutes); // Les dirposs de plus de 2 directions ne sont pas présentes sur le parcours (sauf départ).
+  TCoordonnee   = 0..12;
+  TDirection    = (dIndefinie=0, dNord, dEst, dSud, dOuest);
+  TNbDirPoss    = 0..4;
+  TDirPoss      = (dpAucune=0, dpN, dpE, dpNE, dpS, dpNS, dpSE, dpTsO, dpO, dpNO, dpEO, dpTsS, dpSO, dpTsE, dpTsN, dpToutes); // Les dirposs de plus de 2 directions ne sont pas présentes sur le parcours (sauf départ).
 
-  TJoueurId   = (jIndefini=0, jMyrtille, jFramboise, jOrange, jFraise, jCitron, jKiwi, jJackpot);  // Jackpot c'est pour les achats d'événements
-  TCouleur    = (cNoir=0,         cCiel,   cMagenta, cOrange,  cRouge, cJaune,  cVert, cPourpre, cBlanc, cGris);
-  TApplCoul   = (acTexte=0, acFond); // Pour l'affiche des messages
+  TJoueurId     = (jIndefini=0, jMyrtille, jFramboise, jOrange, jFraise, jCitron, jKiwi, jJackpot);  // Jackpot c'est pour les achats d'événements
+  TCouleur      = (cNoir=0,         cCiel,   cMagenta, cOrange,  cRouge, cJaune,  cVert, cPourpre, cBlanc, cGris);
+  TApplCoul     = (acTexte=0, acFond); // Pour l'affiche des messages
 
-  TPhaseTour  = (phtIndefinie=0, phtLanceDes, phtChxDirPion, phtDepltPion, phtActionDes, phtVenteEvt, phtAchatEvt, phtJoueurSvt);
+  TPhaseTour    = (phtIndefinie=0, phtLanceDes, phtChxDirPion, phtDepltPion, phtActionDes, phtVenteEvt, phtAchatEvt, phtJoueurSvt);
 
-  TTypeStatsJr   = (tsjCredit=0, tsjDebit=1); // v1.1.4 : Ajout
+  TTypeStatsJr  = (tsjCredit=0, tsjDebit=1); // v1.1.4 : Ajout
+
+  TEvtDesAPayer = array [TJoueurId] of Integer; // v1.1.9 : Ajout
 
   TCaseEvt = class
   private // constantes définies à la création et à usage interne
@@ -195,6 +197,7 @@ type
     FEtat  : TEtatPartie;
     FPhase : TPhaseTour;
     PosElm : Integer; // Utilisé pour définir TJoueur.PosElm
+    FEDAP  : TEvtDesAPayer; // v1.1.9 : Ajout (défini dans TPartie.APayerEvenementsDes)
     function APayerEvenementsDes : Integer;
     procedure PaieEvenementDes;
     procedure ActionCasePion;
@@ -207,6 +210,7 @@ type
     EvtAVendre     : TTypeEvt; // Utilisé lors de la phase phtVenteEvt
     property Etat  : TEtatPartie read FEtat write ChangeEtat;
     property Phase : TPhaseTour read FPhase write ChangePhase;
+    property EDAP  : TEvtDesAPayer read FEDAP; // v1.1.9 : Ajout
     constructor Create(Nbj : TNbJoueurs; Automate : array of Boolean); overload;
     destructor Destroy; override;
     // Dessins
@@ -1361,23 +1365,33 @@ var tc        : TTypeCase;
     te        : TTypeEvt;
     ce        : TNumCaseEvt;
     Crediteur : TJoueurId;
+    Credit    : Integer; // v1.1.9
 begin
 Result := 0;
 x := Jr[JrCrt].Pion.x;
 y := Jr[JrCrt].Pion.y;
 tc := TypeCase[x, y];
+
+// v1.1.9 : ajout (init FEDAP)
+for Crediteur := Low(TJoueurId) to High(TJoueurId) do
+  FEDAP[Crediteur] := 0;
+
 for te := Succ(Low(TTypeEvt)) to High(TTypeEvt) do
   for ce := Low(TNumCaseEvt) to High(TNumCaseEvt) do
     begin
     Crediteur := Evt[te].CaseEvt[ce].Id;
     if (Crediteur > jIndefini) and (Crediteur <> jrCrt) then
       begin
+      // v1.1.9 : (déf FEDAP)
+      Credit := Evt[te].DonneGain(De);
+      Inc(FEDAP[jIndefini], Credit); // Somme
       if tc = tcTirelire then
-        Inc(Result, Evt[te].DonneGain(De))
+        Inc(FEDAP[jJackpot], Credit)
       else
-        Inc(Result, Evt[te].DonneGain(De));
+        Inc(FEDAP[Crediteur], Credit);
       end
     end;
+Result := FEDAP[jIndefini]; // v1.1.9
 end;
 
 procedure TPartie.PaieEvenementDes;
