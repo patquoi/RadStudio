@@ -1,3 +1,6 @@
 RAF
- - Intégrer les ajouts dans l'aide HTML
+
+ - Continuer le mode Master
+   * afficher les dés en gardant les emplacements des dés joués.
+
  - Développer l'IA.

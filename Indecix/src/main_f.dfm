@@ -36,10 +36,12 @@ object FormMain: TFormMain
     OnPaint = PaintBoxGrillePaint
   end
   object PaintBox1DRAJ: TPaintBox
+    Tag = 1
     Left = 32
     Top = 232
     Width = 192
     Height = 96
+    OnMouseDown = PaintBoxDRAJMouseDown
     OnPaint = PaintBoxDesPaint
   end
   object PaintBox1DC: TPaintBox
@@ -57,10 +59,12 @@ object FormMain: TFormMain
     OnPaint = PaintBoxDesPaint
   end
   object PaintBox2DRAJ: TPaintBox
+    Tag = 2
     Left = 672
     Top = 232
     Width = 192
     Height = 96
+    OnMouseDown = PaintBoxDRAJMouseDown
     OnPaint = PaintBoxDesPaint
   end
   object PaintBox2DC: TPaintBox
@@ -27927,6 +27931,24 @@ object FormMain: TFormMain
         Caption = '&Joueurs...'
         ShortCut = 16458
         OnClick = MenuItemJoueursClick
+      end
+      object MenuItemSeparator1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItemModeBlitz: TMenuItem
+        AutoCheck = True
+        Caption = 'Mode &Blitz'
+        Checked = True
+        GroupIndex = 1
+        RadioItem = True
+        ShortCut = 16450
+      end
+      object MenuItemModeMaster: TMenuItem
+        AutoCheck = True
+        Caption = 'Mode &Master'
+        GroupIndex = 1
+        RadioItem = True
+        ShortCut = 16461
       end
     end
     object MenuItemAffichage: TMenuItem

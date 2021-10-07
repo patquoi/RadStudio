@@ -33,7 +33,8 @@ const
    stPaintBox                                = 'PaintBox';
    stTimer                                   = 'Timer';
    // Messages
-   stMsgTourJr                               = 'C''est à %s de jouer !'#13'Appuyez sur STOP'#13'pour arrêter le dé...';
+   stMsgTourJr : array [TModeJeu] of string  = ('C''est à %s de jouer !'#13'Appuyez sur STOP'#13'pour arrêter le dé...', // v1.1 : message selon le mode de jeu (Blitz)
+                                                'C''est à %s de jouer !'#13'Choisissez un dé...');                       // v1.1 : message selon le mode de jeu (Master);
    stMsgAtteJr                               = '';
    stMsgPlceDe                               = 'Placez votre dé sur'#13'l''une des cases de votre couleur...';
    stMsgChxInc                               = 'Choix incorrect !'#13'Choisissez une case colorée !';
@@ -101,6 +102,9 @@ type
     MenuItemAffichageScoresCaptures: TMenuItem;
     MenuItemAide: TMenuItem;
     MenuItemAPropos: TMenuItem;
+    MenuItemSeparator1: TMenuItem;
+    MenuItemModeMaster: TMenuItem;
+    MenuItemModeBlitz: TMenuItem;
     procedure PaintBoxScorePaint(Sender: TObject);
     procedure PaintBoxDePaint(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -122,6 +126,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure MenuItemAideClick(Sender: TObject);
     procedure MenuItemAProposClick(Sender: TObject);
+    procedure PaintBoxDRAJMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
     stMsg         : array [TIdJoueur] of String;
     xPose, yPose  : Integer; // Coordonnées du choix de la case du dé
@@ -166,6 +172,7 @@ const
   stEntreeTypeJr         : String = 'TypeJr';
   stEntreePoses          : String = 'Poses';
   stEntreeScores         : String = 'Scores';
+  stEntreeMode           : String = 'Mode'; // v1.1 : pour sauvegarder le mode
 
 
 procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -229,7 +236,7 @@ end;
 procedure TFormMain.MenuItemPartieNouvelleClick(Sender: TObject);
 begin
 if p = Nil then Exit;
-p.Nouvelle;
+p.Nouvelle(TModeJeu(Ord(MenuItemModeMaster.Checked))); // v1.1 : ajout du mode de jeu tiré directement du menu
 Refresh;
 AfficheTour; // Affiche les messages et le tour
 LanceDe;
@@ -371,6 +378,46 @@ if tm.Enabled and (tm.Tag = 1) then
   end;
 FreeAndNil(bm);
 FreeAndNil(Rect);
+end;
+
+procedure TFormMain.PaintBoxDRAJMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+var pb  : TPaintBox;
+    td,
+    nd,
+    ndea : Integer;
+    d    : TNumDe;
+begin // v1.1 : Choix du dé (= jeton) en mode Master
+pb := Sender as TPaintBox;
+if (p.PhCrt <> phLanceDes) or // la phase de choix du dé en mode Master
+   (pb.Tag <> ord(p.JrCrt)) then Exit; // joueur courant uniquement
+td := Min(pb.Width div NbColDes, pb.Height div NbLgnDes[cDRAJ]); // Taille d'un dé
+nd := 1 +           (NbColDes*X) div pb.Width +
+          NbColDes*((NbLgnDes[cDRAJ]*Y) div pb.Height);
+ndea := 0;
+for d := Succ(Low(TNumDe)) to High(TNumDe) do
+  with p.Des[d] do
+    begin
+    if (Jr = p.JrCrt) and
+       (p.Des[d].Etat = edEnAttente) then
+      Inc(ndea);
+    if ndea = nd then Break; // d est le numéro du dé choisi
+    end;
+if ndea = nd then // Un dé a été choisi
+  begin
+  with p do
+    begin
+    DeCrt := d;
+    Des[d].Etat := edLance;
+    PhCrt := phPoseDe;
+    end;
+  PaintBoxDe.Refresh;
+  AfficheCompteur(cDRAJ, p.JrCrt);
+  if AfficheCasesJouables = 0 then // Impossible de jouer
+    ActionDe(p.DeCrt, edNonJoue)
+  else // On peut poser le dé : on affiche le message de placement
+    AfficheMessage(p.JrCrt, stMsgPlceDe)
+  end;
 end;
 
 procedure TFormMain.PaintBoxActionClick(Sender: TObject);
@@ -628,6 +675,11 @@ try
     if p <> nil then
       p.Jr[Id].Automate := IniFile.ReadBool(stSectionOptions, stEntreeTypeJr + stIdJr[Id], False);
     end;
+  // v1.1 : Mode de jeu (0=Blitz ; 1=Master). Blitz par défaut
+  if IniFile.ReadBool(stSectionOptions, stEntreeMode, False) then
+    MenuItemModeMaster.Checked :=True
+  else
+    MenuItemModeBlitz.Checked :=True;
   // 2. Affichage
   MenuItemAffichageCasesJouables.Checked := IniFile.ReadBool(stSectionAffichage, stEntreePoses, True);
   MenuItemAffichageScoresCaptures.Checked := IniFile.ReadBool(stSectionAffichage, stEntreeScores, True);
@@ -649,6 +701,8 @@ try
     if p <> nil then
       IniFile.ReadBool(stSectionOptions, stEntreeTypeJr + stIdJr[Id], p.Jr[Id].Automate);
     end;
+  // v1.1 : Mode de jeu (0=Blitz ; 1=Master)
+  IniFile.WriteBool(stSectionOptions, stEntreeMode, MenuItemModeMaster.Checked);
   // 2. Affichage
   IniFile.WriteBool(stSectionAffichage, stEntreePoses, MenuItemAffichageCasesJouables.Checked);
   IniFile.WriteBool(stSectionAffichage, stEntreeScores, MenuItemAffichageScoresCaptures.Checked);
@@ -706,11 +760,12 @@ var ld      : TListeDes;
 begin
 if p = Nil then Exit;
 case Etat of
-  edLance:     begin
-               EtatBouton := ebStop;
-               AfficheCompteur(cDRAJ, p.JrCrt);
-               TimerDe.Enabled := True;
-               end;
+  edLance:     if p.Mode = mjBlitz then  // v1.1 : le dé défile en mode Blitz uniquement
+                 begin
+                 EtatBouton := ebStop;
+                 AfficheCompteur(cDRAJ, p.JrCrt);
+                 TimerDe.Enabled := True;
+                 end;
   edPose:      with p do
                  begin
                  PoseDe(NumDe, xPose, yPose);
@@ -866,7 +921,7 @@ end;
 
 procedure TFormMain.AfficheTour;
 begin
-AfficheMessage(p.JrCrt, Format(stMsgTourJr, [stNomCl[CoulJr[p.JrCrt]]]));
+AfficheMessage(p.JrCrt, Format(stMsgTourJr[p.Mode], [stNomCl[CoulJr[p.JrCrt]]])); // v1.1 : ajout du mode de jeu pour le message
 AfficheMessage(Adv[p.JrCrt], stMsgAtteJr);
 PaintBoxTour.Refresh;
 end;

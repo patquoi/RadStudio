@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Indécix"
-#define MyAppVersion "1.0.0.14"
+#define MyAppVersion "1.1.0.21"
 #define MyAppPublisher "Patquoi.fr"
 #define MyAppURL "http://patquoi.fr"
 
@@ -59,6 +59,7 @@ Source: "..\bin\indecix.64.exe"; DestDir: "{app}\bin"; DestName: "Indecix.exe"; 
 Source: "..\bin\indecix.32.exe"; DestDir: "{app}\bin"; DestName: "Indecix.exe"; Check: not Is64BitInstallMode; Flags: solidbreak ignoreversion
 Source: "..\bin\lisezmoi.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\bin\html\index.html"; DestDir: "{app}\bin\html"; Flags: ignoreversion
+Source: "..\bin\html\png\ddj.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\ecran_1d6_a.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\ecran_1d6_b.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion
 Source: "..\bin\html\png\indecix_150.png"; DestDir: "{app}\bin\html\png"; Flags: ignoreversion

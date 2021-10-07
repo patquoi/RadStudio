@@ -52,7 +52,10 @@ versions antérieures à RAD Studio 10.3.3 n'a été créé ni testé à ce jour.
 
 HISTORIQUE DES VERSIONS
 
+[Version 1.1 - 27/08/2021]
+Ajout du mode Master où les dés sont figés (mode sans hasard).
+
 [Version 1.0 - 12/05/2021]
 Première version.
 
-Dernière mise à jour le 12 mai 2021.
+Dernière mise à jour le 27 août 2021.

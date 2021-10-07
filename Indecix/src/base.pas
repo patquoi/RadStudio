@@ -32,6 +32,7 @@ type
   TCompteur   = (cDRAJ, cDC, cDNJ, cSM, cSP); // Dés Restant À Jouer, Dés Capturés, Dés Non Joués, Suite Mixtes, Suites Propres
   TPhaseJeu   = (phIndefinie=0, phLanceDes=1, phPoseDe=2, phResultatPose=3);
   TTour       = 0..NbTotalDes;
+  TModeJeu    = (mjBlitz=0, mjMaster=1); // v1.1 : Blitz avec dés et Master avec jetons (dés figés)
 
   TDe = class
     Id : TNumDe;
@@ -92,6 +93,7 @@ type
   TSuitesDes = array [TOrientation, TCoordonnee] of TSuiteDes;
 
   TPartie = class
+    FMode   : TModeJeu;
     Gr      : TGrille;
     Jouable : TMarquage;
     Scores  : TScore;
@@ -106,11 +108,12 @@ type
     procedure InitialiseMarquage;
     function DeSuivant : Boolean; // Retourne Faux si plus de dés à jouer (fin de partie)
   public
-    constructor Create;
+    property Mode : TModeJeu read FMode;
+    constructor Create(ModeJeu : TModeJeu); // v1.1 : Ajout du mode de jeu
     destructor Destroy; override;
     procedure Initialise;
     function JoueurSuivant : Boolean; // Retourne Faux si fin de partie
-    procedure Nouvelle;
+    procedure Nouvelle(ModeJeu : TModeJeu); // v1.1 : Ajout du mode de jeu;
     procedure ChangeEtatDe(NumDe : TNumDe; NvEtat : TEtatDe);
     procedure PoseDe(NumDe : TNumDe; xPose, yPose : Integer);
     procedure PasseDe(NumDe : TNumDe);
@@ -365,12 +368,13 @@ for x := Low(TCoordonnee) to High(TCoordonnee) do
     end;
 end;
 
-constructor TPartie.Create;
+constructor TPartie.Create(ModeJeu : TModeJeu); // v1.1 : Ajout du mode de jeu
 var j : TIdJoueur;
     d : TNumDe;
     o : TOrientation;
     c : TCoordonnee;
 begin
+Self.FMode := ModeJeu; // v1.1
 InitialiseGrille;
 for j := Low(TIdJoueur) to High(TIdJoueur) do
   if j > jIndefini then
@@ -422,15 +426,24 @@ end;
 
 function TPartie.DeSuivant : Boolean;
 begin
-if DeCrt<High(TNumDe) then
-  begin
-  DeCrt := Succ(DeCrt);
-  Des[DeCrt].Etat := edLance;
-  PhCrt := phLanceDes;
-  Result := True;
-  end
-else
-  Result := False;
+Result := False; // Pessimiste
+case Mode of // v1.1
+  mjBlitz:   if DeCrt<High(TNumDe) then
+               begin
+               DeCrt := Succ(DeCrt);
+               Des[DeCrt].Etat := edLance;
+               PhCrt := phLanceDes;
+               Result := True;
+               end
+             else
+               Result := False;
+  mjMaster:  if TrCrt<Ord(High(TNumDe)) then
+               begin
+               DeCrt := ndIndefini; // le joueur doit choisir son dé en mode Master
+               PhCrt := phLanceDes;
+               Result := True;
+               end;
+end{case Mode of};
 end;
 
 function TPartie.JoueurSuivant : Boolean;
@@ -449,8 +462,9 @@ else // Plus de dés à jouer : Fin de partie
   Result := False;
 end;
 
-procedure TPartie.Nouvelle;
+procedure TPartie.Nouvelle(ModeJeu : TModeJeu); // v1.1 : Ajout du mode de jeu;
 begin
+FMode := ModeJeu; // v1.1
 Initialise;
 JoueurSuivant;
 end;
@@ -794,7 +808,7 @@ end;
 
 initialization
 InitialiseRepLocalAppData;
-p := TPartie.Create;
+p := TPartie.Create(mjBlitz); // v1.1 : Ajout du mode de jeu (Blitz par défaut)
 
 finalization
 FreeAndNil(p);
