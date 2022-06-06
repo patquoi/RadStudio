@@ -1,0 +1,18 @@
+AZIKWEKWE	ajouté
+LAVANDYEZ	ajouté
+VOLEZ		déjà existant
+CHANTEZ		ajouté
+ANIMATEZ	ajouté
+CHOFEZ		ajouté
+ESKAMOTEZ	déjà existant
+TAFYATEZ	déjà existant
+BWESONYEZ	ajouté
+FOUTBOLEZ	déjà existant
+VOLEYEZ		déjà existant
+BASKETEZ	déjà existant
+PECHEZ		ajouté
+DESIDEZ		ajouté
+KAKATWEZ	ajouté
+RESELEZ		déjà existant
+ATOUFEZ		déjà existant
+SEVITEZ		ajouté
