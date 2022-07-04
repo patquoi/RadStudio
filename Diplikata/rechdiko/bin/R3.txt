@@ -237,6 +237,7 @@ BIL: BIL
      LIB
 BIM: BIM
 BIO: IBO
+BIP: BIP
 BIR: BRI
 BIS: BIS
 BIT: BIT
@@ -555,7 +556,6 @@ GZÔ: ZÔG
 GÂÛ: ÛGÂ
 GÂÜ: ÜGÂ
 HMÂ: HÂM
-HNÛ: HÛN
 HYÛ: HÛY
 HÂÂ: ÂHÂ
 HÂÇ: HÂÇ
@@ -592,6 +592,7 @@ ILT: LIT
 ILV: LIV
      VIL
 ILY: LIY
+ILÑ: LIÑ
 IMN: MIN
 IMP: PIM
 IMR: RIM

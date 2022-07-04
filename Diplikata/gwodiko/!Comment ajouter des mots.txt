@@ -35,6 +35,6 @@ COMMENT AJOUTER DES MOTS DANS GWODIKO
 17. Générer Insdiplikata.exe en double-cliquant sur Nettoie.bat puis Prépare.bat sans oublier d'incrémenter la version (MyAppVersion) correspondant aux exécutables
 18. Copier sur MaPage les pdf et insdiplikata et modifier index.html
 18b.Envoyer les fichiers via FileZilla
-19. Sauvegarder Diplikata xxxx (Rio).zip et générer www.zip pour copie sur Lacie
+19. Sauvegarder Diplikata xxxx (Sydney).zip et générer www.zip pour copie sur Lacie
 20. Mettre à jour gitHub.com
 21. Mettre à jour les applications Gwodiko et Mélélémo depuis le Mac (Voir Dossier Partagé VMWare\dev\apps\Gwodiko\! Mettre à jour les applications avec Gwodiko.txt)

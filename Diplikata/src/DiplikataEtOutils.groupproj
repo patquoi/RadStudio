@@ -3,9 +3,6 @@
         <ProjectGuid>{A94F233C-8FC8-4317-96C4-77D32EBEBF8E}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="Diplikata.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="..\impcfgdip\src\impcfgdip.dproj">
             <Dependencies/>
         </Projects>
@@ -13,6 +10,9 @@
             <Dependencies/>
         </Projects>
         <Projects Include="..\rechdiko\src\rechdiko.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Diplikata.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -23,15 +23,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="Diplikata">
-        <MSBuild Projects="Diplikata.dproj"/>
-    </Target>
-    <Target Name="Diplikata:Clean">
-        <MSBuild Projects="Diplikata.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="Diplikata:Make">
-        <MSBuild Projects="Diplikata.dproj" Targets="Make"/>
-    </Target>
     <Target Name="impcfgdip">
         <MSBuild Projects="..\impcfgdip\src\impcfgdip.dproj"/>
     </Target>
@@ -59,14 +50,23 @@
     <Target Name="rechdiko:Make">
         <MSBuild Projects="..\rechdiko\src\rechdiko.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Diplikata">
+        <MSBuild Projects="Diplikata.dproj"/>
+    </Target>
+    <Target Name="Diplikata:Clean">
+        <MSBuild Projects="Diplikata.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Diplikata:Make">
+        <MSBuild Projects="Diplikata.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Diplikata;impcfgdip;Kregwodiko;rechdiko"/>
+        <CallTarget Targets="impcfgdip;Kregwodiko;rechdiko;Diplikata"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Diplikata:Clean;impcfgdip:Clean;Kregwodiko:Clean;rechdiko:Clean"/>
+        <CallTarget Targets="impcfgdip:Clean;Kregwodiko:Clean;rechdiko:Clean;Diplikata:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Diplikata:Make;impcfgdip:Make;Kregwodiko:Make;rechdiko:Make"/>
+        <CallTarget Targets="impcfgdip:Make;Kregwodiko:Make;rechdiko:Make;Diplikata:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -1,95 +1,94 @@
-aa - absobe
+aa - absoli
 
-		abode	ABODE
 aa	AA	aboli	ABOLI
-aba	ABA	abolisyon	ABOLISYOn
-abajou	ABAJOu		ABOLISYON
+aba	ABA	abolisyon	ABOLISYON
+abajou	ABAJOu		ABOLISYOn
 abako	ABAKO	abolotcho	ABOLOTChO
 abandone	ABAnDONE	abominab	ABOMINAB
-	ABANDONE	abominasyon	ABOMINASYON
-abandonen	ABAnDONEn		ABOMINASYOn
-	ABANDONEn	abondan	ABONDAN
-	ABAnDONEN		ABOnDAn
+	ABANDONE	abominasyon	ABOMINASYOn
+abandonen	ABAnDONEn		ABOMINASYON
+	ABANDONEn	abondan	ABOnDAN
 	ABANDONEN		ABONDAn
-abapri	ABAPRI		ABOnDAN
-abat	ABAT	abondans	ABOnDANS
-abdenwel	ABDENWEL		ABONDAnS
-abdomèn	ABDOMEN		ABOnDAnS
-abe	ABE		ABONDANS
+	ABAnDONEN		ABONDAN
+abapri	ABAPRI		ABOnDAn
+abat	ABAT	abondans	ABONDAnS
+abdenwel	ABDENWEL		ABOnDAnS
+abdomèn	ABDOMEN		ABONDANS
+abe	ABE		ABOnDANS
 abese	ABESE	abone	ABONE
 abi	ABI	abonen	ABONEN
 abil	ABIL		ABONEn
-abilite	ABILITE	abonmache	ABONMAChE
-abim	ABIM		ABOnMAChE
-abiman	ABIMAn	abònman	ABONMAN
-	ABIMAN		ABONMAn
+abilite	ABILITE	abonmache	ABOnMAChE
+abim	ABIM		ABONMAChE
+abiman	ABIMAn	abònman	ABONMAn
+	ABIMAN		ABONMAN
 abime	ABIME	abonotcho	ABONOTChO
-abimen	ABIMEN	aboudja	ABOuDJA
-	ABIMEn	about	ABOuT
+abimen	ABIMEn	aboudja	ABOuDJA
+	ABIMEN	about	ABOuT
 abit	ABIT	abouti	ABOuTI
 abitab	ABITAB	aboutisman	ABOuTISMAn
-abitan	ABITAN		ABOuTISMAN
-	ABITAn	abraram	ABRARAM
-abitasyon	ABITASYOn	abreviyasyon	ABREVIYASYOn
-	ABITASYON		ABREVIYASYON
+abitan	ABITAn		ABOuTISMAN
+	ABITAN	abraram	ABRARAM
+abitasyon	ABITASYON	abreviyasyon	ABREVIYASYON
+	ABITASYOn		ABREVIYASYOn
 abite	ABITE	abrevwa	ABREVWA
 abitid	ABITID	abri	ABRI
 abitraj	ABITRAJ	abriko	ABRIKO
-abitre	ABITRE	absan	ABSAn
-abitye	ABITYE		ABSAN
-abityelman	ABITYELMAN	absans	ABSAnS
-	ABITYELMAn		ABSANS
+abitre	ABITRE	absan	ABSAN
+abitye	ABITYE		ABSAn
+abityelman	ABITYELMAn	absans	ABSAnS
+	ABITYELMAN		ABSANS
 abiye	ABIYE	absante	ABSAnTE
 abiyotik	ABIYOTIK		ABSANTE
-abizan	ABIZAN	absanteyis	ABSAnTEYIS
-	ABIZAn		ABSANTEYIS
+abizan	ABIZAn	absanteyis	ABSANTEYIS
+	ABIZAN		ABSAnTEYIS
 abize	ABIZE	abse	ABSE
-ablado	ABLADO	absedelenn	ABSEDELEnN
-ablen	ABLEN		ABSEDELENN
-	ABLEn	absent	ABSEnT
-abnegasyon	ABNEGASYON		ABSENT
-	ABNEGASYOn	absidite	ABSIDITE
+ablado	ABLADO	absedelenn	ABSEDELENN
+ablen	ABLEn		ABSEDELEnN
+	ABLEN	absent	ABSEnT
+abnegasyon	ABNEGASYOn		ABSENT
+	ABNEGASYON	absidite	ABSIDITE
 abo	ABO	absoban	ABSOBAn
 abobo	ABOBO		ABSOBAN
 abodab	ABODAB	absobe	ABSOBE
-absoli - adwaz
+abode	ABODE	absoli	ABSOLI
+absoliman - adwen
 
-absoli	ABSOLI	adlibitom	ADLIBITOM
 absoliman	ABSOLIMAN	admet	ADMET
 	ABSOLIMAn	admeton	ADMETOn
 absolisyon	ABSOLISYON		ADMETON
-	ABSOLISYOn	administrasyon	ADMINISTRASYON
-abstre	ABSTRE		ADMINISTRASYOn
-abyenfe	ABYEnFE	administrate	ADMINISTRATE
-	ABYENFE	administratif	ADMINISTRATIF
+	ABSOLISYOn	administrasyon	ADMINISTRASYOn
+abstre	ABSTRE		ADMINISTRASYON
+abyenfe	ABYENFE	administrate	ADMINISTRATE
+	ABYEnFE	administratif	ADMINISTRATIF
 ach	ACh	administre	ADMINISTRE
 acha	AChA	admirab	ADMIRAB
-acheveche	AChEVEChE	admirasyon	ADMIRASYOn
-achevek	AChEVEK		ADMIRASYON
+acheveche	AChEVEChE	admirasyon	ADMIRASYON
+achevek	AChEVEK		ADMIRASYOn
 achidyosez	AChIDYOSEZ	admirate	ADMIRATE
 achimed	AChIMED	admire	ADMIRE
 achitek	AChITEK	admisib	ADMISIB
-achitekti	AChITEKTI	admisyon	ADMISYON
-achiv	AChIV		ADMISYOn
+achitekti	AChITEKTI	admisyon	ADMISYOn
+achiv	AChIV		ADMISYON
 achivis	AChIVIS	adof	ADOF
 achtayn	AChTAYN	adoken	ADOKEn
 achte	AChTE		ADOKEN
-adan	ADAn	adolesan	ADOLESAn
-	ADAN		ADOLESAN
+adan	ADAn	adolesan	ADOLESAN
+	ADAN		ADOLESAn
 adanmsonn	ADAnMSOnN	adolesans	ADOLESAnS
 	ADAnMSONN		ADOLESANS
 	ADANMSOnN	adonayi	ADONAYI
-	ADANMSONN	adonnen	ADONNEn
-adaptab	ADAPTAB		ADOnNEn
-adaptasyon	ADAPTASYON		ADOnNEN
-	ADAPTASYOn		ADONNEN
+	ADANMSONN	adonnen	ADOnNEn
+adaptab	ADAPTAB		ADOnNEN
+adaptasyon	ADAPTASYOn		ADONNEn
+	ADAPTASYON		ADONNEN
 adapte	ADAPTE	adopsyon	ADOPSYOn
 adbod	ADBOD		ADOPSYON
 ade	ADE	adopte	ADOPTE
 adefo	ADEFO	adoptif	ADOPTIF
 ademen	ADEMEn	adorab	ADORAB
-	ADEMEN	adorasyon	ADORASYOn
-adezif	ADEZIF		ADORASYON
+	ADEMEN	adorasyon	ADORASYON
+adezif	ADEZIF		ADORASYOn
 adezyon	ADEZYON	adorate	ADORATE
 	ADEZYOn	adore	ADORE
 adilte	ADILTE	adousi	ADOuSI
@@ -99,34 +98,34 @@ adisyone	ADISYONE	adres	ADRES
 adjanikon	ADJANIKON	adrese	ADRESE
 	ADJANIKOn	adriyen	ADRIYEn
 adjedan	ADJEDAN		ADRIYEN
-	ADJEDAn	advantis	ADVANTIS
-adjektif	ADJEKTIF		ADVAnTIS
+	ADJEDAn	advantis	ADVAnTIS
+adjektif	ADJEKTIF		ADVANTIS
 adjidan	ADJIDAN	adveb	ADVEB
 	ADJIDAn	advese	ADVESE
 adjo	ADJO	advesite	ADVESITE
-adjwen	ADJWEn	adwat	ADWAT
-	ADJWEN	adwaz	ADWAZ
-adwen - agwesan
+adjwen	ADJWEN	adwat	ADWAT
+	ADJWEn	adwaz	ADWAZ
+adlibitom	ADLIBITOM	adwen	ADWEn
+adwen - agwo
 
-adwen	ADWEn		AFWONTMAN
 	ADWEN	ag	AG
-adyahounto	ADYAHOuNTO	aga	AGA
-	ADYAHOunTO	aganman	AGANMAN
-adyanikon	ADYANIKOn		AGAnMAn
-	ADYANIKON		AGANMAn
-adye	ADYE		AGAnMAN
+adyahounto	ADYAHOunTO	aga	AGA
+	ADYAHOuNTO	aganman	AGAnMAN
+adyanikon	ADYANIKON		AGANMAn
+	ADYANIKOn		AGAnMAn
+adye	ADYE		AGANMAN
 adyoman	ADYOMAN	agante	AGAnTE
 	ADYOMAn		AGANTE
-afab	AFAB	agasan	AGASAN
-afam	AFAM		AGASAn
+afab	AFAB	agasan	AGASAn
+afam	AFAM		AGASAN
 afe	AFE	agase	AGASE
 afebli	AFEBLI	agat	AGAT
 afeksyon	AFEKSYON	agawou	AGAWOu
 	AFEKSYOn	agida	AGIDA
 afekte	AFEKTE	agiman	AGIMAn
 afemaj	AFEMAJ		AGIMAN
-afemen	AFEMEN	ago	AGO
-	AFEMEn	agoch	AGOCh
+afemen	AFEMEn	ago	AGO
+	AFEMEN	agoch	AGOCh
 afese	AFESE	agogo	AGOGO
 afiba	AFIBA	agon	AGON
 afich	AFICh		AGOn
@@ -135,71 +134,71 @@ afidavi	AFIDAVI	agonize	AGONIZE
 afilyasyon	AFILYASYON	agouli	AGOuLI
 	AFILYASYOn	agouti	AGOuTI
 afilye	AFILYE	agraf	AGRAF
-afimasyon	AFIMASYOn	agrafe	AGRAFE
-	AFIMASYON	agrandi	AGRANDI
+afimasyon	AFIMASYON	agrafe	AGRAFE
+	AFIMASYOn	agrandi	AGRANDI
 afimatif	AFIMATIF		AGRAnDI
 afime	AFIME	agrandisman	AGRANDISMAN
-afle	AFLE		AGRAnDISMAn
-aflije	AFLIJE		AGRAnDISMAN
-afon	AFON		AGRANDISMAn
+afle	AFLE		AGRAnDISMAN
+aflije	AFLIJE		AGRANDISMAn
+afon	AFON		AGRAnDISMAn
 	AFOn	agrap	AGRAP
-afos	AFOS	agravan	AGRAVAN
-afranchi	AFRAnChI		AGRAVAn
+afos	AFOS	agravan	AGRAVAn
+afranchi	AFRAnChI		AGRAVAN
 	AFRANChI	agrave	AGRAVE
 afre	AFRE	agre	AGRE
-afreman	AFREMAN	agrese	AGRESE
-	AFREMAn	agresif	AGRESIF
+afreman	AFREMAn	agrese	AGRESE
+	AFREMAN	agresif	AGRESIF
 afresite	AFRESITE	agresivite	AGRESIVITE
 afriken	AFRIKEn	agresyon	AGRESYON
 	AFRIKEN		AGRESYOn
 afwo	AFWO	agreyab	AGREYAB
 afwon	AFWON	agreye	AGREYE
 	AFWOn	agrikilte	AGRIKILTE
-afwonte	AFWONTE	agrikilti	AGRIKILTI
-	AFWOnTE	agrikol	AGRIKOL
-afwontman	AFWOnTMAN	agwe	AGWE
-	AFWONTMAn	agwesan	AGWESAn
-	AFWOnTMAn		AGWESAN
-agwo - akonplisman
+afwonte	AFWOnTE	agrikilti	AGRIKILTI
+	AFWONTE	agrikol	AGRIKOL
+afwontman	AFWONTMAn	agwe	AGWE
+	AFWOnTMAn	agwesan	AGWESAN
+	AFWOnTMAN		AGWESAn
+	AFWONTMAN	agwo	AGWO
+agwobiznis - akonplisman
 
-agwo	AGWO	akalmi	AKALMI
 agwobiznis	AGWOBIZNIS	akamil	AKAMIL
-agwonom	AGWONOM	akansyel	AKAnSYEL
-agwonomi	AGWONOMI		AKANSYEL
+agwonom	AGWONOM	akansyel	AKANSYEL
+agwonomi	AGWONOMI		AKAnSYEL
 ajame	AJAME	akaryat	AKARYAT
-ajan	AJAn	akasan	AKASAN
-	AJAN		AKASAn
-ajannda	AJANNDA	akawo	AKAWO
-	AJAnNDA	akaye	AKAYE
+ajan	AJAn	akasan	AKASAn
+	AJAN		AKASAN
+ajannda	AJAnNDA	akawo	AKAWO
+	AJANNDA	akaye	AKAYE
 ajans	AJAnS	akayik	AKAYIK
-	AJANS	akdekontrisyon	AKDEKOnTRISYOn
-ajante	AJANTE		AKDEKONTRISYOn
-	AJAnTE		AKDEKOnTRISYON
-ajanten	AJANTEn		AKDEKONTRISYON
-	AJAnTEn	akdenesans	AKDENESAnS
-	AJAnTEN		AKDENESANS
-	AJANTEN	ake	AKE
-ajantri	AJAnTRI	akey	AKEY
-	AJANTRI	akeyan	AKEYAn
+	AJANS	akdekontrisyon	AKDEKOnTRISYON
+ajante	AJAnTE		AKDEKONTRISYOn
+	AJANTE		AKDEKONTRISYON
+ajanten	AJAnTEN		AKDEKOnTRISYOn
+	AJANTEN	akdenesans	AKDENESAnS
+	AJANTEn		AKDENESANS
+	AJAnTEn	ake	AKE
+ajantri	AJANTRI	akey	AKEY
+	AJAnTRI	akeyan	AKEYAn
 aje	AJE		AKEYAN
 ajen	AJEn	akeyi	AKEYI
 	AJEN	aki	AKI
-ajenda	AJENDA	akile	AKILE
-	AJEnDA	akim	AKIM
+ajenda	AJEnDA	akile	AKILE
+	AJENDA	akim	AKIM
 ajeno	AJENO	akimile	AKIMILE
 ajenou	AJENOu	akizasyon	AKIZASYON
 aji	AJI		AKIZASYOn
 ajil	AJIL	akizate	AKIZATE
 ajilite	AJILITE	akize	AKIZE
-ajisman	AJISMAn	aklamasyon	AKLAMASYOn
-	AJISMAN		AKLAMASYON
+ajisman	AJISMAn	aklamasyon	AKLAMASYON
+	AJISMAN		AKLAMASYOn
 ajistab	AJISTAB	aklame	AKLAME
 ajistay	AJISTAY	akle	AKLE
 ajiste	AJISTE	ako	AKO
 ajisteman	AJISTEMAN	akode	AKODE
 	AJISTEMAn	akodeyon	AKODEYOn
-ajitasyon	AJITASYON		AKODEYON
-	AJITASYOn	akodeyonis	AKODEYONIS
+ajitasyon	AJITASYOn		AKODEYON
+	AJITASYON	akodeyonis	AKODEYONIS
 ajitate	AJITATE	akodiye	AKODIYE
 ajite	AJITE	akolad	AKOLAD
 ajou	AJOu	akolit	AKOLIT
@@ -207,28 +206,28 @@ ajoune	AJOuNE	akomode	AKOMODE
 ajoupa	AJOuPA	akòn	AKON
 ajoute	AJOuTE	akondisyon	AKOnDISYOn
 ak	AK		AKONDISYOn
-akable	AKABLE		AKOnDISYON
-akachon	AKAChOn		AKONDISYON
-	AKAChON	akonpaye	AKOnPAYE
-akademi	AKADEMI		AKONPAYE
-akademik	AKADEMIK	akonpli	AKONPLI
-akado	AKADO		AKOnPLI
+akable	AKABLE		AKONDISYON
+akachon	AKAChOn		AKOnDISYON
+	AKAChON	akonpaye	AKONPAYE
+akademi	AKADEMI		AKOnPAYE
+akademik	AKADEMIK	akonpli	AKOnPLI
+akado	AKADO		AKONPLI
 akajou	AKAJOu	akonplisman	AKONPLISMAN
-akonplisman - alantran
+akalmi	AKALMI		AKOnPLISMAn
+akonplisman - alanve
 
-	AKOnPLISMAN	aktyel	AKTYEL
-	AKONPLISMAn	aktyelman	AKTYELMAN
-	AKOnPLISMAn		AKTYELMAn
-akoste	AKOSTE	akwabon	AKWABOn
-akote	AKOTE		AKWABON
+	AKOnPLISMAN	aktyelman	AKTYELMAN
+	AKONPLISMAn		AKTYELMAn
+akoste	AKOSTE	akwabon	AKWABON
+akote	AKOTE		AKWABOn
 akouche	AKOuChE	akwarel	AKWAREL
-akouchman	AKOuChMAn	akwaryom	AKWARYOM
-	AKOuChMAN	akwatik	AKWATIK
-akoupi	AKOuPI	akwentans	AKWENTANS
+akouchman	AKOuChMAN	akwaryom	AKWARYOM
+	AKOuChMAn	akwatik	AKWATIK
+akoupi	AKOuPI	akwentans	AKWEnTAnS
 akoz	AKOZ		AKWENTAnS
 akra	AKRA		AKWEnTANS
-akreditasyon	AKREDITASYOn		AKWEnTAnS
-	AKREDITASYON	akwo	AKWO
+akreditasyon	AKREDITASYON		AKWENTANS
+	AKREDITASYOn	akwo	AKWO
 akredite	AKREDITE	akwobat	AKWOBAT
 akrek	AKREK	akwochaj	AKWOChAJ
 akrekre	AKREKRE	akwoche	AKWOChE
@@ -236,21 +235,21 @@ akrilik	AKRILIK	akwonim	AKWONIM
 aks	AKS	al	AL
 aksan	AKSAn	ala	ALA
 	AKSAN	alabaz	ALABAZ
-aksangrav	AKSAnGRAV	alabi	ALABI
-	AKSANGRAV	alabwos	ALABWOS
-aksantegi	AKSANTEGI	alada	ALADA
-	AKSAnTEGI	aladen	ALADEn
-akselerasyon	AKSELERASYOn		ALADEN
+aksangrav	AKSANGRAV	alabi	ALABI
+	AKSAnGRAV	alabwos	ALABWOS
+aksantegi	AKSAnTEGI	alada	ALADA
+	AKSANTEGI	aladen	ALADEN
+akselerasyon	AKSELERASYOn		ALADEn
 	AKSELERASYON	aladispozisyon	ALADISPOZISYOn
 akselerate	AKSELERATE		ALADISPOZISYON
 akselere	AKSELERE	aladriv	ALADRIV
-akseptab	AKSEPTAB	alafen	ALAFEn
-aksepte	AKSEPTE		ALAFEN
+akseptab	AKSEPTAB	alafen	ALAFEN
+aksepte	AKSEPTE		ALAFEn
 akseswa	AKSESWA	alafendefen	ALAFENDEFEN
-aksidan	AKSIDAn		ALAFEnDEFEn
+aksidan	AKSIDAn		ALAFEnDEFEN
 	AKSIDAN		ALAFENDEFEn
-aksidante	AKSIDANTE		ALAFEnDEFEN
-	AKSIDAnTE	alafwa	ALAFWA
+aksidante	AKSIDAnTE		ALAFEnDEFEn
+	AKSIDANTE	alafwa	ALAFWA
 aksivil	AKSIVIL	alagwouj	ALAGWOuJ
 akson	AKSOn	alagwouy	ALAGWOuY
 	AKSON	alaleje	ALALEJE
@@ -260,31 +259,31 @@ aksyondegras	AKSYOnDEGRAS		ALAMEN
 	AKSYONDEGRAS	alamod	ALAMOD
 aksyone	AKSYONE	alamyab	ALAMYAB
 aksyonez	AKSYONEZ	alanaj	ALANAJ
-aksyonne	AKSYONNE	alanbik	ALANBIK
-	AKSYOnNE		ALAnBIK
+aksyonne	AKSYONNE	alanbik	ALAnBIK
+	AKSYOnNE		ALANBIK
 akte	AKTE	alantou	ALAnTOu
 aktif	AKTIF		ALANTOu
 aktivis	AKTIVIS	alantran	ALAnTRAn
 aktivite	AKTIVITE		ALANTRAn
 aktris	AKTRIS		ALAnTRAN
 aktyalite	AKTYALITE		ALANTRAN
-alanve - alkol
+aktyel	AKTYEL	alanve	ALAnVE
+alanve - alkole
 
-alanve	ALAnVE		ALEnTERYE
 	ALANVE	alepok	ALEPOK
 alapapot	ALAPAPOT	aletranje	ALETRANJE
 alaplas	ALAPLAS		ALETRAnJE
 alapote	ALAPOTE	aleven	ALEVEn
 alaso	ALASO		ALEVEN
 alatak	ALATAK	alevini	ALEVINI
-alataton	ALATATOn	alevouzan	ALEVOuZAN
-	ALATATON		ALEVOuZAn
+alataton	ALATATOn	alevouzan	ALEVOuZAn
+	ALATATON		ALEVOuZAN
 alatet	ALATET	alewe	ALEWE
-alatranp	ALATRAnP	alez	ALEZ
-	ALATRANP	alfabet	ALFABET
+alatranp	ALATRANP	alez	ALEZ
+	ALATRAnP	alfabet	ALFABET
 alavni	ALAVNI	alfabetik	ALFABETIK
-alawonn	ALAWONN	alfabetizasyon	ALFABETIZASYOn
-	ALAWOnN		ALFABETIZASYON
+alawonn	ALAWOnN	alfabetizasyon	ALFABETIZASYOn
+	ALAWONN		ALFABETIZASYON
 alawonnbade	ALAWOnNBADE	alfabetize	ALFABETIZE
 	ALAWONNBADE	alfo	ALFO
 alawonyay	ALAWONYAY	alfredo	ALFREDO
@@ -293,20 +292,20 @@ albarak	ALBARAK	aligati	ALIGATI
 albe	ALBE	alilin	ALILIN
 albimin	ALBIMIN	aliman	ALIMAn
 albinos	ALBINOS		ALIMAN
-albom	ALBOM	alimantasyon	ALIMAnTASYOn
-albou	ALBOu		ALIMANTASYOn
-ale	ALE		ALIMAnTASYON
-alegad	ALEGAD		ALIMANTASYON
-aleji	ALEJI	alimante	ALIMAnTE
-aleka	ALEKA		ALIMANTE
+albom	ALBOM	alimantasyon	ALIMANTASYON
+albou	ALBOu		ALIMAnTASYOn
+ale	ALE		ALIMANTASYOn
+alegad	ALEGAD		ALIMAnTASYON
+aleji	ALEJI	alimante	ALIMANTE
+aleka	ALEKA		ALIMAnTE
 aleke	ALEKE	alimet	ALIMET
-aleken	ALEKEN	aliminyom	ALIMINYOM
-	ALEKEn	alisinasyon	ALISINASYON
+aleken	ALEKEn	aliminyom	ALIMINYOM
+	ALEKEN	alisinasyon	ALISINASYON
 alekile	ALEKILE		ALISINASYOn
 alekonsa	ALEKOnSA	alite	ALITE
 	ALEKONSA	alivyal	ALIVYAL
-alekout	ALEKOuT	alivyon	ALIVYON
-alekri	ALEKRI		ALIVYOn
+alekout	ALEKOuT	alivyon	ALIVYOn
+alekri	ALEKRI		ALIVYON
 aleksann	ALEKSAnN	aliyen	ALIYEN
 	ALEKSANN		ALIYEn
 aleksi	ALEKSI	aliyman	ALIYMAN
@@ -315,453 +314,453 @@ alelouya	ALELOuYA	alize	ALIZE
 alemye	ALEMYE	alizyon	ALIZYOn
 alen	ALEN		ALIZYON
 	ALEn	aljeb	ALJEB
-alenfinitif	ALENFINITIF	aljeryen	ALJERYEN
-	ALEnFINITIF		ALJERYEn
-alenpwovis	ALENPWOVIS	alkalen	ALKALEN
-	ALEnPWOVIS		ALKALEn
+alenfinitif	ALENFINITIF	aljeryen	ALJERYEn
+	ALEnFINITIF		ALJERYEN
+alenpwovis	ALEnPWOVIS	alkalen	ALKALEN
+	ALENPWOVIS		ALKALEn
 alentere	ALENTERE	alkali	ALKALI
 	ALEnTERE	alkaseze	ALKASEZE
 alenterye	ALENTERYE	alkol	ALKOL
-alkole - analiz
+	ALEnTERYE	alkole	ALKOLE
+alkolik - analize
 
-alkole	ALKOLE		AMERIKEn
 alkolik	ALKOLIK	amezi	AMEZI
 almanak	ALMANAK	amib	AMIB
 alo	ALO	amidal	AMIDAL
-alone	ALONE	amidonnen	AMIDOnNEn
-alonje	ALOnJE		AMIDONNEn
+alone	ALONE	amidonnen	AMIDONNEn
+alonje	ALOnJE		AMIDOnNEn
 	ALONJE		AMIDOnNEN
 alontem	ALONTEM		AMIDONNEN
 	ALOnTEM	amigdal	AMIGDAL
 alos	ALOS	amigdalit	AMIGDALIT
 aloske	ALOSKE	amikal	AMIKAL
-aloufa	ALOuFA	amikalman	AMIKALMAn
-alowin	ALOWIN		AMIKALMAN
+aloufa	ALOuFA	amikalman	AMIKALMAN
+alowin	ALOWIN		AMIKALMAn
 alsibyad	ALSIBYAD	amine	AMINE
 alsiyis	ALSIYIS	amitye	AMITYE
-alte	ALTE	amizan	AMIZAn
-altenate	ALTENATE		AMIZAN
+alte	ALTE	amizan	AMIZAN
+altenate	ALTENATE		AMIZAn
 altenatif	ALTENATIF	amize	AMIZE
-altido	ALTIDO	amizman	AMIZMAN
-altitid	ALTITID		AMIZMAn
-alven	ALVEN	amnisti	AMNISTI
-	ALVEn	amo	AMO
+altido	ALTIDO	amizman	AMIZMAn
+altitid	ALTITID		AMIZMAN
+alven	ALVEn	amnisti	AMNISTI
+	ALVEN	amo	AMO
 alveyol	ALVEYOL	amoni	AMONI
 alyaj	ALYAJ	amonika	AMONIKA
-alyans	ALYAnS	amonize	AMONIZE
-	ALYANS	amonyak	AMONYAK
+alyans	ALYANS	amonize	AMONIZE
+	ALYAnS	amonyak	AMONYAK
 alye	ALYE	amonyom	AMONYOM
-alyennkat	ALYENNKAT	amos	AMOS
-	ALYEnNKAT	amose	AMOSE
+alyennkat	ALYEnNKAT	amos	AMOS
+	ALYENNKAT	amose	AMOSE
 amak	AMAK	amoti	AMOTI
-amalgam	AMALGAM	amotisman	AMOTISMAN
-amann	AMANN		AMOTISMAn
+amalgam	AMALGAM	amotisman	AMOTISMAn
+amann	AMANN		AMOTISMAN
 	AMAnN	amou	AMOu
 amannke	AMAnNKE	amoupwop	AMOuPWOP
 	AMANNKE	amoure	AMOuRE
-amannman	AMAnNMAN	amourez	AMOuREZ
+amannman	AMANNMAN	amourez	AMOuREZ
 	AMANNMAn	amwa	AMWA
-	AMAnNMAn	amwalaye	AMWALAYE
-	AMANNMAN	amwaz	AMWAZ
+	AMAnNMAN	amwalaye	AMWALAYE
+	AMAnNMAn	amwaz	AMWAZ
 amate	AMATE	amwenke	AMWENKE
 amati	AMATI		AMWEnKE
 ame	AME	amwenske	AMWENSKE
 amedisali	AMEDISALI		AMWEnSKE
-amelyorasyon	AMELYORASYOn	an	AN
-	AMELYORASYON	anachi	ANAChI
+amelyorasyon	AMELYORASYON	an	AN
+	AMELYORASYOn	anachi	ANAChI
 amelyore	AMELYORE	anachis	ANAChIS
 amèn	AMEN	anafaz	ANAFAZ
 amerendyen	AMEREnDYEn	anakawit	ANAKAWIT
-	AMERENDYEn	anakawona	ANAKAWONA
-	AMEREnDYEN	anakayit	ANAKAYIT
+	AMEREnDYEN	anakawona	ANAKAWONA
+	AMERENDYEn	anakayit	ANAKAYIT
 	AMERENDYEN	analfabet	ANALFABET
-ameriken	AMERIKEN	analiz	ANALIZ
-analize - anbobinen
+ameriken	AMERIKEn	analiz	ANALIZ
+	AMERIKEN	analize	ANALIZE
+anana - anbobinen
 
-analize	ANALIZE		ANBASADE
 anana	ANANA	anbasadris	AnBASADRIS
 anasi	ANASI		ANBASADRIS
 anatomi	ANATOMI	anbate	AnBATE
 anayibowa	ANAYIBOWA		ANBATE
-anb	AnB	anbativant	ANBATIVAnT
+anb	AnB	anbativant	ANBATIVANT
 	ANB		AnBATIVAnT
-anba	AnBA		ANBATIVANT
-	ANBA		AnBATIVANT
-anbabra	AnBABRA	anbavant	AnBAVAnT
-	ANBABRA		ANBAVANT
-anbachal	ANBAChAL		AnBAVANT
+anba	AnBA		AnBATIVANT
+	ANBA		ANBATIVAnT
+anbabra	ANBABRA	anbavant	AnBAVANT
+	AnBABRA		ANBAVANT
+anbachal	ANBAChAL		AnBAVAnT
 	AnBAChAL		ANBAVAnT
-anbago	AnBAGO	anbazaj	AnBAZAJ
-	ANBAGO		ANBAZAJ
-anbake	ANBAKE	anbazesel	ANBAZESEL
-	AnBAKE		AnBAZESEL
-anbakman	AnBAKMAn	anbege	ANBEGE
-	AnBAKMAN		AnBEGE
-	ANBAKMAn	anbeli	ANBELI
-	ANBAKMAN		AnBELI
+anbago	ANBAGO	anbazaj	AnBAZAJ
+	AnBAGO		ANBAZAJ
+anbake	ANBAKE	anbazesel	AnBAZESEL
+	AnBAKE		ANBAZESEL
+anbakman	ANBAKMAn	anbege	AnBEGE
+	ANBAKMAN		ANBEGE
+	AnBAKMAN	anbeli	AnBELI
+	AnBAKMAn		ANBELI
 anbalaj	AnBALAJ	anbelisman	ANBELISMAN
-	ANBALAJ		ANBELISMAn
-anbalakal	ANBALAKAL		AnBELISMAN
+	ANBALAJ		AnBELISMAN
+anbalakal	ANBALAKAL		ANBELISMAn
 	AnBALAKAL		AnBELISMAn
-anbalan	ANBALAN	anbes	AnBES
-	AnBALAN		ANBES
-	ANBALAn	anbetan	ANBETAN
-	AnBALAn		AnBETAn
-anbale	ANBALE		ANBETAn
-	AnBALE		AnBETAN
-anbandisyon	ANBAnDISYON	anbete	AnBETE
-	AnBAnDISYOn		ANBETE
-	ANBAnDISYOn	anbilans	ANBILANS
-	AnBANDISYOn		AnBILAnS
-	ANBANDISYOn		ANBILAnS
-	AnBAnDISYON		AnBILANS
-	ANBANDISYON	anbiskad	AnBISKAD
-	AnBANDISYON		ANBISKAD
-anbarasan	AnBARASAn	anbiske	ANBISKE
-	ANBARASAn		AnBISKE
-	ANBARASAN	anbisye	ANBISYE
-	AnBARASAN		AnBISYE
-anbarase	ANBARASE	anbisyez	ANBISYEZ
-	AnBARASE		AnBISYEZ
-anbarasman	AnBARASMAn	anbisyon	AnBISYON
-	ANBARASMAn		ANBISYOn
-	AnBARASMAN		AnBISYOn
+anbalan	AnBALAn	anbes	ANBES
+	ANBALAn		AnBES
+	AnBALAN	anbetan	AnBETAn
+	ANBALAN		ANBETAn
+anbale	AnBALE		AnBETAN
+	ANBALE		ANBETAN
+anbandisyon	AnBAnDISYON	anbete	AnBETE
+	ANBAnDISYON		ANBETE
+	ANBANDISYOn	anbilans	ANBILANS
+	AnBAnDISYOn		AnBILAnS
+	ANBAnDISYOn		ANBILAnS
+	AnBANDISYOn		AnBILANS
+	ANBANDISYON	anbiskad	ANBISKAD
+	AnBANDISYON		AnBISKAD
+anbarasan	AnBARASAN	anbiske	AnBISKE
+	ANBARASAn		ANBISKE
+	AnBARASAn	anbisye	AnBISYE
+	ANBARASAN		ANBISYE
+anbarase	AnBARASE	anbisyez	AnBISYEZ
+	ANBARASE		ANBISYEZ
+anbarasman	ANBARASMAn	anbisyon	AnBISYOn
+	AnBARASMAn		ANBISYOn
+	AnBARASMAN		AnBISYON
 	ANBARASMAN		ANBISYON
-anbasad	AnBASAD	anblem	AnBLEM
-	ANBASAD		ANBLEM
-anbasade	AnBASADE	anbobinen	ANBOBINEn
+anbasad	AnBASAD	anblem	ANBLEM
+	ANBASAD		AnBLEM
+anbasade	AnBASADE	anbobinen	ANBOBINEN
+	ANBASADE		AnBOBINEn
 anbobinen - andenmon
 
-	AnBOBINEn		AnChAnTE
-	AnBOBINEN		ANChAnTE
-	ANBOBINEN		ANChANTE
+	AnBOBINEN		AnChANTE
+	ANBOBINEn		ANChANTE
 anbochay	ANBOChAY	anchef	ANChEF
 	AnBOChAY		AnChEF
-anboche	ANBOChE	anchennen	AnChENNEN
+anboche	ANBOChE	anchennen	AnChEnNEn
 	AnBOChE		ANChEnNEn
 anbouchi	ANBOuChI		ANChENNEN
-	AnBOuChI		AnChEnNEn
-anboulin	AnBOuLIN		ANChENNEn
-	ANBOuLIN		AnChENNEn
-anbouteyay	ANBOuTEYAY		AnChEnNEN
-	AnBOuTEYAY		ANChEnNEN
-anbouye	AnBOuYE	ancheri	AnChERI
-	ANBOuYE		ANChERI
-anbrasad	ANBRASAD	anchtpent	ANChTPENT
-	AnBRASAD		AnChTPENT
+	AnBOuChI		ANChENNEn
+anboulin	ANBOuLIN		AnChENNEn
+	AnBOuLIN		AnChEnNEN
+anbouteyay	AnBOuTEYAY		AnChENNEN
+	ANBOuTEYAY		ANChEnNEN
+anbouye	AnBOuYE	ancheri	ANChERI
+	ANBOuYE		AnChERI
+anbrasad	AnBRASAD	anchtpent	ANChTPENT
+	ANBRASAD		AnChTPENT
 anbrase	ANBRASE		ANChTPEnT
 	AnBRASE		AnChTPEnT
-anbreyaj	ANBREYAJ	anchwa	AnChWA
-	AnBREYAJ		ANChWA
+anbreyaj	ANBREYAJ	anchwa	ANChWA
+	AnBREYAJ		AnChWA
 anbreye	ANBREYE	anchwan	ANChWAN
-	AnBREYE		AnChWAn
+	AnBREYE		AnChWAN
 anbrigade	AnBRIGADE		ANChWAn
-	ANBRIGADE		AnChWAN
+	ANBRIGADE		AnChWAn
 anbriyoloji	AnBRIYOLOJI	andaki	ANDAKI
 	ANBRIYOLOJI		AnDAKI
-anbriyon	AnBRIYOn	andanje	ANDANJE
-	ANBRIYON		AnDAnJE
-	ANBRIYOn		ANDAnJE
+anbriyon	ANBRIYON	andanje	ANDAnJE
 	AnBRIYON		AnDANJE
-anbwa	ANBWA	ande	AnDE
-	AnBWA		ANDE
-anbwaz	ANBWAZ	andedan	AnDEDAN
-	AnBWAZ		ANDEDAN
-anbwouye	AnBWOuYE		AnDEDAn
-	ANBWOuYE		ANDEDAn
-anbyans	ANBYANS	andefinitif	AnDEFINITIF
-	AnBYANS		ANDEFINITIF
-	AnBYAnS	andefo	AnDEFO
-	ANBYAnS		ANDEFO
-anbye	ANBYE	andegraba	AnDEGRABA
-	AnBYE		ANDEGRABA
-anbyen	ANBYEN	andekonfiti	AnDEKOnFITI
-	AnBYEN		ANDEKONFITI
-	AnBYEn		AnDEKONFITI
+	ANBRIYOn		AnDAnJE
+	AnBRIYOn		ANDANJE
+anbwa	ANBWA	ande	ANDE
+	AnBWA		AnDE
+anbwaz	ANBWAZ	andedan	ANDEDAN
+	AnBWAZ		AnDEDAn
+anbwouye	AnBWOuYE		ANDEDAn
+	ANBWOuYE		AnDEDAN
+anbyans	ANBYAnS	andefinitif	ANDEFINITIF
+	AnBYAnS		AnDEFINITIF
+	ANBYANS	andefo	AnDEFO
+	AnBYANS		ANDEFO
+anbye	AnBYE	andegraba	AnDEGRABA
+	ANBYE		ANDEGRABA
+anbyen	AnBYEn	andekonfiti	AnDEKONFITI
 	ANBYEn		ANDEKOnFITI
-anchaj	ANChAJ	andenmon	ANDEnMOn
-	AnChAJ		AnDEnMOn
-anchaje	AnChAJE		AnDEnMON
-	ANChAJE		ANDEnMON
-anchante	AnChANTE		AnDENMON
+	AnBYEN		AnDEKOnFITI
+	ANBYEN		ANDEKONFITI
+anchaj	AnChAJ	andenmon	ANDEnMON
+	ANChAJ		AnDENMOn
+anchaje	AnChAJE		ANDENMON
+	ANChAJE		AnDEnMOn
+anchante	ANChAnTE		AnDEnMON
+	AnChAnTE		ANDENMOn
 andenmon - anfen
 
-	ANDENMON	anestezi	ANESTEZI
-	AnDENMOn	anestezis	ANESTEZIS
-	ANDENMOn	anetwale	ANETWALE
+	ANDEnMOn	anestezis	ANESTEZIS
+	AnDENMON	anetwale	ANETWALE
 andènye	ANDENYE	aneyanti	ANEYANTI
 	AnDENYE	anfale	ANFALE
-andetay	AnDETAY		AnFALE
-	ANDETAY	anfanmi	ANFANMI
-andey	AnDEY		AnFAnMI
-	ANDEY		ANFAnMI
+andetay	ANDETAY		AnFALE
+	AnDETAY	anfanmi	AnFAnMI
+andey	AnDEY		ANFAnMI
+	ANDEY		ANFANMI
 andeyo	ANDEYO		AnFANMI
-	AnDEYO	anfannke	ANFAnNKE
-andezay	ANDEZAY		AnFAnNKE
-	AnDEZAY		ANFANNKE
-andezod	AnDEZOD		AnFANNKE
-	ANDEZOD	anfante	AnFANTE
+	AnDEYO	anfannke	AnFANNKE
+andezay	AnDEZAY		ANFANNKE
+	ANDEZAY		AnFAnNKE
+andezod	ANDEZOD		ANFAnNKE
+	AnDEZOD	anfante	ANFANTE
 andikap	AnDIKAP		ANFAnTE
-	ANDIKAP		AnFAnTE
-andikape	AnDIKAPE		ANFANTE
-	ANDIKAPE	anfanten	AnFANTEn
-andirans	ANDIRAnS		ANFANTEn
-	AnDIRANS		ANFAnTEn
-	AnDIRAnS		AnFAnTEn
+	ANDIKAP		AnFANTE
+andikape	AnDIKAPE		AnFAnTE
+	ANDIKAPE	anfanten	AnFAnTEn
+andirans	ANDIRAnS		ANFAnTEn
+	AnDIRAnS		AnFANTEN
+	AnDIRANS		ANFAnTEN
 	ANDIRANS		AnFAnTEN
-andire	ANDIRE		ANFANTEN
-	AnDIRE		AnFANTEN
-andirek	AnDIREK		ANFAnTEN
-	ANDIREK	anfantin	ANFANTIN
-andodomeya	AnDODOMEYA		AnFANTIN
-	ANDODOMEYA		AnFAnTIN
-andokrin	AnDOKRIN		ANFAnTIN
-	ANDOKRIN	anfantiyay	AnFAnTIYAY
-andomi	AnDOMI		ANFAnTIYAY
-	ANDOMI		AnFANTIYAY
-andose	AnDOSE		ANFANTIYAY
-	ANDOSE	anfas	ANFAS
-andoskop	AnDOSKOP		AnFAS
-	ANDOSKOP	anfave	AnFAVE
-andouran	AnDOuRAn		ANFAVE
+andire	AnDIRE		ANFANTEn
+	ANDIRE		AnFANTEn
+andirek	ANDIREK		ANFANTEN
+	AnDIREK	anfantin	AnFAnTIN
+andodomeya	AnDODOMEYA		ANFAnTIN
+	ANDODOMEYA		AnFANTIN
+andokrin	ANDOKRIN		ANFANTIN
+	AnDOKRIN	anfantiyay	AnFAnTIYAY
+andomi	ANDOMI		ANFANTIYAY
+	AnDOMI		ANFAnTIYAY
+andose	AnDOSE		AnFANTIYAY
+	ANDOSE	anfas	AnFAS
+andoskop	ANDOSKOP		ANFAS
+	AnDOSKOP	anfave	AnFAVE
+andouran	ANDOuRAN		ANFAVE
 	AnDOuRAN	anfayit	ANFAYIT
-	ANDOuRAN		AnFAYIT
-	ANDOuRAn	anfe	ANFE
+	ANDOuRAn		AnFAYIT
+	AnDOuRAn	anfe	ANFE
 andui	AnDUi		AnFE
 	ANDUi	anfemay	ANFEMAY
 andwa	ANDWA		AnFEMAY
 	AnDWA	anfeme	ANFEME
-andyable	ANDYABLE		AnFEME
-	AnDYABLE	anfemen	AnFEMEn
-andyoze	AnDYOZE		ANFEMEN
-	ANDYOZE		AnFEMEN
-ane	ANE		ANFEMEn
+andyable	AnDYABLE		AnFEME
+	ANDYABLE	anfemen	AnFEMEN
+andyoze	AnDYOZE		ANFEMEn
+	ANDYOZE		AnFEMEn
+ane	ANE		ANFEMEN
 anemi	ANEMI	anfen	ANFEN
 anemomet	ANEMOMET		AnFEn
+anestezi	ANESTEZI		AnFEN
 anfen - animasyon
 
-	ANFEn	angiz	ANGIZ
-	AnFEN		AnGIZ
-anfibi	AnFIBI	anglad	AnGLAD
-	ANFIBI		ANGLAD
-anfizem	ANFIZEM	angle	ANGLE
-	AnFIZEM		AnGLE
-anflamasyon	ANFLAMASYON	anglez	AnGLEZ
-	AnFLAMASYOn		ANGLEZ
-	ANFLAMASYOn	anglikan	ANGLIKAn
-	AnFLAMASYON		AnGLIKAN
-anfle	AnFLE		ANGLIKAN
-	ANFLE		AnGLIKAn
-anflech	ANFLECh	anglofòn	ANGLOFON
-	AnFLECh		AnGLOFON
+	ANFEn		ANGIZ
+anfibi	ANFIBI	anglad	AnGLAD
+	AnFIBI		ANGLAD
+anfizem	AnFIZEM	angle	AnGLE
+	ANFIZEM		ANGLE
+anflamasyon	AnFLAMASYOn	anglez	ANGLEZ
+	ANFLAMASYOn		AnGLEZ
+	AnFLAMASYON	anglikan	AnGLIKAn
+	ANFLAMASYON		ANGLIKAn
+anfle	AnFLE		AnGLIKAN
+	ANFLE		ANGLIKAN
+anflech	AnFLECh	anglofòn	AnGLOFON
+	ANFLECh		ANGLOFON
 anfom	AnFOM	anglouti	AnGLOuTI
 	ANFOM		ANGLOuTI
-anfondre	AnFOnDRE	angoje	ANGOJE
-	ANFOnDRE		AnGOJE
-	AnFONDRE	angoudi	ANGOuDI
-	ANFONDRE		AnGOuDI
-anfonse	AnFOnSE	angoudisman	ANGOuDISMAN
-	ANFOnSE		AnGOuDISMAN
+anfondre	AnFONDRE	angoje	AnGOJE
+	ANFOnDRE		ANGOJE
+	AnFOnDRE	angoudi	AnGOuDI
+	ANFONDRE		ANGOuDI
+anfonse	ANFONSE	angoudisman	ANGOuDISMAN
+	AnFOnSE		AnGOuDISMAn
 	AnFONSE		ANGOuDISMAn
-	ANFONSE		AnGOuDISMAn
-anfoudwaye	AnFOuDWAYE	angran	AnGRAN
-	ANFOuDWAYE		ANGRAn
-anfounen	AnFOuNEn		AnGRAn
-	ANFOuNEN		ANGRAN
+	ANFOnSE		AnGOuDISMAN
+anfoudwaye	ANFOuDWAYE	angran	AnGRAn
+	AnFOuDWAYE		ANGRAN
+anfounen	ANFOuNEN		ANGRAn
+	AnFOuNEN		AnGRAN
 	ANFOuNEn	angre	ANGRE
-	AnFOuNEN		AnGRE
-anfouraye	ANFOuRAYE	angren	AnGREN
-	AnFOuRAYE		ANGREN
+	AnFOuNEn		AnGRE
+anfouraye	AnFOuRAYE	angren	ANGREN
+	ANFOuRAYE		AnGREN
 ang	AnG		ANGREn
 	ANG		AnGREn
 anga	ANGA	angrenaj	ANGRENAJ
 	AnGA		AnGRENAJ
-angaje	AnGAJE	angrese	AnGRESE
-	ANGAJE		ANGRESE
-angajman	AnGAJMAN	angrev	AnGREV
-	ANGAJMAn		ANGREV
-	ANGAJMAN	angwo	ANGWO
-	AnGAJMAn		AnGWO
-anganman	ANGAnMAN	angwosi	ANGWOSI
-	AnGAnMAN		AnGWOSI
-	AnGAnMAn	angwoup	ANGWOuP
-	ANGAnMAn		AnGWOuP
-	AnGANMAn	anhan	ANHAn
-	ANGANMAn		AnHAN
-	AnGANMAN		AnHAn
-	ANGANMAN		ANHAN
-angi	AnGI	anile	ANILE
-	ANGI	animasyon	ANIMASYOn
-animasyon - anmbege
+angaje	AnGAJE	angrese	ANGRESE
+	ANGAJE		AnGRESE
+angajman	ANGAJMAN	angrev	ANGREV
+	AnGAJMAn		AnGREV
+	ANGAJMAn	angwo	ANGWO
+	AnGAJMAN		AnGWO
+anganman	AnGAnMAN	angwosi	ANGWOSI
+	ANGAnMAN		AnGWOSI
+	AnGANMAN	angwoup	ANGWOuP
+	ANGANMAn		AnGWOuP
+	AnGAnMAn	anhan	ANHAN
+	ANGAnMAn		ANHAn
+	AnGANMAn		AnHAN
+	ANGANMAN		AnHAn
+angi	ANGI	anile	ANILE
+	AnGI	animasyon	ANIMASYON
+angiz	AnGIZ		ANIMASYOn
+animate - anme
 
-	ANIMASYON	ankiloz	ANKILOZ
-animate	ANIMATE		AnKILOZ
-animatez	ANIMATEZ	ankiloze	ANKILOZE
-animatris	ANIMATRIS		AnKILOZE
-anime	ANIME	anklim	ANKLIM
-anivese	ANIVESE		AnKLIM
-anivo	ANIVO	anko	ANKO
-anizet	ANIZET		AnKO
+animate	ANIMATE		ANKILOZ
+animatez	ANIMATEZ	ankiloze	AnKILOZE
+animatris	ANIMATRIS		ANKILOZE
+anime	ANIME	anklim	AnKLIM
+anivese	ANIVESE		ANKLIM
+anivo	ANIVO	anko	AnKO
+anizet	ANIZET		ANKO
 anj	ANJ	ankole	ANKOLE
 	AnJ		AnKOLE
-anjandre	ANJANDRE	ankonbre	ANKONBRE
-	AnJAnDRE		AnKONBRE
-	ANJAnDRE		ANKOnBRE
-	AnJANDRE		AnKOnBRE
+anjandre	ANJAnDRE	ankonbre	ANKONBRE
+	AnJANDRE		AnKONBRE
+	ANJANDRE		ANKOnBRE
+	AnJAnDRE		AnKOnBRE
 anjelik	ANJELIK	ankonbreman	ANKONBREMAN
 	AnJELIK		AnKONBREMAn
-anjelis	AnJELIS		ANKOnBREMAn
-	ANJELIS		AnKOnBREMAn
+anjelis	ANJELIS		ANKOnBREMAn
+	AnJELIS		AnKOnBREMAn
 anjeneral	ANJENERAL		ANKONBREMAn
 	AnJENERAL		AnKONBREMAN
-anjin	AnJIN		ANKOnBREMAN
-	ANJIN		AnKOnBREMAN
-anjwa	ANJWA	ankouraje	AnKOuRAJE
-	AnJWA		ANKOuRAJE
-anjwet	AnJWET	ankourajman	ANKOuRAJMAN
-	ANJWET		AnKOuRAJMAn
-anjyospem	AnJYOSPEM		AnKOuRAJMAN
-	ANJYOSPEM		ANKOuRAJMAn
-anka	ANKA	ankrimozo	ANKRIMOZO
-	AnKA		AnKRIMOZO
-ankachet	AnKAChET	ankriye	AnKRIYE
-	ANKAChET		ANKRIYE
-ankadre	ANKADRE	anks	ANKS
-	AnKADRE		AnKS
-ankadreman	AnKADREMAn	anksyete	AnKSYETE
-	ANKADREMAn		ANKSYETE
-	AnKADREMAN	anle	AnLE
-	ANKADREMAN		ANLE
+anjin	ANJIN		ANKOnBREMAN
+	AnJIN		AnKOnBREMAN
+anjwa	ANJWA	ankouraje	ANKOuRAJE
+	AnJWA		AnKOuRAJE
+anjwet	AnJWET	ankourajman	AnKOuRAJMAn
+	ANJWET		ANKOuRAJMAN
+anjyospem	AnJYOSPEM		ANKOuRAJMAn
+	ANJYOSPEM		AnKOuRAJMAN
+anka	AnKA	ankrimozo	ANKRIMOZO
+	ANKA		AnKRIMOZO
+ankachet	ANKAChET	ankriye	AnKRIYE
+	AnKAChET		ANKRIYE
+ankadre	AnKADRE	anks	AnKS
+	ANKADRE		ANKS
+ankadreman	AnKADREMAN	anksyete	AnKSYETE
+	ANKADREMAN		ANKSYETE
+	AnKADREMAn	anle	ANLE
+	ANKADREMAn		AnLE
 ankake	AnKAKE	anliy	AnLIY
 	ANKAKE		ANLIY
-ankan	AnKAN	anmaldanfan	ANMALDAnFAn
-	ANKAn		ANMALDANFAN
-	AnKAn		AnMALDAnFAn
-	ANKAN		AnMALDANFAn
+ankan	AnKAN	anmaldanfan	AnMALDANFAn
+	AnKAn		ANMALDAnFAn
+	ANKAn		AnMALDAnFAn
+	ANKAN		ANMALDANFAn
 anke	AnKE		AnMALDANFAN
 	ANKE		ANMALDAnFAN
-ankese	AnKESE		AnMALDAnFAN
-	ANKESE		ANMALDANFAn
-anket	AnKET	anmalmakak	ANMALMAKAK
-	ANKET		AnMALMAKAK
+ankese	ANKESE		AnMALDAnFAN
+	AnKESE		ANMALDANFAN
+anket	ANKET	anmalmakak	AnMALMAKAK
+	AnKET		ANMALMAKAK
 ankete	ANKETE	anmbege	AnMBEGE
 	AnKETE		ANMBEGE
+ankiloz	AnKILOZ	anme	AnME
 anme - anpannan
 
-anme	AnME	annatandan	AnNATAnDAN
-	ANME		ANNATAnDAN
-anmedan	AnMEDAn		AnNATANDAN
+	ANME		ANNATANDAn
+anmedan	ANMEDAN		ANNATAnDAn
 	ANMEDAn		AnNATAnDAn
-	AnMEDAN		ANNATAnDAn
-	ANMEDAN		AnNATANDAn
-anmede	ANMEDE		ANNATANDAn
-	AnMEDE		ANNATANDAN
-anmegdan	AnMEGDAn	annavan	AnNAVAn
-	ANMEGDAn		ANNAVAn
-	AnMEGDAN		AnNAVAN
-	ANMEGDAN		ANNAVAN
-anmi	AnMI	annavans	AnNAVAnS
+	AnMEDAn		ANNATANDAN
+	AnMEDAN		AnNATANDAN
+anmede	AnMEDE		AnNATAnDAN
+	ANMEDE		ANNATAnDAN
+anmegdan	AnMEGDAN	annavan	AnNAVAn
+	ANMEGDAN		ANNAVAn
+	AnMEGDAn		AnNAVAN
+	ANMEGDAn		ANNAVAN
+anmi	AnMI	annavans	AnNAVANS
 	ANMI		ANNAVAnS
-anmiyet	ANMIYET		AnNAVANS
-	AnMIYET		ANNAVANS
-anmore	AnMORE	anndan	ANNDAN
-	ANMORE		AnNDAN
+anmiyet	AnMIYET		AnNAVAnS
+	ANMIYET		ANNAVANS
+anmore	AnMORE	anndan	AnNDAN
+	ANMORE		ANNDAN
 anmorez	AnMOREZ		ANNDAn
 	ANMOREZ		AnNDAn
 anmoure	ANMOuRE	annega	AnNEGA
 	AnMOuRE		ANNEGA
-anmourez	ANMOuREZ	annegad	AnNEGAD
-	AnMOuREZ		ANNEGAD
-anmwe	AnMWE	annik	AnNIK
-	ANMWE		ANNIK
-anmwens	ANMWEnS	annile	AnNILE
-	AnMWEnS		ANNILE
-	ANMWENS	annipye	AnNIPYE
-	AnMWENS		ANNIPYE
+anmourez	AnMOuREZ	annegad	AnNEGAD
+	ANMOuREZ		ANNEGAD
+anmwe	AnMWE	annik	ANNIK
+	ANMWE		AnNIK
+anmwens	AnMWEnS	annile	AnNILE
+	AnMWENS		ANNILE
+	ANMWENS	annipye	ANNIPYE
+	ANMWEnS		AnNIPYE
 anmwesekou	AnMWESEKOu	annui	AnNUi
 	ANMWESEKOu		ANNUi
-annafe	ANNAFE	annuiyan	AnNUiYAn
+annafe	ANNAFE	annuiyan	AnNUiYAN
 	AnNAFE		ANNUiYAn
-annanfans	ANNANFAnS		AnNUiYAN
-	AnNANFAnS		ANNUiYAN
-	AnNAnFAnS	anomal	ANOMAL
+annanfans	AnNAnFANS		AnNUiYAn
+	ANNANFAnS		ANNUiYAN
+	AnNANFAnS	anomal	ANOMAL
 	ANNAnFAnS	anonim	ANONIM
-	AnNAnFANS	anons	ANONS
-	ANNANFANS		ANOnS
-	AnNANFANS	anonse	ANOnSE
-	ANNAnFANS		ANONSE
-annantran	AnNANTRAn	anouka	ANOuKA
-	ANNANTRAn	anpan	ANPAn
+	AnNAnFAnS	anons	ANOnS
+	ANNAnFANS		ANONS
+	ANNANFANS	anonse	ANOnSE
+	AnNANFANS		ANONSE
+annantran	ANNANTRAn	anouka	ANOuKA
+	AnNAnTRAN	anpan	AnPAn
+	AnNANTRAn		ANPAn
 	ANNAnTRAn		AnPAN
-	AnNAnTRAn		AnPAn
-	ANNANTRAN		ANPAN
-	AnNANTRAN	anpanna	ANPANNA
-	AnNAnTRAN		AnPANNA
+	AnNAnTRAn		ANPAN
+	ANNANTRAN	anpanna	ANPANNA
+	AnNANTRAN		AnPAnNA
 	ANNAnTRAN		ANPAnNA
-annarye	AnNARYE		AnPAnNA
-	ANNARYE	anpannan	ANPANNAN
+annarye	AnNARYE		AnPANNA
+	ANNARYE	anpannan	AnPAnNAn
+annatandan	AnNATANDAn		ANPANNAN
 anpannan - anprizonnen
 
-	ANPAnNAn		ANPI
-	AnPANNAn	anpil	AnPIL
-	ANPAnNAN		ANPIL
-	AnPANNAN	anpile	ANPILE
-	AnPAnNAn		AnPILE
+	ANPAnNAn	anpil	ANPIL
+	AnPANNAN		AnPIL
+	ANPAnNAN	anpile	ANPILE
+	AnPAnNAN		AnPILE
 	ANPANNAn	anpire	ANPIRE
-	AnPAnNAN		AnPIRE
+	AnPANNAn		AnPIRE
 anpant	ANPANT	anpitasyon	ANPITASYOn
-	ANPAnT		AnPITASYON
-	AnPAnT		AnPITASYOn
-	AnPANT		ANPITASYON
-anpare	ANPARE	anpite	ANPITE
-	AnPARE		AnPITE
-anpasan	ANPASAN	anplak	ANPLAK
+	ANPAnT		AnPITASYOn
+	AnPANT		AnPITASYON
+	AnPAnT		ANPITASYON
+anpare	AnPARE	anpite	ANPITE
+	ANPARE		AnPITE
+anpasan	AnPASAN	anplak	ANPLAK
 	AnPASAn		AnPLAK
 	ANPASAn	anplas	AnPLAS
-	AnPASAN		ANPLAS
-anpatan	AnPATAn	anplasman	AnPLASMAn
-	ANPATAN		ANPLASMAN
-	ANPATAn		AnPLASMAN
-	AnPATAN		ANPLASMAn
-anpaye	AnPAYE	anplat	AnPLAT
-	ANPAYE		ANPLAT
-anpe	AnPE	anplis	ANPLIS
-	ANPE		AnPLIS
+	ANPASAN		ANPLAS
+anpatan	ANPATAN	anplasman	ANPLASMAN
+	AnPATAn		AnPLASMAN
+	ANPATAn		ANPLASMAn
+	AnPATAN		AnPLASMAn
+anpaye	ANPAYE	anplat	ANPLAT
+	AnPAYE		AnPLAT
+anpe	ANPE	anplis	ANPLIS
+	AnPE		AnPLIS
 anpeche	AnPEChE	anplitid	ANPLITID
 	ANPEChE		AnPLITID
-anpechman	ANPEChMAN	anplwaye	ANPLWAYE
-	AnPEChMAn		AnPLWAYE
-	ANPEChMAn	anpotman	ANPOTMAN
-	AnPEChMAN		AnPOTMAn
-anpemanans	ANPEMANANS		ANPOTMAn
-	AnPEMANANS		AnPOTMAN
-anpenitans	AnPENITANS	anpoud	AnPOuD
-	ANPENITANS		ANPOuD
-	ANPENITAnS	anpoul	ANPOuL
-	AnPENITAnS		AnPOuL
-anpenpan	AnPEnPAn	anpre	AnPRE
-	ANPENPAn		ANPRE
-	AnPENPAn	anprent	ANPREnT
-	AnPEnPAN		ANPRENT
-	ANPEnPAN		AnPREnT
-	AnPENPAN		AnPRENT
-	ANPENPAN	anpresman	AnPRESMAn
-	ANPEnPAn		ANPRESMAn
-anpere	AnPERE		AnPRESMAN
-	ANPERE		ANPRESMAN
-anpeste	AnPESTE	anpriz	AnPRIZ
-	ANPESTE		ANPRIZ
-anpetre	AnPETRE	anprizonnen	AnPRIZONNEn
-	ANPETRE		ANPRIZONNEn
-anpi	AnPI		AnPRIZOnNEn
+anpechman	AnPEChMAn	anplwaye	AnPLWAYE
+	ANPEChMAn		ANPLWAYE
+	AnPEChMAN	anpotman	ANPOTMAN
+	ANPEChMAN		AnPOTMAn
+anpemanans	ANPEMANANS		AnPOTMAN
+	AnPEMANANS		ANPOTMAn
+anpenitans	ANPENITAnS	anpoud	ANPOuD
+	AnPENITANS		AnPOuD
+	AnPENITAnS	anpoul	ANPOuL
+	ANPENITANS		AnPOuL
+anpenpan	ANPENPAN	anpre	AnPRE
+	AnPEnPAN		ANPRE
+	AnPENPAN	anprent	AnPRENT
+	ANPEnPAN		ANPREnT
+	ANPENPAn		ANPRENT
+	AnPENPAn		AnPREnT
+	AnPEnPAn	anpresman	AnPRESMAn
+	ANPEnPAn		AnPRESMAN
+anpere	ANPERE		ANPRESMAn
+	AnPERE		ANPRESMAN
+anpeste	ANPESTE	anpriz	AnPRIZ
+	AnPESTE		ANPRIZ
+anpetre	AnPETRE	anprizonnen	ANPRIZONNEn
+	ANPETRE		AnPRIZONNEn
+anpi	ANPI		ANPRIZOnNEn
+	AnPI		AnPRIZOnNEn
 anprizonnen - ansyen
 
-	ANPRIZOnNEn		ANRI
 	AnPRIZOnNEN	anrichi	AnRIChI
 	ANPRIZONNEN		ANRIChI
-	AnPRIZONNEN	anrimen	AnRIMEN
+	AnPRIZONNEN	anrimen	AnRIMEn
 	ANPRIZOnNEN		ANRIMEn
-anprizonnman	ANPRIZOnNMAN		AnRIMEn
+anprizonnman	ANPRIZOnNMAN		AnRIMEN
 	AnPRIZONNMAN		ANRIMEN
 	ANPRIZONNMAN	ansanm	ANSANM
 	AnPRIZOnNMAN		AnSAnM
@@ -769,168 +768,168 @@ anprizonnman	ANPRIZOnNMAN		AnRIMEn
 	ANPRIZOnNMAn		AnSANM
 	AnPRIZONNMAn	ansanse	AnSAnSE
 	ANPRIZONNMAn		ANSAnSE
-anpwazonman	ANPWAZONMAn		AnSANSE
-	AnPWAZOnMAN		ANSANSE
-	ANPWAZOnMAN	ansante	AnSAnTE
-	AnPWAZONMAN		ANSANTE
-	ANPWAZONMAN		ANSAnTE
-	AnPWAZOnMAn		AnSANTE
-	ANPWAZOnMAn	ansasen	AnSASEn
-	AnPWAZONMAn		ANSASEn
-anpwazonnen	AnPWAZONNEn		AnSASEN
-	ANPWAZONNEn		ANSASEN
-	AnPWAZOnNEN	ansasinen	ANSASINEn
-	ANPWAZOnNEN		AnSASINEN
-	AnPWAZONNEN		ANSASINEN
-	ANPWAZONNEN		AnSASINEn
-	AnPWAZOnNEn	ansekirite	ANSEKIRITE
-	ANPWAZOnNEn		AnSEKIRITE
-anraje	ANRAJE	ansekle	AnSEKLE
-	AnRAJE		ANSEKLE
-anranyon	ANRANYOn	ansekre	ANSEKRE
-	AnRANYOn		AnSEKRE
-	AnRANYON	ansent	AnSEnT
-	ANRANYON		AnSENT
-anrasinen	AnRASINEn		ANSEnT
-	AnRASINEN		ANSENT
-	ANRASINEN	anset	AnSET
-	ANRASINEn		ANSET
-anreg	AnREG	anseyman	AnSEYMAn
-	ANREG		ANSEYMAN
+anpwazonman	AnPWAZONMAn		AnSANSE
+	ANPWAZOnMAn		ANSANSE
+	AnPWAZOnMAn	ansante	AnSAnTE
+	ANPWAZONMAN		ANSANTE
+	AnPWAZONMAN		ANSAnTE
+	ANPWAZOnMAN		AnSANTE
+	AnPWAZOnMAN	ansasen	AnSASEn
+	ANPWAZONMAn		ANSASEn
+anpwazonnen	ANPWAZONNEn		AnSASEN
+	AnPWAZOnNEN		ANSASEN
+	ANPWAZOnNEN	ansasinen	ANSASINEn
+	AnPWAZONNEN		AnSASINEn
+	ANPWAZONNEN		AnSASINEN
+	AnPWAZOnNEn		ANSASINEN
+	ANPWAZOnNEn	ansekirite	ANSEKIRITE
+	AnPWAZONNEn		AnSEKIRITE
+anraje	ANRAJE	ansekle	ANSEKLE
+	AnRAJE		AnSEKLE
+anranyon	AnRANYON	ansekre	AnSEKRE
+	ANRANYOn		ANSEKRE
+	AnRANYOn	ansent	ANSENT
+	ANRANYON		ANSEnT
+anrasinen	ANRASINEn		AnSEnT
+	AnRASINEN		AnSENT
+	AnRASINEn	anset	AnSET
+	ANRASINEN		ANSET
+anreg	ANREG	anseyman	AnSEYMAn
+	AnREG		ANSEYMAN
 anrejistre	AnREJISTRE		AnSEYMAN
 	ANREJISTRE		ANSEYMAn
-anrejistreman	ANREJISTREMAN	ansiklopedi	AnSIKLOPEDI
-	AnREJISTREMAn		ANSIKLOPEDI
-	ANREJISTREMAn	ansoudin	ANSOuDIN
-	AnREJISTREMAN		AnSOuDIN
-anreta	AnRETA	ansuit	ANSUiT
-	ANRETA		AnSUiT
-anretou	AnRETOu	ansyen	AnSYEN
+anrejistreman	AnREJISTREMAN	ansiklopedi	ANSIKLOPEDI
+	ANREJISTREMAN		AnSIKLOPEDI
+	AnREJISTREMAn	ansoudin	ANSOuDIN
+	ANREJISTREMAn		AnSOuDIN
+anreta	ANRETA	ansuit	AnSUiT
+	AnRETA		ANSUiT
+anretou	AnRETOu	ansyen	AnSYEn
 	ANRETOu		ANSYEn
-anri	AnRI		AnSYEn
-ansyen - antrenman
+anri	AnRI		ANSYEN
+	ANRI		AnSYEN
+ant - antrenman
 
-	ANSYEN		AnTISEPTIK
-ant	AnT	antitoksin	ANTITOKSIN
-	ANT		AnTITOKSIN
+ant	ANT	antitoksin	ANTITOKSIN
+	AnT		AnTITOKSIN
 antann	ANTANN	antiy	ANTIY
 	AnTAnN		AnTIY
-	ANTAnN	anto	AnTO
-	AnTANN		ANTO
-antant	AnTANT	antoch	ANTOCh
-	ANTANT		AnTOCh
-	AnTAnT	antonen	ANTONEN
-	ANTAnT		ANTONEn
+	AnTANN	anto	ANTO
+	ANTAnN		AnTO
+antant	ANTANT	antoch	ANTOCh
+	AnTANT		AnTOCh
+	ANTAnT	antonen	AnTONEN
+	AnTAnT		ANTONEn
 antatik	ANTATIK		AnTONEn
-	AnTATIK		AnTONEN
-antay	ANTAY	antonim	ANTONIM
-	AnTAY		AnTONIM
+	AnTATIK		ANTONEN
+antay	AnTAY	antonim	AnTONIM
+	ANTAY		ANTONIM
 antdezay	AnTDEZAY	antonwa	AnTONWA
 	ANTDEZAY		ANTONWA
-ante	AnTE	antotiye	ANTOTIYE
-	ANTE		AnTOTIYE
-anteman	AnTEMAn	antotye	AnTOTYE
-	ANTEMAN		ANTOTYE
-	AnTEMAN	antou	AnTOu
-	ANTEMAn		ANTOu
-antèn	AnTEN	antouka	AnTOuKA
-	ANTEN		ANTOuKA
-antere	ANTERE	antouraj	AnTOuRAJ
-	AnTERE		ANTOuRAJ
-antet	AnTET	antouray	ANTOuRAY
-	ANTET		AnTOuRAY
-antete	AnTETE	antoure	AnTOuRE
-	ANTETE		ANTOuRE
-antibyotik	AnTIBYOTIK	antranp	AnTRANP
-	ANTIBYOTIK		ANTRAnP
-antichok	AnTIChOK		AnTRAnP
-	ANTIChOK		ANTRANP
+ante	AnTE	antotiye	AnTOTIYE
+	ANTE		ANTOTIYE
+anteman	AnTEMAN	antotye	AnTOTYE
+	ANTEMAn		ANTOTYE
+	AnTEMAn	antou	AnTOu
+	ANTEMAN		ANTOu
+antèn	AnTEN	antouka	ANTOuKA
+	ANTEN		AnTOuKA
+antere	AnTERE	antouraj	AnTOuRAJ
+	ANTERE		ANTOuRAJ
+antet	ANTET	antouray	ANTOuRAY
+	AnTET		AnTOuRAY
+antete	ANTETE	antoure	ANTOuRE
+	AnTETE		AnTOuRE
+antibyotik	AnTIBYOTIK	antranp	ANTRANP
+	ANTIBYOTIK		AnTRAnP
+antichok	ANTIChOK		ANTRAnP
+	AnTIChOK		AnTRANP
 antidot	AnTIDOT	antrav	AnTRAV
 	ANTIDOT		ANTRAV
 antigòn	ANTIGON	antrave	ANTRAVE
 	AnTIGON		AnTRAVE
-antijel	AnTIJEL	antre	ANTRE
-	ANTIJEL		AnTRE
-antijèn	AnTIJEN	antrede	AnTREDE
-	ANTIJEN		ANTREDE
-antik	ANTIK	antrene	AnTRENE
-	AnTIK		ANTRENE
-antikite	AnTIKITE	antrenman	ANTRENMAN
-	ANTIKITE		AnTRENMAn
-antiko	ANTIKO		ANTREnMAn
-	AnTIKO		AnTREnMAn
-antikolonyalis	ANTIKOLONYALIS		ANTRENMAn
-	AnTIKOLONYALIS		AnTRENMAN
-antiseptik	ANTISEPTIK		ANTREnMAN
-antrenman - apik
+antijel	ANTIJEL	antre	AnTRE
+	AnTIJEL		ANTRE
+antijèn	AnTIJEN	antrede	ANTREDE
+	ANTIJEN		AnTREDE
+antik	AnTIK	antrene	ANTRENE
+	ANTIK		AnTRENE
+antikite	AnTIKITE	antrenman	ANTRENMAn
+	ANTIKITE		AnTREnMAN
+antiko	AnTIKO		ANTREnMAN
+	ANTIKO		AnTRENMAN
+antikolonyalis	ANTIKOLONYALIS		AnTRENMAn
+	AnTIKOLONYALIS		ANTRENMAN
+antiseptik	ANTISEPTIK		AnTREnMAn
+	AnTISEPTIK		ANTREnMAn
+antrenou - apil
 
-	AnTREnMAN		AnVLOP
-antrenou	AnTRENOu	anvog	AnVOG
-	ANTRENOu		ANVOG
-antreprann	AnTREPRANN	anwe	ANWE
-	ANTREPRAnN	anwetan	ANWETAN
-	AnTREPRAnN	anwo	ANWO
-	ANTREPRANN	anwole	ANWOLE
-antreprene	ANTREPRENE	any	AnY
-	AnTREPRENE		ANY
-antrepriz	AnTREPRIZ	anyen	ANYEN
-	ANTREPRIZ		ANYEn
-antretan	AnTRETAN	anzim	ANZIM
-	ANTRETAn		AnZIM
-	AnTRETAn	ap	AP
-	ANTRETAN	apa	APA
+antrenou	ANTRENOu	anvog	ANVOG
+	AnTRENOu		AnVOG
+antreprann	ANTREPRANN	anwe	ANWE
+	AnTREPRAnN	anwetan	ANWETAN
+	ANTREPRAnN	anwo	ANWO
+	AnTREPRANN	anwole	ANWOLE
+antreprene	AnTREPRENE	any	AnY
+	ANTREPRENE		ANY
+antrepriz	ANTREPRIZ	anyen	ANYEN
+	AnTREPRIZ		ANYEn
+antretan	ANTRETAN	anzim	ANZIM
+	AnTRETAn		AnZIM
+	ANTRETAn	ap	AP
+	AnTRETAN	apa	APA
 antwàn	AnTWAN	apantay	APANTAY
 	ANTWAN		APAnTAY
 antyoutyout	AnTYOuTYOuT	apante	APANTE
 	ANTYOuTYOuT		APAnTE
-anvan	AnVAn	aparan	APARAN
-	ANVAn		APARAn
-	AnVAN	aparans	APARANS
-	ANVAN		APARAnS
+anvan	ANVAn	aparan	APARAN
+	AnVAn		APARAn
+	AnVAN	aparans	APARAnS
+	ANVAN		APARANS
 anvayi	AnVAYI	aparey	APAREY
 	ANVAYI	apareye	APAREYE
 anvayisman	ANVAYISMAN	aparisyon	APARISYON
 	AnVAYISMAn		APARISYOn
 	ANVAYISMAn	apated	APATED
 	AnVAYISMAN	apati	APATI
-anve	AnVE	apatman	APATMAN
-	ANVE		APATMAn
-anven	ANVEn	apawo	APAWO
-	AnVEN	apel	APEL
-	AnVEn	apendis	APENDIS
-	ANVEN		APEnDIS
-anverite	ANVERITE	apendisit	APENDISIT
-	AnVERITE		APEnDISIT
-anvi	AnVI	apenn	APEnN
-	ANVI		APENN
-anvige	ANVIGE	apenndisit	APENNDISIT
-	AnVIGE		APEnNDISIT
-anvites	ANVITES	apepre	APEPRE
-	AnVITES	aperitif	APERITIF
-anviwon	ANVIWON	apesi	APESI
+anve	ANVE	apatman	APATMAn
+	AnVE		APATMAN
+anven	AnVEn	apawo	APAWO
+	ANVEN	apel	APEL
+	ANVEn	apendis	APEnDIS
+	AnVEN		APENDIS
+anverite	AnVERITE	apendisit	APEnDISIT
+	ANVERITE		APENDISIT
+anvi	ANVI	apenn	APEnN
+	AnVI		APENN
+anvige	AnVIGE	apenndisit	APENNDISIT
+	ANVIGE		APEnNDISIT
+anvites	AnVITES	apepre	APEPRE
+	ANVITES	aperitif	APERITIF
+anviwon	ANVIWOn	apesi	APESI
 	AnVIWOn	apeti	APETI
-	ANVIWOn	apetisan	APETISAn
-	AnVIWON		APETISAN
-anvlimen	AnVLIMEn	apeze	APEZE
-	ANVLIMEN	apezman	APEZMAN
-	ANVLIMEn		APEZMAn
+	AnVIWON	apetisan	APETISAN
+	ANVIWON		APETISAn
+anvlimen	ANVLIMEN	apeze	APEZE
+	AnVLIMEn	apezman	APEZMAn
+	ANVLIMEn		APEZMAN
 	AnVLIMEN	api	API
 anvlop	ANVLOP	apik	APIK
-apil - asetòn
+	AnVLOP	apil	APIL
+apiye - asetseze
 
-apil	APIL		ARAnJMAN
 apiye	APIYE		ARAnJMAn
 apla	APLA		ARANJMAN
 aplani	APLANI	aransel	ARAnSEL
 aplikab	APLIKAB		ARANSEL
-aplikasyon	APLIKASYON	aranso	ARANSO
-	APLIKASYOn		ARAnSO
+aplikasyon	APLIKASYON	aranso	ARAnSO
+	APLIKASYOn		ARANSO
 aplike	APLIKE	arawak	ARAWAK
 aplim	APLIM	arawout	ARAWOuT
 aplodi	APLODI	arebo	AREBO
-aplodisman	APLODISMAN	arenyen	ARENYEN
-	APLODISMAn	arestasyon	ARESTASYOn
-apo	APO		ARESTASYON
+aplodisman	APLODISMAn	arenyen	ARENYEN
+	APLODISMAN	arestasyon	ARESTASYON
+apo	APO		ARESTASYOn
 apokalips	APOKALIPS	arete	ARETE
 apostola	APOSTOLA	aretkol	ARETKOL
 apostolik	APOSTOLIK	areyol	AREYOL
@@ -949,72 +948,72 @@ apremidi	APREMIDI		ARYEn
 apresa	APRESA	aryenafe	ARYENAFE
 apresiyasyon	APRESIYASYON	aryere	ARYERE
 	APRESIYASYOn	asagwe	ASAGWE
-apresyab	APRESYAB	asan	ASAn
-apresye	APRESYE		ASAN
+apresyab	APRESYAB	asan	ASAN
+apresye	APRESYE		ASAn
 aptitid	APTITID	asanblaj	ASAnBLAJ
 apwentman	APWENTMAN		ASANBLAJ
-	APWEnTMAN	asanble	ASANBLE
-	APWENTMAn		ASAnBLE
-	APWEnTMAn	asanse	ASANSE
+	APWEnTMAn	asanble	ASAnBLE
+	APWEnTMAN		ASANBLE
+	APWENTMAn	asanse	ASANSE
 apwoche	APWOChE		ASAnSE
-apwofondi	APWOFOnDI	asansyon	ASANSYON
-	APWOFONDI		ASANSYOn
+apwofondi	APWOFONDI	asansyon	ASANSYON
+	APWOFOnDI		ASAnSYON
 apwopriye	APWOPRIYE		ASAnSYOn
-apwouve	APWOuVE		ASAnSYON
-apye	APYE	asasen	ASASEn
-arab	ARAB		ASASEN
+apwouve	APWOuVE		ASANSYOn
+apye	APYE	asasen	ASASEN
+arab	ARAB		ASASEn
 arabik	ARABIK	asasinay	ASASINAY
 arada	ARADA	asasine	ASASINE
-aran	ARAn	ase	ASE
-	ARAN	aseksye	ASEKSYE
+aran	ARAN	ase	ASE
+	ARAn	aseksye	ASEKSYE
 aranbarik	ARAnBARIK	aseptab	ASEPTAB
 	ARANBARIK	asepte	ASEPTE
 aranjman	ARANJMAn	asetòn	ASETON
-asetseze - atizanal
+	ARAnJMAN	asetseze	ASETSEZE
+asezon - atizay
 
-asetseze	ASETSEZE	aspirin	ASPIRIN
-asezon	ASEZOn	astwolog	ASTWOLOG
-	ASEZON	astwoloji	ASTWOLOJI
+asezon	ASEZON	astwolog	ASTWOLOG
+	ASEZOn	astwoloji	ASTWOLOJI
 asezonay	ASEZONAY	astwonom	ASTWONOM
-asezonman	ASEZOnMAn	astwonomi	ASTWONOMI
-	ASEZONMAn	astwonot	ASTWONOT
+asezonman	ASEZONMAN	astwonomi	ASTWONOMI
+	ASEZOnMAn	astwonot	ASTWONOT
 	ASEZOnMAN	aswe	ASWE
-	ASEZONMAN	asye	ASYE
-asezonnen	ASEZOnNEN	asyeri	ASYERI
+	ASEZONMAn	asye	ASYE
+asezonnen	ASEZOnNEn	asyeri	ASYERI
 	ASEZONNEn	asyet	ASYET
-	ASEZOnNEn	atab	ATAB
-	ASEZONNEN	atachan	ATAChAN
-asfalt	ASFALT		ATAChAn
+	ASEZOnNEN	atab	ATAB
+	ASEZONNEN	atachan	ATAChAn
+asfalt	ASFALT		ATAChAN
 asfalte	ASFALTE	atache	ATAChE
 asid	ASID	atachman	ATAChMAn
 asidite	ASIDITE		ATAChMAN
 asipoze	ASIPOZE	atak	ATAK
 asirans	ASIRANS	atake	ATAKE
 	ASIRAnS	atansyon	ATANSYOn
-asire	ASIRE		ATAnSYOn
-asistan	ASISTAN		ATAnSYON
-	ASISTAn		ATANSYON
+asire	ASIRE		ATAnSYON
+asistan	ASISTAN		ATANSYON
+	ASISTAn		ATAnSYOn
 asistans	ASISTANS	atanta	ATAnTA
 	ASISTAnS		ATANTA
-asiste	ASISTE	atantif	ATAnTIF
-asiyasyon	ASIYASYON		ATANTIF
-	ASIYASYOn	ataton	ATATON
-asiyen	ASIYEn		ATATOn
-	ASIYEN	ate	ATE
+asiste	ASISTE	atantif	ATANTIF
+asiyasyon	ASIYASYOn		ATAnTIF
+	ASIYASYON	ataton	ATATON
+asiyen	ASIYEN		ATATOn
+	ASIYEn	ate	ATE
 aslen	ASLEN	atelye	ATELYE
 	ASLEn	atemiyo	ATEMIYO
 asmatik	ASMATIK	ateri	ATERI
 aso	ASO	aterisaj	ATERISAJ
-ason	ASON	aterisay	ATERISAY
-	ASOn	ateste	ATESTE
+ason	ASOn	aterisay	ATERISAY
+	ASON	ateste	ATESTE
 asosi	ASOSI	aticho	ATIChO
-asosiyasyon	ASOSIYASYON	atifis	ATIFIS
-	ASOSIYASYOn	atifisyel	ATIFISYEL
+asosiyasyon	ASOSIYASYOn	atifis	ATIFIS
+	ASOSIYASYON	atifisyel	ATIFISYEL
 asosye	ASOSYE	atik	ATIK
-asoti	ASOTI	atiran	ATIRAN
-asoto	ASOTO		ATIRAn
-asoupi	ASOuPI	atirans	ATIRAnS
-asowosi	ASOWOSI		ATIRANS
+asoti	ASOTI	atiran	ATIRAn
+asoto	ASOTO		ATIRAN
+asoupi	ASOuPI	atirans	ATIRANS
+asowosi	ASOWOSI		ATIRAnS
 aspeje	ASPEJE	atire	ATIRE
 aspesyon	ASPESYON	atis	ATIS
 	ASPESYOn	atistik	ATISTIK
@@ -1024,30 +1023,30 @@ aspirasyon	ASPIRASYON	atizan	ATIZAN
 	ASPIRASYOn		ATIZAn
 aspirate	ASPIRATE	atizana	ATIZANA
 aspire	ASPIRE	atizanal	ATIZANAL
-atizay - awesan
+aspirin	ASPIRIN	atizay	ATIZAY
+atlantik - awo
 
-atizay	ATIZAY	avantaj	AVAnTAJ
-atlantik	ATLANTIK		AVANTAJ
+atlantik	ATLANTIK		AVAnTAJ
 	ATLAnTIK	avantaje	AVAnTAJE
 atlas	ATLAS		AVANTAJE
-atlet	ATLET	avanti	AVAnTI
-atmosfe	ATMOSFE		AVANTI
+atlet	ATLET	avanti	AVANTI
+atmosfe	ATMOSFE		AVAnTI
 ato	ATO	avantire	AVANTIRE
 atom	ATOM		AVAnTIRE
-atomik	ATOMIK	avantirye	AVAnTIRYE
-atou	ATOu		AVANTIRYE
+atomik	ATOMIK	avantirye	AVANTIRYE
+atou	ATOu		AVAnTIRYE
 atoufe	ATOuFE	avantye	AVANTYE
 atoufez	ATOuFEZ		AVAnTYE
 atoupri	ATOuPRI	avaris	AVARIS
 atousa	ATOuSA	ave	AVE
 atoutfos	ATOuTFOS	aveg	AVEG
-atraksyon	ATRAKSYOn	aveglan	AVEGLAn
-	ATRAKSYON		AVEGLAN
+atraksyon	ATRAKSYOn	aveglan	AVEGLAN
+	ATRAKSYON		AVEGLAn
 atrap	ATRAP	avegle	AVEGLE
 atrapan	ATRAPAn	avek	AVEK
 	ATRAPAN	avemariya	AVEMARIYA
-atrape	ATRAPE	aven	AVEN
-atrit	ATRIT		AVEn
+atrape	ATRAPE	aven	AVEn
+atrit	ATRIT		AVEN
 atwofye	ATWOFYE	aves	AVES
 atwosite	ATWOSITE	aveti	AVETI
 atyaba	ATYABA	avetisman	AVETISMAN
@@ -1056,8 +1055,8 @@ avadra	AVADRA	avi	AVI
 aval	AVAL	avid	AVID
 avalize	AVALIZE	avidey	AVIDEY
 avalwa	AVALWA	avili	AVILI
-avan	AVAn	avilisan	AVILISAN
-	AVAN		AVILISAn
+avan	AVAN	avilisan	AVILISAN
+	AVAn		AVILISAn
 avanbra	AVAnBRA	avilisman	AVILISMAN
 	AVANBRA		AVILISMAn
 avandenye	AVAnDENYE	aviyasyon	AVIYASYOn
@@ -1068,31 +1067,31 @@ avangou	AVAnGOu	avni	AVNI
 	AVANGOu	avoka	AVOKA
 avanjou	AVAnJOu	avote	AVOTE
 	AVANJOu	avotman	AVOTMAN
-avanpos	AVANPOS		AVOTMAn
-	AVAnPOS	avril	AVRIL
-avans	AVAnS	avwa	AVWA
-	AVANS	avwàn	AVWAN
+avanpos	AVAnPOS		AVOTMAn
+	AVANPOS	avril	AVRIL
+avans	AVANS	avwa	AVWA
+	AVAnS	avwàn	AVWAN
 avanse	AVANSE	avwe	AVWE
 	AVAnSE	avyate	AVYATE
 avansman	AVANSMAN	avyon	AVYOn
-	AVAnSMAN		AVYON
-	AVANSMAn	awesan	AWESAN
-	AVAnSMAn		AWESAn
-awo - baka
+	AVAnSMAn		AVYON
+	AVAnSMAN	awesan	AWESAn
+	AVANSMAn		AWESAN
+avantaj	AVANTAJ	awo	AWO
+awogan - bakala
 
-awo	AWO	aztek	AZTEK
 awogan	AWOGAn	azweyi	AZWEYI
 	AWOGAN	azyatik	AZYATIK
 awogans	AWOGAnS	ba	BA
 	AWOGANS	bab	BAB
 awon	AWOn	babako	BABAKO
-	AWON	babankou	BABAnKOu
-awona	AWONA		BABANKOu
+	AWON	babankou	BABANKOu
+awona	AWONA		BABAnKOu
 awondi	AWONDI	babay	BABAY
 	AWOnDI	babel	BABEL
-awondisman	AWOnDISMAN	babich	BABICh
-	AWOnDISMAn	babin	BABIN
-	AWONDISMAn	babo	BABO
+awondisman	AWONDISMAn	babich	BABICh
+	AWOnDISMAN	babin	BABIN
+	AWOnDISMAn	babo	BABO
 	AWONDISMAN	babote	BABOTE
 awot	AWOT	babotez	BABOTEZ
 awoute	AWOuTE	babouket	BABOuKET
@@ -1108,18 +1107,18 @@ ayabonmbe	AYABOnMBE	badijonnen	BADIJONNEN
 ayayay	AYAYAY		BADIJONNEn
 aye	AYE		BADIJOnNEN
 ayer	AYER	badin	BADIN
-ayeryen	AYERYEN	badinan	BADINAn
-	AYERYEn		BADINAN
+ayeryen	AYERYEn	badinan	BADINAN
+	AYERYEN		BADINAn
 ayewobik	AYEWOBIK	badinen	BADINEN
 ayewopo	AYEWOPO		BADINEn
-ayi	AYI	badnen	BADNEn
-ayibobo	AYIBOBO		BADNEN
+ayi	AYI	badnen	BADNEN
+ayibobo	AYIBOBO		BADNEn
 ayida	AYIDA	badyo	BADYO
 ayik	AYIK	baf	BAF
 ayisyen	AYISYEn	bafle	BAFLE
-	AYISYEN	bafon	BAFON
-ayizan	AYIZAn		BAFOn
-	AYIZAN	bafre	BAFRE
+	AYISYEN	bafon	BAFOn
+ayizan	AYIZAN		BAFON
+	AYIZAn	bafre	BAFRE
 aza	AZA	bafwe	BAFWE
 azade	AZADE	bag	BAG
 azaka	AZAKA	bagare	BAGARE
@@ -1132,94 +1131,94 @@ azobodoy	AZOBODOY	bajou	BAJOu
 azot	AZOT	bajoukase	BAJOuKASE
 azouboutou	AZOuBOuTOu	bak	BAK
 azoumounou	AZOuMOuNOu	baka	BAKA
-bakala - bangala
+aztek	AZTEK	bakala	BAKALA
+bakaloreya - bani
 
-bakala	BAKALA	ban	BAN
 bakaloreya	BAKALOREYA		BAn
 bakanal	BAKANAL	banal	BANAL
 bakara	BAKARA	banana	BANANA
-bakchat	BAKChAT	banben	BAnBEn
-bakilot	BAKILOT		BANBEn
+bakchat	BAKChAT	banben	BAnBEN
+bakilot	BAKILOT		BAnBEn
 bakoko	BAKOKO		BANBEN
-bakonye	BAKONYE		BAnBEN
+bakonye	BAKONYE		BANBEn
 bakonyer	BAKONYER	banbilay	BAnBILAY
 bakoton	BAKOTON		BANBILAY
-	BAKOTOn	banbile	BANBILE
-bakoulou	BAKOuLOu		BAnBILE
+	BAKOTOn	banbile	BAnBILE
+bakoulou	BAKOuLOu		BANBILE
 bakteri	BAKTERI	banbilo	BAnBILO
 bakteryoloji	BAKTERYOLOJI		BANBILO
 bal	BAL	banboch	BAnBOCh
 balade	BALADE		BANBOCh
-balans	BALAnS	banboche	BAnBOChE
-	BALANS		BANBOChE
+balans	BALAnS	banboche	BANBOChE
+	BALANS		BAnBOChE
 balanse	BALAnSE	banbou	BAnBOu
 	BALANSE		BANBOu
 balansin	BALAnSIN	banboula	BANBOuLA
 	BALANSIN		BAnBOuLA
-balanswa	BALANSWA	banda	BAnDA
-	BALAnSWA		BANDA
-bale	BALE	bandaj	BAnDAJ
-balèn	BALEN		BANDAJ
-balenn	BALENN	bande	BAnDE
-	BALEnN		BANDE
-balerina	BALERINA	bandi	BAnDI
-balis	BALIS		BANDI
-balistik	BALISTIK	bandisyon	BAnDISYON
+balanswa	BALANSWA	banda	BANDA
+	BALAnSWA		BAnDA
+bale	BALE	bandaj	BANDAJ
+balèn	BALEN		BAnDAJ
+balenn	BALEnN	bande	BANDE
+	BALENN		BAnDE
+balerina	BALERINA	bandi	BANDI
+balis	BALIS		BAnDI
+balistik	BALISTIK	bandisyon	BAnDISYOn
 balistrad	BALISTRAD		BANDISYOn
-baliz	BALIZ		BAnDISYOn
+baliz	BALIZ		BAnDISYON
 balizay	BALIZAY		BANDISYON
 balize	BALIZE	bandjo	BAnDJO
 balkon	BALKON		BANDJO
 	BALKOn	bando	BANDO
 balo	BALO		BAnDO
-balon	BALON	bandonnen	BANDONNEn
-	BALOn		BANDONNEN
-balonnen	BALONNEn		BAnDOnNEN
-	BALOnNEn		BANDOnNEN
-	BALONNEN		BAnDONNEN
-	BALOnNEN		BAnDOnNEn
-balonnman	BALONNMAn		BANDOnNEn
-	BALOnNMAN		BAnDONNEn
+balon	BALOn	bandonnen	BANDONNEN
+	BALON		BAnDOnNEn
+balonnen	BALOnNEn		BANDOnNEn
+	BALONNEn		BAnDONNEn
+	BALOnNEN		BANDONNEn
+	BALONNEN		BAnDOnNEN
+balonnman	BALONNMAn		BAnDONNEN
+	BALOnNMAN		BANDOnNEN
 	BALONNMAN	bandoulye	BAnDOuLYE
 	BALOnNMAn		BANDOuLYE
-balote	BALOTE	bandwol	BANDWOL
-bamann	BAMAnN		BAnDWOL
-	BAMANN	bangala	BAnGALA
+balote	BALOTE	bandwol	BAnDWOL
+bamann	BAMANN		BANDWOL
+	BAMAnN	bangala	BAnGALA
 bambara	BAMBARA		BANGALA
-bani - bebidol
+ban	BAN	bani	BANI
+banj - bedann
 
-bani	BANI		BATAnKLAN
 banj	BANJ		BATANKLAN
 	BAnJ	batay	BATAY
-bank	BANK	batem	BATEM
-	BAnK	bati	BATI
-bankal	BAnKAL	batiman	BATIMAN
-	BANKAL		BATIMAn
-banket	BANKET	batis	BATIS
-	BAnKET	batisman	BATISMAn
+bank	BAnK	batem	BATEM
+	BANK	bati	BATI
+bankal	BAnKAL	batiman	BATIMAn
+	BANKAL		BATIMAN
+banket	BAnKET	batis	BATIS
+	BANKET	batisman	BATISMAn
 bann	BANN		BATISMAN
 	BAnN	batiste	BATISTE
 bannal	BANNAL	batize	BATIZE
 	BAnNAL	batmannke	BATMAnNKE
-bannann	BANNAnN		BATMANNKE
+bannann	BANNANN		BATMANNKE
 	BAnNAnN	bato	BATO
-	BAnNANN	baton	BATOn
-	BANNANN		BATON
+	BANNAnN	baton	BATOn
+	BAnNANN		BATON
 banye	BANYE	batoto	BATOTO
 banza	BAnZA	batrasyen	BATRASYEN
 	BANZA		BATRASYEn
 banzanman	BANZANMAn	batravil	BATRAVIL
-	BAnZANMAn	batri	BATRI
-	BAnZAnMAn	batwel	BATWEL
+	BAnZAnMAN	batri	BATRI
+	BANZAnMAN	batwel	BATWEL
 	BANZAnMAn	bavant	BAVAnT
-	BAnZANMAN		BAVANT
-	BANZANMAN	bave	BAVE
-	BANZAnMAN	bavet	BAVET
-	BAnZAnMAN	bawo	BAWO
+	BAnZANMAn		BAVANT
+	BAnZAnMAn	bave	BAVE
+	BANZANMAN	bavet	BAVET
+	BAnZANMAN	bawo	BAWO
 bap	BAP	bawok	BAWOK
 barad	BARAD	bawomet	BAWOMET
-baraj	BARAJ	bawon	BAWON
-barak	BARAK		BAWOn
+baraj	BARAJ	bawon	BAWOn
+barak	BARAK		BAWON
 barakouda	BARAKOuDA	bay	BAY
 bare	BARE	bayakou	BAYAKOu
 baret	BARET	bayawonn	BAYAWOnN
@@ -1230,21 +1229,21 @@ bas	BAS	bayonet	BAYONET
 basen	BASEn	baz	BAZ
 	BASEN	baza	BAZA
 basiy	BASIY	baze	BAZE
-basketbol	BASKETBOL	bazen	BAZEN
-baskete	BASKETE		BAZEn
+basketbol	BASKETBOL	bazen	BAZEn
+baskete	BASKETE		BAZEN
 basketez	BASKETEZ	bazil	BAZIL
 baskile	BASKILE	bazilik	BAZILIK
 bat	BAT	bbebidol	BBEBIDOL
 bata	BATA	be	BE
-batan	BATAn	bebe	BEBE
-	BATAN	bebedek	BEBEDEK
+batan	BATAN	bebe	BEBE
+	BATAn	bebedek	BEBEDEK
 batanklan	BATANKLAn	bebel	BEBEL
 	BATAnKLAn	bebidol	BEBIDOL
+	BATAnKLAN	bedann	BEDAnN
 bedann - bidjawonn
 
-bedann	BEDAnN	benwa	BENWA
-	BEDANN	beny	BENY
-bef	BEF		BEnY
+	BEDANN	beny	BEnY
+bef	BEF		BENY
 befchenn	BEFChEnN	benye	BENYE
 	BEFChENN	benyen	BENYEN
 bega	BEGA	benywa	BENYWA
@@ -1258,8 +1257,8 @@ begwe	BEGWE	betay	BETAY
 bej	BEJ	betchay	BETChAY
 bek	BEK	betiz	BETIZ
 bekàn	BEKAN	betize	BETIZE
-bekanbol	BEKAnBOL	beton	BETON
-	BEKANBOL		BETOn
+bekanbol	BEKAnBOL	beton	BETOn
+	BEKANBOL		BETON
 bekasin	BEKASIN	betonay	BETONAY
 beke	BEKE	betonnen	BETONNEN
 bekeke	BEKEKE		BETOnNEn
@@ -1268,95 +1267,96 @@ bekin	BEKIN		BETOnNEN
 bel	BEL	betrav	BETRAV
 belans	BELAnS	betwouj	BETWOuJ
 	BELANS	bewom	BEWOM
-beldenwi	BELDENWI	bewonm	BEWOnM
-bele	BELE		BEWONM
+beldenwi	BELDENWI	bewonm	BEWONM
+bele	BELE		BEWOnM
 belgad	BELGAD	bewot	BEWOT
-belijeran	BELIJERAn	bezbol	BEZBOL
-	BELIJERAN	bezer	BEZER
+belijeran	BELIJERAN	bezbol	BEZBOL
+	BELIJERAn	bezer	BEZER
 belj	BELJ	bezig	BEZIG
 belme	BELME	bezik	BEZIK
-belse	BELSE	bezwen	BEZWEN
-belte	BELTE		BEZWEn
-ben	BEN	bi	BI
-	BEn	bib	BIB
+belse	BELSE	bezwen	BEZWEn
+belte	BELTE		BEZWEN
+ben	BEn	bi	BI
+	BEN	bib	BIB
 bena	BENA	bibi	BIBI
 benbo	BENBO	bibit	BIBIT
 	BEnBO	biblik	BIBLIK
-benediksyon	BENEDIKSYOn	bibliyografi	BIBLIYOGRAFI
-	BENEDIKSYON	bibliyotek	BIBLIYOTEK
+benediksyon	BENEDIKSYON	bibliyografi	BIBLIYOGRAFI
+	BENEDIKSYOn	bibliyotek	BIBLIYOTEK
 benefis	BENEFIS	bibliyoteke	BIBLIYOTEKE
 benefisye	BENEFISYE	biblo	BIBLO
-benet	BENET	bibwon	BIBWOn
-benezwel	BENEZWEL		BIBWON
+benet	BENET	bibwon	BIBWON
+benezwel	BENEZWEL		BIBWOn
 beni	BENI	bicha	BIChA
 benitye	BENITYE	bichet	BIChET
 benmbo	BENMBO	bichi	BIChI
 	BEnMBO	bid	BID
-benn	BENN	bidet	BIDET
-	BEnN	bidjawonn	BIDJAWONN
-bidjawonn - blanch
+benn	BEnN	bidet	BIDET
+	BENN	bidjawonn	BIDJAWONN
+benwa	BENWA		BIDJAWOnN
+bidje - blanch
 
-	BIDJAWOnN	biskankwen	BISKANKWEN
-bidje	BIDJE		BISKAnKWEN
+bidje	BIDJE	biskankwen	BISKAnKWEN
 bidjonel	BIDJONEL		BISKANKWEn
 bidjonnel	BIDJONNEL		BISKAnKWEn
-	BIDJOnNEL	biske	BISKE
-bidol	BIDOL	bisket	BISKET
-bidon	BIDOn	biskuit	BISKUiT
-	BIDON	bistouri	BISTOuRI
-bidonvil	BIDONVIL	bisuit	BISUiT
-	BIDOnVIL	biswit	BISWIT
-bife	BIFE	bit	BIT
-bifet	BIFET	bitàn	BITAN
-biftek	BIFTEK	bitasyon	BITASYOn
-bigay	BIGAY		BITASYON
-bigo	BIGO	bite	BITE
-bigot	BIGOT	biten	BITEn
-bigote	BIGOTE		BITEN
-bigoudi	BIGOuDI	biva	BIVA
-bije	BIJE	bivalv	BIVALV
-bijou	BIJOu	bivet	BIVET
-bijoutri	BIJOuTRI	biwo	BIWO
-bijoutye	BIJOuTYE	biwokrasi	BIWOKRASI
-bik	BIK	biwokrat	BIWOKRAT
-bika	BIKA	biya	BIYA
-bikabonat	BIKABONAT	biye	BIYE
-bikini	BIKINI	biyochimi	BIYOChIMI
-bikoul	BIKOuL	biyodegradab	BIYODEGRADAB
-bil	BIL	biyografi	BIYOGRAFI
-bilan	BILAn	biyoloji	BIYOLOJI
-	BILAN	biyolojis	BIYOLOJIS
-bilding	BILDING	biyom	BIYOM
-	BILDINg	biyomas	BIYOMAS
-bileng	BILEnG	biyosfe	BIYOSFE
-	BILENG	biyotik	BIYOTIK
-bilten	BILTEN	biza	BIZA
-	BILTEn	bizango	BIZANGO
-bim	BIM		BIZAnGO
-bimen	BIMEN	bizawel	BIZAWEL
-	BIMEn	biznaw	BIZNAW
+	BIDJOnNEL		BISKANKWEN
+bidol	BIDOL	biske	BISKE
+bidon	BIDON	bisket	BISKET
+	BIDOn	biskuit	BISKUiT
+bidonvil	BIDOnVIL	bistouri	BISTOuRI
+	BIDONVIL	bisuit	BISUiT
+bife	BIFE	biswit	BISWIT
+bifet	BIFET	bit	BIT
+biftek	BIFTEK	bitàn	BITAN
+bigay	BIGAY	bitasyon	BITASYOn
+bigo	BIGO		BITASYON
+bigot	BIGOT	bite	BITE
+bigote	BIGOTE	biten	BITEn
+bigoudi	BIGOuDI		BITEN
+bije	BIJE	biva	BIVA
+bijou	BIJOu	bivalv	BIVALV
+bijoutri	BIJOuTRI	bivet	BIVET
+bijoutye	BIJOuTYE	biwo	BIWO
+bik	BIK	biwokrasi	BIWOKRASI
+bika	BIKA	biwokrat	BIWOKRAT
+bikabonat	BIKABONAT	biya	BIYA
+bikini	BIKINI	biye	BIYE
+bikoul	BIKOuL	biyochimi	BIYOChIMI
+bil	BIL	biyodegradab	BIYODEGRADAB
+bilan	BILAN	biyografi	BIYOGRAFI
+	BILAn	biyoloji	BIYOLOJI
+bilding	BILDINg	biyolojis	BIYOLOJIS
+	BILDING	biyom	BIYOM
+bileng	BILENG	biyomas	BIYOMAS
+	BILEnG	biyosfe	BIYOSFE
+bilten	BILTEN	biyotik	BIYOTIK
+	BILTEn	biza	BIZA
+bim	BIM	bizango	BIZAnGO
+bimen	BIMEn		BIZANGO
+	BIMEN	bizawel	BIZAWEL
+bip	BIP	biznaw	BIZNAW
 bipe	BIPE	biznis	BIZNIS
-biren	BIREN	biznisman	BIZNISMAn
-	BIREn		BIZNISMAN
+biren	BIREN	biznisman	BIZNISMAN
+	BIREn		BIZNISMAn
 biret	BIRET	blad	BLAD
 bis	BIS	blag	BLAG
-bisantne	BISANTNE	blage	BLAGE
-	BISAnTNE	blakawout	BLAKAWOuT
+bisantne	BISAnTNE	blage	BLAGE
+	BISANTNE	blakawout	BLAKAWOuT
 bise	BISE	blakin	BLAKIN
 bisektil	BISEKTIL	blame	BLAME
-bisent	BISEnT	blan	BLAN
-	BISENT		BLAn
+bisent	BISEnT	blan	BLAn
+	BISENT		BLAN
 bisep	BISEP	blanch	BLANCh
 bisiklet	BISIKLET		BLAnCh
 blancha - boloze
 
 blancha	BLANChA		BLOn
-	BLAnChA	blonn	BLONN
-blanche	BLANChE		BLOnN
+	BLAnChA	blonn	BLOnN
+blanche	BLANChE		BLONN
 	BLAnChE	bloukotoum	BLOuKOTOuM
 blanchi	BLANChI	blouz	BLOuZ
-	BLAnChI	blouzon	BLOuZOn
-blanchisay	BLAnChISAY		BLOuZON
+	BLAnChI	blouzon	BLOuZON
+blanchisay	BLAnChISAY		BLOuZOn
 	BLANChISAY	bo	BO
 blanchisri	BLANChISRI	bobadiya	BOBADIYA
 	BLAnChISRI	bobech	BOBECh
@@ -1383,8 +1383,8 @@ blenblen	BLENBLEN	bofis	BOFIS
 	BLEnBLEN	bojla	BOJLA
 blende	BLENDE	bok	BOK
 	BLEnDE	bokal	BOKAL
-blenmen	BLEnMEn	bokansi	BOKANSI
-	BLENMEn		BOKAnSI
+blenmen	BLEnMEn	bokansi	BOKAnSI
+	BLENMEn		BOKANSI
 	BLEnMEN	boke	BOKE
 	BLENMEN	bokit	BOKIT
 blenoraji	BLENORAJI	boko	BOKO
@@ -1399,8 +1399,8 @@ blodez	BLODEZ	bolewo	BOLEWO
 blof	BLOF	bolin	BOLIN
 blofe	BLOFE	bolit	BOLIT
 blok	BLOK	boliva	BOLIVA
-bloke	BLOKE	bolivyen	BOLIVYEn
-blokis	BLOKIS		BOLIVYEN
+bloke	BLOKE	bolivyen	BOLIVYEN
+blokis	BLOKIS		BOLIVYEn
 blon	BLON	boloze	BOLOZE
 bon - botanik
 
@@ -1411,38 +1411,38 @@ bonanj	BONAnJ		BOnJAn
 bonapat	BONAPAT		BOnJOu
 bonbade	BONBADE	bonke	BOnKE
 	BOnBADE		BONKE
-bonbadman	BOnBADMAN	bonkou	BONKOu
-	BONBADMAn		BOnKOu
-	BOnBADMAn	bonm	BONM
-	BONBADMAN		BOnM
-bonbadye	BOnBADYE	bonmache	BONMAChE
-	BONBADYE		BOnMAChE
+bonbadman	BONBADMAN	bonkou	BONKOu
+	BOnBADMAn		BOnKOu
+	BOnBADMAN	bonm	BONM
+	BONBADMAn		BOnM
+bonbadye	BONBADYE	bonmache	BONMAChE
+	BOnBADYE		BOnMAChE
 bonbans	BONBAnS	bonnanj	BONNANJ
-	BOnBAnS		BOnNANJ
-	BOnBANS		BONNAnJ
+	BOnBANS		BOnNANJ
+	BOnBAnS		BONNAnJ
 	BONBANS		BOnNAnJ
-bonbe	BONBE	bonne	BOnNE
-	BOnBE		BONNE
+bonbe	BOnBE	bonne	BOnNE
+	BONBE		BONNE
 bonbon	BONBON	bonnet	BONNET
 	BOnBOn		BOnNET
 	BONBOn	bonnonm	BONNOnM
 	BOnBON		BONNONM
-bonbonfle	BONBONFLE		BOnNOnM
-	BOnBONFLE		BOnNONM
-	BONBOnFLE	bono	BONO
-	BOnBOnFLE	bonocho	BONOChO
+bonbonfle	BOnBOnFLE		BOnNOnM
+	BONBONFLE		BOnNONM
+	BOnBONFLE	bono	BONO
+	BONBOnFLE	bonocho	BONOChO
 bonbonyen	BONBONYEN	bonom	BONOM
 	BOnBONYEn	bonsans	BOnSANS
 	BONBONYEn		BONSANS
 	BOnBONYEN		BONSAnS
-bonbouch	BOnBOuCh		BOnSAnS
-	BONBOuCh	bonswa	BONSWA
+bonbouch	BONBOuCh		BOnSAnS
+	BOnBOuCh	bonswa	BONSWA
 bonda	BOnDA		BOnSWA
 	BONDA	bonte	BONTE
 bondans	BONDANS		BOnTE
-	BOnDAnS	bonten	BOnTEn
+	BOnDANS	bonten	BOnTEn
 	BONDAnS		BOnTEN
-	BOnDANS		BONTEn
+	BOnDAnS		BONTEn
 bonde	BONDE		BONTEN
 	BOnDE	bope	BOPE
 bondi	BONDI	boreyal	BOREYAL
@@ -3832,7 +3832,7 @@ grennponmennen	GREnNPOnMEnNEN	grimel	GRIMEL
 	GRENNPONMEnNEN	griyay	GRIYAY
 	GRENNPOnMENNEn	griye	GRIYE
 	GRENNPOnMEnNEn	griyen	GRIYEn
-griyen - idrat
+griyen - idravyon
 
 	GRIYEN	gyonnen	GYONNEN
 griyo	GRIYO		GYOnNEn
@@ -3849,47 +3849,45 @@ gwadloupeyen	GWADLOuPEYEn	hanm	HAnM
 gwakanagarik	GWAKANAGARIK	haoussa	HAOuSSA
 gwàn	GWAN	hap	HAP
 gwano	GWANO	hele	HELE
-gwaryoneks	GWARYONEKS	hen	HEN
-gwat	GWAT		HEn
+gwaryoneks	GWARYONEKS	hen	HEn
+gwat	GWAT		HEN
 gwatemaltek	GWATEMALTEK	hey	HEY
 gwayabel	GWAYABEL	hoket	HOKET
 gwayav	GWAYAV	houmfo	HOuMFO
-gwayil	GWAYIL	houn	HOun
-gwevo	GWEVO		HOuN
-gwo	GWO	houngan	HOuNGAN
-gwoble	GWOBLE		HOunGAN
-gwobrenn	GWOBREnN		HOunGAn
-	GWOBRENN		HOuNGAn
-gwodiko	GWODIKO	hounsi	HOuNSI
-gwog	GWOG		HOunSI
-gwogmann	GWOGMAnN	houy	HOuY
-	GWOGMANN	ibe	IBE
-gwojan	GWOJAN	ibenasyon	IBENASYON
-	GWOJAn		IBENASYOn
-gwoje	GWOJE	ibiskis	IBISKIS
-gwonde	GWOnDE	ibo	IBO
-	GWONDE	ibobich	IBOBICh
-gwopopo	GWOPOPO	ibolele	IBOLELE
-gwos	GWOS	ibrid	IBRID
-gwose	GWOSE	idantifikasyon	IDANTIFIKASYON
-gwoses	GWOSES		IDAnTIFIKASYON
-gwosis	GWOSIS		IDANTIFIKASYOn
-gwosomodo	GWOSOMODO		IDAnTIFIKASYOn
-gwosye	GWOSYE	idantifye	IDAnTIFYE
-gwosyete	GWOSYETE		IDANTIFYE
-gwot	GWOT	idantik	IDAnTIK
-gwoup	GWOuP		IDANTIK
-gwoupe	GWOuPE	idantite	IDANTITE
-gwoupman	GWOuPMAN		IDAnTITE
-	GWOuPMAn	ide	IDE
-gwouyad	GWOuYAD	ideyal	IDEYAL
-gwouye	GWOuYE	idol	IDOL
-gwovant	GWOVANT	idolatri	IDOLATRI
-	GWOVAnT	idrat	IDRAT
-idravyon - inosant
+gwayil	GWAYIL	houngan	HOunGAN
+gwevo	GWEVO		HOuNGAN
+gwo	GWO		HOunGAn
+gwoble	GWOBLE		HOuNGAn
+gwobrenn	GWOBREnN	hounsi	HOuNSI
+	GWOBRENN		HOunSI
+gwodiko	GWODIKO	houy	HOuY
+gwog	GWOG	ibe	IBE
+gwogmann	GWOGMAnN	ibenasyon	IBENASYON
+	GWOGMANN		IBENASYOn
+gwojan	GWOJAN	ibiskis	IBISKIS
+	GWOJAn	ibo	IBO
+gwoje	GWOJE	ibobich	IBOBICh
+gwonde	GWOnDE	ibolele	IBOLELE
+	GWONDE	ibrid	IBRID
+gwopopo	GWOPOPO	idantifikasyon	IDANTIFIKASYON
+gwos	GWOS		IDAnTIFIKASYON
+gwose	GWOSE		IDANTIFIKASYOn
+gwoses	GWOSES		IDAnTIFIKASYOn
+gwosis	GWOSIS	idantifye	IDAnTIFYE
+gwosomodo	GWOSOMODO		IDANTIFYE
+gwosye	GWOSYE	idantik	IDAnTIK
+gwosyete	GWOSYETE		IDANTIK
+gwot	GWOT	idantite	IDANTITE
+gwoup	GWOuP		IDAnTITE
+gwoupe	GWOuPE	ide	IDE
+gwoupman	GWOuPMAN	ideyal	IDEYAL
+	GWOuPMAn	idol	IDOL
+gwouyad	GWOuYAD	idolatri	IDOLATRI
+gwouye	GWOuYE	idrat	IDRAT
+gwovant	GWOVANT	idravyon	IDRAVYOn
+	GWOVAnT		IDRAVYON
+idwoelektrik - inyon
 
-idravyon	IDRAVYON	imigran	IMIGRAN
-	IDRAVYOn		IMIGRAn
 idwoelektrik	IDWOELEKTRIK	imigrasyon	IMIGRASYON
 idwojèn	IDWOJEN		IMIGRASYOn
 idwolik	IDWOLIK	imilite	IMILITE
@@ -3924,8 +3922,8 @@ ilistrasyon	ILISTRASYOn	inivesel	INIVESEL
 	ILISTRASYON	inivesite	INIVESITE
 ilistre	ILISTRE	inivive	INIVIVE
 ilizyon	ILIZYOn	inoganik	INOGANIK
-	ILIZYON	inogirasyon	INOGIRASYON
-ilse	ILSE		INOGIRASYOn
+	ILIZYON	inogirasyon	INOGIRASYOn
+ilse	ILSE		INOGIRASYON
 iltimatom	ILTIMATOM	inogire	INOGIRE
 iltra	ILTRA	inòn	INON
 im	IM	inondasyon	INONDASYON
@@ -3940,20 +3938,20 @@ imen	IMEN		INOSAN
 	IMEn	inosans	INOSAnS
 imid	IMID		INOSANS
 imidite	IMIDITE	inosant	INOSANT
-inosant - jakorepet
+imigran	IMIGRAN		INOSAnT
+	IMIGRAn	inyon	INYON
+inyon - jalou
 
-	INOSAnT	isye	ISYE
-inyon	INYON	italik	ITALIK
-	INYOn	italyen	ITALYEN
-inyoran	INYORAn		ITALYEn
+	INYOn	italyen	ITALYEn
+inyoran	INYORAn		ITALYEN
 	INYORAN	iteris	ITERIS
 inyorans	INYORAnS	itil	ITIL
 	INYORANS	itilite	ITILITE
 ipe	IPE	itilizasyon	ITILIZASYON
-ipetansyon	IPETANSYON		ITILIZASYOn
+ipetansyon	IPETAnSYON		ITILIZASYOn
 	IPETANSYOn	itilize	ITILIZE
 	IPETAnSYOn	itle	ITLE
-	IPETAnSYON	itopik	ITOPIK
+	IPETANSYON	itopik	ITOPIK
 ipnotize	IPNOTIZE	ive	IVE
 ipnoz	IPNOZ	ivwa	IVWA
 ipokrit	IPOKRIT	ivwaryen	IVWARYEN
@@ -3964,61 +3962,61 @@ ipotek	IPOTEK	iwonikman	IWONIKMAN
 ipoteke	IPOTEKE		IWONIKMAn
 ipotemi	IPOTEMI	iwonize	IWONIZE
 ipoteniz	IPOTENIZ	iyod	IYOD
-ipotez	IPOTEZ	iyoran	IYORAN
-iregilarite	IREGILARITE		IYORAn
-iregilye	IREGILYE	iyorans	IYORAnS
-iresponsab	IRESPOnSAB		IYORANS
+ipotez	IPOTEZ	iyoran	IYORAn
+iregilarite	IREGILARITE		IYORAN
+iregilye	IREGILYE	iyorans	IYORANS
+iresponsab	IRESPOnSAB		IYORAnS
 	IRESPONSAB	ize	IZE
 iret	IRET	izin	IZIN
-irigasyon	IRIGASYOn	izirye	IZIRYE
-	IRIGASYON	izolan	IZOLAN
+irigasyon	IRIGASYON	izirye	IZIRYE
+	IRIGASYOn	izolan	IZOLAN
 irige	IRIGE		IZOLAn
 irin	IRIN	izolasyon	IZOLASYOn
 irine	IRINE		IZOLASYON
 irinwa	IRINWA	izole	IZOLE
-iris	IRIS	izolman	IZOLMAN
-iritan	IRITAn		IZOLMAn
+iris	IRIS	izolman	IZOLMAn
+iritan	IRITAn		IZOLMAN
 	IRITAN	izolwa	IZOLWA
-iritasyon	IRITASYOn	izosel	IZOSEL
-	IRITASYON	ja	JA
+iritasyon	IRITASYON	izosel	IZOSEL
+	IRITASYOn	ja	JA
 irite	IRITE	jache	JAChE
 isi	ISI	jaden	JADEN
 isiba	ISIBA		JADEn
-isiprezan	ISIPREZAn	jadinay	JADINAY
-	ISIPREZAN	jadinye	JADINYE
+isiprezan	ISIPREZAN	jadinay	JADINAY
+	ISIPREZAn	jadinye	JADINYE
 isit	ISIT	jagon	JAGOn
 islam	ISLAM		JAGON
 ispanik	ISPANIK	jak	JAK
-ispayola	ISPAYOLA	jakmelyen	JAKMELYEn
-istorik	ISTORIK		JAKMELYEN
-istoryen	ISTORYEN	jako	JAKO
-	ISTORYEn	jakopyevet	JAKOPYEVET
+ispayola	ISPAYOLA	jakmelyen	JAKMELYEN
+istorik	ISTORIK		JAKMELYEn
+istoryen	ISTORYEn	jako	JAKO
+	ISTORYEN	jakopyevet	JAKOPYEVET
 istwa	ISTWA	jakorepet	JAKOREPET
-jal - jenere
+isye	ISYE	jal	JAL
+italik	ITALIK	jalou	JALOu
+jalouzi - jenetik
 
-jal	JAL		JAnTIMAn
-jalou	JALOu	jantiyes	JANTIYES
 jalouzi	JALOuZI		JAnTIYES
 jamayiken	JAMAYIKEn	janvye	JAnVYE
 	JAMAYIKEN		JANVYE
-jame	JAME	jany	JAnY
-jamedodo	JAMEDODO		JANY
+jame	JAME	jany	JANY
+jamedodo	JAMEDODO		JAnY
 jan	JAN	jape	JAPE
 	JAn	japone	JAPONE
 janbatis	JANBATIS	japonez	JAPONEZ
 	JAnBATIS	japwouv	JAPWOuV
-janbe	JANBE	jare	JARE
-	JAnBE	jaret	JARET
-janblan	JAnBLAn	jasmen	JASMEn
-	JANBLAN		JASMEN
-	JANBLAn	jasmendenwi	JASMENDENWI
-	JAnBLAN		JASMEnDENWI
+janbe	JAnBE	jare	JARE
+	JANBE	jaret	JARET
+janblan	JANBLAN	jasmen	JASMEn
+	JAnBLAn		JASMEN
+	JAnBLAN	jasmendenwi	JASMENDENWI
+	JANBLAn		JASMEnDENWI
 janbon	JANBOn	java	JAVA
 	JANBON	javlo	JAVLO
-	JAnBON	jayi	JAYI
-	JAnBOn	jaze	JAZE
-janbye	JAnBYE	je	JE
-	JANBYE	jebede	JEBEDE
+	JAnBOn	jayi	JAYI
+	JAnBON	jaze	JAZE
+janbye	JANBYE	je	JE
+	JAnBYE	jebede	JEBEDE
 jandam	JANDAM	jechalot	JEChALOT
 	JAnDAM	jedaza	JEDAZA
 jandamri	JAnDAMRI	jedi	JEDI
@@ -4032,26 +4030,26 @@ janjol	JANJOL	jem	JEM
 jankaka	JAnKAKA	jemen	JEMEN
 	JANKAKA		JEMEn
 janklod	JANKLOD	jemi	JEMI
-	JAnKLOD	jeminasyon	JEMINASYOn
-janm	JANM		JEMINASYON
+	JAnKLOD	jeminasyon	JEMINASYON
+janm	JANM		JEMINASYOn
 	JAnM	jen	JEN
-janpye	JANPYE		JEn
-	JAnPYE	jenan	JENAn
-jansiv	JANSIV		JENAN
-	JAnSIV	jene	JENE
-jant	JAnT	jeneral	JENERAL
-	JANT	jeneralize	JENERALIZE
-jante	JAnTE	jeneralman	JENERALMAn
-	JANTE		JENERALMAN
+janpye	JAnPYE		JEn
+	JANPYE	jenan	JENAn
+jansiv	JAnSIV		JENAN
+	JANSIV	jene	JENE
+jant	JANT	jeneral	JENERAL
+	JAnT	jeneralize	JENERALIZE
+jante	JANTE	jeneralman	JENERALMAn
+	JAnTE		JENERALMAN
 janti	JAnTI	jenerasyon	JENERASYOn
 	JANTI		JENERASYON
 jantiman	JANTIMAN	jenerate	JENERATE
-	JAnTIMAN	jeneratris	JENERATRIS
-	JANTIMAn	jenere	JENERE
-jenes - jimnastik
+	JAnTIMAn	jeneratris	JENERATRIS
+	JAnTIMAN	jenere	JENERE
+	JANTIMAn	jenes	JENES
+jantiyes	JANTIYES	jenetik	JENETIK
+jenetisyen - jimo
 
-jenes	JENES	jerenons	JERENOnS
-jenetik	JENETIK		JERENONS
 jenetisyen	JENETISYEN	jerenos	JERENOS
 jenewozite	JENEWOZITE	jeretyen	JERETYEN
 jeneyaloji	JENEYALOJI		JERETYEn
@@ -4066,35 +4064,35 @@ jènjan	JENJAn		JESYOn
 	JENJAN	jesyone	JESYONE
 jenjanbret	JENJAnBRET	jete	JETE
 	JEnJAnBRET	jewomet	JEWOMET
-	JENJANBRET	jewometri	JEWOMETRI
-	JEnJANBRET	jewometrik	JEWOMETRIK
+	JEnJANBRET	jewometri	JEWOMETRI
+	JENJANBRET	jewometrik	JEWOMETRIK
 jenjanm	JEnJAnM	jewova	JEWOVA
 	JENJAnM	jeyan	JEYAn
-	JEnJANM		JEYAN
-	JENJANM	jeyograf	JEYOGRAF
+	JENJANM		JEYAN
+	JEnJANM	jeyograf	JEYOGRAF
 jenjol	JEnJOL	jeyografi	JEYOGRAFI
 	JENJOL	jeyolog	JEYOLOG
-jenn	JENN	jeyoloji	JEYOLOJI
-	JEnN	jeyomet	JEYOMET
-jennen	JEnNEn	jeyometri	JEYOMETRI
-	JENNEn	jeyometrik	JEYOMETRIK
-	JEnNEN	jeyotemal	JEYOTEMAL
-	JENNEN	jeze	JEZE
+jenn	JEnN	jeyoloji	JEYOLOJI
+	JENN	jeyomet	JEYOMET
+jennen	JEnNEN	jeyometri	JEYOMETRI
+	JEnNEn	jeyometrik	JEYOMETRIK
+	JENNEN	jeyotemal	JEYOTEMAL
+	JENNEn	jeze	JEZE
 jennes	JEnNES	jezi	JEZI
 	JENNES	jezikri	JEZIKRI
-jenni	JENNI	jezuit	JEZUiT
-	JEnNI	ji	JI
-jennjan	JEnNJAn	jibile	JIBILE
+jenni	JEnNI	jezuit	JEZUiT
+	JENNI	ji	JI
+jennjan	JENNJAN	jibile	JIBILE
 	JEnNJAN	jibis	JIBIS
-	JENNJAn	jibye	JIBYE
-	JENNJAN	jida	JIDA
+	JEnNJAn	jibye	JIBYE
+	JENNJAn	jida	JIDA
 jennom	JENNOM	jido	JIDO
 	JEnNOM	jidoka	JIDOKA
 jennvyev	JENNVYEV	jigo	JIGO
 	JEnNVYEV	jigote	JIGOTE
 jenou	JENOu	jij	JIJ
-jent	JENT	jije	JIJE
-	JEnT	jijiri	JIJIRI
+jent	JEnT	jije	JIJE
+	JENT	jijiri	JIJIRI
 jepye	JEPYE	jijman	JIJMAN
 jeran	JERAn		JIJMAn
 	JERAN	jilet	JILET
@@ -4102,22 +4100,22 @@ jeranyom	JERANYOM	jiman	JIMAN
 jere	JERE		JIMAn
 jeremyen	JEREMYEn	jimel	JIMEL
 	JEREMYEN	jimnastik	JIMNASTIK
-jimnospem - ka
+jerenons	JERENOnS	jimnospem	JIMNOSPEM
+	JERENONS	jimo	JIMO
+jinekolog - kaba
 
-jimnospem	JIMNOSPEM		JONJOL
-jimo	JIMO	jonn	JOnN
 jinekolog	JINEKOLOG		JONN
 jinekoloji	JINEKOLOJI	jònze	JONZE
 jinyo	JINYO	jou	JOu
 jip	JIP	joubabye	JOuBABYE
 jipite	JIPITE	jouda	JOuDA
-jipon	JIPON	joudlan	JOuDLAn
-	JIPOn		JOuDLAN
+jipon	JIPON	joudlan	JOuDLAN
+	JIPOn		JOuDLAn
 jiraf	JIRAF	joujou	JOuJOu
 jire	JIRE	jouk	JOuK
 jiri	JIRI	jouke	JOuKE
-jiridiksyon	JIRIDIKSYOn	jouktan	JOuKTAN
-	JIRIDIKSYON		JOuKTAn
+jiridiksyon	JIRIDIKSYOn	jouktan	JOuKTAn
+	JIRIDIKSYON		JOuKTAN
 jiris	JIRIS	joul	JOuL
 jis	JIS	jouman	JOuMAn
 jiska	JISKA		JOuMAN
@@ -4133,14 +4131,14 @@ jistis	JISTIS	joupa	JOuPA
 jitim	JITIM	joure	JOuRE
 jiwet	JIWET	jous	JOuS
 jiwof	JIWOF	jouskaske	JOuSKASKE
-jiwondel	JIWONDEL	joustan	JOuSTAn
-	JIWOnDEL		JOuSTAN
+jiwondel	JIWONDEL	joustan	JOuSTAN
+	JIWOnDEL		JOuSTAn
 jiye	JIYE	jozef	JOZEF
 jizye	JIZYE	jwa	JWA
 job	JOB	jwaye	JWAYE
 jodi	JODI	jwe	JWE
-jof	JOF	jwen	JWEn
-jofi	JOFI		JWEN
+jof	JOF	jwen	JWEN
+jofi	JOFI		JWEn
 jofre	JOFRE	jwenn	JWEnN
 joj	JOJ		JWENN
 jokma	JOKMA	jwenti	JWEnTI
@@ -4156,12 +4154,12 @@ jongle	JONGLE	jwisans	JWISANS
 joni	JONI	jwise	JWISE
 jonis	JONIS	jwisez	JWISEZ
 jonjol	JOnJOL	ka	KA
-kab - kalen
+	JONJOL	kab	KAB
+jonn	JOnN	kaba	KABA
+kabann - kalfou
 
-kab	KAB	kadyograf	KADYOGRAF
-kaba	KABA	kadyogram	KADYOGRAM
-kabann	KABANN	kafe	KAFE
-	KABAnN	kafenol	KAFENOL
+kabann	KABAnN	kafe	KAFE
+	KABANN	kafenol	KAFENOL
 kabare	KABARE	kafetye	KAFETYE
 kabasik	KABASIK	kafeyin	KAFEYIN
 kabes	KABES	kafou	KAFOu
@@ -4186,106 +4184,106 @@ kabwet	KABWET	kakatwe	KAKATWE
 kabwetye	KABWETYE	kakatwez	KAKATWEZ
 kach	KACh	kakawet	KAKAWET
 kache	KAChE	kakawo	KAKAWO
-kachiman	KAChIMAN	kakaye	KAKAYE
-	KAChIMAn	kaki	KAKI
+kachiman	KAChIMAn	kakaye	KAKAYE
+	KAChIMAN	kaki	KAKI
 kachimbo	KAChIMBO	kako	KAKO
 kachkach	KAChKACh	kakofoni	KAKOFONI
-kachnen	KAChNEN	kakòn	KAKON
-	KAChNEn	kaktis	KAKTIS
+kachnen	KAChNEn	kakòn	KAKON
+	KAChNEN	kaktis	KAKTIS
 kacho	KAChO	kal	KAL
 kachte	KAChTE	kalabous	KALABOuS
 kad	KAD	kaladja	KALADJA
-kadans	KADANS	kalalou	KALALOu
-	KADAnS	kalan	KALAN
-kadas	KADAS		KALAn
-kadav	KADAV	kalanderik	KALAnDERIK
-kade	KADE		KALANDERIK
+kadans	KADAnS	kalalou	KALALOu
+	KADANS	kalan	KALAn
+kadas	KADAS		KALAN
+kadav	KADAV	kalanderik	KALANDERIK
+kade	KADE		KALAnDERIK
 kadejak	KADEJAK	kalandriye	KALAnDRIYE
 kadejake	KADEJAKE		KALANDRIYE
 kadejakez	KADEJAKEZ	kalbas	KALBAS
 kaderik	KADERIK	kalbasik	KALBASIK
-kadinal	KADINAL	kalblende	KALBLEnDE
-kadna	KADNA		KALBLENDE
+kadinal	KADINAL	kalblende	KALBLENDE
+kadna	KADNA		KALBLEnDE
 kado	KADO	kalbose	KALBOSE
-kadran	KADRAn	kale	KALE
-	KADRAN	kalen	KALEn
+kadran	KADRAN	kale	KALE
+	KADRAn	kalen	KALEn
 kadre	KADRE		KALEN
-kalewes - kanmfo
+kadyograf	KADYOGRAF	kalewes	KALEWES
+kadyogram	KADYOGRAM	kalfou	KALFOu
+kaliks - kanmizol
 
-kalewes	KALEWES	kanadyen	KANADYEN
-kalfou	KALFOu		KANADYEn
 kaliks	KALIKS	kanal	KANAL
 kalimet	KALIMET	kanape	KANAPE
 kalinda	KALINDA	kanari	KANARI
 kalite	KALITE	kanaval	KANAVAL
 kalkil	KALKIL	kanbiz	KAnBIZ
 kalkilatris	KALKILATRIS		KANBIZ
-kalkile	KALKILE	kanbral	KANBRAL
-kalma	KALMA		KAnBRAL
-kalman	KALMAN	kanbre	KAnBRE
-	KALMAn		KANBRE
+kalkile	KALKILE	kanbral	KAnBRAL
+kalma	KALMA		KANBRAL
+kalman	KALMAn	kanbre	KAnBRE
+	KALMAN		KANBRE
 kalmason	KALMASON	kanbwonn	KANBWONN
 	KALMASOn		KAnBWONN
 kalme	KALME		KAnBWOnN
 kalmi	KALMI		KANBWOnN
-kaloch	KALOCh	kandelab	KAnDELAB
-kaloj	KALOJ		KANDELAB
+kaloch	KALOCh	kandelab	KANDELAB
+kaloj	KALOJ		KAnDELAB
 kalomi	KALOMI	kandida	KANDIDA
-kalonen	KALONEN		KAnDIDA
-	KALONEn	kane	KANE
-kalonnen	KALOnNEN	kanel	KANEL
-	KALONNEn	kanf	KANF
+kalonen	KALONEn		KAnDIDA
+	KALONEN	kane	KANE
+kalonnen	KALONNEn	kanel	KANEL
+	KALOnNEN	kanf	KANF
 	KALOnNEn		KAnF
 	KALONNEN	kanfre	KAnFRE
 kalori	KALORI		KANFRE
-kalot	KALOT	kangouwou	KAnGOuWOu
-kalote	KALOTE		KANGOuWOu
+kalot	KALOT	kangouwou	KANGOuWOu
+kalote	KALOTE		KAnGOuWOu
 kalson	KALSON	kanif	KANIF
 	KALSOn	kanik	KANIK
 kalsyom	KALSYOM	kaniste	KANISTE
 kalte	KALTE	kanivo	KANIVO
-kalve	KALVE	kanje	KAnJE
-kalven	KALVEn		KANJE
-	KALVEN	kankannen	KANKAnNEN
-kalye	KALYE		KAnKAnNEN
-kamarad	KAMARAD		KANKANNEn
-kamaradri	KAMARADRI		KAnKAnNEn
-kamelya	KAMELYA		KAnKANNEn
-kamera	KAMERA		KANKAnNEn
-kamiy	KAMIY		KANKANNEN
-kamizol	KAMIZOL		KAnKANNEN
-kamoken	KAMOKEN	kanmarad	KANMARAD
-	KAMOKEn		KAnMARAD
+kalve	KALVE	kanje	KANJE
+kalven	KALVEn		KAnJE
+	KALVEN	kankannen	KAnKAnNEN
+kalye	KALYE		KANKANNEn
+kamarad	KAMARAD		KAnKANNEn
+kamaradri	KAMARADRI		KANKAnNEn
+kamelya	KAMELYA		KANKANNEN
+kamera	KAMERA		KAnKAnNEn
+kamiy	KAMIY		KAnKANNEN
+kamizol	KAMIZOL		KANKAnNEN
+kamoken	KAMOKEN	kanmarad	KAnMARAD
+	KAMOKEn		KANMARAD
 kamomi	KAMOMI	kanmem	KAnMEM
 kamouflay	KAMOuFLAY		KANMEM
-kamyon	KAMYOn	kanmenm	KAnMENM
+kamyon	KAMYOn	kanmenm	KAnMEnM
 	KAMYON		KANMEnM
-kamyonet	KAMYONET		KAnMEnM
-kan	KAn		KANMENM
-	KAN	kanmfo	KANMFO
-kana	KANA		KAnMFO
-kanmizol - kapot
+kamyonet	KAMYONET		KANMENM
+kan	KAn		KAnMENM
+	KAN	kanmfo	KAnMFO
+kana	KANA		KANMFO
+kanadyen	KANADYEN	kanmizol	KANMIZOL
+	KANADYEn		KAnMIZOL
+kann - kaprelata
 
-kanmizol	KAnMIZOL	kansonfe	KAnSOnFE
-	KANMIZOL		KANSONFE
-kann	KANN		KANSOnFE
-	KAnN		KAnSONFE
+kann	KANN		KAnSOnFE
+	KAnN		KANSOnFE
 kanna	KAnNA	kantaloup	KANTALOuP
 	KANNA		KAnTALOuP
-kannal	KANNAL	kantasa	KAnTASA
-	KAnNAL		KANTASA
-kannannan	KANNANNAn	kantav	KAnTAV
-	KAnNANNAn		KANTAV
+kannal	KAnNAL	kantasa	KANTASA
+	KANNAL		KAnTASA
+kannannan	KANNANNAn	kantav	KANTAV
+	KAnNANNAn		KAnTAV
 	KANNAnNAn	kantik	KANTIK
 	KAnNAnNAn		KAnTIK
 	KANNANNAN	kantin	KANTIN
 	KAnNANNAN		KAnTIN
-	KANNAnNAN	kantite	KAnTITE
-	KAnNAnNAN		KANTITE
-kannari	KAnNARI	kanton	KAnTOn
-	KANNARI		KANTOn
-kannay	KANNAY		KAnTON
-	KAnNAY		KANTON
+	KANNAnNAN	kantite	KANTITE
+	KAnNAnNAN		KAnTITE
+kannari	KANNARI	kanton	KANTON
+	KAnNARI		KAnTON
+kannay	KAnNAY		KANTOn
+	KANNAY		KAnTOn
 kannel	KANNEL	kànva	KANVA
 	KAnNEL	kanyank	KANYANK
 kanni	KANNI	kanzo	KAnZO
@@ -4302,32 +4300,32 @@ kannivo	KAnNIVO	kapital	KAPITAL
 	KANNIVO	kapitalis	KAPITALIS
 kanno	KAnNO	kapitèn	KAPITEN
 	KANNO	kapitenn	KAPITENN
-kannot	KAnNOT		KAPITEnN
-	KANNOT	kapitile	KAPITILE
+kannot	KANNOT		KAPITEnN
+	KAnNOT	kapitile	KAPITILE
 kannte	KAnNTE	kaplata	KAPLATA
 	KANNTE	kapo	KAPO
 kanpe	KANPE	kapon	KAPON
 	KAnPE		KAPOn
-kanpech	KANPECh	kaponnaj	KAPONNAJ
-	KAnPECh		KAPOnNAJ
-kanpo	KAnPO	kaponnay	KAPONNAY
-	KANPO		KAPOnNAY
+kanpech	KAnPECh	kaponnaj	KAPONNAJ
+	KANPECh		KAPOnNAJ
+kanpo	KANPO	kaponnay	KAPONNAY
+	KAnPO		KAPOnNAY
 kanse	KAnSE	kaponnen	KAPONNEN
-	KANSE		KAPOnNEN
-kanson	KAnSON		KAPOnNEn
-	KANSOn		KAPONNEn
-	KAnSOn	kaporal	KAPORAL
-	KANSON	kapot	KAPOT
-kapote - katozyem
+	KANSE		KAPOnNEn
+kanson	KAnSON		KAPONNEn
+	KANSOn		KAPOnNEN
+	KANSON	kaporal	KAPORAL
+	KAnSOn	kapot	KAPOT
+kansonfe	KAnSONFE	kapote	KAPOTE
+	KANSONFE	kaprelata	KAPRELATA
+kaprina - katran
 
-kapote	KAPOTE		KARIYON
-kaprelata	KAPRELATA	karyoka	KARYOKA
 kaprina	KAPRINA	karyonnen	KARYOnNEN
 kapris	KAPRIS		KARYONNEn
 kaprisye	KAPRISYE		KARYOnNEn
 kapte	KAPTE		KARYONNEN
-kaptenn	KAPTENN	kas	KAS
-	KAPTEnN	kasab	KASAB
+kaptenn	KAPTEnN	kas	KAS
+	KAPTENN	kasab	KASAB
 kapwa	KAPWA	kasav	KASAV
 kapwaz	KAPWAZ	kasayol	KASAYOL
 kara	KARA	kase	KASE
@@ -4341,16 +4339,16 @@ karako	KARAKO	kaskamit	KASKAMIT
 karakte	KARAKTE	kasket	KASKET
 karakteristik	KARAKTERISTIK	kasto	KASTO
 karamel	KARAMEL	kastra	KASTRA
-karang	KARANG	kastwol	KASTWOL
-	KARAnG	kaswol	KASWOL
-karanklou	KARAnKLOu	kat	KAT
-	KARANKLOu	kata	KATA
-karann	KARANN	katab	KATAB
-	KARAnN	katafal	KATAFAL
+karang	KARAnG	kastwol	KASTWOL
+	KARANG	kaswol	KASWOL
+karanklou	KARANKLOu	kat	KAT
+	KARAnKLOu	kata	KATA
+karann	KARAnN	katab	KATAB
+	KARANN	katafal	KATAFAL
 karant	KARANT	katalog	KATALOG
 	KARAnT	kataloge	KATALOGE
-karantyem	KARANTYEM	kataplas	KATAPLAS
-	KARAnTYEM	katapoli	KATAPOLI
+karantyem	KARAnTYEM	kataplas	KATAPLAS
+	KARANTYEM	katapoli	KATAPOLI
 karapas	KARAPAS	katarat	KATARAT
 karapat	KARAPAT	katastwof	KATASTWOF
 karate	KARATE	katastwofik	KATASTWOFIK
@@ -4362,20 +4360,20 @@ karayib	KARAYIB	kategori	KATEGORI
 kare	KARE	kategorik	KATEGORIK
 karebare	KAREBARE	katel	KATEL
 karem	KAREM	katete	KATETE
-kareman	KAREMAN	katilay	KATILAY
-	KAREMAn	katimini	KATIMINI
+kareman	KAREMAn	katilay	KATILAY
+	KAREMAN	katimini	KATIMINI
 kares	KARES	katkat	KATKAT
-karesan	KARESAn	kato	KATO
-	KARESAN	katolik	KATOLIK
+karesan	KARESAN	kato	KATO
+	KARESAn	katolik	KATOLIK
 karese	KARESE	katon	KATOn
 karet	KARET		KATON
 karibou	KARIBOu	katouch	KATOuCh
 karismatik	KARISMATIK	katoz	KATOZ
 kariyon	KARIYOn	katozyem	KATOZYEM
-katpostal - kenzyem
+	KARIYON	katpostal	KATPOSTAL
+karyoka	KARYOKA	katran	KATRAN
+katran - kepenns
 
-katpostal	KATPOSTAL	kazo	KAZO
-katran	KATRAN	kazwel	KAZWEL
 	KATRAn	ke	KE
 katre	KATRE	kebekwa	KEBEKWA
 katreven	KATREVEn	kebi	KEBI
@@ -4386,10 +4384,10 @@ katrevendizyem	KATREVENDIZYEM	kek	KEK
 	KATREVEnDIZYEM	kekfwa	KEKFWA
 katreventyem	KATREVEnTYEM	keksyon	KEKSYON
 	KATREVENTYEM		KEKSYOn
-katriyem	KATRIYEM	keksyonnen	KEKSYOnNEn
+katriyem	KATRIYEM	keksyonnen	KEKSYOnNEN
 katye	KATYE		KEKSYONNEn
-kav	KAV		KEKSYONNEN
-kavalye	KAVALYE		KEKSYOnNEN
+kav	KAV		KEKSYOnNEn
+kavalye	KAVALYE		KEKSYONNEN
 kave	KAVE	kelekeke	KELEKEKE
 kavite	KAVITE	kelenbe	KELEnBE
 kavo	KAVO		KELENBE
@@ -4403,47 +4401,47 @@ kawonabo	KAWONABO		KELKILAnSWA
 kawosri	KAWOSRI	kelkonk	KELKONK
 kawot	KAWOT		KELKOnK
 kawotaj	KAWOTAJ	kemes	KEMES
-kawotchou	KAWOTChOu	kenbe	KENBE
-kawotchoumann	KAWOTChOuMANN		KEnBE
+kawotchou	KAWOTChOu	kenbe	KEnBE
+kawotchoumann	KAWOTChOuMANN		KENBE
 	KAWOTChOuMAnN	kenedi	KENEDI
 kawote	KAWOTE	kenep	KENEP
-kawotèn	KAWOTEN	kenkay	KEnKAY
-kawotid	KAWOTID		KENKAY
-kay	KAY	kenkayri	KEnKAYRI
-kaya	KAYA		KENKAYRI
-kayank	KAYANK	kenken	KEnKEN
-	KAYAnK		KENKEn
-kaye	KAYE		KEnKEn
-kayen	KAYEn		KENKEN
+kawotèn	KAWOTEN	kenkay	KENKAY
+kawotid	KAWOTID		KEnKAY
+kay	KAY	kenkayri	KENKAYRI
+kaya	KAYA		KEnKAYRI
+kayank	KAYANK	kenken	KENKEN
+	KAYAnK		KEnKEn
+kaye	KAYE		KENKEn
+kayen	KAYEn		KEnKEN
 	KAYEN	kenn	KENN
 kayiman	KAYIMAN		KEnN
-	KAYIMAn	kenp	KEnP
-kayimit	KAYIMIT		KENP
+	KAYIMAn	kenp	KENP
+kayimit	KAYIMIT		KEnP
 kazak	KAZAK	kente	KEnTE
 kazanye	KAZANYE		KENTE
-kaze	KAZE	kenz	KENZ
-kazèn	KAZEN		KEnZ
-kazimi	KAZIMI	kenzèn	KEnZEN
-kazimodo	KAZIMODO		KENZEN
+kaze	KAZE	kenz	KEnZ
+kazèn	KAZEN		KENZ
+kazimi	KAZIMI	kenzèn	KENZEN
+kazimodo	KAZIMODO		KEnZEN
 kazino	KAZINO	kenzyem	KEnZYEM
-kenzyem - klaksonnen
+kazo	KAZO		KENZYEM
+kazwel	KAZWEL	kepenns	KEPEnNS
+kepenns - klaksonnen
 
-	KENZYEM		KILENBE
-kepenns	KEPENNS	kiles	KILES
-	KEPEnNS	kilmik	KILMIK
+	KEPENNS	kilmik	KILMIK
 kepi	KEPI	kilo	KILO
 kes	KES	kilogram	KILOGRAM
 kesedjo	KESEDJO	kilomet	KILOMET
 kesekwenn	KESEKWEnN	kilot	KILOT
 	KESEKWENN	kilowat	KILOWAT
 kesye	KESYE	kilowate	KILOWATE
-kesyon	KESYON	kilpabilite	KILPABILITE
-	KESYOn	kilt	KILT
+kesyon	KESYOn	kilpabilite	KILPABILITE
+	KESYON	kilt	KILT
 kesyone	KESYONE	kilti	KILTI
 kesyonnen	KESYONNEN	kiltirel	KILTIREL
-	KESYOnNEN	kiltivate	KILTIVATE
-	KESYONNEn	kim	KIM
-	KESYOnNEn	kimen	KIMEn
+	KESYOnNEn	kiltivate	KILTIVATE
+	KESYOnNEN	kim	KIM
+	KESYONNEn	kimen	KIMEn
 ket	KET		KIMEN
 kete	KETE	kimono	KIMONO
 ketmanman	KETMANMAN	kin	KIN
@@ -4453,10 +4451,10 @@ ketmanman	KETMANMAN	kin	KIN
 kevouzet	KEVOuZET		KINAN
 kewozin	KEWOZIN	kinanm	KINANM
 keyi	KEYI		KINAnM
-ki	KI	kindegadenn	KINDEGADEnN
-kib	KIB		KINDEGADENN
-kiben	KIBEn	kinetik	KINETIK
-	KIBEN	kinn	KINN
+ki	KI	kindegadenn	KINDEGADENN
+kib	KIB		KINDEGADEnN
+kiben	KIBEN	kinetik	KINETIK
+	KIBEn	kinn	KINN
 kibik	KIBIK	kipay	KIPAY
 kibitis	KIBITIS	kipizet	KIPIZET
 kibo	KIBO	kirye	KIRYE
@@ -4467,49 +4465,49 @@ kidonk	KIDOnK	kisa	KISA
 kijan	KIJAN	kisasa	KISASA
 	KIJAn	kiskeya	KISKEYA
 kijodi	KIJODI	kit	KIT
-kikan	KIKAn	kitanago	KITANAGO
-	KIKAN	kite	KITE
+kikan	KIKAN	kitanago	KITANAGO
+	KIKAn	kite	KITE
 kikit	KIKIT	kites	KITES
-kikongo	KIKOnGO	kitkit	KITKIT
-	KIKONGO	kivet	KIVET
+kikongo	KIKONGO	kitkit	KITKIT
+	KIKOnGO	kivet	KIVET
 kikonk	KIKONK	kiye	KIYE
 	KIKOnK	kiyes	KIYES
 kil	KIL	kizin	KIZIN
 kilakyel	KILAKYEL	kizinez	KIZINEZ
 kilbite	KILBITE	kizinye	KIZINYE
-kildesak	KILDESAK	klaksonn	KLAKSONN
-kile	KILE		KLAKSOnN
-kilenbe	KILEnBE	klaksonnen	KLAKSOnNEN
-klaksonnen - kokomakak
+kildesak	KILDESAK	klaksonn	KLAKSOnN
+kile	KILE		KLAKSONN
+kilenbe	KILENBE	klaksonnen	KLAKSOnNEN
+	KILEnBE		KLAKSONNEn
+kiles	KILES		KLAKSONNEN
+klaksonnen - kokon
 
-	KLAKSONNEn		KLWAZON
-	KLAKSOnNEn	ko	KO
-	KLAKSONNEN	kob	KOB
+	KLAKSOnNEn	kob	KOB
 klan	KLAn	kobaba	KOBABA
 	KLAN	kobay	KOBAY
 klarinet	KLARINET	koboy	KOBOY
 klas	KLAS	koche	KOChE
 klase	KLASE	kochet	KOChET
-klasifikasyon	KLASIFIKASYON	kochma	KOChMA
-	KLASIFIKASYOn	kochon	KOChON
-klasifye	KLASIFYE		KOChOn
-klasik	KLASIK	kochondenn	KOChONDENN
+klasifikasyon	KLASIFIKASYOn	kochma	KOChMA
+	KLASIFIKASYON	kochon	KOChOn
+klasifye	KLASIFYE		KOChON
+klasik	KLASIK	kochondenn	KOChOnDENN
 klasman	KLASMAN		KOChONDEnN
-	KLASMAn		KOChOnDEnN
-klate	KLATE		KOChOnDENN
+	KLASMAn		KOChONDENN
+klate	KLATE		KOChOnDEnN
 klavikil	KLAVIKIL	kochte	KOChTE
 klavye	KLAVYE	kod	KOD
 kle	KLE	kodak	KODAK
-kleman	KLEMAN	kodas	KODAS
-	KLEMAn	kodase	KODASE
+kleman	KLEMAn	kodas	KODAS
+	KLEMAN	kodase	KODASE
 klere	KLERE	kode	KODE
-kleren	KLEREN	kodenn	KODEnN
-	KLEREn		KODENN
+kleren	KLEREN	kodenn	KODENN
+	KLEREn		KODEnN
 klesi	KLESI	kodon	KODON
 klete	KLETE		KODOn
 klevo	KLEVO	kodonnye	KODOnNYE
-klewon	KLEWOn		KODONNYE
-	KLEWON	kodwon	KODWON
+klewon	KLEWON		KODONNYE
+	KLEWOn	kodwon	KODWON
 klima	KLIMA		KODWOn
 klimatoloji	KLIMATOLOJI	kof	KOF
 klimatolojis	KLIMATOLOJIS	koflestomak	KOFLESTOMAK
@@ -4520,10 +4518,10 @@ klis	KLIS	kok	KOK
 klisad	KLISAD	kokad	KOKAD
 klisay	KLISAY	kokayin	KOKAYIN
 klise	KLISE	koke	KOKE
-klitoris	KLITORIS	koken	KOKEn
-kliyan	KLIYAn		KOKEN
-	KLIYAN	kokenn	KOKENN
-klo	KLO		KOKEnN
+klitoris	KLITORIS	koken	KOKEN
+kliyan	KLIYAN		KOKEn
+	KLIYAn	kokenn	KOKEnN
+klo	KLO		KOKENN
 kloch	KLOCh	koki	KOKI
 klokarya	KLOKARYA	kokiyol	KOKIYOL
 klorat	KLORAT	koklich	KOKLICh
@@ -4533,42 +4531,42 @@ klou	KLOu	kokob	KOKOB
 kloure	KLOuRE	kokobe	KOKOBE
 klowofil	KLOWOFIL	kokodil	KOKODIL
 klowoks	KLOWOKS	kokolo	KOKOLO
-klwazon	KLWAZOn	kokomakak	KOKOMAKAK
-kokon - kominyen
+klwazon	KLWAZON	kokomakak	KOKOMAKAK
+	KLWAZOn	kokon	KOKON
+ko	KO		KOKOn
+kokonet - kominyon
 
-kokon	KOKOn	kolte	KOLTE
-	KOKON	kolye	KOLYE
 kokonet	KOKONET	kom	KOM
 kokorat	KOKORAT	koma	KOMA
 kokoriko	KOKORIKO	komabo	KOMABO
 kokos	KOKOS	koman	KOMAn
 kokot	KOKOT		KOMAN
-kokoti	KOKOTI	komandan	KOMAnDAN
-kokoto	KOKOTO		KOMANDAN
-kokoye	KOKOYE		KOMANDAn
-kokraz	KOKRAZ		KOMAnDAn
-koksis	KOKSIS	komande	KOMANDE
-koktel	KOKTEL		KOMAnDE
+kokoti	KOKOTI	komandan	KOMAnDAn
+kokoto	KOKOTO		KOMANDAn
+kokoye	KOKOYE		KOMAnDAN
+kokraz	KOKRAZ		KOMANDAN
+koksis	KOKSIS	komande	KOMAnDE
+koktel	KOKTEL		KOMANDE
 kol	KOL	komandman	KOMANDMAN
 kola	KOLA		KOMAnDMAn
-kolan	KOLAN		KOMAnDMAN
-	KOLAn		KOMANDMAn
-kolanget	KOLANGET	komanman	KOMANMAN
-	KOLAnGET		KOMAnMAN
-kolangit	KOLANGIT		KOMANMAn
-	KOLAnGIT		KOMAnMAn
-kolboso	KOLBOSO	komann	KOMANN
-kole	KOLE		KOMAnN
-kolej	KOLEJ	komanse	KOMANSE
-kolekte	KOLEKTE		KOMAnSE
-kolerater	KOLERATER	komansman	KOMANSMAn
-kolerin	KOLERIN		KOMAnSMAN
-kolet	KOLET		KOMANSMAN
-kolgat	KOLGAT		KOMAnSMAn
+kolan	KOLAn		KOMAnDMAN
+	KOLAN		KOMANDMAn
+kolanget	KOLAnGET	komanman	KOMANMAN
+	KOLANGET		KOMAnMAn
+kolangit	KOLANGIT		KOMAnMAN
+	KOLAnGIT		KOMANMAn
+kolboso	KOLBOSO	komann	KOMAnN
+kole	KOLE		KOMANN
+kolej	KOLEJ	komanse	KOMAnSE
+kolekte	KOLEKTE		KOMANSE
+kolerater	KOLERATER	komansman	KOMAnSMAN
+kolerin	KOLERIN		KOMANSMAn
+kolet	KOLET		KOMAnSMAn
+kolgat	KOLGAT		KOMANSMAN
 kolik	KOLIK	komante	KOMAnTE
 kolin	KOLIN		KOMANTE
-kolizyon	KOLIZYOn	komapiston	KOMAPISTON
-	KOLIZYON		KOMAPISTOn
+kolizyon	KOLIZYON	komapiston	KOMAPISTON
+	KOLIZYOn		KOMAPISTOn
 kolkrem	KOLKREM	komatiboulout	KOMATIBOuLOuT
 kolo	KOLO	komatyouboulout	KOMATYOuBOuLOuT
 kolok	KOLOK	kome	KOME
@@ -4576,8 +4574,8 @@ kolokent	KOLOKEnT	komedi	KOMEDI
 	KOLOKENT	komedyen	KOMEDYEN
 kolon	KOLOn		KOMEDYEn
 	KOLON	komes	KOMES
-kolonbyen	KOLONBYEn	komesan	KOMESAN
-	KOLOnBYEn		KOMESAn
+kolonbyen	KOLOnBYEn	komesan	KOMESAn
+	KOLONBYEn		KOMESAN
 	KOLOnBYEN	komet	KOMET
 	KOLONBYEN	komi	KOMI
 kolonel	KOLONEL	komik	KOMIK
@@ -4588,227 +4586,227 @@ kolorin	KOLORIN		KOMINIKASYOn
 kolostrom	KOLOSTROM	kominike	KOMINIKE
 kolowoch	KOLOWOCh	kominote	KOMINOTE
 kolta	KOLTA	kominyen	KOMINYEN
-kominyen - konfidansyel
+kolte	KOLTE		KOMINYEn
+kolye	KOLYE	kominyon	KOMINYOn
+kominyon - konfidansyel
 
-	KOMINYEn	kondikte	KOnDIKTE
-kominyon	KOMINYON		KONDIKTE
-	KOMINYOn	kondiktivite	KONDIKTIVITE
-komise	KOMISE		KOnDIKTIVITE
-komisyon	KOMISYOn	kondisyon	KONDISYOn
-	KOMISYON		KONDISYON
-komisyone	KOMISYONE		KOnDISYOn
-komisyonne	KOMISYONNE		KOnDISYON
-	KOMISYOnNE	kondo	KONDO
+	KOMINYON	kondiktivite	KOnDIKTIVITE
+komise	KOMISE		KONDIKTIVITE
+komisyon	KOMISYON	kondisyon	KOnDISYOn
+	KOMISYOn		KONDISYOn
+komisyone	KOMISYONE		KOnDISYON
+komisyonne	KOMISYOnNE		KONDISYON
+	KOMISYONNE	kondo	KONDO
 komite	KOMITE		KOnDO
 komkidire	KOMKIDIRE	kondoleyans	KOnDOLEYAnS
-komod	KOMOD		KOnDOLEYANS
-komokoy	KOMOKOY		KONDOLEYAnS
+komod	KOMOD		KONDOLEYAnS
+komokoy	KOMOKOY		KOnDOLEYANS
 komokyel	KOMOKYEL		KONDOLEYANS
 komsi	KOMSI	kondon	KOnDOn
 kòn	KON		KONDOn
 konba	KOnBA		KOnDON
 	KONBA		KONDON
-konbat	KONBAT	kondui	KONDUi
-	KOnBAT		KOnDUi
-konbelann	KONBELANN	konduit	KONDUiT
-	KOnBELAnN		KOnDUiT
-	KONBELAnN	kone	KONE
-	KOnBELANN	koneksyon	KONEKSYON
+konbat	KOnBAT	kondui	KONDUi
+	KONBAT		KOnDUi
+konbelann	KOnBELAnN	konduit	KONDUiT
+	KONBELANN		KOnDUiT
+	KOnBELANN	kone	KONE
+	KONBELAnN	koneksyon	KONEKSYON
 konben	KONBEN	konen	KONEN
-	KONBEn		KONEn
-	KOnBEN	konesans	KONESANS
-	KOnBEn		KONESAnS
-konbinezon	KOnBINEZON	konet	KONET
-	KOnBINEZOn	konfederasyon	KOnFEDERASYON
-	KONBINEZON		KONFEDERASYON
-	KONBINEZOn		KOnFEDERASYOn
-konbit	KOnBIT		KONFEDERASYOn
-	KONBIT	konferansye	KONFERAnSYE
-konble	KONBLE		KOnFERAnSYE
-	KOnBLE		KOnFERANSYE
-konbyen	KOnBYEN		KONFERANSYE
+	KOnBEn		KONEn
+	KOnBEN	konesans	KONESAnS
+	KONBEn		KONESANS
+konbinezon	KONBINEZON	konet	KONET
+	KOnBINEZON	konfederasyon	KOnFEDERASYON
+	KONBINEZOn		KONFEDERASYOn
+	KOnBINEZOn		KOnFEDERASYOn
+konbit	KOnBIT		KONFEDERASYON
+	KONBIT	konferansye	KOnFERAnSYE
+konble	KOnBLE		KONFERAnSYE
+	KONBLE		KOnFERANSYE
+konbyen	KOnBYEn		KONFERANSYE
 	KONBYEn	konfese	KONFESE
-	KOnBYEn		KOnFESE
-	KONBYEN	konfesyon	KONFESYON
+	KONBYEN		KOnFESE
+	KOnBYEN	konfesyon	KONFESYON
 kondanasyon	KOnDANASYON		KOnFESYOn
-	KONDANASYOn		KONFESYOn
+	KONDANASYON		KONFESYOn
 	KOnDANASYOn		KOnFESYON
-	KONDANASYON	konfidan	KONFIDAn
-kondane	KOnDANE		KONFIDAN
-	KONDANE		KOnFIDAn
-kondanse	KONDAnSE		KOnFIDAN
-	KOnDAnSE	konfidans	KOnFIDANS
-	KOnDANSE		KONFIDAnS
-	KONDANSE		KOnFIDAnS
-kondi	KOnDI		KONFIDANS
-	KONDI	konfidansyel	KOnFIDAnSYEL
-konfidansyel - konkeri
+	KONDANASYOn	konfidan	KOnFIDAn
+kondane	KONDANE		KONFIDAN
+	KOnDANE		KONFIDAn
+kondanse	KONDANSE		KOnFIDAN
+	KOnDANSE	konfidans	KONFIDANS
+	KONDAnSE		KOnFIDAnS
+	KOnDAnSE		KONFIDAnS
+kondi	KOnDI		KOnFIDANS
+	KONDI	konfidansyel	KONFIDANSYEL
+kondikte	KOnDIKTE		KOnFIDANSYEL
+	KONDIKTE		KOnFIDAnSYEL
+konfidansyel - konket
 
-	KONFIDANSYEL		KONFYAn
-	KOnFIDANSYEL		KOnFYAN
 	KONFIDAnSYEL	konfyans	KONFYANS
-konfimasyon	KOnFIMASYON		KOnFYAnS
-	KONFIMASYON		KONFYAnS
-	KOnFIMASYOn		KOnFYANS
-	KONFIMASYOn	konfye	KOnFYE
-konfime	KOnFIME		KONFYE
-	KONFIME	konfyol	KONFYOL
+konfimasyon	KOnFIMASYOn		KOnFYANS
+	KONFIMASYOn		KONFYAnS
+	KOnFIMASYON		KOnFYAnS
+	KONFIMASYON	konfye	KOnFYE
+konfime	KONFIME		KONFYE
+	KOnFIME	konfyol	KONFYOL
 konfimen	KONFIMEN		KOnFYOL
-	KOnFIMEN	konfyolo	KONFYOLO
-	KONFIMEn		KOnFYOLO
-	KOnFIMEn	kong	KONG
-konfiske	KONFISKE		KOnG
-	KOnFISKE	kongo	KOnGO
-konfiti	KONFITI		KONGO
-	KOnFITI	kongolo	KONGOLO
+	KONFIMEn	konfyolo	KONFYOLO
+	KOnFIMEn		KOnFYOLO
+	KOnFIMEN	kong	KOnG
+konfiske	KOnFISKE		KONG
+	KONFISKE	kongo	KONGO
+konfiti	KOnFITI		KOnGO
+	KONFITI	kongolo	KONGOLO
 konfizyon	KOnFIZYON		KOnGOLO
-	KONFIZYOn	kongre	KONGRE
-	KOnFIZYOn		KOnGRE
+	KONFIZYOn	kongre	KOnGRE
+	KOnFIZYOn		KONGRE
 	KONFIZYON	kongreganis	KOnGREGANIS
 kònfleks	KONFLEKS		KONGREGANIS
-konfli	KONFLI	kongregasyon	KOnGREGASYON
-	KOnFLI		KOnGREGASYOn
-konfo	KOnFO		KONGREGASYOn
+konfli	KOnFLI	kongregasyon	KOnGREGASYOn
+	KONFLI		KONGREGASYOn
+konfo	KOnFO		KOnGREGASYON
 	KONFO		KONGREGASYON
 konfom	KOnFOM	konife	KONIFE
 	KONFOM	koniflet	KONIFLET
 konfome	KOnFOME	konje	KOnJE
 	KONFOME		KONJE
-konfomeman	KONFOMEMAN	konjelate	KONJELATE
+konfomeman	KONFOMEMAn	konjelate	KONJELATE
 	KOnFOMEMAn		KOnJELATE
-	KONFOMEMAn	konjenital	KOnJENITAL
-	KOnFOMEMAN		KONJENITAL
+	KOnFOMEMAN	konjenital	KONJENITAL
+	KONFOMEMAN		KOnJENITAL
 konfonn	KONFONN	konjige	KOnJIGE
 	KOnFOnN		KONJIGE
-	KONFOnN	konjonksyon	KONJOnKSYON
-	KOnFONN		KOnJONKSYON
-konfotab	KONFOTAB		KONJOnKSYOn
-	KOnFOTAB		KOnJOnKSYOn
-konfote	KONFOTE		KONJONKSYON
-	KOnFOTE		KOnJOnKSYON
-konfre	KONFRE		KONJONKSYOn
-	KOnFRE		KOnJONKSYOn
-konfreri	KOnFRERI	konkav	KONKAV
-	KONFRERI		KOnKAV
-konfwonte	KOnFWONTE	konkeran	KONKERAN
-	KONFWOnTE		KOnKERAn
-	KOnFWOnTE		KONKERAn
-	KONFWONTE		KOnKERAN
-konfyan	KONFYAN	konkeri	KONKERI
-	KOnFYAn		KOnKERI
-konket - konpay
+	KOnFONN	konjonksyon	KOnJOnKSYOn
+	KONFOnN		KONJOnKSYOn
+konfotab	KONFOTAB		KOnJONKSYOn
+	KOnFOTAB		KOnJOnKSYON
+konfote	KONFOTE		KONJONKSYOn
+	KOnFOTE		KONJONKSYON
+konfre	KOnFRE		KOnJONKSYON
+	KONFRE		KONJOnKSYON
+konfreri	KONFRERI	konkav	KOnKAV
+	KOnFRERI		KONKAV
+konfwonte	KONFWONTE	konkeran	KONKERAN
+	KOnFWONTE		KOnKERAn
+	KONFWOnTE		KONKERAn
+	KOnFWOnTE		KOnKERAN
+konfyan	KOnFYAN	konkeri	KONKERI
+	KONFYAn		KOnKERI
+	KOnFYAn	konket	KOnKET
+	KONFYAN		KONKET
+konkibinay - konpayel
 
-konket	KONKET	konmedyen	KONMEDYEn
-	KOnKET		KOnMEDYEn
-konkibinay	KOnKIBINAY		KOnMEDYEN
-	KONKIBINAY		KONMEDYEN
-konkidire	KOnKIDIRE	konmes	KOnMES
-	KONKIDIRE		KONMES
-konkiran	KOnKIRAn	konmesan	KONMESAN
-	KONKIRAn		KOnMESAn
-	KOnKIRAN		KOnMESAN
-	KONKIRAN		KONMESAn
-konkirans	KONKIRAnS	konminyon	KOnMINYOn
-	KOnKIRAnS		KONMINYOn
-	KOnKIRANS		KOnMINYON
-	KONKIRANS		KONMINYON
-konklizyon	KOnKLIZYOn	konmisyonne	KONMISYOnNE
-	KONKLIZYOn		KOnMISYOnNE
-	KOnKLIZYON		KOnMISYONNE
+konkibinay	KONKIBINAY		KOnMEDYEn
+	KOnKIBINAY		KONMEDYEN
+konkidire	KONKIDIRE	konmes	KOnMES
+	KOnKIDIRE		KONMES
+konkiran	KOnKIRAN	konmesan	KONMESAN
+	KONKIRAn		KOnMESAN
+	KOnKIRAn		KONMESAn
+	KONKIRAN		KOnMESAn
+konkirans	KOnKIRANS	konminyon	KONMINYON
+	KONKIRAnS		KOnMINYOn
+	KOnKIRAnS		KOnMINYON
+	KONKIRANS		KONMINYOn
+konklizyon	KOnKLIZYON	konmisyonne	KOnMISYOnNE
+	KONKLIZYOn		KONMISYOnNE
+	KOnKLIZYOn		KOnMISYONNE
 	KONKLIZYON		KONMISYONNE
-konkoda	KONKODA	konmite	KOnMITE
-	KOnKODA		KONMITE
-konkonm	KONKONM	konmsi	KONMSI
-	KOnKOnM		KOnMSI
+konkoda	KOnKODA	konmite	KONMITE
+	KONKODA		KOnMITE
+konkonm	KONKOnM	konmsi	KOnMSI
+	KOnKOnM		KONMSI
 	KOnKONM	konn	KONN
-	KONKOnM		KOnN
-konkonnet	KONKONNET	konnekte	KONNEKTE
-	KOnKONNET		KOnNEKTE
+	KONKONM		KOnN
+konkonnet	KONKONNET	konnekte	KOnNEKTE
+	KOnKOnNET		KONNEKTE
 	KONKOnNET	konnen	KONNEN
-	KOnKOnNET		KOnNEN
-konkou	KONKOu		KONNEn
+	KOnKONNET		KONNEn
+konkou	KONKOu		KOnNEN
 	KOnKOu		KOnNEn
-konkre	KOnKRE	konnesans	KOnNESANS
-	KONKRE		KONNESAnS
-konmandan	KOnMAnDAn		KOnNESAnS
-	KOnMAnDAN		KONNESANS
-	KONMAnDAN	konngout	KOnNGOuT
-	KOnMANDAN		KONNGOuT
-	KONMAnDAn	konpa	KOnPA
-	KOnMANDAn		KONPA
-	KONMANDAn	konpany	KOnPAnY
-	KONMANDAN		KONPAnY
-konmande	KOnMANDE		KOnPANY
+konkre	KONKRE	konnesans	KONNESANS
+	KOnKRE		KOnNESANS
+konmandan	KONMANDAN		KONNESAnS
+	KOnMAnDAn		KOnNESAnS
+	KONMAnDAn	konngout	KONNGOuT
+	KONMANDAn		KOnNGOuT
+	KOnMAnDAN	konpa	KOnPA
+	KONMAnDAN		KONPA
+	KOnMANDAN	konpany	KOnPANY
+	KOnMANDAn		KONPAnY
+konmande	KOnMANDE		KOnPAnY
 	KONMAnDE		KONPANY
 	KOnMAnDE	konpare	KOnPARE
 	KONMANDE		KONPARE
-konmanse	KOnMANSE	konparet	KONPARET
-	KONMAnSE		KOnPARET
+konmanse	KOnMANSE	konparet	KOnPARET
+	KONMAnSE		KONPARET
 	KOnMAnSE	konpatiman	KOnPATIMAn
 	KONMANSE		KONPATIMAn
-konme	KOnME		KOnPATIMAN
-	KONME		KONPATIMAN
+konme	KONME		KOnPATIMAN
+	KOnME		KONPATIMAN
 konmedi	KOnMEDI	konpay	KONPAY
 	KONMEDI		KOnPAY
-konpayel - konsantman
+konmedyen	KOnMEDYEN	konpayel	KOnPAYEL
+	KONMEDYEn		KONPAYEL
+konpayi - konsantrasyon
 
-konpayel	KOnPAYEL	konpozan	KONPOZAN
-	KONPAYEL		KONPOZAn
-konpayi	KOnPAYI		KOnPOZAn
-	KONPAYI		KOnPOZAN
-konpayon	KONPAYOn	konpoze	KONPOZE
-	KOnPAYOn		KOnPOZE
+konpayi	KONPAYI		KONPOZAn
+	KOnPAYI		KOnPOZAn
+konpayon	KOnPAYOn	konpoze	KOnPOZE
+	KONPAYOn		KONPOZE
 	KOnPAYON	konpozisyon	KOnPOZISYON
 	KONPAYON		KONPOZISYOn
-konpe	KOnPE		KOnPOZISYOn
-	KONPE		KONPOZISYON
-konpetisyon	KONPETISYON	konprann	KONPRANN
-	KOnPETISYON		KOnPRANN
-	KONPETISYOn		KONPRAnN
-	KOnPETISYOn		KOnPRAnN
-konpilasyon	KOnPILASYON	konpres	KOnPRES
-	KONPILASYOn		KONPRES
-	KOnPILASYOn	konprese	KONPRESE
+konpe	KONPE		KOnPOZISYOn
+	KOnPE		KONPOZISYON
+konpetisyon	KONPETISYOn	konprann	KONPRANN
+	KOnPETISYOn		KOnPRANN
+	KOnPETISYON		KONPRAnN
+	KONPETISYON		KOnPRAnN
+konpilasyon	KONPILASYOn	konpres	KONPRES
+	KOnPILASYOn		KOnPRES
+	KOnPILASYON	konprese	KONPRESE
 	KONPILASYON		KOnPRESE
 konple	KOnPLE	konpreyansyon	KONPREYANSYON
 	KONPLE		KONPREYANSYOn
 konpleman	KONPLEMAn		KOnPREYANSYOn
 	KOnPLEMAn		KONPREYAnSYOn
-	KOnPLEMAN		KOnPREYANSYON
-	KONPLEMAN		KONPREYAnSYON
-konplemante	KOnPLEMANTE		KOnPREYAnSYON
-	KONPLEMANTE		KOnPREYAnSYOn
+	KONPLEMAN		KOnPREYANSYON
+	KOnPLEMAN		KONPREYAnSYON
+konplemante	KONPLEMAnTE		KOnPREYAnSYON
+	KOnPLEMANTE		KOnPREYAnSYOn
 	KOnPLEMAnTE	konprime	KONPRIME
-	KONPLEMAnTE		KOnPRIME
+	KONPLEMANTE		KOnPRIME
 konplikasyon	KONPLIKASYON	konpyoute	KONPYOuTE
 	KOnPLIKASYOn		KOnPYOuTE
-	KONPLIKASYOn	konsa	KONSA
-	KOnPLIKASYON		KOnSA
-konplike	KONPLIKE	konsanti	KOnSAnTI
-	KOnPLIKE		KONSAnTI
+	KOnPLIKASYON	konsa	KONSA
+	KONPLIKASYOn		KOnSA
+konplike	KOnPLIKE	konsanti	KOnSAnTI
+	KONPLIKE		KONSAnTI
 konpliman	KONPLIMAN		KOnSANTI
 	KOnPLIMAn		KONSANTI
 	KONPLIMAn	konsantiman	KONSANTIMAN
 	KOnPLIMAN		KOnSANTIMAN
-konplo	KOnPLO		KOnSANTIMAn
-	KONPLO		KONSAnTIMAn
-konplotaj	KONPLOTAJ		KOnSAnTIMAn
-	KOnPLOTAJ		KONSAnTIMAN
+konplo	KONPLO		KOnSANTIMAn
+	KOnPLO		KONSAnTIMAn
+konplotaj	KOnPLOTAJ		KOnSAnTIMAn
+	KONPLOTAJ		KONSAnTIMAN
 konplote	KONPLOTE		KOnSAnTIMAN
 	KOnPLOTE		KONSANTIMAn
 konpos	KONPOS	konsantman	KONSANTMAN
 	KOnPOS		KOnSANTMAn
 konpote	KONPOTE		KONSAnTMAn
 	KOnPOTE		KOnSAnTMAn
-konpotman	KOnPOTMAN		KONSANTMAn
-	KONPOTMAn		KOnSANTMAN
-	KOnPOTMAn		KONSAnTMAN
-	KONPOTMAN		KOnSAnTMAN
+konpotman	KONPOTMAN		KONSANTMAn
+	KOnPOTMAN		KOnSANTMAN
+	KONPOTMAn		KONSAnTMAN
+	KOnPOTMAn		KOnSAnTMAN
+konpozan	KONPOZAN	konsantrasyon	KONSAnTRASYOn
+	KOnPOZAN		KOnSANTRASYOn
 konsantrasyon - kontantman
 
-konsantrasyon	KONSANTRASYON	konsonmen	KONSONMEN
-	KOnSANTRASYOn		KOnSONMEn
-	KONSAnTRASYOn		KONSONMEn
+	KONSANTRASYON		KONSONMEn
 	KOnSAnTRASYOn		KOnSOnMEN
 	KOnSANTRASYON		KONSOnMEN
 	KONSAnTRASYON		KOnSONMEN
@@ -4816,34 +4814,34 @@ konsantrasyon	KONSANTRASYON	konsonmen	KONSONMEN
 	KOnSAnTRASYON		KOnSOnMEn
 konsantre	KOnSANTRE	konsta	KONSTA
 	KONSAnTRE		KOnSTA
-	KONSANTRE	konstan	KONSTAN
-	KOnSAnTRE		KOnSTAN
-konsekan	KONSEKAN		KONSTAn
-	KOnSEKAn		KOnSTAn
-	KONSEKAn	konstelasyon	KONSTELASYON
-	KOnSEKAN		KOnSTELASYOn
-konsekans	KONSEKAnS		KONSTELASYOn
+	KOnSAnTRE	konstan	KONSTAN
+	KONSANTRE		KOnSTAn
+konsekan	KOnSEKAn		KOnSTAN
+	KONSEKAn		KONSTAn
+	KOnSEKAN	konstelasyon	KONSTELASYON
+	KONSEKAN		KOnSTELASYOn
+konsekans	KOnSEKANS		KONSTELASYOn
 	KOnSEKAnS		KOnSTELASYON
-	KOnSEKANS	konstipasyon	KOnSTIPASYOn
+	KONSEKAnS	konstipasyon	KOnSTIPASYOn
 	KONSEKANS		KONSTIPASYON
 konsekitif	KOnSEKITIF		KONSTIPASYOn
 	KONSEKITIF		KOnSTIPASYON
 konsep	KOnSEP	konstipe	KONSTIPE
 	KONSEP		KOnSTIPE
-konsepsyon	KONSEPSYON	konstitisyon	KONSTITISYOn
-	KOnSEPSYON		KONSTITISYON
-	KONSEPSYOn		KOnSTITISYON
-	KOnSEPSYOn		KOnSTITISYOn
-konsevasyon	KOnSEVASYON	konstriksyon	KOnSTRIKSYOn
+konsepsyon	KONSEPSYON	konstitisyon	KONSTITISYON
+	KOnSEPSYON		KOnSTITISYOn
+	KONSEPSYOn		KONSTITISYOn
+	KOnSEPSYOn		KOnSTITISYON
+konsevasyon	KOnSEVASYON	konstriksyon	KOnSTRIKSYON
 	KONSEVASYOn		KONSTRIKSYOn
-	KOnSEVASYOn		KOnSTRIKSYON
+	KOnSEVASYOn		KOnSTRIKSYOn
 	KONSEVASYON		KONSTRIKSYON
-konseve	KONSEVE	konstwi	KOnSTWI
-	KOnSEVE		KONSTWI
+konseve	KONSEVE	konstwi	KONSTWI
+	KOnSEVE		KOnSTWI
 konsey	KOnSEY	kont	KONT
 	KONSEY		KOnT
-konseye	KONSEYE	kontab	KOnTAB
-	KOnSEYE		KONTAB
+konseye	KONSEYE	kontab	KONTAB
+	KOnSEYE		KOnTAB
 konsi	KOnSI	kontak	KOnTAK
 	KONSI		KONTAK
 konsidere	KONSIDERE	kontaminasyon	KOnTAMINASYON
@@ -4852,83 +4850,83 @@ konsiltasyon	KONSILTASYON		KOnTAMINASYOn
 	KOnSILTASYOn		KONTAMINASYON
 	KONSILTASYOn	kontamine	KOnTAMINE
 	KOnSILTASYON		KONTAMINE
-konsilte	KONSILTE	kontan	KONTAn
-	KOnSILTE		KOnTAn
+konsilte	KONSILTE	kontan	KOnTAn
+	KOnSILTE		KONTAn
 konsiy	KONSIY		KOnTAN
 	KOnSIY		KONTAN
 konsole	KOnSOLE	kontantman	KOnTANTMAn
 	KONSOLE		KONTAnTMAn
-kontantman - koreyen
+konsonmen	KONSONMEN		KOnTAnTMAn
+	KOnSONMEn		KONTANTMAN
+kontantman - korido
 
-	KOnTAnTMAn	kontremet	KOnTREMET
-	KONTANTMAN		KONTREMET
 	KOnTANTMAN	kontribisyon	KONTRIBISYON
 	KONTAnTMAN		KOnTRIBISYOn
 	KOnTAnTMAN		KONTRIBISYOn
 	KONTANTMAn		KOnTRIBISYON
 konte	KONTE	kontwa	KOnTWA
 	KOnTE		KONTWA
-kontgout	KONTGOuT	kontwol	KONTWOL
-	KOnTGOuT		KOnTWOL
+kontgout	KONTGOuT	kontwol	KOnTWOL
+	KOnTGOuT		KONTWOL
 kontinan	KONTINAN	kontwole	KONTWOLE
 	KOnTINAn		KOnTWOLE
 	KONTINAn	konveks	KONVEKS
 	KOnTINAN		KOnVEKS
-kontinye	KOnTINYE	konveti	KONVETI
-	KONTINYE		KOnVETI
-kontou	KOnTOu	konvoke	KONVOKE
-	KONTOu		KOnVOKE
-kontra	KOnTRA	konyen	KONYEn
-	KONTRA		KONYEN
+kontinye	KOnTINYE	konveti	KOnVETI
+	KONTINYE		KONVETI
+kontou	KONTOu	konvoke	KONVOKE
+	KOnTOu		KOnVOKE
+kontra	KONTRA	konyen	KONYEN
+	KOnTRA		KONYEn
 kontradiksyon	KONTRADIKSYON	konze	KONZE
 	KOnTRADIKSYOn		KOnZE
 	KONTRADIKSYOn	kopelo	KOPELO
-	KOnTRADIKSYON	kopen	KOPEn
-kontrarye	KONTRARYE		KOPEN
+	KOnTRADIKSYON	kopen	KOPEN
+kontrarye	KONTRARYE		KOPEn
 	KOnTRARYE	kopi	KOPI
-kontraryete	KONTRARYETE	kopilasyon	KOPILASYON
-	KOnTRARYETE		KOPILASYOn
+kontraryete	KOnTRARYETE	kopilasyon	KOPILASYOn
+	KONTRARYETE		KOPILASYON
 kontraryezon	KONTRARYEZON	kopye	KOPYE
 	KOnTRARYEZON	kopyez	KOPYEZ
 	KONTRARYEZOn	koral	KORAL
 	KOnTRARYEZOn	koralen	KORALEN
 kontravansyon	KOnTRAVAnSYOn		KORALEn
-	KONTRAVANSYON	koran	KORAn
-	KONTRAVANSYOn		KORAN
+	KONTRAVANSYON	koran	KORAN
+	KONTRAVANSYOn		KORAn
 	KOnTRAVAnSYON	koray	KORAY
 	KONTRAVAnSYON	kore	KORE
 	KOnTRAVANSYON	kored	KORED
 	KONTRAVAnSYOn	korek	KOREK
 	KOnTRAVANSYOn	korekteman	KOREKTEMAN
 kontraye	KONTRAYE		KOREKTEMAn
-	KOnTRAYE	korespondan	KORESPONDAN
+	KOnTRAYE	korespondan	KORESPOnDAN
 kontrayete	KONTRAYETE		KORESPONDAn
-	KOnTRAYETE		KORESPOnDAN
-kontre	KONTRE		KORESPOnDAn
-	KOnTRE	korespondans	KORESPOnDAnS
+	KOnTRAYETE		KORESPOnDAn
+kontre	KONTRE		KORESPONDAN
+	KOnTRE	korespondans	KORESPOnDANS
 kontredans	KONTREDAnS		KORESPONDAnS
-	KOnTREDAnS		KORESPONDANS
-	KOnTREDANS		KORESPOnDANS
+	KOnTREDAnS		KORESPOnDAnS
+	KOnTREDANS		KORESPONDANS
 	KONTREDANS	koresponn	KORESPONN
 kontredi	KONTREDI		KORESPOnN
-	KOnTREDI	koreyen	KOREYEn
-koreyen - koutmen
+	KOnTREDI	koreyen	KOREYEN
+kontremet	KOnTREMET		KOREYEn
+	KONTREMET	korido	KORIDO
+korigol - koutriye
 
-	KOREYEN	koulout	KOuLOuT
-korido	KORIDO	koulyeya	KOuLYEYA
 korigol	KORIGOL	koumabo	KOuMABO
 korije	KORIJE	kouman	KOuMAn
 kos	KOS		KOuMAN
-kosaj	KOSAJ	koumanman	KOuMANMAn
-kosmober	KOSMOBER		KOuMAnMAN
-kostariken	KOSTARIKEN		KOuMAnMAn
-	KOSTARIKEn		KOuMANMAN
+kosaj	KOSAJ	koumanman	KOuMAnMAN
+kosmober	KOSMOBER		KOuMANMAn
+kostariken	KOSTARIKEn		KOuMAnMAn
+	KOSTARIKEN		KOuMANMAN
 kostim	KOSTIM	koumanse	KOuMAnSE
 kostimdeben	KOSTIMDEBEn		KOuMANSE
 	KOSTIMDEBEN	koumbit	KOuMBIT
 kostime	KOSTIME	kounan	KOuNAn
-kosyan	KOSYAn		KOuNAN
-	KOSYAN	kounou	KOuNOu
+kosyan	KOSYAN		KOuNAN
+	KOSYAn	kounou	KOuNOu
 kot	KOT	kounouk	KOuNOuK
 kotdefe	KOTDEFE	kounye	KOuNYE
 kote	KOTE	koup	KOuP
@@ -4956,8 +4954,8 @@ koudey	KOuDEY	kourye	KOuRYE
 koudoug	KOuDOuG	kous	KOuS
 koudyay	KOuDYAY	kousen	KOuSEn
 koukou	KOuKOu		KOuSEN
-koukoun	KOuKOuN	kousikui	KOuSIKUi
-	KOuKOun	kout	KOuT
+koukoun	KOuKOun	kousikui	KOuSIKUi
+	KOuKOuN	kout	KOuT
 koukout	KOuKOuT	koutay	KOuTAY
 koukouy	KOuKOuY	koute	KOuTE
 koulanget	KOuLANGET	kouti	KOuTI
@@ -4966,10 +4964,10 @@ koule	KOuLE	koutirye	KOuTIRYE
 koulev	KOuLEV	koutiryez	KOuTIRYEZ
 koulin	KOuLIN	koutmen	KOuTMEN
 koulis	KOuLIS		KOuTMEn
-kouto - krim
+koulout	KOuLOuT	kouto	KOuTO
+koulyeya	KOuLYEYA	koutriye	KOuTRIYE
+koutriyez - kriminel
 
-kouto	KOuTO		KRANPON
-koutriye	KOuTRIYE		KRAnPOn
 koutriyez	KOuTRIYEZ	krapo	KRAPO
 koutwazi	KOuTWAZI	kraponnaj	KRAPONNAJ
 koutye	KOuTYE		KRAPOnNAJ
@@ -4990,19 +4988,19 @@ kove	KOVE	krek	KREK
 kow	KOW	krem	KREM
 kowodone	KOWODONE	kremas	KREMAS
 kowonaviris	KOWONAVIRIS	kremol	KREMOL
-kowonpi	KOWONPI	krepi	KREPI
-	KOWOnPI	krepisaj	KREPISAJ
+kowonpi	KOWOnPI	krepi	KREPI
+	KOWONPI	krepisaj	KREPISAJ
 kowos	KOWOS	krepisay	KREPISAY
-kowosol	KOWOSOL	kreson	KRESOn
-kowozyon	KOWOZYOn		KRESON
+kowosol	KOWOSOL	kreson	KRESON
+kowozyon	KOWOZYOn		KRESOn
 	KOWOZYON	kret	KRET
 koyefisyan	KOYEFISYAn	kreten	KRETEn
 	KOYEFISYAN		KRETEN
 koyo	KOYO	kretòn	KRETON
 koz	KOZ	kretyen	KRETYEN
 koze	KOZE		KRETYEn
-kozman	KOZMAn	kretyenvivan	KRETYEnVIVAN
-	KOZMAN		KRETYEnVIVAn
+kozman	KOZMAN	kretyenvivan	KRETYEnVIVAN
+	KOZMAn		KRETYEnVIVAn
 krab	KRAB		KRETYENVIVAn
 krabe	KRABE		KRETYENVIVAN
 krabinay	KRABINAY	kreve	KREVE
@@ -5018,20 +5016,20 @@ kran	KRAn	kribich	KRIBICh
 	KRAN	krible	KRIBLE
 kranp	KRAnP	krich	KRICh
 	KRANP	krik	KRIK
-kranpon	KRANPOn	kriket	KRIKET
-	KRAnPON	krim	KRIM
-kriminalite - labalenn
+kranpon	KRAnPOn	kriket	KRIKET
+	KRANPOn	krim	KRIM
+	KRAnPON	kriminalite	KRIMINALITE
+	KRANPON	kriminel	KRIMINEL
+krinolin - labank
 
-kriminalite	KRIMINALITE	kwatyoko	KWATYOKO
-kriminel	KRIMINEL	kwayan	KWAYAn
 krinolin	KRINOLIN		KWAYAN
 krinye	KRINYE	kwayans	KWAYAnS
 kripkrip	KRIPKRIP		KWAYANS
 kriptogam	KRIPTOGAM	kwazad	KWAZAD
 kripya	KRIPYA	kwaze	KWAZE
 krisifi	KRISIFI	kwazman	KWAZMAn
-krisifiksyon	KRISIFIKSYON		KWAZMAN
-	KRISIFIKSYOn	kwazye	KWAZYE
+krisifiksyon	KRISIFIKSYOn		KWAZMAN
+	KRISIFIKSYON	kwazye	KWAZYE
 krisifye	KRISIFYE	kwe	KWE
 kristal	KRISTAL	kwedek	KWEDEK
 kristalen	KRISTALEn	kwen	KWEN
@@ -5073,13 +5071,13 @@ kwape	KWAPE	kyos	KYOS
 kwaryann	KWARYANN	la	LA
 	KWARYAnN	laba	LABA
 kwasans	KWASANS	labab	LABAB
-	KWASAnS	labalenn	LABALEnN
-labalenn - lak
+	KWASAnS	labalenn	LABALENN
+kwatyoko	KWATYOKO		LABALEnN
+kwayan	KWAYAn	labank	LABAnK
+labank - lakansyel
 
-	LABALENN	lafanmi	LAFAnMI
-labank	LABAnK		LAFANMI
-	LABANK	lafen	LAFEN
-labanye	LABANYE		LAFEn
+	LABANK	lafen	LAFEn
+labanye	LABANYE		LAFEN
 labapen	LABAPEn	laferye	LAFERYE
 	LABAPEN	lafimen	LAFIMEn
 labatwa	LABATWA		LAFIMEN
@@ -5087,10 +5085,10 @@ labenediksyon	LABENEDIKSYON	lafliksyon	LAFLIKSYOn
 	LABENEDIKSYOn		LAFLIKSYON
 labib	LABIB	lafon	LAFON
 labichen	LABIChEN		LAFOn
-	LABIChEn	lafontan	LAFOnTAn
-labim	LABIM		LAFONTAN
-lablanchet	LABLAnChET		LAFONTAn
-	LABLANChET		LAFOnTAN
+	LABIChEn	lafontan	LAFONTAN
+labim	LABIM		LAFOnTAn
+lablanchet	LABLANChET		LAFONTAn
+	LABLAnChET		LAFOnTAN
 laboka	LABOKA	lafoset	LAFOSET
 laboratwa	LABORATWA	lafotin	LAFOTIN
 laborye	LABORYE	lafreche	LAFREChE
@@ -5102,53 +5100,53 @@ labrenn	LABREnN		LAFYAnT
 	LABRENN	lafyev	LAFYEV
 labrin	LABRIN	lagad	LAGAD
 labriz	LABRIZ	lagany	LAGANY
-labsent	LABSENT		LAGAnY
-	LABSEnT	lage	LAGE
+labsent	LABSEnT		LAGAnY
+	LABSENT	lage	LAGE
 lach	LACh	lago	LAGO
-lachanm	LAChAnM	lagojanis	LAGOJANIS
-	LAChANM	lagoni	LAGONI
+lachanm	LAChANM	lagojanis	LAGOJANIS
+	LAChAnM	lagoni	LAGONI
 lacharite	LAChARITE	lagonmbe	LAGONMBE
 lachas	LAChAS		LAGOnMBE
 lacho	LAChO	lagraba	LAGRABA
 lachoy	LAChOY	lagratel	LAGRATEL
-ladan	LADAN	lagrel	LAGREL
-	LADAn	lagrikilti	LAGRIKILTI
+ladan	LADAn	lagrel	LAGREL
+	LADAN	lagrikilti	LAGRIKILTI
 ladann	LADANN	lagwadap	LAGWADAP
 	LADAnN	laj	LAJ
-ladelivrans	LADELIVRAnS	lajan	LAJAN
-	LADELIVRANS		LAJAn
+ladelivrans	LADELIVRANS	lajan	LAJAN
+	LADELIVRAnS		LAJAn
 lademann	LADEMANN	laje	LAJE
-	LADEMAnN	lajeng	LAJENG
-ladennye	LADEnNYE		LAJEnG
+	LADEMAnN	lajeng	LAJEnG
+ladennye	LADEnNYE		LAJENG
 	LADENNYE	lajes	LAJES
 ladesalinyèn	LADESALINYEN	laji	LAJI
 ladesant	LADESAnT	lajistis	LAJISTIS
 	LADESANT	lajonis	LAJONIS
-ladouyet	LADOuYET	lajounen	LAJOuNEN
-ladres	LADRES		LAJOuNEn
+ladouyet	LADOuYET	lajounen	LAJOuNEn
+ladres	LADRES		LAJOuNEN
 ladyables	LADYABLES	lajwa	LAJWA
 lafami	LAFAMI	lak	LAK
-lakal - lanmes
+lafanmi	LAFAnMI	lakal	LAKAL
+	LAFANMI	lakansyel	LAKANSYEL
+lakansyel - lanmidon
 
-lakal	LAKAL		LANBE
-lakansyel	LAKANSYEL	lanbi	LANBI
-	LAKAnSYEL		LAnBI
-lakay	LAKAY	landemen	LANDEMEN
-laket	LAKET		LAnDEMEn
-lakilbit	LAKILBIT		LAnDEMEN
-lakilti	LAKILTI		LANDEMEn
+	LAKAnSYEL		LANBI
+lakay	LAKAY	landemen	LAnDEMEn
+laket	LAKET		LANDEMEn
+lakilbit	LAKILBIT		LANDEMEN
+lakilti	LAKILTI		LAnDEMEN
 lakizin	LAKIZIN	landmen	LANDMEN
-lakochon	LAKOChON		LAnDMEn
-	LAKOChOn		LANDMEn
-lakol	LAKOL		LAnDMEN
-lakolet	LAKOLET	landwat	LANDWAT
-lakoloni	LAKOLONI		LAnDWAT
+lakochon	LAKOChOn		LAnDMEN
+	LAKOChON		LAnDMEn
+lakol	LAKOL		LANDMEn
+lakolet	LAKOLET	landwat	LAnDWAT
+lakoloni	LAKOLONI		LANDWAT
 lakomedi	LAKOMEDI	lane	LANE
 lakot	LAKOT	lanej	LANEJ
-lakou	LAKOu	lanfe	LAnFE
-lakoz	LAKOZ		LANFE
-lakranp	LAKRAnP	lang	LANG
-	LAKRANP		LAnG
+lakou	LAKOu	lanfe	LANFE
+lakoz	LAKOZ		LAnFE
+lakranp	LAKRANP	lang	LANG
+	LAKRAnP		LAnG
 lakre	LAKRE	langaj	LAnGAJ
 laksatif	LAKSATIF		LANGAJ
 lakwa	LAKWA	langet	LAnGET
@@ -5163,68 +5161,68 @@ lalo	LALO	lanj	LAnJ
 lalwa	LALWA		LANJ
 lalwet	LALWET	lanjelis	LANJELIS
 lamagwa	LAMAGWA		LAnJELIS
-lamama	LAMAMA	lank	LAnK
-lamare	LAMARE		LANK
-lamarye	LAMARYE	lanm	LANM
-lamatinye	LAMATINYE		LAnM
-lamayol	LAMAYOL	lanman	LAnMAn
+lamama	LAMAMA	lank	LANK
+lamare	LAMARE		LAnK
+lamarye	LAMARYE	lanm	LAnM
+lamatinye	LAMATINYE		LANM
+lamayol	LAMAYOL	lanman	LAnMAN
 lamayot	LAMAYOT		LANMAn
-lame	LAME		LAnMAN
+lame	LAME		LAnMAn
 lameri	LAMERI		LANMAN
-lames	LAMES	lanme	LAnME
-lamitye	LAMITYE		LANME
+lames	LAMES	lanme	LANME
+lamitye	LAMITYE		LAnME
 lamo	LAMO	lanmed	LAnMED
 lamod	LAMOD		LANMED
 lamot	LAMOT	lanmen	LAnMEN
-lamou	LAMOu		LAnMEn
-lamveritab	LAMVERITAB		LANMEn
-lan	LAn		LANMEN
-	LAN	lanmeral	LANMERAL
-lanati	LANATI		LAnMERAL
-lanbe	LAnBE	lanmes	LAnMES
-lanmes - lasentsèn
+lamou	LAMOu		LANMEn
+lamveritab	LAMVERITAB		LAnMEn
+lan	LAN		LANMEN
+	LAn	lanmeral	LAnMERAL
+lanati	LANATI		LANMERAL
+lanbe	LANBE	lanmes	LAnMES
+	LAnBE		LANMES
+lanbi	LAnBI	lanmidon	LAnMIDON
+lanmidon - lasi
 
-	LANMES	lantouraj	LAnTOuRAJ
-lanmidon	LANMIDON		LANTOuRAJ
-	LAnMIDOn	lantouray	LAnTOuRAY
-	LAnMIDON		LANTOuRAY
+	LANMIDON	lantouray	LAnTOuRAY
+	LAnMIDOn		LANTOuRAY
 	LANMIDOn	lanve	LAnVE
 lanmitan	LANMITAN		LANVE
-	LAnMITAn	laparans	LAPARANS
-	LAnMITAN		LAPARAnS
-	LANMITAn	lapares	LAPARES
+	LAnMITAn	laparans	LAPARAnS
+	LANMITAn		LAPARANS
+	LAnMITAN	lapares	LAPARES
 lanmize	LANMIZE	lape	LAPE
 	LAnMIZE	lapech	LAPECh
-lanmo	LANMO	lapen	LAPEn
-	LAnMO		LAPEN
-lanmori	LAnMORI	laperez	LAPEREZ
-	LANMORI	lapesonn	LAPESOnN
-lanmou	LAnMOu		LAPESONN
-	LANMOu	lapipi	LAPIPI
-lanmyann	LANMYAnN	laplanch	LAPLAnCh
-	LANMYANN		LAPLANCh
-	LAnMYAnN	laplas	LAPLAS
-	LAnMYANN	laplenn	LAPLEnN
+lanmo	LANMO	lapen	LAPEN
+	LAnMO		LAPEn
+lanmori	LANMORI	laperez	LAPEREZ
+	LAnMORI	lapesonn	LAPESONN
+lanmou	LANMOu		LAPESOnN
+	LAnMOu	lapipi	LAPIPI
+lanmyann	LANMYANN	laplanch	LAPLANCh
+	LAnMYANN		LAPLAnCh
+	LANMYAnN	laplas	LAPLAS
+	LAnMYAnN	laplenn	LAPLEnN
 lannuit	LAnNUiT		LAPLENN
 	LANNUiT	lapli	LAPLI
-lannwit	LANNWIT	lapolis	LAPOLIS
-	LAnNWIT	lapos	LAPOS
+lannwit	LAnNWIT	lapolis	LAPOLIS
+	LANNWIT	lapos	LAPOS
 lanouriti	LANOuRITI	lapoula	LAPOuLA
-lanp	LANP	lapriye	LAPRIYE
-	LAnP	lapye	LAPYE
+lanp	LAnP	lapriye	LAPRIYE
+	LANP	lapye	LAPYE
 lanpere	LAnPERE	laraj	LARAJ
 	LANPERE	larak	LARAK
-lans	LAnS	larat	LARAT
-	LANS	larèn	LAREN
+lans	LANS	larat	LARAT
+	LAnS	larèn	LAREN
 lansan	LANSAN	larenks	LARENKS
 	LAnSAN		LAREnKS
-	LANSAn	larezonnen	LAREZONNEN
-	LAnSAn		LAREZOnNEN
-lanse	LANSE		LAREZONNEn
-	LAnSE		LAREZOnNEn
-lanteman	LANTEMAn	lari	LARI
+	LANSAn	larezonnen	LAREZOnNEN
+	LAnSAn		LAREZONNEn
+lanse	LAnSE		LAREZOnNEn
+	LANSE		LAREZONNEN
+lanteman	LANTEMAN	lari	LARI
 	LAnTEMAN	larim	LARIM
-	LANTEMAN	larivye	LARIVYE
+	LANTEMAn	larivye	LARIVYE
 	LAnTEMAn	las	LAS
 lantikite	LAnTIKITE	lasal	LASAL
 	LANTIKITE	lasante	LASANTE
@@ -5232,14 +5230,14 @@ lantiray	LANTIRAY		LASAnTE
 	LAnTIRAY	lase	LASE
 lantiy	LANTIY	laseg	LASEG
 	LAnTIY	lasel	LASEL
-lantman	LAnTMAn	lasent	LASENT
-	LANTMAn		LASEnT
-	LAnTMAN	lasentsèn	LASENTSEN
-	LANTMAN		LASEnTSEN
-laset - legba
+lantman	LANTMAN	lasent	LASENT
+	LAnTMAN		LASEnT
+	LANTMAn	lasentsèn	LASENTSEN
+	LAnTMAn		LASEnTSEN
+lantouraj	LANTOuRAJ	laset	LASET
+	LAnTOuRAJ	lasi	LASI
+lasibab - legen
 
-laset	LASET	lavangad	LAVANGAD
-lasi	LASI		LAVAnGAD
 lasibab	LASIBAB	lavant	LAVANT
 lasigwap	LASIGWAP		LAVAnT
 lasilab	LASILAB	lavaris	LAVARIS
@@ -5258,14 +5256,14 @@ lasyans	LASYAnS	laviwonndede	LAVIWOnNDEDE
 lasye	LASYE	lavman	LAVMAN
 lasyes	LASYES		LAVMAn
 latanye	LATANYE	lavni	LAVNI
-latanyen	LATANYEN	lavo	LAVO
-	LATANYEn	lavwa	LAVWA
+latanyen	LATANYEn	lavo	LAVO
+	LATANYEN	lavwa	LAVWA
 latchay	LATChAY	lavyej	LAVYEJ
 latche	LATChE	lawoch	LAWOCh
 latchouloulout	LATChOuLOuLOuT	lawon	LAWON
 late	LATE		LAWOn
-lateks	LATEKS	lawonn	LAWOnN
-lateng	LATEnG		LAWONN
+lateks	LATEKS	lawonn	LAWONN
+lateng	LATEnG		LAWOnN
 	LATENG	lawonte	LAWONTE
 lateras	LATERAS		LAWOnTE
 latere	LATERE	lawoujol	LAWOuJOL
@@ -5276,128 +5274,130 @@ latoti	LATOTI	layens	LAYENS
 latous	LATOuS		LAYEnS
 latousen	LATOuSEN	layite	LAYITE
 	LATOuSEn	layo	LAYO
-latranblad	LATRAnBLAD	laza	LAZA
-	LATRANBLAD	le	LE
+latranblad	LATRANBLAD	laza	LAZA
+	LATRAnBLAD	le	LE
 latrin	LATRIN	lebra	LEBRA
 latriye	LATRIYE	led	LED
 latya	LATYA	lede	LEDE
-latyaw	LATYAW	ledikasyon	LEDIKASYOn
-lav	LAV		LEDIKASYON
-lavabo	LAVABO	ledimanch	LEDIMANCh
-lavaj	LAVAJ		LEDIMAnCh
+latyaw	LATYAW	ledikasyon	LEDIKASYON
+lav	LAV		LEDIKASYOn
+lavabo	LAVABO	ledimanch	LEDIMAnCh
+lavaj	LAVAJ		LEDIMANCh
 lavalas	LAVALAS	lefini	LEFINI
 lavan	LAVAN	leg	LEG
 	LAVAn	legal	LEGAL
 lavandyez	LAVANDYEZ	legaye	LEGAYE
 	LAVAnDYEZ	legba	LEGBA
-legen - leta
+lavangad	LAVANGAD	legen	LEGEN
+	LAVAnGAD		LEGEn
+legeter - letan
 
-legen	LEGEn	lenguistik	LEnGUiSTIK
-	LEGEN		LENGUiSTIK
-legeter	LEGETER	lenj	LEnJ
-legim	LEGIM		LENJ
-legliz	LEGLIZ	lenjistis	LEnJISTIS
-legriyo	LEGRIYO		LENJISTIS
+legeter	LEGETER	lenj	LENJ
+legim	LEGIM		LEnJ
+legliz	LEGLIZ	lenjistis	LENJISTIS
+legriyo	LEGRIYO		LEnJISTIS
 leje	LEJE	lenkonduit	LEnKOnDUiT
-lejedi	LEJEDI		LENKONDUiT
+lejedi	LEJEDI		LEnKONDUiT
 lejeman	LEJEMAN		LENKOnDUiT
-	LEJEMAn		LEnKONDUiT
-lejitim	LEJITIM	lenn	LENN
-lekipay	LEKIPAY		LEnN
+	LEJEMAn		LENKONDUiT
+lejitim	LEJITIM	lenn	LEnN
+lekipay	LEKIPAY		LENN
 lekiri	LEKIRI	lennmi	LENNMI
 lekle	LEKLE		LEnNMI
 lekol	LEKOL	leno	LENO
 lekont	LEKONT	lenpresyon	LEnPRESYON
 	LEKOnT		LEnPRESYOn
-lekontre	LEKONTRE		LENPRESYON
-	LEKOnTRE		LENPRESYOn
-lekti	LEKTI	lento	LENTO
-lelendi	LELEnDI		LEnTO
-	LELENDI	lenzalot	LEnZALOT
-lelit	LELIT		LENZALOT
+lekontre	LEKONTRE		LENPRESYOn
+	LEKOnTRE		LENPRESYON
+lekti	LEKTI	lento	LEnTO
+lelendi	LELEnDI		LENTO
+	LELENDI	lenzalot	LENZALOT
+lelit	LELIT		LEnZALOT
 lemadi	LEMADI	lep	LEP
-leman	LEMAn	lepe	LEPE
-	LEMAN	lepedan	LEPEDAn
-lematen	LEMATEn		LEPEDAN
-	LEMATEN	lere	LERE
+leman	LEMAN	lepe	LEPE
+	LEMAn	lepedan	LEPEDAn
+lematen	LEMATEN		LEPEDAN
+	LEMATEn	lere	LERE
 lemekredi	LEMEKREDI	lerison	LERISOn
 lemo	LEMO		LERISON
-lemond	LEMOND	leritay	LERITAY
-	LEMOnD	les	LES
-lemonn	LEMOnN	lesansyel	LESAnSYEL
-	LEMONN		LESANSYEL
+lemond	LEMOnD	leritay	LERITAY
+	LEMOND	les	LES
+lemonn	LEMOnN	lesansyel	LESANSYEL
+	LEMONN		LESAnSYEL
 lemouch	LEMOuCh	lese	LESE
-lemwan	LEMWAn	lesiv	LESIV
-	LEMWAN	lesivye	LESIVYE
+lemwan	LEMWAN	lesiv	LESIV
+	LEMWAn	lesivye	LESIVYE
 lèn	LEN	lesklavaj	LESKLAVAJ
-lendeks	LENDEKS	lesko	LESKO
-	LEnDEKS	leskotit	LESKOTIT
-lendependans	LEnDEPEnDAnS	leson	LESON
-	LEnDEPENDAnS		LESOn
-	LENDEPEnDAnS	lespas	LESPAS
+lendeks	LEnDEKS	lesko	LESKO
+	LENDEKS	leskotit	LESKOTIT
+lendependans	LEnDEPEnDANS	leson	LESOn
+	LENDEPEnDANS		LESON
+	LEnDEPENDANS	lespas	LESPAS
 	LENDEPENDANS	lespes	LESPES
-	LENDEPENDAnS	lespinas	LESPINAS
-	LEnDEPENDANS	lespri	LESPRI
-	LENDEPEnDANS	lespwa	LESPWA
-	LEnDEPEnDANS	lestomak	LESTOMAK
+	LEnDEPEnDAnS	lespinas	LESPINAS
+	LENDEPEnDAnS	lespri	LESPRI
+	LEnDEPENDAnS	lespwa	LESPWA
+	LENDEPENDAnS	lestomak	LESTOMAK
 lendi	LEnDI	leswa	LESWA
 	LENDI	lesyel	LESYEL
 lenguis	LEnGUiS	let	LET
 	LENGUiS	leta	LETA
-letan - lizye
+lenguistik	LEnGUiSTIK	letan	LETAn
+	LENGUiSTIK		LETAN
+letanp - lizye
 
-letan	LETAN	like	LIKE
-	LETAn	likid	LIKID
 letanp	LETAnP	lim	LIM
 	LETANP	limen	LIMEN
 lete	LETE		LIMEn
 letenel	LETENEL	limewo	LIMEWO
-letenite	LETENITE	liminen	LIMINEn
-leti	LETI		LIMINEN
+letenite	LETENITE	liminen	LIMINEN
+leti	LETI		LIMINEn
 letiket	LETIKET	limit	LIMIT
-letranje	LETRAnJE	limon	LIMON
-	LETRANJE		LIMOn
+letranje	LETRAnJE	limon	LIMOn
+	LETRANJE		LIMON
 letre	LETRE	limonad	LIMONAD
-lev	LEV	limonnad	LIMONNAD
-levanjelizasyon	LEVAnJELIZASYON		LIMOnNAD
-	LEVANJELIZASYOn	limoralite	LIMORALITE
-	LEVAnJELIZASYOn	limye	LIMYE
-	LEVANJELIZASYON	linet	LINET
-levanjil	LEVANJIL	linive	LINIVE
-	LEVAnJIL	lis	LIS
-levasyon	LEVASYOn	lise	LISE
-	LEVASYON	lisife	LISIFE
-leve	LEVE	listre	LISTRE
-leveche	LEVEChE	listwa	LISTWA
-leven	LEVEn	lit	LIT
-	LEVEN	litani	LITANI
-levit	LEVIT	lite	LITE
-levye	LEVYE	liten	LITEN
-lewa	LEWA		LITEn
-lewouj	LEWOuJ	literati	LITERATI
-leyet	LEYET	litere	LITERE
-leyontis	LEYOnTIS	litiji	LITIJI
-	LEYONTIS	litijik	LITIJIK
-leyopa	LEYOPA	litlit	LITLIT
-lez	LEZ	litosfe	LITOSFE
-leza	LEZA	liv	LIV
-lezemilate	LEZEMILATE	live	LIVE
-lezo	LEZO	livrab	LIVRAB
-lezom	LEZOM	livre	LIVRE
-lezot	LEZOT	livrezon	LIVREZON
-li	LI		LIVREZOn
-lib	LIB	liy	LIY
-libera	LIBERA	liyen	LIYEn
-libete	LIBETE		LIYEN
-libido	LIBIDO	liyin	LIYIN
-libreri	LIBRERI	liyit	LIYIT
-lide	LIDE	liyorans	LIYORANS
-lig	LIG		LIYORAnS
-ligaman	LIGAMAn	lizaj	LIZAJ
-	LIGAMAN	lizib	LIZIB
-ligonde	LIGONDE	lizin	LIZIN
-	LIGOnDE	lizre	LIZRE
-lijyèn	LIJYEN	lizye	LIZYE
+lev	LEV	limonnad	LIMOnNAD
+levanjelizasyon	LEVANJELIZASYOn		LIMONNAD
+	LEVAnJELIZASYON	limoralite	LIMORALITE
+	LEVANJELIZASYON	limye	LIMYE
+	LEVAnJELIZASYOn	linet	LINET
+levanjil	LEVANJIL	ling	LINg
+	LEVAnJIL		LING
+levasyon	LEVASYOn	linive	LINIVE
+	LEVASYON	lis	LIS
+leve	LEVE	lise	LISE
+leveche	LEVEChE	lisife	LISIFE
+leven	LEVEN	listre	LISTRE
+	LEVEn	listwa	LISTWA
+levit	LEVIT	lit	LIT
+levye	LEVYE	litani	LITANI
+lewa	LEWA	lite	LITE
+lewouj	LEWOuJ	liten	LITEN
+leyet	LEYET		LITEn
+leyontis	LEYONTIS	literati	LITERATI
+	LEYOnTIS	litere	LITERE
+leyopa	LEYOPA	litiji	LITIJI
+lez	LEZ	litijik	LITIJIK
+leza	LEZA	litlit	LITLIT
+lezemilate	LEZEMILATE	litosfe	LITOSFE
+lezo	LEZO	liv	LIV
+lezom	LEZOM	live	LIVE
+lezot	LEZOT	livrab	LIVRAB
+li	LI	livre	LIVRE
+lib	LIB	livrezon	LIVREZOn
+libera	LIBERA		LIVREZON
+libete	LIBETE	liy	LIY
+libido	LIBIDO	liyen	LIYEn
+libreri	LIBRERI		LIYEN
+lide	LIDE	liyin	LIYIN
+lig	LIG	liyit	LIYIT
+ligaman	LIGAMAn	liyorans	LIYORAnS
+	LIGAMAN		LIYORANS
+ligonde	LIGONDE	lizaj	LIZAJ
+	LIGOnDE	lizib	LIZIB
+lijyèn	LIJYEN	lizin	LIZIN
+like	LIKE	lizre	LIZRE
+likid	LIKID	lizye	LIZYE
 lo - lwa
 
 lo	LO	lonjitid	LONJITID
@@ -5406,8 +5406,8 @@ lobedyans	LOBEDYANS		LOnJITID
 lobey	LOBEY		LOnMEn
 lobo	LOBO		LOnMEN
 lod	LOD		LONMEn
-lodyanse	LODYANSE	lonnen	LONNEN
-	LODYAnSE		LOnNEN
+lodyanse	LODYAnSE	lonnen	LONNEN
+	LODYANSE		LOnNEN
 logey	LOGEY		LONNEn
 loj	LOJ		LOnNEn
 loje	LOJE	lonnvi	LOnNVI

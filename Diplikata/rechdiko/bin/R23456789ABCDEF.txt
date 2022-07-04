@@ -74,7 +74,6 @@ GÔ: GÔ
 GÛ: GÛ
 HÂ: HÂ
 HÊ: HÊ
-HÜ: HÜ
 IJ: JI
 IK: KI
 IL: IL
@@ -234,7 +233,6 @@ GÔ: GÔ
 GÛ: GÛ
 HÂ: HÂ
 HÊ: HÊ
-HÜ: HÜ
 IJ: JI
 IK: KI
 IL: IL
@@ -350,6 +348,7 @@ BI: BI
 BO: BO
 BÂ: ÂB
     BÂ
+BÊ: BÊ
 AAB: ABA
 AAG: AGA
 AAL: ALA
@@ -589,6 +588,7 @@ BIL: BIL
      LIB
 BIM: BIM
 BIO: IBO
+BIP: BIP
 BIR: BRI
 BIS: BIS
 BIT: BIT
@@ -907,7 +907,6 @@ GZÔ: ZÔG
 GÂÛ: ÛGÂ
 GÂÜ: ÜGÂ
 HMÂ: HÂM
-HNÛ: HÛN
 HYÛ: HÛY
 HÂÂ: ÂHÂ
 HÂÇ: HÂÇ
@@ -944,6 +943,7 @@ ILT: LIT
 ILV: LIV
      VIL
 ILY: LIY
+ILÑ: LIÑ
 IMN: MIN
 IMP: PIM
 IMR: RIM
@@ -2820,6 +2820,7 @@ GGÂÊ: GÊGÂ
 GHÂÜ: HÜGÂ
 GIJO: JIGO
 GIJR: GRIJ
+GILN: LING
 GIMÊ: MÊGI
 GINZ: ZING
 GINÊ: GINÊ
