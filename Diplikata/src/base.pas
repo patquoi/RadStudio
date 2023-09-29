@@ -14,9 +14,7 @@ const NbCasesCote         =  15;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     =   2;
       NbLettresMaxMot     = NbCasesCote;
-
-      NbLettresDico       = 102567; // 102562; // 102476; // 102413; // 102251; // 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
-
+      NbLettresDico       = 104424; // 102567; // 102562; // 102476; // 102413; // 102251; // 102713; // 102272; // 102253; // 102237; // 102184; // 102038; // 101906; // 101875; // 101764; // 101418; // 101402; // 101396; // 101390; // 101383; // 101339; // 98553; // 98515; // 98504; // 98461; // 98413; // 98402; // vKA. Gwodiko
       BonusScrabble       = 50;
       NbMaxJokers         = 2;
       NbMaxChoixJokers    = 4; // v1.4.1 : S'il y a deux lettres réparties chacunes sur un joker et un jeton lettre alors il y a 4 possibilités.
@@ -424,7 +422,7 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
 
       // Constantes pour le dictionnaire
 
-      nbl : array [TNbLettres] of Integer             = (318,2607,8140,15630,18444,19264,14912,9657,6170,3641,2124,1092,448,120); // vKA : Référence du gwodiko
+      nbl : array [TNbLettres] of Integer            = (318,2607,8156,15675,18564,19509,15272,10071,6480,3784,2208,1170,490,120); // vKA : Référence du gwodiko
       stNomFichierDico                                = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                                = 'R23456789ABCDEF'; // ODS
       stVersionDico                                   = 'Gwodiko'; // vKA (créé v1.5.3)

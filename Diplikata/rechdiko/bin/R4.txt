@@ -202,6 +202,7 @@ AEFN: ANFE
       FANE
 AEFR: AFRE
 AEFS: EFAS
+AEFW: FEWA
 AEFZ: ZAFE
 AEFÇ: FAÇE
 AEGG: GAGE
@@ -288,6 +289,7 @@ AENV: ANVE
       AVEN
       NAVE
 AENW: ANWE
+      ENWA
 AEPR: APRE
       PARE
       RAPE
@@ -669,6 +671,7 @@ ASTÊ: SATÊ
 ASVÂ: AVÂS
 ASVÊ: SAVÊ
 ASVÔ: SAVÔ
+ASWÂ: ÂSWA
 ATTÔ: TATÔ
 ATVÂ: VÂTA
 ATYÂ: ÂTAY
@@ -677,6 +680,7 @@ AVYÔ: AVYÔ
 AVÂÇ: ÇAVÂ
 AWYÂ: WAYÂ
 AWÂÇ: ÂÇWA
+AWÇÊ: ÊÇWA
 BBEE: BEBE
 BBEÔ: BÔBE
 BBII: BIBI
