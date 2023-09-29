@@ -154,8 +154,7 @@ with FormMain do
       end;
     end
   end;
-  FreeAndNil(bm);
-  FreeAndNil(Rect);
+  bm.Free;
   end
 end;
 

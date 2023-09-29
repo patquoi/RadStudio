@@ -3,19 +3,17 @@ object FormJoueurs: TFormJoueurs
   Top = 0
   BorderStyle = bsDialog
   Caption = 'D'#233'finition des joueurs'
-  ClientHeight = 247
-  ClientWidth = 409
+  ClientHeight = 214
+  ClientWidth = 395
   Color = clGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWhite
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
     Left = 8

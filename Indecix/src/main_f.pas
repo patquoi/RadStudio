@@ -377,7 +377,6 @@ if tm.Enabled and (tm.Tag = 1) then
     end;
   end;
 FreeAndNil(bm);
-FreeAndNil(Rect);
 end;
 
 procedure TFormMain.PaintBoxDRAJMouseDown(Sender: TObject;
@@ -468,7 +467,6 @@ if pb.Tag > 0 then
   VirtualImageListBtn.GetBitmap(pb.Tag-1, bm);
 pb.Canvas.StretchDraw(Rect, bm);
 FreeAndNil(bm);
-FreeAndNil(Rect);
 end;
 
 procedure TFormMain.PaintBoxDePaint(Sender: TObject);
@@ -488,7 +486,6 @@ if p.DeCrt > ndIndefini then
   VirtualImageListDes.GetBitmap(Ord(p.Des[p.DeCrt].Face)-1, bm);
 pb.Canvas.StretchDraw(Rect, bm);
 FreeAndNil(bm);
-FreeAndNil(Rect);
 end;
 
 procedure TFormMain.PaintBoxGrilleMouseDown(Sender: TObject;

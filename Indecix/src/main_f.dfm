@@ -14,12 +14,10 @@ object FormMain: TFormMain
   Font.Name = 'Impact'
   Font.Style = []
   Menu = MainMenu
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 23
   object PaintBoxGrille: TPaintBox
     Left = 256
@@ -327,6 +325,8 @@ object FormMain: TFormMain
     Width = 896
     Height = 19
     Panels = <>
+    ExplicitTop = 575
+    ExplicitWidth = 882
   end
   object ImageCollection: TImageCollection
     Images = <
@@ -27983,607 +27983,505 @@ object FormMain: TFormMain
     end
   end
   object VirtualImageListChf: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 0
         CollectionName = 'Chiffres\00'
-        Disabled = False
         Name = '00'
       end
       item
         CollectionIndex = 1
         CollectionName = 'Chiffres\01'
-        Disabled = False
         Name = '01'
       end
       item
         CollectionIndex = 2
         CollectionName = 'Chiffres\02'
-        Disabled = False
         Name = '02'
       end
       item
         CollectionIndex = 3
         CollectionName = 'Chiffres\03'
-        Disabled = False
         Name = '03'
       end
       item
         CollectionIndex = 4
         CollectionName = 'Chiffres\04'
-        Disabled = False
         Name = '04'
       end
       item
         CollectionIndex = 5
         CollectionName = 'Chiffres\05'
-        Disabled = False
         Name = '05'
       end
       item
         CollectionIndex = 6
         CollectionName = 'Chiffres\06'
-        Disabled = False
         Name = '06'
       end
       item
         CollectionIndex = 7
         CollectionName = 'Chiffres\07'
-        Disabled = False
         Name = '07'
       end
       item
         CollectionIndex = 8
         CollectionName = 'Chiffres\08'
-        Disabled = False
         Name = '08'
       end
       item
         CollectionIndex = 9
         CollectionName = 'Chiffres\09'
-        Disabled = False
         Name = '09'
       end
       item
         CollectionIndex = 10
         CollectionName = 'Chiffres\10'
-        Disabled = False
         Name = '10'
       end
       item
         CollectionIndex = 11
         CollectionName = 'Chiffres\11'
-        Disabled = False
         Name = '11'
       end
       item
         CollectionIndex = 12
         CollectionName = 'Chiffres\12'
-        Disabled = False
         Name = '12'
       end
       item
         CollectionIndex = 13
         CollectionName = 'Chiffres\13'
-        Disabled = False
         Name = '13'
       end
       item
         CollectionIndex = 14
         CollectionName = 'Chiffres\14'
-        Disabled = False
         Name = '14'
       end
       item
         CollectionIndex = 15
         CollectionName = 'Chiffres\15'
-        Disabled = False
         Name = '15'
       end
       item
         CollectionIndex = 16
         CollectionName = 'Chiffres\16'
-        Disabled = False
         Name = '16'
       end
       item
         CollectionIndex = 17
         CollectionName = 'Chiffres\17'
-        Disabled = False
         Name = '17'
       end
       item
         CollectionIndex = 18
         CollectionName = 'Chiffres\18'
-        Disabled = False
         Name = '18'
       end
       item
         CollectionIndex = 19
         CollectionName = 'Chiffres\19'
-        Disabled = False
         Name = '19'
       end
       item
         CollectionIndex = 20
         CollectionName = 'Chiffres\20'
-        Disabled = False
         Name = '20'
       end
       item
         CollectionIndex = 21
         CollectionName = 'Chiffres\21'
-        Disabled = False
         Name = '21'
       end
       item
         CollectionIndex = 22
         CollectionName = 'Chiffres\22'
-        Disabled = False
         Name = '22'
       end
       item
         CollectionIndex = 23
         CollectionName = 'Chiffres\23'
-        Disabled = False
         Name = '23'
       end
       item
         CollectionIndex = 24
         CollectionName = 'Chiffres\24'
-        Disabled = False
         Name = '24'
       end
       item
         CollectionIndex = 25
         CollectionName = 'Chiffres\25'
-        Disabled = False
         Name = '25'
       end
       item
         CollectionIndex = 26
         CollectionName = 'Chiffres\26'
-        Disabled = False
         Name = '26'
       end
       item
         CollectionIndex = 27
         CollectionName = 'Chiffres\27'
-        Disabled = False
         Name = '27'
       end
       item
         CollectionIndex = 28
         CollectionName = 'Chiffres\28'
-        Disabled = False
         Name = '28'
       end
       item
         CollectionIndex = 29
         CollectionName = 'Chiffres\29'
-        Disabled = False
         Name = '29'
       end
       item
         CollectionIndex = 30
         CollectionName = 'Chiffres\30'
-        Disabled = False
         Name = '30'
       end
       item
         CollectionIndex = 31
         CollectionName = 'Chiffres\31'
-        Disabled = False
         Name = '31'
       end
       item
         CollectionIndex = 32
         CollectionName = 'Chiffres\32'
-        Disabled = False
         Name = '32'
       end
       item
         CollectionIndex = 33
         CollectionName = 'Chiffres\33'
-        Disabled = False
         Name = '33'
       end
       item
         CollectionIndex = 34
         CollectionName = 'Chiffres\34'
-        Disabled = False
         Name = '34'
       end
       item
         CollectionIndex = 35
         CollectionName = 'Chiffres\35'
-        Disabled = False
         Name = '35'
       end
       item
         CollectionIndex = 36
         CollectionName = 'Chiffres\36'
-        Disabled = False
         Name = '36'
       end
       item
         CollectionIndex = 37
         CollectionName = 'Chiffres\37'
-        Disabled = False
         Name = '37'
       end
       item
         CollectionIndex = 38
         CollectionName = 'Chiffres\38'
-        Disabled = False
         Name = '38'
       end
       item
         CollectionIndex = 39
         CollectionName = 'Chiffres\39'
-        Disabled = False
         Name = '39'
       end
       item
         CollectionIndex = 40
         CollectionName = 'Chiffres\40'
-        Disabled = False
         Name = '40'
       end
       item
         CollectionIndex = 41
         CollectionName = 'Chiffres\41'
-        Disabled = False
         Name = '41'
       end
       item
         CollectionIndex = 42
         CollectionName = 'Chiffres\42'
-        Disabled = False
         Name = '42'
       end
       item
         CollectionIndex = 43
         CollectionName = 'Chiffres\43'
-        Disabled = False
         Name = '43'
       end
       item
         CollectionIndex = 44
         CollectionName = 'Chiffres\44'
-        Disabled = False
         Name = '44'
       end
       item
         CollectionIndex = 45
         CollectionName = 'Chiffres\45'
-        Disabled = False
         Name = '45'
       end
       item
         CollectionIndex = 46
         CollectionName = 'Chiffres\46'
-        Disabled = False
         Name = '46'
       end
       item
         CollectionIndex = 47
         CollectionName = 'Chiffres\47'
-        Disabled = False
         Name = '47'
       end
       item
         CollectionIndex = 48
         CollectionName = 'Chiffres\48'
-        Disabled = False
         Name = '48'
       end
       item
         CollectionIndex = 49
         CollectionName = 'Chiffres\49'
-        Disabled = False
         Name = '49'
       end
       item
         CollectionIndex = 50
         CollectionName = 'Chiffres\50'
-        Disabled = False
         Name = '50'
       end
       item
         CollectionIndex = 51
         CollectionName = 'Chiffres\51'
-        Disabled = False
         Name = '51'
       end
       item
         CollectionIndex = 52
         CollectionName = 'Chiffres\52'
-        Disabled = False
         Name = '52'
       end
       item
         CollectionIndex = 53
         CollectionName = 'Chiffres\53'
-        Disabled = False
         Name = '53'
       end
       item
         CollectionIndex = 54
         CollectionName = 'Chiffres\54'
-        Disabled = False
         Name = '54'
       end
       item
         CollectionIndex = 55
         CollectionName = 'Chiffres\55'
-        Disabled = False
         Name = '55'
       end
       item
         CollectionIndex = 56
         CollectionName = 'Chiffres\56'
-        Disabled = False
         Name = '56'
       end
       item
         CollectionIndex = 57
         CollectionName = 'Chiffres\57'
-        Disabled = False
         Name = '57'
       end
       item
         CollectionIndex = 58
         CollectionName = 'Chiffres\58'
-        Disabled = False
         Name = '58'
       end
       item
         CollectionIndex = 59
         CollectionName = 'Chiffres\59'
-        Disabled = False
         Name = '59'
       end
       item
         CollectionIndex = 60
         CollectionName = 'Chiffres\60'
-        Disabled = False
         Name = '60'
       end
       item
         CollectionIndex = 61
         CollectionName = 'Chiffres\61'
-        Disabled = False
         Name = '61'
       end
       item
         CollectionIndex = 62
         CollectionName = 'Chiffres\62'
-        Disabled = False
         Name = '62'
       end
       item
         CollectionIndex = 63
         CollectionName = 'Chiffres\63'
-        Disabled = False
         Name = '63'
       end
       item
         CollectionIndex = 64
         CollectionName = 'Chiffres\64'
-        Disabled = False
         Name = '64'
       end
       item
         CollectionIndex = 65
         CollectionName = 'Chiffres\65'
-        Disabled = False
         Name = '65'
       end
       item
         CollectionIndex = 66
         CollectionName = 'Chiffres\66'
-        Disabled = False
         Name = '66'
       end
       item
         CollectionIndex = 67
         CollectionName = 'Chiffres\67'
-        Disabled = False
         Name = '67'
       end
       item
         CollectionIndex = 68
         CollectionName = 'Chiffres\68'
-        Disabled = False
         Name = '68'
       end
       item
         CollectionIndex = 69
         CollectionName = 'Chiffres\69'
-        Disabled = False
         Name = '69'
       end
       item
         CollectionIndex = 70
         CollectionName = 'Chiffres\70'
-        Disabled = False
         Name = '70'
       end
       item
         CollectionIndex = 71
         CollectionName = 'Chiffres\71'
-        Disabled = False
         Name = '71'
       end
       item
         CollectionIndex = 72
         CollectionName = 'Chiffres\72'
-        Disabled = False
         Name = '72'
       end
       item
         CollectionIndex = 73
         CollectionName = 'Chiffres\73'
-        Disabled = False
         Name = '73'
       end
       item
         CollectionIndex = 74
         CollectionName = 'Chiffres\74'
-        Disabled = False
         Name = '74'
       end
       item
         CollectionIndex = 75
         CollectionName = 'Chiffres\75'
-        Disabled = False
         Name = '75'
       end
       item
         CollectionIndex = 76
         CollectionName = 'Chiffres\76'
-        Disabled = False
         Name = '76'
       end
       item
         CollectionIndex = 77
         CollectionName = 'Chiffres\77'
-        Disabled = False
         Name = '77'
       end
       item
         CollectionIndex = 78
         CollectionName = 'Chiffres\78'
-        Disabled = False
         Name = '78'
       end
       item
         CollectionIndex = 79
         CollectionName = 'Chiffres\79'
-        Disabled = False
         Name = '79'
       end
       item
         CollectionIndex = 80
         CollectionName = 'Chiffres\80'
-        Disabled = False
         Name = '80'
       end
       item
         CollectionIndex = 81
         CollectionName = 'Chiffres\81'
-        Disabled = False
         Name = '81'
       end
       item
         CollectionIndex = 82
         CollectionName = 'Chiffres\82'
-        Disabled = False
         Name = '82'
       end
       item
         CollectionIndex = 83
         CollectionName = 'Chiffres\83'
-        Disabled = False
         Name = '83'
       end
       item
         CollectionIndex = 84
         CollectionName = 'Chiffres\84'
-        Disabled = False
         Name = '84'
       end
       item
         CollectionIndex = 85
         CollectionName = 'Chiffres\85'
-        Disabled = False
         Name = '85'
       end
       item
         CollectionIndex = 86
         CollectionName = 'Chiffres\86'
-        Disabled = False
         Name = '86'
       end
       item
         CollectionIndex = 87
         CollectionName = 'Chiffres\87'
-        Disabled = False
         Name = '87'
       end
       item
         CollectionIndex = 88
         CollectionName = 'Chiffres\88'
-        Disabled = False
         Name = '88'
       end
       item
         CollectionIndex = 89
         CollectionName = 'Chiffres\89'
-        Disabled = False
         Name = '89'
       end
       item
         CollectionIndex = 90
         CollectionName = 'Chiffres\90'
-        Disabled = False
         Name = '90'
       end
       item
         CollectionIndex = 91
         CollectionName = 'Chiffres\91'
-        Disabled = False
         Name = '91'
       end
       item
         CollectionIndex = 92
         CollectionName = 'Chiffres\92'
-        Disabled = False
         Name = '92'
       end
       item
         CollectionIndex = 93
         CollectionName = 'Chiffres\93'
-        Disabled = False
         Name = '93'
       end
       item
         CollectionIndex = 94
         CollectionName = 'Chiffres\94'
-        Disabled = False
         Name = '94'
       end
       item
         CollectionIndex = 95
         CollectionName = 'Chiffres\95'
-        Disabled = False
         Name = '95'
       end
       item
         CollectionIndex = 96
         CollectionName = 'Chiffres\96'
-        Disabled = False
         Name = '96'
       end
       item
         CollectionIndex = 97
         CollectionName = 'Chiffres\97'
-        Disabled = False
         Name = '97'
       end
       item
         CollectionIndex = 98
         CollectionName = 'Chiffres\98'
-        Disabled = False
         Name = '98'
       end
       item
         CollectionIndex = 99
         CollectionName = 'Chiffres\99'
-        Disabled = False
         Name = '99'
       end>
     ImageCollection = ImageCollection
@@ -28593,67 +28491,55 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListFnd: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 106
         CollectionName = 'Fonds\Fond_0_noir'
-        Disabled = False
         Name = 'Fond_0_noir'
       end
       item
         CollectionIndex = 107
         CollectionName = 'Fonds\Fond_1_ciel'
-        Disabled = False
         Name = 'Fond_1_ciel'
       end
       item
         CollectionIndex = 108
         CollectionName = 'Fonds\Fond_2_Magenta'
-        Disabled = False
         Name = 'Fond_2_Magenta'
       end
       item
         CollectionIndex = 109
         CollectionName = 'Fonds\Fond_3_orange'
-        Disabled = False
         Name = 'Fond_3_orange'
       end
       item
         CollectionIndex = 110
         CollectionName = 'Fonds\Fond_4_rouge'
-        Disabled = False
         Name = 'Fond_4_rouge'
       end
       item
         CollectionIndex = 111
         CollectionName = 'Fonds\Fond_5_jaune'
-        Disabled = False
         Name = 'Fond_5_jaune'
       end
       item
         CollectionIndex = 112
         CollectionName = 'Fonds\Fond_6_vert'
-        Disabled = False
         Name = 'Fond_6_vert'
       end
       item
         CollectionIndex = 113
         CollectionName = 'Fonds\Fond_7_pourpre'
-        Disabled = False
         Name = 'Fond_7_pourpre'
       end
       item
         CollectionIndex = 114
         CollectionName = 'Fonds\Fond_8_blanc'
-        Disabled = False
         Name = 'Fond_8_blanc'
       end
       item
         CollectionIndex = 115
         CollectionName = 'Fonds\Fond_9_gris'
-        Disabled = False
         Name = 'Fond_9_gris'
       end>
     ImageCollection = ImageCollection
@@ -28663,43 +28549,35 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListDes: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 100
         CollectionName = 'D'#233's\D'#233'1'
-        Disabled = False
         Name = 'D'#233'1'
       end
       item
         CollectionIndex = 101
         CollectionName = 'D'#233's\D'#233'2'
-        Disabled = False
         Name = 'D'#233'2'
       end
       item
         CollectionIndex = 102
         CollectionName = 'D'#233's\D'#233'3'
-        Disabled = False
         Name = 'D'#233'3'
       end
       item
         CollectionIndex = 103
         CollectionName = 'D'#233's\D'#233'4'
-        Disabled = False
         Name = 'D'#233'4'
       end
       item
         CollectionIndex = 104
         CollectionName = 'D'#233's\D'#233'5'
-        Disabled = False
         Name = 'D'#233'5'
       end
       item
         CollectionIndex = 105
         CollectionName = 'D'#233's\D'#233'6'
-        Disabled = False
         Name = 'D'#233'6'
       end>
     ImageCollection = ImageCollection
@@ -28709,55 +28587,45 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListFde: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 119
         CollectionName = 'FondsD'#233'\FondD'#233'_0'
-        Disabled = False
         Name = 'FondD'#233'_0'
       end
       item
         CollectionIndex = 120
         CollectionName = 'FondsD'#233'\FondD'#233'_1'
-        Disabled = False
         Name = 'FondD'#233'_1'
       end
       item
         CollectionIndex = 121
         CollectionName = 'FondsD'#233'\FondD'#233'_2'
-        Disabled = False
         Name = 'FondD'#233'_2'
       end
       item
         CollectionIndex = 122
         CollectionName = 'FondsD'#233'\FondD'#233'_3'
-        Disabled = False
         Name = 'FondD'#233'_3'
       end
       item
         CollectionIndex = 123
         CollectionName = 'FondsD'#233'\FondD'#233'_4'
-        Disabled = False
         Name = 'FondD'#233'_4'
       end
       item
         CollectionIndex = 124
         CollectionName = 'FondsD'#233'\FondD'#233'_5'
-        Disabled = False
         Name = 'FondD'#233'_5'
       end
       item
         CollectionIndex = 125
         CollectionName = 'FondsD'#233'\FondD'#233'_6'
-        Disabled = False
         Name = 'FondD'#233'_6'
       end
       item
         CollectionIndex = 126
         CollectionName = 'FondsD'#233'\FondD'#233'_7'
-        Disabled = False
         Name = 'FondD'#233'_7'
       end>
     ImageCollection = ImageCollection
@@ -28774,19 +28642,15 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListBtn: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 127
         CollectionName = 'Boutons\go'
-        Disabled = False
         Name = 'go'
       end
       item
         CollectionIndex = 128
         CollectionName = 'Boutons\stop'
-        Disabled = False
         Name = 'stop'
       end>
     ImageCollection = ImageCollection
@@ -28796,19 +28660,15 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListTjr: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 116
         CollectionName = 'Types\Type_0_Humain'
-        Disabled = False
         Name = 'Type_0_Humain'
       end
       item
         CollectionIndex = 117
         CollectionName = 'Types\Type_1_Automate'
-        Disabled = False
         Name = 'Type_1_Automate'
       end>
     ImageCollection = ImageCollection
@@ -28818,55 +28678,45 @@ object FormMain: TFormMain
     Top = 64
   end
   object VirtualImageListTDe: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 139
         CollectionName = 'ToursD'#233'\TourD'#233'_0'
-        Disabled = False
         Name = 'TourD'#233'_0'
       end
       item
         CollectionIndex = 140
         CollectionName = 'ToursD'#233'\TourD'#233'_1'
-        Disabled = False
         Name = 'TourD'#233'_1'
       end
       item
         CollectionIndex = 141
         CollectionName = 'ToursD'#233'\TourD'#233'_2'
-        Disabled = False
         Name = 'TourD'#233'_2'
       end
       item
         CollectionIndex = 142
         CollectionName = 'ToursD'#233'\TourD'#233'_3'
-        Disabled = False
         Name = 'TourD'#233'_3'
       end
       item
         CollectionIndex = 143
         CollectionName = 'ToursD'#233'\TourD'#233'_4'
-        Disabled = False
         Name = 'TourD'#233'_4'
       end
       item
         CollectionIndex = 144
         CollectionName = 'ToursD'#233'\TourD'#233'_5'
-        Disabled = False
         Name = 'TourD'#233'_5'
       end
       item
         CollectionIndex = 145
         CollectionName = 'ToursD'#233'\TourD'#233'_6'
-        Disabled = False
         Name = 'TourD'#233'_6'
       end
       item
         CollectionIndex = 146
         CollectionName = 'ToursD'#233'\TourD'#233'_7'
-        Disabled = False
         Name = 'TourD'#233'_7'
       end>
     ImageCollection = ImageCollection
@@ -28876,67 +28726,55 @@ object FormMain: TFormMain
     Top = 16
   end
   object VirtualImageListSte: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 129
         CollectionName = 'Stars\Star_0_Noir'
-        Disabled = False
         Name = 'Star_0_Noir'
       end
       item
         CollectionIndex = 130
         CollectionName = 'Stars\Star_1_Bleu'
-        Disabled = False
         Name = 'Star_1_Bleu'
       end
       item
         CollectionIndex = 131
         CollectionName = 'Stars\Star_2_Magenta'
-        Disabled = False
         Name = 'Star_2_Magenta'
       end
       item
         CollectionIndex = 132
         CollectionName = 'Stars\Star_3_Orange'
-        Disabled = False
         Name = 'Star_3_Orange'
       end
       item
         CollectionIndex = 133
         CollectionName = 'Stars\Star_4_Rouge'
-        Disabled = False
         Name = 'Star_4_Rouge'
       end
       item
         CollectionIndex = 134
         CollectionName = 'Stars\Star_5_Jaune'
-        Disabled = False
         Name = 'Star_5_Jaune'
       end
       item
         CollectionIndex = 135
         CollectionName = 'Stars\Star_6_Vert'
-        Disabled = False
         Name = 'Star_6_Vert'
       end
       item
         CollectionIndex = 136
         CollectionName = 'Stars\Star_7_Pourpre'
-        Disabled = False
         Name = 'Star_7_Pourpre'
       end
       item
         CollectionIndex = 137
         CollectionName = 'Stars\Star_8_Blanc'
-        Disabled = False
         Name = 'Star_8_Blanc'
       end
       item
         CollectionIndex = 138
         CollectionName = 'Stars\Star_9_Gris'
-        Disabled = False
         Name = 'Star_9_Gris'
       end>
     ImageCollection = ImageCollection
