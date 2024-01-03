@@ -8,8 +8,8 @@ const NbCasesCote         =  15;
 
       NbLettresMinMot     = 2;
       NbLettresMaxMot     = NbCasesCote;
-      NbLettresDico       = 4031818; // 3942506; // 3942512 // 3867567 // 3791166 // 3688194
-	    stVersionDico       = 'ODS8'; // 'ODS7' // 'ODS6' // 'ODS5' // 'ODS4'
+      NbLettresDico       = 4080472; // 4031818; // 3942506; // 3942512 // 3867567 // 3791166 // 3688194
+	    stVersionDico       = 'ODS9'; // 'ODS8'; // 'ODS7' // 'ODS6' // 'ODS5' // 'ODS4'
 //----------------------------------------------------------------------------
 type  TNbLettres           = NbLettresMinMot..NbLettresMaxMot;
       TIndexDico           = 0..NbLettresDico-1;
@@ -35,7 +35,8 @@ type  TNbLettres           = NbLettresMinMot..NbLettresMaxMot;
       end{class TDico};
 //---------------------------------------------------------------------------
 const // Constantes pour le dictionnaire
-      nbl : array [TNbLettres] of Integer            = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // ODS8
+      nbl : array [TNbLettres] of Integer            = (162,1917,10628,40295,109068,227885,388696,542871,637360,643764,564948,433498,295960,183420); // ODS9
+                                                     //(162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // ODS8
       Puiss26 : array [0..4]              of Integer = (1,26,676,17576,456976);
       stNomFichierDico                               = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                               = 'R23456789ABCDEF'; // ODS
@@ -109,9 +110,9 @@ try
         Panel.Repaint;
         end
     end;
-    Dico[NbLettresDico-3]:='N'; // ODS8 (3 lettres non stockées);
-    Dico[NbLettresDico-2]:='N'; // ODS8 (3 lettres non stockées);
-    Dico[NbLettresDico-1]:='E'; // ODS8 (3 lettres non stockées);
+    Dico[NbLettresDico-3]:='N'; // ODS9 (3 lettres non stockées);
+    Dico[NbLettresDico-2]:='N'; // ODS9 (3 lettres non stockées);
+    Dico[NbLettresDico-1]:='E'; // ODS9 (3 lettres non stockées);
 
     AssignFile(tfd, ExtractFilePath(ParamStr(0))+'Dico.js');
     ReWrite(tfd);

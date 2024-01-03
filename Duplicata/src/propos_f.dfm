@@ -12,13 +12,11 @@ object FormAPropos: TFormAPropos
   Font.Name = 'Tahoma'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClick = AllClick
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object Image: TImage
     Left = 11
@@ -1635,7 +1633,7 @@ object FormAPropos: TFormAPropos
     Left = 0
     Top = 87
     Width = 353
-    Height = 90
+    Height = 94
     TabStop = False
     Alignment = taCenter
     BevelInner = bvNone

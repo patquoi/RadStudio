@@ -1,0 +1,14 @@
+type 2.txt | sort > 2t.txt
+type 3.txt | sort > 3t.txt
+type 4.txt | sort > 4t.txt
+type 5.txt | sort > 5t.txt
+type 6.txt | sort > 6t.txt
+type 7.txt | sort > 7t.txt
+type 8.txt | sort > 8t.txt
+type 9.txt | sort > 9t.txt
+type 10.txt | sort > 10t.txt
+type 11.txt | sort > 11t.txt
+type 12.txt | sort > 12t.txt
+type 13.txt | sort > 13t.txt
+type 14.txt | sort > 14t.txt
+type 15.txt | sort > 15t.txt

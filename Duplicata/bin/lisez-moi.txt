@@ -18,7 +18,7 @@ Cependant, une résolution de 1024x768 est fortement recommandée.
 CONTENU
 
 Duplicata est fourni :
- - avec l'ODS 8ème édition (2020) comme dictionnaire de référence,
+ - avec l'ODS 9ème édition (2024) comme dictionnaire de référence,
  - avec l'archive compressée des sources du programme (Duplicata.zip).
 
 DESINSTALLATION
@@ -87,6 +87,9 @@ procédez comme suit :
    il s'agit de "file:///C:/Program%20Files/Patquoi.fr/Duplicata/html/".
 
 HISTORIQUE DES VERSIONS
+
+Version 1.10 - 03/01/2024
+ - Le dictionnaire de référence est l'ODS9 (4867 mots ajoutés et 64 retirés).
 
 Version 1.9.2 - 06/06/2020
  - Sous Windows XP, le fichier Duplicata.ini est désormais stocké dans
@@ -860,4 +863,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 6 juin 2020.
+Dernière mise à jour le 3 janvier 2024.

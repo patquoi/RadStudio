@@ -30,7 +30,7 @@ type
     TimerEnabled : Boolean; // v1.5
     NbJokers : Integer;
     PosJoker : array [TPositionCritere] of TPositionCritere;
-    slDelta8 : TStringList; // v1.8 // v1.9 (8)
+    slDelta9 : TStringList; // v1.8 // v1.9 (8) // v1.10 (9)
     procedure LettresJokersEnMinuscules(var stAnagramme : String; const stTirage : String); // v1.8.10
     procedure Recherche(stTirage : String); // v1.8.2 : plus de paramètre ModeRecherche
   public
@@ -144,7 +144,7 @@ try
         // WriteLn(f, Format('%s ', [p.Dico.stMotDico(Length(stTirage), IndexMot)])); // v1.4.6
         stMot:=p.Dico.stMotDico(Length(stTirage), IndexMot);
         LettresJokersEnMinuscules(stMot, Edit.Text); // v1.8.10 : on met en minuscules les lettres de jokers
-        if slDelta8.IndexOf(stMot)>-1 then Memo.Lines.Add('*'+stMot) // v1.8
+        if slDelta9.IndexOf(stMot)>-1 then Memo.Lines.Add('*'+stMot) // v1.8 // v1.10 (9)
         else Memo.Lines.Add(stMot); // v1.4.6
         Inc(NbMotsTrouves);
         with FormPatience do
@@ -215,7 +215,7 @@ finally
   WriteLn(f, Format('%d mots trouvé(s)', [NbMotsTrouves]));
   CloseFile(f);
   *)
-  StatusBar.SimpleText:=Format('%d mots trouvé(s). (*) Nouveauté ODS8.', [NbMotsTrouves]); // v1.4.6. v1.8 : ajout de ' (*) Nouveauté ODS7.' // v1.9 (ODS8)
+  StatusBar.SimpleText:=Format('%d mots trouvé(s). (*) Nouveauté ODS9.', [NbMotsTrouves]); // v1.4.6. v1.8 : ajout de ' (*) Nouveauté ODS7.' // v1.9 (ODS8) // v1.10 (ODS9)
   With FormPatience do
     begin
     Close;
@@ -247,15 +247,16 @@ end;
 procedure TFormRechercheMots.FormCreate(Sender: TObject);
 begin
 TimerEnabled:=False; // v1.5
-// v1.8 : Nouveautés ODS7
-slDelta8:=TStringList.Create;
-slDelta8.Sorted:=true;
-slDelta8.LoadFromFile(ExtractFilePath(ParamStr(0))+'delta8.txt'); // v1.9 (8)
+// v1.8 : Nouveautés ODS7 // v1.9 (8) // v1.10 (9)
+slDelta9:=TStringList.Create;
+slDelta9.Sorted:=true;
+slDelta9.LoadFromFile(ExtractFilePath(ParamStr(0))+'delta9.txt'); // v1.9 (8) // v1.10 (9)
 end;
 //----------------------------------------------------------------------------
 procedure TFormRechercheMots.FormDestroy(Sender: TObject);
 begin
-slDelta8.Free
+// v1.8 : Nouveautés ODS7 // v1.9 (8) // v1.10 (9)
+slDelta9.Free
 end;
 //----------------------------------------------------------------------------
 procedure TFormRechercheMots.FormHide(Sender: TObject);
@@ -281,7 +282,7 @@ end;
 procedure TFormRechercheMots.FormShow(Sender: TObject);
 begin
 Edit.Text:=''; // v1.4.6
-StatusBar.SimpleText:='(*) Nouveauté ODS8.'; // v1.8 (au lieu de '') // v1.9 (ODS8)
+StatusBar.SimpleText:='(*) Nouveauté ODS9.'; // v1.8 (au lieu de '') // v1.9 (ODS8) // v1.10 (ODS9)
 Memo.Clear; // v1.4.6
 Edit.SetFocus; //v1.4.7
 with FormMain do
@@ -349,7 +350,7 @@ if iTirageRecherche>-1 then
     // v1.8.10: on met en minuscules les lettres de jokers (par procédure car v1.8.9 erronée)
     LettresJokersEnMinuscules(stAnagramme, Edit.Text);
     // WriteLn(f, Format('%s ', [stAnagramme])); // v1.4.6
-    if slDelta8.IndexOf(stAnagramme)>-1 then Memo.Lines.Add('*'+stAnagramme) // v1.8
+    if slDelta9.IndexOf(stAnagramme)>-1 then Memo.Lines.Add('*'+stAnagramme) // v1.8 : ODS7 // v1.9 (8) // v1.10 (9)
     else Memo.Lines.Add(stAnagramme) // v1.4.6
     end
   end;

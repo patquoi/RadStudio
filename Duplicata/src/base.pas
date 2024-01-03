@@ -14,7 +14,8 @@ const NbCasesCote         =  15;
       NbMaxPlacesChevalet =  10;
       NbLettresMinMot     =   2;
       NbLettresMaxMot     = NbCasesCote;
-      NbLettresDico       = 4031818; // v1.9   (ODS8)
+      NbLettresDico       = 4080472; // v1.10  (ODS9)
+                         // 4031818; // v1.9   (ODS8)
                          // 3942506; // v1.8.1 (ODS7 corrigé)
                          // 3942512; // v1.8   (ODS7)
                          // 3867567; // v1.6.7 (ODS6)
@@ -406,7 +407,8 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
       Dir90 : array [TDirection]          of TDirection    = (dIndefinie, dVerticale, dHorizontale);
 
       // Constantes pour le dictionnaire
-      nbl : array [TNbLettres] of Integer             = (162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // v1.9   (ODS8)
+      nbl : array [TNbLettres] of Integer             = (162,1917,10628,40295,109068,227885,388696,542871,637360,643764,564948,433498,295960,183420); // v1.10  (ODS9)
+                                                      //(162,1899,10492,39900,107946,225610,384312,536256,629540,635624,558012,428506,292404,181155); // v1.9   (ODS8)
                                                       //(160,1863,10256,39115,106086,221718,377272,525897,615870,621093,543948,417651,285012,176565); // v1.8.1 (ODS7 corrigé)
                                                       //(160,1863,10256,39115,106086,221718,377272,525897,615870,621104,543972,417651,284998,176550); // v1.8   (ODS7)
                                                       //(160,1830,10036,38225,103908,217490,370632,517203,604870,609796,533616,409383,278488,171930); // v1.6.7 (ODS6)
@@ -414,7 +416,7 @@ const CoefBonusMot    : array [TBonus] of Integer = (1,1,1,2,3);
       Puiss26 : array [0..4]              of Integer  = (1,26,676,17576,456976);
       stNomFichierDico                                = 'L23456789ABCDEF'; // ODS
       stNomFichierRech                                = 'R23456789ABCDEF'; // ODS
-      stVersionDico                                   = 'ODS8'; // modifié v1.9 (8) // modifié v1.8 (7) // créé v1.5.3
+      stVersionDico                                   = 'ODS9'; // Modifé v1.10 (9) // modifié v1.9 (8) // modifié v1.8 (7) // créé v1.5.3
       stMsgMotNonValable                              : array [Boolean] of String = ('Le mot %s n''est pas valable selon l'''+stVersionDico+'.', // v1.5.3 : ajout stVersionDico.
                                                                                      'Les mots %s ne sont pas valables selon l'''+stVersionDico+'.'); // v1.3.1, v1.6 : tableau
       stDirection       : array[TDirection] of String = ('', 'Horizontalement',

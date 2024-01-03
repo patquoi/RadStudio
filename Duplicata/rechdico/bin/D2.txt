@@ -8,7 +8,7 @@ AS	OS
 AU	OU																
 AY	PI																
 BA	PU																
-BE	QI*																
+BE	QI																
 BI	RA																
 BU	RE																
 CA	RI																

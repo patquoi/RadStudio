@@ -314,7 +314,7 @@ begin{TRechDico.CreeFichierRechDico}
 
 // ODS8 : on ajoute un astérisque à côté des nouveaux mots
 slDelta:=TStringList.Create;
-slDelta.LoadFromFile(ExtractFilePath(ParamStr(0))+'delta8.txt');
+slDelta.LoadFromFile(ExtractFilePath(ParamStr(0))+'delta9.txt');
 
 sl:=TStringList.Create;
 sl.Sorted:=True; // Tri en temps réel plus rapide

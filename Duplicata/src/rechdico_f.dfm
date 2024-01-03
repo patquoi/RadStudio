@@ -13,7 +13,6 @@ object FormRechercheMots: TFormRechercheMots
   Font.Name = 'Tahoma'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -21,7 +20,6 @@ object FormRechercheMots: TFormRechercheMots
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object LabelInfosJokers: TLabel
     Left = 184
@@ -75,6 +73,8 @@ object FormRechercheMots: TFormRechercheMots
     Height = 19
     Panels = <>
     SimplePanel = True
+    ExplicitTop = 391
+    ExplicitWidth = 404
   end
   object Memo: TMemo
     Left = 0
@@ -91,5 +91,7 @@ object FormRechercheMots: TFormRechercheMots
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 4
+    ExplicitTop = 38
+    ExplicitWidth = 404
   end
 end
