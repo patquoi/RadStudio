@@ -2,35 +2,35 @@ object FormFeuilleMatch: TFormFeuilleMatch
   Left = 0
   Top = 0
   Caption = 'Feuille de match'
-  ClientHeight = 466
-  ClientWidth = 580
+  ClientHeight = 433
+  ClientWidth = 566
   Color = clBlack
   Font.Charset = ANSI_CHARSET
   Font.Color = clWhite
   Font.Height = -11
   Font.Name = 'Courier New'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnHide = FormHide
   OnKeyPress = FormKeyPress
   OnResize = FormResize
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 14
   object StatusBar: TStatusBar
     Left = 0
-    Top = 447
-    Width = 580
+    Top = 414
+    Width = 566
     Height = 19
     Panels = <>
     SimplePanel = True
+    ExplicitTop = 447
+    ExplicitWidth = 580
   end
   object RichEdit: TRichEdit
     Left = 0
     Top = 0
-    Width = 580
-    Height = 447
+    Width = 566
+    Height = 414
     Align = alClient
     BevelInner = bvNone
     BorderStyle = bsNone
@@ -45,6 +45,5 @@ object FormFeuilleMatch: TFormFeuilleMatch
     ScrollBars = ssBoth
     TabOrder = 1
     WordWrap = False
-    Zoom = 100
   end
 end

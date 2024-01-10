@@ -256,7 +256,7 @@ iDebutDrnLigne:=Taille-RetoursChariots; // v1.5. v1.8.3 (RetoursChariots)
 // C. On ajoute la ligne sur la feuille de match
 RichEdit.Lines.Add(Format(stFormatLigne, [p.Tour,
                                           stTirage,
-                                          p.stCoordonnees(XPrp, YPrp, dPrp),
+                                          IfThen(stMotPrp='','',p.stCoordonnees(XPrp, YPrp, dPrp)), // v1.10.1 : on n'affiche pas de coordonnées si pas de proposition (démo)
                                           stMotPrp,
                                           p.stCoordonnees(XSol, YSol, dSol),
                                           stMotSol,
