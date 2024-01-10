@@ -25,7 +25,7 @@ del bin\*.log
 del bin\*.rsm
 cls
 "C:\Program Files\7-Zip\7z.exe" a ..\Duplicata.zip bin\licen?e.txt bin\lisez-moi.txt 
-"C:\Program Files\7-Zip\7z.exe" a -r ..\Duplicata.zip install\*.* rechdico\src\*.* impcfgdup\src\*.* ods8\src\*.* src\*.*
+"C:\Program Files\7-Zip\7z.exe" a -r ..\Duplicata.zip install\*.* rechdico\src\*.* impcfgdup\src\*.* ods8\src\*.* ods9\src\*.* src\*.*
 echo Compiler et tester l'installation...
 "C:\Program Files (x86)\Inno Setup 5\Compil32.exe" "C:\Users\Patrice Fouquet\Documents\Embarcadero\Studio\Projets\Duplicata\install\insduplicata.iss"
 del ..\Duplicata.zip
