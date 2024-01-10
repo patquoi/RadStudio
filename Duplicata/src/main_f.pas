@@ -1413,7 +1413,7 @@ begin  // v1.4.1
 
 if ReflexionEnCours and
    ((Key='+') or
-    (Key='#')) then // v1.5.2 ('#' et déplacé en tête car interrupteur non fonctionnel)
+    (Key='#')) then // v1.5.2 ('#' déplacé en tête car interrupteur non fonctionnel)
   begin
   FChoixPoseClavierEnCours:=ChoixPoseClavierEnCours xor True;
   TestPlacementEnCours:=((Key='#') and ChoixPoseClavierEnCours); // v1.5.2
@@ -1452,7 +1452,7 @@ if ReflexionEnCours and ChoixPoseClavierEnCours then
       end
     end;
   if (Key>='0') and (Key<='9') then
-    if (Choix1Colonne=1) and (Key>='1') and (Key<='5') then
+    if (Choix1Colonne=1) and (Key>='0') and (Key<='5') then // v1.10.1 : Key>='0' au lieu de Key>='1' pour permettre de sélectionner la colonne 10 !
       Choix1Colonne:=10+Ord(Key)-Ord('0')
     else
       Choix1Colonne:=Ord(Key)-Ord('0');

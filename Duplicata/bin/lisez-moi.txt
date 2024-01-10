@@ -91,6 +91,9 @@ HISTORIQUE DES VERSIONS
 Version 1.10.1 - 10/01/2024
  - En mode démonstration, une position de proposition était affichée dans la
    feuille match.
+ - Il n'était pas possible de spécifier au clavier la colonne 10 au moment de
+   placer une proposition : par exemple +10dv pour placer un mot verticalement
+   en 10D.
 
 Version 1.10 - 03/01/2024
  - Le dictionnaire de référence est l'ODS9 (4867 mots ajoutés et 64 retirés).
