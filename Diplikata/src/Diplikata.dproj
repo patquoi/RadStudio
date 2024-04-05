@@ -70,13 +70,12 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <VerInfo_Locale>1036</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.3.12;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.3;Comments=Licence Publique Générale 2</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.4.0;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.4;Comments=Licence Publique Générale 2</VerInfo_Keys>
         <SanitizedProjectName>Diplikata</SanitizedProjectName>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_MinorVer>8</VerInfo_MinorVer>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Release>3</VerInfo_Release>
-        <VerInfo_Build>12</VerInfo_Build>
+        <VerInfo_Release>4</VerInfo_Release>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;IndyIPCommon;RESTComponents;bindcompdbx;DBXInterBaseDriver;vcl;IndyIPServer;vclactnband;vclFireDAC;IndySystem;tethering;svnui;dsnapcon;FireDACADSDriver;FireDACMSAccDriver;fmxFireDAC;vclimg;FireDAC;vcltouch;vcldb;bindcompfmx;svn;FireDACSqliteDriver;FireDACPgDriver;inetdb;soaprtl;DbxCommonDriver;fmx;FireDACIBDriver;fmxdae;xmlrtl;soapmidas;fmxobj;vclwinx;rtl;DbxClientDriver;CustomIPTransport;vcldsnap;dbexpress;IndyCore;vclx;bindcomp;appanalytics;dsnap;FireDACCommon;IndyIPClient;bindcompvcl;RESTBackendComponents;VCLRESTComponents;soapserver;dbxcds;VclSmp;adortl;vclie;bindengine;DBXMySQLDriver;CloudService;dsnapxml;FireDACMySQLDriver;dbrtl;IndyProtocols;inetdbxpress;FireDACCommonODBC;FireDACCommonDriver;inet;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -123,13 +122,13 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <Icon_MainIcon>Diplikata_Icon.ico</Icon_MainIcon>
-        <VerInfo_Build>14</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.3.14;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.3;Comments=Licence Publique Générale 2</VerInfo_Keys>
+        <VerInfo_Build>1</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.4.1;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.4;Comments=Licence Publique Générale 2</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <Icon_MainIcon>Diplikata_Icon.ico</Icon_MainIcon>
-        <VerInfo_Build>14</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.3.14;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.3;Comments=Licence Publique Générale 2</VerInfo_Keys>
+        <VerInfo_Build>1</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Patquoi.fr;FileDescription=$(MSBuildProjectName);FileVersion=1.8.4.1;InternalName=;LegalCopyright=2019, Patrice Fouquet;LegalTrademarks=;OriginalFilename=;ProgramID=com.patquoi.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.8.4;Comments=Licence Publique Générale 2</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -224,8 +223,8 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
                 </Excluded_Packages>
                 <Source>
                     <Source Name="MainSource">Diplikata.dpr</Source>
@@ -234,7 +233,6 @@
             <Deployment Version="4">
                 <DeployFile LocalName="..\bin\Diplikata.64.exe" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="..\bin\Diplikata.64.rsm" Configuration="Debug" Class="DebugSymbols"/>
-                <DeployFile LocalName="Diplikata150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
                 <DeployFile LocalName="Diplikata150.png" Configuration="Release" Class="UWP_DelphiLogo150"/>
                 <DeployFile LocalName="Win32\Debug\Diplikata.exe" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployClass Name="AdditionalDebugSymbols">

@@ -959,7 +959,11 @@ var i, j, // v1.4.4
 
 begin
 // v1.5.2 : inclut le test de placement (Tag>2 de PopuMenuTestPlacement)
-ChoixDirection:=TDirection(1+((Sender as TAction).Tag-1) mod 2); // Le tag des actions donne la direction. 0=Passer son tour
+
+// v1.8.4 : cas "Passer son tour" exclu
+ChoixDirection:=dIndefinie;
+if (Sender as TAction).Tag > 0 then
+  ChoixDirection:=TDirection(1+((Sender as TAction).Tag-1) mod 2); // Le tag des actions donne la direction. 0=Passer son tour
 TestPlacement:=((Sender as TAction).Tag>2); // v1.5.2
 if ReflexionEnCours and
   (ChoixDirection>dIndefinie) then

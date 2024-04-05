@@ -84,6 +84,10 @@ et un dictionnaire complet des mots en créole haïtien.
    
 HISTORIQUE DES VERSIONS
 
+Version 1.8.4 - 03/04/2024
+  - Impossible de passer son tour : un message affichait systématiquement
+    comment placer sa proposition (merci à Norbert J).
+
 Version 1.8.3 - 06/06/2020
  - Sous Windows XP, le fichier Diplikata.ini est désormais stocké dans
    %UserProfile%\Local Settings\Application Data\Patquoi.fr\Diplikata.
@@ -825,4 +829,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 6 juin 2020.
+Dernière mise à jour le 3 avril 2024.
