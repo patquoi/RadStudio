@@ -88,6 +88,10 @@ procédez comme suit :
 
 HISTORIQUE DES VERSIONS
 
+Version 1.10.2 - 02/04/2024
+  - Impossible de passer son tour : un message affichait systématiquement
+    comment placer sa proposition (merci à Norbert J).
+
 Version 1.10.1 - 10/01/2024
  - En mode démonstration, une position de proposition était affichée dans la
    feuille match.
@@ -870,4 +874,4 @@ avec en plus des statistiques sur les initiales et les finales.
 
 ______________________________________
 
-Dernière mise à jour le 10 janvier 2024.
+Dernière mise à jour le 2 avril 2024.

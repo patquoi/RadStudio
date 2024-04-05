@@ -2,17 +2,16 @@ object FormMain: TFormMain
   Left = 0
   Top = 0
   Caption = 'Duplicata'
-  ClientHeight = 857
-  ClientWidth = 600
+  ClientHeight = 1714
+  ClientWidth = 1228
   Color = clBlack
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -22
   Font.Name = 'Arial'
   Font.Style = []
   KeyPreview = True
   Menu = MainMenu
-  OldCreateOrder = False
   Position = poDesigned
   OnCanResize = FormCanResize
   OnClose = FormClose
@@ -25,30 +24,36 @@ object FormMain: TFormMain
   OnPaint = FormPaint
   OnResize = FormResize
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 14
+  PixelsPerInch = 192
+  TextHeight = 25
   object StatusBar: TStatusBar
     Left = 0
-    Top = 838
-    Width = 600
-    Height = 19
+    Top = 1676
+    Width = 1228
+    Height = 38
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     AutoHint = True
     Panels = <
       item
-        Width = 427
+        Width = 854
       end
       item
         Alignment = taCenter
         Style = psOwnerDraw
         Text = 'Temps'
-        Width = 50
+        Width = 100
       end
       item
         Alignment = taCenter
-        Width = 50
+        Width = 100
       end>
     SizeGrip = False
     OnDrawPanel = StatusBarDrawPanel
+    ExplicitTop = 1675
+    ExplicitWidth = 1214
   end
   object MainMenu: TMainMenu
     Left = 48
