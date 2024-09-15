@@ -332,16 +332,18 @@ for c := Low(TCoordonnee) to High(TCoordonnee) do
                     Exit;
                     end
                   else
-                    if c <> x then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
-                      Inc(Result, Ord(Des[Gr[c, y]].Face));
+                    // Version 1.2 : On compte le dé posé soit un score systématique de 21 points (ou 42 avec que des dés propres)
+                    //if c <> x then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
+                    Inc(Result, Ord(Des[Gr[c, y]].Face));
     oVerticale:   if Gr[x, c] = ndIndefini then
                     begin
                     Result := 0; // La suite a été cassée
                     Exit;
                     end
                   else
-                    if c <> y then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
-                      Inc(Result, Ord(Des[Gr[x, c]].Face));
+                    // Version 1.2 : On compte le dé posé soit un score systématique de 21 points (ou 42 avec que des dés propres)
+                    //if c <> y then // On ne compte pas le dé créateur de la suite (score entre 15 et 20)
+                    Inc(Result, Ord(Des[Gr[x, c]].Face));
   end{case o of};
 if Propre then // Score x2
   Inc(Result, Result);
@@ -775,7 +777,7 @@ begin
 for o := Low(TOrientation) to High(TOrientation) do
   begin
   OK[o] := True; // Optimiste !
-  Propre := True; // Pessimiste
+  Propre := True; // Optimiste !
   for c := Low(TCoordonnee) to High(TCoordonnee) do
     case o of
       oHorizontale: if Gr[c, y] = ndIndefini then

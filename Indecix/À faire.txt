@@ -1,5 +1,9 @@
 RAF
 
+Changer la règle du jeu sur la ligne ou colonne complète
+ - 21 points quel que soit le dé posé. Score doublé si tous les dés sont propres. Si ligne ou colonne de bord, score acquis car dés imprenables.
+
+
  - Continuer le mode Master
    * afficher les dés en gardant les emplacements des dés joués.
 
